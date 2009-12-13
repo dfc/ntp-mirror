@@ -45,8 +45,7 @@ am__aclocal_m4_deps = $(top_srcdir)/libopts/m4/libopts.m4 \
 	$(top_srcdir)/m4/ntp_cacheversion.m4 \
 	$(top_srcdir)/m4/ntp_dir_sep.m4 \
 	$(top_srcdir)/m4/ntp_lineeditlibs.m4 \
-	$(top_srcdir)/m4/ntp_vpathhack.m4 \
-	$(top_srcdir)/m4/os_cflags.m4 $(top_srcdir)/version.m4 \
+	$(top_srcdir)/m4/ntp_vpathhack.m4 $(top_srcdir)/version.m4 \
 	$(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
@@ -72,12 +71,12 @@ am_libparse_a_OBJECTS = parse.$(OBJEXT) parse_conf.$(OBJEXT) \
 libparse_a_OBJECTS = $(am_libparse_a_OBJECTS)
 libparse_kernel_a_AR = $(AR) $(ARFLAGS)
 am__DEPENDENCIES_1 =
-libparse_kernel_a_DEPENDENCIES = kparse$U.o kparse_conf$U.o \
-	kclk_computime$U.o kclk_dcf7000$U.o kclk_hopf6021$U.o \
-	kclk_meinberg$U.o kclk_rawdcf$U.o kclk_rcc8000$U.o \
-	kclk_schmid$U.o kclk_trimtaip$U.o kclk_trimtsip$U.o \
-	kclk_varitext$U.o kclk_wharton$U.o kbinio$U.o kieee754io$U.o \
-	kmfp_mul$U.o kgpstolfp$U.o $(am__DEPENDENCIES_1)
+libparse_kernel_a_DEPENDENCIES = kparse.o kparse_conf.o \
+	kclk_computime.o kclk_dcf7000.o kclk_hopf6021.o \
+	kclk_meinberg.o kclk_rawdcf.o kclk_rcc8000.o kclk_schmid.o \
+	kclk_trimtaip.o kclk_trimtsip.o kclk_varitext.o kclk_wharton.o \
+	kbinio.o kieee754io.o kmfp_mul.o kgpstolfp.o \
+	$(am__DEPENDENCIES_1)
 am_libparse_kernel_a_OBJECTS =
 libparse_kernel_a_OBJECTS = $(am_libparse_kernel_a_OBJECTS)
 PROGRAMS = $(noinst_PROGRAMS)
@@ -254,7 +253,7 @@ BUILT_SOURCES = .deps-ver
 noinst_LIBRARIES = @MAKE_LIBPARSE@ @MAKE_LIBPARSE_KERNEL@
 EXTRA_LIBRARIES = libparse.a libparse_kernel.a
 noinst_PROGRAMS = @MAKE_PARSEKMODULE@
-CLEANFILES = libparse.a libparse_kernel.a .deps-ver
+CLEANFILES = libparse.a libparse_kernel.a info_trimble.c .deps-ver
 K_CFLAGS = -DPARSESTREAM -DNTP_NEED_BOPS
 libparse_a_SOURCES = parse.c \
 		     parse_conf.c \
@@ -279,24 +278,25 @@ libparse_a_SOURCES = parse.c \
 		     $(NULL)
 
 libparse_kernel_a_SOURCES = 
-libparse_kernel_a_LIBADD = kparse$U.o \
-			    kparse_conf$U.o \
-			    kclk_computime$U.o \
-			    kclk_dcf7000$U.o \
-			    kclk_hopf6021$U.o \
-			    kclk_meinberg$U.o \
-			    kclk_rawdcf$U.o \
-			    kclk_rcc8000$U.o \
-			    kclk_schmid$U.o \
-			    kclk_trimtaip$U.o \
-			    kclk_trimtsip$U.o \
-			    kclk_varitext$U.o \
-			    kclk_wharton$U.o \
-			    kbinio$U.o \
-			    kieee754io$U.o \
-			    kmfp_mul$U.o \
-			    kgpstolfp$U.o \
-			    $(NULL)
+libparse_kernel_a_LIBADD = \
+	kparse.o		\
+	kparse_conf.o		\
+	kclk_computime.o	\
+	kclk_dcf7000.o		\
+	kclk_hopf6021.o		\
+	kclk_meinberg.o		\
+	kclk_rawdcf.o		\
+	kclk_rcc8000.o		\
+	kclk_schmid.o		\
+	kclk_trimtaip.o		\
+	kclk_trimtsip.o		\
+	kclk_varitext.o		\
+	kclk_wharton.o		\
+	kbinio.o		\
+	kieee754io.o		\
+	kmfp_mul.o		\
+	kgpstolfp.o		\
+	$(NULL)
 
 INCLUDES = -I$(top_srcdir)/include -I$(top_srcdir)/lib/isc/include \
 	-I$(top_srcdir)/lib/isc/nothreads/include \
@@ -629,9 +629,9 @@ uninstall-am:
 # create info_trimble.c
 #
 info_trimble.c: $(top_srcdir)/include/trimble.h mkinfo_rcmd.sed mkinfo_scmd.sed
-	@rm -f info_trimble.c
-	sed -n -f $(srcdir)/mkinfo_scmd.sed $(top_srcdir)/include/trimble.h  > info_trimble.c || rm -f info_trimble.c
-	sed -n -f $(srcdir)/mkinfo_rcmd.sed $(top_srcdir)/include/trimble.h >> info_trimble.c || rm -f info_trimble.c
+	@rm -f $@
+	sed -n -f $(srcdir)/mkinfo_scmd.sed $(top_srcdir)/include/trimble.h  > $@ || rm -f $@
+	sed -n -f $(srcdir)/mkinfo_rcmd.sed $(top_srcdir)/include/trimble.h >> $@ || rm -f $@
 
 kieee754io.o: ieee754io.c
 	 $(COMPILE) $(K_CFLAGS) -c $(srcdir)/ieee754io.c -o $@

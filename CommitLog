@@ -1,3 +1,129 @@
+ChangeSet@1.2090, 2009-12-13 05:28:33-05:00, stenn@whimsy.udel.edu +27 -0
+  NTP_4_2_7P0
+  TAG: NTP_4_2_7P0
+
+  ChangeLog@1.567, 2009-12-13 05:28:23-05:00, stenn@whimsy.udel.edu +1 -0
+    NTP_4_2_7P0
+
+  ntpd/ntpd-opts.c@1.250, 2009-12-13 05:28:23-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P0
+
+  ntpd/ntpd-opts.h@1.250, 2009-12-13 05:28:24-05:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P0
+
+  ntpd/ntpd-opts.texi@1.248, 2009-12-13 05:28:24-05:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P0
+
+  ntpd/ntpd.1@1.248, 2009-12-13 05:28:24-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P0
+
+  ntpdc/ntpdc-opts.c@1.246, 2009-12-13 05:28:24-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P0
+
+  ntpdc/ntpdc-opts.h@1.246, 2009-12-13 05:28:25-05:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P0
+
+  ntpdc/ntpdc-opts.texi@1.245, 2009-12-13 05:28:25-05:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P0
+
+  ntpdc/ntpdc.1@1.245, 2009-12-13 05:28:25-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P0
+
+  ntpq/ntpq-opts.c@1.247, 2009-12-13 05:28:25-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P0
+
+  ntpq/ntpq-opts.h@1.247, 2009-12-13 05:28:26-05:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P0
+
+  ntpq/ntpq-opts.texi@1.246, 2009-12-13 05:28:26-05:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P0
+
+  ntpq/ntpq.1@1.246, 2009-12-13 05:28:26-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P0
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.125, 2009-12-13 05:28:26-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P0
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.125, 2009-12-13 05:28:27-05:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P0
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.125, 2009-12-13 05:28:27-05:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P0
+
+  ntpsnmpd/ntpsnmpd.1@1.124, 2009-12-13 05:28:27-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P0
+
+  packageinfo.sh@1.259, 2009-12-13 05:28:27-05:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P0
+
+  sntp/sntp-opts.c@1.119, 2009-12-13 05:28:28-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P0
+
+  sntp/sntp-opts.h@1.119, 2009-12-13 05:28:28-05:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P0
+
+  sntp/sntp-opts.texi@1.119, 2009-12-13 05:28:28-05:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P0
+
+  sntp/sntp.1@1.119, 2009-12-13 05:28:28-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P0
+
+  sntp/sntp.html@1.9, 2009-12-13 05:28:28-05:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P0
+
+  util/ntp-keygen-opts.c@1.249, 2009-12-13 05:28:29-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P0
+
+  util/ntp-keygen-opts.h@1.249, 2009-12-13 05:28:29-05:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P0
+
+  util/ntp-keygen-opts.texi@1.248, 2009-12-13 05:28:29-05:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P0
+
+  util/ntp-keygen.1@1.248, 2009-12-13 05:28:29-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P0
+
+ChangeSet@1.2086.1.2, 2009-12-13 05:10:51+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  ChangeLog:
+    correct merge from ntp-stable-1412
+
+  ChangeLog@1.563.1.2, 2009-12-13 05:10:47+00:00, davehart@shiny.ad.hartbrothers.com +1 -4
+    correct merge from ntp-stable-1412
+
+ChangeSet@1.2088, 2009-12-13 04:18:43+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  correct merge from ntp-stable-1414
+
+  ChangeLog@1.565, 2009-12-13 04:18:42+00:00, davehart@shiny.ad.hartbrothers.com +1 -4
+    correct merge from ntp-stable-1414
+
+ChangeSet@1.2082.5.1, 2009-12-12 19:55:30+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+  [Bug 1414] Enable "make distcheck" success with BSD make.
+
+  ChangeLog@1.560.4.1, 2009-12-12 19:55:29+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+    [Bug 1414] Enable "make distcheck" success with BSD make.
+
+  libparse/Makefile.am@1.17, 2009-12-12 19:55:29+00:00, davehart@shiny.ad.hartbrothers.com +23 -22
+    add info_trimble.c to CLEANFILES [Bug 1414].
+    remove references to $U leftover from ansi2knr use.
+
+  ntpd/Makefile.am@1.80, 2009-12-12 19:55:29+00:00, davehart@shiny.ad.hartbrothers.com +18 -4
+    remove $VPHACK and $VPHACK_AFTER from EXTRA_DIST [Bug 1414]
+
+  sntp/Makefile.am@1.21, 2009-12-12 19:55:29+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    reference $(srcdir)/COPYRIGHT in EXTRA_DIST not COPYRIGHT [Bug 1414]
+
+ChangeSet@1.2082.4.4, 2009-12-12 08:31:39+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
+  [Bug 1412] m4/os_cflags.m4 caches results that depend on $CC.
+
+  ChangeLog@1.560.3.1, 2009-12-12 08:31:38+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+    [Bug 1412] m4/os_cflags.m4 caches results that depend on $CC.
+
+  configure.ac@1.465.1.1, 2009-12-12 08:31:38+00:00, davehart@shiny.ad.hartbrothers.com +1 -47
+    [Bug 1412] m4/os_cflags.m4 caches results that depend on $CC.
+
+  m4/os_cflags.m4@1.4, 2009-12-12 08:31:38+00:00, davehart@shiny.ad.hartbrothers.com +82 -72
+    [Bug 1412] m4/os_cflags.m4 caches results that depend on $CC.
+
 ChangeSet@1.2085, 2009-12-10 06:24:33-05:00, stenn@whimsy.udel.edu +27 -0
   NTP_4_2_7
   TAG: NTP_4_2_7
@@ -5,83 +131,161 @@ ChangeSet@1.2085, 2009-12-10 06:24:33-05:00, stenn@whimsy.udel.edu +27 -0
   ChangeLog@1.563, 2009-12-10 06:24:22-05:00, stenn@whimsy.udel.edu +1 -0
     NTP_4_2_7
 
-  ntpd/ntpd-opts.c@1.248, 2009-12-10 06:24:22-05:00, stenn@whimsy.udel.edu +2 -2
+  ntpd/ntpd-opts.c@1.247.1.1, 2009-12-10 06:24:22-05:00, stenn@whimsy.udel.edu +2 -2
     NTP_4_2_7
 
-  ntpd/ntpd-opts.h@1.248, 2009-12-10 06:24:22-05:00, stenn@whimsy.udel.edu +3 -3
+  ntpd/ntpd-opts.h@1.247.1.1, 2009-12-10 06:24:22-05:00, stenn@whimsy.udel.edu +3 -3
     NTP_4_2_7
 
-  ntpd/ntpd-opts.texi@1.246, 2009-12-10 06:24:23-05:00, stenn@whimsy.udel.edu +2 -61
+  ntpd/ntpd-opts.texi@1.245.1.1, 2009-12-10 06:24:23-05:00, stenn@whimsy.udel.edu +2 -61
     NTP_4_2_7
 
-  ntpd/ntpd.1@1.246, 2009-12-10 06:24:23-05:00, stenn@whimsy.udel.edu +2 -2
+  ntpd/ntpd.1@1.245.1.1, 2009-12-10 06:24:23-05:00, stenn@whimsy.udel.edu +2 -2
     NTP_4_2_7
 
-  ntpdc/ntpdc-opts.c@1.244, 2009-12-10 06:24:23-05:00, stenn@whimsy.udel.edu +2 -2
+  ntpdc/ntpdc-opts.c@1.243.1.1, 2009-12-10 06:24:23-05:00, stenn@whimsy.udel.edu +2 -2
     NTP_4_2_7
 
-  ntpdc/ntpdc-opts.h@1.244, 2009-12-10 06:24:23-05:00, stenn@whimsy.udel.edu +3 -3
+  ntpdc/ntpdc-opts.h@1.243.1.1, 2009-12-10 06:24:23-05:00, stenn@whimsy.udel.edu +3 -3
     NTP_4_2_7
 
-  ntpdc/ntpdc-opts.texi@1.243, 2009-12-10 06:24:24-05:00, stenn@whimsy.udel.edu +2 -66
+  ntpdc/ntpdc-opts.texi@1.242.1.1, 2009-12-10 06:24:24-05:00, stenn@whimsy.udel.edu +2 -66
     NTP_4_2_7
 
-  ntpdc/ntpdc.1@1.243, 2009-12-10 06:24:24-05:00, stenn@whimsy.udel.edu +2 -2
+  ntpdc/ntpdc.1@1.242.1.1, 2009-12-10 06:24:24-05:00, stenn@whimsy.udel.edu +2 -2
     NTP_4_2_7
 
-  ntpq/ntpq-opts.c@1.245, 2009-12-10 06:24:24-05:00, stenn@whimsy.udel.edu +2 -2
+  ntpq/ntpq-opts.c@1.244.1.1, 2009-12-10 06:24:24-05:00, stenn@whimsy.udel.edu +2 -2
     NTP_4_2_7
 
-  ntpq/ntpq-opts.h@1.245, 2009-12-10 06:24:24-05:00, stenn@whimsy.udel.edu +3 -3
+  ntpq/ntpq-opts.h@1.244.1.1, 2009-12-10 06:24:24-05:00, stenn@whimsy.udel.edu +3 -3
     NTP_4_2_7
 
-  ntpq/ntpq-opts.texi@1.244, 2009-12-10 06:24:25-05:00, stenn@whimsy.udel.edu +2 -51
+  ntpq/ntpq-opts.texi@1.243.1.1, 2009-12-10 06:24:25-05:00, stenn@whimsy.udel.edu +2 -51
     NTP_4_2_7
 
-  ntpq/ntpq.1@1.244, 2009-12-10 06:24:25-05:00, stenn@whimsy.udel.edu +2 -2
+  ntpq/ntpq.1@1.243.1.1, 2009-12-10 06:24:25-05:00, stenn@whimsy.udel.edu +2 -2
     NTP_4_2_7
 
-  ntpsnmpd/ntpsnmpd-opts.c@1.123, 2009-12-10 06:24:25-05:00, stenn@whimsy.udel.edu +2 -2
+  ntpsnmpd/ntpsnmpd-opts.c@1.122.1.1, 2009-12-10 06:24:25-05:00, stenn@whimsy.udel.edu +2 -2
     NTP_4_2_7
 
-  ntpsnmpd/ntpsnmpd-opts.h@1.123, 2009-12-10 06:24:25-05:00, stenn@whimsy.udel.edu +3 -3
+  ntpsnmpd/ntpsnmpd-opts.h@1.122.1.1, 2009-12-10 06:24:25-05:00, stenn@whimsy.udel.edu +3 -3
     NTP_4_2_7
 
-  ntpsnmpd/ntpsnmpd-opts.texi@1.123, 2009-12-10 06:24:26-05:00, stenn@whimsy.udel.edu +1 -1
+  ntpsnmpd/ntpsnmpd-opts.texi@1.122.1.1, 2009-12-10 06:24:26-05:00, stenn@whimsy.udel.edu +1 -1
     NTP_4_2_7
 
-  ntpsnmpd/ntpsnmpd.1@1.122, 2009-12-10 06:24:26-05:00, stenn@whimsy.udel.edu +2 -2
+  ntpsnmpd/ntpsnmpd.1@1.121.1.1, 2009-12-10 06:24:26-05:00, stenn@whimsy.udel.edu +2 -2
     NTP_4_2_7
 
   packageinfo.sh@1.258, 2009-12-10 06:24:26-05:00, stenn@whimsy.udel.edu +1 -1
     NTP_4_2_7
 
-  sntp/sntp-opts.c@1.117, 2009-12-10 06:24:26-05:00, stenn@whimsy.udel.edu +2 -2
+  sntp/sntp-opts.c@1.116.1.1, 2009-12-10 06:24:26-05:00, stenn@whimsy.udel.edu +2 -2
     NTP_4_2_7
 
-  sntp/sntp-opts.h@1.117, 2009-12-10 06:24:27-05:00, stenn@whimsy.udel.edu +3 -3
+  sntp/sntp-opts.h@1.116.1.1, 2009-12-10 06:24:27-05:00, stenn@whimsy.udel.edu +3 -3
     NTP_4_2_7
 
-  sntp/sntp-opts.texi@1.117, 2009-12-10 06:24:27-05:00, stenn@whimsy.udel.edu +2 -60
+  sntp/sntp-opts.texi@1.116.1.1, 2009-12-10 06:24:27-05:00, stenn@whimsy.udel.edu +2 -60
     NTP_4_2_7
 
-  sntp/sntp.1@1.117, 2009-12-10 06:24:27-05:00, stenn@whimsy.udel.edu +2 -2
+  sntp/sntp.1@1.116.1.1, 2009-12-10 06:24:27-05:00, stenn@whimsy.udel.edu +2 -2
     NTP_4_2_7
 
-  sntp/sntp.html@1.7, 2009-12-10 06:24:27-05:00, stenn@whimsy.udel.edu +14 -10
+  sntp/sntp.html@1.6.1.1, 2009-12-10 06:24:27-05:00, stenn@whimsy.udel.edu +14 -10
     NTP_4_2_7
 
-  util/ntp-keygen-opts.c@1.247, 2009-12-10 06:24:28-05:00, stenn@whimsy.udel.edu +2 -2
+  util/ntp-keygen-opts.c@1.246.1.1, 2009-12-10 06:24:28-05:00, stenn@whimsy.udel.edu +2 -2
     NTP_4_2_7
 
-  util/ntp-keygen-opts.h@1.247, 2009-12-10 06:24:28-05:00, stenn@whimsy.udel.edu +3 -3
+  util/ntp-keygen-opts.h@1.246.1.1, 2009-12-10 06:24:28-05:00, stenn@whimsy.udel.edu +3 -3
     NTP_4_2_7
 
-  util/ntp-keygen-opts.texi@1.246, 2009-12-10 06:24:28-05:00, stenn@whimsy.udel.edu +2 -46
+  util/ntp-keygen-opts.texi@1.245.1.1, 2009-12-10 06:24:28-05:00, stenn@whimsy.udel.edu +2 -46
     NTP_4_2_7
 
-  util/ntp-keygen.1@1.246, 2009-12-10 06:24:28-05:00, stenn@whimsy.udel.edu +2 -2
+  util/ntp-keygen.1@1.245.1.1, 2009-12-10 06:24:28-05:00, stenn@whimsy.udel.edu +2 -2
     NTP_4_2_7
+
+ChangeSet@1.2082.4.3, 2009-12-10 05:49:19-05:00, stenn@whimsy.udel.edu +25 -0
+  4.2.6
+
+  ntpd/ntpd-opts.c@1.248, 2009-12-10 05:48:35-05:00, stenn@whimsy.udel.edu +1 -1
+    4.2.6
+
+  ntpd/ntpd-opts.h@1.248, 2009-12-10 05:48:36-05:00, stenn@whimsy.udel.edu +1 -1
+    4.2.6
+
+  ntpd/ntpd-opts.texi@1.246, 2009-12-10 05:48:36-05:00, stenn@whimsy.udel.edu +1 -1
+    4.2.6
+
+  ntpd/ntpd.1@1.246, 2009-12-10 05:48:36-05:00, stenn@whimsy.udel.edu +2 -2
+    4.2.6
+
+  ntpdc/ntpdc-opts.c@1.244, 2009-12-10 05:48:36-05:00, stenn@whimsy.udel.edu +1 -1
+    4.2.6
+
+  ntpdc/ntpdc-opts.h@1.244, 2009-12-10 05:48:37-05:00, stenn@whimsy.udel.edu +1 -1
+    4.2.6
+
+  ntpdc/ntpdc-opts.texi@1.243, 2009-12-10 05:48:37-05:00, stenn@whimsy.udel.edu +2 -2
+    4.2.6
+
+  ntpdc/ntpdc.1@1.243, 2009-12-10 05:48:37-05:00, stenn@whimsy.udel.edu +2 -2
+    4.2.6
+
+  ntpq/ntpq-opts.c@1.245, 2009-12-10 05:48:37-05:00, stenn@whimsy.udel.edu +1 -1
+    4.2.6
+
+  ntpq/ntpq-opts.h@1.245, 2009-12-10 05:48:38-05:00, stenn@whimsy.udel.edu +1 -1
+    4.2.6
+
+  ntpq/ntpq-opts.texi@1.244, 2009-12-10 05:48:38-05:00, stenn@whimsy.udel.edu +2 -2
+    4.2.6
+
+  ntpq/ntpq.1@1.244, 2009-12-10 05:48:38-05:00, stenn@whimsy.udel.edu +2 -2
+    4.2.6
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.123, 2009-12-10 05:48:38-05:00, stenn@whimsy.udel.edu +1 -1
+    4.2.6
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.123, 2009-12-10 05:48:39-05:00, stenn@whimsy.udel.edu +1 -1
+    4.2.6
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.123, 2009-12-10 05:48:39-05:00, stenn@whimsy.udel.edu +23 -2
+    4.2.6
+
+  ntpsnmpd/ntpsnmpd.1@1.122, 2009-12-10 05:48:39-05:00, stenn@whimsy.udel.edu +2 -2
+    4.2.6
+
+  sntp/sntp-opts.c@1.117, 2009-12-10 05:48:40-05:00, stenn@whimsy.udel.edu +1 -1
+    4.2.6
+
+  sntp/sntp-opts.h@1.117, 2009-12-10 05:48:40-05:00, stenn@whimsy.udel.edu +1 -1
+    4.2.6
+
+  sntp/sntp-opts.texi@1.117, 2009-12-10 05:48:40-05:00, stenn@whimsy.udel.edu +2 -2
+    4.2.6
+
+  sntp/sntp.1@1.117, 2009-12-10 05:48:40-05:00, stenn@whimsy.udel.edu +2 -2
+    4.2.6
+
+  sntp/sntp.html@1.7, 2009-12-10 05:48:40-05:00, stenn@whimsy.udel.edu +13 -9
+    4.2.6
+
+  util/ntp-keygen-opts.c@1.247, 2009-12-10 05:48:41-05:00, stenn@whimsy.udel.edu +1 -1
+    4.2.6
+
+  util/ntp-keygen-opts.h@1.247, 2009-12-10 05:48:41-05:00, stenn@whimsy.udel.edu +1 -1
+    4.2.6
+
+  util/ntp-keygen-opts.texi@1.246, 2009-12-10 05:48:41-05:00, stenn@whimsy.udel.edu +2 -2
+    4.2.6
+
+  util/ntp-keygen.1@1.246, 2009-12-10 05:48:41-05:00, stenn@whimsy.udel.edu +2 -2
+    4.2.6
 
 ChangeSet@1.2082.1.8, 2009-12-09 03:55:07-05:00, stenn@deacon.udel.edu +1 -0
   -dev is now 4.2.7
