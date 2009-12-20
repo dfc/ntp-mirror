@@ -50,7 +50,8 @@ am__aclocal_m4_deps = $(top_srcdir)/libopts/m4/libopts.m4 \
 	$(top_srcdir)/m4/ntp_cacheversion.m4 \
 	$(top_srcdir)/m4/ntp_dir_sep.m4 \
 	$(top_srcdir)/m4/ntp_lineeditlibs.m4 \
-	$(top_srcdir)/m4/ntp_vpathhack.m4 $(top_srcdir)/version.m4 \
+	$(top_srcdir)/m4/ntp_vpathhack.m4 \
+	$(top_srcdir)/m4/os_cflags.m4 $(top_srcdir)/version.m4 \
 	$(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
@@ -58,8 +59,9 @@ mkinstalldirs = $(install_sh) -d
 CONFIG_HEADER = $(top_builddir)/config.h
 CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
-am__installdirs = "$(DESTDIR)$(sbindir)" "$(DESTDIR)$(man1dir)"
-PROGRAMS = $(sbin_PROGRAMS)
+am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(sbindir)" \
+	"$(DESTDIR)$(man1dir)"
+PROGRAMS = $(bin_PROGRAMS) $(sbin_PROGRAMS)
 am_ntpsnmpd_OBJECTS = netsnmp_daemonize.$(OBJEXT) ntpsnmpd.$(OBJEXT) \
 	ntpSnmpSubagentObject.$(OBJEXT) ntpsnmpd-opts.$(OBJEXT)
 ntpsnmpd_OBJECTS = $(am_ntpsnmpd_OBJECTS)
@@ -252,13 +254,14 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 NULL = 
 AUTOMAKE_OPTIONS = 
-sbin_PROGRAMS = @MAKE_NTPSNMPD@
+@NTP_BINSUBDIR_IS_BIN_TRUE@bin_PROGRAMS = @MAKE_NTPSNMPD@
+@NTP_BINSUBDIR_IS_BIN_FALSE@sbin_PROGRAMS = @MAKE_NTPSNMPD@
 ntpsnmpd_SOURCES = netsnmp_daemonize.c ntpsnmpd.c ntpSnmpSubagentObject.c \
 			ntpsnmpd-opts.c ntpsnmpd-opts.h
 
 noinst_HEADERS = ntpSnmpSubagentObject.h
 # HMS: we probably want a version.o file here, too.
-LDADD = ../ntpq/libntpq.a ../libntp/libntp.a @SNMP_LIBS@ 	\
+LDADD = ../ntpq/libntpq.a ../libntp/libntp.a @LCRYPTO@ @SNMP_LIBS@ \
 		$(LIBOPTS_LDADD)
 
 AM_CPPFLAGS = -I$(top_srcdir)/ntpq -I$(top_srcdir)/include \
@@ -319,6 +322,49 @@ $(top_srcdir)/configure:  $(am__configure_deps)
 $(ACLOCAL_M4):  $(am__aclocal_m4_deps)
 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
 $(am__aclocal_m4_deps):
+install-binPROGRAMS: $(bin_PROGRAMS)
+	@$(NORMAL_INSTALL)
+	test -z "$(bindir)" || $(MKDIR_P) "$(DESTDIR)$(bindir)"
+	@list='$(bin_PROGRAMS)'; test -n "$(bindir)" || list=; \
+	for p in $$list; do echo "$$p $$p"; done | \
+	sed 's/$(EXEEXT)$$//' | \
+	while read p p1; do if test -f $$p || test -f $$p1; \
+	  then echo "$$p"; echo "$$p"; else :; fi; \
+	done | \
+	sed -e 'p;s,.*/,,;n;h' -e 's|.*|.|' \
+	    -e 'p;x;s,.*/,,;s/$(EXEEXT)$$//;$(transform);s/$$/$(EXEEXT)/' | \
+	sed 'N;N;N;s,\n, ,g' | \
+	$(AWK) 'BEGIN { files["."] = ""; dirs["."] = 1 } \
+	  { d=$$3; if (dirs[d] != 1) { print "d", d; dirs[d] = 1 } \
+	    if ($$2 == $$4) files[d] = files[d] " " $$1; \
+	    else { print "f", $$3 "/" $$4, $$1; } } \
+	  END { for (d in files) print "f", d, files[d] }' | \
+	while read type dir files; do \
+	    if test "$$dir" = .; then dir=; else dir=/$$dir; fi; \
+	    test -z "$$files" || { \
+	    echo " $(INSTALL_PROGRAM_ENV) $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=install $(INSTALL_PROGRAM) $$files '$(DESTDIR)$(bindir)$$dir'"; \
+	    $(INSTALL_PROGRAM_ENV) $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=install $(INSTALL_PROGRAM) $$files "$(DESTDIR)$(bindir)$$dir" || exit $$?; \
+	    } \
+	; done
+
+uninstall-binPROGRAMS:
+	@$(NORMAL_UNINSTALL)
+	@list='$(bin_PROGRAMS)'; test -n "$(bindir)" || list=; \
+	files=`for p in $$list; do echo "$$p"; done | \
+	  sed -e 'h;s,^.*/,,;s/$(EXEEXT)$$//;$(transform)' \
+	      -e 's/$$/$(EXEEXT)/' `; \
+	test -n "$$list" || exit 0; \
+	echo " ( cd '$(DESTDIR)$(bindir)' && rm -f" $$files ")"; \
+	cd "$(DESTDIR)$(bindir)" && rm -f $$files
+
+clean-binPROGRAMS:
+	@list='$(bin_PROGRAMS)'; test -n "$$list" || exit 0; \
+	echo " rm -f" $$list; \
+	rm -f $$list || exit $$?; \
+	test -n "$(EXEEXT)" || exit 0; \
+	list=`for p in $$list; do echo "$$p"; done | sed 's/$(EXEEXT)$$//'`; \
+	echo " rm -f" $$list; \
+	rm -f $$list
 install-sbinPROGRAMS: $(sbin_PROGRAMS)
 	@$(NORMAL_INSTALL)
 	test -z "$(sbindir)" || $(MKDIR_P) "$(DESTDIR)$(sbindir)"
@@ -542,7 +588,7 @@ check: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) check-am
 all-am: Makefile $(PROGRAMS) $(MANS) $(HEADERS)
 installdirs:
-	for dir in "$(DESTDIR)$(sbindir)" "$(DESTDIR)$(man1dir)"; do \
+	for dir in "$(DESTDIR)$(bindir)" "$(DESTDIR)$(sbindir)" "$(DESTDIR)$(man1dir)"; do \
 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
 	done
 install: $(BUILT_SOURCES)
@@ -575,8 +621,8 @@ maintainer-clean-generic:
 	-test -z "$(BUILT_SOURCES)" || rm -f $(BUILT_SOURCES)
 clean: clean-am
 
-clean-am: clean-generic clean-libtool clean-sbinPROGRAMS \
-	mostlyclean-am
+clean-am: clean-binPROGRAMS clean-generic clean-libtool \
+	clean-sbinPROGRAMS mostlyclean-am
 
 distclean: distclean-am
 	-rm -rf ./$(DEPDIR)
@@ -602,7 +648,7 @@ install-dvi: install-dvi-am
 
 install-dvi-am:
 
-install-exec-am: install-sbinPROGRAMS
+install-exec-am: install-binPROGRAMS install-sbinPROGRAMS
 	@$(NORMAL_INSTALL)
 	$(MAKE) $(AM_MAKEFLAGS) install-exec-hook
 install-html: install-html-am
@@ -643,26 +689,28 @@ ps: ps-am
 
 ps-am:
 
-uninstall-am: uninstall-man uninstall-sbinPROGRAMS
+uninstall-am: uninstall-binPROGRAMS uninstall-man \
+	uninstall-sbinPROGRAMS
 
 uninstall-man: uninstall-man1
 
 .MAKE: all check install install-am install-exec-am install-strip
 
-.PHONY: CTAGS GTAGS all all-am check check-am clean clean-generic \
-	clean-libtool clean-sbinPROGRAMS ctags distclean \
+.PHONY: CTAGS GTAGS all all-am check check-am clean clean-binPROGRAMS \
+	clean-generic clean-libtool clean-sbinPROGRAMS ctags distclean \
 	distclean-compile distclean-generic distclean-libtool \
 	distclean-tags distdir dvi dvi-am html html-am info info-am \
-	install install-am install-data install-data-am install-dvi \
-	install-dvi-am install-exec install-exec-am install-exec-hook \
-	install-html install-html-am install-info install-info-am \
-	install-man install-man1 install-pdf install-pdf-am install-ps \
-	install-ps-am install-sbinPROGRAMS install-strip installcheck \
+	install install-am install-binPROGRAMS install-data \
+	install-data-am install-dvi install-dvi-am install-exec \
+	install-exec-am install-exec-hook install-html install-html-am \
+	install-info install-info-am install-man install-man1 \
+	install-pdf install-pdf-am install-ps install-ps-am \
+	install-sbinPROGRAMS install-strip installcheck \
 	installcheck-am installdirs maintainer-clean \
 	maintainer-clean-generic mostlyclean mostlyclean-compile \
 	mostlyclean-generic mostlyclean-libtool pdf pdf-am ps ps-am \
-	tags uninstall uninstall-am uninstall-man uninstall-man1 \
-	uninstall-sbinPROGRAMS
+	tags uninstall uninstall-am uninstall-binPROGRAMS \
+	uninstall-man uninstall-man1 uninstall-sbinPROGRAMS
 
 
 $(srcdir)/ntpsnmpd-opts.h: $(srcdir)/ntpsnmpd-opts.c
@@ -682,11 +730,11 @@ not-all-target:
 	touch $@	# used to avoid "all" default target when not building ntpsnmpd
 
 install-exec-hook:
-	@case ${BINSUBDIR} in					\
-	 bin) ODIR=${exec_prefix}/sbin ;;			\
-	 sbin) ODIR=${exec_prefix}/bin ;;			\
-	esac;							\
-	test -z "${bin_PROGRAMS}${bin_SCRIPTS}"			\
+	@case ${BINSUBDIR} in						\
+	 bin) ODIR=${sbindir} ;;					\
+	 sbin) ODIR=${bindir} ;;					\
+	esac;								\
+	test -z "${bin_PROGRAMS}${bin_SCRIPTS}"				\
 	|| for i in ${bin_PROGRAMS} ${bin_SCRIPTS} " "; do		\
 	   test ! -f $$ODIR/$$i || echo "*** $$i is also in $$ODIR!";	\
 	done

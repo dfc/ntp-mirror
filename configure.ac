@@ -211,8 +211,10 @@ case "$use_binsubdir" in
     ;;
 esac
 AC_MSG_RESULT($use_binsubdir)
+
 BINSUBDIR=$use_binsubdir
 AC_SUBST(BINSUBDIR)
+AM_CONDITIONAL(NTP_BINSUBDIR_IS_BIN, test "bin" = "$BINSUBDIR")
 
 AC_MSG_CHECKING([if we want to use arlib])
 AC_ARG_WITH(arlib,
@@ -407,6 +409,11 @@ esac
 
 AC_SEARCH_LIBS([setsockopt], [socket xnet])
 AC_SEARCH_LIBS([res_init], [resolv], , , [-lsocket -lnsl])
+case "$host" in
+ *-*-darwin*)
+    AC_CHECK_LIB([resolv],[res_9_init])
+    ;;
+esac
 AC_CHECK_FUNCS(res_init __res_init)
 
 AC_HEADER_STDC

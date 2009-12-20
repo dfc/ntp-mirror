@@ -1,3 +1,307 @@
+ChangeSet@1.2109, 2009-12-20 05:29:12-05:00, stenn@whimsy.udel.edu +27 -0
+  NTP_4_2_7P2
+  TAG: NTP_4_2_7P2
+
+  ChangeLog@1.510, 2009-12-20 05:29:03-05:00, stenn@whimsy.udel.edu +1 -0
+    NTP_4_2_7P2
+
+  ntpd/ntpd-opts.c@1.3, 2009-12-20 05:29:03-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P2
+
+  ntpd/ntpd-opts.h@1.3, 2009-12-20 05:29:03-05:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P2
+
+  ntpd/ntpd-opts.texi@1.3, 2009-12-20 05:29:03-05:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P2
+
+  ntpd/ntpd.1@1.3, 2009-12-20 05:29:04-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P2
+
+  ntpdc/ntpdc-opts.c@1.3, 2009-12-20 05:29:04-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P2
+
+  ntpdc/ntpdc-opts.h@1.3, 2009-12-20 05:29:04-05:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P2
+
+  ntpdc/ntpdc-opts.texi@1.3, 2009-12-20 05:29:04-05:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P2
+
+  ntpdc/ntpdc.1@1.3, 2009-12-20 05:29:05-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P2
+
+  ntpq/ntpq-opts.c@1.3, 2009-12-20 05:29:05-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P2
+
+  ntpq/ntpq-opts.h@1.3, 2009-12-20 05:29:05-05:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P2
+
+  ntpq/ntpq-opts.texi@1.3, 2009-12-20 05:29:05-05:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P2
+
+  ntpq/ntpq.1@1.3, 2009-12-20 05:29:05-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P2
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.3, 2009-12-20 05:29:06-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P2
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.3, 2009-12-20 05:29:06-05:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P2
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.3, 2009-12-20 05:29:06-05:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P2
+
+  ntpsnmpd/ntpsnmpd.1@1.3, 2009-12-20 05:29:06-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P2
+
+  packageinfo.sh@1.4, 2009-12-20 05:29:07-05:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P2
+
+  sntp/sntp-opts.c@1.3, 2009-12-20 05:29:07-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P2
+
+  sntp/sntp-opts.h@1.3, 2009-12-20 05:29:07-05:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P2
+
+  sntp/sntp-opts.texi@1.3, 2009-12-20 05:29:07-05:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P2
+
+  sntp/sntp.1@1.3, 2009-12-20 05:29:07-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P2
+
+  sntp/sntp.html@1.3, 2009-12-20 05:29:08-05:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P2
+
+  util/ntp-keygen-opts.c@1.3, 2009-12-20 05:29:08-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P2
+
+  util/ntp-keygen-opts.h@1.3, 2009-12-20 05:29:08-05:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P2
+
+  util/ntp-keygen-opts.texi@1.3, 2009-12-20 05:29:08-05:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P2
+
+  util/ntp-keygen.1@1.3, 2009-12-20 05:29:08-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P2
+
+ChangeSet@1.2107, 2009-12-20 01:04:33-05:00, stenn@whimsy.udel.edu +1 -0
+  Touch any html file from autogen
+
+  bootstrap@1.29, 2009-12-20 01:04:23-05:00, stenn@whimsy.udel.edu +1 -1
+    Touch any html file from autogen
+
+ChangeSet@1.2082.4.13, 2009-12-20 00:52:48-05:00, stenn@whimsy.udel.edu +27 -0
+  NTP_4_2_6P1_RC1
+  TAG: NTP_4_2_6P1_RC1
+
+  ChangeLog@1.496.25.8, 2009-12-20 00:52:37-05:00, stenn@whimsy.udel.edu +1 -0
+    NTP_4_2_6P1_RC1
+
+  ntpd/ntpd-opts.c@1.248.1.1, 2009-12-20 00:52:38-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC1
+
+  ntpd/ntpd-opts.h@1.248.1.1, 2009-12-20 00:52:38-05:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_6P1_RC1
+
+  ntpd/ntpd-opts.texi@1.246.1.1, 2009-12-20 00:52:38-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC1
+
+  ntpd/ntpd.1@1.246.1.1, 2009-12-20 00:52:38-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC1
+
+  ntpdc/ntpdc-opts.c@1.244.1.1, 2009-12-20 00:52:39-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC1
+
+  ntpdc/ntpdc-opts.h@1.244.1.1, 2009-12-20 00:52:39-05:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_6P1_RC1
+
+  ntpdc/ntpdc-opts.texi@1.243.1.1, 2009-12-20 00:52:39-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC1
+
+  ntpdc/ntpdc.1@1.243.1.1, 2009-12-20 00:52:39-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC1
+
+  ntpq/ntpq-opts.c@1.245.1.1, 2009-12-20 00:52:40-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC1
+
+  ntpq/ntpq-opts.h@1.245.1.1, 2009-12-20 00:52:40-05:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_6P1_RC1
+
+  ntpq/ntpq-opts.texi@1.244.1.1, 2009-12-20 00:52:40-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC1
+
+  ntpq/ntpq.1@1.244.1.1, 2009-12-20 00:52:40-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC1
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.123.1.1, 2009-12-20 00:52:41-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC1
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.123.1.1, 2009-12-20 00:52:41-05:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_6P1_RC1
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.123.1.1, 2009-12-20 00:52:41-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC1
+
+  ntpsnmpd/ntpsnmpd.1@1.122.1.1, 2009-12-20 00:52:42-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC1
+
+  packageinfo.sh@1.255.3.1, 2009-12-20 00:52:42-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC1
+
+  sntp/sntp-opts.c@1.117.1.1, 2009-12-20 00:52:42-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC1
+
+  sntp/sntp-opts.h@1.117.1.1, 2009-12-20 00:52:42-05:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_6P1_RC1
+
+  sntp/sntp-opts.texi@1.117.1.1, 2009-12-20 00:52:43-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC1
+
+  sntp/sntp.1@1.117.1.1, 2009-12-20 00:52:43-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC1
+
+  sntp/sntp.html@1.7.1.1, 2009-12-20 00:52:43-05:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_6P1_RC1
+
+  util/ntp-keygen-opts.c@1.247.1.1, 2009-12-20 00:52:43-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC1
+
+  util/ntp-keygen-opts.h@1.247.1.1, 2009-12-20 00:52:44-05:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_6P1_RC1
+
+  util/ntp-keygen-opts.texi@1.246.1.1, 2009-12-20 00:52:44-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC1
+
+  util/ntp-keygen.1@1.246.1.1, 2009-12-20 00:52:44-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC1
+
+ChangeSet@1.2082.4.12, 2009-12-19 23:55:09-05:00, stenn@pogo.udel.edu +3 -0
+  Put refclock_neoclock4x.c under the NTP COPYRIGHT
+
+  ChangeLog@1.496.25.7, 2009-12-19 23:53:39-05:00, stenn@pogo.udel.edu +4 -0
+    Put refclock_neoclock4x.c under the NTP COPYRIGHT
+
+  html/copyright.html@1.45, 2009-12-19 23:53:40-05:00, stenn@pogo.udel.edu +1 -0
+    Put refclock_neoclock4x.c under the NTP COPYRIGHT
+
+  ntpd/refclock_neoclock4x.c@1.17, 2009-12-19 23:53:40-05:00, stenn@pogo.udel.edu +20 -9
+    Put refclock_neoclock4x.c under the NTP COPYRIGHT
+
+ChangeSet@1.2082.4.11, 2009-12-19 22:05:09-05:00, stenn@whimsy.udel.edu +1 -0
+  Start the 4.2.6p1-RC cycle
+
+  packageinfo.sh@1.255.2.1, 2009-12-19 22:03:49-05:00, stenn@whimsy.udel.edu +14 -1
+    Start the 4.2.6p1-RC cycle
+
+ChangeSet@1.2082.4.10, 2009-12-19 21:47:40-05:00, stenn@whimsy.udel.edu +3 -0
+  [Bug 1415] Fix Mac OS X link problem
+
+  ChangeLog@1.496.25.6, 2009-12-19 21:47:29-05:00, stenn@whimsy.udel.edu +1 -0
+    [Bug 1415] Fix Mac OS X link problem
+
+  configure.ac@1.465.1.3, 2009-12-19 21:47:30-05:00, stenn@whimsy.udel.edu +5 -0
+    [Bug 1415] Fix Mac OS X link problem
+
+  ntpsnmpd/Makefile.am@1.15.1.1, 2009-12-19 21:47:30-05:00, stenn@whimsy.udel.edu +1 -1
+    [Bug 1415] Fix Mac OS X link problem
+
+ChangeSet@1.2082.10.1, 2009-12-18 05:18:12+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  correct NTP_OS_CFLAGS [Bug 1412]
+  allow $CC to contain slash and space in build
+
+  build@1.32, 2009-12-18 05:18:11+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    allow space and slash in $CC without breaking build/flock-build
+
+  m4/os_cflags.m4@1.5, 2009-12-18 05:18:11+00:00, davehart@shiny.ad.hartbrothers.com +90 -93
+    the name of the macro to define must be on the same line as AC_DEFUN(
+
+ChangeSet@1.2101, 2009-12-17 09:17:17+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  correct ChangeLog merge from ntp-stable-updatepoint
+
+  ChangeLog@1.505, 2009-12-17 09:17:17+00:00, davehart@shiny.ad.hartbrothers.com +1 -3
+    correct ChangeLog merge from ntp-stable-updatepoint
+
+ChangeSet@1.2100, 2009-12-17 08:27:16+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  scripts/UpdatePoint changes to packageinfo.sh's -dev copy
+    adds support for beta releases in ntp-stable
+
+  packageinfo.sh@1.3, 2009-12-17 08:27:16+00:00, davehart@shiny.ad.hartbrothers.com +68 -15
+    scripts/UpdatePoint changes to packageinfo.sh's -dev copy
+      adds support for beta releases in ntp-stable
+
+ChangeSet@1.2098, 2009-12-17 04:25:31+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  ChangeLog:
+    correct ChangeLog merge from ntp-stable-1419, bk remerge/fm3tool hates me
+
+  ChangeLog@1.503, 2009-12-17 04:25:16+00:00, davehart@shiny.ad.hartbrothers.com +1 -3
+    correct ChangeLog merge from ntp-stable-1419, bk remerge/fm3tool hates me
+
+ChangeSet@1.2082.9.1, 2009-12-16 21:26:45+00:00, davehart@shiny.ad.hartbrothers.com +13 -0
+  [Bug 1419] ntpdate, ntpdc, sntp, ntpd ignore configure --bindir.
+
+  ChangeLog@1.496.32.1, 2009-12-16 21:26:43+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+    [Bug 1419] ntpdate, ntpdc, sntp, ntpd ignore configure --bindir.
+
+  adjtimed/Makefile.am@1.7, 2009-12-16 21:26:44+00:00, davehart@shiny.ad.hartbrothers.com +5 -1
+    [Bug 1419] ntpdate, ntpdc, sntp, ntpd ignore configure --bindir.
+
+  bincheck.mf@1.3, 2009-12-16 21:26:43+00:00, davehart@shiny.ad.hartbrothers.com +5 -5
+    respect $bindir, $sbindir instead of assuming $exec_prefix/$BINSUBDIR
+
+  configure.ac@1.465.3.1, 2009-12-16 21:26:43+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+    [Bug 1419] ntpdate, ntpdc, sntp, ntpd ignore configure --bindir.
+
+  ntpd/Makefile.am@1.79.2.1, 2009-12-16 21:26:44+00:00, davehart@shiny.ad.hartbrothers.com +4 -2
+    [Bug 1419] ntpdate, ntpdc, sntp, ntpd ignore configure --bindir.
+
+  ntpdate/Makefile.am@1.23, 2009-12-16 21:26:44+00:00, davehart@shiny.ad.hartbrothers.com +6 -2
+    [Bug 1419] ntpdate, ntpdc, sntp, ntpd ignore configure --bindir.
+
+  ntpdc/Makefile.am@1.47.1.1, 2009-12-16 21:26:44+00:00, davehart@shiny.ad.hartbrothers.com +5 -1
+    [Bug 1419] ntpdate, ntpdc, sntp, ntpd ignore configure --bindir.
+
+  ntpq/Makefile.am@1.42.1.1, 2009-12-16 21:26:44+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+    [Bug 1419] ntpdate, ntpdc, sntp, ntpd ignore configure --bindir.
+
+  ntpsnmpd/Makefile.am@1.16, 2009-12-16 21:26:44+00:00, davehart@shiny.ad.hartbrothers.com +5 -0
+    [Bug 1419] ntpdate, ntpdc, sntp, ntpd ignore configure --bindir.
+
+  scripts/Makefile.am@1.16.1.1, 2009-12-16 21:26:44+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+    [Bug 1419] ntpdate, ntpdc, sntp, ntpd ignore configure --bindir.
+
+  sntp/Makefile.am@1.20.1.1, 2009-12-16 21:26:44+00:00, davehart@shiny.ad.hartbrothers.com +5 -1
+    [Bug 1419] ntpdate, ntpdc, sntp, ntpd ignore configure --bindir.
+
+  sntp/configure.ac@1.29, 2009-12-16 21:26:44+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+    [Bug 1419] ntpdate, ntpdc, sntp, ntpd ignore configure --bindir.
+
+  util/Makefile.am@1.46, 2009-12-16 21:26:44+00:00, davehart@shiny.ad.hartbrothers.com +6 -0
+    [Bug 1419] ntpdate, ntpdc, sntp, ntpd ignore configure --bindir.
+
+ChangeSet@1.2082.8.1, 2009-12-16 20:21:10+00:00, davehart@shiny.ad.hartbrothers.com +5 -0
+  updated packageinfo.sh, VersionName, and UpdatePoint to use prerelease=
+    from packageinfo.sh instead of releasecandidate= and added support for
+    beta releases.
+
+  ChangeLog@1.496.31.1, 2009-12-16 20:21:09+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+    Build infrastructure updates to enable beta releases of ntp-stable.
+
+  packageinfo.sh@1.255.1.3, 2009-12-16 20:21:09+00:00, davehart@shiny.ad.hartbrothers.com +69 -16
+    updated to use prerelease= instead of releasecandidate=, with support
+      for prerelease=beta for ntp-stable pre-RC1 test releases
+
+  scripts/Makefile.am@1.17, 2009-12-16 20:21:09+00:00, davehart@shiny.ad.hartbrothers.com +36 -5
+    reformat, add UpdatePoint to EXTRA_DIST
+
+  scripts/UpdatePoint@1.1, 2009-12-16 20:21:09+00:00, davehart@shiny.ad.hartbrothers.com +323 -0
+    updated to use prerelease= from packageinfo.sh instead of releasecandidate=
+    added support for beta releases
+
+  scripts/UpdatePoint@1.0, 2009-12-16 20:21:09+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+
+  scripts/VersionName@1.5, 2009-12-16 20:21:09+00:00, davehart@shiny.ad.hartbrothers.com +32 -18
+    updated to use prerelease= from packageinfo.sh instead of releasecandidate=
+    added support for beta releases
+
 ChangeSet@1.2096, 2009-12-15 05:28:39-05:00, stenn@whimsy.udel.edu +27 -0
   NTP_4_2_7P1
   TAG: NTP_4_2_7P1
@@ -554,6 +858,7 @@ ChangeSet@1.2085, 2009-12-10 06:24:33-05:00, stenn@whimsy.udel.edu +27 -0
 
 ChangeSet@1.2082.4.3, 2009-12-10 05:49:19-05:00, stenn@whimsy.udel.edu +25 -0
   4.2.6
+  TAG: NTP_4_2_6
 
   ntpd/ntpd-opts.c@1.248, 2009-12-10 05:48:35-05:00, stenn@whimsy.udel.edu +1 -1
     4.2.6
