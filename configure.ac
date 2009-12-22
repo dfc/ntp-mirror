@@ -414,6 +414,7 @@ case "$host" in
     AC_CHECK_LIB([resolv],[res_9_init])
     ;;
 esac
+AC_HEADER_RESOLV
 AC_CHECK_FUNCS(res_init __res_init)
 
 AC_HEADER_STDC
@@ -780,6 +781,7 @@ AC_CACHE_CHECK([for struct rt_msghdr], ac_cv_struct_rt_msghdr,
 
 AC_CACHE_CHECK([for struct rtattr], ac_cv_struct_rtattr,
 [AC_TRY_COMPILE([
+#include <stddef.h>
 #include <linux/rtnetlink.h>],
 [struct rtattr p;],
 	ac_cv_struct_rtattr=yes,

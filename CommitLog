@@ -1,3 +1,171 @@
+ChangeSet@1.2116, 2009-12-22 05:29:27-05:00, stenn@whimsy.udel.edu +27 -0
+  NTP_4_2_7P3
+  TAG: NTP_4_2_7P3
+
+  ChangeLog@1.515, 2009-12-22 05:29:18-05:00, stenn@whimsy.udel.edu +1 -0
+    NTP_4_2_7P3
+
+  ntpd/ntpd-opts.c@1.4, 2009-12-22 05:29:18-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P3
+
+  ntpd/ntpd-opts.h@1.4, 2009-12-22 05:29:19-05:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P3
+
+  ntpd/ntpd-opts.texi@1.4, 2009-12-22 05:29:19-05:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P3
+
+  ntpd/ntpd.1@1.4, 2009-12-22 05:29:19-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P3
+
+  ntpdc/ntpdc-opts.c@1.4, 2009-12-22 05:29:19-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P3
+
+  ntpdc/ntpdc-opts.h@1.4, 2009-12-22 05:29:20-05:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P3
+
+  ntpdc/ntpdc-opts.texi@1.4, 2009-12-22 05:29:20-05:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P3
+
+  ntpdc/ntpdc.1@1.4, 2009-12-22 05:29:20-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P3
+
+  ntpq/ntpq-opts.c@1.4, 2009-12-22 05:29:20-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P3
+
+  ntpq/ntpq-opts.h@1.4, 2009-12-22 05:29:20-05:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P3
+
+  ntpq/ntpq-opts.texi@1.4, 2009-12-22 05:29:21-05:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P3
+
+  ntpq/ntpq.1@1.4, 2009-12-22 05:29:21-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P3
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.4, 2009-12-22 05:29:21-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P3
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.4, 2009-12-22 05:29:21-05:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P3
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.4, 2009-12-22 05:29:21-05:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P3
+
+  ntpsnmpd/ntpsnmpd.1@1.4, 2009-12-22 05:29:22-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P3
+
+  packageinfo.sh@1.5, 2009-12-22 05:29:22-05:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P3
+
+  sntp/sntp-opts.c@1.4, 2009-12-22 05:29:22-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P3
+
+  sntp/sntp-opts.h@1.4, 2009-12-22 05:29:22-05:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P3
+
+  sntp/sntp-opts.texi@1.4, 2009-12-22 05:29:23-05:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P3
+
+  sntp/sntp.1@1.4, 2009-12-22 05:29:23-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P3
+
+  sntp/sntp.html@1.4, 2009-12-22 05:29:23-05:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P3
+
+  util/ntp-keygen-opts.c@1.4, 2009-12-22 05:29:23-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P3
+
+  util/ntp-keygen-opts.h@1.4, 2009-12-22 05:29:23-05:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P3
+
+  util/ntp-keygen-opts.texi@1.4, 2009-12-22 05:29:24-05:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P3
+
+  util/ntp-keygen.1@1.4, 2009-12-22 05:29:24-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P3
+
+ChangeSet@1.2082.4.23, 2009-12-22 08:36:49+00:00, hart@psp-deb1.ntp.org +1 -0
+  UpdatePoint:
+    correct handling of beta-free stable RC bumps
+
+  scripts/UpdatePoint@1.4, 2009-12-22 08:36:38+00:00, hart@psp-deb1.ntp.org +15 -7
+    correct handling of beta-free stable RC bumps
+
+ChangeSet@1.2082.4.22, 2009-12-22 03:00:22-05:00, stenn@whimsy.udel.edu +2 -0
+  [Bug 1424] Fix check for rtattr (rtnetlink.h)
+
+  ChangeLog@1.496.25.15, 2009-12-22 03:00:12-05:00, stenn@whimsy.udel.edu +1 -0
+    [Bug 1424] Fix check for rtattr (rtnetlink.h)
+
+  configure.ac@1.465.1.6, 2009-12-22 03:00:12-05:00, stenn@whimsy.udel.edu +1 -0
+    [Bug 1424] Fix check for rtattr (rtnetlink.h)
+
+ChangeSet@1.2082.4.21, 2009-12-22 02:52:08-05:00, stenn@whimsy.udel.edu +1 -0
+  [Bug 1416] MAXDNAME undefined on Solaris 2.6
+
+  ChangeLog@1.496.25.14, 2009-12-22 02:52:00-05:00, stenn@whimsy.udel.edu +1 -0
+    [Bug 1416] MAXDNAME undefined on Solaris 2.6
+
+ChangeSet@1.2082.4.20, 2009-12-22 02:29:35-05:00, stenn@whimsy.udel.edu +1 -0
+  Bootstrap script should also touch .html files
+
+  bootstrap@1.28.1.1, 2009-12-22 02:29:22-05:00, stenn@whimsy.udel.edu +1 -1
+    Bootstrap script should also touch .html files
+
+ChangeSet@1.2082.4.19, 2009-12-22 02:26:26-05:00, stenn@whimsy.udel.edu +2 -0
+  [Bug 1411] Fix status messages in refclock_oncore.c
+
+  ChangeLog@1.496.25.13, 2009-12-22 02:26:15-05:00, stenn@whimsy.udel.edu +1 -0
+    [Bug 1411] Fix status messages in refclock_oncore.c
+
+  ntpd/refclock_oncore.c@1.82, 2009-12-22 02:26:15-05:00, stenn@whimsy.udel.edu +31 -8
+    [Bug 1411] Fix status messages in refclock_oncore.c
+
+ChangeSet@1.2082.4.18, 2009-12-22 04:15:31+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  bring Windows mkver.bat in line with packaginfo.sh and
+    scripts/VersionName changes
+
+  ports/winnt/scripts/mkver.bat@1.12, 2009-12-22 04:15:30+00:00, davehart@shiny.ad.hartbrothers.com +14 -11
+    bring Windows mkver.bat in line with packaginfo.sh and
+      scripts/VersionName changes
+
+ChangeSet@1.2082.11.1, 2009-12-22 00:55:19+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
+  [Bug 1428] Use AC_HEADER_RESOLV to fix breaks from resolv.h
+
+  ChangeLog@1.496.33.1, 2009-12-22 00:55:19+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+    [Bug 1428] Use AC_HEADER_RESOLV to fix breaks from resolv.h
+
+  configure.ac@1.465.1.4, 2009-12-22 00:55:19+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1428] Use AC_HEADER_RESOLV to fix breaks from resolv.h
+
+  ntpd/ntp_intres.c@1.77, 2009-12-22 00:55:19+00:00, davehart@shiny.ad.hartbrothers.com +16 -3
+    [Bug 1428] Use AC_HEADER_RESOLV to fix breaks from resolv.h
+      changes include of resolv.h to match Autoconf doc suggestion
+
+ChangeSet@1.2082.4.15, 2009-12-21 06:26:25+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  [Bug 1427] quote missing in ./build - shows up on NetBSD.
+
+  ChangeLog@1.496.25.10, 2009-12-21 06:26:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1427] quote missing in ./build - shows up on NetBSD.
+
+  build@1.33, 2009-12-21 06:26:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    [Bug 1427] quote missing in ./build - shows up on NetBSD.
+
+ChangeSet@1.2082.4.14, 2009-12-21 05:19:15+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
+  [Bug 1426] scripts/VersionName needs . on the search path.
+  correct permissions to 0775 for scripts/UpdatePoint.
+
+  ChangeLog@1.496.25.9, 2009-12-21 05:19:14+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+    [Bug 1426] scripts/VersionName needs . on the search path.
+
+  scripts/UpdatePoint@1.3, 2009-12-21 05:19:14+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    work correctly without . on $PATH
+
+  scripts/UpdatePoint@1.2, 2009-12-21 05:18:39+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Change mode to -rwxrwxr-x
+
+  scripts/VersionName@1.6, 2009-12-21 05:19:14+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    [Bug 1426] scripts/VersionName needs . on the search path.
+
 ChangeSet@1.2109, 2009-12-20 05:29:12-05:00, stenn@whimsy.udel.edu +27 -0
   NTP_4_2_7P2
   TAG: NTP_4_2_7P2
