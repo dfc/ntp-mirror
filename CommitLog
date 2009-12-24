@@ -1,3 +1,132 @@
+ChangeSet@1.2120, 2009-12-24 10:27:41+00:00, stenn@whimsy.udel.edu +27 -0
+  NTP_4_2_7P4
+  TAG: NTP_4_2_7P4
+
+  ChangeLog@1.519, 2009-12-24 10:27:32+00:00, stenn@whimsy.udel.edu +1 -0
+    NTP_4_2_7P4
+
+  ntpd/ntpd-opts.c@1.5, 2009-12-24 10:27:32+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P4
+
+  ntpd/ntpd-opts.h@1.5, 2009-12-24 10:27:33+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P4
+
+  ntpd/ntpd-opts.texi@1.5, 2009-12-24 10:27:33+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P4
+
+  ntpd/ntpd.1@1.5, 2009-12-24 10:27:33+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P4
+
+  ntpdc/ntpdc-opts.c@1.5, 2009-12-24 10:27:33+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P4
+
+  ntpdc/ntpdc-opts.h@1.5, 2009-12-24 10:27:34+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P4
+
+  ntpdc/ntpdc-opts.texi@1.5, 2009-12-24 10:27:34+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P4
+
+  ntpdc/ntpdc.1@1.5, 2009-12-24 10:27:34+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P4
+
+  ntpq/ntpq-opts.c@1.5, 2009-12-24 10:27:34+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P4
+
+  ntpq/ntpq-opts.h@1.5, 2009-12-24 10:27:34+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P4
+
+  ntpq/ntpq-opts.texi@1.5, 2009-12-24 10:27:35+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P4
+
+  ntpq/ntpq.1@1.5, 2009-12-24 10:27:35+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P4
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.5, 2009-12-24 10:27:35+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P4
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.5, 2009-12-24 10:27:35+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P4
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.5, 2009-12-24 10:27:36+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P4
+
+  ntpsnmpd/ntpsnmpd.1@1.5, 2009-12-24 10:27:36+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P4
+
+  packageinfo.sh@1.6, 2009-12-24 10:27:36+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P4
+
+  sntp/sntp-opts.c@1.5, 2009-12-24 10:27:36+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P4
+
+  sntp/sntp-opts.h@1.5, 2009-12-24 10:27:36+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P4
+
+  sntp/sntp-opts.texi@1.5, 2009-12-24 10:27:37+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P4
+
+  sntp/sntp.1@1.5, 2009-12-24 10:27:37+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P4
+
+  sntp/sntp.html@1.5, 2009-12-24 10:27:37+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P4
+
+  util/ntp-keygen-opts.c@1.5, 2009-12-24 10:27:37+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P4
+
+  util/ntp-keygen-opts.h@1.5, 2009-12-24 10:27:37+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P4
+
+  util/ntp-keygen-opts.texi@1.5, 2009-12-24 10:27:38+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P4
+
+  util/ntp-keygen.1@1.5, 2009-12-24 10:27:38+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P4
+
+ChangeSet@1.2119, 2009-12-24 07:42:08+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  Correct ChangeLog merge from stable
+
+  ChangeLog@1.518, 2009-12-24 07:42:08+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+    Correct ChangeLog merge from stable
+
+ChangeSet@1.2082.12.1, 2009-12-24 02:27:39-05:00, stenn@deacon.udel.edu +6 -0
+  System headers must come before ntp headers in ntp_intres.c
+
+  ChangeLog@1.496.34.1, 2009-12-24 02:25:49-05:00, stenn@deacon.udel.edu +1 -0
+    System headers must come before ntp headers in ntp_intres.c
+
+  include/Makefile.am@1.38, 2009-12-24 02:25:55-05:00, stenn@deacon.udel.edu +1 -0
+    System headers must come before ntp headers in ntp_intres.c
+
+  include/ntp_config.h@1.67, 2009-12-24 02:25:57-05:00, stenn@deacon.udel.edu +0 -10
+    System headers must come before ntp headers in ntp_intres.c
+
+  include/ntp_intres.h@1.1, 2009-12-24 02:08:32-05:00, stenn@deacon.udel.edu +14 -0
+    BitKeeper file /deacon/backroom/ntp-stable/include/ntp_intres.h
+
+  include/ntp_intres.h@1.0, 2009-12-24 02:08:32-05:00, stenn@deacon.udel.edu +0 -0
+
+  ntpd/ntp_config.c@1.238.1.1, 2009-12-24 02:27:10-05:00, stenn@deacon.udel.edu +1 -0
+    System headers must come before ntp headers in ntp_intres.c
+
+  ntpd/ntp_intres.c@1.78, 2009-12-24 02:27:10-05:00, stenn@deacon.udel.edu +10 -8
+    System headers must come before ntp headers in ntp_intres.c
+
+ChangeSet@1.2082.4.24, 2009-12-23 11:01:44+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+  [Bug 1429] -4 command line option to ntpd does not reliably force IPv4 resolution
+
+  ChangeLog@1.496.25.16, 2009-12-23 11:01:43+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1429] -4 command line option to ntpd does not reliably force IPv4 resolution
+
+  ntpd/cmd_args.c@1.57, 2009-12-23 11:01:43+00:00, davehart@shiny.ad.hartbrothers.com +12 -5
+    [Bug 1429] -4 command line option to ntpd does not reliably force IPv4 resolution
+
+  ntpd/ntp_config.c@1.239, 2009-12-23 11:01:43+00:00, davehart@shiny.ad.hartbrothers.com +2 -8
+    [Bug 1429] -4 command line option to ntpd does not reliably force IPv4 resolution
+
+  ntpd/ntp_scanner.h@1.15, 2009-12-23 11:01:43+00:00, davehart@shiny.ad.hartbrothers.com +0 -1
+    [Bug 1429] -4 command line option to ntpd does not reliably force IPv4 resolution
+
 ChangeSet@1.2116, 2009-12-22 05:29:27-05:00, stenn@whimsy.udel.edu +27 -0
   NTP_4_2_7P3
   TAG: NTP_4_2_7P3
