@@ -1105,7 +1105,7 @@
 /* Should we align with the NIST lockclock scheme? */
 #undef LOCKCLOCK
 
-/* Does the kernel support multicasting IP? */
+/* Does the target support multicast IP? */
 #undef MCAST
 
 /* Should we recommend a minimum value for tickadj? */

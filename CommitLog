@@ -1,3 +1,129 @@
+ChangeSet@1.2122, 2009-12-25 10:34:17+00:00, stenn@whimsy.udel.edu +27 -0
+  NTP_4_2_7P5
+  TAG: NTP_4_2_7P5
+
+  ChangeLog@1.521, 2009-12-25 10:34:07+00:00, stenn@whimsy.udel.edu +1 -0
+    NTP_4_2_7P5
+
+  ntpd/ntpd-opts.c@1.6, 2009-12-25 10:34:07+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P5
+
+  ntpd/ntpd-opts.h@1.6, 2009-12-25 10:34:08+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P5
+
+  ntpd/ntpd-opts.texi@1.6, 2009-12-25 10:34:08+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P5
+
+  ntpd/ntpd.1@1.6, 2009-12-25 10:34:08+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P5
+
+  ntpdc/ntpdc-opts.c@1.6, 2009-12-25 10:34:08+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P5
+
+  ntpdc/ntpdc-opts.h@1.6, 2009-12-25 10:34:09+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P5
+
+  ntpdc/ntpdc-opts.texi@1.6, 2009-12-25 10:34:09+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P5
+
+  ntpdc/ntpdc.1@1.6, 2009-12-25 10:34:09+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P5
+
+  ntpq/ntpq-opts.c@1.6, 2009-12-25 10:34:09+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P5
+
+  ntpq/ntpq-opts.h@1.6, 2009-12-25 10:34:10+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P5
+
+  ntpq/ntpq-opts.texi@1.6, 2009-12-25 10:34:10+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P5
+
+  ntpq/ntpq.1@1.6, 2009-12-25 10:34:10+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P5
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.6, 2009-12-25 10:34:10+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P5
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.6, 2009-12-25 10:34:11+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P5
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.6, 2009-12-25 10:34:11+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P5
+
+  ntpsnmpd/ntpsnmpd.1@1.6, 2009-12-25 10:34:11+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P5
+
+  packageinfo.sh@1.7, 2009-12-25 10:34:11+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P5
+
+  sntp/sntp-opts.c@1.6, 2009-12-25 10:34:12+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P5
+
+  sntp/sntp-opts.h@1.6, 2009-12-25 10:34:12+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P5
+
+  sntp/sntp-opts.texi@1.6, 2009-12-25 10:34:12+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P5
+
+  sntp/sntp.1@1.6, 2009-12-25 10:34:12+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P5
+
+  sntp/sntp.html@1.6, 2009-12-25 10:34:13+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P5
+
+  util/ntp-keygen-opts.c@1.6, 2009-12-25 10:34:13+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P5
+
+  util/ntp-keygen-opts.h@1.6, 2009-12-25 10:34:13+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P5
+
+  util/ntp-keygen-opts.texi@1.6, 2009-12-25 10:34:13+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P5
+
+  util/ntp-keygen.1@1.6, 2009-12-25 10:34:13+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P5
+
+ChangeSet@1.2082.13.1, 2009-12-25 00:19:40-05:00, stenn@whimsy.udel.edu +2 -0
+  [Bug 1435] sntp: Test for -lresolv using the same tests as in ntp
+
+  ChangeLog@1.496.35.1, 2009-12-25 00:19:29-05:00, stenn@whimsy.udel.edu +1 -0
+    [Bug 1435] sntp: Test for -lresolv using the same tests as in ntp
+
+  sntp/configure.ac@1.29.1.1, 2009-12-25 00:19:29-05:00, stenn@whimsy.udel.edu +3 -0
+    [Bug 1435] sntp: Test for -lresolv using the same tests as in ntp
+
+ChangeSet@1.2082.4.26, 2009-12-24 22:04:26+00:00, davehart@shiny.ad.hartbrothers.com +8 -0
+  [Bug 1425] unpeer by association ID sets up for duplicate free().
+  [Bug 1434] HP-UX 11 ip_mreq undeclared, _HPUX_SOURCE helps some.
+  Use HAVE_WORKING_FORK instead of HAVE_FORK to avoid broken fork().
+
+  ChangeLog@1.496.25.18, 2009-12-24 22:04:25+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+    [Bug 1425] unpeer by association ID sets up for duplicate free().
+    [Bug 1434] HP-UX 11 ip_mreq undeclared, _HPUX_SOURCE helps some.
+
+  configure.ac@1.465.1.7, 2009-12-24 22:04:25+00:00, davehart@shiny.ad.hartbrothers.com +50 -29
+    [Bug 1434] HP-UX 11 ip_mreq undeclared, _HPUX_SOURCE helps some.
+
+  include/ntp_intres.h@1.2, 2009-12-24 22:04:25+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    Use HAVE_WORKING_FORK instead of HAVE_FORK preemptively, some rare
+      systems have a broken fork()
+
+  m4/os_cflags.m4@1.6, 2009-12-24 22:04:25+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+    [Bug 1434] HP-UX 11 ip_mreq undeclared, _HPUX_SOURCE helps some.
+
+  ntpd/ntp_config.c@1.241, 2009-12-24 22:04:25+00:00, davehart@shiny.ad.hartbrothers.com +0 -2
+    [Bug 1425] unpeer by association ID sets up for duplicate free().
+
+  ntpsnmpd/netsnmp_daemonize.c@1.2, 2009-12-24 22:04:25+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    Use HAVE_WORKING_FORK instead of HAVE_FORK preemptively, some rare
+      systems have a broken fork()
+
+  sntp/configure.ac@1.30, 2009-12-24 22:04:25+00:00, davehart@shiny.ad.hartbrothers.com +53 -0
+    [Bug 1434] HP-UX 11 ip_mreq undeclared, _HPUX_SOURCE helps some.
+
+  sntp/networking.c@1.29, 2009-12-24 22:04:25+00:00, davehart@shiny.ad.hartbrothers.com +7 -1
+    [Bug 1434] HP-UX 11 ip_mreq undeclared, _HPUX_SOURCE helps some.
+
 ChangeSet@1.2120, 2009-12-24 10:27:41+00:00, stenn@whimsy.udel.edu +27 -0
   NTP_4_2_7P4
   TAG: NTP_4_2_7P4

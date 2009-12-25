@@ -319,6 +319,9 @@
 /* Do we need netinet6/in6.h? */
 #undef LWRES_PLATFORM_NEEDNETINET6IN6H
 
+/* Does the target support multicast IP? */
+#undef MCAST
+
 /* Do we need an s_char typedef? */
 #undef NEED_S_CHAR_TYPEDEF
 
@@ -372,6 +375,9 @@
 
 /* Define to 1 if you can safely include both <sys/time.h> and <time.h>. */
 #undef TIME_WITH_SYS_TIME
+
+/* What type to use for setsockopt */
+#undef TYPEOF_IP_MULTICAST_LOOP
 
 /* Version number of package */
 #undef VERSION
