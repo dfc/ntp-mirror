@@ -21,6 +21,7 @@
 # in sbindir.  Now that we offer a choice, look in the "other" installation
 # subdir to warn folks if there is another version there.
 
+
 VPATH = @srcdir@
 pkgdatadir = $(datadir)/@PACKAGE@
 pkgincludedir = $(includedir)/@PACKAGE@
@@ -119,6 +120,7 @@ am__base_list = \
 man1dir = $(mandir)/man1
 NROFF = nroff
 MANS = $(man_MANS)
+DATA = $(noinst_DATA)
 RECURSIVE_CLEAN_TARGETS = mostlyclean-recursive clean-recursive	\
   distclean-recursive maintainer-clean-recursive
 AM_RECURSIVE_TARGETS = $(RECURSIVE_TARGETS:-recursive=) \
@@ -276,11 +278,15 @@ AM_CPPFLAGS = $(LIBOPTS_CFLAGS) -I$(top_srcdir)/../include \
 	-I$(top_srcdir)/../lib/isc/unix/include
 
 LDADD = $(LIBOPTS_LDADD) -lm ../libntp/libntp.a
-run_ag = cd $(srcdir) &&				\
-	env PATH="$(abs_builddir):$(PATH)"	\
-	autogen -L ../include --writable
+run_ag = cd $(srcdir) &&	env PATH="$(abs_builddir):$(PATH)"	\
+		autogen -L ../include --writable
 
-CLEANFILES = libopts-subdir .deps-ver
+run_ro = ( { test -w $(srcdir) && exit 0 ;} || { touch ro_srcdir	\
+		&& chmod u+w $(srcdir) ;} ) &&
+
+if_ro_src = { test ! -f ro_srcdir && exit 0 ;} ||
+post_run_ro = $(if_ro_src) { rm ro_srcdir && chmod u-w $(srcdir) ;}
+CLEANFILES = .deps-ver
 SUBDIRS = $(am__append_1) .
 sntp_SOURCES = \
 	crypto.c	\
@@ -300,9 +306,6 @@ sntp_SOURCES = \
 	utilities.h	\
 	$(NULL)
 
-
-# it's in EXTRA_DIST
-#dist_man_MANS=	sntp.1
 EXTRA_DIST = \
 		autogen-version.def	\
 		bincheck.mf		\
@@ -325,9 +328,14 @@ OLD_EXTRA_DIST = \
 
 BUILT_SOURCES = check-autogen-version.def check-version.def \
 	check-version.m4 check-version.texi libtool sntp-opts.c \
-	sntp-opts.h sntp-opts.menu sntp-opts.texi sntp.1 sntp.html \
-	$(NULL) .deps-ver
-man_MANS = sntp.1
+	sntp-opts.h $(NULL) .deps-ver
+man_MANS = $(srcdir)/sntp.1
+noinst_DATA = \
+	$(srcdir)/sntp.html		\
+	$(srcdir)/sntp-opts.texi	\
+	$(srcdir)/sntp-opts.menu	\
+	$(NULL)
+
 all: $(BUILT_SOURCES) config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
 
@@ -881,7 +889,7 @@ distcleancheck: distclean
 check-am: all-am
 check: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) check-recursive
-all-am: Makefile $(PROGRAMS) $(MANS) config.h
+all-am: Makefile $(PROGRAMS) $(MANS) $(DATA) config.h
 installdirs: installdirs-recursive
 installdirs-am:
 	for dir in "$(DESTDIR)$(bindir)" "$(DESTDIR)$(sbindir)" "$(DESTDIR)$(man1dir)"; do \
@@ -1069,20 +1077,21 @@ $(srcdir)/sntp-opts.c: $(srcdir)/sntp-opts.def $(srcdir)/../include/version.def
 	$(run_ag) sntp-opts.def
 
 $(srcdir)/sntp.1: $(srcdir)/sntp-opts.def $(srcdir)/../include/version.def
-	$(run_ag) -Tagman1.tpl -bsntp sntp-opts.def
+	$(run_ro) $(run_ag) -Tagman1.tpl -bsntp sntp-opts.def
+	$(post_run_ro)
 
-$(srcdir)/sntp-opts.texi $(srcdir)/sntp-opts.menu: $(srcdir)/sntp-opts.def $(srcdir)/../include/version.def
-	$(MAKE) libopts-subdir sntp	# aginfo.tpl runs binary to extract --help usage text
-	$(run_ag) -Taginfo.tpl -DLEVEL=section sntp-opts.def
+$(srcdir)/sntp-opts.menu: $(srcdir)/sntp-opts.texi
+	@: do-nothing action to avoid default SCCS get, .menu built with .texi
 
-libopts-subdir: $(LIBOPTS_LDADD)
-	touch $@	# LIBOPTS_LDADD is ./libopts/libopts.la if NEED_LIBOPTS
-
-libopts/libopts.la:
-	( cd libopts && $(MAKE) libopts.la )
+$(srcdir)/sntp-opts.texi: $(srcdir)/sntp-opts.def $(srcdir)/../include/version.def
+	$(run_ro) $(run_ag) -Taginfo.tpl -DLEVEL=section sntp-opts.def
+	$(post_run_ro)
 
 $(srcdir)/sntp.html: $(srcdir)/sntp-opts.menu $(srcdir)/sntp-opts.texi $(srcdir)/sntp.texi $(srcdir)/version.texi
-	cd $(srcdir) && makeinfo --force --html --no-split -o sntp.html sntp.texi
+	$(run_ro) cd $(srcdir) && makeinfo --force --html --no-split -o sntp.html+ sntp.texi
+	$(if_ro_src) { chmod a-w $(srcdir)/sntp.html+ && chmod u+w $(srcdir)/sntp.html ;}
+	$(post_run_ro)
+	mv $(srcdir)/sntp.html+ $(srcdir)/sntp.html
 
 ../libntp/libntp.a:
 	cd ../libntp && $(MAKE)

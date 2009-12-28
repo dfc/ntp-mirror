@@ -20,6 +20,7 @@
 # subdir to warn folks if there is another version there.
 
 
+
 VPATH = @srcdir@
 pkgdatadir = $(datadir)/@PACKAGE@
 pkgincludedir = $(includedir)/@PACKAGE@
@@ -108,6 +109,7 @@ am__base_list = \
 man1dir = $(mandir)/man1
 NROFF = nroff
 MANS = $(man_MANS)
+DATA = $(noinst_DATA)
 HEADERS = $(noinst_HEADERS)
 ETAGS = etags
 CTAGS = ctags
@@ -274,13 +276,19 @@ AM_CFLAGS = @SNMP_CFLAGS@
 EXTRA_DIST = ntpsnmpd-opts.def ntpsnmpd.1 ntpsnmpd-opts.texi	\
 		ntpsnmpd-opts.menu ntpv4-mib.mib
 
-BUILT_SOURCES = ntpsnmpd-opts.c ntpsnmpd-opts.h ntpsnmpd.1 \
-	ntpsnmpd-opts.texi ntpsnmpd-opts.menu .deps-ver
+BUILT_SOURCES = ntpsnmpd-opts.c ntpsnmpd-opts.h .deps-ver
 CLEANFILES = .deps-ver
-man_MANS = ntpsnmpd.1
-run_ag = cd $(srcdir) &&					\
-		env PATH="$(abs_builddir):$(PATH)"		\
+noinst_DATA = $(srcdir)/ntpsnmpd-opts.texi $(srcdir)/ntpsnmpd-opts.menu
+man_MANS = $(srcdir)/ntpsnmpd.1
+run_ag = cd $(srcdir) &&	env PATH="$(abs_builddir):$(PATH)"	\
 		autogen -L ../include --writable
+
+run_ro = ( { test -w $(srcdir) && exit 0 ;} || { touch ro_srcdir	\
+		&& chmod u+w $(top_srcdir) $(srcdir) ;} ) &&
+
+if_ro_src = { test ! -f ro_srcdir && exit 0 ;} ||
+post_run_ro = $(if_ro_src) { rm ro_srcdir && chmod u-w $(srcdir)	\
+		$(top_srcdir) ;}
 
 std_def_list = $(top_srcdir)/include/autogen-version.def 	\
 		$(top_srcdir)/include/copyright.def 		\
@@ -586,7 +594,7 @@ distdir: $(DISTFILES)
 check-am: all-am
 check: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) check-am
-all-am: Makefile $(PROGRAMS) $(MANS) $(HEADERS)
+all-am: Makefile $(PROGRAMS) $(MANS) $(DATA) $(HEADERS)
 installdirs:
 	for dir in "$(DESTDIR)$(bindir)" "$(DESTDIR)$(sbindir)" "$(DESTDIR)$(man1dir)"; do \
 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
@@ -720,14 +728,15 @@ $(srcdir)/ntpsnmpd-opts.c: $(srcdir)/ntpsnmpd-opts.def $(std_def_list)
 	$(run_ag) ntpsnmpd-opts.def
 
 $(srcdir)/ntpsnmpd.1: $(srcdir)/ntpsnmpd-opts.def $(std_def_list)
-	$(run_ag) -Tagman1.tpl -bntpsnmpd ntpsnmpd-opts.def
+	$(run_ro) $(run_ag) -Tagman1.tpl -bntpsnmpd ntpsnmpd-opts.def
+	$(post_run_ro)
 
-$(srcdir)/ntpsnmpd-opts.texi $(srcdir)/ntpsnmpd-opts.menu: $(srcdir)/ntpsnmpd-opts.def $(std_def_list)
-	$(MAKE) @MAKE_NTPSNMPD@ not-all-target	# aginfo.tpl runs the binary to extract --help usage text
-	$(run_ag) -Taginfo.tpl -DLEVEL=section ntpsnmpd-opts.def
+$(srcdir)/ntpsnmpd-opts.menu: $(srcdir)/ntpsnmpd-opts.texi
+	@: do-nothing action to avoid default SCCS get, .menu built with .texi
 
-not-all-target:
-	touch $@	# used to avoid "all" default target when not building ntpsnmpd
+$(srcdir)/ntpsnmpd-opts.texi: $(srcdir)/ntpsnmpd-opts.def $(std_def_list)
+	$(run_ro) $(run_ag) -Taginfo.tpl -DLEVEL=section ntpsnmpd-opts.def
+	$(post_run_ro)
 
 install-exec-hook:
 	@case ${BINSUBDIR} in						\
