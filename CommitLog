@@ -1,3 +1,141 @@
+ChangeSet@1.2136, 2009-12-30 10:27:13+00:00, stenn@whimsy.udel.edu +27 -0
+  NTP_4_2_7P7
+  TAG: NTP_4_2_7P7
+
+  ChangeLog@1.533, 2009-12-30 10:27:05+00:00, stenn@whimsy.udel.edu +1 -0
+    NTP_4_2_7P7
+
+  ntpd/ntpd-opts.c@1.8, 2009-12-30 10:27:05+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P7
+
+  ntpd/ntpd-opts.h@1.8, 2009-12-30 10:27:05+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P7
+
+  ntpd/ntpd-opts.texi@1.8, 2009-12-30 10:27:06+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P7
+
+  ntpd/ntpd.1@1.8, 2009-12-30 10:27:06+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P7
+
+  ntpdc/ntpdc-opts.c@1.8, 2009-12-30 10:27:06+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P7
+
+  ntpdc/ntpdc-opts.h@1.8, 2009-12-30 10:27:06+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P7
+
+  ntpdc/ntpdc-opts.texi@1.8, 2009-12-30 10:27:06+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P7
+
+  ntpdc/ntpdc.1@1.8, 2009-12-30 10:27:07+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P7
+
+  ntpq/ntpq-opts.c@1.8, 2009-12-30 10:27:07+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P7
+
+  ntpq/ntpq-opts.h@1.8, 2009-12-30 10:27:07+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P7
+
+  ntpq/ntpq-opts.texi@1.8, 2009-12-30 10:27:07+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P7
+
+  ntpq/ntpq.1@1.8, 2009-12-30 10:27:07+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P7
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.8, 2009-12-30 10:27:08+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P7
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.8, 2009-12-30 10:27:08+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P7
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.8, 2009-12-30 10:27:08+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P7
+
+  ntpsnmpd/ntpsnmpd.1@1.8, 2009-12-30 10:27:08+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P7
+
+  packageinfo.sh@1.9, 2009-12-30 10:27:08+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P7
+
+  sntp/sntp-opts.c@1.8, 2009-12-30 10:27:09+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P7
+
+  sntp/sntp-opts.h@1.8, 2009-12-30 10:27:09+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P7
+
+  sntp/sntp-opts.texi@1.8, 2009-12-30 10:27:09+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P7
+
+  sntp/sntp.1@1.8, 2009-12-30 10:27:09+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P7
+
+  sntp/sntp.html@1.8, 2009-12-30 10:27:09+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P7
+
+  util/ntp-keygen-opts.c@1.8, 2009-12-30 10:27:10+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P7
+
+  util/ntp-keygen-opts.h@1.8, 2009-12-30 10:27:10+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P7
+
+  util/ntp-keygen-opts.texi@1.8, 2009-12-30 10:27:10+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P7
+
+  util/ntp-keygen.1@1.8, 2009-12-30 10:27:10+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P7
+
+ChangeSet@1.2133.1.2, 2009-12-30 05:56:00+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  [Bug 1446] 4.2.7p6 requires autogen, missing ntpd.1, *.texi, *.menu.
+    Applies to prior Makefile.am changesets pulled from ntp-stable,
+    where there is no ChangeLog entry as no tarball rolled with the bug.
+
+  ChangeLog@1.530.1.1, 2009-12-30 05:55:59+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1446] 4.2.7p6 requires autogen, missing ntpd.1, *.texi, *.menu.
+      Applies to prior Makefile.am changesets pulled from ntp-stable,
+      where there is no ChangeLog entry as no tarball rolled with the bug.
+
+ChangeSet@1.2082.4.35, 2009-12-30 05:48:36+00:00, davehart@shiny.ad.hartbrothers.com +6 -0
+  With EXTRA_DIST fix from [Bug 1446] read-only $(srcdir) hacks in
+    *.1, *.texi, and *.html Makefile rules are not needed.
+
+  ntpd/Makefile.am@1.80.1.5, 2009-12-30 05:48:35+00:00, davehart@shiny.ad.hartbrothers.com +2 -9
+    With EXTRA_DIST fix from [Bug 1446] read-only $(srcdir) hacks in
+      *.1, *.texi, and *.html rules are not needed.
+
+  ntpdc/Makefile.am@1.48.1.3, 2009-12-30 05:48:35+00:00, davehart@shiny.ad.hartbrothers.com +2 -9
+    With EXTRA_DIST fix from [Bug 1446] read-only $(srcdir) hacks in
+      *.1, *.texi, and *.html rules are not needed.
+
+  ntpq/Makefile.am@1.43.1.3, 2009-12-30 05:48:35+00:00, davehart@shiny.ad.hartbrothers.com +2 -9
+    With EXTRA_DIST fix from [Bug 1446] read-only $(srcdir) hacks in
+      *.1, *.texi, and *.html rules are not needed.
+
+  ntpsnmpd/Makefile.am@1.16.1.3, 2009-12-30 05:48:35+00:00, davehart@shiny.ad.hartbrothers.com +2 -9
+    With EXTRA_DIST fix from [Bug 1446] read-only $(srcdir) hacks in
+      *.1, *.texi, and *.html rules are not needed.
+
+  sntp/Makefile.am@1.21.1.3, 2009-12-30 05:48:35+00:00, davehart@shiny.ad.hartbrothers.com +3 -12
+    With EXTRA_DIST fix from [Bug 1446] read-only $(srcdir) hacks in
+      *.1, *.texi, and *.html rules are not needed.
+
+  util/Makefile.am@1.48, 2009-12-30 05:48:35+00:00, davehart@shiny.ad.hartbrothers.com +2 -9
+    With EXTRA_DIST fix from [Bug 1446] read-only $(srcdir) hacks in
+      *.1, *.texi, and *.html rules are not needed.
+
+ChangeSet@1.2082.4.34, 2009-12-30 00:23:25+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  [Bug 1446] 4.2.7p6 requires autogen to build missing ntpd.1, *.texi, *.menu.
+
+  ntpd/Makefile.am@1.80.1.4, 2009-12-30 00:23:24+00:00, davehart@shiny.ad.hartbrothers.com +4 -1
+    [Bug 1446] 4.2.7p6 requires autogen to build missing ntpd.1, *.texi, *.menu.
+
+ChangeSet@1.2134, 2009-12-29 16:07:26+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  [Bug 620] ntpdc getresponse() esize != *rsize s/b size != *rsize.
+
+  ChangeLog@1.531, 2009-12-29 16:07:25+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 620] ntpdc getresponse() esize != *rsize s/b size != *rsize.
+
+  ntpdc/ntpdc.c@1.77, 2009-12-29 16:07:25+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    [Bug 620] ntpdc getresponse() esize != *rsize s/b size != *rsize.
+
 ChangeSet@1.2133, 2009-12-28 10:30:49+00:00, stenn@whimsy.udel.edu +27 -0
   NTP_4_2_7P6
   TAG: NTP_4_2_7P6
