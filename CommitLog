@@ -1,3 +1,188 @@
+ChangeSet@1.2141, 2010-01-12 10:34:14+00:00, stenn@whimsy.udel.edu +27 -0
+  NTP_4_2_7P8
+  TAG: NTP_4_2_7P8
+
+  ChangeLog@1.538, 2010-01-12 10:33:59+00:00, stenn@whimsy.udel.edu +1 -0
+    NTP_4_2_7P8
+
+  ntpd/ntpd-opts.c@1.9, 2010-01-12 10:33:59+00:00, stenn@whimsy.udel.edu +4 -4
+    NTP_4_2_7P8
+
+  ntpd/ntpd-opts.h@1.9, 2010-01-12 10:34:00+00:00, stenn@whimsy.udel.edu +4 -4
+    NTP_4_2_7P8
+
+  ntpd/ntpd-opts.texi@1.9, 2010-01-12 10:34:00+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P8
+
+  ntpd/ntpd.1@1.9, 2010-01-12 10:34:00+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P8
+
+  ntpdc/ntpdc-opts.c@1.9, 2010-01-12 10:34:01+00:00, stenn@whimsy.udel.edu +4 -4
+    NTP_4_2_7P8
+
+  ntpdc/ntpdc-opts.h@1.9, 2010-01-12 10:34:01+00:00, stenn@whimsy.udel.edu +4 -4
+    NTP_4_2_7P8
+
+  ntpdc/ntpdc-opts.texi@1.9, 2010-01-12 10:34:01+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P8
+
+  ntpdc/ntpdc.1@1.9, 2010-01-12 10:34:02+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P8
+
+  ntpq/ntpq-opts.c@1.9, 2010-01-12 10:34:02+00:00, stenn@whimsy.udel.edu +4 -4
+    NTP_4_2_7P8
+
+  ntpq/ntpq-opts.h@1.9, 2010-01-12 10:34:02+00:00, stenn@whimsy.udel.edu +4 -4
+    NTP_4_2_7P8
+
+  ntpq/ntpq-opts.texi@1.9, 2010-01-12 10:34:03+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P8
+
+  ntpq/ntpq.1@1.9, 2010-01-12 10:34:03+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P8
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.9, 2010-01-12 10:34:03+00:00, stenn@whimsy.udel.edu +4 -4
+    NTP_4_2_7P8
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.9, 2010-01-12 10:34:04+00:00, stenn@whimsy.udel.edu +4 -4
+    NTP_4_2_7P8
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.9, 2010-01-12 10:34:04+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P8
+
+  ntpsnmpd/ntpsnmpd.1@1.9, 2010-01-12 10:34:05+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P8
+
+  packageinfo.sh@1.10, 2010-01-12 10:34:05+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P8
+
+  sntp/sntp-opts.c@1.9, 2010-01-12 10:34:05+00:00, stenn@whimsy.udel.edu +4 -4
+    NTP_4_2_7P8
+
+  sntp/sntp-opts.h@1.9, 2010-01-12 10:34:06+00:00, stenn@whimsy.udel.edu +4 -4
+    NTP_4_2_7P8
+
+  sntp/sntp-opts.texi@1.9, 2010-01-12 10:34:06+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P8
+
+  sntp/sntp.1@1.9, 2010-01-12 10:34:07+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P8
+
+  sntp/sntp.html@1.9, 2010-01-12 10:34:07+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P8
+
+  util/ntp-keygen-opts.c@1.9, 2010-01-12 10:34:07+00:00, stenn@whimsy.udel.edu +4 -4
+    NTP_4_2_7P8
+
+  util/ntp-keygen-opts.h@1.9, 2010-01-12 10:34:08+00:00, stenn@whimsy.udel.edu +4 -4
+    NTP_4_2_7P8
+
+  util/ntp-keygen-opts.texi@1.9, 2010-01-12 10:34:08+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P8
+
+  util/ntp-keygen.1@1.9, 2010-01-12 10:34:09+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P8
+
+ChangeSet@1.2136.2.2, 2010-01-08 20:00:10+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  ChangeLog: Include (4.2.6p1-RC3) - [Bug 1453] Use $CC in config.cache filename.
+
+  ChangeLog@1.533.2.2, 2010-01-08 20:00:09+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    ChangeLog: Include (4.2.6p1-RC3) - [Bug 1453] Use $CC in config.cache filename.
+
+ChangeSet@1.2082.15.3, 2010-01-08 19:11:53+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  Makefile.am:
+    add dependencies on copyright.def
+    correct dependencies to refer to $(srcdir)/version.def not
+      $(srcdir)/../include/version.def
+    add COPYRIGHT to BUILT_SOURCES, correct EXTRA_DIST reference to
+      remove unneeded $(srcdir)/ prefix
+
+  sntp/Makefile.am@1.21.1.4, 2010-01-08 19:11:53+00:00, davehart@shiny.ad.hartbrothers.com +5 -4
+    add dependencies on copyright.def
+    correct dependencies to refer to $(srcdir)/version.def not
+      $(srcdir)/../include/version.def
+    add COPYRIGHT to BUILT_SOURCES, correct EXTRA_DIST reference to
+      remove unneeded $(srcdir)/ prefix
+
+ChangeSet@1.2082.15.2, 2010-01-08 17:21:14+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  bump copyright year to 2010
+
+  html/copyright.html@1.46, 2010-01-08 17:21:14+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    bump copyright year to 2010
+
+  include/copyright.def@1.11, 2010-01-08 17:21:14+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    bump copyright year to 2010
+
+ChangeSet@1.2082.15.1, 2010-01-06 18:52:49+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  [Bug 1453] Use $CC in config.cache filename in ./build script.
+
+  ChangeLog@1.496.37.1, 2010-01-06 18:52:48+00:00, davehart@shiny.ad.hartbrothers.com +4 -3
+    [Bug 1453] Use $CC in config.cache filename in ./build script.
+
+  build@1.34, 2010-01-06 18:52:48+00:00, davehart@shiny.ad.hartbrothers.com +26 -27
+    [Bug 1453] Use $CC in config.cache filename in ./build script.
+
+ChangeSet@1.2136.1.2, 2010-01-03 21:56:54+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  Correct ChangeLog to reflect [Bug 1451] in -dev section as well.
+
+  ChangeLog@1.533.1.2, 2010-01-03 21:56:54+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    Correct ChangeLog to reflect [Bug 1451] in -dev section as well.
+
+ChangeSet@1.2082.4.36, 2010-01-03 21:52:33+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  [Bug 1451] CID 115: sntp leaks KoD entry when updating existing
+    entry.
+
+  ChangeLog@1.496.25.26, 2010-01-03 21:52:32+00:00, davehart@shiny.ad.hartbrothers.com +4 -3
+    [Bug 1451] CID 115: sntp leaks KoD entry when updating existing
+      entry.
+
+  sntp/kod_management.c@1.16, 2010-01-03 21:52:32+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1451] CID 115: sntp leaks KoD entry when updating existing
+      entry.
+
+ChangeSet@1.2137, 2009-12-30 21:55:52+00:00, davehart@shiny.ad.hartbrothers.com +12 -0
+  [Bug 702] ntpd service logic should use libopts to examine cmdline.
+
+  ChangeLog@1.534, 2009-12-30 21:55:48+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 702] ntpd service logic should use libopts to examine cmdline.
+
+  include/ntp_cmdargs.h@1.6, 2009-12-30 21:55:49+00:00, davehart@shiny.ad.hartbrothers.com +1 -4
+    remove unused cruft
+
+  include/ntpd.h@1.138, 2009-12-30 21:55:49+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    expose parse_cmdline_opts() for use by ntservice.c
+
+  ntpd/cmd_args.c@1.58, 2009-12-30 21:55:49+00:00, davehart@shiny.ad.hartbrothers.com +6 -3
+    comment only
+
+  ntpd/ntp_config.c@1.242, 2009-12-30 21:55:49+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    minor cleanup
+
+  ntpd/ntpd.c@1.111, 2009-12-30 21:55:49+00:00, davehart@shiny.ad.hartbrothers.com +12 -10
+    [Bug 702] ntpd service logic should use libopts to examine cmdline.
+
+  ports/winnt/include/ntservice.h@1.4, 2009-12-30 21:55:49+00:00, davehart@shiny.ad.hartbrothers.com +4 -9
+    [Bug 702] ntpd service logic should use libopts to examine cmdline.
+
+  ports/winnt/ntpd/ntservice.c@1.23, 2009-12-30 21:55:49+00:00, davehart@shiny.ad.hartbrothers.com +40 -49
+    [Bug 702] ntpd service logic should use libopts to examine cmdline.
+
+  ports/winnt/vc6/ntpd.dsp@1.44, 2009-12-30 21:55:49+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    top-level ntpd directory needs to be in include search path
+    for ntservice.c to #include "ntpd-opts.h"
+
+  ports/winnt/vs2003/ntpd.vcproj@1.7, 2009-12-30 21:55:49+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    top-level ntpd directory needs to be in include search path
+    for ntservice.c to #include "ntpd-opts.h"
+
+  ports/winnt/vs2005/ntpd.vcproj@1.7, 2009-12-30 21:55:49+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    top-level ntpd directory needs to be in include search path
+    for ntservice.c to #include "ntpd-opts.h"
+
+  ports/winnt/vs2008/ntpd/ntpd.vcproj@1.25, 2009-12-30 21:55:49+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    top-level ntpd directory needs to be in include search path
+    for ntservice.c to #include "ntpd-opts.h"
+
 ChangeSet@1.2136, 2009-12-30 10:27:13+00:00, stenn@whimsy.udel.edu +27 -0
   NTP_4_2_7P7
   TAG: NTP_4_2_7P7
