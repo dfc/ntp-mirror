@@ -48,8 +48,8 @@ host_triplet = @host@
 EXTRA_PROGRAMS = audio-pcm$(EXEEXT) byteorder$(EXEEXT) hist$(EXEEXT) \
 	jitter$(EXEEXT) kern$(EXEEXT) longsize$(EXEEXT) \
 	ntptime$(EXEEXT) pps-api$(EXEEXT) precision$(EXEEXT) \
-	sht$(EXEEXT) testrs6000$(EXEEXT) tg$(EXEEXT) tickadj$(EXEEXT) \
-	timetrim$(EXEEXT)
+	sht$(EXEEXT) testrs6000$(EXEEXT) tg$(EXEEXT) tg2$(EXEEXT) \
+	tickadj$(EXEEXT) timetrim$(EXEEXT)
 DIST_COMMON = README $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
 	$(top_srcdir)/bincheck.mf $(top_srcdir)/depsver.mf
 subdir = util
@@ -122,6 +122,9 @@ tg_SOURCES = tg.c
 tg_OBJECTS = tg.$(OBJEXT)
 tg_LDADD = $(LDADD)
 tg_DEPENDENCIES = ../libntp/libntp.a
+tg2_SOURCES = tg2.c
+tg2_OBJECTS = tg2.$(OBJEXT)
+tg2_DEPENDENCIES =
 tickadj_SOURCES = tickadj.c
 tickadj_OBJECTS = tickadj.$(OBJEXT)
 tickadj_LDADD = $(LDADD)
@@ -145,10 +148,10 @@ LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
 	$(LDFLAGS) -o $@
 SOURCES = audio-pcm.c byteorder.c hist.c $(jitter_SOURCES) kern.c \
 	longsize.c $(ntp_keygen_SOURCES) ntptime.c pps-api.c \
-	precision.c sht.c testrs6000.c tg.c tickadj.c timetrim.c
+	precision.c sht.c testrs6000.c tg.c tg2.c tickadj.c timetrim.c
 DIST_SOURCES = audio-pcm.c byteorder.c hist.c $(jitter_SOURCES) kern.c \
 	longsize.c $(ntp_keygen_SOURCES) ntptime.c pps-api.c \
-	precision.c sht.c testrs6000.c tg.c tickadj.c timetrim.c
+	precision.c sht.c testrs6000.c tg.c tg2.c tickadj.c timetrim.c
 am__vpath_adj_setup = srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`;
 am__vpath_adj = case $$p in \
     $(srcdir)/*) f=`echo "$$p" | sed "s|^$$srcdirstrip/||"`;; \
@@ -327,6 +330,7 @@ AM_CPPFLAGS = -I$(top_srcdir)/include -I$(top_srcdir)/lib/isc/include \
 
 # LDADD might need RESLIB and ADJLIB
 LDADD = ../libntp/libntp.a
+tg2_LDADD = -lm
 ntp_keygen_SOURCES = ntp-keygen.c ntp-keygen-opts.c ntp-keygen-opts.h
 ntp_keygen_LDADD = @LCRYPTO@ $(LIBOPTS_LDADD) ../libntp/libntp.a
 ETAGS_ARGS = Makefile.am
@@ -507,6 +511,9 @@ testrs6000$(EXEEXT): $(testrs6000_OBJECTS) $(testrs6000_DEPENDENCIES)
 tg$(EXEEXT): $(tg_OBJECTS) $(tg_DEPENDENCIES) 
 	@rm -f tg$(EXEEXT)
 	$(LINK) $(tg_OBJECTS) $(tg_LDADD) $(LIBS)
+tg2$(EXEEXT): $(tg2_OBJECTS) $(tg2_DEPENDENCIES) 
+	@rm -f tg2$(EXEEXT)
+	$(LINK) $(tg2_OBJECTS) $(tg2_LDADD) $(LIBS)
 tickadj$(EXEEXT): $(tickadj_OBJECTS) $(tickadj_DEPENDENCIES) 
 	@rm -f tickadj$(EXEEXT)
 	$(LINK) $(tickadj_OBJECTS) $(tickadj_LDADD) $(LIBS)
@@ -534,6 +541,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sht.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/testrs6000.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tg.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tg2.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tickadj.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/timetrim.Po@am__quote@
 
