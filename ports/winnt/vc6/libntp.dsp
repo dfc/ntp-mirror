@@ -166,6 +166,10 @@ SOURCE=..\..\..\libntp\decodenetnum.c
 # End Source File
 # Begin Source File
 
+SOURCE=..\libntp\dnslookup.c
+# End Source File
+# Begin Source File
+
 SOURCE=..\..\..\libntp\dofptoa.c
 # End Source File
 # Begin Source File
@@ -387,10 +391,6 @@ SOURCE=..\..\..\libntp\ssl_init.c
 # Begin Source File
 
 SOURCE=..\..\..\libntp\statestr.c
-# End Source File
-# Begin Source File
-
-SOURCE=..\..\..\lib\isc\win32\stdime.c
 # End Source File
 # Begin Source File
 
