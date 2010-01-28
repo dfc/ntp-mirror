@@ -1,3 +1,651 @@
+ChangeSet@1.2112, 2010-01-28 10:35:48+00:00, stenn@whimsy.udel.edu +27 -0
+  NTP_4_2_7P11
+  TAG: NTP_4_2_7P11
+
+  ChangeLog@1.512, 2010-01-28 10:35:33+00:00, stenn@whimsy.udel.edu +1 -0
+    NTP_4_2_7P11
+
+  ntpd/ntpd-opts.c@1.12, 2010-01-28 10:35:33+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P11
+
+  ntpd/ntpd-opts.h@1.12, 2010-01-28 10:35:34+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P11
+
+  ntpd/ntpd-opts.texi@1.12, 2010-01-28 10:35:34+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P11
+
+  ntpd/ntpd.1@1.12, 2010-01-28 10:35:35+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P11
+
+  ntpdc/ntpdc-opts.c@1.12, 2010-01-28 10:35:35+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P11
+
+  ntpdc/ntpdc-opts.h@1.12, 2010-01-28 10:35:35+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P11
+
+  ntpdc/ntpdc-opts.texi@1.12, 2010-01-28 10:35:36+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P11
+
+  ntpdc/ntpdc.1@1.12, 2010-01-28 10:35:36+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P11
+
+  ntpq/ntpq-opts.c@1.12, 2010-01-28 10:35:36+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P11
+
+  ntpq/ntpq-opts.h@1.12, 2010-01-28 10:35:37+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P11
+
+  ntpq/ntpq-opts.texi@1.12, 2010-01-28 10:35:37+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P11
+
+  ntpq/ntpq.1@1.12, 2010-01-28 10:35:37+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P11
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.12, 2010-01-28 10:35:38+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P11
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.12, 2010-01-28 10:35:38+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P11
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.12, 2010-01-28 10:35:38+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P11
+
+  ntpsnmpd/ntpsnmpd.1@1.12, 2010-01-28 10:35:39+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P11
+
+  packageinfo.sh@1.13, 2010-01-28 10:35:39+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P11
+
+  sntp/sntp-opts.c@1.12, 2010-01-28 10:35:40+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P11
+
+  sntp/sntp-opts.h@1.12, 2010-01-28 10:35:40+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P11
+
+  sntp/sntp-opts.texi@1.12, 2010-01-28 10:35:40+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P11
+
+  sntp/sntp.1@1.12, 2010-01-28 10:35:41+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P11
+
+  sntp/sntp.html@1.12, 2010-01-28 10:35:41+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P11
+
+  util/ntp-keygen-opts.c@1.12, 2010-01-28 10:35:41+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P11
+
+  util/ntp-keygen-opts.h@1.12, 2010-01-28 10:35:42+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P11
+
+  util/ntp-keygen-opts.texi@1.12, 2010-01-28 10:35:42+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P11
+
+  util/ntp-keygen.1@1.12, 2010-01-28 10:35:42+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P11
+
+ChangeSet@1.2111, 2010-01-27 21:16:20+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  convert leftover debugging msyslog() to DPRINTF()
+    "attempting to open log %s"
+
+  ntpd/ntpd.c@1.113, 2010-01-27 21:16:19+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    convert leftover debugging msyslog() to DPRINTF()
+      "attempting to open log %s"
+
+ChangeSet@1.2110, 2010-01-27 20:21:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  Fix libparse build in $(srcdir)
+
+  libparse/Makefile.am@1.19, 2010-01-27 20:21:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    Fix libparse build in $(srcdir)
+
+ChangeSet@1.2109, 2010-01-27 18:45:33+00:00, davehart@shiny.ad.hartbrothers.com +116 -0
+  [Bug 47] Debugging and logging do not work after a fork.
+  [Bug 1010] getaddrinfo() could block and thus should not be called by
+    the main thread/process.
+  #include <config.h> from all .c files and do not include it
+    from any .h files.  Previously config.h appeared a dozen times in
+    preprocessed output of some .c files.
+  handle relative path to logfile correctly despite re-opening
+    after fork() with a different curdir.
+  eliminate hand-crafted byte-swapping code from refclock_palisade.c in
+    preference to using htonl(), htons().  Tested by Fernando Hauscarriaga.
+  
+
+  BitKeeper/etc/ignore@1.75, 2010-01-27 18:45:22+00:00, davehart@shiny.ad.hartbrothers.com +4 -2
+    add *.vcproj.*.user
+    correct .buildkey to .buildkey-* to reflect changed build script,
+      add .flockbuild-* along the same lines.
+    tell BK to not attempt any operations in A.*/ dirs via -prune,
+      particularly handy when there's a broken make dist distdir,
+      which may contain copies of BK metadata (s.* files).
+
+  ChangeLog@1.511, 2010-01-27 18:45:22+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
+    [Bug 47] Debugging and logging do not work after a fork.
+    [Bug 1010] getaddrinfo() could block and thus should not be called by
+      the main thread/process.
+
+  configure.ac@1.471, 2010-01-27 18:45:22+00:00, davehart@shiny.ad.hartbrothers.com +18 -18
+    add AC_FUNC_ALLOCA (used by ntp_malloc.h, ntp_intres.c).
+    add AC_CHECK_FUNCS(closefrom)
+    remove AC_CHECK_FUNCS(timer_settime) which is redundant with
+      AC_CHECK_FUNCS(timer_create).
+    add AC_CHECK_FUNCS(_exit)
+    remove --enable-force-defer-DNS switch to configure, as the intres
+      path is always taken now.
+
+  include/Makefile.am@1.39, 2010-01-27 18:45:22+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+    add ntp_worker.h, ntp_workimpl.h
+
+  include/iosignal.h@1.5, 2010-01-27 18:45:22+00:00, davehart@shiny.ad.hartbrothers.com +36 -8
+    Move USE_SIGIO/USE_SIGPOLL definition from iosignal.c to share with
+      ntpd/work_fork.c.
+    Stay out of system/compiler underscore-prefixed namespace.
+
+  include/l_stdlib.h@1.18, 2010-01-27 18:45:22+00:00, davehart@shiny.ad.hartbrothers.com +4 -8
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+    Stay out of system/compiler underscore-prefixed namespace.
+
+  include/ntp_data_structures.h@1.6, 2010-01-27 18:45:22+00:00, davehart@shiny.ad.hartbrothers.com +39 -13
+    Preserve callsite __FILE__ and __LINE__ for create_priority_queue()
+      and get_node() for heap leak detection when available.
+    Stay out of system/compiler underscore-prefixed namespace.
+
+  include/ntp_fp.h@1.16, 2010-01-27 18:45:23+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    whitespace cleanup (spaces -> tabs)
+
+  include/ntp_intres.h@1.3, 2010-01-27 18:45:23+00:00, davehart@shiny.ad.hartbrothers.com +19 -10
+    repurpose ntp_intres.h, which used to solely be responsible for
+      defining NO_INTRES if needed.  Now ntp_workimpl.h handles the
+      declaration of the opposite-sense WORKER as needed, and
+      ntp_intres.h is an internal header for intres declarations
+      used by ntp_worker.c and ntp_intres.c.
+
+  include/ntp_io.h@1.14, 2010-01-27 18:45:23+00:00, davehart@shiny.ad.hartbrothers.com +13 -7
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+    Add close_all_beyond() and update_resp_pipe_fd() declarations.
+
+  include/ntp_lists.h@1.2, 2010-01-27 18:45:23+00:00, davehart@shiny.ad.hartbrothers.com +0 -4
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  include/ntp_machine.h@1.27, 2010-01-27 18:45:23+00:00, davehart@shiny.ad.hartbrothers.com +6 -170
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+    Remove huge blob of #if 0 code from pre-Autoconf days, our
+      transition to handling most platform differences via
+      configure is long past.
+
+  include/ntp_malloc.h@1.4, 2010-01-27 18:45:23+00:00, davehart@shiny.ad.hartbrothers.com +29 -4
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+    Handle platform differences with alloca()
+
+  include/ntp_proto.h@1.5, 2010-01-27 18:45:23+00:00, davehart@shiny.ad.hartbrothers.com +3 -7
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+    Stay out of system/compiler underscore-prefixed namespace.
+
+  include/ntp_rfc2553.h@1.34, 2010-01-27 18:45:23+00:00, davehart@shiny.ad.hartbrothers.com +0 -5
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  include/ntp_select.h@1.5, 2010-01-27 18:45:23+00:00, davehart@shiny.ad.hartbrothers.com +16 -21
+    whitespace (indent preprocessor directives)
+
+  include/ntp_stdlib.h@1.41, 2010-01-27 18:45:23+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    add humantime() declaration (libntp/humandate.c)
+    remove superfluous #include "ntp_rfc2553.h"
+
+  include/ntp_string.h@1.5, 2010-01-27 18:45:23+00:00, davehart@shiny.ad.hartbrothers.com +3 -7
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+    Stay out of system/compiler underscore-prefixed namespace.
+
+  include/ntp_syscall.h@1.9, 2010-01-27 18:45:23+00:00, davehart@shiny.ad.hartbrothers.com +0 -4
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  include/ntp_syslog.h@1.4, 2010-01-27 18:45:23+00:00, davehart@shiny.ad.hartbrothers.com +11 -9
+    handle relative path to logfile correctly despite re-opening
+      after fork() with a different curdir.
+
+  include/ntp_types.h@1.15, 2010-01-27 18:45:23+00:00, davehart@shiny.ad.hartbrothers.com +8 -8
+    Use typedef instead of #define to declare int32, u_int32.
+
+  include/ntp_worker.h@1.1, 2010-01-27 18:44:48+00:00, davehart@shiny.ad.hartbrothers.com +52 -0
+    worker internals used by ntp_worker.c, work_fork.c, work_thread.c,
+      and ntp_intres.c.
+
+  include/ntp_worker.h@1.0, 2010-01-27 18:44:48+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+
+  include/ntp_workimpl.h@1.1, 2010-01-27 18:44:50+00:00, davehart@shiny.ad.hartbrothers.com +25 -0
+    defines WORKER, WORK_FORK, and WORK_THREAD as appropriate (chooses
+      implementation to use).
+
+  include/ntp_workimpl.h@1.0, 2010-01-27 18:44:50+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+
+  include/ntpd.h@1.139, 2010-01-27 18:45:23+00:00, davehart@shiny.ad.hartbrothers.com +72 -42
+    handle relative path to logfile correctly despite re-opening
+      after fork() with a different curdir.
+    remove declarations from old ntp_intres.c implementation, add
+      declarations for new ntp_intres.c, ntp_worker.c, work_fork.c,
+      and work_thread.c.
+    Correct a few misplaces variable and function declarations.  ntpd.h
+      declares all the functions from various files first, then all
+      the variables, so there are two spots for declarations for each
+      source file.
+
+  include/recvbuff.h@1.20, 2010-01-27 18:45:23+00:00, davehart@shiny.ad.hartbrothers.com +1 -5
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/atoint.c@1.3, 2010-01-27 18:45:23+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/atolfp.c@1.4, 2010-01-27 18:45:23+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/atouint.c@1.3, 2010-01-27 18:45:23+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/authusekey.c@1.8, 2010-01-27 18:45:23+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/caljulian.c@1.12, 2010-01-27 18:45:23+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/caltontp.c@1.4, 2010-01-27 18:45:23+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/calyearstart.c@1.5, 2010-01-27 18:45:23+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/clocktime.c@1.3, 2010-01-27 18:45:23+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/clocktypes.c@1.19, 2010-01-27 18:45:23+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/dofptoa.c@1.7, 2010-01-27 18:45:23+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/dolfptoa.c@1.7, 2010-01-27 18:45:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/emalloc.c@1.11, 2010-01-27 18:45:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/fptoa.c@1.4, 2010-01-27 18:45:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/fptoms.c@1.4, 2010-01-27 18:45:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/getopt.c@1.3, 2010-01-27 18:45:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/hextoint.c@1.4, 2010-01-27 18:45:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/hextolfp.c@1.3, 2010-01-27 18:45:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/humandate.c@1.8, 2010-01-27 18:45:24+00:00, davehart@shiny.ad.hartbrothers.com +33 -6
+    sprintf() -> snprintf()
+    add humantime() used by ntp_intres.c DPRINTF() calls.
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/icom.c@1.12, 2010-01-27 18:45:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/iosignal.c@1.15, 2010-01-27 18:45:24+00:00, davehart@shiny.ad.hartbrothers.com +0 -28
+    Move USE_SIGIO/USE_SIGPOLL definition to iosignal.h to share with
+      ntpd/work_fork.c.
+
+  libntp/mfptoa.c@1.4, 2010-01-27 18:45:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/mfptoms.c@1.4, 2010-01-27 18:45:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/mktime.c@1.9, 2010-01-27 18:45:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/modetoa.c@1.3, 2010-01-27 18:45:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/mstolfp.c@1.3, 2010-01-27 18:45:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/msutotsf.c@1.3, 2010-01-27 18:45:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/msyslog.c@1.25, 2010-01-27 18:45:24+00:00, davehart@shiny.ad.hartbrothers.com +40 -38
+    handle relative path to logfile correctly despite re-opening
+      after fork() with a different curdir.
+    mimic syslog() behavior adding a trailing \n if not present
+      when logging to a file.
+
+  libntp/netof.c@1.8, 2010-01-27 18:45:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/octtoint.c@1.3, 2010-01-27 18:45:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/prettydate.c@1.13, 2010-01-27 18:45:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/refnumtoa.c@1.8, 2010-01-27 18:45:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/socktohost.c@1.8, 2010-01-27 18:45:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/strdup.c@1.6, 2010-01-27 18:45:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/syssignal.c@1.10, 2010-01-27 18:45:24+00:00, davehart@shiny.ad.hartbrothers.com +40 -51
+    Do not msyslog(LOG_DEBUG) about signal flags simply because SA_SIGINFO
+      flag bit is set.
+    Define SIG_ERR, Z_SA_RESTART, Z_SA_SIGINFO to reduce #ifdef nesting.
+
+  libntp/systime.c@1.49, 2010-01-27 18:45:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/tsftomsu.c@1.3, 2010-01-27 18:45:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/tstotv.c@1.3, 2010-01-27 18:45:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/tvtots.c@1.3, 2010-01-27 18:45:25+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/uglydate.c@1.4, 2010-01-27 18:45:25+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/uinttoa.c@1.3, 2010-01-27 18:45:25+00:00, davehart@shiny.ad.hartbrothers.com +2 -1
+    sprintf() -> snprintf()
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libntp/ymd2yd.c@1.4, 2010-01-27 18:45:25+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libparse/Makefile.am@1.18, 2010-01-27 18:45:25+00:00, davehart@shiny.ad.hartbrothers.com +61 -69
+    Correct generation of info_trimble.c to create it in $(srcdir)
+      instead of $(builddir)
+    Add temporary workaround to avoid breaking existing build trees
+      with this change, which aggressively removes info_trimble.c
+      from $(builddir) where it tends to have precedence.
+    Correct k*.o rule dependencies to use $(srcdir)/ prefix.
+    Remove ansi2knr crud (such as kclk_computime_.o: clk_computime_.c
+      rule).
+    Correct workaround which generates local sys/systm.h to be able
+      to work more than once by not breaking if sys/ subdir exists.
+
+  libparse/binio.c@1.7, 2010-01-27 18:45:25+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libparse/data_mbg.c@1.10, 2010-01-27 18:45:25+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libparse/gpstolfp.c@1.10, 2010-01-27 18:45:25+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libparse/info_trimble.c@1.5, 2010-01-27 18:45:25+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+    (produced by updated mkinfo_rcmd.sed and mkinfo_scmd.sed)
+
+  libparse/mfp_mul.c@1.8, 2010-01-27 18:45:25+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libparse/mkinfo_rcmd.sed@1.3, 2010-01-27 18:45:25+00:00, davehart@shiny.ad.hartbrothers.com +4 -4
+    produce the same output using FreeBSD or GNU sed
+
+  libparse/mkinfo_scmd.sed@1.3, 2010-01-27 18:45:25+00:00, davehart@shiny.ad.hartbrothers.com +5 -6
+    produce the same output using FreeBSD or GNU sed.
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libparse/parsesolaris.c@1.9, 2010-01-27 18:45:25+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  libparse/trim_info.c@1.5, 2010-01-27 18:45:25+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  ntpd/Makefile.am@1.87, 2010-01-27 18:45:25+00:00, davehart@shiny.ad.hartbrothers.com +4 -1
+    add ntp_worker.c, work_fork.c, work_thread.c references.
+
+  ntpd/cmd_args.c@1.59, 2010-01-27 18:45:25+00:00, davehart@shiny.ad.hartbrothers.com +2 -3
+    remove unused leftover global specific_interface.
+    rindex() -> strrchr()
+
+  ntpd/ntp_config.c@1.244, 2010-01-27 18:45:25+00:00, davehart@shiny.ad.hartbrothers.com +359 -589
+    [Bug 1010] getaddrinfo() could block and thus should not be called by
+      the main thread/process.
+    handle relative path to logfile correctly despite re-opening
+      after fork() with a different curdir.
+    include system headers before NTP ones.
+    No need to include ntpsim.h in ntp_config.c these days.
+
+  ntpd/ntp_control.c@1.130, 2010-01-27 18:45:25+00:00, davehart@shiny.ad.hartbrothers.com +2 -3
+    style only
+
+  ntpd/ntp_data_structures.c@1.12, 2010-01-27 18:45:25+00:00, davehart@shiny.ad.hartbrothers.com +108 -67
+    Preserve callsite __FILE__ and __LINE__ for create_priority_queue()
+      and get_node() for heap leak detection when available.
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  ntpd/ntp_intres.c@1.80, 2010-01-27 18:45:25+00:00, davehart@shiny.ad.hartbrothers.com +765 -1119
+    [Bug 1010] getaddrinfo() could block and thus should not be called by
+      the main thread/process.
+
+  ntpd/ntp_io.c@1.311, 2010-01-27 18:45:26+00:00, davehart@shiny.ad.hartbrothers.com +134 -70
+    [Bug 1010] getaddrinfo() could block and thus should not be called by
+      the main thread/process.
+
+  ntpd/ntp_timer.c@1.57, 2010-01-27 18:45:26+00:00, davehart@shiny.ad.hartbrothers.com +53 -46
+    add worker_idle_timer and worker_idle_timer_fired() for
+      ntp_worker.c.
+    remove references to HAVE_TIMER_SETTIME which is redundant with
+      HAVE_TIMER_CREATE.
+    define TC_ERR macro to reduce #ifdef clutter.
+    eliminate global sys_time which was referenced only by timer(),
+      replacing with a local.  call get_systime() only if the
+      result will be used in timer().
+
+  ntpd/ntp_worker.c@1.1, 2010-01-27 18:44:51+00:00, davehart@shiny.ad.hartbrothers.com +155 -0
+    blocking worker child process/thread cross-platform code
+
+  ntpd/ntp_worker.c@1.0, 2010-01-27 18:44:51+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+
+  ntpd/ntpd.c@1.112, 2010-01-27 18:45:26+00:00, davehart@shiny.ad.hartbrothers.com +231 -123
+    [Bug 1010] getaddrinfo() could block and thus should not be called by
+      the main thread/process.
+    remove unused leftover global specific_interface.
+    move close-all-descriptors code to ntp_io.c close_all_beyond(),
+      used by work_fork.c as well.
+    handle relative path to logfile correctly despite re-opening
+      after fork() with a different curdir.
+
+  ntpd/ntpsim.c@1.23, 2010-01-27 18:45:26+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  ntpd/refclock_jupiter.c@1.22, 2010-01-27 18:45:26+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    XNTP_BIG_ENDIAN -> WORDS_BIG_ENDIAN (from config.h)
+
+  ntpd/refclock_palisade.c@1.32, 2010-01-27 18:45:26+00:00, davehart@shiny.ad.hartbrothers.com +33 -58
+    eliminate hand-crafted byte-swapping code in preference
+      to using htonl(), htons().  Tested by Fernando Hauscarriaga.
+
+  ntpd/refclock_palisade.h@1.14, 2010-01-27 18:45:26+00:00, davehart@shiny.ad.hartbrothers.com +8 -12
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+    eliminate hand-crafted byte-swapping code in preference
+      to using htonl(), htons().  Tested by Fernando Hauscarriaga.
+    stay out of system/compiler underscore-prefixed namespace.
+
+  ntpd/work_fork.c@1.1, 2010-01-27 18:44:51+00:00, davehart@shiny.ad.hartbrothers.com +460 -0
+    blocking worker child process fork()/pipe() platform code
+
+  ntpd/work_fork.c@1.0, 2010-01-27 18:44:51+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+
+  ntpd/work_thread.c@1.1, 2010-01-27 18:44:52+00:00, davehart@shiny.ad.hartbrothers.com +314 -0
+    blocking worker child thread platform code
+
+  ntpd/work_thread.c@1.0, 2010-01-27 18:44:52+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+
+  ntpdc/ntpdc-layout.c@1.2, 2010-01-27 18:45:26+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  ntpdc/ntpdc.c@1.78, 2010-01-27 18:45:26+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  ntpq/ntpq-subs.c@1.42, 2010-01-27 18:45:26+00:00, davehart@shiny.ad.hartbrothers.com +40 -40
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+    dump received association IDs if (debug).
+    Remove bogus sanity check (requiring all peers use port 123 or
+      be silently excluded from ntpq -p output).
+
+  ntpq/ntpq.c@1.99, 2010-01-27 18:45:26+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  ntpsnmpd/ntpSnmpSubagentObject.c@1.4, 2010-01-27 18:45:26+00:00, davehart@shiny.ad.hartbrothers.com +6 -0
+    #undef PACKAGE_* names that net-snmp-* headers often define
+      in conflict with ours.
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  ntpsnmpd/ntpsnmpd.c@1.4, 2010-01-27 18:45:26+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  parseutil/testdcf.c@1.8, 2010-01-27 18:45:26+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  ports/winnt/include/config.h@1.82, 2010-01-27 18:45:26+00:00, davehart@shiny.ad.hartbrothers.com +43 -8
+    Use macros for ntohl() and friends, which are real function calls
+      by default on Windows.
+
+  ports/winnt/include/sys/time.h@1.6, 2010-01-27 18:45:27+00:00, davehart@shiny.ad.hartbrothers.com +0 -2
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  ports/winnt/include/win32_io.h@1.2, 2010-01-27 18:45:27+00:00, davehart@shiny.ad.hartbrothers.com +2 -3
+    style
+
+  ports/winnt/libntp/SetSystemTime.c@1.8, 2010-01-27 18:45:27+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  ports/winnt/ntpd/nt_clockstuff.c@1.39, 2010-01-27 18:45:27+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    Now that main ntpd directory is on include path, remove path to
+      ntpd-opts.h from #include.
+
+  ports/winnt/ntpd/ntp_iocompletionport.c@1.52, 2010-01-27 18:45:27+00:00, davehart@shiny.ad.hartbrothers.com +18 -13
+    [Bug 1010] getaddrinfo() could block and thus should not be called by
+      the main thread/process.
+
+  ports/winnt/vc6/ntpd.dsp@1.47, 2010-01-27 18:45:27+00:00, davehart@shiny.ad.hartbrothers.com +23 -0
+    add ntp_worker.c, work_fork.c, work_thread.c, ntp_worker.h,
+      ntp_workimpl.h references.
+
+  ports/winnt/vs2003/ntpd.vcproj@1.8, 2010-01-27 18:45:27+00:00, davehart@shiny.ad.hartbrothers.com +15 -0
+    add ntp_worker.c, work_fork.c, work_thread.c, ntp_worker.h,
+      ntp_workimpl.h references.
+
+  ports/winnt/vs2005/ntpd.vcproj@1.8, 2010-01-27 18:45:27+00:00, davehart@shiny.ad.hartbrothers.com +20 -0
+    add ntp_worker.c, work_fork.c, work_thread.c, ntp_worker.h,
+      ntp_workimpl.h references.
+
+  ports/winnt/vs2008/libntp/libntp.vcproj@1.26, 2010-01-27 18:45:27+00:00, davehart@shiny.ad.hartbrothers.com +28 -0
+    add icom.c, strdup.c, strstr.c references.
+
+  ports/winnt/vs2008/ntpd/ntpd.vcproj@1.26, 2010-01-27 18:45:27+00:00, davehart@shiny.ad.hartbrothers.com +200 -0
+    add ntp_worker.c, work_fork.c, work_thread.c, ntp_worker.h,
+      ntp_workimpl.h, ntpsim.c, ntp_data_structures.h,
+      refclock_ripencc.c, libparse/binio.c, libparse/gsptolfp.c,
+      libparse/ieee754io.c, libparse/info_trimble.c,
+      libparse/mfp_mul.c, libparse/parsesolaris.c,
+      libparse/parsestreams.c, libparse/trim_info.c references.
+
+  sntp/crypto.c@1.11, 2010-01-27 18:45:27+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  sntp/kod_management.c@1.17, 2010-01-27 18:45:27+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  sntp/log.c@1.12, 2010-01-27 18:45:27+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  sntp/main.c@1.25, 2010-01-27 18:45:27+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  sntp/networking.c@1.30, 2010-01-27 18:45:27+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
+  sntp/utilities.c@1.11, 2010-01-27 18:45:27+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    #include <config.h> from all .c files and do not include it
+      from any .h files.
+
 ChangeSet@1.2108, 2010-01-24 11:44:49+00:00, stenn@whimsy.udel.edu +27 -0
   NTP_4_2_7P10
   TAG: NTP_4_2_7P10

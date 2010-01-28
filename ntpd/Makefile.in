@@ -75,26 +75,27 @@ am_libntpd_a_OBJECTS = ntp_control.$(OBJEXT) ntp_crypto.$(OBJEXT) \
 	ntp_peer.$(OBJEXT) ntp_proto.$(OBJEXT) ntp_refclock.$(OBJEXT) \
 	ntp_request.$(OBJEXT) ntp_restrict.$(OBJEXT) \
 	ntp_signd.$(OBJEXT) ntp_timer.$(OBJEXT) ntp_util.$(OBJEXT) \
-	refclock_acts.$(OBJEXT) refclock_arbiter.$(OBJEXT) \
-	refclock_arc.$(OBJEXT) refclock_as2201.$(OBJEXT) \
-	refclock_atom.$(OBJEXT) refclock_bancomm.$(OBJEXT) \
-	refclock_chronolog.$(OBJEXT) refclock_chu.$(OBJEXT) \
-	refclock_conf.$(OBJEXT) refclock_datum.$(OBJEXT) \
-	refclock_dumbclock.$(OBJEXT) refclock_fg.$(OBJEXT) \
-	refclock_gpsvme.$(OBJEXT) refclock_heath.$(OBJEXT) \
-	refclock_hopfser.$(OBJEXT) refclock_hopfpci.$(OBJEXT) \
-	refclock_hpgps.$(OBJEXT) refclock_irig.$(OBJEXT) \
-	refclock_jjy.$(OBJEXT) refclock_jupiter.$(OBJEXT) \
-	refclock_leitch.$(OBJEXT) refclock_local.$(OBJEXT) \
-	refclock_mx4200.$(OBJEXT) refclock_neoclock4x.$(OBJEXT) \
-	refclock_nmea.$(OBJEXT) refclock_oncore.$(OBJEXT) \
-	refclock_palisade.$(OBJEXT) refclock_parse.$(OBJEXT) \
-	refclock_pcf.$(OBJEXT) refclock_pst.$(OBJEXT) \
-	refclock_ripencc.$(OBJEXT) refclock_shm.$(OBJEXT) \
-	refclock_tpro.$(OBJEXT) refclock_true.$(OBJEXT) \
-	refclock_tt560.$(OBJEXT) refclock_ulink.$(OBJEXT) \
-	refclock_wwv.$(OBJEXT) refclock_wwvb.$(OBJEXT) \
-	refclock_zyfer.$(OBJEXT) $(am__objects_1)
+	ntp_worker.$(OBJEXT) refclock_acts.$(OBJEXT) \
+	refclock_arbiter.$(OBJEXT) refclock_arc.$(OBJEXT) \
+	refclock_as2201.$(OBJEXT) refclock_atom.$(OBJEXT) \
+	refclock_bancomm.$(OBJEXT) refclock_chronolog.$(OBJEXT) \
+	refclock_chu.$(OBJEXT) refclock_conf.$(OBJEXT) \
+	refclock_datum.$(OBJEXT) refclock_dumbclock.$(OBJEXT) \
+	refclock_fg.$(OBJEXT) refclock_gpsvme.$(OBJEXT) \
+	refclock_heath.$(OBJEXT) refclock_hopfser.$(OBJEXT) \
+	refclock_hopfpci.$(OBJEXT) refclock_hpgps.$(OBJEXT) \
+	refclock_irig.$(OBJEXT) refclock_jjy.$(OBJEXT) \
+	refclock_jupiter.$(OBJEXT) refclock_leitch.$(OBJEXT) \
+	refclock_local.$(OBJEXT) refclock_mx4200.$(OBJEXT) \
+	refclock_neoclock4x.$(OBJEXT) refclock_nmea.$(OBJEXT) \
+	refclock_oncore.$(OBJEXT) refclock_palisade.$(OBJEXT) \
+	refclock_parse.$(OBJEXT) refclock_pcf.$(OBJEXT) \
+	refclock_pst.$(OBJEXT) refclock_ripencc.$(OBJEXT) \
+	refclock_shm.$(OBJEXT) refclock_tpro.$(OBJEXT) \
+	refclock_true.$(OBJEXT) refclock_tt560.$(OBJEXT) \
+	refclock_ulink.$(OBJEXT) refclock_wwv.$(OBJEXT) \
+	refclock_wwvb.$(OBJEXT) refclock_zyfer.$(OBJEXT) \
+	work_fork.$(OBJEXT) work_thread.$(OBJEXT) $(am__objects_1)
 libntpd_a_OBJECTS = $(am_libntpd_a_OBJECTS)
 am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(sbindir)" \
 	"$(DESTDIR)$(man1dir)"
@@ -178,6 +179,7 @@ ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 ACLOCAL = @ACLOCAL@
+ALLOCA = @ALLOCA@
 AMTAR = @AMTAR@
 AR = @AR@
 ARLIB_DIR = @ARLIB_DIR@
@@ -338,7 +340,7 @@ AM_YFLAGS = -d -t -r all
 #
 # VPHACK and VPHACK_AFTER are enabled on non-GNU makes (such as 
 # BSD make) to work around issues specific to compiling
-# ntp_parser.y into ntp_parser.h and ntp_parser.c in a vPATH
+# ntp_parser.y into ntp_parser.h and ntp_parser.c in a VPATH
 # configuration where we would like (for a change) the output
 # files ntp_parser.[ch] to be placed in the source directory,
 # as opposed to the build directory.  This allows a single
@@ -437,6 +439,7 @@ libntpd_a_SOURCES = \
 	ntp_signd.c		\
 	ntp_timer.c		\
 	ntp_util.c		\
+	ntp_worker.c		\
 	ppsapi_timepps.h	\
 	refclock_acts.c		\
 	refclock_arbiter.c	\
@@ -478,6 +481,8 @@ libntpd_a_SOURCES = \
 	refclock_wwv.c		\
 	refclock_wwvb.c		\
 	refclock_zyfer.c	\
+	work_fork.c		\
+	work_thread.c		\
 	$(NULL)
 
 all: $(BUILT_SOURCES)
@@ -663,6 +668,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ntp_signd.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ntp_timer.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ntp_util.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ntp_worker.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ntpd-opts.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ntpd.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ntpdsim-cmd_args.Po@am__quote@
@@ -713,6 +719,8 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/refclock_wwv.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/refclock_wwvb.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/refclock_zyfer.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/work_fork.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/work_thread.Po@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<

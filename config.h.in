@@ -162,6 +162,14 @@
 /* Zyfer GPStarplus */
 #undef CLOCK_ZYFER
 
+/* Define to one of `_getb67', `GETB67', `getb67' for Cray-2 and Cray-YMP
+   systems. This function is required for `alloca.c' support on those systems.
+   */
+#undef CRAY_STACKSEG_END
+
+/* Define to 1 if using `alloca.c'. */
+#undef C_ALLOCA
+
 /* Enable ntpd debugging code? */
 #undef DEBUG
 
@@ -285,9 +293,6 @@
 /* fopen(3) accepts a 't' in the mode flag */
 #undef FOPEN_TEXT_FLAG
 
-/* Force deferred DNS lookups? */
-#undef FORCE_DEFER_DNS
-
 /* force ntpdate to step the clock if !defined(STEP_SLEW) ? */
 #undef FORCE_NTPDATE_STEP
 
@@ -296,6 +301,13 @@
 
 /* Do we have a routing socket (struct rt_msghdr)? */
 #undef HAS_ROUTING_SOCKET
+
+/* Define to 1 if you have `alloca', as a function or macro. */
+#undef HAVE_ALLOCA
+
+/* Define to 1 if you have <alloca.h> and it should be used (not on Ultrix).
+   */
+#undef HAVE_ALLOCA_H
 
 /* Define to 1 if you have the <arpa/nameser.h> header file. */
 #undef HAVE_ARPA_NAMESER_H
@@ -317,6 +329,9 @@
 
 /* Define to 1 if you have the `clock_settime' function. */
 #undef HAVE_CLOCK_SETTIME
+
+/* Define to 1 if you have the `closefrom' function. */
+#undef HAVE_CLOSEFROM
 
 /* Define to 1 if you have the `daemon' function. */
 #undef HAVE_DAEMON
@@ -906,9 +921,6 @@
 /* Define to 1 if you have the `timer_create' function. */
 #undef HAVE_TIMER_CREATE
 
-/* Define to 1 if you have the `timer_settime' function. */
-#undef HAVE_TIMER_SETTIME
-
 /* Define to 1 if you have the <timex.h> header file. */
 #undef HAVE_TIMEX_H
 
@@ -1001,6 +1013,9 @@
 
 /* Define to 1 if `vfork' works. */
 #undef HAVE_WORKING_VFORK
+
+/* Define to 1 if you have the `_exit' function. */
+#undef HAVE__EXIT
 
 /* Define to 1 if you have the </sys/sync/queue.h> header file. */
 #undef HAVE__SYS_SYNC_QUEUE_H
@@ -1268,6 +1283,14 @@
 /* *s*printf() functions are char* */
 #undef SPRINTF_CHAR
 
+/* If using the C implementation of alloca, define if you know the
+   direction of stack growth for your system; otherwise it will be
+   automatically deduced at runtime.
+	STACK_DIRECTION > 0 => grows toward higher addresses
+	STACK_DIRECTION < 0 => grows toward lower addresses
+	STACK_DIRECTION = 0 => direction of growth unknown */
+#undef STACK_DIRECTION
+
 /* Define to 1 if you have the ANSI C header files. */
 #undef STDC_HEADERS
 
@@ -1364,6 +1387,9 @@ typedef unsigned int	uintptr_t;
 #  undef WORDS_BIGENDIAN
 # endif
 #endif
+
+/* routine worker child proc uses to exit. */
+#undef WORKER_CHILD_EXIT
 
 /* Define to 1 if on MINIX. */
 #undef _MINIX
