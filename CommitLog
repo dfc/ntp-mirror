@@ -1,3 +1,102 @@
+ChangeSet@1.2114, 2010-01-30 10:31:55+00:00, stenn@whimsy.udel.edu +27 -0
+  NTP_4_2_7P12
+  TAG: NTP_4_2_7P12
+
+  ChangeLog@1.514, 2010-01-30 10:31:39+00:00, stenn@whimsy.udel.edu +1 -0
+    NTP_4_2_7P12
+
+  ntpd/ntpd-opts.c@1.13, 2010-01-30 10:31:40+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P12
+
+  ntpd/ntpd-opts.h@1.13, 2010-01-30 10:31:40+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P12
+
+  ntpd/ntpd-opts.texi@1.13, 2010-01-30 10:31:41+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P12
+
+  ntpd/ntpd.1@1.13, 2010-01-30 10:31:41+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P12
+
+  ntpdc/ntpdc-opts.c@1.13, 2010-01-30 10:31:42+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P12
+
+  ntpdc/ntpdc-opts.h@1.13, 2010-01-30 10:31:42+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P12
+
+  ntpdc/ntpdc-opts.texi@1.13, 2010-01-30 10:31:42+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P12
+
+  ntpdc/ntpdc.1@1.13, 2010-01-30 10:31:43+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P12
+
+  ntpq/ntpq-opts.c@1.13, 2010-01-30 10:31:43+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P12
+
+  ntpq/ntpq-opts.h@1.13, 2010-01-30 10:31:44+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P12
+
+  ntpq/ntpq-opts.texi@1.13, 2010-01-30 10:31:44+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P12
+
+  ntpq/ntpq.1@1.13, 2010-01-30 10:31:44+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P12
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.13, 2010-01-30 10:31:45+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P12
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.13, 2010-01-30 10:31:45+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P12
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.13, 2010-01-30 10:31:45+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P12
+
+  ntpsnmpd/ntpsnmpd.1@1.13, 2010-01-30 10:31:46+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P12
+
+  packageinfo.sh@1.14, 2010-01-30 10:31:46+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P12
+
+  sntp/sntp-opts.c@1.13, 2010-01-30 10:31:47+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P12
+
+  sntp/sntp-opts.h@1.13, 2010-01-30 10:31:47+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P12
+
+  sntp/sntp-opts.texi@1.13, 2010-01-30 10:31:47+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P12
+
+  sntp/sntp.1@1.13, 2010-01-30 10:31:48+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P12
+
+  sntp/sntp.html@1.13, 2010-01-30 10:31:49+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P12
+
+  util/ntp-keygen-opts.c@1.13, 2010-01-30 10:31:49+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P12
+
+  util/ntp-keygen-opts.h@1.13, 2010-01-30 10:31:49+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P12
+
+  util/ntp-keygen-opts.texi@1.13, 2010-01-30 10:31:50+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P12
+
+  util/ntp-keygen.1@1.13, 2010-01-30 10:31:50+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P12
+
+ChangeSet@1.2113, 2010-01-29 20:11:52+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  [Bug 1468] 'make install' broken for root on default NFS mount.
+
+  ChangeLog@1.513, 2010-01-29 20:11:52+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
+    * [Bug 1468] 'make install' broken for root on default NFS mount.
+    Add a more explicit note to 4.2.7p11 section about new DNS code.
+
+  libparse/Makefile.am@1.20, 2010-01-29 20:11:52+00:00, davehart@shiny.ad.hartbrothers.com +21 -37
+    [Bug 1468] 'make install' broken for root on default NFS mount.
+      Ensure workaround to clean any stale $(builddir)/info_trimble.c
+      completes its work in "make all" so it does not fire during
+      "make install" where creating files in $(builddir) may not be
+      possible, such as root on a default NFS-mounted directory.
+
 ChangeSet@1.2112, 2010-01-28 10:35:48+00:00, stenn@whimsy.udel.edu +27 -0
   NTP_4_2_7P11
   TAG: NTP_4_2_7P11
