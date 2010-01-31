@@ -1,3 +1,103 @@
+ChangeSet@1.2117, 2010-01-31 10:32:07+00:00, stenn@whimsy.udel.edu +27 -0
+  NTP_4_2_7P13
+  TAG: NTP_4_2_7P13
+
+  ChangeLog@1.517, 2010-01-31 10:31:53+00:00, stenn@whimsy.udel.edu +1 -0
+    NTP_4_2_7P13
+
+  ntpd/ntpd-opts.c@1.14, 2010-01-31 10:31:54+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P13
+
+  ntpd/ntpd-opts.h@1.14, 2010-01-31 10:31:54+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P13
+
+  ntpd/ntpd-opts.texi@1.14, 2010-01-31 10:31:55+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P13
+
+  ntpd/ntpd.1@1.14, 2010-01-31 10:31:55+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P13
+
+  ntpdc/ntpdc-opts.c@1.14, 2010-01-31 10:31:56+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P13
+
+  ntpdc/ntpdc-opts.h@1.14, 2010-01-31 10:31:56+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P13
+
+  ntpdc/ntpdc-opts.texi@1.14, 2010-01-31 10:31:56+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P13
+
+  ntpdc/ntpdc.1@1.14, 2010-01-31 10:31:57+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P13
+
+  ntpq/ntpq-opts.c@1.14, 2010-01-31 10:31:57+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P13
+
+  ntpq/ntpq-opts.h@1.14, 2010-01-31 10:31:57+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P13
+
+  ntpq/ntpq-opts.texi@1.14, 2010-01-31 10:31:58+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P13
+
+  ntpq/ntpq.1@1.14, 2010-01-31 10:31:58+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P13
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.14, 2010-01-31 10:31:59+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P13
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.14, 2010-01-31 10:31:59+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P13
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.14, 2010-01-31 10:31:59+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P13
+
+  ntpsnmpd/ntpsnmpd.1@1.14, 2010-01-31 10:32:00+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P13
+
+  packageinfo.sh@1.15, 2010-01-31 10:32:00+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P13
+
+  sntp/sntp-opts.c@1.14, 2010-01-31 10:32:00+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P13
+
+  sntp/sntp-opts.h@1.14, 2010-01-31 10:32:01+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P13
+
+  sntp/sntp-opts.texi@1.14, 2010-01-31 10:32:01+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P13
+
+  sntp/sntp.1@1.14, 2010-01-31 10:32:01+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P13
+
+  sntp/sntp.html@1.14, 2010-01-31 10:32:02+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P13
+
+  util/ntp-keygen-opts.c@1.14, 2010-01-31 10:32:02+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P13
+
+  util/ntp-keygen-opts.h@1.14, 2010-01-31 10:32:03+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P13
+
+  util/ntp-keygen-opts.texi@1.14, 2010-01-31 10:32:03+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P13
+
+  util/ntp-keygen.1@1.14, 2010-01-31 10:32:03+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P13
+
+ChangeSet@1.2116, 2010-01-31 02:18:32-05:00, stenn@whimsy.udel.edu +1 -0
+  cleanup
+
+  ChangeLog@1.516, 2010-01-31 02:18:18-05:00, stenn@whimsy.udel.edu +1 -1
+    cleanup
+
+ChangeSet@1.2115, 2010-01-30 18:02:25-05:00, stenn@whimsy.udel.edu +2 -0
+  [Bug 1467] Fix bogus rebuild of sntp/sntp.html
+
+  ChangeLog@1.515, 2010-01-30 18:01:47-05:00, stenn@whimsy.udel.edu +1 -0
+    [Bug 1467] Fix bogus rebuild of sntp/sntp.html
+
+  bootstrap@1.31, 2010-01-30 18:01:49-05:00, stenn@whimsy.udel.edu +1 -1
+    [Bug 1467] Fix bogus rebuild of sntp/sntp.html
+
 ChangeSet@1.2114, 2010-01-30 10:31:55+00:00, stenn@whimsy.udel.edu +27 -0
   NTP_4_2_7P12
   TAG: NTP_4_2_7P12
