@@ -84,6 +84,12 @@
 # ifdef RES_TIMEOUT
 #  undef RES_TIMEOUT	/* resolv.h has one, we want ours */
 # endif
+# ifdef HAVE_INT32_ONLY_WITH_DNS
+#  define HAVE_INT32
+# endif
+# ifdef HAVE_U_INT32_ONLY_WITH_DNS
+#  define HAVE_U_INT32
+# endif
 #endif
 
 #include "ntp_stdlib.h"
@@ -217,7 +223,10 @@ getaddrinfo_sometime(
 	next_dns_timeslot = max(now, next_dns_timeslot);
 	gai_req->scheduled = now;
 	gai_req->earliest = next_dns_timeslot;
-	gai_req->hints = *hints;
+	if (NULL == hints)
+		memset(&gai_req->hints, 0, sizeof(gai_req->hints));
+	else
+		gai_req->hints = *hints;
 	gai_req->retry = INITIAL_DNS_RETRY;
 	gai_req->callback = callback;
 	gai_req->context = context;

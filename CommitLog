@@ -1,8 +1,195 @@
-ChangeSet@1.2117, 2010-01-31 10:32:07+00:00, stenn@whimsy.udel.edu +27 -0
+ChangeSet@1.2089, 2010-02-02 10:34:20+00:00, stenn@whimsy.udel.edu +27 -0
+  NTP_4_2_7P14
+  TAG: NTP_4_2_7P14
+
+  ChangeLog@1.521, 2010-02-02 10:34:05+00:00, stenn@whimsy.udel.edu +1 -0
+    NTP_4_2_7P14
+
+  ntpd/ntpd-opts.c@1.15, 2010-02-02 10:34:06+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P14
+
+  ntpd/ntpd-opts.h@1.15, 2010-02-02 10:34:06+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P14
+
+  ntpd/ntpd-opts.texi@1.15, 2010-02-02 10:34:06+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P14
+
+  ntpd/ntpd.1@1.15, 2010-02-02 10:34:07+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P14
+
+  ntpdc/ntpdc-opts.c@1.15, 2010-02-02 10:34:07+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P14
+
+  ntpdc/ntpdc-opts.h@1.15, 2010-02-02 10:34:08+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P14
+
+  ntpdc/ntpdc-opts.texi@1.15, 2010-02-02 10:34:08+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P14
+
+  ntpdc/ntpdc.1@1.15, 2010-02-02 10:34:08+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P14
+
+  ntpq/ntpq-opts.c@1.15, 2010-02-02 10:34:09+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P14
+
+  ntpq/ntpq-opts.h@1.15, 2010-02-02 10:34:09+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P14
+
+  ntpq/ntpq-opts.texi@1.15, 2010-02-02 10:34:09+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P14
+
+  ntpq/ntpq.1@1.15, 2010-02-02 10:34:10+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P14
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.15, 2010-02-02 10:34:10+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P14
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.15, 2010-02-02 10:34:10+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P14
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.15, 2010-02-02 10:34:11+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P14
+
+  ntpsnmpd/ntpsnmpd.1@1.15, 2010-02-02 10:34:11+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P14
+
+  packageinfo.sh@1.16, 2010-02-02 10:34:12+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P14
+
+  sntp/sntp-opts.c@1.15, 2010-02-02 10:34:12+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P14
+
+  sntp/sntp-opts.h@1.15, 2010-02-02 10:34:12+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P14
+
+  sntp/sntp-opts.texi@1.15, 2010-02-02 10:34:13+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P14
+
+  sntp/sntp.1@1.15, 2010-02-02 10:34:13+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P14
+
+  sntp/sntp.html@1.15, 2010-02-02 10:34:13+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P14
+
+  util/ntp-keygen-opts.c@1.15, 2010-02-02 10:34:14+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P14
+
+  util/ntp-keygen-opts.h@1.15, 2010-02-02 10:34:14+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P14
+
+  util/ntp-keygen-opts.texi@1.15, 2010-02-02 10:34:15+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P14
+
+  util/ntp-keygen.1@1.15, 2010-02-02 10:34:15+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P14
+
+ChangeSet@1.2084.1.40, 2010-02-02 04:18:56-05:00, stenn@pogo.udel.edu +1 -0
+  cleanup
+
+  configure.ac@1.477, 2010-02-02 04:18:46-05:00, stenn@pogo.udel.edu +0 -1
+    cleanup
+
+ChangeSet@1.2084.1.37, 2010-02-02 08:28:17+00:00, stenn@poog.il.thewrittenword.com +2 -0
+  [Bug 1469] more int32 cleanup
+
+  configure.ac@1.476, 2010-02-02 08:28:06+00:00, stenn@poog.il.thewrittenword.com +1 -1
+    [Bug 1469] more int32 cleanup
+
+  include/ntp_types.h@1.18, 2010-02-02 08:28:07+00:00, stenn@poog.il.thewrittenword.com +4 -3
+    [Bug 1469] more int32 cleanup
+
+ChangeSet@1.2082.4.51, 2010-02-02 08:09:04+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
+  [Bug 1473] "make distcheck" before build can't make sntp/version.m4.
+
+  ChangeLog@1.496.26.33, 2010-02-02 08:09:04+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1473] "make distcheck" before build can't make sntp/version.m4.
+
+  Makefile.am@1.90, 2010-02-02 08:09:04+00:00, davehart@shiny.ad.hartbrothers.com +12 -1
+    add COPYRIGHT-please target for use by sntp/Makefile.am
+    minor tweak to COPYRIGHT action to create intermediate file in
+      build dir not $(srcdir) to minimize parallel VPATH makes
+      interfering with each other.
+    add do-nothing action for rule lacking one to avoid any use
+      of SCCS get default.
+
+  sntp/Makefile.am@1.21.1.5, 2010-02-02 08:09:04+00:00, davehart@shiny.ad.hartbrothers.com +34 -5
+    [Bug 1473] "make distcheck" before build can't make sntp/version.m4.
+      add targets for autogen-version.def, version.def, version.m4, and
+      version.texi which invoke a submake on the corresponding check-*
+      targets, avoiding an explicit dependency which would cause Autogen
+      to be invoked to make sntp-opts.h, which would be considered out-
+      of-date because version.def is, and version,def because it depends
+      on non-existent check-version.def.  The submake ensures the check
+      action is taken without introducing the troublesome dependency.
+    use "cd .. && $(MAKE) COPYRIGHT-please" to work around quirk with
+      FreeBSD 6.x make which fails with "make COPYRIGHT" when 
+      "make ./COPYRIGHT" would work.
+
+ChangeSet@1.2082.4.50, 2010-02-02 01:29:56+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  Makefile.am:
+    keyword-gen-utd is intended to have one line of content.
+
+  ntpd/Makefile.am@1.80.1.7, 2010-02-02 01:28:58+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    keyword-gen-utd is intended to have one line of content.
+
+ChangeSet@1.2084.14.1, 2010-02-01 18:15:31+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  ntp_data_structures.h:
+    ensure size_t is available by including stddef.h
+
+  include/ntp_data_structures.h@1.7, 2010-02-01 18:15:17+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    ensure size_t is available by including stddef.h
+
+ChangeSet@1.2084.13.5, 2010-02-01 04:40:15+00:00, davehart@shiny.ad.hartbrothers.com +6 -0
+  [Bug 1471] CID 120 CID 121 CID 122 is_ip_address() uninit family.
+  [Bug 1472] CID 116 CID 117 minor warnings in new DNS code.
+
+  ChangeLog@1.513.1.5, 2010-02-01 04:40:06+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+    [Bug 1471] CID 120 CID 121 CID 122 is_ip_address() uninit family.
+    [Bug 1472] CID 116 CID 117 minor warnings in new DNS code.
+
+  include/ntp_io.h@1.15, 2010-02-01 04:40:06+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    [Bug 1471] CID 120 CID 121 CID 122 is_ip_address() uninit family.
+    [Bug 1472] CID 116 CID 117 minor warnings in new DNS code.
+
+  ntpd/ntp_config.c@1.245, 2010-02-01 04:40:06+00:00, davehart@shiny.ad.hartbrothers.com +7 -9
+    [Bug 1471] CID 120 CID 121 CID 122 is_ip_address() uninit family.
+
+  ntpd/ntp_intres.c@1.80.1.1, 2010-02-01 04:40:06+00:00, davehart@shiny.ad.hartbrothers.com +4 -1
+    [Bug 1472] CID 116 CID 117 minor warnings in new DNS code.
+
+  ntpd/ntp_io.c@1.312, 2010-02-01 04:40:06+00:00, davehart@shiny.ad.hartbrothers.com +5 -3
+    [Bug 1471] CID 120 CID 121 CID 122 is_ip_address() uninit family.
+
+  ntpd/ntpd.c@1.114, 2010-02-01 04:40:06+00:00, davehart@shiny.ad.hartbrothers.com +7 -4
+    [Bug 1471] CID 120 CID 121 CID 122 is_ip_address() uninit family.
+    [Bug 1472] CID 116 CID 117 minor warnings in new DNS code.
+
+ChangeSet@1.2082.4.49, 2010-02-01 01:56:41+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+  [Bug 1470] "make distdir" in $srcdir builds keyword-gen, libntp.a.
+
+  ChangeLog@1.496.26.32, 2010-02-01 01:56:41+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1470] "make distdir" in $srcdir builds keyword-gen, libntp.a.
+
+  bootstrap@1.28.1.3, 2010-02-01 01:56:41+00:00, davehart@shiny.ad.hartbrothers.com +5 -6
+    add ntpd/keyword-gen.out to touch targets, at same time as ntp_parser.h.
+
+  ntpd/Makefile.am@1.80.1.6, 2010-02-01 01:56:41+00:00, davehart@shiny.ad.hartbrothers.com +41 -26
+    [Bug 1470] "make distdir" in $srcdir builds keyword-gen, libntp.a.
+      Avoid building keyword-gen if its output is up-to-date in general.
+
+  ntpd/keyword-gen-utd@1.1, 2010-02-01 01:55:44+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    intermediate Makefile target used in avoiding building keyword-gen
+      after bootstrap or from tarball unless sources change, necessary
+      to ensure "make distdir" can succeed before compiling without
+      compiling.  See [Bug 1470].
+
+  ntpd/keyword-gen-utd@1.0, 2010-02-01 01:55:44+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+
+ChangeSet@1.2084.13.4, 2010-01-31 10:32:07+00:00, stenn@whimsy.udel.edu +27 -0
   NTP_4_2_7P13
   TAG: NTP_4_2_7P13
 
-  ChangeLog@1.517, 2010-01-31 10:31:53+00:00, stenn@whimsy.udel.edu +1 -0
+  ChangeLog@1.513.1.4, 2010-01-31 10:31:53+00:00, stenn@whimsy.udel.edu +1 -0
     NTP_4_2_7P13
 
   ntpd/ntpd-opts.c@1.14, 2010-01-31 10:31:54+00:00, stenn@whimsy.udel.edu +2 -2
@@ -83,26 +270,70 @@ ChangeSet@1.2117, 2010-01-31 10:32:07+00:00, stenn@whimsy.udel.edu +27 -0
   util/ntp-keygen.1@1.14, 2010-01-31 10:32:03+00:00, stenn@whimsy.udel.edu +2 -2
     NTP_4_2_7P13
 
-ChangeSet@1.2116, 2010-01-31 02:18:32-05:00, stenn@whimsy.udel.edu +1 -0
+ChangeSet@1.2084.13.3, 2010-01-31 02:18:32-05:00, stenn@whimsy.udel.edu +1 -0
   cleanup
 
-  ChangeLog@1.516, 2010-01-31 02:18:18-05:00, stenn@whimsy.udel.edu +1 -1
+  ChangeLog@1.513.1.3, 2010-01-31 02:18:18-05:00, stenn@whimsy.udel.edu +1 -1
     cleanup
 
-ChangeSet@1.2115, 2010-01-30 18:02:25-05:00, stenn@whimsy.udel.edu +2 -0
+ChangeSet@1.2082.4.48, 2010-01-30 18:06:35-05:00, stenn@whimsy.udel.edu +2 -0
   [Bug 1467] Fix bogus rebuild of sntp/sntp.html
 
-  ChangeLog@1.515, 2010-01-30 18:01:47-05:00, stenn@whimsy.udel.edu +1 -0
+  ChangeLog@1.496.26.31, 2010-01-30 18:06:02-05:00, stenn@whimsy.udel.edu +4 -0
+    [Bug 1467] Fix bogus rebuild of sntp/sntp.html
+
+  bootstrap@1.28.1.2, 2010-01-30 18:06:03-05:00, stenn@whimsy.udel.edu +1 -1
+    [Bug 1467] Fix bogus rebuild of sntp/sntp.html
+
+ChangeSet@1.2084.13.2, 2010-01-30 18:02:25-05:00, stenn@whimsy.udel.edu +2 -0
+  [Bug 1467] Fix bogus rebuild of sntp/sntp.html
+
+  ChangeLog@1.513.1.2, 2010-01-30 18:01:47-05:00, stenn@whimsy.udel.edu +1 -0
     [Bug 1467] Fix bogus rebuild of sntp/sntp.html
 
   bootstrap@1.31, 2010-01-30 18:01:49-05:00, stenn@whimsy.udel.edu +1 -1
     [Bug 1467] Fix bogus rebuild of sntp/sntp.html
 
-ChangeSet@1.2114, 2010-01-30 10:31:55+00:00, stenn@whimsy.udel.edu +27 -0
+ChangeSet@1.2084.1.35, 2010-01-30 22:35:13+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  configure.ac:
+    reword to better fit with surrounding messages
+
+  configure.ac@1.475, 2010-01-30 22:35:08+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    reword to better fit with surrounding messages
+
+ChangeSet@1.2084.1.34, 2010-01-30 22:28:30+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  configure.ac:
+    attempt to properly quote all args to AC_LANG_PROGRAM()
+
+  configure.ac@1.474, 2010-01-30 22:28:23+00:00, davehart@shiny.ad.hartbrothers.com +39 -39
+    attempt to properly quote all args to AC_LANG_PROGRAM()
+
+ChangeSet@1.2084.1.33, 2010-01-30 22:16:54+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  check for int32, u_int32 before testing result.
+
+  configure.ac@1.473, 2010-01-30 22:16:53+00:00, davehart@shiny.ad.hartbrothers.com +3 -1
+    check for int32, u_int32 before testing result.
+
+ChangeSet@1.2084.1.32, 2010-01-30 17:53:03+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+  [Bug 1469] u_int32, int32 changes broke HP-UX 10.20 build.
+
+  ChangeLog@1.516, 2010-01-30 17:53:02+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    [Bug 1469] u_int32, int32 changes broke HP-UX 10.20 build.
+
+  configure.ac@1.472, 2010-01-30 17:53:02+00:00, davehart@shiny.ad.hartbrothers.com +56 -22
+    [Bug 1469] u_int32, int32 changes broke HP-UX 10.20 build.
+
+  include/ntp_types.h@1.17, 2010-01-30 17:53:03+00:00, davehart@shiny.ad.hartbrothers.com +11 -7
+    [Bug 1469] u_int32, int32 changes broke HP-UX 10.20 build.
+
+  ntpd/ntp_intres.c@1.81, 2010-01-30 17:53:03+00:00, davehart@shiny.ad.hartbrothers.com +6 -0
+    [Bug 1469] u_int32, int32 changes broke HP-UX 10.20 build.
+
+ChangeSet@1.2084.13.1, 2010-01-30 10:31:55+00:00, stenn@whimsy.udel.edu +27 -0
   NTP_4_2_7P12
   TAG: NTP_4_2_7P12
 
-  ChangeLog@1.514, 2010-01-30 10:31:39+00:00, stenn@whimsy.udel.edu +1 -0
+  ChangeLog@1.513.1.1, 2010-01-30 10:31:39+00:00, stenn@whimsy.udel.edu +1 -0
     NTP_4_2_7P12
 
   ntpd/ntpd-opts.c@1.13, 2010-01-30 10:31:40+00:00, stenn@whimsy.udel.edu +2 -2
@@ -183,7 +414,16 @@ ChangeSet@1.2114, 2010-01-30 10:31:55+00:00, stenn@whimsy.udel.edu +27 -0
   util/ntp-keygen.1@1.13, 2010-01-30 10:31:50+00:00, stenn@whimsy.udel.edu +2 -2
     NTP_4_2_7P12
 
-ChangeSet@1.2113, 2010-01-29 20:11:52+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+ChangeSet@1.2084.1.30, 2010-01-30 06:26:12+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  * [Bug 1469] u_int32, int32 changes broke HP-UX 10.20 build.
+
+  ChangeLog@1.514, 2010-01-30 06:26:10+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    * [Bug 1469] u_int32, int32 changes broke HP-UX 10.20 build.
+
+  include/ntp_types.h@1.16, 2010-01-30 06:26:10+00:00, davehart@shiny.ad.hartbrothers.com +8 -6
+    * [Bug 1469] u_int32, int32 changes broke HP-UX 10.20 build.
+
+ChangeSet@1.2084.1.29, 2010-01-29 20:11:52+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
   [Bug 1468] 'make install' broken for root on default NFS mount.
 
   ChangeLog@1.513, 2010-01-29 20:11:52+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
@@ -197,7 +437,7 @@ ChangeSet@1.2113, 2010-01-29 20:11:52+00:00, davehart@shiny.ad.hartbrothers.com 
       "make install" where creating files in $(builddir) may not be
       possible, such as root on a default NFS-mounted directory.
 
-ChangeSet@1.2112, 2010-01-28 10:35:48+00:00, stenn@whimsy.udel.edu +27 -0
+ChangeSet@1.2084.1.28, 2010-01-28 10:35:48+00:00, stenn@whimsy.udel.edu +27 -0
   NTP_4_2_7P11
   TAG: NTP_4_2_7P11
 
@@ -282,7 +522,7 @@ ChangeSet@1.2112, 2010-01-28 10:35:48+00:00, stenn@whimsy.udel.edu +27 -0
   util/ntp-keygen.1@1.12, 2010-01-28 10:35:42+00:00, stenn@whimsy.udel.edu +2 -2
     NTP_4_2_7P11
 
-ChangeSet@1.2111, 2010-01-27 21:16:20+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+ChangeSet@1.2084.1.27, 2010-01-27 21:16:20+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
   convert leftover debugging msyslog() to DPRINTF()
     "attempting to open log %s"
 
@@ -290,13 +530,13 @@ ChangeSet@1.2111, 2010-01-27 21:16:20+00:00, davehart@shiny.ad.hartbrothers.com 
     convert leftover debugging msyslog() to DPRINTF()
       "attempting to open log %s"
 
-ChangeSet@1.2110, 2010-01-27 20:21:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+ChangeSet@1.2084.1.26, 2010-01-27 20:21:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
   Fix libparse build in $(srcdir)
 
   libparse/Makefile.am@1.19, 2010-01-27 20:21:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
     Fix libparse build in $(srcdir)
 
-ChangeSet@1.2109, 2010-01-27 18:45:33+00:00, davehart@shiny.ad.hartbrothers.com +116 -0
+ChangeSet@1.2084.1.25, 2010-01-27 18:45:33+00:00, davehart@shiny.ad.hartbrothers.com +116 -0
   [Bug 47] Debugging and logging do not work after a fork.
   [Bug 1010] getaddrinfo() could block and thus should not be called by
     the main thread/process.
@@ -750,7 +990,7 @@ ChangeSet@1.2109, 2010-01-27 18:45:33+00:00, davehart@shiny.ad.hartbrothers.com 
     #include <config.h> from all .c files and do not include it
       from any .h files.
 
-  ntpq/ntpq-subs.c@1.42, 2010-01-27 18:45:26+00:00, davehart@shiny.ad.hartbrothers.com +40 -40
+  ntpq/ntpq-subs.c@1.39.1.3, 2010-01-27 18:45:26+00:00, davehart@shiny.ad.hartbrothers.com +40 -40
     #include <config.h> from all .c files and do not include it
       from any .h files.
     dump received association IDs if (debug).
@@ -845,7 +1085,7 @@ ChangeSet@1.2109, 2010-01-27 18:45:33+00:00, davehart@shiny.ad.hartbrothers.com 
     #include <config.h> from all .c files and do not include it
       from any .h files.
 
-ChangeSet@1.2108, 2010-01-24 11:44:49+00:00, stenn@whimsy.udel.edu +27 -0
+ChangeSet@1.2084.1.24, 2010-01-24 11:44:49+00:00, stenn@whimsy.udel.edu +27 -0
   NTP_4_2_7P10
   TAG: NTP_4_2_7P10
 
@@ -930,7 +1170,92 @@ ChangeSet@1.2108, 2010-01-24 11:44:49+00:00, stenn@whimsy.udel.edu +27 -0
   util/ntp-keygen.1@1.11, 2010-01-24 11:44:43+00:00, stenn@whimsy.udel.edu +2 -2
     NTP_4_2_7P10
 
-ChangeSet@1.2107, 2010-01-24 04:30:32-05:00, stenn@whimsy.udel.edu +4 -0
+ChangeSet@1.2082.4.47, 2010-01-24 10:31:32+00:00, stenn@whimsy.udel.edu +27 -0
+  NTP_4_2_6P1_RC3
+  TAG: NTP_4_2_6P1_RC3
+
+  ChangeLog@1.496.26.30, 2010-01-24 10:31:16+00:00, stenn@whimsy.udel.edu +1 -0
+    NTP_4_2_6P1_RC3
+
+  ntpd/ntpd-opts.c@1.248.3.1, 2010-01-24 10:31:17+00:00, stenn@whimsy.udel.edu +4 -4
+    NTP_4_2_6P1_RC3
+
+  ntpd/ntpd-opts.h@1.248.3.1, 2010-01-24 10:31:17+00:00, stenn@whimsy.udel.edu +4 -4
+    NTP_4_2_6P1_RC3
+
+  ntpd/ntpd-opts.texi@1.246.3.1, 2010-01-24 10:31:18+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC3
+
+  ntpd/ntpd.1@1.246.3.1, 2010-01-24 10:31:18+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC3
+
+  ntpdc/ntpdc-opts.c@1.244.3.1, 2010-01-24 10:31:19+00:00, stenn@whimsy.udel.edu +4 -4
+    NTP_4_2_6P1_RC3
+
+  ntpdc/ntpdc-opts.h@1.244.3.1, 2010-01-24 10:31:19+00:00, stenn@whimsy.udel.edu +4 -4
+    NTP_4_2_6P1_RC3
+
+  ntpdc/ntpdc-opts.texi@1.243.3.1, 2010-01-24 10:31:19+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_6P1_RC3
+
+  ntpdc/ntpdc.1@1.243.3.1, 2010-01-24 10:31:20+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC3
+
+  ntpq/ntpq-opts.c@1.245.3.1, 2010-01-24 10:31:20+00:00, stenn@whimsy.udel.edu +4 -4
+    NTP_4_2_6P1_RC3
+
+  ntpq/ntpq-opts.h@1.245.3.1, 2010-01-24 10:31:21+00:00, stenn@whimsy.udel.edu +4 -4
+    NTP_4_2_6P1_RC3
+
+  ntpq/ntpq-opts.texi@1.244.3.1, 2010-01-24 10:31:21+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_6P1_RC3
+
+  ntpq/ntpq.1@1.244.3.1, 2010-01-24 10:31:21+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC3
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.123.3.1, 2010-01-24 10:31:22+00:00, stenn@whimsy.udel.edu +4 -4
+    NTP_4_2_6P1_RC3
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.123.3.1, 2010-01-24 10:31:22+00:00, stenn@whimsy.udel.edu +4 -4
+    NTP_4_2_6P1_RC3
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.123.3.1, 2010-01-24 10:31:23+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_6P1_RC3
+
+  ntpsnmpd/ntpsnmpd.1@1.122.3.1, 2010-01-24 10:31:23+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC3
+
+  packageinfo.sh@1.255.5.1, 2010-01-24 10:31:23+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_6P1_RC3
+
+  sntp/sntp-opts.c@1.117.3.1, 2010-01-24 10:31:24+00:00, stenn@whimsy.udel.edu +4 -4
+    NTP_4_2_6P1_RC3
+
+  sntp/sntp-opts.h@1.117.3.1, 2010-01-24 10:31:24+00:00, stenn@whimsy.udel.edu +4 -4
+    NTP_4_2_6P1_RC3
+
+  sntp/sntp-opts.texi@1.117.3.1, 2010-01-24 10:31:25+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_6P1_RC3
+
+  sntp/sntp.1@1.117.3.1, 2010-01-24 10:31:25+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC3
+
+  sntp/sntp.html@1.7.3.1, 2010-01-24 10:31:25+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_6P1_RC3
+
+  util/ntp-keygen-opts.c@1.247.3.1, 2010-01-24 10:31:26+00:00, stenn@whimsy.udel.edu +4 -4
+    NTP_4_2_6P1_RC3
+
+  util/ntp-keygen-opts.h@1.247.3.1, 2010-01-24 10:31:26+00:00, stenn@whimsy.udel.edu +4 -4
+    NTP_4_2_6P1_RC3
+
+  util/ntp-keygen-opts.texi@1.246.3.1, 2010-01-24 10:31:27+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_6P1_RC3
+
+  util/ntp-keygen.1@1.246.3.1, 2010-01-24 10:31:27+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC3
+
+ChangeSet@1.2084.1.23, 2010-01-24 04:30:32-05:00, stenn@whimsy.udel.edu +4 -0
   [Bug 1140] Clean up debug.html, decode.html, and ntpq.html
 
   ChangeLog@1.509, 2010-01-24 04:29:50-05:00, stenn@whimsy.udel.edu +1 -0
@@ -948,7 +1273,7 @@ ChangeSet@1.2107, 2010-01-24 04:30:32-05:00, stenn@whimsy.udel.edu +4 -0
 ChangeSet@1.2082.4.46, 2010-01-24 03:49:59-05:00, stenn@whimsy.udel.edu +2 -0
   Use TZ=UTC instead of TZ= when calling date in scripts/mkver.in
 
-  ChangeLog@1.496.25.29, 2010-01-24 03:49:45-05:00, stenn@whimsy.udel.edu +4 -3
+  ChangeLog@1.496.26.29, 2010-01-24 03:49:45-05:00, stenn@whimsy.udel.edu +4 -3
     Use TZ=UTC instead of TZ= when calling date in scripts/mkver.in
 
   scripts/mkver.in@1.12, 2010-01-24 03:49:44-05:00, stenn@whimsy.udel.edu +1 -1
@@ -957,7 +1282,7 @@ ChangeSet@1.2082.4.46, 2010-01-24 03:49:59-05:00, stenn@whimsy.udel.edu +2 -0
 ChangeSet@1.2082.4.45, 2010-01-24 03:44:05-05:00, stenn@whimsy.udel.edu +1 -0
   cleanup
 
-  ChangeLog@1.496.25.28, 2010-01-24 03:43:54-05:00, stenn@whimsy.udel.edu +2 -2
+  ChangeLog@1.496.26.28, 2010-01-24 03:43:54-05:00, stenn@whimsy.udel.edu +2 -2
     cleanup
 
 ChangeSet@1.2082.4.44, 2010-01-24 03:39:27-05:00, stenn@whimsy.udel.edu +1 -0
@@ -966,7 +1291,7 @@ ChangeSet@1.2082.4.44, 2010-01-24 03:39:27-05:00, stenn@whimsy.udel.edu +1 -0
   include/ntpsim.h@1.13, 2010-01-24 03:38:33-05:00, stenn@whimsy.udel.edu +0 -1
     [Bug 1449] SLEW is no longer needed by the simulator
 
-ChangeSet@1.2105, 2010-01-24 00:16:39-05:00, mayer@pogo.udel.edu +2 -0
+ChangeSet@1.2084.1.21, 2010-01-24 00:16:39-05:00, mayer@pogo.udel.edu +2 -0
   Fix move results for vc6
 
   ports/winnt/vc6/libntp.dsp@1.51, 2010-01-24 00:15:06-05:00, mayer@pogo.udel.edu +17 -17
@@ -975,7 +1300,7 @@ ChangeSet@1.2105, 2010-01-24 00:16:39-05:00, mayer@pogo.udel.edu +2 -0
   ports/winnt/vc6/ntpd.dsp@1.46, 2010-01-24 00:15:06-05:00, mayer@pogo.udel.edu +3 -4
     Fix move results for vc6
 
-ChangeSet@1.2104, 2010-01-24 00:03:42-05:00, mayer@pogo.udel.edu +1 -0
+ChangeSet@1.2084.1.20, 2010-01-24 00:03:42-05:00, mayer@pogo.udel.edu +1 -0
   Remerge of bugs 1448-1450
 
   ChangeLog@1.507, 2010-01-24 00:03:19-05:00, mayer@pogo.udel.edu +4 -0
@@ -1014,7 +1339,7 @@ ChangeSet@1.2082.4.38, 2010-01-16 23:20:10-05:00, mayer@pogo.udel.edu +2 -0
   ports/winnt/vc6/libntp.dsp@1.43.1.7, 2010-01-16 23:19:28-05:00, mayer@pogo.udel.edu +23 -15
     [Bug 1448] Additional fixes for Windows VC6
 
-ChangeSet@1.2102, 2010-01-13 10:30:51+00:00, stenn@whimsy.udel.edu +27 -0
+ChangeSet@1.2084.1.18, 2010-01-13 10:30:51+00:00, stenn@whimsy.udel.edu +27 -0
   NTP_4_2_7P9
   TAG: NTP_4_2_7P9
 
@@ -1099,7 +1424,7 @@ ChangeSet@1.2102, 2010-01-13 10:30:51+00:00, stenn@whimsy.udel.edu +27 -0
   util/ntp-keygen.1@1.10, 2010-01-13 10:30:47+00:00, stenn@whimsy.udel.edu +2 -2
     NTP_4_2_7P9
 
-ChangeSet@1.2096.1.45, 2010-01-12 10:34:14+00:00, stenn@whimsy.udel.edu +27 -0
+ChangeSet@1.2084.6.45, 2010-01-12 10:34:14+00:00, stenn@whimsy.udel.edu +27 -0
   NTP_4_2_7P8
   TAG: NTP_4_2_7P8
 
@@ -1184,7 +1509,7 @@ ChangeSet@1.2096.1.45, 2010-01-12 10:34:14+00:00, stenn@whimsy.udel.edu +27 -0
   util/ntp-keygen.1@1.9, 2010-01-12 10:34:09+00:00, stenn@whimsy.udel.edu +2 -2
     NTP_4_2_7P8
 
-ChangeSet@1.2096.5.4, 2010-01-11 17:06:06+01:00, burnicki@pogo.udel.edu +2 -0
+ChangeSet@1.2084.10.4, 2010-01-11 17:06:06+01:00, burnicki@pogo.udel.edu +2 -0
   Syntax fix in ntp.dsw and ntpd.dsp for VC6.
 
   ports/winnt/vc6/ntp.dsw@1.13, 2010-01-11 17:06:05+01:00, burnicki@pogo.udel.edu +0 -1
@@ -1193,7 +1518,7 @@ ChangeSet@1.2096.5.4, 2010-01-11 17:06:06+01:00, burnicki@pogo.udel.edu +2 -0
   ports/winnt/vc6/ntpd.dsp@1.43.1.1, 2010-01-11 17:06:05+01:00, burnicki@pogo.udel.edu +2 -1
     Syntax fix.
 
-ChangeSet@1.2096.7.2, 2010-01-08 20:00:10+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+ChangeSet@1.2084.12.2, 2010-01-08 20:00:10+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
   ChangeLog: Include (4.2.6p1-RC3) - [Bug 1453] Use $CC in config.cache filename.
 
   ChangeLog@1.501.6.2, 2010-01-08 20:00:09+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
@@ -1226,7 +1551,7 @@ ChangeSet@1.2082.16.2, 2010-01-08 17:21:14+00:00, davehart@shiny.ad.hartbrothers
 ChangeSet@1.2082.16.1, 2010-01-06 18:52:49+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
   [Bug 1453] Use $CC in config.cache filename in ./build script.
 
-  ChangeLog@1.496.39.1, 2010-01-06 18:52:48+00:00, davehart@shiny.ad.hartbrothers.com +4 -3
+  ChangeLog@1.496.40.1, 2010-01-06 18:52:48+00:00, davehart@shiny.ad.hartbrothers.com +4 -3
     [Bug 1453] Use $CC in config.cache filename in ./build script.
 
   build@1.34, 2010-01-06 18:52:48+00:00, davehart@shiny.ad.hartbrothers.com +26 -27
@@ -1238,7 +1563,7 @@ ChangeSet@1.2082.4.37, 2010-01-03 23:03:48-05:00, mayer@pogo.udel.edu +1 -0
   lib/isc/netaddr.c@1.8, 2010-01-03 23:03:02-05:00, mayer@pogo.udel.edu +1 -1
     Undo unneeded change
 
-ChangeSet@1.2096.6.2, 2010-01-03 21:56:54+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+ChangeSet@1.2084.11.2, 2010-01-03 21:56:54+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
   Correct ChangeLog to reflect [Bug 1451] in -dev section as well.
 
   ChangeLog@1.501.5.2, 2010-01-03 21:56:54+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
@@ -1248,7 +1573,7 @@ ChangeSet@1.2082.15.1, 2010-01-03 21:52:33+00:00, davehart@shiny.ad.hartbrothers
   [Bug 1451] CID 115: sntp leaks KoD entry when updating existing
     entry.
 
-  ChangeLog@1.496.38.1, 2010-01-03 21:52:32+00:00, davehart@shiny.ad.hartbrothers.com +4 -3
+  ChangeLog@1.496.39.1, 2010-01-03 21:52:32+00:00, davehart@shiny.ad.hartbrothers.com +4 -3
     [Bug 1451] CID 115: sntp leaks KoD entry when updating existing
       entry.
 
@@ -1256,7 +1581,7 @@ ChangeSet@1.2082.15.1, 2010-01-03 21:52:33+00:00, davehart@shiny.ad.hartbrothers
     [Bug 1451] CID 115: sntp leaks KoD entry when updating existing
       entry.
 
-ChangeSet@1.2096.5.2, 2010-01-02 22:47:59-05:00, mayer@pogo.udel.edu +1 -0
+ChangeSet@1.2084.10.2, 2010-01-02 22:47:59-05:00, mayer@pogo.udel.edu +1 -0
   Fixes for Bugs 1448-1450
 
   ChangeLog@1.501.4.2, 2010-01-02 22:47:28-05:00, mayer@pogo.udel.edu +4 -0
@@ -1265,7 +1590,7 @@ ChangeSet@1.2096.5.2, 2010-01-02 22:47:59-05:00, mayer@pogo.udel.edu +1 -0
 ChangeSet@1.2082.4.36, 2010-01-01 23:49:35-05:00, mayer@pogo.udel.edu +7 -0
   Fixes for bugs 1448-1450
 
-  ChangeLog@1.496.25.26, 2010-01-01 23:48:44-05:00, mayer@pogo.udel.edu +4 -0
+  ChangeLog@1.496.26.26, 2010-01-01 23:48:44-05:00, mayer@pogo.udel.edu +4 -0
      Fixes for bug 1448-1450
 
   lib/isc/netaddr.c@1.7, 2010-01-01 23:41:53-05:00, mayer@pogo.udel.edu +1 -1
@@ -1286,7 +1611,7 @@ ChangeSet@1.2082.4.36, 2010-01-01 23:49:35-05:00, mayer@pogo.udel.edu +7 -0
   ports/winnt/vc6/libntp.dsp@1.43.1.6, 2010-01-01 23:39:14-05:00, mayer@pogo.udel.edu +0 -4
     [Bug 1448] stdtime.c misspelled but not needed at all
 
-ChangeSet@1.2096.1.41, 2009-12-30 21:55:52+00:00, davehart@shiny.ad.hartbrothers.com +12 -0
+ChangeSet@1.2084.6.41, 2009-12-30 21:55:52+00:00, davehart@shiny.ad.hartbrothers.com +12 -0
   [Bug 702] ntpd service logic should use libopts to examine cmdline.
 
   ChangeLog@1.501.1.33, 2009-12-30 21:55:48+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
@@ -1329,7 +1654,7 @@ ChangeSet@1.2096.1.41, 2009-12-30 21:55:52+00:00, davehart@shiny.ad.hartbrothers
     top-level ntpd directory needs to be in include search path
     for ntservice.c to #include "ntpd-opts.h"
 
-ChangeSet@1.2096.1.40, 2009-12-30 10:27:13+00:00, stenn@whimsy.udel.edu +27 -0
+ChangeSet@1.2084.6.40, 2009-12-30 10:27:13+00:00, stenn@whimsy.udel.edu +27 -0
   NTP_4_2_7P7
   TAG: NTP_4_2_7P7
 
@@ -1414,7 +1739,7 @@ ChangeSet@1.2096.1.40, 2009-12-30 10:27:13+00:00, stenn@whimsy.udel.edu +27 -0
   util/ntp-keygen.1@1.8, 2009-12-30 10:27:10+00:00, stenn@whimsy.udel.edu +2 -2
     NTP_4_2_7P7
 
-ChangeSet@1.2096.4.2, 2009-12-30 05:56:00+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+ChangeSet@1.2084.9.2, 2009-12-30 05:56:00+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
   [Bug 1446] 4.2.7p6 requires autogen, missing ntpd.1, *.texi, *.menu.
     Applies to prior Makefile.am changesets pulled from ntp-stable,
     where there is no ChangeLog entry as no tarball rolled with the bug.
@@ -1458,7 +1783,7 @@ ChangeSet@1.2082.4.34, 2009-12-30 00:23:25+00:00, davehart@shiny.ad.hartbrothers
   ntpd/Makefile.am@1.80.1.4, 2009-12-30 00:23:24+00:00, davehart@shiny.ad.hartbrothers.com +4 -1
     [Bug 1446] 4.2.7p6 requires autogen to build missing ntpd.1, *.texi, *.menu.
 
-ChangeSet@1.2096.1.38, 2009-12-29 16:07:26+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+ChangeSet@1.2084.6.38, 2009-12-29 16:07:26+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
   [Bug 620] ntpdc getresponse() esize != *rsize s/b size != *rsize.
 
   ChangeLog@1.501.1.30, 2009-12-29 16:07:25+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
@@ -1467,7 +1792,7 @@ ChangeSet@1.2096.1.38, 2009-12-29 16:07:26+00:00, davehart@shiny.ad.hartbrothers
   ntpdc/ntpdc.c@1.77, 2009-12-29 16:07:25+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
     [Bug 620] ntpdc getresponse() esize != *rsize s/b size != *rsize.
 
-ChangeSet@1.2096.1.37, 2009-12-28 10:30:49+00:00, stenn@whimsy.udel.edu +27 -0
+ChangeSet@1.2084.6.37, 2009-12-28 10:30:49+00:00, stenn@whimsy.udel.edu +27 -0
   NTP_4_2_7P6
   TAG: NTP_4_2_7P6
 
@@ -1552,7 +1877,7 @@ ChangeSet@1.2096.1.37, 2009-12-28 10:30:49+00:00, stenn@whimsy.udel.edu +27 -0
   util/ntp-keygen.1@1.7, 2009-12-28 10:30:45+00:00, stenn@whimsy.udel.edu +2 -2
     NTP_4_2_7P6
 
-ChangeSet@1.2096.1.36, 2009-12-28 04:24:27-05:00, stenn@whimsy.udel.edu +1 -0
+ChangeSet@1.2084.6.36, 2009-12-28 04:24:27-05:00, stenn@whimsy.udel.edu +1 -0
   cleanup
 
   ChangeLog@1.501.1.28, 2009-12-28 04:24:17-05:00, stenn@whimsy.udel.edu +2 -0
@@ -1561,25 +1886,25 @@ ChangeSet@1.2096.1.36, 2009-12-28 04:24:27-05:00, stenn@whimsy.udel.edu +1 -0
 ChangeSet@1.2082.4.33, 2009-12-28 04:17:49-05:00, stenn@whimsy.udel.edu +2 -0
   [Bug 1445] IRIX does not have -lcap or support linux capabilities
 
-  ChangeLog@1.496.25.25, 2009-12-28 04:17:38-05:00, stenn@whimsy.udel.edu +2 -1
+  ChangeLog@1.496.26.25, 2009-12-28 04:17:38-05:00, stenn@whimsy.udel.edu +2 -1
     [Bug 1445] IRIX does not have -lcap or support linux capabilities
 
   configure.ac@1.465.1.9, 2009-12-28 04:17:38-05:00, stenn@whimsy.udel.edu +7 -1
     [Bug 1445] IRIX does not have -lcap or support linux capabilities
 
-ChangeSet@1.2096.1.33, 2009-12-28 00:57:22-05:00, stenn@whimsy.udel.edu +1 -0
+ChangeSet@1.2084.6.33, 2009-12-28 00:57:22-05:00, stenn@whimsy.udel.edu +1 -0
   ntpdate.c still needs ntp_io.h
 
   ntpdate/ntpdate.c@1.71, 2009-12-28 00:57:08-05:00, stenn@whimsy.udel.edu +1 -0
     ntpdate.c still needs ntp_io.h
 
-ChangeSet@1.2096.3.7, 2009-12-28 05:24:22+00:00, mayer@psp-fb1.ntp.org +1 -0
+ChangeSet@1.2084.8.7, 2009-12-28 05:24:22+00:00, mayer@psp-fb1.ntp.org +1 -0
   [Bug 1442] Move Windows functions into libntp files
 
   ports/winnt/vs2003/libntp.vcproj@1.9, 2009-12-28 05:24:10+00:00, mayer@psp-fb1.ntp.org +1 -1
     [Bug 1442] Move Windows functions into libntp files
 
-ChangeSet@1.2096.3.6, 2009-12-28 02:21:48+00:00, mayer@psp-fb1.ntp.org +2 -0
+ChangeSet@1.2084.8.6, 2009-12-28 02:21:48+00:00, mayer@psp-fb1.ntp.org +2 -0
   [Bug 1442] Move Windows functions into libntp files
 
   ports/winnt/vc6/libntp.dsp@1.48, 2009-12-28 02:21:17+00:00, mayer@psp-fb1.ntp.org +2 -2
@@ -1588,13 +1913,13 @@ ChangeSet@1.2096.3.6, 2009-12-28 02:21:48+00:00, mayer@psp-fb1.ntp.org +2 -0
   ports/winnt/vs2003/libntp.vcproj@1.8, 2009-12-28 02:21:17+00:00, mayer@psp-fb1.ntp.org +2 -2
     [Bug 1442] Move Windows functions into libntp files
 
-ChangeSet@1.2096.3.5, 2009-12-28 01:56:22+00:00, mayer@psp-fb1.ntp.org +1 -0
+ChangeSet@1.2084.8.5, 2009-12-28 01:56:22+00:00, mayer@psp-fb1.ntp.org +1 -0
   [Bug 1442] Move Windows functions into libntp files
 
   ports/winnt/vs2008/libntp/libntp.vcproj@1.25, 2009-12-28 01:55:56+00:00, mayer@psp-fb1.ntp.org +2 -2
     [Bug 1442] Move Windows functions into libntp files
 
-ChangeSet@1.2096.3.4, 2009-12-27 22:03:56+00:00, mayer@psp-fb1.ntp.org +2 -0
+ChangeSet@1.2084.8.4, 2009-12-27 22:03:56+00:00, mayer@psp-fb1.ntp.org +2 -0
   [Bug 1442] Move Windows functions into libntp files
 
   ports/winnt/libntp/termios.c@1.21, 2009-12-27 22:02:22+00:00, mayer@psp-fb1.ntp.org +1 -0
@@ -1603,7 +1928,7 @@ ChangeSet@1.2096.3.4, 2009-12-27 22:03:56+00:00, mayer@psp-fb1.ntp.org +2 -0
   ports/winnt/vs2008/libntp/libntp.vcproj@1.24, 2009-12-27 22:03:40+00:00, mayer@psp-fb1.ntp.org +1 -1
     [Bug 1442] Move Windows functions into libntp files
 
-ChangeSet@1.2096.3.3, 2009-12-27 21:35:25+00:00, mayer@psp-fb1.ntp.org +6 -0
+ChangeSet@1.2084.8.3, 2009-12-27 21:35:25+00:00, mayer@psp-fb1.ntp.org +6 -0
   [Bug 1442] Move Windows functions into libntp files
 
   ports/winnt/vc6/libntp.dsp@1.47, 2009-12-27 21:35:07+00:00, mayer@psp-fb1.ntp.org +12 -0
@@ -1624,13 +1949,13 @@ ChangeSet@1.2096.3.3, 2009-12-27 21:35:25+00:00, mayer@psp-fb1.ntp.org +6 -0
   ports/winnt/vs2003/ntpd.vcproj@1.6, 2009-12-27 21:35:08+00:00, mayer@psp-fb1.ntp.org +0 -23
     [Bug 1442] Move Windows functions into libntp files
 
-ChangeSet@1.2096.3.2, 2009-12-27 21:08:21+00:00, mayer@psp-fb1.ntp.org +1 -0
+ChangeSet@1.2084.8.2, 2009-12-27 21:08:21+00:00, mayer@psp-fb1.ntp.org +1 -0
   [Bug 1442] and [Bug 1443]
 
   ChangeLog@1.501.2.1, 2009-12-27 21:08:09+00:00, mayer@psp-fb1.ntp.org +2 -0
     [Bug 1442] and [Bug 1443]
 
-ChangeSet@1.2096.2.3, 2009-12-27 21:02:00+00:00, mayer@psp-fb1.ntp.org +6 -0
+ChangeSet@1.2084.7.3, 2009-12-27 21:02:00+00:00, mayer@psp-fb1.ntp.org +6 -0
   [Bug 1443] Remove unnecessary dependencies on ntp_io.h
 
   libntp/recvbuff.c@1.34, 2009-12-27 20:59:12+00:00, mayer@psp-fb1.ntp.org +0 -1
@@ -1651,7 +1976,7 @@ ChangeSet@1.2096.2.3, 2009-12-27 21:02:00+00:00, mayer@psp-fb1.ntp.org +6 -0
   ntpq/ntpq.c@1.98, 2009-12-27 20:59:13+00:00, mayer@psp-fb1.ntp.org +0 -1
     [Bug 1443] Remove unnecessary dependencies on ntp_io.h
 
-ChangeSet@1.2096.2.2, 2009-12-27 20:52:30+00:00, mayer@psp-fb1.ntp.org +11 -0
+ChangeSet@1.2084.7.2, 2009-12-27 20:52:30+00:00, mayer@psp-fb1.ntp.org +11 -0
   [Bug 1442] Move functions into libntp files
 
   ports/winnt/include/config.h@1.80, 2009-12-27 20:51:42+00:00, mayer@psp-fb1.ntp.org +0 -13
@@ -1691,7 +2016,7 @@ ChangeSet@1.2096.2.2, 2009-12-27 20:52:30+00:00, mayer@psp-fb1.ntp.org +11 -0
   ports/winnt/vs2008/ntpd/ntpd.vcproj@1.24, 2009-12-27 20:51:44+00:00, mayer@psp-fb1.ntp.org +0 -22
     [Bug 1442] Move functions into libntp files
 
-ChangeSet@1.2096.2.1, 2009-12-27 20:38:02+00:00, mayer@psp-fb1.ntp.org +3 -0
+ChangeSet@1.2084.7.1, 2009-12-27 20:38:02+00:00, mayer@psp-fb1.ntp.org +3 -0
   [Bug 1442} Move some windows-specific files to linntp
 
   BitKeeper/deleted/.del-termios.h~8b711e53@1.3, 2009-12-27 19:37:06+00:00, mayer@psp-fb1.ntp.org +0 -0
@@ -1703,7 +2028,7 @@ ChangeSet@1.2096.2.1, 2009-12-27 20:38:02+00:00, mayer@psp-fb1.ntp.org +3 -0
   ports/winnt/libntp/termios.c@1.20, 2009-12-27 19:35:50+00:00, mayer@psp-fb1.ntp.org +0 -0
     Rename: ports/winnt/ntpd/win32_io.c -> ports/winnt/libntp/termios.c
 
-ChangeSet@1.2096.1.31, 2009-12-27 17:37:15+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+ChangeSet@1.2084.6.31, 2009-12-27 17:37:15+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
   correct ChangeLog merge from -stable
 
   ChangeLog@1.501.1.25, 2009-12-27 17:37:15+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
@@ -1713,7 +2038,7 @@ ChangeSet@1.2082.14.1, 2009-12-27 09:16:20+00:00, davehart@shiny.ad.hartbrothers
   [Bug 1439] .texi generation must wait until after binary is linked.
   Quiet RES_TIMEOUT redefinition warning compiling ntp_intres.c
 
-  ChangeLog@1.496.37.1, 2009-12-27 09:16:18+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+  ChangeLog@1.496.38.1, 2009-12-27 09:16:18+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
     [Bug 1439] .texi generation must wait until after binary is linked.
 
   ntpd/Makefile.am@1.80.1.3, 2009-12-27 09:16:18+00:00, davehart@shiny.ad.hartbrothers.com +16 -10
@@ -1763,7 +2088,7 @@ ChangeSet@1.2082.14.1, 2009-12-27 09:16:20+00:00, davehart@shiny.ad.hartbrothers
       make distcheck R/O srcdir in .1 and ,texi rules.
     separate .menu rule from .texi to avoid redundant Autogen invocation.
 
-ChangeSet@1.2096.1.29, 2009-12-27 01:59:48-05:00, stenn@whimsy.udel.edu +1 -0
+ChangeSet@1.2084.6.29, 2009-12-27 01:59:48-05:00, stenn@whimsy.udel.edu +1 -0
   merge cleanup
 
   ChangeLog@1.501.1.23, 2009-12-27 01:59:37-05:00, stenn@whimsy.udel.edu +1 -0
@@ -1772,13 +2097,13 @@ ChangeSet@1.2096.1.29, 2009-12-27 01:59:48-05:00, stenn@whimsy.udel.edu +1 -0
 ChangeSet@1.2082.4.31, 2009-12-27 01:54:07-05:00, stenn@whimsy.udel.edu +1 -0
   cleanup
 
-  ChangeLog@1.496.25.23, 2009-12-27 01:53:58-05:00, stenn@whimsy.udel.edu +5 -2
+  ChangeLog@1.496.26.23, 2009-12-27 01:53:58-05:00, stenn@whimsy.udel.edu +5 -2
     cleanup
 
 ChangeSet@1.2082.4.30, 2009-12-27 01:47:48-05:00, stenn@whimsy.udel.edu +2 -0
   [Bug 1440] Update configure.ac to support kfreebsd
 
-  ChangeLog@1.496.25.22, 2009-12-27 01:47:30-05:00, stenn@whimsy.udel.edu +1 -0
+  ChangeLog@1.496.26.22, 2009-12-27 01:47:30-05:00, stenn@whimsy.udel.edu +1 -0
     [Bug 1440] Update configure.ac to support kfreebsd
 
   configure.ac@1.465.1.8, 2009-12-27 01:47:32-05:00, stenn@whimsy.udel.edu +12 -0
@@ -1787,13 +2112,13 @@ ChangeSet@1.2082.4.30, 2009-12-27 01:47:48-05:00, stenn@whimsy.udel.edu +2 -0
 ChangeSet@1.2082.4.29, 2009-12-27 00:40:27-05:00, stenn@whimsy.udel.edu +2 -0
   [Bug 1127] Properly check the return of X590_verify() - missed one
 
-  ChangeLog@1.496.25.21, 2009-12-27 00:39:31-05:00, stenn@whimsy.udel.edu +1 -0
+  ChangeLog@1.496.26.21, 2009-12-27 00:39:31-05:00, stenn@whimsy.udel.edu +1 -0
     [Bug 1127] Properly check the return of X590_verify() - missed one
 
   util/ntp-keygen.c@1.64, 2009-12-27 00:39:31-05:00, stenn@whimsy.udel.edu +1 -1
     [Bug 1127] Properly check the return of X590_verify() - missed one
 
-ChangeSet@1.2096.1.26, 2009-12-25 10:34:17+00:00, stenn@whimsy.udel.edu +27 -0
+ChangeSet@1.2084.6.26, 2009-12-25 10:34:17+00:00, stenn@whimsy.udel.edu +27 -0
   NTP_4_2_7P5
   TAG: NTP_4_2_7P5
 
@@ -1882,7 +2207,7 @@ ChangeSet@1.2082.4.28, 2009-12-25 09:31:42+00:00, stenn@whimsy.udel.edu +27 -0
   NTP_4_2_6P1_RC2
   TAG: NTP_4_2_6P1_RC2
 
-  ChangeLog@1.496.25.20, 2009-12-25 09:31:32+00:00, stenn@whimsy.udel.edu +1 -0
+  ChangeLog@1.496.26.20, 2009-12-25 09:31:32+00:00, stenn@whimsy.udel.edu +1 -0
     NTP_4_2_6P1_RC2
 
   ntpd/ntpd-opts.c@1.248.2.1, 2009-12-25 09:31:32+00:00, stenn@whimsy.udel.edu +2 -2
@@ -1966,7 +2291,7 @@ ChangeSet@1.2082.4.28, 2009-12-25 09:31:42+00:00, stenn@whimsy.udel.edu +27 -0
 ChangeSet@1.2082.13.1, 2009-12-25 00:19:40-05:00, stenn@whimsy.udel.edu +2 -0
   [Bug 1435] sntp: Test for -lresolv using the same tests as in ntp
 
-  ChangeLog@1.496.36.1, 2009-12-25 00:19:29-05:00, stenn@whimsy.udel.edu +1 -0
+  ChangeLog@1.496.37.1, 2009-12-25 00:19:29-05:00, stenn@whimsy.udel.edu +1 -0
     [Bug 1435] sntp: Test for -lresolv using the same tests as in ntp
 
   sntp/configure.ac@1.29.1.1, 2009-12-25 00:19:29-05:00, stenn@whimsy.udel.edu +3 -0
@@ -1977,7 +2302,7 @@ ChangeSet@1.2082.4.26, 2009-12-24 22:04:26+00:00, davehart@shiny.ad.hartbrothers
   [Bug 1434] HP-UX 11 ip_mreq undeclared, _HPUX_SOURCE helps some.
   Use HAVE_WORKING_FORK instead of HAVE_FORK to avoid broken fork().
 
-  ChangeLog@1.496.25.18, 2009-12-24 22:04:25+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  ChangeLog@1.496.26.18, 2009-12-24 22:04:25+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
     [Bug 1425] unpeer by association ID sets up for duplicate free().
     [Bug 1434] HP-UX 11 ip_mreq undeclared, _HPUX_SOURCE helps some.
 
@@ -2004,7 +2329,7 @@ ChangeSet@1.2082.4.26, 2009-12-24 22:04:26+00:00, davehart@shiny.ad.hartbrothers
   sntp/networking.c@1.29, 2009-12-24 22:04:25+00:00, davehart@shiny.ad.hartbrothers.com +7 -1
     [Bug 1434] HP-UX 11 ip_mreq undeclared, _HPUX_SOURCE helps some.
 
-ChangeSet@1.2096.1.24, 2009-12-24 10:27:41+00:00, stenn@whimsy.udel.edu +27 -0
+ChangeSet@1.2084.6.24, 2009-12-24 10:27:41+00:00, stenn@whimsy.udel.edu +27 -0
   NTP_4_2_7P4
   TAG: NTP_4_2_7P4
 
@@ -2089,7 +2414,7 @@ ChangeSet@1.2096.1.24, 2009-12-24 10:27:41+00:00, stenn@whimsy.udel.edu +27 -0
   util/ntp-keygen.1@1.5, 2009-12-24 10:27:38+00:00, stenn@whimsy.udel.edu +2 -2
     NTP_4_2_7P4
 
-ChangeSet@1.2096.1.23, 2009-12-24 07:42:08+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+ChangeSet@1.2084.6.23, 2009-12-24 07:42:08+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
   Correct ChangeLog merge from stable
 
   ChangeLog@1.501.1.17, 2009-12-24 07:42:08+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
@@ -2098,7 +2423,7 @@ ChangeSet@1.2096.1.23, 2009-12-24 07:42:08+00:00, davehart@shiny.ad.hartbrothers
 ChangeSet@1.2082.12.1, 2009-12-24 02:27:39-05:00, stenn@deacon.udel.edu +6 -0
   System headers must come before ntp headers in ntp_intres.c
 
-  ChangeLog@1.496.35.1, 2009-12-24 02:25:49-05:00, stenn@deacon.udel.edu +1 -0
+  ChangeLog@1.496.36.1, 2009-12-24 02:25:49-05:00, stenn@deacon.udel.edu +1 -0
     System headers must come before ntp headers in ntp_intres.c
 
   include/Makefile.am@1.38, 2009-12-24 02:25:55-05:00, stenn@deacon.udel.edu +1 -0
@@ -2121,7 +2446,7 @@ ChangeSet@1.2082.12.1, 2009-12-24 02:27:39-05:00, stenn@deacon.udel.edu +6 -0
 ChangeSet@1.2082.4.24, 2009-12-23 11:01:44+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
   [Bug 1429] -4 command line option to ntpd does not reliably force IPv4 resolution
 
-  ChangeLog@1.496.25.16, 2009-12-23 11:01:43+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  ChangeLog@1.496.26.16, 2009-12-23 11:01:43+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
     [Bug 1429] -4 command line option to ntpd does not reliably force IPv4 resolution
 
   ntpd/cmd_args.c@1.57, 2009-12-23 11:01:43+00:00, davehart@shiny.ad.hartbrothers.com +12 -5
@@ -2133,14 +2458,14 @@ ChangeSet@1.2082.4.24, 2009-12-23 11:01:44+00:00, davehart@shiny.ad.hartbrothers
   ntpd/ntp_scanner.h@1.15, 2009-12-23 11:01:43+00:00, davehart@shiny.ad.hartbrothers.com +0 -1
     [Bug 1429] -4 command line option to ntpd does not reliably force IPv4 resolution
 
-ChangeSet@1.2100, 2009-12-22 12:10:14-05:00, murray@pogo.udel.edu +1 -0
+ChangeSet@1.2084.1.16, 2009-12-22 12:10:14-05:00, murray@pogo.udel.edu +1 -0
   tg2.c:
     Change mode to -rw-rw-r--
 
   util/tg2.c@1.3, 2009-12-19 22:44:59-05:00, stenn@pogo.udel.edu +0 -0
     Change mode to -rw-rw-r--
 
-ChangeSet@1.2096.1.20, 2009-12-22 05:29:27-05:00, stenn@whimsy.udel.edu +27 -0
+ChangeSet@1.2084.6.20, 2009-12-22 05:29:27-05:00, stenn@whimsy.udel.edu +27 -0
   NTP_4_2_7P3
   TAG: NTP_4_2_7P3
 
@@ -2235,7 +2560,7 @@ ChangeSet@1.2082.4.23, 2009-12-22 08:36:49+00:00, hart@psp-deb1.ntp.org +1 -0
 ChangeSet@1.2082.4.22, 2009-12-22 03:00:22-05:00, stenn@whimsy.udel.edu +2 -0
   [Bug 1424] Fix check for rtattr (rtnetlink.h)
 
-  ChangeLog@1.496.25.15, 2009-12-22 03:00:12-05:00, stenn@whimsy.udel.edu +1 -0
+  ChangeLog@1.496.26.15, 2009-12-22 03:00:12-05:00, stenn@whimsy.udel.edu +1 -0
     [Bug 1424] Fix check for rtattr (rtnetlink.h)
 
   configure.ac@1.465.1.6, 2009-12-22 03:00:12-05:00, stenn@whimsy.udel.edu +1 -0
@@ -2244,7 +2569,7 @@ ChangeSet@1.2082.4.22, 2009-12-22 03:00:22-05:00, stenn@whimsy.udel.edu +2 -0
 ChangeSet@1.2082.4.21, 2009-12-22 02:52:08-05:00, stenn@whimsy.udel.edu +1 -0
   [Bug 1416] MAXDNAME undefined on Solaris 2.6
 
-  ChangeLog@1.496.25.14, 2009-12-22 02:52:00-05:00, stenn@whimsy.udel.edu +1 -0
+  ChangeLog@1.496.26.14, 2009-12-22 02:52:00-05:00, stenn@whimsy.udel.edu +1 -0
     [Bug 1416] MAXDNAME undefined on Solaris 2.6
 
 ChangeSet@1.2082.4.20, 2009-12-22 02:29:35-05:00, stenn@whimsy.udel.edu +1 -0
@@ -2256,7 +2581,7 @@ ChangeSet@1.2082.4.20, 2009-12-22 02:29:35-05:00, stenn@whimsy.udel.edu +1 -0
 ChangeSet@1.2082.4.19, 2009-12-22 02:26:26-05:00, stenn@whimsy.udel.edu +2 -0
   [Bug 1411] Fix status messages in refclock_oncore.c
 
-  ChangeLog@1.496.25.13, 2009-12-22 02:26:15-05:00, stenn@whimsy.udel.edu +1 -0
+  ChangeLog@1.496.26.13, 2009-12-22 02:26:15-05:00, stenn@whimsy.udel.edu +1 -0
     [Bug 1411] Fix status messages in refclock_oncore.c
 
   ntpd/refclock_oncore.c@1.82, 2009-12-22 02:26:15-05:00, stenn@whimsy.udel.edu +31 -8
@@ -2273,7 +2598,7 @@ ChangeSet@1.2082.4.18, 2009-12-22 04:15:31+00:00, davehart@shiny.ad.hartbrothers
 ChangeSet@1.2082.11.1, 2009-12-22 00:55:19+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
   [Bug 1428] Use AC_HEADER_RESOLV to fix breaks from resolv.h
 
-  ChangeLog@1.496.34.1, 2009-12-22 00:55:19+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+  ChangeLog@1.496.35.1, 2009-12-22 00:55:19+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
     [Bug 1428] Use AC_HEADER_RESOLV to fix breaks from resolv.h
 
   configure.ac@1.465.1.4, 2009-12-22 00:55:19+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
@@ -2286,7 +2611,7 @@ ChangeSet@1.2082.11.1, 2009-12-22 00:55:19+00:00, davehart@shiny.ad.hartbrothers
 ChangeSet@1.2082.4.15, 2009-12-21 06:26:25+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
   [Bug 1427] quote missing in ./build - shows up on NetBSD.
 
-  ChangeLog@1.496.25.10, 2009-12-21 06:26:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  ChangeLog@1.496.26.10, 2009-12-21 06:26:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
     [Bug 1427] quote missing in ./build - shows up on NetBSD.
 
   build@1.33, 2009-12-21 06:26:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
@@ -2296,7 +2621,7 @@ ChangeSet@1.2082.4.14, 2009-12-21 05:19:15+00:00, davehart@shiny.ad.hartbrothers
   [Bug 1426] scripts/VersionName needs . on the search path.
   correct permissions to 0775 for scripts/UpdatePoint.
 
-  ChangeLog@1.496.25.9, 2009-12-21 05:19:14+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+  ChangeLog@1.496.26.9, 2009-12-21 05:19:14+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
     [Bug 1426] scripts/VersionName needs . on the search path.
 
   scripts/UpdatePoint@1.3, 2009-12-21 05:19:14+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
@@ -2308,7 +2633,7 @@ ChangeSet@1.2082.4.14, 2009-12-21 05:19:15+00:00, davehart@shiny.ad.hartbrothers
   scripts/VersionName@1.6, 2009-12-21 05:19:14+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
     [Bug 1426] scripts/VersionName needs . on the search path.
 
-ChangeSet@1.2096.1.13, 2009-12-20 05:29:12-05:00, stenn@whimsy.udel.edu +27 -0
+ChangeSet@1.2084.6.13, 2009-12-20 05:29:12-05:00, stenn@whimsy.udel.edu +27 -0
   NTP_4_2_7P2
   TAG: NTP_4_2_7P2
 
@@ -2393,7 +2718,7 @@ ChangeSet@1.2096.1.13, 2009-12-20 05:29:12-05:00, stenn@whimsy.udel.edu +27 -0
   util/ntp-keygen.1@1.3, 2009-12-20 05:29:08-05:00, stenn@whimsy.udel.edu +2 -2
     NTP_4_2_7P2
 
-ChangeSet@1.2096.1.11, 2009-12-20 01:04:33-05:00, stenn@whimsy.udel.edu +1 -0
+ChangeSet@1.2084.6.11, 2009-12-20 01:04:33-05:00, stenn@whimsy.udel.edu +1 -0
   Touch any html file from autogen
 
   bootstrap@1.29, 2009-12-20 01:04:23-05:00, stenn@whimsy.udel.edu +1 -1
@@ -2403,7 +2728,7 @@ ChangeSet@1.2082.4.13, 2009-12-20 00:52:48-05:00, stenn@whimsy.udel.edu +27 -0
   NTP_4_2_6P1_RC1
   TAG: NTP_4_2_6P1_RC1
 
-  ChangeLog@1.496.25.8, 2009-12-20 00:52:37-05:00, stenn@whimsy.udel.edu +1 -0
+  ChangeLog@1.496.26.8, 2009-12-20 00:52:37-05:00, stenn@whimsy.udel.edu +1 -0
     NTP_4_2_6P1_RC1
 
   ntpd/ntpd-opts.c@1.248.1.1, 2009-12-20 00:52:38-05:00, stenn@whimsy.udel.edu +2 -2
@@ -2487,7 +2812,7 @@ ChangeSet@1.2082.4.13, 2009-12-20 00:52:48-05:00, stenn@whimsy.udel.edu +27 -0
 ChangeSet@1.2082.4.12, 2009-12-19 23:55:09-05:00, stenn@pogo.udel.edu +3 -0
   Put refclock_neoclock4x.c under the NTP COPYRIGHT
 
-  ChangeLog@1.496.25.7, 2009-12-19 23:53:39-05:00, stenn@pogo.udel.edu +4 -0
+  ChangeLog@1.496.26.7, 2009-12-19 23:53:39-05:00, stenn@pogo.udel.edu +4 -0
     Put refclock_neoclock4x.c under the NTP COPYRIGHT
 
   html/copyright.html@1.45, 2009-12-19 23:53:40-05:00, stenn@pogo.udel.edu +1 -0
@@ -2505,7 +2830,7 @@ ChangeSet@1.2082.4.11, 2009-12-19 22:05:09-05:00, stenn@whimsy.udel.edu +1 -0
 ChangeSet@1.2082.4.10, 2009-12-19 21:47:40-05:00, stenn@whimsy.udel.edu +3 -0
   [Bug 1415] Fix Mac OS X link problem
 
-  ChangeLog@1.496.25.6, 2009-12-19 21:47:29-05:00, stenn@whimsy.udel.edu +1 -0
+  ChangeLog@1.496.26.6, 2009-12-19 21:47:29-05:00, stenn@whimsy.udel.edu +1 -0
     [Bug 1415] Fix Mac OS X link problem
 
   configure.ac@1.465.1.3, 2009-12-19 21:47:30-05:00, stenn@whimsy.udel.edu +5 -0
@@ -2514,7 +2839,7 @@ ChangeSet@1.2082.4.10, 2009-12-19 21:47:40-05:00, stenn@whimsy.udel.edu +3 -0
   ntpsnmpd/Makefile.am@1.15.1.1, 2009-12-19 21:47:30-05:00, stenn@whimsy.udel.edu +1 -1
     [Bug 1415] Fix Mac OS X link problem
 
-ChangeSet@1.2099, 2009-12-18 03:39:13-05:00, murray@pogo.udel.edu +1 -0
+ChangeSet@1.2084.1.15, 2009-12-18 03:39:13-05:00, murray@pogo.udel.edu +1 -0
   ChangeLog:
     Add bug number to tg2 comment
 
@@ -2531,13 +2856,13 @@ ChangeSet@1.2082.10.1, 2009-12-18 05:18:12+00:00, davehart@shiny.ad.hartbrothers
   m4/os_cflags.m4@1.5, 2009-12-18 05:18:11+00:00, davehart@shiny.ad.hartbrothers.com +90 -93
     the name of the macro to define must be on the same line as AC_DEFUN(
 
-ChangeSet@1.2096.1.5, 2009-12-17 09:17:17+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+ChangeSet@1.2084.6.5, 2009-12-17 09:17:17+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
   correct ChangeLog merge from ntp-stable-updatepoint
 
   ChangeLog@1.501.1.4, 2009-12-17 09:17:17+00:00, davehart@shiny.ad.hartbrothers.com +1 -3
     correct ChangeLog merge from ntp-stable-updatepoint
 
-ChangeSet@1.2096.1.4, 2009-12-17 08:27:16+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+ChangeSet@1.2084.6.4, 2009-12-17 08:27:16+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
   scripts/UpdatePoint changes to packageinfo.sh's -dev copy
     adds support for beta releases in ntp-stable
 
@@ -2545,14 +2870,14 @@ ChangeSet@1.2096.1.4, 2009-12-17 08:27:16+00:00, davehart@shiny.ad.hartbrothers.
     scripts/UpdatePoint changes to packageinfo.sh's -dev copy
       adds support for beta releases in ntp-stable
 
-ChangeSet@1.2096.1.2, 2009-12-17 04:25:31+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+ChangeSet@1.2084.6.2, 2009-12-17 04:25:31+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
   ChangeLog:
     correct ChangeLog merge from ntp-stable-1419, bk remerge/fm3tool hates me
 
   ChangeLog@1.501.1.2, 2009-12-17 04:25:16+00:00, davehart@shiny.ad.hartbrothers.com +1 -3
     correct ChangeLog merge from ntp-stable-1419, bk remerge/fm3tool hates me
 
-ChangeSet@1.2098, 2009-12-16 21:00:16-05:00, murray@malarky.udel.edu +1 -0
+ChangeSet@1.2084.1.14, 2009-12-16 21:00:16-05:00, murray@malarky.udel.edu +1 -0
   tg2.c:
     Fix warnings on Solaris.
 
@@ -2562,7 +2887,7 @@ ChangeSet@1.2098, 2009-12-16 21:00:16-05:00, murray@malarky.udel.edu +1 -0
 ChangeSet@1.2082.9.1, 2009-12-16 21:26:45+00:00, davehart@shiny.ad.hartbrothers.com +13 -0
   [Bug 1419] ntpdate, ntpdc, sntp, ntpd ignore configure --bindir.
 
-  ChangeLog@1.496.33.1, 2009-12-16 21:26:43+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+  ChangeLog@1.496.34.1, 2009-12-16 21:26:43+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
     [Bug 1419] ntpdate, ntpdc, sntp, ntpd ignore configure --bindir.
 
   adjtimed/Makefile.am@1.7, 2009-12-16 21:26:44+00:00, davehart@shiny.ad.hartbrothers.com +5 -1
@@ -2606,7 +2931,7 @@ ChangeSet@1.2082.8.1, 2009-12-16 20:21:10+00:00, davehart@shiny.ad.hartbrothers.
     from packageinfo.sh instead of releasecandidate= and added support for
     beta releases.
 
-  ChangeLog@1.496.32.1, 2009-12-16 20:21:09+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+  ChangeLog@1.496.33.1, 2009-12-16 20:21:09+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
     Build infrastructure updates to enable beta releases of ntp-stable.
 
   packageinfo.sh@1.255.1.3, 2009-12-16 20:21:09+00:00, davehart@shiny.ad.hartbrothers.com +69 -16
@@ -2626,7 +2951,7 @@ ChangeSet@1.2082.8.1, 2009-12-16 20:21:10+00:00, davehart@shiny.ad.hartbrothers.
     updated to use prerelease= from packageinfo.sh instead of releasecandidate=
     added support for beta releases
 
-ChangeSet@1.2096, 2009-12-15 05:28:39-05:00, stenn@whimsy.udel.edu +27 -0
+ChangeSet@1.2084.1.12, 2009-12-15 05:28:39-05:00, stenn@whimsy.udel.edu +27 -0
   NTP_4_2_7P1
   TAG: NTP_4_2_7P1
 
@@ -2711,16 +3036,16 @@ ChangeSet@1.2096, 2009-12-15 05:28:39-05:00, stenn@whimsy.udel.edu +27 -0
   util/ntp-keygen.1@1.2, 2009-12-15 05:28:36-05:00, stenn@whimsy.udel.edu +2 -2
     NTP_4_2_7P1
 
-ChangeSet@1.2090.2.2, 2009-12-14 21:45:36+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+ChangeSet@1.2084.5.2, 2009-12-14 21:45:36+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
   Correct ChangeLog merge from ntp-stable-1418
 
-  ChangeLog@1.496.31.2, 2009-12-14 21:45:36+00:00, davehart@shiny.ad.hartbrothers.com +1 -3
+  ChangeLog@1.496.32.2, 2009-12-14 21:45:36+00:00, davehart@shiny.ad.hartbrothers.com +1 -3
     Correct ChangeLog merge from ntp-stable-1418
 
 ChangeSet@1.2082.7.1, 2009-12-14 21:18:10+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
   [Bug 1418] building ntpd/ntpdc/ntpq statically with ssl fails.
 
-  ChangeLog@1.496.30.1, 2009-12-14 21:18:09+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+  ChangeLog@1.496.31.1, 2009-12-14 21:18:09+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
     [Bug 1418] building ntpd/ntpdc/ntpq statically with ssl fails.
 
   ntpd/Makefile.am@1.79.1.1, 2009-12-14 21:18:09+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
@@ -2732,13 +3057,13 @@ ChangeSet@1.2082.7.1, 2009-12-14 21:18:10+00:00, davehart@shiny.ad.hartbrothers.
   ntpq/Makefile.am@1.43, 2009-12-14 21:18:09+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
     move libntp.a ahead of @LCRYPTO@ to fix static openssl link
 
-ChangeSet@1.2093, 2009-12-14 02:51:13+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+ChangeSet@1.2084.1.9, 2009-12-14 02:51:13+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
   correct merge of [Bug 1413] ChangeLog line from ntp-stable-1413
 
-  ChangeLog@1.496.1.73, 2009-12-14 02:51:12+00:00, davehart@shiny.ad.hartbrothers.com +1 -3
+  ChangeLog@1.496.25.7, 2009-12-14 02:51:12+00:00, davehart@shiny.ad.hartbrothers.com +1 -3
     correct merge of [Bug 1413] line from ntp-stable-1413
 
-ChangeSet@1.2090.1.2, 2009-12-14 02:32:16+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+ChangeSet@1.2084.4.2, 2009-12-14 02:32:16+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
   transmitbuff.h is gone
 
   ntpd/ntp_io.c@1.309, 2009-12-14 02:32:16+00:00, davehart@shiny.ad.hartbrothers.com +0 -1
@@ -2747,7 +3072,7 @@ ChangeSet@1.2090.1.2, 2009-12-14 02:32:16+00:00, davehart@shiny.ad.hartbrothers.
   ports/winnt/ntpd/ntp_iocompletionport.c@1.51, 2009-12-14 02:32:16+00:00, davehart@shiny.ad.hartbrothers.com +0 -1
     transmitbuff.h is gone
 
-ChangeSet@1.2092, 2009-12-13 21:05:40+00:00, davehart@shiny.ad.hartbrothers.com +52 -0
+ChangeSet@1.2084.1.8, 2009-12-13 21:05:40+00:00, davehart@shiny.ad.hartbrothers.com +52 -0
   bk rm 4.2.6 version-dependent files, bk new identical replacements
 
   BitKeeper/deleted/.del-ntp-keygen-opts.c~d0a1ce0533b25b2@1.250, 2009-12-13 21:02:39+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
@@ -2961,7 +3286,7 @@ ChangeSet@1.2092, 2009-12-13 21:05:40+00:00, davehart@shiny.ad.hartbrothers.com 
 ChangeSet@1.2082.6.1, 2009-12-13 19:45:56+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
   [Bug 1413] test OpenSSL headers regarding -Wno-strict-prototypes.
 
-  ChangeLog@1.496.29.1, 2009-12-13 19:45:55+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+  ChangeLog@1.496.30.1, 2009-12-13 19:45:55+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
     [Bug 1413] test OpenSSL headers regarding -Wno-strict-prototypes.
 
   configure.ac@1.465.2.1, 2009-12-13 19:45:55+00:00, davehart@shiny.ad.hartbrothers.com +52 -10
@@ -2969,11 +3294,11 @@ ChangeSet@1.2082.6.1, 2009-12-13 19:45:56+00:00, davehart@shiny.ad.hartbrothers.
      enablng -Wno-strict-prototypes for gcc.
     -Wall does not include -Wstrict-prototypes, so add it expclitly.
 
-ChangeSet@1.2090, 2009-12-13 05:28:33-05:00, stenn@whimsy.udel.edu +27 -0
+ChangeSet@1.2084.1.6, 2009-12-13 05:28:33-05:00, stenn@whimsy.udel.edu +27 -0
   NTP_4_2_7P0
   TAG: NTP_4_2_7P0
 
-  ChangeLog@1.496.1.71, 2009-12-13 05:28:23-05:00, stenn@whimsy.udel.edu +1 -0
+  ChangeLog@1.496.25.5, 2009-12-13 05:28:23-05:00, stenn@whimsy.udel.edu +1 -0
     NTP_4_2_7P0
 
   ntpd/ntpd-opts.c@1.250, 2009-12-13 05:28:23-05:00, stenn@whimsy.udel.edu +2 -2
@@ -3054,14 +3379,14 @@ ChangeSet@1.2090, 2009-12-13 05:28:33-05:00, stenn@whimsy.udel.edu +27 -0
   util/ntp-keygen.1@1.248, 2009-12-13 05:28:29-05:00, stenn@whimsy.udel.edu +2 -2
     NTP_4_2_7P0
 
-ChangeSet@1.2086.2.2, 2009-12-13 04:45:48-05:00, murray@malarky.udel.edu +1 -0
+ChangeSet@1.2084.3.2, 2009-12-13 04:45:48-05:00, murray@malarky.udel.edu +1 -0
   README:
     Add a few words about tg and tg2.
 
   util/README@1.5, 2009-12-13 04:44:47-05:00, murray@malarky.udel.edu +7 -0
     Add a few words about tg and tg2.
 
-ChangeSet@1.2086.2.1, 2009-12-13 03:23:02-05:00, murray@malarky.udel.edu +4 -0
+ChangeSet@1.2084.3.1, 2009-12-13 03:23:02-05:00, murray@malarky.udel.edu +4 -0
   configure.ac:
     comment for Bug 254
   ChangeLog:
@@ -3071,7 +3396,7 @@ ChangeSet@1.2086.2.1, 2009-12-13 03:23:02-05:00, murray@malarky.udel.edu +4 -0
   Makefile.am:
     Adding tg2
 
-  ChangeLog@1.496.28.1, 2009-12-13 03:21:16-05:00, murray@malarky.udel.edu +1 -0
+  ChangeLog@1.496.29.1, 2009-12-13 03:21:16-05:00, murray@malarky.udel.edu +1 -0
     Adding tg2.c
 
   configure.ac@1.466.1.1, 2009-12-13 03:21:31-05:00, murray@malarky.udel.edu +1 -1
@@ -3085,23 +3410,23 @@ ChangeSet@1.2086.2.1, 2009-12-13 03:23:02-05:00, murray@malarky.udel.edu +4 -0
 
   util/tg2.c@1.0, 2009-12-13 03:21:02-05:00, murray@malarky.udel.edu +0 -0
 
-ChangeSet@1.2086.1.2, 2009-12-13 05:10:51+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+ChangeSet@1.2084.2.2, 2009-12-13 05:10:51+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
   ChangeLog:
     correct merge from ntp-stable-1412
 
-  ChangeLog@1.496.27.2, 2009-12-13 05:10:47+00:00, davehart@shiny.ad.hartbrothers.com +1 -4
+  ChangeLog@1.496.28.2, 2009-12-13 05:10:47+00:00, davehart@shiny.ad.hartbrothers.com +1 -4
     correct merge from ntp-stable-1412
 
-ChangeSet@1.2088, 2009-12-13 04:18:43+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+ChangeSet@1.2084.1.4, 2009-12-13 04:18:43+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
   correct merge from ntp-stable-1414
 
-  ChangeLog@1.496.1.69, 2009-12-13 04:18:42+00:00, davehart@shiny.ad.hartbrothers.com +1 -4
+  ChangeLog@1.496.25.3, 2009-12-13 04:18:42+00:00, davehart@shiny.ad.hartbrothers.com +1 -4
     correct merge from ntp-stable-1414
 
 ChangeSet@1.2082.5.1, 2009-12-12 19:55:30+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
   [Bug 1414] Enable "make distcheck" success with BSD make.
 
-  ChangeLog@1.496.26.1, 2009-12-12 19:55:29+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+  ChangeLog@1.496.27.1, 2009-12-12 19:55:29+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
     [Bug 1414] Enable "make distcheck" success with BSD make.
 
   libparse/Makefile.am@1.17, 2009-12-12 19:55:29+00:00, davehart@shiny.ad.hartbrothers.com +23 -22
@@ -3117,7 +3442,7 @@ ChangeSet@1.2082.5.1, 2009-12-12 19:55:30+00:00, davehart@shiny.ad.hartbrothers.
 ChangeSet@1.2082.4.4, 2009-12-12 08:31:39+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
   [Bug 1412] m4/os_cflags.m4 caches results that depend on $CC.
 
-  ChangeLog@1.496.25.1, 2009-12-12 08:31:38+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+  ChangeLog@1.496.26.1, 2009-12-12 08:31:38+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
     [Bug 1412] m4/os_cflags.m4 caches results that depend on $CC.
 
   configure.ac@1.465.1.1, 2009-12-12 08:31:38+00:00, davehart@shiny.ad.hartbrothers.com +1 -47
@@ -3126,11 +3451,11 @@ ChangeSet@1.2082.4.4, 2009-12-12 08:31:39+00:00, davehart@shiny.ad.hartbrothers.
   m4/os_cflags.m4@1.4, 2009-12-12 08:31:38+00:00, davehart@shiny.ad.hartbrothers.com +82 -72
     [Bug 1412] m4/os_cflags.m4 caches results that depend on $CC.
 
-ChangeSet@1.2085, 2009-12-10 06:24:33-05:00, stenn@whimsy.udel.edu +27 -0
+ChangeSet@1.2084.1.1, 2009-12-10 06:24:33-05:00, stenn@whimsy.udel.edu +27 -0
   NTP_4_2_7
   TAG: NTP_4_2_7
 
-  ChangeLog@1.496.1.67, 2009-12-10 06:24:22-05:00, stenn@whimsy.udel.edu +1 -0
+  ChangeLog@1.496.25.1, 2009-12-10 06:24:22-05:00, stenn@whimsy.udel.edu +1 -0
     NTP_4_2_7
 
   ntpd/ntpd-opts.c@1.247.1.1, 2009-12-10 06:24:22-05:00, stenn@whimsy.udel.edu +2 -2
@@ -3289,6 +3614,24 @@ ChangeSet@1.2082.4.3, 2009-12-10 05:49:19-05:00, stenn@whimsy.udel.edu +25 -0
 
   util/ntp-keygen.1@1.246, 2009-12-10 05:48:41-05:00, stenn@whimsy.udel.edu +2 -2
     4.2.6
+
+ChangeSet@1.2087, 2009-12-10 04:55:00+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  use 's' for symmetric mode in billboard type column
+
+  ntpq/ntpq-subs.c@1.43, 2009-12-10 04:55:00+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    use 's' for symmetric mode in billboard type column
+
+ChangeSet@1.2086, 2009-12-10 02:30:32+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  [Bug 1338] ntpq displays incorrect association type codes.
+
+  ChangeLog@1.496.1.67, 2009-12-10 02:30:32+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1338] ntpq displays incorrect association type codes.
+
+ChangeSet@1.2050.3.2, 2009-12-10 02:09:19+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  use 'A' for manycast server to be consistent with B, M
+
+  ntpq/ntpq-subs.c@1.41, 2009-12-10 02:09:18+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    use 'A' for manycast server to be consistent with B, M
 
 ChangeSet@1.2082.1.8, 2009-12-09 03:55:07-05:00, stenn@deacon.udel.edu +1 -0
   -dev is now 4.2.7
@@ -4818,7 +5161,7 @@ ChangeSet@1.2060.3.40, 2009-11-17 07:27:53+00:00, davehart@shiny.ad.hartbrothers
   ChangeLog@1.496.1.49, 2009-11-17 07:27:51+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
     [Bug 1384] ntpq :config core dumped with a blank password.
 
-  ntpq/ntpq-subs.c@1.41, 2009-11-17 07:27:51+00:00, davehart@shiny.ad.hartbrothers.com +60 -41
+  ntpq/ntpq-subs.c@1.39.1.2, 2009-11-17 07:27:51+00:00, davehart@shiny.ad.hartbrothers.com +60 -41
     [Bug 1384] ntpq :config core dumped with a blank password.
 
 ChangeSet@1.2060.22.1, 2009-11-17 04:25:42+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
@@ -5335,7 +5678,7 @@ ChangeSet@1.2060.20.1, 2009-11-11 12:36:24+00:00, davehart@shiny.ad.hartbrothers
   ntpdc/ntpdc_ops.c@1.62, 2009-11-11 12:36:23+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
     whitespace only
 
-  ntpq/ntpq-subs.c@1.40, 2009-11-11 12:36:23+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+  ntpq/ntpq-subs.c@1.39.1.1, 2009-11-11 12:36:23+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
     typo pointed out by Michael Tatarinov
 
   ntpq/ntpq.c@1.96, 2009-11-11 12:36:23+00:00, davehart@shiny.ad.hartbrothers.com +93 -69
@@ -7594,7 +7937,7 @@ ChangeSet@1.2057, 2009-10-14 04:22:12-04:00, stenn@whimsy.udel.edu +26 -0
   util/ntp-keygen.1@1.224, 2009-10-14 04:22:03-04:00, stenn@whimsy.udel.edu +2 -2
     NTP_4_2_5P232_RC
 
-ChangeSet@1.2050.5.1, 2009-10-13 23:48:18+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+ChangeSet@1.2050.6.1, 2009-10-13 23:48:18+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
   [Bug 1341] NMEA driver requires working PPSAPI #ifdef HAVE_PPSAPI.
 
   ChangeLog@1.482.5.1, 2009-10-13 23:48:16+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
@@ -7610,7 +7953,7 @@ ChangeSet@1.2050.5.1, 2009-10-13 23:48:18+00:00, davehart@shiny.ad.hartbrothers.
   ntpd/refclock_nmea.c@1.44, 2009-10-13 23:48:17+00:00, davehart@shiny.ad.hartbrothers.com +73 -22
     [Bug 1341] NMEA driver requires working PPSAPI #ifdef HAVE_PPSAPI.
 
-ChangeSet@1.2050.4.1, 2009-10-13 02:24:57+00:00, davehart@shiny.ad.hartbrothers.com +6 -0
+ChangeSet@1.2050.5.1, 2009-10-13 02:24:57+00:00, davehart@shiny.ad.hartbrothers.com +6 -0
   Documentation updates for ntpq --oldrv, saveconfig, saveconfigdir,
     ntpd -I -L and -M switches and interface/nic directive
 
@@ -7636,7 +7979,7 @@ ChangeSet@1.2050.4.1, 2009-10-13 02:24:57+00:00, davehart@shiny.ad.hartbrothers.
     Update -L and -I docs to match HTML updates.
     Expand -M docs.
 
-ChangeSet@1.2050.3.1, 2009-10-12 15:24:02+00:00, davehart@shiny.ad.hartbrothers.com +5 -0
+ChangeSet@1.2050.4.1, 2009-10-12 15:24:02+00:00, davehart@shiny.ad.hartbrothers.com +5 -0
   [Bug 1339] Fix Windows-only ntp_strerror() infinite recursion.
 
   ChangeLog@1.482.3.1, 2009-10-12 15:24:01+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
@@ -7653,6 +7996,12 @@ ChangeSet@1.2050.3.1, 2009-10-12 15:24:02+00:00, davehart@shiny.ad.hartbrothers.
 
   ports/winnt/libntp/syslog.c@1.7, 2009-10-12 15:24:02+00:00, davehart@shiny.ad.hartbrothers.com +4 -10
     [Bug 1339] Fix Windows-only ntp_strerror() infinite recursion.
+
+ChangeSet@1.2050.3.1, 2009-10-12 04:48:04+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  better t column in peers/opeers using hmode peer variable
+
+  ntpq/ntpq-subs.c@1.40, 2009-10-12 04:48:03+00:00, davehart@shiny.ad.hartbrothers.com +86 -53
+    better t column in peers/opeers using hmode peer variable
 
 ChangeSet@1.2050.1.2, 2009-10-12 03:40:08+00:00, kardel@pogo.udel.edu +2 -0
   ntp_io.c, ChangeLog:

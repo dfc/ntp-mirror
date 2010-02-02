@@ -135,7 +135,7 @@ AC_CACHE_CHECK(
     ac_cv_cpp_warning,
     [
 	AC_COMPILE_IFELSE(
-	    AC_LANG_PROGRAM([], [#warning foo]),
+	    AC_LANG_PROGRAM([[]], [[#warning foo]]),
 	    [ac_cv_cpp_warning=yes],
 	    [ac_cv_cpp_warning=no],
 	)
@@ -156,7 +156,7 @@ case "$GCC" in
 	ac_cv_gcc_Wstrict_overflow, 
 	[
 	    AC_COMPILE_IFELSE(
-		[AC_LANG_PROGRAM([], [])],
+		[AC_LANG_PROGRAM()],
 		[ac_cv_gcc_Wstrict_overflow=yes],
 		[ac_cv_gcc_Wstrict_overflow=no]
 	    )
@@ -180,7 +180,7 @@ case "$GCC" in
 	ac_cv_gcc_Winit_self, 
 	[
 	    AC_COMPILE_IFELSE(
-		[AC_LANG_PROGRAM([], [])],
+		[AC_LANG_PROGRAM()],
 		[ac_cv_gcc_Winit_self=yes],
 		[ac_cv_gcc_Winit_self=no]
 	    )
@@ -428,7 +428,7 @@ AC_CHECK_HEADER(dns_sd.h,
 case "$ac_cv_lib_dns_sd_DNSServiceRegister" in
  yes) LIBS="-ldns_sd $LIBS" ;;
 esac
-AC_CHECK_HEADERS(errno.h fcntl.h ieeefp.h kvm.h math.h)
+AC_CHECK_HEADERS(errno.h fcntl.h ieeefp.h inttypes.h kvm.h math.h)
 
 AC_CHECK_HEADERS(md5.h, [], [],
 [#if HAVE_SYS_TYPES_H
@@ -680,9 +680,7 @@ AC_C_BIGENDIAN
 AC_TYPE_SIGNAL
 AC_TYPE_OFF_T
 AC_TYPE_SIZE_T
-AC_CHECK_TYPE(time_t, long)
-AC_CHECK_SIZEOF(time_t)
-AC_CHECK_TYPES(uintptr_t)
+AC_CHECK_TYPES([uintptr_t])
  
 AH_VERBATIM([TYPEDEF_UINTPTR_T],
 [/* Provide a typedef for uintptr_t? */
@@ -691,27 +689,64 @@ typedef unsigned int	uintptr_t;
 #define HAVE_UINTPTR_T	1
 #endif])
 
+AC_CHECK_TYPES([time_t, int32, u_int32])
+
+case "$ac_cv_type_int32::$ac_cv_header_resolv_h" in
+ no::yes)
+    AC_CACHE_CHECK(
+	[for int32 with DNS headers included],
+	[ntp_cv_type_int32_with_dns],
+	AC_COMPILE_IFELSE(
+	    AC_LANG_PROGRAM(
+		[[
+		    #ifdef HAVE_ARPA_NAMESER_H
+		    # include <arpa/nameser.h>
+		    #endif
+		    #include <resolv.h>
+		]],
+		[[
+		    size_t cb = sizeof(int32);
+		]]
+	    ),
+	    [ntp_cv_type_int32_with_dns=yes],
+	    [ntp_cv_type_int32_with_dns=no]
+	)
+    )
+    case "$ntp_cv_type_int32_with_dns" in
+     yes)
+	AC_DEFINE([HAVE_INT32_ONLY_WITH_DNS], , [int32 type in DNS headers, not others.])
+    esac
+esac
+
+case "$ac_cv_type_u_int32::$ac_cv_header_resolv_h" in
+ no::yes)
+    AC_CACHE_CHECK(
+	[for u_int32 with DNS headers included],
+	[ntp_cv_type_u_int32_with_dns],
+	AC_COMPILE_IFELSE(
+	    AC_LANG_PROGRAM(
+		[[
+		    #ifdef HAVE_ARPA_NAMESER_H
+		    # include <arpa/nameser.h>
+		    #endif
+		    #include <resolv.h>
+		]],
+		[[
+		    size_t cb = sizeof(u_int32);
+		]]
+	    ),
+	    [ntp_cv_type_u_int32_with_dns=yes],
+	    [ntp_cv_type_u_int32_with_dns=no]
+	)
+    )
+    case "$ntp_cv_type_u_int32_with_dns" in
+     yes)
+	AC_DEFINE([HAVE_U_INT32_ONLY_WITH_DNS], , [u_int32 type in DNS headers, not others.])
+    esac
+esac
+
+AC_CHECK_SIZEOF([time_t])
 AC_STRUCT_TM
-
-AC_CACHE_CHECK([for u_int8_t], ac_cv_type_u_int8_t,
-[AC_TRY_COMPILE([#include <sys/types.h>],
-	[u_int8_t len = 42; return 0;],
-	ac_cv_type_u_int8_t=yes,
-	ac_cv_type_u_int8_t=no)
-])
-if test $ac_cv_type_u_int8_t = yes; then
-	AC_DEFINE(HAVE_TYPE_U_INT8_T, 1, [Does u_int8_t exist?])
-fi
-
-AC_CACHE_CHECK([for u_int64_t], ac_cv_type_u_int64_t,
-[AC_TRY_COMPILE([#include <sys/types.h>],
-	[u_int64_t len = 42; return 0;],
-	ac_cv_type_u_int64_t=yes,
-	ac_cv_type_u_int64_t=no)
-])
-if test $ac_cv_type_u_int64_t = yes; then
-	AC_DEFINE(HAVE_TYPE_U_INT64_T, 1, [Does u_int64_t exist?])
-fi
 
 AC_CACHE_CHECK([for a fallback value for HZ], ac_cv_var_default_hz,
 [ac_cv_var_default_hz=100
@@ -2158,15 +2193,15 @@ AC_CACHE_CHECK(
 	 *)
 	    AC_COMPILE_IFELSE(
 		AC_LANG_PROGRAM(
-		    [
+		    [[
 			#ifdef HAVE_NETINET_IN_H
 			#include <netinet/in.h>
 			#endif
-		    ],
-		    [
+		    ]],
+		    [[
 			struct ip_mreq ipmr;
 			ipmr.imr_interface.s_addr = 0;
-		    ]
+		    ]]
 		),
 		[ntp_cv_multicast=yes],
 		[]
@@ -4627,14 +4662,14 @@ AC_CACHE_CHECK(
 	AC_COMPILE_IFELSE(
 	    [
 		AC_LANG_PROGRAM(
-		    [
+		    [[
 			#include <sys/types.h>
 			#include <sys/socket.h>
 			#include <netinet/in.h>
-		    ],
-		    [
+		    ]],
+		    [[
 			struct sockaddr_in6 sin6;
-		    ]
+		    ]]
 		)
 	    ],
 	    [ac_cv_isc_found_ipv6=yes],
@@ -4724,16 +4759,16 @@ case "$ac_cv_isc_found_ipv6" in
 	    AC_COMPILE_IFELSE(
 		[
 		    AC_LANG_PROGRAM(
-			[
+			[[
 			    #include <sys/types.h>
 			    #include <sys/socket.h>
 			    #include <netinet/in.h>
 			    $isc_netinetin6_hack
 			    $isc_netinet6in6_hack
-			],
-			[
+			]],
+			[[
 			    struct in6_pktinfo xyzzy;
-			]
+			]]
 		    )
 		],
 		[ac_cv_have_in6_pktinfo=yes],
@@ -4756,17 +4791,17 @@ case "$ac_cv_isc_found_ipv6" in
 	    AC_COMPILE_IFELSE(
 		[
 		    AC_LANG_PROGRAM(
-			[
+			[[
 			    #include <sys/types.h>
 			    #include <sys/socket.h>
 			    #include <netinet/in.h>
 			    $isc_netinetin6_hack
 			    $isc_netinet6in6_hack
-			],
-			[
+			]],
+			[[
 			    struct sockaddr_in6 xyzzy;
 			    xyzzy.sin6_scope_id = 0;
-			]
+			]]
 		    )
 		],
 		[ac_cv_have_sin6_scope_id=yes],
@@ -4791,17 +4826,17 @@ AC_CACHE_CHECK(
 	AC_LINK_IFELSE(
 	    [
 		AC_LANG_PROGRAM(
-		    [
+		    [[
 			#include <sys/types.h>
 			#include <sys/socket.h>
 			#include <netinet/in.h>
 			$isc_netinetin6_hack
 			$isc_netinet6in6_hack
-		    ],
-		    [
+		    ]],
+		    [[
 			struct in6_addr in6; 
 			in6 = in6addr_any;
-		    ]
+		    ]]
 		)
 	    ],
 	    [isc_cv_have_in6addr_any=yes],
@@ -4823,13 +4858,13 @@ AC_CACHE_CHECK(
         AC_COMPILE_IFELSE(
 	    [
 		AC_LANG_PROGRAM(
-		    [
+		    [[
 			#include <sys/types.h>
 			#include <net/if6.h>
-		    ],
-		    [
+		    ]],
+		    [[
 			struct if_laddrconf a;
-		    ]
+		    ]]
 		)
 	    ],
 	    [ac_cv_isc_struct_if_laddrconf=yes],
@@ -4850,13 +4885,13 @@ AC_CACHE_CHECK(
         AC_COMPILE_IFELSE(
 	    [
 		AC_LANG_PROGRAM(
-		    [
+		    [[
 			#include <sys/types.h>
 			#include <net/if6.h>
-		    ],
-		    [
+		    ]],
+		    [[
 			struct if_laddrreq a;
-		    ]
+		    ]]
 		)
 	    ],
 	    [ac_cv_isc_struct_if_laddrreq=yes],

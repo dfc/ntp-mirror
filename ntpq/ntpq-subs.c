@@ -1365,54 +1365,57 @@ decodeaddrtype(
  * A list of variables required by the peers command
  */
 struct varlist opeervarlist[] = {
-	{ "srcadr", 0 },    /* 0 */
-	{ "dstadr", 0 },    /* 1 */
-	{ "stratum",    0 },    /* 2 */
-	{ "hpoll",  0 },    /* 3 */
-	{ "ppoll",  0 },    /* 4 */
-	{ "reach",  0 },    /* 5 */
-	{ "delay",  0 },    /* 6 */
-	{ "offset", 0 },    /* 7 */
-	{ "jitter", 0 },    /* 8 */
-	{ "dispersion", 0 },    /* 9 */
-	{ "rec",    0 },    /* 10 */
-	{ "reftime",    0 },    /* 11 */
-	{ "srcport",    0 },    /* 12 */
+	{ "srcadr",	0 },	/* 0 */
+	{ "dstadr",	0 },	/* 1 */
+	{ "stratum",	0 },	/* 2 */
+	{ "hpoll",	0 },	/* 3 */
+	{ "ppoll",	0 },	/* 4 */
+	{ "reach",	0 },	/* 5 */
+	{ "delay",	0 },	/* 6 */
+	{ "offset",	0 },	/* 7 */
+	{ "jitter",	0 },	/* 8 */
+	{ "dispersion", 0 },	/* 9 */
+	{ "rec",	0 },	/* 10 */
+	{ "reftime",	0 },	/* 11 */
+	{ "srcport",	0 },	/* 12 */
+	{ "hmode",	0 },	/* 13 */
 	{ 0,		0 }
 };
 
 struct varlist peervarlist[] = {
-	{ "srcadr", 0 },    /* 0 */
-	{ "refid",  0 },    /* 1 */
-	{ "stratum",    0 },    /* 2 */
-	{ "hpoll",  0 },    /* 3 */
-	{ "ppoll",  0 },    /* 4 */
-	{ "reach",  0 },    /* 5 */
-	{ "delay",  0 },    /* 6 */
-	{ "offset", 0 },    /* 7 */
-	{ "jitter", 0 },    /* 8 */
-	{ "dispersion", 0 },    /* 9 */
-	{ "rec",    0 },    /* 10 */
-	{ "reftime",    0 },    /* 11 */
-	{ "srcport",    0 },    /* 12 */
+	{ "srcadr",	0 },	/* 0 */
+	{ "refid",	0 },	/* 1 */
+	{ "stratum",	0 },	/* 2 */
+	{ "hpoll",	0 },	/* 3 */
+	{ "ppoll",	0 },	/* 4 */
+	{ "reach",	0 },	/* 5 */
+	{ "delay",	0 },	/* 6 */
+	{ "offset",	0 },	/* 7 */
+	{ "jitter",	0 },	/* 8 */
+	{ "dispersion", 0 },	/* 9 */
+	{ "rec",	0 },	/* 10 */
+	{ "reftime",	0 },	/* 11 */
+	{ "srcport",	0 },	/* 12 */
+	{ "hmode",	0 },	/* 13 */
 	{ 0,		0 }
 };
 
-#define HAVE_SRCADR 0
-#define HAVE_DSTADR 1
+#define HAVE_SRCADR	0
+#define HAVE_DSTADR	1
 #define HAVE_REFID	1
 #define HAVE_STRATUM	2
 #define HAVE_HPOLL	3
 #define HAVE_PPOLL	4
 #define HAVE_REACH	5
 #define HAVE_DELAY	6
-#define HAVE_OFFSET 7
-#define HAVE_JITTER 8
+#define HAVE_OFFSET	7
+#define HAVE_JITTER	8
 #define HAVE_DISPERSION 9
 #define HAVE_REC	10
 #define HAVE_REFTIME	11
 #define HAVE_SRCPORT	12
-#define MAXHAVE 	13
+#define HAVE_HMODE	13
+#define MAX_HAVE 	13
 
 /*
  * Decode an incoming data buffer and print a line in the peer list
@@ -1435,6 +1438,7 @@ doprintpeers(
 
 	sockaddr_u srcadr;
 	sockaddr_u dstadr;
+	long hmode = 0;
 	u_long srcport = 0;
 	char *dstadr_refid = "0.0.0.0";
 	u_long stratum = 0;
@@ -1448,7 +1452,7 @@ doprintpeers(
 	l_fp reftime;
 	l_fp rec;
 	l_fp ts;
-	u_char havevar[MAXHAVE];
+	u_char havevar[MAX_HAVE + 1];
 	u_long poll_sec;
 	char type = '?';
 	char refid_string[10];
@@ -1488,6 +1492,10 @@ doprintpeers(
 					dstadr_refid = stoa(&dstadr);
 				}
 			}
+			break;
+		case CP_HMODE:
+			if (decodeint(value, &hmode))
+				havevar[HAVE_HMODE] = 1;
 			break;
 		case CP_REFID:
 			if (pvl == peervarlist) {
@@ -1573,6 +1581,39 @@ doprintpeers(
 	}
 
 	/*
+	 * hmode gives the best guidance for the t column.  If the response
+	 * did not include hmode we'll use the old decodeaddrtype() result.
+	 */
+	switch (hmode) {
+
+	case MODE_BCLIENT:
+		/* broadcastclient or multicastclient */
+		type = 'b';
+		break;
+
+	case MODE_BROADCAST:
+		/* broadcast or multicast server */
+		if (IS_MCAST(&srcadr))
+			type = 'M';
+		else
+			type = 'B';
+		break;
+
+	case MODE_CLIENT:
+		if (ISREFCLOCKADR(&srcadr))
+			type = 'l';	/* local refclock*/
+		else if (IS_MCAST(&srcadr))
+			type = 'A';	/* manycast server */
+		else
+			type = 'u';	/* manycastclient, unicast */
+		break;
+
+	case MODE_ACTIVE:
+		type = 's';		/* symmetric */
+		break;
+	}
+
+	/*
 	 * Got everything, format the line
 	 */
 	poll_sec = 1<<max(min3(ppoll, hpoll, NTP_MAXPOLL), NTP_MINPOLL);
@@ -1613,7 +1654,7 @@ doprintpeers(
 #undef	HAVE_REC
 #undef	HAVE_SRCPORT
 #undef	HAVE_REFTIME
-#undef	MAXHAVE
+#undef	MAX_HAVE
 
 
 /*

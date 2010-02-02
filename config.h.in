@@ -412,6 +412,12 @@
 /* Define to 1 if the system has the type `int16_t'. */
 #undef HAVE_INT16_T
 
+/* Define to 1 if the system has the type `int32'. */
+#undef HAVE_INT32
+
+/* int32 type in DNS headers, not others. */
+#undef HAVE_INT32_ONLY_WITH_DNS
+
 /* Define to 1 if the system has the type `int32_t'. */
 #undef HAVE_INT32_T
 
@@ -924,6 +930,9 @@
 /* Define to 1 if you have the <timex.h> header file. */
 #undef HAVE_TIMEX_H
 
+/* Define to 1 if the system has the type `time_t'. */
+#undef HAVE_TIME_T
+
 /* Do we have the TIOCGPPSEV ioctl (Solaris)? */
 #undef HAVE_TIOCGPPSEV
 
@@ -932,12 +941,6 @@
 
 /* Do we have the TIO serial stuff? */
 #undef HAVE_TIO_SERIAL_STUFF
-
-/* Does u_int64_t exist? */
-#undef HAVE_TYPE_U_INT64_T
-
-/* Does u_int8_t exist? */
-#undef HAVE_TYPE_U_INT8_T
 
 /* Define to 1 if the system has the type `uint16_t'. */
 #undef HAVE_UINT16_T
@@ -977,6 +980,12 @@
 
 /* Define to 1 if you have the <utmp.h> header file. */
 #undef HAVE_UTMP_H
+
+/* Define to 1 if the system has the type `u_int32'. */
+#undef HAVE_U_INT32
+
+/* u_int32 type in DNS headers, not others. */
+#undef HAVE_U_INT32_ONLY_WITH_DNS
 
 /* Define to 1 if you have the <values.h> header file. */
 #undef HAVE_VALUES_H
@@ -1426,9 +1435,6 @@ typedef unsigned int	uintptr_t;
 
 /* Define to `unsigned int' if <sys/types.h> does not define. */
 #undef size_t
-
-/* Define to `long' if <sys/types.h> does not define. */
-#undef time_t
 
 /* Define to `int' if <sys/types.h> doesn't define. */
 #undef uid_t
