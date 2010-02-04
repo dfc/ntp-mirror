@@ -113,7 +113,6 @@ ACLOCAL = @ACLOCAL@
 ALLOCA = @ALLOCA@
 AMTAR = @AMTAR@
 AR = @AR@
-ARLIB_DIR = @ARLIB_DIR@
 AUTOCONF = @AUTOCONF@
 AUTOHEADER = @AUTOHEADER@
 AUTOMAKE = @AUTOMAKE@
@@ -250,19 +249,16 @@ target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-
-#AUTOMAKE_OPTIONS = util/ansi2knr foreign dist-tarZ no-dependencies
 AUTOMAKE_OPTIONS = foreign 1.10
 ACLOCAL_AMFLAGS = -I m4 -I libopts/m4
 NULL = 
-SUBDIRS = scripts include ElectricFence $(NULL) $(am__append_1) \
-	@ARLIB_DIR@ libntp libparse ntpd ntpdate ntpdc ntpq ntpsnmpd \
-	parseutil adjtimed clockstuff kernel sntp util $(NULL)
+SUBDIRS = scripts include ElectricFence $(NULL) $(am__append_1) libntp \
+	libparse ntpd ntpdate ntpdc ntpq ntpsnmpd parseutil adjtimed \
+	clockstuff kernel sntp util $(NULL)
 DIST_SUBDIRS = \
 	scripts		\
 	include		\
 	ElectricFence	\
-	arlib		\
 	libntp		\
 	libopts		\
 	libparse	\
@@ -279,9 +275,9 @@ DIST_SUBDIRS = \
 	util		\
 	$(NULL)
 
-DISTCHECK_CONFIGURE_FLAGS = -C --with-arlib --enable-local-libopts
+DISTCHECK_CONFIGURE_FLAGS = -C
 EXTRA_DIST = \
-	COPYRIGHT		\
+	$(srcdir)/COPYRIGHT	\
 	ChangeLog		\
 	CommitLog		\
 	CommitLog-4.1.0		\
@@ -315,7 +311,7 @@ EXTRA_DIST = \
 	bincheck.mf		\
 	depsver.mf		\
 	deps-ver		\
-	version			\
+	$(srcdir)/version	\
 	version.m4		\
 	\
 	$(NULL)
@@ -331,9 +327,9 @@ ETAGS_ARGS = Makefile.am configure.ac
 BUILT_SOURCES = \
 	.gcc-warning			\
 	libtool				\
-	$(srcdir)/COPYRIGHT		\
-	$(srcdir)/version		\
-	$(srcdir)/version.m4		\
+	COPYRIGHT			\
+	version				\
+	version.m4			\
 	$(srcdir)/include/version.def	\
 	$(srcdir)/include/version.texi	\
 	$(NULL)

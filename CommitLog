@@ -1,3 +1,228 @@
+ChangeSet@1.2096, 2010-02-04 10:32:08+00:00, stenn@whimsy.udel.edu +27 -0
+  NTP_4_2_7P16
+  TAG: NTP_4_2_7P16
+
+  ChangeLog@1.527, 2010-02-04 10:31:53+00:00, stenn@whimsy.udel.edu +1 -0
+    NTP_4_2_7P16
+
+  ntpd/ntpd-opts.c@1.17, 2010-02-04 10:31:53+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P16
+
+  ntpd/ntpd-opts.h@1.17, 2010-02-04 10:31:54+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P16
+
+  ntpd/ntpd-opts.texi@1.17, 2010-02-04 10:31:55+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P16
+
+  ntpd/ntpd.1@1.17, 2010-02-04 10:31:55+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P16
+
+  ntpdc/ntpdc-opts.c@1.17, 2010-02-04 10:31:55+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P16
+
+  ntpdc/ntpdc-opts.h@1.17, 2010-02-04 10:31:56+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P16
+
+  ntpdc/ntpdc-opts.texi@1.17, 2010-02-04 10:31:56+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P16
+
+  ntpdc/ntpdc.1@1.17, 2010-02-04 10:31:57+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P16
+
+  ntpq/ntpq-opts.c@1.17, 2010-02-04 10:31:57+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P16
+
+  ntpq/ntpq-opts.h@1.17, 2010-02-04 10:31:57+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P16
+
+  ntpq/ntpq-opts.texi@1.17, 2010-02-04 10:31:58+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P16
+
+  ntpq/ntpq.1@1.17, 2010-02-04 10:31:58+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P16
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.17, 2010-02-04 10:31:58+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P16
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.17, 2010-02-04 10:31:59+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P16
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.17, 2010-02-04 10:31:59+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P16
+
+  ntpsnmpd/ntpsnmpd.1@1.17, 2010-02-04 10:32:00+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P16
+
+  packageinfo.sh@1.18, 2010-02-04 10:32:00+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P16
+
+  sntp/sntp-opts.c@1.17, 2010-02-04 10:32:00+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P16
+
+  sntp/sntp-opts.h@1.17, 2010-02-04 10:32:01+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P16
+
+  sntp/sntp-opts.texi@1.17, 2010-02-04 10:32:01+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P16
+
+  sntp/sntp.1@1.17, 2010-02-04 10:32:01+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P16
+
+  sntp/sntp.html@1.17, 2010-02-04 10:32:02+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P16
+
+  util/ntp-keygen-opts.c@1.17, 2010-02-04 10:32:02+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P16
+
+  util/ntp-keygen-opts.h@1.17, 2010-02-04 10:32:03+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P16
+
+  util/ntp-keygen-opts.texi@1.17, 2010-02-04 10:32:03+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P16
+
+  util/ntp-keygen.1@1.17, 2010-02-04 10:32:03+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P16
+
+ChangeSet@1.2082.4.56, 2010-02-04 02:57:49-05:00, stenn@whimsy.udel.edu +27 -0
+  NTP_4_2_6P1_RC4
+  TAG: NTP_4_2_6P1_RC4
+
+  ChangeLog@1.496.26.37, 2010-02-04 02:57:32-05:00, stenn@whimsy.udel.edu +1 -0
+    NTP_4_2_6P1_RC4
+
+  ntpd/ntpd-opts.c@1.248.4.1, 2010-02-04 02:57:33-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC4
+
+  ntpd/ntpd-opts.h@1.248.4.1, 2010-02-04 02:57:33-05:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_6P1_RC4
+
+  ntpd/ntpd-opts.texi@1.246.4.1, 2010-02-04 02:57:34-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC4
+
+  ntpd/ntpd.1@1.246.4.1, 2010-02-04 02:57:34-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC4
+
+  ntpdc/ntpdc-opts.c@1.244.4.1, 2010-02-04 02:57:35-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC4
+
+  ntpdc/ntpdc-opts.h@1.244.4.1, 2010-02-04 02:57:35-05:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_6P1_RC4
+
+  ntpdc/ntpdc-opts.texi@1.243.4.1, 2010-02-04 02:57:36-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC4
+
+  ntpdc/ntpdc.1@1.243.4.1, 2010-02-04 02:57:36-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC4
+
+  ntpq/ntpq-opts.c@1.245.4.1, 2010-02-04 02:57:36-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC4
+
+  ntpq/ntpq-opts.h@1.245.4.1, 2010-02-04 02:57:37-05:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_6P1_RC4
+
+  ntpq/ntpq-opts.texi@1.244.4.1, 2010-02-04 02:57:37-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC4
+
+  ntpq/ntpq.1@1.244.4.1, 2010-02-04 02:57:38-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC4
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.123.4.1, 2010-02-04 02:57:38-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC4
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.123.4.1, 2010-02-04 02:57:39-05:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_6P1_RC4
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.123.4.1, 2010-02-04 02:57:39-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC4
+
+  ntpsnmpd/ntpsnmpd.1@1.122.4.1, 2010-02-04 02:57:40-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC4
+
+  packageinfo.sh@1.255.6.1, 2010-02-04 02:57:40-05:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_6P1_RC4
+
+  sntp/sntp-opts.c@1.117.4.1, 2010-02-04 02:57:41-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC4
+
+  sntp/sntp-opts.h@1.117.4.1, 2010-02-04 02:57:41-05:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_6P1_RC4
+
+  sntp/sntp-opts.texi@1.117.4.1, 2010-02-04 02:57:42-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC4
+
+  sntp/sntp.1@1.117.4.1, 2010-02-04 02:57:42-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC4
+
+  sntp/sntp.html@1.7.4.1, 2010-02-04 02:57:42-05:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_6P1_RC4
+
+  util/ntp-keygen-opts.c@1.247.4.1, 2010-02-04 02:57:43-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC4
+
+  util/ntp-keygen-opts.h@1.247.4.1, 2010-02-04 02:57:43-05:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_6P1_RC4
+
+  util/ntp-keygen-opts.texi@1.246.4.1, 2010-02-04 02:57:44-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC4
+
+  util/ntp-keygen.1@1.246.4.1, 2010-02-04 02:57:44-05:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC4
+
+ChangeSet@1.2082.4.55, 2010-02-04 03:01:42+00:00, hart@psp-fb1.ntp.org +2 -0
+  Makefile.am:
+    fix make distdir before make all on FreeBSD make
+
+  Makefile.am@1.92, 2010-02-04 03:00:00+00:00, hart@psp-fb1.ntp.org +5 -5
+    fix make distdir before make all on FreeBSD make
+
+  sntp/Makefile.am@1.21.1.6, 2010-02-04 02:59:15+00:00, hart@psp-fb1.ntp.org +26 -25
+    fix make distdir before make all on FreeBSD make
+
+ChangeSet@1.2082.4.54, 2010-02-03 23:51:52+00:00, davehart@shiny.ad.hartbrothers.com +14 -0
+  Remove arlib.
+
+  BitKeeper/deleted/.del-COPYING~1e5c94deb8b25a03@1.3, 2010-02-03 23:50:56+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: arlib/COPYING -> BitKeeper/deleted/.del-COPYING~1e5c94deb8b25a03
+
+  BitKeeper/deleted/.del-INSTALL~4c77da0d9f1f3464@1.2, 2010-02-03 23:50:56+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: arlib/INSTALL -> BitKeeper/deleted/.del-INSTALL~4c77da0d9f1f3464
+
+  BitKeeper/deleted/.del-Makefile.am~501d14b0d06d3031@1.4, 2010-02-03 23:50:56+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: arlib/Makefile.am -> BitKeeper/deleted/.del-Makefile.am~501d14b0d06d3031
+
+  BitKeeper/deleted/.del-README~4de4615d76ebba47@1.2, 2010-02-03 23:50:56+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: arlib/README -> BitKeeper/deleted/.del-README~4de4615d76ebba47
+
+  BitKeeper/deleted/.del-UNSHAR.HDR~6aa2f933ef5d86df@1.2, 2010-02-03 23:50:57+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: arlib/UNSHAR.HDR -> BitKeeper/deleted/.del-UNSHAR.HDR~6aa2f933ef5d86df
+
+  BitKeeper/deleted/.del-arlib.3~11ae3dd9cdb6a32@1.2, 2010-02-03 23:50:56+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: arlib/arlib.3 -> BitKeeper/deleted/.del-arlib.3~11ae3dd9cdb6a32
+
+  BitKeeper/deleted/.del-arlib.c~fdde50d6ab7b6f64@1.2, 2010-02-03 23:50:57+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: arlib/arlib.c -> BitKeeper/deleted/.del-arlib.c~fdde50d6ab7b6f64
+
+  BitKeeper/deleted/.del-arlib.h~22218072d10baf8e@1.2, 2010-02-03 23:50:56+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: arlib/arlib.h -> BitKeeper/deleted/.del-arlib.h~22218072d10baf8e
+
+  BitKeeper/deleted/.del-arplib.h~8ccbd9af28d9aa3b@1.2, 2010-02-03 23:50:56+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: arlib/arplib.h -> BitKeeper/deleted/.del-arplib.h~8ccbd9af28d9aa3b
+
+  BitKeeper/deleted/.del-configure.in~282cad3ea077c564@1.4, 2010-02-03 23:50:56+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: arlib/configure.in -> BitKeeper/deleted/.del-configure.in~282cad3ea077c564
+
+  BitKeeper/deleted/.del-sample.c~4c74b15f3881e611@1.2, 2010-02-03 23:50:56+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: arlib/sample.c -> BitKeeper/deleted/.del-sample.c~4c74b15f3881e611
+
+  ChangeLog@1.496.26.36, 2010-02-03 23:51:51+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    Remove arlib.
+
+  Makefile.am@1.91, 2010-02-03 23:51:51+00:00, davehart@shiny.ad.hartbrothers.com +1 -4
+    Remove arlib.
+
+  configure.ac@1.465.1.10, 2010-02-03 23:51:51+00:00, davehart@shiny.ad.hartbrothers.com +7 -13
+    Remove arlib, replace --with-arlib handling with deprecation warning.
+
 ChangeSet@1.2091, 2010-02-03 10:36:19+00:00, stenn@whimsy.udel.edu +27 -0
   NTP_4_2_7P15
   TAG: NTP_4_2_7P15
@@ -82,6 +307,15 @@ ChangeSet@1.2091, 2010-02-03 10:36:19+00:00, stenn@whimsy.udel.edu +27 -0
 
   util/ntp-keygen.1@1.16, 2010-02-03 10:36:15+00:00, stenn@whimsy.udel.edu +2 -2
     NTP_4_2_7P15
+
+ChangeSet@1.2082.4.53, 2010-02-03 05:28:18-05:00, stenn@whimsy.udel.edu +2 -0
+  [Bug 1474] ntp_keygen needs LCRYPTO after libntp.a
+
+  ChangeLog@1.496.26.35, 2010-02-03 05:24:58-05:00, stenn@whimsy.udel.edu +1 -0
+    [Bug 1474] ntp_keygen needs LCRYPTO after libntp.a
+
+  util/Makefile.am@1.45.1.4, 2010-02-03 05:25:04-05:00, stenn@whimsy.udel.edu +1 -1
+    [Bug 1474] ntp_keygen needs LCRYPTO after libntp.a
 
 ChangeSet@1.2082.4.52, 2010-02-03 04:58:33+00:00, davehart@shiny.ad.hartbrothers.com +41 -0
   [Bug 1455] ntpd does not try /etc/ntp.audio as documented.
