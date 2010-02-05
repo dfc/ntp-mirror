@@ -350,8 +350,8 @@ AM_YFLAGS = -d -t -r all
 
 # BUILT_SOURCES which should also be in EXTRA_DIST
 B_S_DIST = \
-	ntpd-opts.c 	\
-	ntpd-opts.h 	\
+	$(srcdir)/ntpd-opts.c 	\
+	$(srcdir)/ntpd-opts.h 	\
 	$(NULL)
 
 BUILT_SOURCES = $(VPHACK) ntp_parser.c ntp_parser.h $(VPHACK_AFTER) \

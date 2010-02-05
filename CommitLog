@@ -1,3 +1,123 @@
+ChangeSet@1.2099, 2010-02-05 10:31:56+00:00, stenn@whimsy.udel.edu +27 -0
+  NTP_4_2_7P17
+  TAG: NTP_4_2_7P17
+
+  ChangeLog@1.530, 2010-02-05 10:31:40+00:00, stenn@whimsy.udel.edu +1 -0
+    NTP_4_2_7P17
+
+  ntpd/ntpd-opts.c@1.18, 2010-02-05 10:31:41+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P17
+
+  ntpd/ntpd-opts.h@1.18, 2010-02-05 10:31:41+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P17
+
+  ntpd/ntpd-opts.texi@1.18, 2010-02-05 10:31:42+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P17
+
+  ntpd/ntpd.1@1.18, 2010-02-05 10:31:42+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P17
+
+  ntpdc/ntpdc-opts.c@1.18, 2010-02-05 10:31:42+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P17
+
+  ntpdc/ntpdc-opts.h@1.18, 2010-02-05 10:31:43+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P17
+
+  ntpdc/ntpdc-opts.texi@1.18, 2010-02-05 10:31:43+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P17
+
+  ntpdc/ntpdc.1@1.18, 2010-02-05 10:31:44+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P17
+
+  ntpq/ntpq-opts.c@1.18, 2010-02-05 10:31:44+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P17
+
+  ntpq/ntpq-opts.h@1.18, 2010-02-05 10:31:44+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P17
+
+  ntpq/ntpq-opts.texi@1.18, 2010-02-05 10:31:45+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P17
+
+  ntpq/ntpq.1@1.18, 2010-02-05 10:31:45+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P17
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.18, 2010-02-05 10:31:46+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P17
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.18, 2010-02-05 10:31:47+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P17
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.18, 2010-02-05 10:31:47+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P17
+
+  ntpsnmpd/ntpsnmpd.1@1.18, 2010-02-05 10:31:47+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P17
+
+  packageinfo.sh@1.19, 2010-02-05 10:31:48+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P17
+
+  sntp/sntp-opts.c@1.18, 2010-02-05 10:31:48+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P17
+
+  sntp/sntp-opts.h@1.18, 2010-02-05 10:31:49+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P17
+
+  sntp/sntp-opts.texi@1.18, 2010-02-05 10:31:49+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P17
+
+  sntp/sntp.1@1.18, 2010-02-05 10:31:49+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P17
+
+  sntp/sntp.html@1.18, 2010-02-05 10:31:50+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P17
+
+  util/ntp-keygen-opts.c@1.18, 2010-02-05 10:31:50+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P17
+
+  util/ntp-keygen-opts.h@1.18, 2010-02-05 10:31:51+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P17
+
+  util/ntp-keygen-opts.texi@1.18, 2010-02-05 10:31:51+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P17
+
+  util/ntp-keygen.1@1.18, 2010-02-05 10:31:52+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P17
+
+ChangeSet@1.2096.1.1, 2010-02-05 05:07:21+00:00, davehart@shiny.ad.hartbrothers.com +6 -0
+  Attempts to cure CID 108 CID 118 CID 119 TAINTED_SCALAR warnings.
+  Broaden ylwrap workaround VPATH_HACK to all non-GNU make.
+
+  ChangeLog@1.527.1.1, 2010-02-05 05:07:20+00:00, davehart@shiny.ad.hartbrothers.com +6 -0
+    Attempts to cure CID 108 CID 118 CID 119 TAINTED_SCALAR warnings.
+    Broaden ylwrap workaround VPATH_HACK to all non-GNU make.
+
+  include/ntp_debug.h@1.3, 2010-02-05 05:07:20+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+    include ntp_assert.h so source files can include one less .h
+
+  m4/ntp_vpathhack.m4@1.3, 2010-02-05 05:07:20+00:00, davehart@shiny.ad.hartbrothers.com +25 -11
+    ABroaden ylwrap workaround VPATH_HACK to all non-GNU make.
+
+  ntpd/Makefile.am@1.90, 2010-02-05 05:07:20+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    use $(srcdir)/ prefix for ntpd-opts.[ch] in BS_DIST
+
+  ntpd/ntp_scanner.c@1.32, 2010-02-05 05:07:20+00:00, davehart@shiny.ad.hartbrothers.com +13 -6
+    Attempt to cure CID 108 TAINTED_SCALAR warning.
+
+  ntpd/work_fork.c@1.2, 2010-02-05 05:07:20+00:00, davehart@shiny.ad.hartbrothers.com +10 -2
+    Attempts to cure CID 118 CID 119 TAINTED_SCALAR warnings.
+
+ChangeSet@1.2082.4.57, 2010-02-04 23:13:52+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
+  [Bug 1477] 1st non-gmake make in clone w/VPATH can't make COPYRIGHT.
+
+  ChangeLog@1.496.26.38, 2010-02-04 23:13:43+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+    [Bug 1477] 1st non-gmake make in clone w/VPATH can't make COPYRIGHT.
+
+  Makefile.am@1.93, 2010-02-04 23:13:43+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    [Bug 1477] 1st non-gmake make in clone w/VPATH can't make COPYRIGHT.
+
+  sntp/Makefile.am@1.21.1.7, 2010-02-04 23:13:43+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    [Bug 1477] 1st non-gmake make in clone w/VPATH can't make COPYRIGHT.
+
 ChangeSet@1.2096, 2010-02-04 10:32:08+00:00, stenn@whimsy.udel.edu +27 -0
   NTP_4_2_7P16
   TAG: NTP_4_2_7P16
