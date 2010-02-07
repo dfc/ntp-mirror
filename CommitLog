@@ -1,3 +1,121 @@
+ChangeSet@1.2102, 2010-02-07 10:31:29+00:00, stenn@whimsy.udel.edu +27 -0
+  NTP_4_2_7P18
+  TAG: NTP_4_2_7P18
+
+  ChangeLog@1.533, 2010-02-07 10:31:12+00:00, stenn@whimsy.udel.edu +1 -0
+    NTP_4_2_7P18
+
+  ntpd/ntpd-opts.c@1.19, 2010-02-07 10:31:13+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P18
+
+  ntpd/ntpd-opts.h@1.19, 2010-02-07 10:31:13+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P18
+
+  ntpd/ntpd-opts.texi@1.19, 2010-02-07 10:31:14+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P18
+
+  ntpd/ntpd.1@1.19, 2010-02-07 10:31:14+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P18
+
+  ntpdc/ntpdc-opts.c@1.19, 2010-02-07 10:31:16+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P18
+
+  ntpdc/ntpdc-opts.h@1.19, 2010-02-07 10:31:16+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P18
+
+  ntpdc/ntpdc-opts.texi@1.19, 2010-02-07 10:31:16+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P18
+
+  ntpdc/ntpdc.1@1.19, 2010-02-07 10:31:17+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P18
+
+  ntpq/ntpq-opts.c@1.19, 2010-02-07 10:31:17+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P18
+
+  ntpq/ntpq-opts.h@1.19, 2010-02-07 10:31:17+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P18
+
+  ntpq/ntpq-opts.texi@1.19, 2010-02-07 10:31:18+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P18
+
+  ntpq/ntpq.1@1.19, 2010-02-07 10:31:18+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P18
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.19, 2010-02-07 10:31:19+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P18
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.19, 2010-02-07 10:31:19+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P18
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.19, 2010-02-07 10:31:19+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P18
+
+  ntpsnmpd/ntpsnmpd.1@1.19, 2010-02-07 10:31:20+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P18
+
+  packageinfo.sh@1.20, 2010-02-07 10:31:20+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P18
+
+  sntp/sntp-opts.c@1.19, 2010-02-07 10:31:20+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P18
+
+  sntp/sntp-opts.h@1.19, 2010-02-07 10:31:21+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P18
+
+  sntp/sntp-opts.texi@1.19, 2010-02-07 10:31:21+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P18
+
+  sntp/sntp.1@1.19, 2010-02-07 10:31:22+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P18
+
+  sntp/sntp.html@1.19, 2010-02-07 10:31:22+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P18
+
+  util/ntp-keygen-opts.c@1.19, 2010-02-07 10:31:22+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P18
+
+  util/ntp-keygen-opts.h@1.19, 2010-02-07 10:31:23+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P18
+
+  util/ntp-keygen-opts.texi@1.19, 2010-02-07 10:31:23+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P18
+
+  util/ntp-keygen.1@1.19, 2010-02-07 10:31:23+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P18
+
+ChangeSet@1.2101, 2010-02-06 05:22:44+00:00, davehart@shiny.ad.hartbrothers.com +6 -0
+  Stop using getaddrinfo() to convert numeric address strings to on-wire
+    addresses in favor of is_ip_address() alone.
+
+  ChangeLog@1.532, 2010-02-06 05:22:43+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+    Stop using getaddrinfo() to convert numeric address strings to on-wire
+      addresses in favor of is_ip_address() alone.
+
+  include/ntp_rfc2553.h@1.35, 2010-02-06 05:22:43+00:00, davehart@shiny.ad.hartbrothers.com +10 -1
+    add copy_addrinfo_list()
+
+  include/ntpd.h@1.140, 2010-02-06 05:22:43+00:00, davehart@shiny.ad.hartbrothers.com +15 -6
+    mention copy_addrinfo_list() near getaddrinfo_sometime() prototype.
+
+  libntp/ntp_rfc2553.c@1.42, 2010-02-06 05:22:43+00:00, davehart@shiny.ad.hartbrothers.com +92 -0
+    add copy_addrinfo_list()
+
+  ntpd/ntp_config.c@1.246, 2010-02-06 05:22:43+00:00, davehart@shiny.ad.hartbrothers.com +18 -116
+    Stop using getaddrinfo() to convert numeric address strings to on-wire
+      addresses in favor of is_ip_address() alone.
+
+  ntpd/ntp_intres.c@1.83, 2010-02-06 05:22:43+00:00, davehart@shiny.ad.hartbrothers.com +10 -1
+    add DEBUG code to exercise copy_addrinfo_list() harmlessly
+
+ChangeSet@1.2082.4.58, 2010-02-05 22:26:34+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  [Bug 1480] snprintf() cleanup caused unterminated refclock IDs.
+
+  ChangeLog@1.496.26.39, 2010-02-05 22:26:32+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1480] snprintf() cleanup caused unterminated refclock IDs.
+
+  ntpd/ntp_control.c@1.129.1.2, 2010-02-05 22:26:32+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    [Bug 1480] snprintf() cleanup caused unterminated refclock IDs.
+
 ChangeSet@1.2099, 2010-02-05 10:31:56+00:00, stenn@whimsy.udel.edu +27 -0
   NTP_4_2_7P17
   TAG: NTP_4_2_7P17
