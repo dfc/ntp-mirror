@@ -1,3 +1,152 @@
+ChangeSet@1.2108, 2010-02-09 11:57:34+00:00, stenn@whimsy.udel.edu +27 -0
+  NTP_4_2_7P19
+  TAG: NTP_4_2_7P19
+
+  ChangeLog@1.539, 2010-02-09 11:57:05+00:00, stenn@whimsy.udel.edu +1 -0
+    NTP_4_2_7P19
+
+  ntpd/ntpd-opts.c@1.20, 2010-02-09 11:57:07+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P19
+
+  ntpd/ntpd-opts.h@1.20, 2010-02-09 11:57:07+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P19
+
+  ntpd/ntpd-opts.texi@1.20, 2010-02-09 11:57:08+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P19
+
+  ntpd/ntpd.1@1.20, 2010-02-09 11:57:09+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P19
+
+  ntpdc/ntpdc-opts.c@1.20, 2010-02-09 11:57:09+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P19
+
+  ntpdc/ntpdc-opts.h@1.20, 2010-02-09 11:57:10+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P19
+
+  ntpdc/ntpdc-opts.texi@1.20, 2010-02-09 11:57:11+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P19
+
+  ntpdc/ntpdc.1@1.20, 2010-02-09 11:57:12+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P19
+
+  ntpq/ntpq-opts.c@1.20, 2010-02-09 11:57:12+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P19
+
+  ntpq/ntpq-opts.h@1.20, 2010-02-09 11:57:13+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P19
+
+  ntpq/ntpq-opts.texi@1.20, 2010-02-09 11:57:14+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P19
+
+  ntpq/ntpq.1@1.20, 2010-02-09 11:57:16+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P19
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.20, 2010-02-09 11:57:17+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P19
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.20, 2010-02-09 11:57:18+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P19
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.20, 2010-02-09 11:57:18+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P19
+
+  ntpsnmpd/ntpsnmpd.1@1.20, 2010-02-09 11:57:19+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P19
+
+  packageinfo.sh@1.21, 2010-02-09 11:57:20+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P19
+
+  sntp/sntp-opts.c@1.20, 2010-02-09 11:57:21+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P19
+
+  sntp/sntp-opts.h@1.20, 2010-02-09 11:57:22+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P19
+
+  sntp/sntp-opts.texi@1.20, 2010-02-09 11:57:22+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P19
+
+  sntp/sntp.1@1.20, 2010-02-09 11:57:23+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P19
+
+  sntp/sntp.html@1.20, 2010-02-09 11:57:25+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_7P19
+
+  util/ntp-keygen-opts.c@1.20, 2010-02-09 11:57:26+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P19
+
+  util/ntp-keygen-opts.h@1.20, 2010-02-09 11:57:27+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_7P19
+
+  util/ntp-keygen-opts.texi@1.20, 2010-02-09 11:57:27+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P19
+
+  util/ntp-keygen.1@1.20, 2010-02-09 11:57:28+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_7P19
+
+ChangeSet@1.2082.4.61, 2010-02-09 04:02:59-05:00, stenn@whimsy.udel.edu +2 -0
+  [Bug 1438] Remove dead code from sntp/networking.c
+
+  ChangeLog@1.496.26.42, 2010-02-09 04:02:48-05:00, stenn@whimsy.udel.edu +1 -0
+    [Bug 1438] Remove dead code from sntp/networking.c
+
+  sntp/networking.c@1.29.1.1, 2010-02-09 04:02:48-05:00, stenn@whimsy.udel.edu +0 -1
+    [Bug 1438] Remove dead code from sntp/networking.c
+
+ChangeSet@1.2106, 2010-02-09 03:51:10-05:00, stenn@whimsy.udel.edu +3 -0
+  [Bug 1338] Update the association type codes in ntpq.html.
+
+  ChangeLog@1.537, 2010-02-09 03:50:28-05:00, stenn@whimsy.udel.edu +1 -0
+    [Bug 1338] Update the association type codes in ntpq.html.
+
+  html/copyright.html@1.47, 2010-02-09 03:50:44-05:00, stenn@whimsy.udel.edu +1 -1
+    cleanup
+
+  html/ntpq.html@1.39, 2010-02-09 03:50:29-05:00, stenn@whimsy.udel.edu +5 -2
+    [Bug 1338] Update the association type codes in ntpq.html.
+
+ChangeSet@1.2102.1.1, 2010-02-09 03:23:58-05:00, stenn@whimsy.udel.edu +1 -0
+  cleanup
+
+  ChangeLog@1.533.1.1, 2010-02-09 03:23:49-05:00, stenn@whimsy.udel.edu +2 -1
+    cleanup
+
+ChangeSet@1.2082.17.1, 2010-02-09 02:49:34-05:00, stenn@whimsy.udel.edu +4 -0
+  [Bug 1140] Clean up debug.html, decode.html, and ntpq.html
+
+  ChangeLog@1.496.41.1, 2010-02-09 02:49:18-05:00, stenn@whimsy.udel.edu +1 -0
+    [Bug 1140] Clean up debug.html, decode.html, and ntpq.html
+
+  html/debug.html@1.27.1.1, 2010-02-09 02:49:18-05:00, stenn@whimsy.udel.edu +3 -3
+    [Bug 1140] Clean up debug.html, decode.html, and ntpq.html
+
+  html/decode.html@1.11.1.1, 2010-02-09 02:49:19-05:00, stenn@whimsy.udel.edu +11 -7
+    [Bug 1140] Clean up debug.html, decode.html, and ntpq.html
+
+  html/ntpq.html@1.36.1.1, 2010-02-09 02:49:19-05:00, stenn@whimsy.udel.edu +11 -7
+    [Bug 1140] Clean up debug.html, decode.html, and ntpq.html
+
+ChangeSet@1.2082.4.59, 2010-02-08 14:11:12+00:00, davehart@shiny.ad.hartbrothers.com +5 -0
+  [Bug 1478] linking fails with undefined reference EVP_MD_pkey_type.
+  [Bug 1479] Compilation fails because of not finding readline headers.
+  [Bug 1484] ushort is not defined in QNX6.
+
+  ChangeLog@1.496.26.40, 2010-02-08 14:11:10+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
+    [Bug 1478] linking fails with undefined reference EVP_MD_pkey_type.
+    [Bug 1479] Compilation fails because of not finding readline headers.
+    [Bug 1484] ushort is not defined in QNX6.
+
+  include/mbg_gps166.h@1.10, 2010-02-08 14:11:10+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    [Bug 1484] ushort is not defined in QNX6.
+
+  libntp/ntp_lineedit.c@1.8, 2010-02-08 14:11:10+00:00, davehart@shiny.ad.hartbrothers.com +29 -32
+    [Bug 1479] Compilation fails because of not finding readline headers.
+
+  m4/ntp_lineeditlibs.m4@1.7, 2010-02-08 14:11:10+00:00, davehart@shiny.ad.hartbrothers.com +0 -2
+    [Bug 1479] Compilation fails because of not finding readline headers.
+
+  ntpd/ntp_control.c@1.129.1.3, 2010-02-08 14:11:11+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1478] linking fails with undefined reference EVP_MD_pkey_type.
+
 ChangeSet@1.2102, 2010-02-07 10:31:29+00:00, stenn@whimsy.udel.edu +27 -0
   NTP_4_2_7P18
   TAG: NTP_4_2_7P18
