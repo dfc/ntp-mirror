@@ -1,3 +1,289 @@
+ChangeSet@1.2119, 2010-03-31 09:16:48+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P21
+  TAG: NTP_4_2_7P21
+
+  ChangeLog@1.546, 2010-03-31 09:16:45+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P21
+
+  ntpd/ntpd-opts.c@1.22, 2010-03-31 09:16:45+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P21
+
+  ntpd/ntpd-opts.h@1.22, 2010-03-31 09:16:45+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P21
+
+  ntpd/ntpd-opts.texi@1.22, 2010-03-31 09:16:45+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P21
+
+  ntpd/ntpd.1@1.22, 2010-03-31 09:16:45+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P21
+
+  ntpdc/ntpdc-opts.c@1.22, 2010-03-31 09:16:46+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P21
+
+  ntpdc/ntpdc-opts.h@1.22, 2010-03-31 09:16:46+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P21
+
+  ntpdc/ntpdc-opts.texi@1.22, 2010-03-31 09:16:46+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P21
+
+  ntpdc/ntpdc.1@1.22, 2010-03-31 09:16:46+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P21
+
+  ntpq/ntpq-opts.c@1.22, 2010-03-31 09:16:46+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P21
+
+  ntpq/ntpq-opts.h@1.22, 2010-03-31 09:16:46+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P21
+
+  ntpq/ntpq-opts.texi@1.22, 2010-03-31 09:16:46+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P21
+
+  ntpq/ntpq.1@1.22, 2010-03-31 09:16:46+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P21
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.22, 2010-03-31 09:16:46+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P21
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.22, 2010-03-31 09:16:46+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P21
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.22, 2010-03-31 09:16:46+00:00, stenn@deacon.udel.edu +2 -23
+    NTP_4_2_7P21
+
+  ntpsnmpd/ntpsnmpd.1@1.22, 2010-03-31 09:16:46+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P21
+
+  packageinfo.sh@1.23, 2010-03-31 09:16:46+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P21
+
+  sntp/sntp-opts.c@1.22, 2010-03-31 09:16:46+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P21
+
+  sntp/sntp-opts.h@1.22, 2010-03-31 09:16:46+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P21
+
+  sntp/sntp-opts.texi@1.22, 2010-03-31 09:16:46+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P21
+
+  sntp/sntp.1@1.22, 2010-03-31 09:16:46+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P21
+
+  sntp/sntp.html@1.22, 2010-03-31 09:16:46+00:00, stenn@deacon.udel.edu +10 -14
+    NTP_4_2_7P21
+
+  util/ntp-keygen-opts.c@1.22, 2010-03-31 09:16:46+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P21
+
+  util/ntp-keygen-opts.h@1.22, 2010-03-31 09:16:46+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P21
+
+  util/ntp-keygen-opts.texi@1.22, 2010-03-31 09:16:46+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P21
+
+  util/ntp-keygen.1@1.22, 2010-03-31 09:16:46+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P21
+
+ChangeSet@1.2082.4.68, 2010-03-31 08:45:31+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_6P1_RC6
+  TAG: NTP_4_2_6P1_RC6
+
+  ChangeLog@1.496.26.46, 2010-03-31 08:45:28+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_6P1_RC6
+
+  ntpd/ntpd-opts.c@1.248.6.1, 2010-03-31 08:45:28+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P1_RC6
+
+  ntpd/ntpd-opts.h@1.248.6.1, 2010-03-31 08:45:28+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P1_RC6
+
+  ntpd/ntpd-opts.texi@1.246.6.1, 2010-03-31 08:45:28+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P1_RC6
+
+  ntpd/ntpd.1@1.246.6.1, 2010-03-31 08:45:28+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P1_RC6
+
+  ntpdc/ntpdc-opts.c@1.244.6.1, 2010-03-31 08:45:28+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P1_RC6
+
+  ntpdc/ntpdc-opts.h@1.244.6.1, 2010-03-31 08:45:28+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P1_RC6
+
+  ntpdc/ntpdc-opts.texi@1.243.6.1, 2010-03-31 08:45:28+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P1_RC6
+
+  ntpdc/ntpdc.1@1.243.6.1, 2010-03-31 08:45:29+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P1_RC6
+
+  ntpq/ntpq-opts.c@1.245.6.1, 2010-03-31 08:45:29+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P1_RC6
+
+  ntpq/ntpq-opts.h@1.245.6.1, 2010-03-31 08:45:29+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P1_RC6
+
+  ntpq/ntpq-opts.texi@1.244.6.1, 2010-03-31 08:45:29+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P1_RC6
+
+  ntpq/ntpq.1@1.244.6.1, 2010-03-31 08:45:29+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P1_RC6
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.123.6.1, 2010-03-31 08:45:29+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P1_RC6
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.123.6.1, 2010-03-31 08:45:29+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P1_RC6
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.123.6.1, 2010-03-31 08:45:29+00:00, stenn@deacon.udel.edu +2 -23
+    NTP_4_2_6P1_RC6
+
+  ntpsnmpd/ntpsnmpd.1@1.122.6.1, 2010-03-31 08:45:29+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P1_RC6
+
+  packageinfo.sh@1.255.8.1, 2010-03-31 08:45:29+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_6P1_RC6
+
+  sntp/sntp-opts.c@1.117.6.1, 2010-03-31 08:45:29+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P1_RC6
+
+  sntp/sntp-opts.h@1.117.6.1, 2010-03-31 08:45:29+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P1_RC6
+
+  sntp/sntp-opts.texi@1.117.6.1, 2010-03-31 08:45:29+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P1_RC6
+
+  sntp/sntp.1@1.117.6.1, 2010-03-31 08:45:29+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P1_RC6
+
+  sntp/sntp.html@1.7.6.1, 2010-03-31 08:45:29+00:00, stenn@deacon.udel.edu +10 -14
+    NTP_4_2_6P1_RC6
+
+  util/ntp-keygen-opts.c@1.247.6.1, 2010-03-31 08:45:29+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P1_RC6
+
+  util/ntp-keygen-opts.h@1.247.6.1, 2010-03-31 08:45:29+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P1_RC6
+
+  util/ntp-keygen-opts.texi@1.246.6.1, 2010-03-31 08:45:29+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P1_RC6
+
+  util/ntp-keygen.1@1.246.6.1, 2010-03-31 08:45:29+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P1_RC6
+
+ChangeSet@1.2082.4.67, 2010-03-31 04:14:28-04:00, stenn@deacon.udel.edu +1 -0
+  Quiet some trigger debugging
+
+  BitKeeper/triggers/triggert@1.6.1.2, 2010-03-31 04:14:06-04:00, stenn@deacon.udel.edu +1 -1
+    Quiet some trigger debugging
+
+ChangeSet@1.2082.4.66, 2010-03-31 04:11:55-04:00, stenn@deacon.udel.edu +2 -0
+  [Bug 1514] Typo in ntp_proto.c: fabs(foo < .4) should be fabs(foo) < .4
+
+  ChangeLog@1.496.26.45, 2010-03-31 04:11:43-04:00, stenn@deacon.udel.edu +1 -0
+    [Bug 1514] Typo in ntp_proto.c: fabs(foo < .4) should be fabs(foo) < .4
+
+  ntpd/ntp_proto.c@1.298, 2010-03-31 04:11:43-04:00, stenn@deacon.udel.edu +1 -1
+    [Bug 1514] Typo in ntp_proto.c: fabs(foo < .4) should be fabs(foo) < .4
+
+ChangeSet@1.2082.4.65, 2010-03-31 03:17:27-04:00, stenn@deacon.udel.edu +4 -0
+  trigger cleanup
+
+  BitKeeper/triggers/trigger.README@1.4.1.1, 2010-03-31 03:17:12-04:00, stenn@deacon.udel.edu +5 -3
+    trigger cleanup
+
+  BitKeeper/triggers/trigger.cfg@1.12.1.1, 2010-03-31 03:17:12-04:00, stenn@deacon.udel.edu +6 -0
+    trigger cleanup
+
+  BitKeeper/triggers/trigger.mk@1.9.1.1, 2010-03-31 03:17:12-04:00, stenn@deacon.udel.edu +3 -1
+    trigger cleanup
+
+  BitKeeper/triggers/triggert@1.6.1.1, 2010-03-31 03:17:12-04:00, stenn@deacon.udel.edu +17 -6
+    trigger cleanup
+
+ChangeSet@1.2115, 2010-03-31 03:13:36-04:00, stenn@deacon.udel.edu +4 -0
+  trigger cleanup
+
+  BitKeeper/triggers/trigger.README@1.5, 2010-03-31 03:13:20-04:00, stenn@deacon.udel.edu +5 -3
+    trigger cleanup
+
+  BitKeeper/triggers/trigger.cfg@1.13, 2010-03-31 03:13:20-04:00, stenn@deacon.udel.edu +6 -0
+    trigger cleanup
+
+  BitKeeper/triggers/trigger.mk@1.10, 2010-03-31 03:13:20-04:00, stenn@deacon.udel.edu +3 -1
+    trigger cleanup
+
+  BitKeeper/triggers/triggert@1.7, 2010-03-31 03:13:20-04:00, stenn@deacon.udel.edu +17 -6
+    trigger cleanup
+
+ChangeSet@1.2082.4.64, 2010-03-29 05:16:32-04:00, stenn@deacon.udel.edu +1 -0
+  With the new bk, the trigger push needs the -q (quiet) flag
+
+  BitKeeper/triggers/2mirrors@1.5, 2010-03-29 05:16:08-04:00, stenn@deacon.udel.edu +3 -3
+    With the new bk, the trigger push needs the -q (quiet) flag
+
+ChangeSet@1.2113, 2010-03-25 23:40:34-04:00, stenn@deacon.udel.edu +1 -0
+  whitespace cleanup
+
+  html/copyright.html@1.48, 2010-03-25 23:40:20-04:00, stenn@deacon.udel.edu +1 -1
+    whitespace cleanup
+
+ChangeSet@1.2112, 2010-02-16 09:40:11+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  [Bug 1306] constant conditionals in audio_gain().
+
+  ChangeLog@1.543, 2010-02-16 09:40:10+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1306] constant conditionals in audio_gain().
+
+  libntp/audio.c@1.28, 2010-02-16 09:40:11+00:00, davehart@shiny.ad.hartbrothers.com +21 -21
+    [Bug 1306] constant conditionals in audio_gain().
+
+ChangeSet@1.2082.4.63, 2010-02-15 23:19:19+00:00, davehart@shiny.ad.hartbrothers.com +8 -0
+  [Bug 1464] synchronization source wrong for refclocks ARCRON_MSF (27)
+    and SHM (28).
+  Correct Windows port's refclock_open() to return 0 on failure not -1.
+  Correct CHU, dumbclock, and WWVB drivers to check for 0 returned from
+    refclock_open() on failure.
+  Correct "SIMUL=4 ./flock-build -1" to prioritize -1/--one.
+  
+
+  ChangeLog@1.496.26.44, 2010-02-15 23:19:18+00:00, davehart@shiny.ad.hartbrothers.com +9 -0
+    [Bug 1464] synchronization source wrong for refclocks ARCRON_MSF (27)
+      and SHM (28).
+    Correct Windows port's refclock_open() to return 0 on failure not -1.
+    Correct CHU, dumbclock, and WWVB drivers to check for 0 returned from
+      refclock_open() on failure.
+    Correct "SIMUL=4 ./flock-build -1" to prioritize -1/--one.
+    
+
+  flock-build@1.45, 2010-02-15 23:19:18+00:00, davehart@shiny.ad.hartbrothers.com +26 -21
+    Correct "SIMUL=4 ./flock-build -1" to prioritize -1/--one.
+
+  ntpd/ntp_control.c@1.129.1.4, 2010-02-15 23:19:18+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    [Bug 1464] synchronization source wrong for refclocks ARCRON_MSF (27)
+      and SHM (28).
+
+  ntpd/ntp_refclock.c@1.92, 2010-02-15 23:19:18+00:00, davehart@shiny.ad.hartbrothers.com +4 -1
+    Correct Windows port's refclock_open() to return 0 on failure not -1.
+    Correct CHU, dumbclock, and WWVB drivers to check for 0 returned from
+      refclock_open() on failure.
+
+  ntpd/refclock_chu.c@1.47, 2010-02-15 23:19:18+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    Correct Windows port's refclock_open() to return 0 on failure not -1.
+    Correct CHU, dumbclock, and WWVB drivers to check for 0 returned from
+      refclock_open() on failure.
+
+  ntpd/refclock_dumbclock.c@1.15, 2010-02-15 23:19:18+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    Correct Windows port's refclock_open() to return 0 on failure not -1.
+    Correct CHU, dumbclock, and WWVB drivers to check for 0 returned from
+      refclock_open() on failure.
+
+  ntpd/refclock_wwvb.c@1.24, 2010-02-15 23:19:18+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    Correct Windows port's refclock_open() to return 0 on failure not -1.
+    Correct CHU, dumbclock, and WWVB drivers to check for 0 returned from
+      refclock_open() on failure.
+
+  ports/winnt/ntpd/win32_io.c@1.19.1.1, 2010-02-15 23:19:18+00:00, davehart@shiny.ad.hartbrothers.com +15 -9
+    Correct Windows port's refclock_open() to return 0 on failure not -1.
+    Correct CHU, dumbclock, and WWVB drivers to check for 0 returned from
+      refclock_open() on failure.
+
 ChangeSet@1.2110, 2010-02-13 11:56:48+00:00, stenn@whimsy.udel.edu +27 -0
   NTP_4_2_7P20
   TAG: NTP_4_2_7P20
@@ -199,6 +485,91 @@ ChangeSet@1.2108, 2010-02-09 11:57:34+00:00, stenn@whimsy.udel.edu +27 -0
 
   util/ntp-keygen.1@1.20, 2010-02-09 11:57:28+00:00, stenn@whimsy.udel.edu +2 -2
     NTP_4_2_7P19
+
+ChangeSet@1.2082.4.62, 2010-02-09 10:34:59+00:00, stenn@whimsy.udel.edu +27 -0
+  NTP_4_2_6P1_RC5
+  TAG: NTP_4_2_6P1_RC5
+
+  ChangeLog@1.496.26.43, 2010-02-09 10:34:44+00:00, stenn@whimsy.udel.edu +1 -0
+    NTP_4_2_6P1_RC5
+
+  ntpd/ntpd-opts.c@1.248.5.1, 2010-02-09 10:34:44+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC5
+
+  ntpd/ntpd-opts.h@1.248.5.1, 2010-02-09 10:34:45+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_6P1_RC5
+
+  ntpd/ntpd-opts.texi@1.246.5.1, 2010-02-09 10:34:45+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC5
+
+  ntpd/ntpd.1@1.246.5.1, 2010-02-09 10:34:46+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC5
+
+  ntpdc/ntpdc-opts.c@1.244.5.1, 2010-02-09 10:34:46+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC5
+
+  ntpdc/ntpdc-opts.h@1.244.5.1, 2010-02-09 10:34:46+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_6P1_RC5
+
+  ntpdc/ntpdc-opts.texi@1.243.5.1, 2010-02-09 10:34:47+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC5
+
+  ntpdc/ntpdc.1@1.243.5.1, 2010-02-09 10:34:47+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC5
+
+  ntpq/ntpq-opts.c@1.245.5.1, 2010-02-09 10:34:48+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC5
+
+  ntpq/ntpq-opts.h@1.245.5.1, 2010-02-09 10:34:48+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_6P1_RC5
+
+  ntpq/ntpq-opts.texi@1.244.5.1, 2010-02-09 10:34:48+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC5
+
+  ntpq/ntpq.1@1.244.5.1, 2010-02-09 10:34:49+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC5
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.123.5.1, 2010-02-09 10:34:49+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC5
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.123.5.1, 2010-02-09 10:34:50+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_6P1_RC5
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.123.5.1, 2010-02-09 10:34:50+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC5
+
+  ntpsnmpd/ntpsnmpd.1@1.122.5.1, 2010-02-09 10:34:51+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC5
+
+  packageinfo.sh@1.255.7.1, 2010-02-09 10:34:51+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_6P1_RC5
+
+  sntp/sntp-opts.c@1.117.5.1, 2010-02-09 10:34:51+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC5
+
+  sntp/sntp-opts.h@1.117.5.1, 2010-02-09 10:34:52+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_6P1_RC5
+
+  sntp/sntp-opts.texi@1.117.5.1, 2010-02-09 10:34:52+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC5
+
+  sntp/sntp.1@1.117.5.1, 2010-02-09 10:34:53+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC5
+
+  sntp/sntp.html@1.7.5.1, 2010-02-09 10:34:53+00:00, stenn@whimsy.udel.edu +1 -1
+    NTP_4_2_6P1_RC5
+
+  util/ntp-keygen-opts.c@1.247.5.1, 2010-02-09 10:34:53+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC5
+
+  util/ntp-keygen-opts.h@1.247.5.1, 2010-02-09 10:34:54+00:00, stenn@whimsy.udel.edu +3 -3
+    NTP_4_2_6P1_RC5
+
+  util/ntp-keygen-opts.texi@1.246.5.1, 2010-02-09 10:34:54+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC5
+
+  util/ntp-keygen.1@1.246.5.1, 2010-02-09 10:34:54+00:00, stenn@whimsy.udel.edu +2 -2
+    NTP_4_2_6P1_RC5
 
 ChangeSet@1.2082.4.61, 2010-02-09 04:02:59-05:00, stenn@whimsy.udel.edu +2 -0
   [Bug 1438] Remove dead code from sntp/networking.c
