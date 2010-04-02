@@ -68,21 +68,20 @@ am__objects_2 = a_md5encrypt.$(OBJEXT) adjtime.$(OBJEXT) \
 	fptoa.$(OBJEXT) fptoms.$(OBJEXT) getopt.$(OBJEXT) \
 	hextoint.$(OBJEXT) hextolfp.$(OBJEXT) humandate.$(OBJEXT) \
 	icom.$(OBJEXT) inttoa.$(OBJEXT) iosignal.$(OBJEXT) \
-	lib_strbuf.$(OBJEXT) machines.$(OBJEXT) memmove.$(OBJEXT) \
-	mfptoa.$(OBJEXT) ntp_lineedit.$(OBJEXT) mfptoms.$(OBJEXT) \
-	mktime.$(OBJEXT) modetoa.$(OBJEXT) mstolfp.$(OBJEXT) \
-	msutotsf.$(OBJEXT) msyslog.$(OBJEXT) netof.$(OBJEXT) \
-	ntp_rfc2553.$(OBJEXT) numtoa.$(OBJEXT) numtohost.$(OBJEXT) \
-	octtoint.$(OBJEXT) prettydate.$(OBJEXT) ntp_random.$(OBJEXT) \
-	recvbuff.$(OBJEXT) refnumtoa.$(OBJEXT) snprintf.$(OBJEXT) \
-	socktoa.$(OBJEXT) socktohost.$(OBJEXT) ssl_init.$(OBJEXT) \
-	statestr.$(OBJEXT) strdup.$(OBJEXT) strstr.$(OBJEXT) \
-	syssignal.$(OBJEXT) tsftomsu.$(OBJEXT) tstotv.$(OBJEXT) \
-	tvtots.$(OBJEXT) uglydate.$(OBJEXT) uinttoa.$(OBJEXT) \
-	ymd2yd.$(OBJEXT) assertions.$(OBJEXT) buffer.$(OBJEXT) \
-	condition.$(OBJEXT) dir.$(OBJEXT) error.$(OBJEXT) \
-	errno2result.$(OBJEXT) event.$(OBJEXT) file.$(OBJEXT) \
-	inet_ntop.$(OBJEXT) inet_pton.$(OBJEXT) \
+	lib_strbuf.$(OBJEXT) machines.$(OBJEXT) mfptoa.$(OBJEXT) \
+	ntp_lineedit.$(OBJEXT) mfptoms.$(OBJEXT) mktime.$(OBJEXT) \
+	modetoa.$(OBJEXT) mstolfp.$(OBJEXT) msutotsf.$(OBJEXT) \
+	msyslog.$(OBJEXT) netof.$(OBJEXT) ntp_rfc2553.$(OBJEXT) \
+	numtoa.$(OBJEXT) numtohost.$(OBJEXT) octtoint.$(OBJEXT) \
+	prettydate.$(OBJEXT) ntp_random.$(OBJEXT) recvbuff.$(OBJEXT) \
+	refnumtoa.$(OBJEXT) snprintf.$(OBJEXT) socktoa.$(OBJEXT) \
+	socktohost.$(OBJEXT) ssl_init.$(OBJEXT) statestr.$(OBJEXT) \
+	strdup.$(OBJEXT) syssignal.$(OBJEXT) tsftomsu.$(OBJEXT) \
+	tstotv.$(OBJEXT) tvtots.$(OBJEXT) uglydate.$(OBJEXT) \
+	uinttoa.$(OBJEXT) ymd2yd.$(OBJEXT) assertions.$(OBJEXT) \
+	buffer.$(OBJEXT) condition.$(OBJEXT) dir.$(OBJEXT) \
+	error.$(OBJEXT) errno2result.$(OBJEXT) event.$(OBJEXT) \
+	file.$(OBJEXT) inet_ntop.$(OBJEXT) inet_pton.$(OBJEXT) \
 	interfaceiter.$(OBJEXT) lib.$(OBJEXT) log.$(OBJEXT) \
 	md5.$(OBJEXT) msgcat.$(OBJEXT) net.$(OBJEXT) netaddr.$(OBJEXT) \
 	netscope.$(OBJEXT) ondestroy.$(OBJEXT) random.$(OBJEXT) \
@@ -295,7 +294,6 @@ libntp_a_SRCS = \
 	iosignal.c					\
 	lib_strbuf.c					\
 	machines.c					\
-	memmove.c					\
 	mfptoa.c					\
 	ntp_lineedit.c					\
 	mfptoms.c					\
@@ -319,7 +317,6 @@ libntp_a_SRCS = \
 	ssl_init.c					\
 	statestr.c					\
 	strdup.c					\
-	strstr.c					\
 	syssignal.c					\
 	tsftomsu.c					\
 	tstotv.c					\
@@ -466,7 +463,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/log.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/machines.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/md5.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/memmove.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/mfptoa.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/mfptoms.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/mktime.Po@am__quote@
@@ -501,7 +497,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/stdtime.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/strdup.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/strerror.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/strstr.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/syssignal.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/systime.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/systime_s.Po@am__quote@

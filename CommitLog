@@ -1,8 +1,117 @@
-ChangeSet@1.2119, 2010-03-31 09:16:48+00:00, stenn@deacon.udel.edu +27 -0
+ChangeSet@1.2125, 2010-04-02 02:08:59+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P22
+  TAG: NTP_4_2_7P22
+
+  ChangeLog@1.548, 2010-04-02 02:08:57+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P22
+
+  ntpd/ntpd-opts.c@1.23, 2010-04-02 02:08:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P22
+
+  ntpd/ntpd-opts.h@1.23, 2010-04-02 02:08:57+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P22
+
+  ntpd/ntpd-opts.texi@1.23, 2010-04-02 02:08:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P22
+
+  ntpd/ntpd.1@1.23, 2010-04-02 02:08:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P22
+
+  ntpdc/ntpdc-opts.c@1.23, 2010-04-02 02:08:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P22
+
+  ntpdc/ntpdc-opts.h@1.23, 2010-04-02 02:08:57+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P22
+
+  ntpdc/ntpdc-opts.texi@1.23, 2010-04-02 02:08:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P22
+
+  ntpdc/ntpdc.1@1.23, 2010-04-02 02:08:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P22
+
+  ntpq/ntpq-opts.c@1.23, 2010-04-02 02:08:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P22
+
+  ntpq/ntpq-opts.h@1.23, 2010-04-02 02:08:57+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P22
+
+  ntpq/ntpq-opts.texi@1.23, 2010-04-02 02:08:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P22
+
+  ntpq/ntpq.1@1.23, 2010-04-02 02:08:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P22
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.23, 2010-04-02 02:08:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P22
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.23, 2010-04-02 02:08:57+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P22
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.23, 2010-04-02 02:08:57+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P22
+
+  ntpsnmpd/ntpsnmpd.1@1.23, 2010-04-02 02:08:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P22
+
+  packageinfo.sh@1.24, 2010-04-02 02:08:57+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P22
+
+  sntp/sntp-opts.c@1.23, 2010-04-02 02:08:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P22
+
+  sntp/sntp-opts.h@1.23, 2010-04-02 02:08:57+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P22
+
+  sntp/sntp-opts.texi@1.23, 2010-04-02 02:08:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P22
+
+  sntp/sntp.1@1.23, 2010-04-02 02:08:58+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P22
+
+  sntp/sntp.html@1.23, 2010-04-02 02:08:58+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P22
+
+  util/ntp-keygen-opts.c@1.23, 2010-04-02 02:08:58+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P22
+
+  util/ntp-keygen-opts.h@1.23, 2010-04-02 02:08:58+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P22
+
+  util/ntp-keygen-opts.texi@1.23, 2010-04-02 02:08:58+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P22
+
+  util/ntp-keygen.1@1.23, 2010-04-02 02:08:58+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P22
+
+ChangeSet@1.2082.4.69, 2010-04-01 03:33:20-04:00, stenn@deacon.udel.edu +1 -0
+  lose whimsy from br-flock
+
+  br-flock@1.13, 2010-04-01 03:33:09-04:00, stenn@deacon.udel.edu +1 -1
+    lose whimsy from br-flock
+
+ChangeSet@1.2123, 2010-04-01 03:20:04-04:00, stenn@deacon.udel.edu +2 -0
+  [Bug 1465] Make sure time from TS2100 is not invalid
+
+  ChangeLog@1.547, 2010-04-01 03:19:56-04:00, stenn@deacon.udel.edu +1 -0
+    [Bug 1465] Make sure time from TS2100 is not invalid
+
+  ntpd/refclock_true.c@1.12, 2010-04-01 03:19:56-04:00, stenn@deacon.udel.edu +2 -1
+    [Bug 1465] Make sure time from TS2100 is not invalid
+
+ChangeSet@1.2122, 2010-04-01 03:13:14-04:00, stenn@deacon.udel.edu +2 -0
+  [Bug 1432] Don't set inheritable flag for linux capabilities
+
+  ChangeLog@1.546, 2010-04-01 03:13:05-04:00, stenn@deacon.udel.edu +1 -0
+    [Bug 1432] Don't set inheritable flag for linux capabilities
+
+  ntpd/ntpd.c@1.115, 2010-04-01 03:13:05-04:00, stenn@deacon.udel.edu +2 -2
+    [Bug 1432] Don't set inheritable flag for linux capabilities
+
+ChangeSet@1.2112.1.7, 2010-03-31 09:16:48+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P21
   TAG: NTP_4_2_7P21
 
-  ChangeLog@1.546, 2010-03-31 09:16:45+00:00, stenn@deacon.udel.edu +1 -0
+  ChangeLog@1.543.1.3, 2010-03-31 09:16:45+00:00, stenn@deacon.udel.edu +1 -0
     NTP_4_2_7P21
 
   ntpd/ntpd-opts.c@1.22, 2010-03-31 09:16:45+00:00, stenn@deacon.udel.edu +2 -2
@@ -180,7 +289,7 @@ ChangeSet@1.2082.4.66, 2010-03-31 04:11:55-04:00, stenn@deacon.udel.edu +2 -0
   ChangeLog@1.496.26.45, 2010-03-31 04:11:43-04:00, stenn@deacon.udel.edu +1 -0
     [Bug 1514] Typo in ntp_proto.c: fabs(foo < .4) should be fabs(foo) < .4
 
-  ntpd/ntp_proto.c@1.298, 2010-03-31 04:11:43-04:00, stenn@deacon.udel.edu +1 -1
+  ntpd/ntp_proto.c@1.297.1.1, 2010-03-31 04:11:43-04:00, stenn@deacon.udel.edu +1 -1
     [Bug 1514] Typo in ntp_proto.c: fabs(foo < .4) should be fabs(foo) < .4
 
 ChangeSet@1.2082.4.65, 2010-03-31 03:17:27-04:00, stenn@deacon.udel.edu +4 -0
@@ -198,7 +307,7 @@ ChangeSet@1.2082.4.65, 2010-03-31 03:17:27-04:00, stenn@deacon.udel.edu +4 -0
   BitKeeper/triggers/triggert@1.6.1.1, 2010-03-31 03:17:12-04:00, stenn@deacon.udel.edu +17 -6
     trigger cleanup
 
-ChangeSet@1.2115, 2010-03-31 03:13:36-04:00, stenn@deacon.udel.edu +4 -0
+ChangeSet@1.2112.1.3, 2010-03-31 03:13:36-04:00, stenn@deacon.udel.edu +4 -0
   trigger cleanup
 
   BitKeeper/triggers/trigger.README@1.5, 2010-03-31 03:13:20-04:00, stenn@deacon.udel.edu +5 -3
@@ -219,11 +328,1430 @@ ChangeSet@1.2082.4.64, 2010-03-29 05:16:32-04:00, stenn@deacon.udel.edu +1 -0
   BitKeeper/triggers/2mirrors@1.5, 2010-03-29 05:16:08-04:00, stenn@deacon.udel.edu +3 -3
     With the new bk, the trigger push needs the -q (quiet) flag
 
-ChangeSet@1.2113, 2010-03-25 23:40:34-04:00, stenn@deacon.udel.edu +1 -0
+ChangeSet@1.2112.1.1, 2010-03-25 23:40:34-04:00, stenn@deacon.udel.edu +1 -0
   whitespace cleanup
 
   html/copyright.html@1.48, 2010-03-25 23:40:20-04:00, stenn@deacon.udel.edu +1 -1
     whitespace cleanup
+
+ChangeSet@1.2120, 2010-03-25 16:12:20+00:00, davehart@shiny.ad.hartbrothers.com +6 -0
+  ntpq-subs.c:
+    Add ntpq "mrulist limited" and "mrulist kod" support, equivalent to
+      ntpq -c "mrulist resany=0x20" and ntpq -c "mrulist resany=0x400"
+      respectively.
+    Add "r" rate limiting column to mrulist output containing a period,
+      or K for KoD sent in response to last packet, or L for no response
+      to last packet due to rate limiting.  These are redundant with bits
+      0x400 and 0x20 in the rstr column and treated differently than other
+      restrict bits, reflecting not if the restriction bit is enabled for
+      the remote address, but if RES_KOD or RES_LIMITED handling was
+      triggered by the last packet from them.
+      it.
+  ntp.h, ntpdc_ops.c, ntp_proto.c, ntp_config.c:
+    rename RES_TIMEOUT to RES_FLAKE to reflect v4 use (as a flakeway which
+      drops 10% of incoming packets from matching addresses).
+  ntp_intres.c:
+    rename RES_TIMEOUT to RES_FLAKE to reflect v4 use (as a flakeway which
+      drops 10% of incoming packets from matching addresses), eliminating
+      conflict with RES_TIMEOUT provided by some systems DNS headers.
+
+  include/ntp.h@1.177, 2010-03-25 16:12:15+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    rename RES_TIMEOUT to RES_FLAKE to reflect v4 use (as a flakeway which
+      drops 10% of incoming packets from matching addresses).
+
+  ntpd/ntp_config.c@1.257, 2010-03-25 16:12:15+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    rename RES_TIMEOUT to RES_FLAKE to reflect v4 use (as a flakeway which
+      drops 10% of incoming packets from matching addresses).
+
+  ntpd/ntp_intres.c@1.87, 2010-03-25 16:12:15+00:00, davehart@shiny.ad.hartbrothers.com +0 -3
+    rename RES_TIMEOUT to RES_FLAKE to reflect v4 use (as a flakeway which
+      drops 10% of incoming packets from matching addresses), eliminating
+      conflict with RES_TIMEOUT provided by some systems DNS headers.
+
+  ntpd/ntp_proto.c@1.309, 2010-03-25 16:12:15+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    rename RES_TIMEOUT to RES_FLAKE to reflect v4 use (as a flakeway which
+      drops 10% of incoming packets from matching addresses).
+
+  ntpdc/ntpdc_ops.c@1.66, 2010-03-25 16:12:15+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    rename RES_TIMEOUT to RES_FLAKE to reflect v4 use (as a flakeway which
+      drops 10% of incoming packets from matching addresses).
+
+  ntpq/ntpq-subs.c@1.64, 2010-03-25 16:12:15+00:00, davehart@shiny.ad.hartbrothers.com +25 -5
+    Add ntpq "mrulist limited" and "mrulist kod" support, equivalent to
+      ntpq -c "mrulist resany=0x20" and ntpq -c "mrulist resany=0x400"
+      respectively.
+    Add "r" rate limiting column to mrulist output containing a period,
+      or K for KoD sent in response to last packet, or L for no response
+      to last packet due to rate limiting.  These are redundant with bits
+      0x400 and 0x20 in the rstr column and treated differently than other
+      restrict bits, reflecting not if the restriction bit is enabled for
+      the remote address, but if RES_KOD or RES_LIMITED handling was
+      triggered by the last packet from them.
+      it.
+
+ChangeSet@1.2119, 2010-03-25 13:28:10+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  ntp_control.c:
+    use ctl_putts() instead of handrolled equivalent for read_mru_list().
+
+  ntpd/ntp_control.c@1.136, 2010-03-25 13:27:59+00:00, davehart@shiny.ad.hartbrothers.com +9 -23
+    use ctl_putts() instead of handrolled equivalent for read_mru_list().
+
+ChangeSet@1.2118, 2010-03-25 03:54:17+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  ssl_init.c:
+    MAX_MAC_LEN will always be > sizeof(keyid_t) so make max_digest_len
+      const u_long instead of u_long, initialize unconditionally.
+
+  libntp/ssl_init.c@1.7, 2010-03-25 03:53:49+00:00, davehart@shiny.ad.hartbrothers.com +7 -8
+    MAX_MAC_LEN will always be > sizeof(keyid_t) so make max_digest_len
+      const u_long instead of u_long, initialize unconditionally.
+
+ChangeSet@1.2110.1.30, 2010-03-25 01:42:06+00:00, davehart@shiny.ad.hartbrothers.com +5 -0
+  ChangeLog:
+    Catch up ChangeLog with several weeks' changes.
+  ntpq-subs.c, ntp_peer.c, ntp_io.c, ntp_proto.c:
+    debug message cleanup for integration with ntp-dev
+
+  ChangeLog@1.541.1.2, 2010-03-25 01:41:58+00:00, davehart@shiny.ad.hartbrothers.com +64 -1
+    Catch up ChangeLog with several weeks' changes.
+
+  ntpd/ntp_io.c@1.318, 2010-03-25 01:41:58+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    debug message cleanup for integration with ntp-dev
+
+  ntpd/ntp_peer.c@1.133, 2010-03-25 01:41:58+00:00, davehart@shiny.ad.hartbrothers.com +0 -3
+    debug message cleanup for integration with ntp-dev
+
+  ntpd/ntp_proto.c@1.308, 2010-03-25 01:41:58+00:00, davehart@shiny.ad.hartbrothers.com +1 -2
+    debug message cleanup for integration with ntp-dev
+
+  ntpq/ntpq-subs.c@1.63, 2010-03-25 01:41:59+00:00, davehart@shiny.ad.hartbrothers.com +13 -14
+    debug message cleanup for integration with ntp-dev
+
+ChangeSet@1.2116, 2010-03-24 22:46:41+01:00, jnperlin@hydra.localnet +1 -0
+  ntpq.c:
+    fix printf format warnings
+
+  ntpq/ntpq.c@1.100.1.1, 2010-03-24 22:46:09+01:00, jnperlin@hydra.localnet +6 -6
+    fix printf format warnings
+
+ChangeSet@1.2115, 2010-03-24 20:04:35+01:00, jnperlin@hydra.localnet +1 -0
+  ssl_init.c:
+    cast size_t expressions to u_long in formatting
+
+  libntp/ssl_init.c@1.6, 2010-03-24 20:03:48+01:00, jnperlin@hydra.localnet +3 -3
+    cast size_t expressions to u_long in formatting
+
+ChangeSet@1.2114, 2010-03-23 22:05:52+01:00, jnperlin@hydra.localnet +1 -0
+  ssl_init.c:
+    fixed printf format warnings
+
+  libntp/ssl_init.c@1.5, 2010-03-23 22:05:18+01:00, jnperlin@hydra.localnet +7 -5
+    fixed printf format warnings
+
+ChangeSet@1.2113, 2010-03-23 20:40:52+01:00, jnperlin@hydra.localnet +2 -0
+  ntp_fp.h:
+    fix prototype for 'dolfptoa'
+  dolfptoa.c:
+    avoid pointer wrap-around warnings, fixed prototype,
+    did some rework to make the implementation cleaner.
+
+  include/ntp_fp.h@1.16.1.1, 2010-03-23 20:40:14+01:00, jnperlin@hydra.localnet +1 -1
+    fix prototype for 'dolfptoa'
+
+  libntp/dolfptoa.c@1.8, 2010-03-23 20:35:47+01:00, jnperlin@hydra.localnet +62 -101
+    avoid pointer wrap-around warnings, fixed prototype,
+    did some rework to make the implementation cleaner.
+
+ChangeSet@1.2110.1.29, 2010-03-19 22:26:01+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  remove unused PEVNT_TAI
+
+  include/ntp.h@1.176, 2010-03-19 22:25:59+00:00, davehart@shiny.ad.hartbrothers.com +0 -1
+    remove unused PEVNT_TAI
+
+  libntp/statestr.c@1.20, 2010-03-19 22:25:59+00:00, davehart@shiny.ad.hartbrothers.com +0 -1
+    remove unused PEVNT_TAI
+
+ChangeSet@1.2110.1.28, 2010-03-19 04:09:05+00:00, davehart@shiny.ad.hartbrothers.com +7 -0
+  Fine-tune "ntpq -c mrulimit" row limit backoff and growth after
+    testing over WiFi and a lossy go6.net UDP tunnel.
+
+  include/ntp.h@1.175, 2010-03-19 04:09:03+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+    Add MRU_ROW_LIMIT to share between ntp_control.c and ntpq-subs.c
+
+  libntp/authusekey.c@1.9, 2010-03-19 04:09:03+00:00, davehart@shiny.ad.hartbrothers.com +3 -5
+    eliminate redundant strlen()
+
+  ntpd/ntp_control.c@1.133.1.14, 2010-03-19 04:09:03+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    Add MRU_ROW_LIMIT to share between ntp_control.c and ntpq-subs.c,
+      use CERR_BADVALUE for error when exceeded.
+
+  ntpq/ntpq-subs.c@1.62, 2010-03-19 04:09:03+00:00, davehart@shiny.ad.hartbrothers.com +11 -4
+    Add MRU_ROW_LIMIT to share between ntp_control.c and ntpq-subs.c,
+      use CERR_BADVALUE for error when exceeded.
+    Fine-tune row limit backoff and growth after testing over WiFi
+      and a lossy go6.net UDP tunnel.
+
+  ntpq/ntpq.c@1.110, 2010-03-19 04:09:04+00:00, davehart@shiny.ad.hartbrothers.com +33 -17
+    Increase timeout for 2nd and later response packets from 2s to 3s,
+      elaborate on ntpq timeout behavior in comment.
+    Improve debug output in the case of a missing packet while
+      reassembling a response, making it easier to spot the hole.
+
+  ntpq/ntpq.h@1.15, 2010-03-19 04:09:04+00:00, davehart@shiny.ad.hartbrothers.com +18 -2
+    Lower MAXFRAGS from experimental (never committed) 64 to 32, still
+      an increase over the historical value 24.  Add comments exploring
+      impact of adjusting MAXFRAGS.
+
+  ports/winnt/include/config.h@1.86, 2010-03-19 04:09:04+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    note HAVE_STRCHR is left in for libopts (NTP itself requires
+      ANSI C which mandates strchr()).
+
+ChangeSet@1.2110.1.27, 2010-03-12 21:25:12+00:00, davehart@shiny.ad.hartbrothers.com +8 -0
+  add "ntpq -c ifstats" modeled on "ntpdc -c ifstats"
+
+  include/ntp_control.h@1.45, 2010-03-12 21:25:11+00:00, davehart@shiny.ad.hartbrothers.com +2 -1
+    add "ntpq -c ifstats" modeled on "ntpdc -c ifstats"
+
+  include/ntpd.h@1.150, 2010-03-12 21:25:11+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+    add "ntpq -c ifstats" modeled on "ntpdc -c ifstats"
+
+  ntpd/ntp_control.c@1.133.1.13, 2010-03-12 21:25:11+00:00, davehart@shiny.ad.hartbrothers.com +224 -47
+    add "ntpq -c ifstats" modeled on "ntpdc -c ifstats"
+
+  ntpd/ntp_io.c@1.317, 2010-03-12 21:25:11+00:00, davehart@shiny.ad.hartbrothers.com +14 -9
+    expose sys_ifnum to ntp_control.c for ntpq -c ifstats.
+    add code to test if reset of addr_refid is needed.
+
+  ntpd/ntp_scanner.c@1.33, 2010-03-12 21:25:11+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    Do not abort on non-ASCII character in ntp.conf, ignore it.
+
+  ntpdc/ntpdc.c@1.82, 2010-03-12 21:25:11+00:00, davehart@shiny.ad.hartbrothers.com +8 -11
+    correct "passwd" to only examine arg if present.
+
+  ntpq/ntpq-subs.c@1.61, 2010-03-12 21:25:11+00:00, davehart@shiny.ad.hartbrothers.com +321 -45
+    add "ntpq -c ifstats" modeled on "ntpdc -c ifstats"
+
+  ntpq/ntpq.c@1.109, 2010-03-12 21:25:11+00:00, davehart@shiny.ad.hartbrothers.com +13 -10
+    allow ntpq -c "passwd MYPASS" as with ntpdc
+
+ChangeSet@1.2110.1.26, 2010-03-10 03:02:42+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
+  Fetch 32 rows initially in ntpq -cmrulist.
+  Tweak runtime adjustment of limit in response to errors, now
+    will grow number of rows 50% each success and cut it in
+    half each failure.
+  Sleep 0.3s instead of 1s between requests in ntpq -cmrulist
+    on platforms that have nanosleep() or similar.
+
+  configure.ac@1.481, 2010-03-10 03:02:40+00:00, davehart@shiny.ad.hartbrothers.com +34 -36
+    test for nanosleep() for ntpq -c mrulist
+
+  ntpd/ntp_control.c@1.133.1.12, 2010-03-10 03:02:41+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    change row limit for read_mru_list() to 256
+
+  ntpq/ntpq-subs.c@1.60, 2010-03-10 03:02:41+00:00, davehart@shiny.ad.hartbrothers.com +14 -5
+    Fetch 32 rows initially in ntpq -cmrulist.
+    Tweak runtime adjustment of limit in response to errors, now
+      will grow number of rows 50% each success and cut it in
+      half each failure.
+    Sleep 0.3s instead of 1s between requests in ntpq -cmrulist
+      on platforms that have nanosleep() or similar.
+
+ChangeSet@1.2110.1.25, 2010-03-09 15:32:25+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  add "sort=count", "sort=-count" options to ntpq -c mrulist.
+
+  ntpq/ntpq-subs.c@1.59, 2010-03-09 15:32:25+00:00, davehart@shiny.ad.hartbrothers.com +43 -0
+    add "sort=count", "sort=-count" options to ntpq -c mrulist.
+
+ChangeSet@1.2110.1.24, 2010-03-09 15:11:28+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  ntpq-subs.c:
+    use "sort=lstint" and "sort=-lstint" for default and reverse
+      default sort order of "ntpq -c mrulist"
+  ntp_control.c:
+    Attempt to enforce clients ignoring unknown tag=value pairs
+      in CTL_OP_READ_MRU (ntpq -c mrulist) by including a randomly-
+      named tag in the last row.
+
+  ntpd/ntp_control.c@1.133.1.11, 2010-03-09 15:11:05+00:00, davehart@shiny.ad.hartbrothers.com +36 -10
+    Attempt to enforce clients ignoring unknown tag=value pairs
+      in CTL_OP_READ_MRU (ntpq -c mrulist) by including a randomly-
+      named tag in the last row.
+
+  ntpq/ntpq-subs.c@1.58, 2010-03-09 15:11:05+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    use "sort=lstint" and "sort=-lstint" for default and reverse
+      default sort order of "ntpq -c mrulist"
+
+ChangeSet@1.2110.1.23, 2010-03-09 03:32:38+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+  add reverse sorting to ntpq -c mrulist, generalize.
+
+  include/ntp_lists.h@1.6, 2010-03-09 03:32:38+00:00, davehart@shiny.ad.hartbrothers.com +15 -4
+    add REV_ITER_DLIST_BEGIN/END macros
+
+  ntpd/refclock_neoclock4x.c@1.18, 2010-03-09 03:32:38+00:00, davehart@shiny.ad.hartbrothers.com +10 -10
+    leftover const chasing
+
+  ntpq/ntpq-subs.c@1.57, 2010-03-09 03:32:38+00:00, davehart@shiny.ad.hartbrothers.com +94 -25
+    add reverse sorting to ntpq -c mrulist, generalize.
+
+  ports/winnt/vs2008/ntpd/ntpd.vcproj@1.27, 2010-03-09 03:32:38+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+    add reference to ntpd/refclock_neoclock4x.c
+
+ChangeSet@1.2110.1.22, 2010-03-09 01:53:35+00:00, davehart@shiny.ad.hartbrothers.com +11 -0
+  Add "sort=avgint" option to mrulist: ntpq -c "mru sort=avgint".
+  Add "sort=addr" option to mrulist to sort by remote address.
+  Remove check for qsort() using other than void *, ANSI C is
+    required and it ensures void * for qsort().
+
+  configure.ac@1.480, 2010-03-09 01:53:33+00:00, davehart@shiny.ad.hartbrothers.com +0 -26
+    remove check for qsort() using other than void *, ANSI C is
+      required and it ensures void * for qsort().
+
+  include/ntp_net.h@1.7, 2010-03-09 01:53:33+00:00, davehart@shiny.ad.hartbrothers.com +5 -0
+    add SIZEOF_INADDR(family) macro to fetch sizeof either
+      struct in_addr or struct in_addr6.
+
+  ntpd/keyword-gen.c@1.10, 2010-03-09 01:53:33+00:00, davehart@shiny.ad.hartbrothers.com +10 -16
+    remove check for qsort() using other than void *, ANSI C is
+      required and it ensures void * for qsort().
+
+  ntpd/ntp_refclock.c@1.91.1.4, 2010-03-09 01:53:34+00:00, davehart@shiny.ad.hartbrothers.com +1 -29
+    remove check for qsort() using other than void *, ANSI C is
+      required and it ensures void * for qsort().
+
+  ntpd/refclock_msfees.c@1.14, 2010-03-09 01:53:34+00:00, davehart@shiny.ad.hartbrothers.com +3 -23
+    remove check for qsort() using other than void *, ANSI C is
+      required and it ensures void * for qsort().
+
+  ntpd/refclock_mx4200.c@1.26, 2010-03-09 01:53:34+00:00, davehart@shiny.ad.hartbrothers.com +0 -4
+    remove check for qsort() using other than void *, ANSI C is
+      required and it ensures void * for qsort().
+
+  ntpdc/ntpdc.c@1.81, 2010-03-09 01:53:34+00:00, davehart@shiny.ad.hartbrothers.com +22 -43
+    remove check for qsort() using other than void *, ANSI C is
+      required and it ensures void * for qsort().
+
+  ntpq/ntpq-subs.c@1.56, 2010-03-09 01:53:34+00:00, davehart@shiny.ad.hartbrothers.com +164 -17
+    Add "sort=avgint" option to mrulist: ntpq -c "mru sort=avgint".
+    Add "sort=addr" option to mrulist to sort by remote address.
+    Remove check for qsort() using other than void *, ANSI C is
+      required and it ensures void * for qsort().
+
+  ntpq/ntpq.c@1.108, 2010-03-09 01:53:34+00:00, davehart@shiny.ad.hartbrothers.com +11 -53
+    remove check for qsort() using other than void *, ANSI C is
+      required and it ensures void * for qsort().
+
+  ports/winnt/include/config.h@1.85, 2010-03-09 01:53:34+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    remove check for qsort() using other than void *, ANSI C is
+      required and it ensures void * for qsort().
+
+  util/hist.c@1.8, 2010-03-09 01:53:34+00:00, davehart@shiny.ad.hartbrothers.com +16 -19
+    remove check for qsort() using other than void *, ANSI C is
+      required and it ensures void * for qsort().
+
+ChangeSet@1.2110.1.21, 2010-03-08 21:23:01+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+  add support for filtering MRU list by interface (local addr):
+    ntpq -c "mru laddr=192.168.1.1"
+
+  include/ntpd.h@1.149, 2010-03-08 21:23:00+00:00, davehart@shiny.ad.hartbrothers.com +3 -2
+    expose ntp_io.c getinterface() for ntp_control.c use.
+
+  ntpd/ntp_control.c@1.133.1.10, 2010-03-08 21:23:00+00:00, davehart@shiny.ad.hartbrothers.com +133 -50
+    add support for filtering MRU list by interface (local addr):
+      ntpq -c "mru laddr=192.168.1.1"
+
+  ntpd/ntp_io.c@1.316, 2010-03-08 21:23:00+00:00, davehart@shiny.ad.hartbrothers.com +1 -2
+    expose ntp_io.c getinterface() for ntp_control.c use.
+
+  ntpq/ntpq-subs.c@1.55, 2010-03-08 21:23:01+00:00, davehart@shiny.ad.hartbrothers.com +7 -5
+    add support for filtering MRU list by interface (local addr):
+      ntpq -c "mru laddr=192.168.1.1"
+
+ChangeSet@1.2110.1.20, 2010-03-08 10:44:22+00:00, davehart@shiny.ad.hartbrothers.com +10 -0
+  add "ntpq -c sysstats" modeled on "ntpdc -c sysstats"
+
+  include/ntp_control.h@1.44, 2010-03-08 10:44:21+00:00, davehart@shiny.ad.hartbrothers.com +13 -2
+    expose variables needed for "ntpq -c sysstats" similar to "ntpdc -c sysstats"
+
+  ntpd/ntp_control.c@1.133.1.9, 2010-03-08 10:44:21+00:00, davehart@shiny.ad.hartbrothers.com +74 -20
+    expose variables needed for "ntpq -c sysstats" similar to "ntpdc -c sysstats"
+
+  ntpd/ntp_proto.c@1.307, 2010-03-08 10:44:21+00:00, davehart@shiny.ad.hartbrothers.com +2 -1
+    reset sys_kodsent in proto_clr_stats().
+
+  ntpd/ntp_request.c@1.90, 2010-03-08 10:44:21+00:00, davehart@shiny.ad.hartbrothers.com +0 -3
+    remove no longer relevant comment
+
+  ntpq/libntpq.c@1.4, 2010-03-08 10:44:21+00:00, davehart@shiny.ad.hartbrothers.com +106 -95
+    const chasing
+
+  ntpq/libntpq.h@1.4, 2010-03-08 10:44:21+00:00, davehart@shiny.ad.hartbrothers.com +25 -17
+    const chasing
+
+  ntpq/libntpq_subs.c@1.3, 2010-03-08 10:44:21+00:00, davehart@shiny.ad.hartbrothers.com +14 -3
+    const chasing
+
+  ntpq/ntpq-subs.c@1.54, 2010-03-08 10:44:21+00:00, davehart@shiny.ad.hartbrothers.com +143 -48
+    add "ntpq -c sysstats" modeled on "ntpdc -c sysstats"
+
+  ntpq/ntpq.c@1.107, 2010-03-08 10:44:22+00:00, davehart@shiny.ad.hartbrothers.com +26 -23
+    const chasing
+
+  ntpq/ntpq.h@1.14, 2010-03-08 10:44:22+00:00, davehart@shiny.ad.hartbrothers.com +4 -4
+    const chasing
+
+ChangeSet@1.2110.1.19, 2010-03-07 20:01:29+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  rate limit ntpdate packets to 2s interval per server to stay
+    within the "restrict ... limited" default limit set by
+    "discard minimum 1", plus 1s of enforcement slop.
+  Respect KoD rate-limiting responses from ntpd.
+  
+
+  ntpdate/ntpdate.c@1.73, 2010-03-07 20:01:29+00:00, davehart@shiny.ad.hartbrothers.com +39 -11
+    rate limit ntpdate packets to 2s interval per server to stay
+      within the "restrict ... limited" default limit set by
+      "discard minimum 1", plus 1s of enforcement slop.
+    Respect KoD rate-limiting responses from ntpd.
+    
+
+  ntpdate/ntpdate.h@1.11, 2010-03-07 20:01:29+00:00, davehart@shiny.ad.hartbrothers.com +2 -1
+    rate limit ntpdate packets to 2s interval per server to stay
+      within the "restrict ... limited" default limit set by
+      "discard minimum 1", plus 1s of enforcement slop.
+
+ChangeSet@1.2110.1.18, 2010-03-07 17:36:49+00:00, davehart@shiny.ad.hartbrothers.com +8 -0
+  ntp_util.c:
+    whitespace only
+  ntpq-subs.c:
+    split mrulist() into mrulist() and collect_mru_list().
+    adjust row limit based on success/failure of individual
+      queries for collect_mru_list().
+    revert to one MRU entry per IP address regardless of port.
+  ntp_monitor.c:
+    correct MRU list preemption logic.
+    revert to one MRU entry per IP address regardless of port.
+  ntp_control.h, ntp_control.c:
+    add "kod_sent" non-default system variable for sys_kodsent.
+  config.h:
+    #undef STRINGIZE after use to avoid accidentally using on
+      Windows without noticing it's specific to Windows port.
+  ntpq.c, ntpq.h:
+    move definitions to ntpq.h needed by mrulist code in
+      ntpq-subs.h.
+
+  include/ntp_control.h@1.43, 2010-03-07 17:36:48+00:00, davehart@shiny.ad.hartbrothers.com +11 -9
+    add "kod_sent" non-default system variable for sys_kodsent.
+
+  ntpd/ntp_control.c@1.133.1.8, 2010-03-07 17:36:48+00:00, davehart@shiny.ad.hartbrothers.com +66 -21
+    add "kod_sent" non-default system variable for sys_kodsent.
+
+  ntpd/ntp_monitor.c@1.33, 2010-03-07 17:36:48+00:00, davehart@shiny.ad.hartbrothers.com +10 -3
+    correct MRU list preemption logic.
+    revert to one MRU entry per IP address regardless of port.
+
+  ntpd/ntp_util.c@1.81, 2010-03-07 17:36:48+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    whitespace only
+
+  ntpq/ntpq-subs.c@1.53, 2010-03-07 17:36:48+00:00, davehart@shiny.ad.hartbrothers.com +155 -46
+    split mrulist() into mrulist() and collect_mru_list().
+    adjust row limit based on success/failure of individual
+      queries for collect_mru_list().
+    revert to one MRU entry per IP address regardless of port.
+
+  ntpq/ntpq.c@1.106, 2010-03-07 17:36:48+00:00, davehart@shiny.ad.hartbrothers.com +4 -9
+    move definitions to ntpq.h needed by mrulist code in
+      ntpq-subs.h.
+
+  ntpq/ntpq.h@1.13, 2010-03-07 17:36:48+00:00, davehart@shiny.ad.hartbrothers.com +11 -1
+    move definitions to ntpq.h needed by mrulist code in
+      ntpq-subs.h.
+
+  ports/winnt/include/config.h@1.84, 2010-03-07 17:36:48+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+    #undef STRINGIZE after use to avoid accidentally using on
+      Windows without noticing it's specific to Windows port.
+
+ChangeSet@1.2110.1.17, 2010-03-05 19:22:27+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  ntpq-subs.c:
+    use ========= instead of --------- to separate column headings
+      from rows in mrulist().
+  ntp_config.c:
+    unpeer by hostname, needed to unpeer pool prototype
+      assocations.
+
+  ntpd/ntp_config.c@1.256, 2010-03-05 19:22:17+00:00, davehart@shiny.ad.hartbrothers.com +72 -78
+    unpeer by hostname, needed to unpeer pool prototype
+      assocations.
+
+  ntpq/ntpq-subs.c@1.52, 2010-03-05 19:22:17+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    use ========= instead of --------- to separate column headings
+      from rows in mrulist().
+
+ChangeSet@1.2110.1.16, 2010-03-04 17:17:47+00:00, davehart@shiny.ad.hartbrothers.com +13 -0
+  new "ntpq -c mrulist" along lines of "ntpdc -c monlist" but
+    without being limited to a single request response, and
+    designed to work reliably even with an arbitrarily large
+    MRU list. 
+
+  include/ntp_fp.h@1.18, 2010-03-04 17:17:44+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    add sptoa()/sockporttoa() similar to stoa()/socktoa().
+
+  include/ntp_lists.h@1.5, 2010-03-04 17:17:45+00:00, davehart@shiny.ad.hartbrothers.com +27 -5
+    add NEXT_DLIST(), PREV_DLIST(), LINK_TAIL_DLIST() macros.
+
+  include/ntp_stdlib.h@1.44, 2010-03-04 17:17:45+00:00, davehart@shiny.ad.hartbrothers.com +3 -1
+    move sock_hash from ntpd/ntp_util.c to libntp/socktoa.c so
+      ntpq can use it.
+    add sptoa()/sockporttoa() similar to stoa()/socktoa().
+
+  include/ntpd.h@1.148, 2010-03-04 17:17:45+00:00, davehart@shiny.ad.hartbrothers.com +6 -2
+    move sock_hash from ntpd/ntp_util.c to libntp/socktoa.c so
+      ntpq can use it.
+    expose MON_HASH(), mon_hash[] so ntp_control.c can use them.
+
+  libntp/decodenetnum.c@1.12, 2010-03-04 17:17:45+00:00, davehart@shiny.ad.hartbrothers.com +40 -8
+    support 1.2.3.4:123, [2001::1]:123 port specification in
+      decodenetnum().
+
+  libntp/socktoa.c@1.12, 2010-03-04 17:17:45+00:00, davehart@shiny.ad.hartbrothers.com +72 -2
+    move sock_hash from ntpd/ntp_util.c to libntp/socktoa.c so
+      ntpq can use it.
+    add sptoa()/sockporttoa() similar to stoa()/socktoa().
+
+  ntpd/ntp_control.c@1.133.1.7, 2010-03-04 17:17:45+00:00, davehart@shiny.ad.hartbrothers.com +221 -21
+    read_mru_list() for ntpq -c mrulist
+
+  ntpd/ntp_monitor.c@1.32, 2010-03-04 17:17:45+00:00, davehart@shiny.ad.hartbrothers.com +2 -5
+    expose MON_HASH(), mon_hash[] so ntp_control.c can use them.
+
+  ntpd/ntp_restrict.c@1.32, 2010-03-04 17:17:45+00:00, davehart@shiny.ad.hartbrothers.com +2 -1
+    correct type for restrictions() local flags to u_short.
+
+  ntpd/ntp_util.c@1.80, 2010-03-04 17:17:45+00:00, davehart@shiny.ad.hartbrothers.com +4 -50
+    move sock_hash from ntpd/ntp_util.c to libntp/socktoa.c so
+      ntpq can use it.
+    use memcpy() instead of memmove() when buffers can't overlap.
+
+  ntpq/ntpq-subs.c@1.51, 2010-03-04 17:17:45+00:00, davehart@shiny.ad.hartbrothers.com +430 -28
+    new "ntpq -c mrulist" along lines of "ntpdc -c monlist" but
+      without being limited to a single request response, and
+      designed to work reliably even with an arbitrarily large
+      MRU list. 
+
+  ntpq/ntpq.c@1.105, 2010-03-04 17:17:45+00:00, davehart@shiny.ad.hartbrothers.com +100 -51
+    bump MAXFRAGS from 24 to 64 to enable larger responses.
+    add show_error_msg(), doqueryex() for mrulist().
+    
+
+  ntpq/ntpq.h@1.12, 2010-03-04 17:17:45+00:00, davehart@shiny.ad.hartbrothers.com +11 -2
+    add show_error_msg(), doqueryex() for mrulist().
+
+ChangeSet@1.2110.1.15, 2010-03-02 10:00:34+00:00, davehart@shiny.ad.hartbrothers.com +23 -0
+  ntp_net.h:
+    add ADDR_EQ_PORT() like SOCK_EQ() but testing port as well.
+  ntpq-subs.c, ntpq.c, ntpq.h:
+    use associd_t for association IDs instead of int.
+  systime.c, ntp_fp.h:
+    provide callback from step_systime() to allow ntpd to flush
+      the MRU list when stepping the clock.
+  ntp_proto.c:
+    use u_short for restrict_mask type in receive(), expand comment.
+  ntp_util.c:
+    Use callback from step_systime() to flush the MRU list when
+      stepping the clock.  Previously the MRU timestamps were in
+      current_time units, which are monotonically increasing despite
+      any steps of the system clock.  Now they are l_fp and subject
+      to steps, so flush the MRU list when the clock is stepped to
+      ensure all timestamps are comparable.
+  recvbuff.h:
+    whitespace only
+  ntp_request.c:
+    prepare for ntpq mrulist command by converting MRU entry timestamps
+      from current_time (seconds) to l_fp (32:32 NTP standard).
+    rename info_monitor, info_monitor_1 fields to reflect their
+      use, lasttime -> avg_int and firsttime -> last_int.
+  ntp_iocompletionport.c:
+    validate recv_srcadr_len against (now smaller) sockaddr_u size.
+  ntp_control.h:
+    add CTL_OP_READMRU for ntpq mrulist
+  ntpd.h:
+    add prototype for win_time_stepped(), previously called
+      time_stepped().
+  ntp_control.c:
+    add CTL_OP_READ_MRU for ntpq -c mrulist
+  layout.std, ntpdc_ops.c:
+    rename info_monitor, info_monitor_1 fields to reflect their
+      use, lasttime -> avg_int and firsttime -> last_int
+  ntp_restrict.c:
+    wrap a long line
+  ntp_monitor.c, ntp.h:
+    prepare for ntpq mrulist command by converting MRU entry timestamps
+      from current_time (seconds) to l_fp (32:32 NTP standard).
+  ntp_request.h:
+    rename info_monitor, info_monitor_1 fields to reflect their
+      use, lasttime -> avg_int and firsttime -> last_int.
+  SetSystemTime.c, nt_clockstuff.c, clockstuff.h:
+    rename time_stepped() callback to win_time_stepped(), move
+      callback registration from Windows port to portable code
+      now that ntpd/ntp_util.c is using it.
+
+  include/ntp.h@1.174, 2010-03-02 10:00:27+00:00, davehart@shiny.ad.hartbrothers.com +7 -7
+    prepare for ntpq mrulist command by converting MRU entry timestamps
+      from current_time (seconds) to l_fp (32:32 NTP standard).
+
+  include/ntp_control.h@1.42, 2010-03-02 10:00:27+00:00, davehart@shiny.ad.hartbrothers.com +5 -4
+    add CTL_OP_READMRU for ntpq mrulist
+
+  include/ntp_fp.h@1.17, 2010-03-02 10:00:28+00:00, davehart@shiny.ad.hartbrothers.com +8 -2
+    provide callback from step_systime() to allow ntpd to flush
+      the MRU list when stepping the clock.
+
+  include/ntp_net.h@1.6, 2010-03-02 10:00:28+00:00, davehart@shiny.ad.hartbrothers.com +7 -1
+    add ADDR_EQ_PORT() like SOCK_EQ() but testing port as well.
+
+  include/ntp_request.h@1.41, 2010-03-02 10:00:28+00:00, davehart@shiny.ad.hartbrothers.com +5 -5
+    rename info_monitor, info_monitor_1 fields to reflect their
+      use, lasttime -> avg_int and firsttime -> last_int.
+
+  include/ntpd.h@1.147, 2010-03-02 10:00:28+00:00, davehart@shiny.ad.hartbrothers.com +7 -3
+    add prototype for win_time_stepped(), previously called
+      time_stepped().
+
+  include/recvbuff.h@1.21, 2010-03-02 10:00:28+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    whitespace only
+
+  libntp/systime.c@1.50, 2010-03-02 10:00:28+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
+    provide callback from step_systime() to allow ntpd to flush
+      the MRU list when stepping the clock.
+
+  ntpd/ntp_control.c@1.133.1.6, 2010-03-02 10:00:28+00:00, davehart@shiny.ad.hartbrothers.com +93 -3
+    add CTL_OP_READ_MRU for ntpq -c mrulist
+
+  ntpd/ntp_monitor.c@1.31, 2010-03-02 10:00:28+00:00, davehart@shiny.ad.hartbrothers.com +117 -102
+    prepare for ntpq mrulist command by converting MRU entry timestamps
+      from current_time (seconds) to l_fp (32:32 NTP standard).
+
+  ntpd/ntp_proto.c@1.306, 2010-03-02 10:00:28+00:00, davehart@shiny.ad.hartbrothers.com +3 -1
+    use u_short for restrict_mask type in receive(), expand comment.
+
+  ntpd/ntp_request.c@1.89, 2010-03-02 10:00:28+00:00, davehart@shiny.ad.hartbrothers.com +23 -13
+    prepare for ntpq mrulist command by converting MRU entry timestamps
+      from current_time (seconds) to l_fp (32:32 NTP standard).
+    rename info_monitor, info_monitor_1 fields to reflect their
+      use, lasttime -> avg_int and firsttime -> last_int.
+
+  ntpd/ntp_restrict.c@1.31, 2010-03-02 10:00:28+00:00, davehart@shiny.ad.hartbrothers.com +3 -2
+    wrap a long line
+
+  ntpd/ntp_util.c@1.79, 2010-03-02 10:00:28+00:00, davehart@shiny.ad.hartbrothers.com +37 -8
+    Use callback from step_systime() to flush the MRU list when
+      stepping the clock.  Previously the MRU timestamps were in
+      current_time units, which are monotonically increasing despite
+      any steps of the system clock.  Now they are l_fp and subject
+      to steps, so flush the MRU list when the clock is stepped to
+      ensure all timestamps are comparable.
+
+  ntpdc/layout.std@1.10, 2010-03-02 10:00:28+00:00, davehart@shiny.ad.hartbrothers.com +4 -4
+    rename info_monitor, info_monitor_1 fields to reflect their
+      use, lasttime -> avg_int and firsttime -> last_int
+
+  ntpdc/ntpdc_ops.c@1.65, 2010-03-02 10:00:28+00:00, davehart@shiny.ad.hartbrothers.com +4 -4
+    rename info_monitor, info_monitor_1 fields to reflect their
+      use, lasttime -> avg_int and firsttime -> last_int
+
+  ntpq/ntpq-subs.c@1.50, 2010-03-02 10:00:29+00:00, davehart@shiny.ad.hartbrothers.com +25 -22
+    use associd_t for association IDs instead of int.
+
+  ntpq/ntpq.c@1.104, 2010-03-02 10:00:29+00:00, davehart@shiny.ad.hartbrothers.com +4 -4
+    use associd_t for association IDs instead of int.
+
+  ntpq/ntpq.h@1.11, 2010-03-02 10:00:29+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    use associd_t for association IDs instead of int.
+
+  ports/winnt/include/clockstuff.h@1.11, 2010-03-02 10:00:29+00:00, davehart@shiny.ad.hartbrothers.com +0 -11
+    rename time_stepped() callback to win_time_stepped(), move
+      callback registration from Windows port to portable code
+      now that ntpd/ntp_util.c is using it.
+
+  ports/winnt/libntp/SetSystemTime.c@1.9, 2010-03-02 10:00:29+00:00, davehart@shiny.ad.hartbrothers.com +0 -5
+    rename time_stepped() callback to win_time_stepped(), move
+      callback registration from Windows port to portable code
+      now that ntpd/ntp_util.c is using it.
+
+  ports/winnt/ntpd/nt_clockstuff.c@1.42, 2010-03-02 10:00:29+00:00, davehart@shiny.ad.hartbrothers.com +3 -9
+    rename time_stepped() callback to win_time_stepped(), move
+      callback registration from Windows port to portable code
+      now that ntpd/ntp_util.c is using it.
+
+  ports/winnt/ntpd/ntp_iocompletionport.c@1.53, 2010-03-02 10:00:29+00:00, davehart@shiny.ad.hartbrothers.com +9 -5
+    validate recv_srcadr_len against (now smaller) sockaddr_u size.
+
+ChangeSet@1.2110.1.14, 2010-03-01 12:47:33+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
+  determine MRU hash table size at runtime, attempting to
+    average 8 entries per bucket at mru_maxdepth capacity.
+  adjust defaults for mru_maxdepth, mru_initmem.
+
+  include/ntp.h@1.173, 2010-03-01 12:47:33+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    determine MRU hash table size at runtime, attempting to
+      average 8 entries per bucket at mru_maxdepth capacity.
+
+  ntpd/ntp_monitor.c@1.30, 2010-03-01 12:47:33+00:00, davehart@shiny.ad.hartbrothers.com +32 -10
+    determine MRU hash table size at runtime, attempting to
+      average 8 entries per bucket at mru_maxdepth capacity.
+    adjust defaults for mru_maxdepth, mru_initmem.
+
+  ntpd/ntp_util.c@1.78, 2010-03-01 12:47:33+00:00, davehart@shiny.ad.hartbrothers.com +2 -3
+    determine MRU hash table size at runtime, attempting to
+      average 8 entries per bucket at mru_maxdepth capacity.
+
+ChangeSet@1.2110.1.13, 2010-03-01 09:20:28+00:00, davehart@shiny.ad.hartbrothers.com +8 -0
+  remove bloated (128 byte on win32) sockaddr_storage from sockaddr_u
+    union since the largest we use is sockaddr_in6 (28 bytes on win32).
+
+  include/ntp_net.h@1.5, 2010-03-01 09:20:27+00:00, davehart@shiny.ad.hartbrothers.com +2 -3
+    remove bloated (128 byte on win32) sockaddr_storage from sockaddr_u
+      union since the largest we use is sockaddr_in6 (28 bytes on win32).
+
+  ntpd/ntp_config.c@1.255, 2010-03-01 09:20:27+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    remove bloated (128 byte on win32) sockaddr_storage from sockaddr_u
+      union since the largest we use is sockaddr_in6 (28 bytes on win32).
+
+  ntpd/ntp_io.c@1.315, 2010-03-01 09:20:27+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    remove bloated (128 byte on win32) sockaddr_storage from sockaddr_u
+      union since the largest we use is sockaddr_in6 (28 bytes on win32).
+
+  ntpd/ntp_monitor.c@1.29, 2010-03-01 09:20:27+00:00, davehart@shiny.ad.hartbrothers.com +5 -0
+    comment about mon_age implementation
+
+  ntpd/ntp_request.c@1.88, 2010-03-01 09:20:27+00:00, davehart@shiny.ad.hartbrothers.com +10 -10
+    remove bloated (128 byte on win32) sockaddr_storage from sockaddr_u
+      union since the largest we use is sockaddr_in6 (28 bytes on win32).
+
+  ntpd/refclock_nmea.c@1.48, 2010-03-01 09:20:27+00:00, davehart@shiny.ad.hartbrothers.com +0 -2
+    remove unused macros left over from distinct PPSAPI code
+
+  ntpdc/ntpdc_ops.c@1.64, 2010-03-01 09:20:27+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    remove bloated (128 byte on win32) sockaddr_storage from sockaddr_u
+      union since the largest we use is sockaddr_in6 (28 bytes on win32).
+
+  sntp/networking.c@1.32, 2010-03-01 09:20:27+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    remove bloated (128 byte on win32) sockaddr_storage from sockaddr_u
+      union since the largest we use is sockaddr_in6 (28 bytes on win32).
+
+ChangeSet@1.2110.1.12, 2010-02-27 23:34:22+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  ntp_proto.c:
+    broadcast demobilization fix from DLM
+
+  ntpd/ntp_proto.c@1.305, 2010-02-27 23:34:15+00:00, davehart@shiny.ad.hartbrothers.com +4 -4
+    broadcast demobilization fix from DLM
+
+ChangeSet@1.2110.1.11, 2010-02-27 22:48:05+00:00, davehart@shiny.ad.hartbrothers.com +14 -0
+  Many files:
+    more MRU knobs
+  ntp_keyword.h, keyword-gen-utd:
+    keyword-gen.c product
+  ntp_parser.h, ntp_parser.c:
+    ntp_parser.y product
+  ntp_request.c:
+    limit 'ntpdc -c monlist' response to most recent 600 entries, to
+      be consistent with the historical maximum MRU list size.
+  ntpq-subs.c:
+    read up to three named variables at once:
+      ntpq -c "rv 0 version mru_depth mru_maxmem"
+
+  include/ntp_control.h@1.41, 2010-02-27 22:48:01+00:00, davehart@shiny.ad.hartbrothers.com +17 -9
+    more MRU knobs
+
+  include/ntpd.h@1.146, 2010-02-27 22:48:01+00:00, davehart@shiny.ad.hartbrothers.com +11 -7
+    more MRU knobs
+
+  ntpd/complete.conf@1.6, 2010-02-27 22:48:01+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    more MRU knobs
+
+  ntpd/keyword-gen-utd@1.5, 2010-02-27 22:48:01+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    keyword-gen.c product
+
+  ntpd/keyword-gen.c@1.9, 2010-02-27 22:48:01+00:00, davehart@shiny.ad.hartbrothers.com +5 -1
+    more MRU knobs
+
+  ntpd/ntp_config.c@1.254, 2010-02-27 22:48:01+00:00, davehart@shiny.ad.hartbrothers.com +48 -15
+    more MRU knobs
+
+  ntpd/ntp_control.c@1.133.1.5, 2010-02-27 22:48:01+00:00, davehart@shiny.ad.hartbrothers.com +59 -9
+    more MRU knobs
+
+  ntpd/ntp_keyword.h@1.7, 2010-02-27 22:48:01+00:00, davehart@shiny.ad.hartbrothers.com +679 -657
+    keyword-gen.c product
+
+  ntpd/ntp_monitor.c@1.28, 2010-02-27 22:48:01+00:00, davehart@shiny.ad.hartbrothers.com +145 -96
+    more MRU knobs
+
+  ntpd/ntp_parser.c@1.55, 2010-02-27 22:48:01+00:00, davehart@shiny.ad.hartbrothers.com +992 -949
+    ntp_parser.y product
+
+  ntpd/ntp_parser.h@1.35, 2010-02-27 22:48:01+00:00, davehart@shiny.ad.hartbrothers.com +247 -239
+    ntp_parser.y product
+
+  ntpd/ntp_parser.y@1.50, 2010-02-27 22:48:02+00:00, davehart@shiny.ad.hartbrothers.com +12 -4
+    more MRU knobs
+
+  ntpd/ntp_request.c@1.87, 2010-02-27 22:48:02+00:00, davehart@shiny.ad.hartbrothers.com +8 -2
+    limit 'ntpdc -c monlist' response to most recent 600 entries, to
+      be consistent with the historical maximum MRU list size.
+
+  ntpq/ntpq-subs.c@1.49, 2010-02-27 22:48:02+00:00, davehart@shiny.ad.hartbrothers.com +12 -7
+    read up to three named variables at once:
+      ntpq -c "rv 0 version mru_depth mru_maxmem"
+
+ChangeSet@1.2110.1.10, 2010-02-27 10:03:55+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
+  keyword-gen.c:
+    include matching keyword prefix in ntp_keyword.h state entry comment.
+
+  ntpd/keyword-gen-utd@1.4, 2010-02-27 10:03:54+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    product of keyword-gen.c
+
+  ntpd/keyword-gen.c@1.8, 2010-02-27 10:03:54+00:00, davehart@shiny.ad.hartbrothers.com +70 -13
+    include matching keyword prefix in ntp_keyword.h state entry comment.
+
+  ntpd/ntp_keyword.h@1.6, 2010-02-27 10:03:54+00:00, davehart@shiny.ad.hartbrothers.com +579 -579
+    product of keyword-gen.c
+
+ChangeSet@1.2110.1.9, 2010-02-27 08:47:04+00:00, davehart@shiny.ad.hartbrothers.com +13 -0
+  ntp_parser.h, ntp_parser.c:
+    product of ntp_parser.y
+  keyword-gen-utd:
+    accompanies new keyword-gen.c and ntp_keyword.h
+  Many files:
+    add MRU sizing knobs:
+      mru mindepth 600 maxage 64 maxdepth 1024 maxmem 4096
+    entries beyond 600 which are older than 64s are reclaimed,
+      with a hard upper limit on the size of maxdepth (indirectly
+      set by maxmem).
+  ntp.h, ntp_request.c:
+    remove redundant storage of port in mon_entry, rmtadr has it.
+  ntp_keyword.h:
+    product of keyword-gen.c
+
+  include/ntp.h@1.172, 2010-02-27 08:47:02+00:00, davehart@shiny.ad.hartbrothers.com +0 -1
+    remove redundant storage of port in mon_entry, rmtadr has it.
+
+  include/ntp_config.h@1.71, 2010-02-27 08:47:02+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    add MRU sizing knobs:
+      mru mindepth 600 maxage 64 maxdepth 1024 maxmem 4096
+    entries beyond 600 which are older than 64s are reclaimed,
+      with a hard upper limit on the size of maxdepth (indirectly
+      set by maxmem).
+
+  include/ntpd.h@1.145, 2010-02-27 08:47:02+00:00, davehart@shiny.ad.hartbrothers.com +4 -1
+    add MRU sizing knobs:
+      mru mindepth 600 maxage 64 maxdepth 1024 maxmem 4096
+    entries beyond 600 which are older than 64s are reclaimed,
+      with a hard upper limit on the size of maxdepth (indirectly
+      set by maxmem).
+
+  ntpd/complete.conf@1.5, 2010-02-27 08:47:02+00:00, davehart@shiny.ad.hartbrothers.com +2 -1
+    add MRU sizing knobs:
+      mru mindepth 600 maxage 64 maxdepth 1024 maxmem 4096
+    entries beyond 600 which are older than 64s are reclaimed,
+      with a hard upper limit on the size of maxdepth (indirectly
+      set by maxmem).
+
+  ntpd/keyword-gen-utd@1.3, 2010-02-27 08:47:02+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    accompanies new keyword-gen.c and ntp_keyword.h
+
+  ntpd/keyword-gen.c@1.7, 2010-02-27 08:47:02+00:00, davehart@shiny.ad.hartbrothers.com +6 -0
+    add MRU sizing knobs:
+      mru mindepth 600 maxage 64 maxdepth 1024 maxmem 4096
+    entries beyond 600 which are older than 64s are reclaimed,
+      with a hard upper limit on the size of maxdepth (indirectly
+      set by maxmem).
+
+  ntpd/ntp_config.c@1.253, 2010-02-27 08:47:02+00:00, davehart@shiny.ad.hartbrothers.com +67 -4
+    add MRU sizing knobs:
+      mru mindepth 600 maxage 64 maxdepth 1024 maxmem 4096
+    entries beyond 600 which are older than 64s are reclaimed,
+      with a hard upper limit on the size of maxdepth (indirectly
+      set by maxmem).
+
+  ntpd/ntp_keyword.h@1.5, 2010-02-27 08:47:02+00:00, davehart@shiny.ad.hartbrothers.com +534 -513
+    product of keyword-gen.c
+
+  ntpd/ntp_monitor.c@1.27, 2010-02-27 08:47:02+00:00, davehart@shiny.ad.hartbrothers.com +61 -32
+    add MRU sizing knobs:
+      mru mindepth 600 maxage 64 maxdepth 1024 maxmem 4096
+    entries beyond 600 which are older than 64s are reclaimed,
+      with a hard upper limit on the size of maxdepth (indirectly
+      set by maxmem).
+
+  ntpd/ntp_parser.c@1.54, 2010-02-27 08:47:02+00:00, davehart@shiny.ad.hartbrothers.com +973 -897
+    product of ntp_parser.y
+
+  ntpd/ntp_parser.h@1.34, 2010-02-27 08:47:03+00:00, davehart@shiny.ad.hartbrothers.com +191 -181
+    product of ntp_parser.y
+
+  ntpd/ntp_parser.y@1.49, 2010-02-27 08:47:03+00:00, davehart@shiny.ad.hartbrothers.com +25 -0
+    add MRU sizing knobs:
+      mru mindepth 600 maxage 64 maxdepth 1024 maxmem 4096
+    entries beyond 600 which are older than 64s are reclaimed,
+      with a hard upper limit on the size of maxdepth (indirectly
+      set by maxmem).
+
+  ntpd/ntp_request.c@1.86, 2010-02-27 08:47:03+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    remove redundant storage of port in mon_entry, rmtadr has it.
+
+ChangeSet@1.2110.1.8, 2010-02-26 22:59:36+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  ntp_config.c:
+    Dr. Mills doesn't like depending on && not evaluating right side
+      if left is false.
+  ntp_proto.c:
+    timeout demobilizations don't seem to be working for preemptibles.
+
+  ntpd/ntp_config.c@1.252, 2010-02-26 22:59:32+00:00, davehart@shiny.ad.hartbrothers.com +10 -6
+    Dr. Mills doesn't like depending on && not evaluating right side
+      if left is false.
+
+  ntpd/ntp_proto.c@1.304, 2010-02-26 22:59:32+00:00, davehart@shiny.ad.hartbrothers.com +21 -12
+    timeout demobilizations don't seem to be working for preemptibles.
+
+ChangeSet@1.2110.1.7, 2010-02-26 15:53:49+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
+  ntpq-subs.c:
+    just the facts, ma'am
+  ntp_control.c:
+    DLM changes via email notes
+  ntp_proto.c:
+    DLM changes via email notes.
+    remove "unlucky" experiment to track DLM changes.
+
+  ntpd/ntp_control.c@1.133.1.4, 2010-02-26 15:53:39+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    DLM changes via email notes
+
+  ntpd/ntp_proto.c@1.303, 2010-02-26 15:53:39+00:00, davehart@shiny.ad.hartbrothers.com +15 -42
+    DLM changes via email notes.
+    remove "unlucky" experiment to track DLM changes.
+
+  ntpq/ntpq-subs.c@1.48, 2010-02-26 15:53:39+00:00, davehart@shiny.ad.hartbrothers.com +1 -2
+    just the facts, ma'am
+
+ChangeSet@1.2110.1.6, 2010-02-25 15:45:14+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  nt_clockstuff.c:
+    suppress reports of interpolated clock "would have" gone backward
+      for less than 10 usec.
+  ntp_proto.c:
+    experiment with turning over 50% of preemptibles daily
+
+  ntpd/ntp_proto.c@1.302, 2010-02-25 15:45:06+00:00, davehart@shiny.ad.hartbrothers.com +26 -2
+    experiment with turning over 50% of preemptibles daily
+
+  ports/winnt/ntpd/nt_clockstuff.c@1.41, 2010-02-25 15:45:06+00:00, davehart@shiny.ad.hartbrothers.com +23 -19
+    suppress reports of interpolated clock "would have" gone backward
+      for less than 10 usec.
+
+ChangeSet@1.2110.1.5, 2010-02-25 06:34:58+00:00, davehart@shiny.ad.hartbrothers.com +8 -0
+  ntp_proto.c:
+    cull from preemptibles randomly as well as when unreachable
+      long enough.
+  work_thread.c:
+    increase blocking_workitems max queue depth to 128 on Windows
+  ntp_control.h:
+    whitespace only
+  nt_clockstuff.c:
+    expose performance counter drift as ctr_frequency sysvar.
+  ntp_intres.c, ntpd.h, ntp_config.c:
+    add retry argument to getaddrinfo_sometime() so that pool lookups
+      can be one-shot.
+  ntp_peer.c:
+    test speer->flags not peer->flags for FLAG_PREEMPT
+
+  include/ntp_control.h@1.40, 2010-02-25 06:34:51+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    whitespace only
+
+  include/ntpd.h@1.144, 2010-02-25 06:34:51+00:00, davehart@shiny.ad.hartbrothers.com +4 -2
+    add retry argument to getaddrinfo_sometime() so that pool lookups
+      can be one-shot.
+
+  ntpd/ntp_config.c@1.251, 2010-02-25 06:34:51+00:00, davehart@shiny.ad.hartbrothers.com +14 -6
+    add retry argument to getaddrinfo_sometime() so that pool lookups
+      can be one-shot.
+
+  ntpd/ntp_intres.c@1.86, 2010-02-25 06:34:51+00:00, davehart@shiny.ad.hartbrothers.com +2 -3
+    add retry argument to getaddrinfo_sometime() so that pool lookups
+      can be one-shot.
+
+  ntpd/ntp_peer.c@1.132, 2010-02-25 06:34:51+00:00, davehart@shiny.ad.hartbrothers.com +11 -7
+    test speer->flags not peer->flags for FLAG_PREEMPT
+
+  ntpd/ntp_proto.c@1.301, 2010-02-25 06:34:51+00:00, davehart@shiny.ad.hartbrothers.com +17 -11
+    cull from preemptibles randomly as well as when unreachable
+      long enough.
+
+  ntpd/work_thread.c@1.2, 2010-02-25 06:34:51+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    increase blocking_workitems max queue depth to 128 on Windows
+
+  ports/winnt/ntpd/nt_clockstuff.c@1.40, 2010-02-25 06:34:51+00:00, davehart@shiny.ad.hartbrothers.com +24 -16
+    expose performance counter drift as ctr_frequency sysvar.
+
+ChangeSet@1.2110.1.4, 2010-02-24 06:25:27+00:00, davehart@shiny.ad.hartbrothers.com +5 -0
+  new peer variable "srchost" shown instead of 0.0.0.0 srcadr in
+    ntpq peers billboard for .POOL. prototype associations.
+
+  include/ntp_control.h@1.39, 2010-02-24 06:25:26+00:00, davehart@shiny.ad.hartbrothers.com +9 -8
+    new peer variable "srchost" shown instead of 0.0.0.0 srcadr in
+      ntpq peers billboard for .POOL. prototype associations.
+
+  ntpd/ntp_control.c@1.133.1.3, 2010-02-24 06:25:26+00:00, davehart@shiny.ad.hartbrothers.com +16 -8
+    new peer variable "srchost" shown instead of 0.0.0.0 srcadr in
+      ntpq peers billboard for .POOL. prototype associations.
+
+  ntpd/ntp_peer.c@1.131, 2010-02-24 06:25:26+00:00, davehart@shiny.ad.hartbrothers.com +8 -3
+    ignore "preempt" on manycastclient, pool prototype associations.
+
+  ntpq/ntpq-subs.c@1.47, 2010-02-24 06:25:26+00:00, davehart@shiny.ad.hartbrothers.com +28 -11
+    new peer variable "srchost" shown instead of 0.0.0.0 srcadr in
+      ntpq peers billboard for .POOL. prototype associations.
+
+  ntpq/ntpq.c@1.103, 2010-02-24 06:25:27+00:00, davehart@shiny.ad.hartbrothers.com +9 -8
+    new peer variable "srchost" shown instead of 0.0.0.0 srcadr in
+      ntpq peers billboard for .POOL. prototype associations.
+
+ChangeSet@1.2110.1.3, 2010-02-23 09:47:25+00:00, davehart@shiny.ad.hartbrothers.com +27 -0
+  "restrict source ..." to set restrictions for peers.
+  [Bug 1497] fudge is broken by getnetnum() change
+
+  include/ntp.h@1.171, 2010-02-23 09:47:21+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+    add RESM_SOURCE for "restrict source ..."
+
+  include/ntp_lists.h@1.4, 2010-02-23 09:47:21+00:00, davehart@shiny.ad.hartbrothers.com +12 -0
+    add CHECK_SLIST() debugging helper macro to detect a couple of
+      ways a singly-linked list can go awry.
+
+  include/ntp_refclock.h@1.25, 2010-02-23 09:47:22+00:00, davehart@shiny.ad.hartbrothers.com +11 -16
+    make refclock control entrypoint, refclock_control()'s input
+      struct refclockstat pointer const.
+    remove prototypes for previously-removed functions.
+
+  include/ntpd.h@1.143, 2010-02-23 09:47:22+00:00, davehart@shiny.ad.hartbrothers.com +3 -2
+    add restrict_source() to add/remove restrictions for each
+      association automatically ("restrict source ...")
+
+  ntpd/complete.conf@1.4, 2010-02-23 09:47:22+00:00, davehart@shiny.ad.hartbrothers.com +2 -1
+    add "restrict source ..." test
+
+  ntpd/keyword-gen-utd@1.2, 2010-02-23 09:47:22+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    generated from ntp_keyword.c
+
+  ntpd/keyword-gen.c@1.6, 2010-02-23 09:47:22+00:00, davehart@shiny.ad.hartbrothers.com +15 -1
+    add "source" as in "restrict source ..."
+
+  ntpd/ntp_config.c@1.250, 2010-02-23 09:47:22+00:00, davehart@shiny.ad.hartbrothers.com +136 -105
+    "restrict source ..." to set restrictions for peers.
+    [Bug 1497] fudge is broken by getnetnum() change
+
+  ntpd/ntp_intres.c@1.85, 2010-02-23 09:47:22+00:00, davehart@shiny.ad.hartbrothers.com +0 -9
+    test use of copy_addrinfo_list() no longer helpful as it has a real
+      consumer now.
+
+  ntpd/ntp_io.c@1.314, 2010-02-23 09:47:22+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    "restrict source ..." to set restrictions for peers.
+
+  ntpd/ntp_keyword.h@1.4, 2010-02-23 09:47:22+00:00, davehart@shiny.ad.hartbrothers.com +421 -415
+    generated from ntp_keyword.c
+
+  ntpd/ntp_parser.c@1.53, 2010-02-23 09:47:22+00:00, davehart@shiny.ad.hartbrothers.com +788 -774
+    ntp_parser.y compiled
+
+  ntpd/ntp_parser.h@1.33, 2010-02-23 09:47:22+00:00, davehart@shiny.ad.hartbrothers.com +83 -81
+    ntp_parser.y compiled
+
+  ntpd/ntp_parser.y@1.48, 2010-02-23 09:47:22+00:00, davehart@shiny.ad.hartbrothers.com +11 -2
+    "restrict source ..." to set restrictions for peers.
+
+  ntpd/ntp_peer.c@1.130, 2010-02-23 09:47:22+00:00, davehart@shiny.ad.hartbrothers.com +17 -13
+    "restrict source ..." to set restrictions for peers.
+
+  ntpd/ntp_proto.c@1.300, 2010-02-23 09:47:23+00:00, davehart@shiny.ad.hartbrothers.com +10 -0
+    "restrict source ..." to set restrictions for peers.
+
+  ntpd/ntp_refclock.c@1.91.1.3, 2010-02-23 09:47:23+00:00, davehart@shiny.ad.hartbrothers.com +3 -2
+    make refclock control entrypoint, refclock_control()'s input
+      struct refclockstat pointer const.
+
+  ntpd/ntp_request.c@1.85, 2010-02-23 09:47:23+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    "restrict source ..." to set restrictions for peers.
+
+  ntpd/ntp_restrict.c@1.30, 2010-02-23 09:47:23+00:00, davehart@shiny.ad.hartbrothers.com +144 -32
+    "restrict source ..." to set restrictions for peers.
+
+  ntpd/refclock_datum.c@1.14, 2010-02-23 09:47:23+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    make refclock control entrypoint, refclock_control()'s input
+      struct refclockstat pointer const.
+
+  ntpd/refclock_jupiter.c@1.25, 2010-02-23 09:47:23+00:00, davehart@shiny.ad.hartbrothers.com +5 -5
+    make refclock control entrypoint, refclock_control()'s input
+      struct refclockstat pointer const.
+
+  ntpd/refclock_leitch.c@1.12, 2010-02-23 09:47:23+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    make refclock control entrypoint, refclock_control()'s input
+      struct refclockstat pointer const.
+
+  ntpd/refclock_nmea.c@1.47, 2010-02-23 09:47:23+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    make refclock control entrypoint, refclock_control()'s input
+      struct refclockstat pointer const.
+
+  ntpd/refclock_parse.c@1.53, 2010-02-23 09:47:23+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    make refclock control entrypoint, refclock_control()'s input
+      struct refclockstat pointer const.
+
+  ntpd/refclock_ripencc.c@1.8, 2010-02-23 09:47:23+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    make refclock control entrypoint, refclock_control()'s input
+      struct refclockstat pointer const.
+
+  ntpd/refclock_wwvb.c@1.23.1.2, 2010-02-23 09:47:23+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    make refclock control entrypoint, refclock_control()'s input
+      struct refclockstat pointer const.
+
+  ntpdc/ntpdc_ops.c@1.63, 2010-02-23 09:47:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    "restrict source ..." to set restrictions for peers.
+
+ChangeSet@1.2110.1.2, 2010-02-20 17:52:58+00:00, davehart@shiny.ad.hartbrothers.com +14 -0
+  new pool implementation modeled on manycastclient.
+
+  include/ntp.h@1.170, 2010-02-20 17:52:56+00:00, davehart@shiny.ad.hartbrothers.com +26 -16
+    add hostname, addrs, ai members to struct peer for pool.
+    remove unused PPSREFID.
+    add MDF_POOL, rename MDF_ACLNT -> MDF_UCLNT to cover both
+      manycastclient and pool ephemeral associations.
+    add MDF_SOLICIT_MASK (MDF_ACAST | MDF_POOL).
+    
+
+  include/ntp_config.h@1.70, 2010-02-20 17:52:56+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    change address_node->type (family) type from short to u_short.
+
+  include/ntpd.h@1.142, 2010-02-20 17:52:56+00:00, davehart@shiny.ad.hartbrothers.com +10 -7
+    changes for pool
+
+  ntpd/ntp_config.c@1.249, 2010-02-20 17:52:56+00:00, davehart@shiny.ad.hartbrothers.com +54 -53
+    changes for pool
+
+  ntpd/ntp_control.c@1.133.1.2, 2010-02-20 17:52:56+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    rename MDF_SRVCASTMASK -> MDF_TXONLY_MASK.
+
+  ntpd/ntp_peer.c@1.129, 2010-02-20 17:52:57+00:00, davehart@shiny.ad.hartbrothers.com +198 -109
+    changes for pool
+
+  ntpd/ntp_proto.c@1.299, 2010-02-20 17:52:57+00:00, davehart@shiny.ad.hartbrothers.com +215 -58
+    changes for pool
+
+  ntpd/ntp_refclock.c@1.91.1.2, 2010-02-20 17:52:57+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    changes for pool
+
+  ntpd/ntp_request.c@1.84, 2010-02-20 17:52:57+00:00, davehart@shiny.ad.hartbrothers.com +12 -29
+    changes for pool
+
+  ntpd/ntp_worker.c@1.2, 2010-02-20 17:52:57+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    Change worker child idle timeout to 3 minutes (was 15s)
+
+  ntpd/ntpsim.c@1.24, 2010-02-20 17:52:57+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    changes for pool
+
+  ntpdc/ntpdc.c@1.80, 2010-02-20 17:52:57+00:00, davehart@shiny.ad.hartbrothers.com +23 -13
+    fix sizeof() abuse in getnetnum(), incorrect assumption that ai_canonname
+      is always non-NULL
+
+  ntpq/ntpq-subs.c@1.46, 2010-02-20 17:52:57+00:00, davehart@shiny.ad.hartbrothers.com +4 -2
+    correct T column comments, value for manycastclient (A -> a).
+
+  ntpq/ntpq.c@1.102, 2010-02-20 17:52:57+00:00, davehart@shiny.ad.hartbrothers.com +22 -16
+    fix sizeof() abuse in getnetnum(), incorrect assumption that ai_canonname
+      is always non-NULL
+
+ChangeSet@1.2110.1.1, 2010-02-17 09:54:32+00:00, davehart@shiny.ad.hartbrothers.com +49 -0
+  [Bug 1483] AI_NUMERICSERV undefined in 4.2.7p20.
+  Maintain and use linked list of associations (struct peer) in ntpd,
+    avoiding walking 128 hash table entries to iterate over peers.
+  Remove more workarounds unneeded since we require ISO C90 AKA ANSI C:
+    - remove fallback implementations for memmove(), memset, strstr().
+    - do not test for atexit() or memcpy().
+  Collapse a bunch of code duplication in ntpd/ntp_restrict.c added with
+    support for IPv6.
+  Correct some corner case failures in automatically enabling the MRU
+    list if any "restrict ... limited" is in effect, and in disabling MRU
+    maintenance. (ntp_monitor.c, ntp_restrict.c)
+  Reverse the internal sort order of the address restriction lists, but
+    preserve the same behavior.  This allows removal of special-case code
+    related to the default restrictions and more straightforward lookups
+    of restrictions for a given address (now, stop on first match).
+  Move ntp_restrict.c MRU doubly-linked list maintenance code into
+    ntp_lists.h macros, allowing more duplicated source excision.
+  Correct Windows port's refclock_open() to return 0 on failure not -1.
+  Correct CHU, dumbclock, and WWVB drivers to check for 0 returned from
+    refclock_open() on failure.
+  Repair ntpdate.c to handle no longer testing HAVE_TIMER_SETTIME.
+  Do not reference peer_node/unpeer_node after freeing when built with
+    --disable-saveconfig and using DNS.
+
+  BitKeeper/deleted/.del-memmove.c~3e480692@1.4, 2010-02-17 09:53:13+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libntp/memmove.c -> BitKeeper/deleted/.del-memmove.c~3e480692
+
+  BitKeeper/deleted/.del-strstr.c~55aa8716fa42aa@1.2, 2010-02-17 09:53:02+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libntp/strstr.c -> BitKeeper/deleted/.del-strstr.c~55aa8716fa42aa
+
+  ChangeLog@1.541.1.1, 2010-02-17 09:54:17+00:00, davehart@shiny.ad.hartbrothers.com +23 -0
+    [Bug 1483] AI_NUMERICSERV undefined in 4.2.7p20.
+    Maintain and use linked list of associations (struct peer) in ntpd,
+      avoiding walking 128 hash table entries to iterate over peers.
+    Remove more workarounds unneeded since we require ISO C90 AKA ANSI C:
+      - remove fallback implementations for memmove(), memset, strstr().
+      - do not test for atexit() or memcpy().
+    Collapse a bunch of code duplication in ntpd/ntp_restrict.c added with
+      support for IPv6.
+    Correct some corner case failures in automatically enabling the MRU
+      list if any "restrict ... limited" is in effect, and in disabling MRU
+      maintenance. (ntp_monitor.c, ntp_restrict.c)
+    Reverse the internal sort order of the address restriction lists, but
+      preserve the same behavior.  This allows removal of special-case code
+      related to the default restrictions and more straightforward lookups
+      of restrictions for a given address (now, stop on first match).
+    Move ntp_restrict.c MRU doubly-linked list maintenance code into
+      ntp_lists.h macros, allowing more duplicated source excision.
+    Correct Windows port's refclock_open() to return 0 on failure not -1.
+    Correct CHU, dumbclock, and WWVB drivers to check for 0 returned from
+      refclock_open() on failure.
+    Repair ntpdate.c to handle no longer testing HAVE_TIMER_SETTIME.
+    Do not reference peer_node/unpeer_node after freeing when built with
+      --disable-saveconfig and using DNS.
+
+  configure.ac@1.479, 2010-02-17 09:54:17+00:00, davehart@shiny.ad.hartbrothers.com +1 -2
+    Remove more workarounds unneeded since we require ISO C90 AKA ANSI C:
+      - remove fallback implementations for memmove(), memset, strstr().
+      - do not test for memcpy().
+    
+
+  flock-build@1.44.1.1, 2010-02-17 09:54:18+00:00, davehart@shiny.ad.hartbrothers.com +26 -21
+    fix bug with SIMUL=2 flock-build -1
+
+  include/ntp.h@1.169, 2010-02-17 09:54:18+00:00, davehart@shiny.ad.hartbrothers.com +57 -46
+    maintain and use linked list of associations (struct peer) in ntpd,
+      avoiding walking 128 hash table entries to iterate over peers.
+    rename peer link members: next -> adr_link, ass_next->aid_link.
+    add VN_MODE() for MRU list, which doesn't store LI but does now
+      combine version and mode in one octet.  use VN_MODE() in
+      PKT_LI_VN_MODE.
+    add mon_entry typedef for struct mon_data.
+    move ntp_restrict.c MRU doubly-linked list maintenance code into
+      ntp_lists.h macros, allowing more duplicated source excision.
+    rename struct mon_data.interface -> mon_entry.lcladr to mirror
+      mon_entry.rmtadr.
+    note disuse of MDF_LCAST without removing it.
+    add MDF_SRVCASTMASK (MDF_MCAST | MDF_BCAST | ACAST).
+    Combine IPv4 and IPv6 restrict list entry structures into one
+      variable-size structure with a union at the end of V4 and v6
+      addresses, enabling removal of duplicated code.
+    
+
+  include/ntp_config.h@1.69, 2010-02-17 09:54:18+00:00, davehart@shiny.ad.hartbrothers.com +19 -18
+    add uint u to attr_val.value union.
+
+  include/ntp_crypto.h@1.47, 2010-02-17 09:54:18+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    use void * for variant pointer struct value.ptr.
+
+  include/ntp_lists.h@1.3, 2010-02-17 09:54:18+00:00, davehart@shiny.ad.hartbrothers.com +119 -7
+    Add LINK_SORT_SLIST() macro to insert into a sorted list.
+    Add doubly-linked list macros wrapping existing logic from ntp_restrict.c:
+      INIT_DLIST(), HEAD_DLIST(), TAIL_DLIST(), LINK_DLIST(), UNLINK_DLIST(),
+      ITER_DLIST_BEGIN(), ITER_DLIST_END().
+
+  include/ntp_net.h@1.4, 2010-02-17 09:54:18+00:00, davehart@shiny.ad.hartbrothers.com +20 -9
+    remove unhelpful (void *) cast in MEMSET_ADDR6().
+    add ADDR6_CMP(), ADDR6_EQ() helpers for in6_addr.
+
+  include/ntp_rfc2553.h@1.36, 2010-02-17 09:54:18+00:00, davehart@shiny.ad.hartbrothers.com +9 -1
+    handle AI_NUMERICSERV being unavailable.
+
+  include/ntp_stdlib.h@1.43, 2010-02-17 09:54:18+00:00, davehart@shiny.ad.hartbrothers.com +0 -4
+    relocate latoa(), localaddrtoa() to ntpd.h
+
+  include/ntp_string.h@1.6, 2010-02-17 09:54:19+00:00, davehart@shiny.ad.hartbrothers.com +1 -15
+    NTP requires ISO C90/ANSI C, remove workarounds for missing
+      strchr(), strrchr(), memcpy().
+
+  include/ntp_types.h@1.19, 2010-02-17 09:54:19+00:00, davehart@shiny.ad.hartbrothers.com +3 -1
+    add ASSOCID_MAX, KEYID_T_MAX
+
+  include/ntpd.h@1.141, 2010-02-17 09:54:19+00:00, davehart@shiny.ad.hartbrothers.com +73 -59
+    Add comments clarifying and demarcing division of file into
+      two parts, with only variable extern declarations in the
+      second half.
+    rename ntp_monclearinterface() -> mon_clearinterface().
+    correct many scalar type declarations and function argument
+      types to eliminate truncation and implicit pointer cast
+      warnings, particularly int -> u_char and int -> u_short.
+    introduce mon_entry typedef (alias of struct mon_data) and
+      convert most references.
+    include hash array size in external declaration to better
+      inform compilers.
+    maintain and use linked list of associations (struct peer) in ntpd,
+      avoiding walking 128 hash table entries to iterate over peers.
+      adds peer_list, peer_count globals.
+    rename restrictlist -> restrictlist4.
+
+  libntp/Makefile.am@1.52, 2010-02-17 09:54:19+00:00, davehart@shiny.ad.hartbrothers.com +0 -2
+    NTP requires an ISO C90 (ANSI C) compiler:
+     - remove fallback memmove(), strstr()
+
+  libntp/decodenetnum.c@1.11, 2010-02-17 09:54:19+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    use Z_AI_NUMERICHOST to document it may be zero and should not
+      be used with bitwise NOT (~)
+
+  libntp/machines.c@1.22, 2010-02-17 09:54:19+00:00, davehart@shiny.ad.hartbrothers.com +0 -13
+    NTP requires an ISO C90 (ANSI C) compiler:
+     - remove fallback memset()
+
+  libntp/strdup.c@1.7, 2010-02-17 09:54:19+00:00, davehart@shiny.ad.hartbrothers.com +15 -14
+    minor cleanup, use memcpy() instead of strcpy()
+
+  ntpd/Makefile.am@1.91, 2010-02-17 09:54:19+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    ntp_data_structures does not need to be built in both SIM and
+      normal versions as it and its headers do not use #ifdef SIM.
+
+  ntpd/ntp_config.c@1.248, 2010-02-17 09:54:19+00:00, davehart@shiny.ad.hartbrothers.com +129 -98
+    Eliminate warnings by correcting many scalar types.
+    Do not reference peer_node/unpeer_node after freeing when built with
+      --disable-saveconfig and using DNS.
+
+  ntpd/ntp_control.c@1.133.1.1, 2010-02-17 09:54:20+00:00, davehart@shiny.ad.hartbrothers.com +571 -614
+    [Bug 1464] synchronization source wrong for refclocks ARCRON_MSF (27)
+      and SHM (28).
+    Use memcpy() instead of memmove() where the buffers can not overlap.
+    Re-enable "Possible 'ntpdx' exploit" message with rate-limiting to
+      12 per hour.
+    maintain and use linked list of associations (struct peer) in ntpd,
+      avoiding walking 128 hash table entries to iterate over peers.
+      adds peer_list, peer_count globals.
+    use erealloc() in place of free() then emalloc().
+
+  ntpd/ntp_crypto.c@1.147, 2010-02-17 09:54:20+00:00, davehart@shiny.ad.hartbrothers.com +28 -25
+    eliminate warnings with casts and type corrections.
+
+  ntpd/ntp_intres.c@1.84, 2010-02-17 09:54:20+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    use \n with DPRINTF
+
+  ntpd/ntp_io.c@1.313, 2010-02-17 09:54:20+00:00, davehart@shiny.ad.hartbrothers.com +12 -1
+    rename ntp_monclearinterface() -> mon_clearinterface().
+    implement localaddrtoa(), similar to socktoa().
+
+  ntpd/ntp_loopfilter.c@1.154, 2010-02-17 09:54:21+00:00, davehart@shiny.ad.hartbrothers.com +0 -4
+    remove VMS-specific include that is no longer required.
+
+  ntpd/ntp_monitor.c@1.26, 2010-02-17 09:54:21+00:00, davehart@shiny.ad.hartbrothers.com +98 -132
+    rename MAXMONMEM -> MAX_MONLIST
+    rename MONMEMINC -> INC_MONLIST
+      in both cases, respect the old name if defined (likely with -D).
+    change most struct mon_data references to mon_entry.
+    move doubly-linked list code to ntp_lists *_DLIST() macros.
+    use *_SLIST() macros for monitor hash lists.
+    rename ntp_monclearinterface() -> mon_clearinterface().
+    rename struct mon_data.interface -> mon_entry.lcladr to mirror
+      mon_entry.rmtadr.
+    no point in memset(p, 0, size); then memcpy(p, src, size);.
+    combine mon_entry.version and mon_entry.mode into mon_entry.vn_mode.
+    
+
+  ntpd/ntp_peer.c@1.128, 2010-02-17 09:54:21+00:00, davehart@shiny.ad.hartbrothers.com +184 -224
+    maintain and use linked list of associations (struct peer) in ntpd,
+      avoiding walking 128 hash table entries to iterate over peers.
+    change initial, incremental peer allocs from 15, 5 to 8, 4.
+    do not zero variables at startup that are zero-initialized.
+
+  ntpd/ntp_proto.c@1.298, 2010-02-17 09:54:21+00:00, davehart@shiny.ad.hartbrothers.com +125 -137
+    remove VMS-specific include of ntp_refclock.h, appears unneeded.
+    silence many truncation and implicit conversion warnings by changing
+      types or typecasting.
+    maintain and use linked list of associations (struct peer) in ntpd,
+      avoiding walking 128 hash table entries to iterate over peers.
+    rename clock_select() array of peers from peer_list to peers to avoid
+      conflicting with new global listhead peers_list.
+    use erealloc() instead of free() then emalloc().
+    allocate clock_select()'s three peer-related arrays together to
+      minimize cache lines used.
+    do not reuse hpoll local in poll_update as scratch int.
+
+  ntpd/ntp_refclock.c@1.91.1.1, 2010-02-17 09:54:21+00:00, davehart@shiny.ad.hartbrothers.com +3 -1
+    eliminate truncation warning for 64-bit time_t with (u_int32)
+
+  ntpd/ntp_request.c@1.83, 2010-02-17 09:54:21+00:00, davehart@shiny.ad.hartbrothers.com +196 -253
+    maintain and use linked list of associations (struct peer) in ntpd,
+      avoiding walking 128 hash table entries to iterate over peers.
+    rename peer_list() -> list_peers() to avoid conflict with new global
+      listhead peer_list.
+    rename peer_list_sum -> list_peers_sum() to maintain consistency.
+    add list_restrict4(), list_restrict6() helpers for list_restrict()
+      which reverse the order of the returned restrictions to match
+      previous behavior and documentation, now that it's maintained in
+      a reversed sort order internally vs. previously.
+    get rid of duplicative extern references to global variables in
+      a number of functions (rely on ntpd.h).
+
+  ntpd/ntp_restrict.c@1.29, 2010-02-17 09:54:22+00:00, davehart@shiny.ad.hartbrothers.com +394 -419
+    collapse a bunch of code duplication in ntpd/ntp_restrict.c added with
+      support for IPv6.  Correct mistaken split of res_limited_refcount
+      code and data, one RES_LIMITED reference count should apply to both.
+    reverse the internal sort order of the address restriction lists, but
+      preserve the same behavior.  This allows removal of special-case code
+      related to the default restrictions and more straightforward lookups
+      of restrictions for a given address (we can stop on the first match).
+    move ntp_restrict.c MRU doubly-linked list maintenance code into
+      ntp_lists.h macros, allowing more duplicated source excision.
+    use *_SLIST() macros for mon_hash[] lists.
+
+  ntpd/ntp_timer.c@1.58, 2010-02-17 09:54:22+00:00, davehart@shiny.ad.hartbrothers.com +23 -28
+    maintain and use linked list of associations (struct peer) in ntpd,
+      avoiding walking 128 hash table entries to iterate over peers.
+    
+
+  ntpd/ntp_util.c@1.77, 2010-02-17 09:54:22+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
+    #include <unistd.h> for getpid().
+
+  ntpd/refclock_chronolog.c@1.10, 2010-02-17 09:54:22+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    fix truncation warning with typecast.
+
+  ntpd/refclock_chu.c@1.46.1.1, 2010-02-17 09:54:22+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    refclock_open() returns 0 on failure
+
+  ntpd/refclock_dumbclock.c@1.14.1.1, 2010-02-17 09:54:22+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    refclock_open() returns 0 on failure
+
+  ntpd/refclock_jupiter.c@1.24, 2010-02-17 09:54:23+00:00, davehart@shiny.ad.hartbrothers.com +7 -7
+    eliminate a raft of truncation and type conversion warnings.
+
+  ntpd/refclock_wwvb.c@1.23.1.1, 2010-02-17 09:54:23+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    refclock_open() returns 0 on failure
+
+  ntpdate/ntpdate.c@1.72, 2010-02-17 09:54:23+00:00, davehart@shiny.ad.hartbrothers.com +24 -44
+    configure.ac no longer tests for timer_settime() separately fromm
+      timer_create()..
+
+  ntpdc/ntpdc.c@1.79, 2010-02-17 09:54:23+00:00, davehart@shiny.ad.hartbrothers.com +12 -9
+    #include <unistd.h>, <fcntl.h> for open(), close(), and isatty().
+
+  ntpq/ntpq.c@1.101, 2010-02-17 09:54:23+00:00, davehart@shiny.ad.hartbrothers.com +15 -12
+    #include <unistd.h>, <fcntl.h> for open() and close().
+
+  ports/winnt/include/config.h@1.83, 2010-02-17 09:54:23+00:00, davehart@shiny.ad.hartbrothers.com +0 -1
+    HAVE_STRCHR is no longer needed.
+
+  ports/winnt/libntp/termios.c@1.21.1.1, 2010-02-17 09:54:23+00:00, davehart@shiny.ad.hartbrothers.com +14 -9
+    refclock_open() returns 0 on failure
+
+  ports/winnt/vc6/libntp.dsp@1.52, 2010-02-17 09:54:24+00:00, davehart@shiny.ad.hartbrothers.com +0 -4
+    remove memmove.c reference.
+
+  ports/winnt/vs2003/libntp.vcproj@1.10, 2010-02-17 09:54:24+00:00, davehart@shiny.ad.hartbrothers.com +0 -21
+    remove memmove.c reference.
+
+  ports/winnt/vs2005/libntp.vcproj@1.8, 2010-02-17 09:54:24+00:00, davehart@shiny.ad.hartbrothers.com +0 -22
+    remove memmove.c reference.
+
+  ports/winnt/vs2008/libntp/libntp.vcproj@1.28, 2010-02-17 09:54:24+00:00, davehart@shiny.ad.hartbrothers.com +6 -14
+    remove memmove.c and strstr.c references.
+
+  sntp/configure.ac@1.32, 2010-02-17 09:54:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    NTP requires ISO C90 (ANSI C) so don't test for atexit() or memset().
 
 ChangeSet@1.2112, 2010-02-16 09:40:11+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
   [Bug 1306] constant conditionals in audio_gain().

@@ -499,20 +499,11 @@
 /* Define to 1 if you have the <md5.h> header file. */
 #undef HAVE_MD5_H
 
-/* Define to 1 if you have the `memcpy' function. */
-#undef HAVE_MEMCPY
-
 /* Define to 1 if you have the `memlk' function. */
 #undef HAVE_MEMLK
 
-/* Define to 1 if you have the `memmove' function. */
-#undef HAVE_MEMMOVE
-
 /* Define to 1 if you have the <memory.h> header file. */
 #undef HAVE_MEMORY_H
-
-/* Define to 1 if you have the `memset' function. */
-#undef HAVE_MEMSET
 
 /* Define to 1 if you have the `mkstemp' function. */
 #undef HAVE_MKSTEMP
@@ -525,6 +516,9 @@
 
 /* Define to 1 if you have the `mmap' function. */
 #undef HAVE_MMAP
+
+/* Define to 1 if you have the `nanosleep' function. */
+#undef HAVE_NANOSLEEP
 
 /* Define to 1 if you have the <ndir.h> header file, and it defines `DIR'. */
 #undef HAVE_NDIR_H
@@ -729,9 +723,6 @@
 
 /* Define to 1 if you have the `strsignal' function. */
 #undef HAVE_STRSIGNAL
-
-/* Define to 1 if you have the `strstr' function. */
-#undef HAVE_STRSTR
 
 /* Do we have struct ntptimeval? */
 #undef HAVE_STRUCT_NTPTIMEVAL
@@ -1240,9 +1231,6 @@
 
 /* Preset a value for 'tickadj'? */
 #undef PRESET_TICKADJ
-
-/* Does qsort expect to work on "void *" stuff? */
-#undef QSORT_USES_VOID_P
 
 /* Should we not IGNPAR (Linux)? */
 #undef RAWDCF_NO_IGNPAR
