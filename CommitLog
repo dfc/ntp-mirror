@@ -1,3 +1,121 @@
+ChangeSet@1.2127, 2010-04-04 10:09:44+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P23
+  TAG: NTP_4_2_7P23
+
+  ChangeLog@1.550, 2010-04-04 10:09:42+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P23
+
+  ntpd/ntpd-opts.c@1.24, 2010-04-04 10:09:42+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P23
+
+  ntpd/ntpd-opts.h@1.24, 2010-04-04 10:09:43+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P23
+
+  ntpd/ntpd-opts.texi@1.24, 2010-04-04 10:09:43+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P23
+
+  ntpd/ntpd.1@1.24, 2010-04-04 10:09:43+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P23
+
+  ntpdc/ntpdc-opts.c@1.24, 2010-04-04 10:09:43+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P23
+
+  ntpdc/ntpdc-opts.h@1.24, 2010-04-04 10:09:43+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P23
+
+  ntpdc/ntpdc-opts.texi@1.24, 2010-04-04 10:09:43+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P23
+
+  ntpdc/ntpdc.1@1.24, 2010-04-04 10:09:43+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P23
+
+  ntpq/ntpq-opts.c@1.24, 2010-04-04 10:09:43+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P23
+
+  ntpq/ntpq-opts.h@1.24, 2010-04-04 10:09:43+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P23
+
+  ntpq/ntpq-opts.texi@1.24, 2010-04-04 10:09:43+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P23
+
+  ntpq/ntpq.1@1.24, 2010-04-04 10:09:43+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P23
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.24, 2010-04-04 10:09:43+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P23
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.24, 2010-04-04 10:09:43+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P23
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.24, 2010-04-04 10:09:43+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P23
+
+  ntpsnmpd/ntpsnmpd.1@1.24, 2010-04-04 10:09:43+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P23
+
+  packageinfo.sh@1.25, 2010-04-04 10:09:43+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P23
+
+  sntp/sntp-opts.c@1.24, 2010-04-04 10:09:43+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P23
+
+  sntp/sntp-opts.h@1.24, 2010-04-04 10:09:43+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P23
+
+  sntp/sntp-opts.texi@1.24, 2010-04-04 10:09:43+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P23
+
+  sntp/sntp.1@1.24, 2010-04-04 10:09:43+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P23
+
+  sntp/sntp.html@1.24, 2010-04-04 10:09:43+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P23
+
+  util/ntp-keygen-opts.c@1.24, 2010-04-04 10:09:43+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P23
+
+  util/ntp-keygen-opts.h@1.24, 2010-04-04 10:09:43+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P23
+
+  util/ntp-keygen-opts.texi@1.24, 2010-04-04 10:09:43+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P23
+
+  util/ntp-keygen.1@1.24, 2010-04-04 10:09:43+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P23
+
+ChangeSet@1.2126, 2010-04-04 04:07:40+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+  [Bug 1516] unpeer by IP address fails, DNS name works.
+  [Bug 1517] ntpq and ntpdc should verify reverse DNS before use.
+    ntpq and ntpdc now use the following format for showing purported
+    DNS names from IP address "reverse" DNS lookups when the DNS name
+    does not exist or does not include the original IP address among
+    the results: "192.168.1.2 (fake.dns.local)".
+
+  ChangeLog@1.549, 2010-04-04 04:07:39+00:00, davehart@shiny.ad.hartbrothers.com +6 -0
+    [Bug 1516] unpeer by IP address fails, DNS name works.
+    [Bug 1517] ntpq and ntpdc should verify reverse DNS before use.
+      ntpq and ntpdc now use the following format for showing purported
+      DNS names from IP address "reverse" DNS lookups when the DNS name
+      does not exist or does not include the original IP address among
+      the results: "192.168.1.2 (fake.dns.local)".
+
+  libntp/socktohost.c@1.9, 2010-04-04 04:07:39+00:00, davehart@shiny.ad.hartbrothers.com +66 -6
+    [Bug 1517] ntpq and ntpdc should verify reverse DNS before use.
+      ntpq and ntpdc now use the following format for showing purported
+      DNS names from IP address "reverse" DNS lookups when the DNS name
+      does not exist or does not include the original IP address among
+      the results: "192.168.1.2 (fake.dns.local)".
+
+  ntpd/ntp_config.c@1.258, 2010-04-04 04:07:39+00:00, davehart@shiny.ad.hartbrothers.com +7 -14
+    * [Bug 1516] unpeer by IP address fails, DNS name works.
+
+  ntpq/ntpq.c@1.112, 2010-04-04 04:07:39+00:00, davehart@shiny.ad.hartbrothers.com +7 -7
+    [Bug 1517] ntpq and ntpdc should verify reverse DNS before use.
+      ntpq and ntpdc now use the following format for showing purported
+      DNS names from IP address "reverse" DNS lookups when the DNS name
+      does not exist or does not include the original IP address among
+      the results: "192.168.1.2 (fake.dns.local)".
+
 ChangeSet@1.2125, 2010-04-02 02:08:59+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P22
   TAG: NTP_4_2_7P22
