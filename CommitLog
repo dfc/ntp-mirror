@@ -1,4 +1,360 @@
-ChangeSet@1.2127, 2010-04-04 10:09:44+00:00, stenn@deacon.udel.edu +27 -0
+ChangeSet@1.2116, 2010-04-13 21:19:19+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P24
+  TAG: NTP_4_2_7P24
+
+  ChangeLog@1.557, 2010-04-13 21:19:17+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P24
+
+  ntpd/ntpd-opts.c@1.25, 2010-04-13 21:19:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P24
+
+  ntpd/ntpd-opts.h@1.25, 2010-04-13 21:19:17+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P24
+
+  ntpd/ntpd-opts.texi@1.25, 2010-04-13 21:19:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P24
+
+  ntpd/ntpd.1@1.25, 2010-04-13 21:19:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P24
+
+  ntpdc/ntpdc-opts.c@1.25, 2010-04-13 21:19:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P24
+
+  ntpdc/ntpdc-opts.h@1.25, 2010-04-13 21:19:17+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P24
+
+  ntpdc/ntpdc-opts.texi@1.25, 2010-04-13 21:19:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P24
+
+  ntpdc/ntpdc.1@1.25, 2010-04-13 21:19:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P24
+
+  ntpq/ntpq-opts.c@1.25, 2010-04-13 21:19:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P24
+
+  ntpq/ntpq-opts.h@1.25, 2010-04-13 21:19:17+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P24
+
+  ntpq/ntpq-opts.texi@1.25, 2010-04-13 21:19:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P24
+
+  ntpq/ntpq.1@1.25, 2010-04-13 21:19:18+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P24
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.25, 2010-04-13 21:19:18+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P24
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.25, 2010-04-13 21:19:18+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P24
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.25, 2010-04-13 21:19:18+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P24
+
+  ntpsnmpd/ntpsnmpd.1@1.25, 2010-04-13 21:19:18+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P24
+
+  packageinfo.sh@1.26, 2010-04-13 21:19:18+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P24
+
+  sntp/sntp-opts.c@1.25, 2010-04-13 21:19:18+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P24
+
+  sntp/sntp-opts.h@1.25, 2010-04-13 21:19:18+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P24
+
+  sntp/sntp-opts.texi@1.25, 2010-04-13 21:19:18+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P24
+
+  sntp/sntp.1@1.25, 2010-04-13 21:19:18+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P24
+
+  sntp/sntp.html@1.25, 2010-04-13 21:19:18+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P24
+
+  util/ntp-keygen-opts.c@1.25, 2010-04-13 21:19:18+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P24
+
+  util/ntp-keygen-opts.h@1.25, 2010-04-13 21:19:18+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P24
+
+  util/ntp-keygen-opts.texi@1.25, 2010-04-13 21:19:18+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P24
+
+  util/ntp-keygen.1@1.25, 2010-04-13 21:19:18+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P24
+
+ChangeSet@1.2115, 2010-04-13 02:04:47-04:00, stenn@pogo.udel.edu +1 -0
+  [Bug 1390] Control PPS on the Oncore M12
+
+  ChangeLog@1.556, 2010-04-13 02:04:32-04:00, stenn@pogo.udel.edu +1 -0
+    [Bug 1390] Control PPS on the Oncore M12
+
+ChangeSet@1.2112.7.1, 2010-04-13 00:31:34-04:00, stenn@deacon.udel.edu +2 -0
+  accopt.html: non-ntpport doc changes from Dave Mills
+
+  ChangeLog@1.551.2.1, 2010-04-13 00:31:26-04:00, stenn@deacon.udel.edu +1 -0
+    accopt.html: non-ntpport doc changes from Dave Mills
+
+  html/accopt.html@1.33.1.1, 2010-04-13 00:31:26-04:00, stenn@deacon.udel.edu +7 -8
+    accopt.html: non-ntpport doc changes from Dave Mills
+
+ChangeSet@1.2112.6.3, 2010-04-12 06:50:58+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  Hal Murray caught another html/manyopt.html typo.
+
+  html/manyopt.html@1.23, 2010-04-12 06:50:58+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    Hal Murray caught another html/manyopt.html typo.
+
+ChangeSet@1.2112.6.2, 2010-04-12 06:17:50+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  Rephrase awkward pool description, correct "descovery" typo.
+
+  html/manyopt.html@1.22, 2010-04-12 06:17:50+00:00, davehart@shiny.ad.hartbrothers.com +10 -11
+    Rephrase awkward pool description, correct "descovery" typo
+      (thanks Hal Murray)
+
+ChangeSet@1.2112.6.1, 2010-04-11 23:13:44+00:00, davehart@shiny.ad.hartbrothers.com +9 -0
+  Documentation updates for 4.2.7p22 changes and additions, updating
+    ntpdc.html, ntpq.html, accopt.html, confopt.html, manyopt.html,
+    miscopt.html, and miscopt.txt.
+  Modify full MRU list preemption when full to match "discard monitor"
+    documentation, by removing exception for count == 1.
+
+  ChangeLog@1.551.1.1, 2010-04-11 23:13:42+00:00, davehart@shiny.ad.hartbrothers.com +5 -0
+    Documentation updates for 4.2.7p22 changes and additions, updating
+      ntpdc.html, ntpq.html, accopt.html, confopt.html, manyopt.html,
+      miscopt.html, and miscopt.txt.
+    Modify full MRU list preemption when full to match "discard monitor"
+      documentation, by removing exception for count == 1.
+    
+
+  html/accopt.html@1.34, 2010-04-11 23:13:42+00:00, davehart@shiny.ad.hartbrothers.com +19 -12
+    clarify "discard monitor".
+    clarify "restrict default", add "restrict source".
+    be more explicit about futility of kod restriction without limited.
+
+  html/confopt.html@1.49, 2010-04-11 23:13:42+00:00, davehart@shiny.ad.hartbrothers.com +7 -6
+    correct link for automatic server discovery info from pool command.
+
+  html/manyopt.html@1.21, 2010-04-11 23:13:42+00:00, davehart@shiny.ad.hartbrothers.com +20 -7
+    Document fully-formed "pool" command that act much like
+      "manycastclient".
+
+  html/miscopt.html@1.54, 2010-04-11 23:13:42+00:00, davehart@shiny.ad.hartbrothers.com +37 -6
+    change "disable monitor" documentation to explain automatic
+      enabling by "restrict ... limited" and refer to ntpq's mrulist
+      instead of ntpdc's monlist.
+    correct logconfig's second example.
+    add "mru" command to set MRU list limits.
+
+  html/ntpdc.html@1.31, 2010-04-11 23:13:43+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    Note 600 row limitation of ntpdc -c monlist, refer to ntpq -c mrulist.
+
+  html/ntpq.html@1.40, 2010-04-11 23:13:43+00:00, davehart@shiny.ad.hartbrothers.com +64 -1
+    add "mrulist", "monstats", "sysstats" commands.
+
+  html/scripts/miscopt.txt@1.4, 2010-04-11 23:13:43+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    add "mru" command
+
+  ntpd/ntp_monitor.c@1.34, 2010-04-11 23:13:43+00:00, davehart@shiny.ad.hartbrothers.com +3 -11
+    Modify full MRU list preemption when full to match "discard monitor"
+      documentation, by removing exception for count == 1.
+
+ChangeSet@1.2112.1.20, 2010-04-10 03:55:22+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  [Bug 1520] '%u' formats for size_t gives warnings with 64-bit builds.
+  
+    applies to prior merge
+
+  ChangeLog@1.553, 2010-04-10 03:55:22+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1520] '%u' formats for size_t gives warnings with 64-bit builds.
+
+ChangeSet@1.2112.1.18, 2010-04-10 03:29:56+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  [Bug 1518] Windows ntpd should lock to one processor more
+    conservatively.
+  [Bug 1522] Enable range syntax "trustedkey (301 ... 399)".
+  
+  covers previous two merges
+
+  ChangeLog@1.552, 2010-04-10 03:29:55+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
+    [Bug 1518] Windows ntpd should lock to one processor more
+      conservatively.
+    [Bug 1522] Enable range syntax "trustedkey (301 ... 399)".
+
+ChangeSet@1.2082.19.1, 2010-04-10 02:26:43+00:00, davehart@shiny.ad.hartbrothers.com +10 -0
+  [Bug 1522] Enable range syntax "trustedkey (301 ... 399)".
+
+  include/ntp_config.h@1.67.1.1, 2010-04-10 02:26:37+00:00, davehart@shiny.ad.hartbrothers.com +7 -5
+    add u_int u to attr_val.value union.
+
+  include/ntp_stdlib.h@1.40.1.1, 2010-04-10 02:26:37+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+    add extern ref to int cache_key from authkeys.c
+
+  ntpd/complete.conf@1.3.1.1, 2010-04-10 02:26:38+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    add key ranges to trustedkey
+
+  ntpd/keyword-gen-utd@1.1.1.1, 2010-04-10 02:26:38+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    to indicate ntp_keyword.h is current with keyword-gen.c
+
+  ntpd/keyword-gen.c@1.5.1.1, 2010-04-10 02:26:38+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    add T_Ellipsis "..." for
+      trustedkey (1...65533) 65534
+    syntax support.
+
+  ntpd/ntp_config.c@1.241.1.3, 2010-04-10 02:26:39+00:00, davehart@shiny.ad.hartbrothers.com +45 -14
+    support key ranges for trustedkey
+
+  ntpd/ntp_keyword.h@1.3.1.1, 2010-04-10 02:26:39+00:00, davehart@shiny.ad.hartbrothers.com +848 -844
+    add "..." T_Ellipsis
+
+  ntpd/ntp_parser.c@1.52.1.1, 2010-04-10 02:26:40+00:00, davehart@shiny.ad.hartbrothers.com +918 -894
+    Bison output
+
+  ntpd/ntp_parser.h@1.32.1.1, 2010-04-10 02:26:41+00:00, davehart@shiny.ad.hartbrothers.com +265 -263
+    Bison output
+
+  ntpd/ntp_parser.y@1.47.1.1, 2010-04-10 02:26:41+00:00, davehart@shiny.ad.hartbrothers.com +23 -1
+    support key ranges for trustedkey
+
+ChangeSet@1.2112.3.2, 2010-04-09 12:33:43-04:00, perlinger@psp-deb1.ntp.org +1 -0
+  fixed minor format glitch in ntpd/ntpd.c
+
+  ntpd/ntpd.c@1.117, 2010-04-09 12:33:41-04:00, perlinger@psp-deb1.ntp.org +4 -1
+    parametric length in format strings must be 'int' -- fixed that in 'change_logfile()'
+
+ChangeSet@1.2082.18.2, 2010-04-09 08:15:04+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_6P1
+  TAG: NTP_4_2_6P1
+
+  ChangeLog@1.496.26.47, 2010-04-09 08:15:02+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_6P1
+
+  ntpd/ntpd-opts.c@1.248.7.1, 2010-04-09 08:15:02+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P1
+
+  ntpd/ntpd-opts.h@1.248.7.1, 2010-04-09 08:15:02+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P1
+
+  ntpd/ntpd-opts.texi@1.246.7.1, 2010-04-09 08:15:02+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P1
+
+  ntpd/ntpd.1@1.246.7.1, 2010-04-09 08:15:02+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P1
+
+  ntpdc/ntpdc-opts.c@1.244.7.1, 2010-04-09 08:15:02+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P1
+
+  ntpdc/ntpdc-opts.h@1.244.7.1, 2010-04-09 08:15:02+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P1
+
+  ntpdc/ntpdc-opts.texi@1.243.7.1, 2010-04-09 08:15:02+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P1
+
+  ntpdc/ntpdc.1@1.243.7.1, 2010-04-09 08:15:02+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P1
+
+  ntpq/ntpq-opts.c@1.245.7.1, 2010-04-09 08:15:02+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P1
+
+  ntpq/ntpq-opts.h@1.245.7.1, 2010-04-09 08:15:03+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P1
+
+  ntpq/ntpq-opts.texi@1.244.7.1, 2010-04-09 08:15:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P1
+
+  ntpq/ntpq.1@1.244.7.1, 2010-04-09 08:15:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P1
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.123.7.1, 2010-04-09 08:15:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P1
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.123.7.1, 2010-04-09 08:15:03+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P1
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.123.7.1, 2010-04-09 08:15:03+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_6P1
+
+  ntpsnmpd/ntpsnmpd.1@1.122.7.1, 2010-04-09 08:15:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P1
+
+  packageinfo.sh@1.255.9.2, 2010-04-09 08:15:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P1
+
+  sntp/sntp-opts.c@1.117.7.1, 2010-04-09 08:15:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P1
+
+  sntp/sntp-opts.h@1.117.7.1, 2010-04-09 08:15:03+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P1
+
+  sntp/sntp-opts.texi@1.117.7.1, 2010-04-09 08:15:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P1
+
+  sntp/sntp.1@1.117.7.1, 2010-04-09 08:15:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P1
+
+  sntp/sntp.html@1.7.7.1, 2010-04-09 08:15:03+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_6P1
+
+  util/ntp-keygen-opts.c@1.247.7.1, 2010-04-09 08:15:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P1
+
+  util/ntp-keygen-opts.h@1.247.7.1, 2010-04-09 08:15:03+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P1
+
+  util/ntp-keygen-opts.texi@1.246.7.1, 2010-04-09 08:15:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P1
+
+  util/ntp-keygen.1@1.246.7.1, 2010-04-09 08:15:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P1
+
+ChangeSet@1.2082.18.1, 2010-04-09 03:43:19-04:00, stenn@deacon.udel.edu +2 -0
+  Release ntp-4.2.6p1
+
+  NEWS@1.106, 2010-04-09 03:43:05-04:00, stenn@deacon.udel.edu +14 -0
+    Release ntp-4.2.6p1
+
+  packageinfo.sh@1.255.9.1, 2010-04-09 03:43:05-04:00, stenn@deacon.udel.edu +1 -1
+    Release ntp-4.2.6p1
+
+ChangeSet@1.2112.3.1, 2010-04-06 19:08:47+02:00, jnperlin@hydra.localnet +10 -0
+  fix format string warnings (64-bit); avoid (m)syslog format string attacks
+
+  ntpd/ntp_config.c@1.259, 2010-04-06 19:08:46+02:00, jnperlin@hydra.localnet +4 -4
+    format 'size_t' with '%lu' (64-bit issue)
+
+  ntpd/ntp_control.c@1.137, 2010-04-06 19:08:46+02:00, jnperlin@hydra.localnet +2 -2
+    avoid possible format string attack to msyslog()
+
+  ntpd/ntp_intres.c@1.88, 2010-04-06 19:08:46+02:00, jnperlin@hydra.localnet +4 -4
+    format 'size_t' with '%lu' (64-bit issue)
+
+  ntpd/ntp_request.c@1.91, 2010-04-06 19:08:47+02:00, jnperlin@hydra.localnet +7 -7
+    format 'size_t' with '%lu' (64-bit issue)
+
+  ntpd/ntp_scanner.c@1.34, 2010-04-06 19:08:47+02:00, jnperlin@hydra.localnet +3 -3
+    format 'size_t' with '%lu' (64-bit issue); fixed is_special() (also 64-bit trouble)
+
+  ntpd/ntpd.c@1.116, 2010-04-06 19:08:47+02:00, jnperlin@hydra.localnet +3 -3
+    format 'size_t' with '%lu' (64-bit issue); avoid possible format string attack to msyslog()
+
+  ntpd/refclock_acts.c@1.37, 2010-04-06 19:08:47+02:00, jnperlin@hydra.localnet +2 -2
+    format 'size_t' with '%lu' (64-bit issue)
+
+  ntpd/work_fork.c@1.3, 2010-04-06 19:08:47+02:00, jnperlin@hydra.localnet +8 -8
+    format 'size_t' with '%lu' (64-bit issue)
+
+  ntpdc/ntpdc.c@1.83, 2010-04-06 19:08:47+02:00, jnperlin@hydra.localnet +7 -7
+    format 'size_t' with '%lu' (64-bit issue)
+
+  sntp/log.c@1.13, 2010-04-06 19:08:47+02:00, jnperlin@hydra.localnet +2 -2
+    avoid possible format string attack to syslog()
+
+ChangeSet@1.2082.4.70, 2010-04-06 05:37:52+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  [Bug 1518] Windows ntpd should lock to one processor more
+    conservatively.
+
+  ports/winnt/ntpd/nt_clockstuff.c@1.38.1.1, 2010-04-06 05:37:37+00:00, davehart@shiny.ad.hartbrothers.com +144 -108
+    [Bug 1518] Windows ntpd should lock to one processor more
+      conservatively.
+
+ChangeSet@1.2112.1.15, 2010-04-04 10:09:44+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P23
   TAG: NTP_4_2_7P23
 
@@ -83,7 +439,7 @@ ChangeSet@1.2127, 2010-04-04 10:09:44+00:00, stenn@deacon.udel.edu +27 -0
   util/ntp-keygen.1@1.24, 2010-04-04 10:09:43+00:00, stenn@deacon.udel.edu +2 -2
     NTP_4_2_7P23
 
-ChangeSet@1.2126, 2010-04-04 04:07:40+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+ChangeSet@1.2112.1.14, 2010-04-04 04:07:40+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
   [Bug 1516] unpeer by IP address fails, DNS name works.
   [Bug 1517] ntpq and ntpdc should verify reverse DNS before use.
     ntpq and ntpdc now use the following format for showing purported
@@ -116,7 +472,7 @@ ChangeSet@1.2126, 2010-04-04 04:07:40+00:00, davehart@shiny.ad.hartbrothers.com 
       does not exist or does not include the original IP address among
       the results: "192.168.1.2 (fake.dns.local)".
 
-ChangeSet@1.2125, 2010-04-02 02:08:59+00:00, stenn@deacon.udel.edu +27 -0
+ChangeSet@1.2112.1.13, 2010-04-02 02:08:59+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P22
   TAG: NTP_4_2_7P22
 
@@ -207,7 +563,7 @@ ChangeSet@1.2082.4.69, 2010-04-01 03:33:20-04:00, stenn@deacon.udel.edu +1 -0
   br-flock@1.13, 2010-04-01 03:33:09-04:00, stenn@deacon.udel.edu +1 -1
     lose whimsy from br-flock
 
-ChangeSet@1.2123, 2010-04-01 03:20:04-04:00, stenn@deacon.udel.edu +2 -0
+ChangeSet@1.2112.1.11, 2010-04-01 03:20:04-04:00, stenn@deacon.udel.edu +2 -0
   [Bug 1465] Make sure time from TS2100 is not invalid
 
   ChangeLog@1.547, 2010-04-01 03:19:56-04:00, stenn@deacon.udel.edu +1 -0
@@ -216,7 +572,7 @@ ChangeSet@1.2123, 2010-04-01 03:20:04-04:00, stenn@deacon.udel.edu +2 -0
   ntpd/refclock_true.c@1.12, 2010-04-01 03:19:56-04:00, stenn@deacon.udel.edu +2 -1
     [Bug 1465] Make sure time from TS2100 is not invalid
 
-ChangeSet@1.2122, 2010-04-01 03:13:14-04:00, stenn@deacon.udel.edu +2 -0
+ChangeSet@1.2112.1.10, 2010-04-01 03:13:14-04:00, stenn@deacon.udel.edu +2 -0
   [Bug 1432] Don't set inheritable flag for linux capabilities
 
   ChangeLog@1.546, 2010-04-01 03:13:05-04:00, stenn@deacon.udel.edu +1 -0
@@ -225,7 +581,7 @@ ChangeSet@1.2122, 2010-04-01 03:13:14-04:00, stenn@deacon.udel.edu +2 -0
   ntpd/ntpd.c@1.115, 2010-04-01 03:13:05-04:00, stenn@deacon.udel.edu +2 -2
     [Bug 1432] Don't set inheritable flag for linux capabilities
 
-ChangeSet@1.2112.1.7, 2010-03-31 09:16:48+00:00, stenn@deacon.udel.edu +27 -0
+ChangeSet@1.2112.2.7, 2010-03-31 09:16:48+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P21
   TAG: NTP_4_2_7P21
 
@@ -425,7 +781,7 @@ ChangeSet@1.2082.4.65, 2010-03-31 03:17:27-04:00, stenn@deacon.udel.edu +4 -0
   BitKeeper/triggers/triggert@1.6.1.1, 2010-03-31 03:17:12-04:00, stenn@deacon.udel.edu +17 -6
     trigger cleanup
 
-ChangeSet@1.2112.1.3, 2010-03-31 03:13:36-04:00, stenn@deacon.udel.edu +4 -0
+ChangeSet@1.2112.2.3, 2010-03-31 03:13:36-04:00, stenn@deacon.udel.edu +4 -0
   trigger cleanup
 
   BitKeeper/triggers/trigger.README@1.5, 2010-03-31 03:13:20-04:00, stenn@deacon.udel.edu +5 -3
@@ -446,13 +802,13 @@ ChangeSet@1.2082.4.64, 2010-03-29 05:16:32-04:00, stenn@deacon.udel.edu +1 -0
   BitKeeper/triggers/2mirrors@1.5, 2010-03-29 05:16:08-04:00, stenn@deacon.udel.edu +3 -3
     With the new bk, the trigger push needs the -q (quiet) flag
 
-ChangeSet@1.2112.1.1, 2010-03-25 23:40:34-04:00, stenn@deacon.udel.edu +1 -0
+ChangeSet@1.2112.2.1, 2010-03-25 23:40:34-04:00, stenn@deacon.udel.edu +1 -0
   whitespace cleanup
 
   html/copyright.html@1.48, 2010-03-25 23:40:20-04:00, stenn@deacon.udel.edu +1 -1
     whitespace cleanup
 
-ChangeSet@1.2120, 2010-03-25 16:12:20+00:00, davehart@shiny.ad.hartbrothers.com +6 -0
+ChangeSet@1.2112.1.8, 2010-03-25 16:12:20+00:00, davehart@shiny.ad.hartbrothers.com +6 -0
   ntpq-subs.c:
     Add ntpq "mrulist limited" and "mrulist kod" support, equivalent to
       ntpq -c "mrulist resany=0x20" and ntpq -c "mrulist resany=0x400"
@@ -507,14 +863,14 @@ ChangeSet@1.2120, 2010-03-25 16:12:20+00:00, davehart@shiny.ad.hartbrothers.com 
       triggered by the last packet from them.
       it.
 
-ChangeSet@1.2119, 2010-03-25 13:28:10+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+ChangeSet@1.2112.1.7, 2010-03-25 13:28:10+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
   ntp_control.c:
     use ctl_putts() instead of handrolled equivalent for read_mru_list().
 
   ntpd/ntp_control.c@1.136, 2010-03-25 13:27:59+00:00, davehart@shiny.ad.hartbrothers.com +9 -23
     use ctl_putts() instead of handrolled equivalent for read_mru_list().
 
-ChangeSet@1.2118, 2010-03-25 03:54:17+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+ChangeSet@1.2112.1.6, 2010-03-25 03:54:17+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
   ssl_init.c:
     MAX_MAC_LEN will always be > sizeof(keyid_t) so make max_digest_len
       const u_long instead of u_long, initialize unconditionally.
@@ -544,28 +900,28 @@ ChangeSet@1.2110.1.30, 2010-03-25 01:42:06+00:00, davehart@shiny.ad.hartbrothers
   ntpq/ntpq-subs.c@1.63, 2010-03-25 01:41:59+00:00, davehart@shiny.ad.hartbrothers.com +13 -14
     debug message cleanup for integration with ntp-dev
 
-ChangeSet@1.2116, 2010-03-24 22:46:41+01:00, jnperlin@hydra.localnet +1 -0
+ChangeSet@1.2112.1.4, 2010-03-24 22:46:41+01:00, jnperlin@hydra.localnet +1 -0
   ntpq.c:
     fix printf format warnings
 
   ntpq/ntpq.c@1.100.1.1, 2010-03-24 22:46:09+01:00, jnperlin@hydra.localnet +6 -6
     fix printf format warnings
 
-ChangeSet@1.2115, 2010-03-24 20:04:35+01:00, jnperlin@hydra.localnet +1 -0
+ChangeSet@1.2112.1.3, 2010-03-24 20:04:35+01:00, jnperlin@hydra.localnet +1 -0
   ssl_init.c:
     cast size_t expressions to u_long in formatting
 
   libntp/ssl_init.c@1.6, 2010-03-24 20:03:48+01:00, jnperlin@hydra.localnet +3 -3
     cast size_t expressions to u_long in formatting
 
-ChangeSet@1.2114, 2010-03-23 22:05:52+01:00, jnperlin@hydra.localnet +1 -0
+ChangeSet@1.2112.1.2, 2010-03-23 22:05:52+01:00, jnperlin@hydra.localnet +1 -0
   ssl_init.c:
     fixed printf format warnings
 
   libntp/ssl_init.c@1.5, 2010-03-23 22:05:18+01:00, jnperlin@hydra.localnet +7 -5
     fixed printf format warnings
 
-ChangeSet@1.2113, 2010-03-23 20:40:52+01:00, jnperlin@hydra.localnet +2 -0
+ChangeSet@1.2112.1.1, 2010-03-23 20:40:52+01:00, jnperlin@hydra.localnet +2 -0
   ntp_fp.h:
     fix prototype for 'dolfptoa'
   dolfptoa.c:
@@ -1403,6 +1759,42 @@ ChangeSet@1.2110.1.5, 2010-02-25 06:34:58+00:00, davehart@shiny.ad.hartbrothers.
 
   ports/winnt/ntpd/nt_clockstuff.c@1.40, 2010-02-25 06:34:51+00:00, davehart@shiny.ad.hartbrothers.com +24 -16
     expose performance counter drift as ctr_frequency sysvar.
+
+ChangeSet@1.2113, 2010-02-25 00:53:22-05:00, clemens@pogo.udel.edu +1 -0
+  This is a group of 4 patches that
+      (1) replace blanks with tabs in the source.
+      (2) provide a cleaner solution to turning FLAG_PPS on/off in oncore_get_timestamp.
+      (3) change LOG_INFO -> LOG_DEFAULT for one message, reducing the extraneous message
+             in the messages log.
+      (4) an implementation of [Bug1390] initially provided by Russell Yount, to turn the
+          PPS signal on/off.  Note that this does NOT affect timekeeping.
+
+  ntpd/refclock_oncore.c@1.86, 2010-02-25 00:53:18-05:00, clemens@pogo.udel.edu +60 -3
+    Bug[1390] allows the user to turn PPS on/off, and determine what
+    causes it to go off (off, on always, on if tracking 1 or more satellites,
+    or controled by TRAIM).
+    
+    Note that OFF is not implemented, since w/o the PPS, the oncore driver
+    will not run.
+    
+    Note that we default to an initial OFF state, since this seems most
+    reasonable till the driver gets to the RUN state.  Once in the RUN
+    state, we determine if we should turn the PPS signal on/off each cycle.
+    
+
+  ntpd/refclock_oncore.c@1.85, 2010-02-25 00:44:36-05:00, clemens@pogo.udel.edu +2 -2
+    Just an indent and change a LOG_INFO -> LOG_DEBUG to reduce default output.
+    
+
+  ntpd/refclock_oncore.c@1.84, 2010-02-25 00:41:21-05:00, clemens@pogo.udel.edu +3 -11
+    Cleaner solution to flipping FLAG_PPS on/off in oncore_get_timestamp.
+    
+
+  ntpd/refclock_oncore.c@1.83, 2010-02-25 00:36:39-05:00, clemens@pogo.udel.edu +12 -12
+    The source for the oncore driver uses tabs wherever possible to
+    replace strings of blanks.  Replace blanks with tabs from a
+    previous patch that did not adhere to this strategy.
+    
 
 ChangeSet@1.2110.1.4, 2010-02-24 06:25:27+00:00, davehart@shiny.ad.hartbrothers.com +5 -0
   new peer variable "srchost" shown instead of 0.0.0.0 srcadr in
