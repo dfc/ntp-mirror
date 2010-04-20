@@ -1,3 +1,291 @@
+ChangeSet@1.2121, 2010-04-20 21:58:50+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P25
+  TAG: NTP_4_2_7P25
+
+  ChangeLog@1.561, 2010-04-20 21:58:48+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P25
+
+  ntpd/ntpd-opts.c@1.26, 2010-04-20 21:58:48+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P25
+
+  ntpd/ntpd-opts.h@1.26, 2010-04-20 21:58:48+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P25
+
+  ntpd/ntpd-opts.texi@1.26, 2010-04-20 21:58:48+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P25
+
+  ntpd/ntpd.1@1.26, 2010-04-20 21:58:48+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P25
+
+  ntpdc/ntpdc-opts.c@1.26, 2010-04-20 21:58:48+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P25
+
+  ntpdc/ntpdc-opts.h@1.26, 2010-04-20 21:58:48+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P25
+
+  ntpdc/ntpdc-opts.texi@1.26, 2010-04-20 21:58:48+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P25
+
+  ntpdc/ntpdc.1@1.26, 2010-04-20 21:58:48+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P25
+
+  ntpq/ntpq-opts.c@1.26, 2010-04-20 21:58:49+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P25
+
+  ntpq/ntpq-opts.h@1.26, 2010-04-20 21:58:49+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P25
+
+  ntpq/ntpq-opts.texi@1.26, 2010-04-20 21:58:49+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P25
+
+  ntpq/ntpq.1@1.26, 2010-04-20 21:58:49+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P25
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.26, 2010-04-20 21:58:49+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P25
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.26, 2010-04-20 21:58:49+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P25
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.26, 2010-04-20 21:58:49+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P25
+
+  ntpsnmpd/ntpsnmpd.1@1.26, 2010-04-20 21:58:49+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P25
+
+  packageinfo.sh@1.27, 2010-04-20 21:58:49+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P25
+
+  sntp/sntp-opts.c@1.26, 2010-04-20 21:58:49+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P25
+
+  sntp/sntp-opts.h@1.26, 2010-04-20 21:58:49+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P25
+
+  sntp/sntp-opts.texi@1.26, 2010-04-20 21:58:49+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P25
+
+  sntp/sntp.1@1.26, 2010-04-20 21:58:49+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P25
+
+  sntp/sntp.html@1.26, 2010-04-20 21:58:49+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P25
+
+  util/ntp-keygen-opts.c@1.26, 2010-04-20 21:58:49+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P25
+
+  util/ntp-keygen-opts.h@1.26, 2010-04-20 21:58:49+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P25
+
+  util/ntp-keygen-opts.texi@1.26, 2010-04-20 21:58:49+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P25
+
+  util/ntp-keygen.1@1.26, 2010-04-20 21:58:49+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P25
+
+ChangeSet@1.2082.4.79, 2010-04-20 01:55:16-04:00, stenn@deacon.udel.edu +2 -0
+  [Bug 1465] Make sure time from TS2100 is not invalid (backport from -dev)
+
+  ChangeLog@1.496.26.54, 2010-04-20 01:55:04-04:00, stenn@deacon.udel.edu +1 -0
+    [Bug 1465] Make sure time from TS2100 is not invalid (backport from -dev)
+
+  ntpd/refclock_true.c@1.11.1.1, 2010-04-20 01:55:05-04:00, stenn@deacon.udel.edu +2 -1
+    [Bug 1465] Make sure time from TS2100 is not invalid (backport from -dev)
+
+ChangeSet@1.2082.4.78, 2010-04-20 01:45:17-04:00, stenn@deacon.udel.edu +3 -0
+  [Bug 1528] Fix EDITLINE_LIBS link order for ntpq and ntpdc
+
+  ChangeLog@1.496.26.53, 2010-04-20 01:44:57-04:00, stenn@deacon.udel.edu +1 -0
+    [Bug 1528] Fix EDITLINE_LIBS link order for ntpq and ntpdc
+
+  ntpdc/Makefile.am@1.48.1.4, 2010-04-20 01:44:57-04:00, stenn@deacon.udel.edu +2 -2
+    [Bug 1528] Fix EDITLINE_LIBS link order for ntpq and ntpdc
+
+  ntpq/Makefile.am@1.43.1.4, 2010-04-20 01:44:57-04:00, stenn@deacon.udel.edu +2 -2
+    [Bug 1528] Fix EDITLINE_LIBS link order for ntpq and ntpdc
+
+ChangeSet@1.2082.4.77, 2010-04-20 01:30:11-04:00, stenn@deacon.udel.edu +2 -0
+  Remove --with-arlib from br-flock
+
+  ChangeLog@1.496.26.52, 2010-04-20 01:29:44-04:00, stenn@deacon.udel.edu +2 -0
+    Remove --with-arlib from br-flock
+
+  br-flock@1.14, 2010-04-20 01:29:44-04:00, stenn@deacon.udel.edu +1 -1
+    Remove --with-arlib from br-flock
+
+ChangeSet@1.2082.4.76, 2010-04-18 04:14:33-04:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_6P2_RC1
+  TAG: NTP_4_2_6P2_RC1
+
+  ChangeLog@1.496.26.51, 2010-04-18 04:14:31-04:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_6P2_RC1
+
+  ntpd/ntpd-opts.c@1.248.8.1, 2010-04-18 04:14:31-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC1
+
+  ntpd/ntpd-opts.h@1.248.8.1, 2010-04-18 04:14:31-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P2_RC1
+
+  ntpd/ntpd-opts.texi@1.246.8.1, 2010-04-18 04:14:31-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC1
+
+  ntpd/ntpd.1@1.246.8.1, 2010-04-18 04:14:31-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC1
+
+  ntpdc/ntpdc-opts.c@1.244.8.1, 2010-04-18 04:14:31-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC1
+
+  ntpdc/ntpdc-opts.h@1.244.8.1, 2010-04-18 04:14:31-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P2_RC1
+
+  ntpdc/ntpdc-opts.texi@1.243.8.1, 2010-04-18 04:14:31-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC1
+
+  ntpdc/ntpdc.1@1.243.8.1, 2010-04-18 04:14:31-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC1
+
+  ntpq/ntpq-opts.c@1.245.8.1, 2010-04-18 04:14:31-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC1
+
+  ntpq/ntpq-opts.h@1.245.8.1, 2010-04-18 04:14:31-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P2_RC1
+
+  ntpq/ntpq-opts.texi@1.244.8.1, 2010-04-18 04:14:32-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC1
+
+  ntpq/ntpq.1@1.244.8.1, 2010-04-18 04:14:32-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC1
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.123.8.1, 2010-04-18 04:14:32-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC1
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.123.8.1, 2010-04-18 04:14:32-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P2_RC1
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.123.8.1, 2010-04-18 04:14:32-04:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_6P2_RC1
+
+  ntpsnmpd/ntpsnmpd.1@1.122.8.1, 2010-04-18 04:14:32-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC1
+
+  packageinfo.sh@1.255.10.2, 2010-04-18 04:14:32-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC1
+
+  sntp/sntp-opts.c@1.117.8.1, 2010-04-18 04:14:32-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC1
+
+  sntp/sntp-opts.h@1.117.8.1, 2010-04-18 04:14:32-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P2_RC1
+
+  sntp/sntp-opts.texi@1.117.8.1, 2010-04-18 04:14:32-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC1
+
+  sntp/sntp.1@1.117.8.1, 2010-04-18 04:14:32-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC1
+
+  sntp/sntp.html@1.7.8.1, 2010-04-18 04:14:32-04:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_6P2_RC1
+
+  util/ntp-keygen-opts.c@1.247.8.1, 2010-04-18 04:14:32-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC1
+
+  util/ntp-keygen-opts.h@1.247.8.1, 2010-04-18 04:14:32-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P2_RC1
+
+  util/ntp-keygen-opts.texi@1.246.8.1, 2010-04-18 04:14:32-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC1
+
+  util/ntp-keygen.1@1.246.8.1, 2010-04-18 04:14:32-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC1
+
+ChangeSet@1.2082.4.75, 2010-04-18 03:57:37-04:00, stenn@deacon.udel.edu +1 -0
+  4.2.6p2-RC1
+
+  packageinfo.sh@1.255.10.1, 2010-04-18 03:57:30-04:00, stenn@deacon.udel.edu +1 -1
+    4.2.6p2-RC1
+
+ChangeSet@1.2082.4.74, 2010-04-16 13:59:44+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  fix backport (should have copied and pasted from -dev).
+
+  sntp/networking.c@1.29.1.3, 2010-04-16 13:59:43+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    fix backport (should have copied and pasted from -dev).
+
+ChangeSet@1.2082.4.71, 2010-04-14 21:16:25+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  [Bug 1518] Windows ntpd should lock to one processor more
+    conservatively.
+  
+
+  ChangeLog@1.496.43.1, 2010-04-14 21:16:25+00:00, davehart@shiny.ad.hartbrothers.com +5 -0
+    [Bug 1518] Windows ntpd should lock to one processor more
+      conservatively.
+    
+    applies to previous changeset, deferred to ease pulling the
+      prior changeset into -dev ahead of -stable.
+
+ChangeSet@1.2082.19.2, 2010-04-14 20:55:27+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  [Bug 1522] Enable range syntax "trustedkey (301 ... 399)".
+  Update html/authopt.html controlkey, requestkey, and trustedkey docs.
+
+  ChangeLog@1.496.42.1, 2010-04-14 20:55:26+00:00, davehart@shiny.ad.hartbrothers.com +5 -0
+    [Bug 1522] Enable range syntax "trustedkey (301 ... 399)".
+    Update html/authopt.html controlkey, requestkey, and trustedkey docs.
+    
+    The first entry applies to the prior changeset, which intentionally
+      lacked a ChangeLog entry to smooth pulling into -dev before -stable.
+
+  html/authopt.html@1.60, 2010-04-14 20:55:26+00:00, davehart@shiny.ad.hartbrothers.com +29 -7
+    Update html/authopt.html controlkey, requestkey, and trustedkey docs,
+      add range syntax to trustedkey docs.
+    
+
+ChangeSet@1.2082.18.3, 2010-04-14 04:44:52+00:00, davehart@shiny.ad.hartbrothers.com +13 -0
+  [Bug 1503] Auto-enabling of monitor for "restrict ... limited" wrong.
+  [Bug 1504] ntpdate tickles ntpd "discard minimum 1" rate limit if
+    "restrict ... limited" is used.
+
+  ChangeLog@1.496.26.48, 2010-04-14 04:44:51+00:00, davehart@shiny.ad.hartbrothers.com +6 -0
+    [Bug 1503] Auto-enabling of monitor for "restrict ... limited" wrong.
+    [Bug 1504] ntpdate tickles ntpd "discard minimum 1" rate limit if
+      "restrict ... limited" is used.
+
+  include/ntp.h@1.168.1.1, 2010-04-14 04:44:51+00:00, davehart@shiny.ad.hartbrothers.com +25 -16
+    [Bug 1503] Auto-enabling of monitor for "restrict ... limited" wrong.
+
+  include/ntp_lists.h@1.1.1.1, 2010-04-14 04:44:51+00:00, davehart@shiny.ad.hartbrothers.com +163 -10
+    [Bug 1503] Auto-enabling of monitor for "restrict ... limited" wrong.
+
+  include/ntp_net.h@1.3.1.1, 2010-04-14 04:44:51+00:00, davehart@shiny.ad.hartbrothers.com +34 -13
+    [Bug 1503] Auto-enabling of monitor for "restrict ... limited" wrong.
+
+  include/ntpd.h@1.137.1.1, 2010-04-14 04:44:51+00:00, davehart@shiny.ad.hartbrothers.com +4 -4
+    [Bug 1503] Auto-enabling of monitor for "restrict ... limited" wrong.
+
+  ntpd/ntp_io.c@1.306.1.4, 2010-04-14 04:44:51+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    [Bug 1503] Auto-enabling of monitor for "restrict ... limited" wrong.
+
+  ntpd/ntp_monitor.c@1.25.1.1, 2010-04-14 04:44:51+00:00, davehart@shiny.ad.hartbrothers.com +4 -4
+    [Bug 1503] Auto-enabling of monitor for "restrict ... limited" wrong.
+
+  ntpd/ntp_request.c@1.82.1.1, 2010-04-14 04:44:51+00:00, davehart@shiny.ad.hartbrothers.com +72 -37
+    [Bug 1503] Auto-enabling of monitor for "restrict ... limited" wrong.
+
+  ntpd/ntp_restrict.c@1.27.1.1, 2010-04-14 04:44:51+00:00, davehart@shiny.ad.hartbrothers.com +448 -429
+    [Bug 1503] Auto-enabling of monitor for "restrict ... limited" wrong.
+
+  ntpdate/ntpdate.c@1.69.1.1, 2010-04-14 04:44:51+00:00, davehart@shiny.ad.hartbrothers.com +63 -55
+    [Bug 1504] ntpdate tickles ntpd "discard minimum 1" rate limit if
+      "restrict ... limited" is used.
+
+  ntpdate/ntpdate.h@1.10.1.1, 2010-04-14 04:44:51+00:00, davehart@shiny.ad.hartbrothers.com +2 -1
+    [Bug 1504] ntpdate tickles ntpd "discard minimum 1" rate limit if
+      "restrict ... limited" is used.
+
+  ntpdc/ntpdc_ops.c@1.62.1.1, 2010-04-14 04:44:51+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    [Bug 1503] Auto-enabling of monitor for "restrict ... limited" wrong.
+
+  sntp/networking.c@1.29.1.2, 2010-04-14 04:44:51+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    [Bug 1503] Auto-enabling of monitor for "restrict ... limited" wrong.
+
 ChangeSet@1.2116, 2010-04-13 21:19:19+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P24
   TAG: NTP_4_2_7P24
