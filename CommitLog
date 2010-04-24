@@ -1,3 +1,144 @@
+ChangeSet@1.2124, 2010-04-24 10:09:18+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P26
+  TAG: NTP_4_2_7P26
+
+  ChangeLog@1.564, 2010-04-24 10:09:17+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P26
+
+  ntpd/ntpd-opts.c@1.27, 2010-04-24 10:09:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P26
+
+  ntpd/ntpd-opts.h@1.27, 2010-04-24 10:09:17+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P26
+
+  ntpd/ntpd-opts.texi@1.27, 2010-04-24 10:09:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P26
+
+  ntpd/ntpd.1@1.27, 2010-04-24 10:09:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P26
+
+  ntpdc/ntpdc-opts.c@1.27, 2010-04-24 10:09:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P26
+
+  ntpdc/ntpdc-opts.h@1.27, 2010-04-24 10:09:17+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P26
+
+  ntpdc/ntpdc-opts.texi@1.27, 2010-04-24 10:09:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P26
+
+  ntpdc/ntpdc.1@1.27, 2010-04-24 10:09:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P26
+
+  ntpq/ntpq-opts.c@1.27, 2010-04-24 10:09:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P26
+
+  ntpq/ntpq-opts.h@1.27, 2010-04-24 10:09:17+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P26
+
+  ntpq/ntpq-opts.texi@1.27, 2010-04-24 10:09:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P26
+
+  ntpq/ntpq.1@1.27, 2010-04-24 10:09:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P26
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.27, 2010-04-24 10:09:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P26
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.27, 2010-04-24 10:09:17+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P26
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.27, 2010-04-24 10:09:17+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P26
+
+  ntpsnmpd/ntpsnmpd.1@1.27, 2010-04-24 10:09:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P26
+
+  packageinfo.sh@1.28, 2010-04-24 10:09:17+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P26
+
+  sntp/sntp-opts.c@1.27, 2010-04-24 10:09:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P26
+
+  sntp/sntp-opts.h@1.27, 2010-04-24 10:09:17+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P26
+
+  sntp/sntp-opts.texi@1.27, 2010-04-24 10:09:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P26
+
+  sntp/sntp.1@1.27, 2010-04-24 10:09:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P26
+
+  sntp/sntp.html@1.27, 2010-04-24 10:09:17+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P26
+
+  util/ntp-keygen-opts.c@1.27, 2010-04-24 10:09:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P26
+
+  util/ntp-keygen-opts.h@1.27, 2010-04-24 10:09:17+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P26
+
+  util/ntp-keygen-opts.texi@1.27, 2010-04-24 10:09:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P26
+
+  util/ntp-keygen.1@1.27, 2010-04-24 10:09:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P26
+
+ChangeSet@1.2082.4.80, 2010-04-24 05:57:35+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+  [Bug 1534] win32/include/isc/net.h conflicts with VC++ 2010 errno.h.
+  [Bug 1535] "restrict -4 default" and "restrict -6 default" ignored.
+
+  ChangeLog@1.496.26.55, 2010-04-24 05:57:34+00:00, davehart@shiny.ad.hartbrothers.com +4 -1
+    [Bug 1534] win32/include/isc/net.h conflicts with VC++ 2010 errno.h.
+    [Bug 1535] "restrict -4 default" and "restrict -6 default" ignored.
+
+  lib/isc/win32/include/isc/net.h@1.10, 2010-04-24 05:57:34+00:00, davehart@shiny.ad.hartbrothers.com +30 -0
+    [Bug 1534] win32/include/isc/net.h conflicts with VC++ 2010 errno.h.
+
+  ntpd/ntp_parser.c@1.52.1.2, 2010-04-24 05:57:34+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    Bison output from ntp_parser.y
+
+  ntpd/ntp_parser.y@1.47.1.2, 2010-04-24 05:57:35+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    [Bug 1535] "restrict -4 default" and "restrict -6 default" ignored.
+
+ChangeSet@1.2119.1.1, 2010-04-22 10:06:01+00:00, davehart@shiny.ad.hartbrothers.com +9 -0
+  [Bug 1531] Require nonce with mrulist requests.
+  [Bug 1532] Remove ntpd support for ntpdc's monlist in favor of ntpq's
+    mrulist.
+
+  ChangeLog@1.559.1.1, 2010-04-22 10:05:59+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
+    [Bug 1531] Require nonce with mrulist requests.
+    [Bug 1532] Remove ntpd support for ntpdc's monlist in favor of ntpq's
+      mrulist.
+
+  include/ntp_control.h@1.46, 2010-04-22 10:05:59+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1531] Require nonce with mrulist requests.
+
+  include/ntp_md5.h@1.4, 2010-04-22 10:05:59+00:00, davehart@shiny.ad.hartbrothers.com +21 -5
+    Hide #ifdefs related to selection between OpenSSL and host/libisc MD5
+      implementations in one place, NTP code can then use the OpenSSL API
+      regardless.
+
+  include/ntpd.h@1.152, 2010-04-22 10:05:59+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
+    expose ntp_scanner.c's conf_file_sum
+
+  libntp/a_md5encrypt.c@1.27, 2010-04-22 10:05:59+00:00, davehart@shiny.ad.hartbrothers.com +3 -38
+    Hide #ifdefs related to selection between OpenSSL and host/libisc MD5
+      implementations in one place, NTP code can then use the OpenSSL API
+      regardless.
+
+  ntpd/ntp_control.c@1.138, 2010-04-22 10:05:59+00:00, davehart@shiny.ad.hartbrothers.com +150 -9
+    [Bug 1531] Require nonce with mrulist requests.
+
+  ntpd/ntp_request.c@1.93, 2010-04-22 10:06:00+00:00, davehart@shiny.ad.hartbrothers.com +5 -116
+    [Bug 1532] Remove ntpd support for ntpdc's monlist in favor of ntpq's
+      mrulist.
+
+  ntpd/ntp_scanner.c@1.35, 2010-04-22 10:06:00+00:00, davehart@shiny.ad.hartbrothers.com +5 -0
+    [Bug 1531] Require nonce with mrulist requests.
+
+  ntpq/ntpq-subs.c@1.65, 2010-04-22 10:06:00+00:00, davehart@shiny.ad.hartbrothers.com +38 -5
+    [Bug 1531] Require nonce with mrulist requests.
+
 ChangeSet@1.2121, 2010-04-20 21:58:50+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P25
   TAG: NTP_4_2_7P25
