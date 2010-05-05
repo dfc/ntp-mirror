@@ -1,3 +1,252 @@
+ChangeSet@1.2126.1.5, 2010-05-04 22:34:37-04:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P29
+  TAG: NTP_4_2_7P29
+
+  ChangeLog@1.566.1.5, 2010-05-04 22:34:34-04:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P29
+
+  ntpd/ntpd-opts.c@1.30, 2010-05-04 22:34:34-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P29
+
+  ntpd/ntpd-opts.h@1.30, 2010-05-04 22:34:34-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P29
+
+  ntpd/ntpd-opts.texi@1.30, 2010-05-04 22:34:34-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P29
+
+  ntpd/ntpd.1@1.30, 2010-05-04 22:34:34-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P29
+
+  ntpdc/ntpdc-opts.c@1.30, 2010-05-04 22:34:34-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P29
+
+  ntpdc/ntpdc-opts.h@1.30, 2010-05-04 22:34:34-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P29
+
+  ntpdc/ntpdc-opts.texi@1.30, 2010-05-04 22:34:34-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P29
+
+  ntpdc/ntpdc.1@1.30, 2010-05-04 22:34:34-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P29
+
+  ntpq/ntpq-opts.c@1.30, 2010-05-04 22:34:34-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P29
+
+  ntpq/ntpq-opts.h@1.30, 2010-05-04 22:34:34-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P29
+
+  ntpq/ntpq-opts.texi@1.30, 2010-05-04 22:34:34-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P29
+
+  ntpq/ntpq.1@1.30, 2010-05-04 22:34:34-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P29
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.30, 2010-05-04 22:34:34-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P29
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.30, 2010-05-04 22:34:35-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P29
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.30, 2010-05-04 22:34:35-04:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P29
+
+  ntpsnmpd/ntpsnmpd.1@1.30, 2010-05-04 22:34:35-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P29
+
+  packageinfo.sh@1.31, 2010-05-04 22:34:35-04:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P29
+
+  sntp/sntp-opts.c@1.30, 2010-05-04 22:34:35-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P29
+
+  sntp/sntp-opts.h@1.30, 2010-05-04 22:34:35-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P29
+
+  sntp/sntp-opts.texi@1.30, 2010-05-04 22:34:35-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P29
+
+  sntp/sntp.1@1.30, 2010-05-04 22:34:35-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P29
+
+  sntp/sntp.html@1.30, 2010-05-04 22:34:35-04:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P29
+
+  util/ntp-keygen-opts.c@1.30, 2010-05-04 22:34:35-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P29
+
+  util/ntp-keygen-opts.h@1.30, 2010-05-04 22:34:35-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P29
+
+  util/ntp-keygen-opts.texi@1.30, 2010-05-04 22:34:35-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P29
+
+  util/ntp-keygen.1@1.30, 2010-05-04 22:34:35-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P29
+
+ChangeSet@1.2129, 2010-05-04 01:43:50-04:00, stenn@deacon.udel.edu +2 -0
+  Documentation patches from Dave Mills
+
+  html/accopt.html@1.36, 2010-05-04 01:43:38-04:00, stenn@deacon.udel.edu +1 -1
+    Documentation patches from Dave Mills
+
+  html/monopt.html@1.31, 2010-05-04 01:43:38-04:00, stenn@deacon.udel.edu +3 -3
+    Documentation patches from Dave Mills
+
+ChangeSet@1.2126.1.4, 2010-05-03 10:15:58+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P28
+  TAG: NTP_4_2_7P28
+
+  ChangeLog@1.566.1.4, 2010-05-03 10:15:54+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P28
+
+  ntpd/ntpd-opts.c@1.29, 2010-05-03 10:15:54+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P28
+
+  ntpd/ntpd-opts.h@1.29, 2010-05-03 10:15:54+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P28
+
+  ntpd/ntpd-opts.texi@1.29, 2010-05-03 10:15:54+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P28
+
+  ntpd/ntpd.1@1.29, 2010-05-03 10:15:54+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P28
+
+  ntpdc/ntpdc-opts.c@1.29, 2010-05-03 10:15:54+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P28
+
+  ntpdc/ntpdc-opts.h@1.29, 2010-05-03 10:15:54+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P28
+
+  ntpdc/ntpdc-opts.texi@1.29, 2010-05-03 10:15:54+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P28
+
+  ntpdc/ntpdc.1@1.29, 2010-05-03 10:15:55+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P28
+
+  ntpq/ntpq-opts.c@1.29, 2010-05-03 10:15:55+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P28
+
+  ntpq/ntpq-opts.h@1.29, 2010-05-03 10:15:55+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P28
+
+  ntpq/ntpq-opts.texi@1.29, 2010-05-03 10:15:55+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P28
+
+  ntpq/ntpq.1@1.29, 2010-05-03 10:15:55+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P28
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.29, 2010-05-03 10:15:55+00:00, stenn@deacon.udel.edu +27 -4
+    NTP_4_2_7P28
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.29, 2010-05-03 10:15:55+00:00, stenn@deacon.udel.edu +18 -11
+    NTP_4_2_7P28
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.29, 2010-05-03 10:15:55+00:00, stenn@deacon.udel.edu +10 -1
+    NTP_4_2_7P28
+
+  ntpsnmpd/ntpsnmpd.1@1.29, 2010-05-03 10:15:55+00:00, stenn@deacon.udel.edu +11 -2
+    NTP_4_2_7P28
+
+  packageinfo.sh@1.30, 2010-05-03 10:15:55+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P28
+
+  sntp/sntp-opts.c@1.29, 2010-05-03 10:15:55+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P28
+
+  sntp/sntp-opts.h@1.29, 2010-05-03 10:15:56+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P28
+
+  sntp/sntp-opts.texi@1.29, 2010-05-03 10:15:56+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P28
+
+  sntp/sntp.1@1.29, 2010-05-03 10:15:56+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P28
+
+  sntp/sntp.html@1.29, 2010-05-03 10:15:56+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P28
+
+  util/ntp-keygen-opts.c@1.29, 2010-05-03 10:15:56+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P28
+
+  util/ntp-keygen-opts.h@1.29, 2010-05-03 10:15:56+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P28
+
+  util/ntp-keygen-opts.texi@1.29, 2010-05-03 10:15:56+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P28
+
+  util/ntp-keygen.1@1.29, 2010-05-03 10:15:56+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P28
+
+ChangeSet@1.2082.4.84, 2010-05-03 04:35:06-04:00, stenn@deacon.udel.edu +2 -0
+  [Bug 1541] Fix wrong keyword for "maxclock".
+
+  ChangeLog@1.496.26.59, 2010-05-03 04:34:54-04:00, stenn@deacon.udel.edu +1 -0
+    [Bug 1541] Fix wrong keyword for "maxclock".
+
+  html/decode.html@1.11.1.2, 2010-05-03 04:34:54-04:00, stenn@deacon.udel.edu +2 -2
+    [Bug 1541] Fix wrong keyword for "maxclock".
+
+ChangeSet@1.2126.1.2, 2010-05-03 04:20:43-04:00, stenn@deacon.udel.edu +1 -0
+  merge cleanup
+
+  ChangeLog@1.566.1.2, 2010-05-03 04:20:35-04:00, stenn@deacon.udel.edu +5 -0
+    merge cleanup
+
+ChangeSet@1.2127, 2010-04-30 17:24:16+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+  [Bug 1542] ntpd mrulist response may have incorrect last.older.
+  [Bug 1543] ntpq mrulist must refresh nonce when retrying.
+  [Bug 1544] ntpq mrulist sscanf timestamp format mismatch on 64-bit.
+  Windows compiling hints/winnt.html update from Sunil Tej S.
+
+  ChangeLog@1.567, 2010-04-30 17:23:50+00:00, davehart@shiny.ad.hartbrothers.com +8 -2
+    [Bug 1542] ntpd mrulist response may have incorrect last.older.
+    [Bug 1543] ntpq mrulist must refresh nonce when retrying.
+    [Bug 1544] ntpq mrulist sscanf timestamp format mismatch on 64-bit.
+    Windows compiling hints/winnt.html update from Sunil Tej S.
+
+  html/hints/winnt.html@1.20, 2010-04-30 17:23:50+00:00, davehart@shiny.ad.hartbrothers.com +13 -11
+    Windows compiling hints/winnt.html update from Sunil Tej S.
+
+  ntpd/ntp_control.c@1.139, 2010-04-30 17:23:50+00:00, davehart@shiny.ad.hartbrothers.com +5 -2
+    [Bug 1542] ntpd mrulist response may have incorrect last.older.
+
+  ntpq/ntpq-subs.c@1.66, 2010-04-30 17:23:50+00:00, davehart@shiny.ad.hartbrothers.com +145 -67
+    [Bug 1543] ntpq mrulist must refresh nonce when retrying.
+    [Bug 1544] ntpq mrulist sscanf timestamp format mismatch on 64-bit.
+
+ChangeSet@1.2082.4.83, 2010-04-30 09:03:12+00:00, stenn@psp-fb1.ntp.org +7 -0
+  [Bug 1512] ntpsnmpd should connect to net-snmpd via a unix-domain socket by default.  Provide a command-line 'socket name' option.
+
+  ChangeLog@1.496.26.58, 2010-04-30 08:59:54+00:00, stenn@psp-fb1.ntp.org +2 -0
+    [Bug 1512] ntpsnmpd should connect to net-snmpd via a unix-domain socket by default.  Provide a command-line 'socket name' option.
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.123.10.1, 2010-04-30 09:01:30+00:00, stenn@psp-fb1.ntp.org +29 -6
+    [Bug 1512] ntpsnmpd should connect to net-snmpd via a unix-domain socket by default.  Provide a command-line 'socket name' option.
+
+  ntpsnmpd/ntpsnmpd-opts.def@1.2, 2010-04-30 09:01:30+00:00, stenn@psp-fb1.ntp.org +12 -0
+    [Bug 1512] ntpsnmpd should connect to net-snmpd via a unix-domain socket by default.  Provide a command-line 'socket name' option.
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.123.10.1, 2010-04-30 09:01:30+00:00, stenn@psp-fb1.ntp.org +17 -10
+    [Bug 1512] ntpsnmpd should connect to net-snmpd via a unix-domain socket by default.  Provide a command-line 'socket name' option.
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.123.10.1, 2010-04-30 09:01:30+00:00, stenn@psp-fb1.ntp.org +33 -2
+    [Bug 1512] ntpsnmpd should connect to net-snmpd via a unix-domain socket by default.  Provide a command-line 'socket name' option.
+
+  ntpsnmpd/ntpsnmpd.1@1.122.10.1, 2010-04-30 09:01:30+00:00, stenn@psp-fb1.ntp.org +11 -2
+    [Bug 1512] ntpsnmpd should connect to net-snmpd via a unix-domain socket by default.  Provide a command-line 'socket name' option.
+
+  ntpsnmpd/ntpsnmpd.c@1.3.1.1, 2010-04-30 09:01:30+00:00, stenn@psp-fb1.ntp.org +1 -1
+    [Bug 1512] ntpsnmpd should connect to net-snmpd via a unix-domain socket by default.  Provide a command-line 'socket name' option.
+
+ChangeSet@1.2082.4.82, 2010-04-30 08:54:29+00:00, stenn@psp-fb1.ntp.org +2 -0
+  [Bug 1538] update refclock_nmea.c's call to getprotobyname()
+
+  ChangeLog@1.496.26.57, 2010-04-30 08:53:42+00:00, stenn@psp-fb1.ntp.org +6 -0
+    [Bug 1538] update refclock_nmea.c's call to getprotobyname()
+
+  ntpd/refclock_nmea.c@1.46.1.1, 2010-04-30 08:53:58+00:00, stenn@psp-fb1.ntp.org +1 -1
+    [Bug 1538] update refclock_nmea.c's call to getprotobyname()
+
 ChangeSet@1.2126, 2010-04-27 10:08:54+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P27
   TAG: NTP_4_2_7P27
