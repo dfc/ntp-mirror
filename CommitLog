@@ -1,3 +1,103 @@
+ChangeSet@1.2133, 2010-05-06 10:09:32+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P30
+  TAG: NTP_4_2_7P30
+
+  ChangeLog@1.572, 2010-05-06 10:09:30+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P30
+
+  ntpd/ntpd-opts.c@1.31, 2010-05-06 10:09:30+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P30
+
+  ntpd/ntpd-opts.h@1.31, 2010-05-06 10:09:31+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P30
+
+  ntpd/ntpd-opts.texi@1.31, 2010-05-06 10:09:31+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P30
+
+  ntpd/ntpd.1@1.31, 2010-05-06 10:09:31+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P30
+
+  ntpdc/ntpdc-opts.c@1.31, 2010-05-06 10:09:31+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P30
+
+  ntpdc/ntpdc-opts.h@1.31, 2010-05-06 10:09:31+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P30
+
+  ntpdc/ntpdc-opts.texi@1.31, 2010-05-06 10:09:31+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P30
+
+  ntpdc/ntpdc.1@1.31, 2010-05-06 10:09:31+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P30
+
+  ntpq/ntpq-opts.c@1.31, 2010-05-06 10:09:31+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P30
+
+  ntpq/ntpq-opts.h@1.31, 2010-05-06 10:09:31+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P30
+
+  ntpq/ntpq-opts.texi@1.31, 2010-05-06 10:09:31+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P30
+
+  ntpq/ntpq.1@1.31, 2010-05-06 10:09:31+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P30
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.31, 2010-05-06 10:09:31+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P30
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.31, 2010-05-06 10:09:31+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P30
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.31, 2010-05-06 10:09:31+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P30
+
+  ntpsnmpd/ntpsnmpd.1@1.31, 2010-05-06 10:09:31+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P30
+
+  packageinfo.sh@1.32, 2010-05-06 10:09:31+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P30
+
+  sntp/sntp-opts.c@1.31, 2010-05-06 10:09:31+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P30
+
+  sntp/sntp-opts.h@1.31, 2010-05-06 10:09:31+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P30
+
+  sntp/sntp-opts.texi@1.31, 2010-05-06 10:09:31+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P30
+
+  sntp/sntp.1@1.31, 2010-05-06 10:09:31+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P30
+
+  sntp/sntp.html@1.31, 2010-05-06 10:09:31+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P30
+
+  util/ntp-keygen-opts.c@1.31, 2010-05-06 10:09:31+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P30
+
+  util/ntp-keygen-opts.h@1.31, 2010-05-06 10:09:31+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P30
+
+  util/ntp-keygen-opts.texi@1.31, 2010-05-06 10:09:31+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P30
+
+  util/ntp-keygen.1@1.31, 2010-05-06 10:09:31+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P30
+
+ChangeSet@1.2132, 2010-05-05 10:27:23+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  [Bug 1526] ntpd DNS pipe read EINTR with no network at startup.
+
+  ChangeLog@1.571, 2010-05-05 10:27:22+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1526] ntpd DNS pipe read EINTR with no network at startup.
+
+  ntpd/work_fork.c@1.4, 2010-05-05 10:27:22+00:00, davehart@shiny.ad.hartbrothers.com +1 -9
+    [Bug 1526] ntpd DNS pipe read EINTR with no network at startup.
+
+ChangeSet@1.2131, 2010-05-05 03:58:07-04:00, stenn@deacon.udel.edu +1 -0
+  Update the ChangeLog entries when merging items from -stable
+
+  ChangeLog@1.570, 2010-05-05 03:57:48-04:00, stenn@deacon.udel.edu +52 -51
+    Update the ChangeLog entries when merging items from -stable
+
 ChangeSet@1.2126.1.5, 2010-05-04 22:34:37-04:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P29
   TAG: NTP_4_2_7P29
