@@ -322,6 +322,9 @@
 /* Define this if optional arguments are disallowed */
 #undef NO_OPTIONAL_OPT_ARGS
 
+/* Use OpenSSL? */
+#undef OPENSSL
+
 /* Name of package */
 #undef PACKAGE
 
