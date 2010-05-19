@@ -9,6 +9,9 @@
 /* CHU audio/decoder? */
 #undef AUDIO_CHU
 
+/* Support NTP Autokey protocol? */
+#undef AUTOKEY
+
 /* Declare char *sys_errlist array */
 #undef CHAR_SYS_ERRLIST
 
