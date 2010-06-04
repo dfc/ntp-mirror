@@ -1,3 +1,129 @@
+ChangeSet@1.2147, 2010-06-04 02:10:49-04:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P33
+  TAG: NTP_4_2_7P33
+
+  ChangeLog@1.585, 2010-06-04 02:10:47-04:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P33
+
+  ntpd/ntpd-opts.c@1.34, 2010-06-04 02:10:47-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P33
+
+  ntpd/ntpd-opts.h@1.34, 2010-06-04 02:10:47-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P33
+
+  ntpd/ntpd-opts.texi@1.34, 2010-06-04 02:10:47-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P33
+
+  ntpd/ntpd.1@1.34, 2010-06-04 02:10:47-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P33
+
+  ntpdc/ntpdc-opts.c@1.34, 2010-06-04 02:10:47-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P33
+
+  ntpdc/ntpdc-opts.h@1.34, 2010-06-04 02:10:47-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P33
+
+  ntpdc/ntpdc-opts.texi@1.34, 2010-06-04 02:10:47-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P33
+
+  ntpdc/ntpdc.1@1.34, 2010-06-04 02:10:47-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P33
+
+  ntpq/ntpq-opts.c@1.34, 2010-06-04 02:10:47-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P33
+
+  ntpq/ntpq-opts.h@1.34, 2010-06-04 02:10:47-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P33
+
+  ntpq/ntpq-opts.texi@1.34, 2010-06-04 02:10:47-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P33
+
+  ntpq/ntpq.1@1.34, 2010-06-04 02:10:47-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P33
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.34, 2010-06-04 02:10:47-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P33
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.34, 2010-06-04 02:10:47-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P33
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.34, 2010-06-04 02:10:47-04:00, stenn@deacon.udel.edu +24 -2
+    NTP_4_2_7P33
+
+  ntpsnmpd/ntpsnmpd.1@1.34, 2010-06-04 02:10:47-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P33
+
+  packageinfo.sh@1.35, 2010-06-04 02:10:47-04:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P33
+
+  sntp/sntp-opts.c@1.34, 2010-06-04 02:10:47-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P33
+
+  sntp/sntp-opts.h@1.34, 2010-06-04 02:10:47-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P33
+
+  sntp/sntp-opts.texi@1.34, 2010-06-04 02:10:47-04:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P33
+
+  sntp/sntp.1@1.34, 2010-06-04 02:10:47-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P33
+
+  sntp/sntp.html@1.34, 2010-06-04 02:10:48-04:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P33
+
+  util/ntp-keygen-opts.c@1.34, 2010-06-04 02:10:48-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P33
+
+  util/ntp-keygen-opts.h@1.34, 2010-06-04 02:10:48-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P33
+
+  util/ntp-keygen-opts.texi@1.34, 2010-06-04 02:10:48-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P33
+
+  util/ntp-keygen.1@1.34, 2010-06-04 02:10:48-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P33
+
+ChangeSet@1.2082.4.95, 2010-05-31 18:59:05+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  [Bug 1565] sntp/crypto.c compile fails on MacOS over vsnprintf().
+  
+
+  ChangeLog@1.496.26.69, 2010-05-31 18:59:04+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1565] sntp/crypto.c compile fails on MacOS over vsnprintf().
+    
+
+  sntp/configure.ac@1.31.1.2, 2010-05-31 18:59:04+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    [Bug 1565] sntp/crypto.c compile fails on MacOS over vsnprintf().
+    
+
+ChangeSet@1.2082.4.94, 2010-05-24 15:46:36+00:00, davehart@shiny.ad.hartbrothers.com +6 -0
+  [Bug 1561] ntpq, ntpdc "passwd" prompts for MD5 password w/SHA1.
+  Windows port: do not exit in ntp_timestamp_from_counter() without
+    first logging the reason.
+  Support "passwd blah" syntax in ntpq.
+
+  ChangeLog@1.496.26.68, 2010-05-24 15:46:35+00:00, davehart@shiny.ad.hartbrothers.com +7 -0
+    [Bug 1561] ntpq, ntpdc "passwd" prompts for MD5 password w/SHA1.
+    Windows port: do not exit in ntp_timestamp_from_counter() without
+      first logging the reason.
+    Support "passwd blah" syntax in ntpq.
+
+  include/ntp_stdlib.h@1.40.1.2, 2010-05-24 15:46:35+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1561] ntpq, ntpdc "passwd" prompts for MD5 password w/SHA1.
+
+  libntp/ssl_init.c@1.4.1.1, 2010-05-24 15:46:35+00:00, davehart@shiny.ad.hartbrothers.com +25 -0
+    [Bug 1561] ntpq, ntpdc "passwd" prompts for MD5 password w/SHA1.
+
+  ntpdc/ntpdc.c@1.75.1.1, 2010-05-24 15:46:35+00:00, davehart@shiny.ad.hartbrothers.com +2 -14
+    [Bug 1561] ntpq, ntpdc "passwd" prompts for MD5 password w/SHA1.
+
+  ntpq/ntpq.c@1.97.1.4, 2010-05-24 15:46:35+00:00, davehart@shiny.ad.hartbrothers.com +16 -21
+    [Bug 1561] ntpq, ntpdc "passwd" prompts for MD5 password w/SHA1.
+    Support "passwd blah" syntax in ntpq.
+
+  ports/winnt/ntpd/nt_clockstuff.c@1.38.1.2, 2010-05-24 15:46:35+00:00, davehart@shiny.ad.hartbrothers.com +6 -3
+    Windows port: do not exit in ntp_timestamp_from_counter() without
+      first logging the reason.
+
 ChangeSet@1.2144, 2010-05-19 10:09:40+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P32
   TAG: NTP_4_2_7P32
