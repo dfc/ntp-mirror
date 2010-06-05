@@ -1,3 +1,118 @@
+ChangeSet@1.2152, 2010-06-05 06:47:24+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P34
+  TAG: NTP_4_2_7P34
+
+  ChangeLog@1.589, 2010-06-05 06:47:22+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P34
+
+  ntpd/ntpd-opts.c@1.35, 2010-06-05 06:47:22+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P34
+
+  ntpd/ntpd-opts.h@1.35, 2010-06-05 06:47:22+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P34
+
+  ntpd/ntpd-opts.texi@1.35, 2010-06-05 06:47:22+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P34
+
+  ntpd/ntpd.1@1.35, 2010-06-05 06:47:23+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P34
+
+  ntpdc/ntpdc-opts.c@1.35, 2010-06-05 06:47:23+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P34
+
+  ntpdc/ntpdc-opts.h@1.35, 2010-06-05 06:47:23+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P34
+
+  ntpdc/ntpdc-opts.texi@1.35, 2010-06-05 06:47:23+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P34
+
+  ntpdc/ntpdc.1@1.35, 2010-06-05 06:47:23+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P34
+
+  ntpq/ntpq-opts.c@1.35, 2010-06-05 06:47:23+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P34
+
+  ntpq/ntpq-opts.h@1.35, 2010-06-05 06:47:23+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P34
+
+  ntpq/ntpq-opts.texi@1.35, 2010-06-05 06:47:23+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P34
+
+  ntpq/ntpq.1@1.35, 2010-06-05 06:47:23+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P34
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.35, 2010-06-05 06:47:23+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P34
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.35, 2010-06-05 06:47:23+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P34
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.35, 2010-06-05 06:47:23+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P34
+
+  ntpsnmpd/ntpsnmpd.1@1.35, 2010-06-05 06:47:23+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P34
+
+  packageinfo.sh@1.36, 2010-06-05 06:47:23+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P34
+
+  sntp/sntp-opts.c@1.35, 2010-06-05 06:47:23+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P34
+
+  sntp/sntp-opts.h@1.35, 2010-06-05 06:47:23+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P34
+
+  sntp/sntp-opts.texi@1.35, 2010-06-05 06:47:23+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P34
+
+  sntp/sntp.1@1.35, 2010-06-05 06:47:23+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P34
+
+  sntp/sntp.html@1.35, 2010-06-05 06:47:23+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P34
+
+  util/ntp-keygen-opts.c@1.35, 2010-06-05 06:47:23+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P34
+
+  util/ntp-keygen-opts.h@1.35, 2010-06-05 06:47:23+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P34
+
+  util/ntp-keygen-opts.texi@1.35, 2010-06-05 06:47:23+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P34
+
+  util/ntp-keygen.1@1.35, 2010-06-05 06:47:23+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P34
+
+ChangeSet@1.2150, 2010-06-04 23:12:55-07:00, stenn@stenn.ntp.org +1 -0
+  fix typo
+
+  ntpd/ntp_refclock.c@1.96, 2010-06-04 23:12:50-07:00, stenn@stenn.ntp.org +1 -1
+    fix typo
+
+ChangeSet@1.2149, 2010-06-04 19:21:26+02:00, jnperlin@hydra.localnet +3 -0
+  [Bug 1570] serial line drivers get outdated data from kernel tty line buffer after startup
+
+  BitKeeper/etc/ignore@1.76, 2010-06-04 19:21:25+02:00, jnperlin@hydra.localnet +5 -0
+    Added m4/libtool.m4 m4/ltoptions.m4 m4/ltsugar.m4 m4/ltversion.m4 m4/lt~obsolete.m4 to the ignore list
+
+  ChangeLog@1.587, 2010-06-04 19:21:25+02:00, jnperlin@hydra.localnet +2 -2
+    [Bug 1570] serial line drivers get outdated data from kernel tty line buffer after startup
+
+  ntpd/ntp_refclock.c@1.95, 2010-06-04 19:21:25+02:00, jnperlin@hydra.localnet +8 -9
+    [Bug 1570] flush I/O buffers and read all old data when opening a serial line
+
+ChangeSet@1.2146.1.2, 2010-06-04 03:26:47-04:00, perlinger@psp-deb1.ntp.org +1 -0
+  bug 1580 fix
+
+  ChangeLog@1.584.1.1, 2010-06-04 03:26:46-04:00, perlinger@psp-deb1.ntp.org +2 -0
+    added bug 1580
+
+ChangeSet@1.2146.1.1, 2010-06-04 08:34:03+02:00, jnperlin@hydra.localnet +1 -0
+  [Bug 1580] Purge tty line buffers so serial refclocks do not get outdated data immediately after startup. 
+
+  ntpd/ntp_refclock.c@1.94, 2010-06-04 08:34:02+02:00, jnperlin@hydra.localnet +22 -0
+    [Bug 1580] Try to flush all buffers and/or read away old input data when opening a serial line for a refclock.
+
 ChangeSet@1.2147, 2010-06-04 02:10:49-04:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P33
   TAG: NTP_4_2_7P33
@@ -82,6 +197,91 @@ ChangeSet@1.2147, 2010-06-04 02:10:49-04:00, stenn@deacon.udel.edu +27 -0
 
   util/ntp-keygen.1@1.34, 2010-06-04 02:10:48-04:00, stenn@deacon.udel.edu +2 -2
     NTP_4_2_7P33
+
+ChangeSet@1.2082.4.96, 2010-06-03 02:24:13-04:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_6P2_RC5
+  TAG: NTP_4_2_6P2_RC5
+
+  ChangeLog@1.496.26.70, 2010-06-03 02:24:09-04:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_6P2_RC5
+
+  ntpd/ntpd-opts.c@1.248.12.1, 2010-06-03 02:24:09-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC5
+
+  ntpd/ntpd-opts.h@1.248.12.1, 2010-06-03 02:24:09-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P2_RC5
+
+  ntpd/ntpd-opts.texi@1.246.12.1, 2010-06-03 02:24:09-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC5
+
+  ntpd/ntpd.1@1.246.12.1, 2010-06-03 02:24:09-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC5
+
+  ntpdc/ntpdc-opts.c@1.244.12.1, 2010-06-03 02:24:09-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC5
+
+  ntpdc/ntpdc-opts.h@1.244.12.1, 2010-06-03 02:24:10-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P2_RC5
+
+  ntpdc/ntpdc-opts.texi@1.243.12.1, 2010-06-03 02:24:10-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC5
+
+  ntpdc/ntpdc.1@1.243.12.1, 2010-06-03 02:24:10-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC5
+
+  ntpq/ntpq-opts.c@1.245.12.1, 2010-06-03 02:24:10-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC5
+
+  ntpq/ntpq-opts.h@1.245.12.1, 2010-06-03 02:24:10-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P2_RC5
+
+  ntpq/ntpq-opts.texi@1.244.12.1, 2010-06-03 02:24:11-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC5
+
+  ntpq/ntpq.1@1.244.12.1, 2010-06-03 02:24:11-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC5
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.123.13.1, 2010-06-03 02:24:11-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC5
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.123.13.1, 2010-06-03 02:24:11-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P2_RC5
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.123.13.1, 2010-06-03 02:24:11-04:00, stenn@deacon.udel.edu +24 -2
+    NTP_4_2_6P2_RC5
+
+  ntpsnmpd/ntpsnmpd.1@1.122.13.1, 2010-06-03 02:24:11-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC5
+
+  packageinfo.sh@1.255.14.1, 2010-06-03 02:24:11-04:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_6P2_RC5
+
+  sntp/sntp-opts.c@1.117.12.1, 2010-06-03 02:24:11-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC5
+
+  sntp/sntp-opts.h@1.117.12.1, 2010-06-03 02:24:11-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P2_RC5
+
+  sntp/sntp-opts.texi@1.117.12.1, 2010-06-03 02:24:11-04:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_6P2_RC5
+
+  sntp/sntp.1@1.117.12.1, 2010-06-03 02:24:11-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC5
+
+  sntp/sntp.html@1.7.12.1, 2010-06-03 02:24:11-04:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_6P2_RC5
+
+  util/ntp-keygen-opts.c@1.247.12.1, 2010-06-03 02:24:11-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC5
+
+  util/ntp-keygen-opts.h@1.247.12.1, 2010-06-03 02:24:11-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P2_RC5
+
+  util/ntp-keygen-opts.texi@1.246.12.1, 2010-06-03 02:24:11-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC5
+
+  util/ntp-keygen.1@1.246.12.1, 2010-06-03 02:24:12-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC5
 
 ChangeSet@1.2082.4.95, 2010-05-31 18:59:05+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
   [Bug 1565] sntp/crypto.c compile fails on MacOS over vsnprintf().

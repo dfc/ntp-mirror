@@ -714,6 +714,9 @@ refclock_open(
 {
 	int	fd;
 	int	omode;
+#ifdef O_NONBLOCK
+	char    trash[128];	/* litter bin for old input data */
+#endif
 
 	/*
 	 * Open serial port and set default options
@@ -740,6 +743,16 @@ refclock_open(
 		close(fd);
 		return (0);
 	}
+#ifdef O_NONBLOCK
+	/*
+	 * We want to make sure there is no pending trash in the input
+	 * buffer. Since we have non-blocking IO available, this is a
+	 * good moment to read and dump all available outdated stuff
+	 * that might have become toxic for the driver.
+	 */
+	while (read(fd, trash, sizeof(trash)) > 0 || errno == EINTR)
+		/*NOP*/;
+#endif
 	return (fd);
 }
 
@@ -835,6 +848,14 @@ refclock_setup(
 		    "refclock_setup fd %d TCSANOW: %m", fd);
 		return (0);
 	}
+
+	/*
+	 * flush input and output buffers to discard any outdated stuff
+	 * that might have become toxic for the driver. Failing to do so
+	 * is logged, but we keep our fingers crossed otherwise.
+	 */
+	if (tcflush(fd, TCIOFLUSH) < 0)
+		msyslog(LOG_ERR, "refclock_setup fd %d tcflush(): %m", fd);
 #endif /* HAVE_TERMIOS */
 
 #ifdef HAVE_SYSV_TTYS
