@@ -1,3 +1,199 @@
+ChangeSet@1.2156, 2010-06-12 04:25:31-04:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P35
+  TAG: NTP_4_2_7P35
+
+  ChangeLog@1.593, 2010-06-12 04:25:29-04:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P35
+
+  ntpd/ntpd-opts.c@1.36, 2010-06-12 04:25:30-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P35
+
+  ntpd/ntpd-opts.h@1.36, 2010-06-12 04:25:30-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P35
+
+  ntpd/ntpd-opts.texi@1.36, 2010-06-12 04:25:30-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P35
+
+  ntpd/ntpd.1@1.36, 2010-06-12 04:25:30-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P35
+
+  ntpdc/ntpdc-opts.c@1.36, 2010-06-12 04:25:30-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P35
+
+  ntpdc/ntpdc-opts.h@1.36, 2010-06-12 04:25:30-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P35
+
+  ntpdc/ntpdc-opts.texi@1.36, 2010-06-12 04:25:30-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P35
+
+  ntpdc/ntpdc.1@1.36, 2010-06-12 04:25:30-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P35
+
+  ntpq/ntpq-opts.c@1.36, 2010-06-12 04:25:30-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P35
+
+  ntpq/ntpq-opts.h@1.36, 2010-06-12 04:25:30-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P35
+
+  ntpq/ntpq-opts.texi@1.36, 2010-06-12 04:25:30-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P35
+
+  ntpq/ntpq.1@1.36, 2010-06-12 04:25:30-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P35
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.36, 2010-06-12 04:25:30-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P35
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.36, 2010-06-12 04:25:30-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P35
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.36, 2010-06-12 04:25:30-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P35
+
+  ntpsnmpd/ntpsnmpd.1@1.36, 2010-06-12 04:25:30-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P35
+
+  packageinfo.sh@1.37, 2010-06-12 04:25:30-04:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P35
+
+  sntp/sntp-opts.c@1.36, 2010-06-12 04:25:30-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P35
+
+  sntp/sntp-opts.h@1.36, 2010-06-12 04:25:30-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P35
+
+  sntp/sntp-opts.texi@1.36, 2010-06-12 04:25:30-04:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P35
+
+  sntp/sntp.1@1.36, 2010-06-12 04:25:30-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P35
+
+  sntp/sntp.html@1.36, 2010-06-12 04:25:30-04:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P35
+
+  util/ntp-keygen-opts.c@1.36, 2010-06-12 04:25:30-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P35
+
+  util/ntp-keygen-opts.h@1.36, 2010-06-12 04:25:30-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P35
+
+  util/ntp-keygen-opts.texi@1.36, 2010-06-12 04:25:30-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P35
+
+  util/ntp-keygen.1@1.36, 2010-06-12 04:25:30-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P35
+
+ChangeSet@1.2155, 2010-06-12 04:04:03-04:00, stenn@deacon.udel.edu +1 -0
+  merge cleanup
+
+  ChangeLog@1.592, 2010-06-12 04:03:56-04:00, stenn@deacon.udel.edu +0 -4
+    merge cleanup
+
+ChangeSet@1.2082.4.98, 2010-06-12 02:21:49-04:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_6P2_RC6
+  TAG: NTP_4_2_6P2_RC6
+
+  ChangeLog@1.496.26.72, 2010-06-12 02:21:46-04:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_6P2_RC6
+
+  ntpd/ntpd-opts.c@1.248.13.1, 2010-06-12 02:21:46-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC6
+
+  ntpd/ntpd-opts.h@1.248.13.1, 2010-06-12 02:21:46-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P2_RC6
+
+  ntpd/ntpd-opts.texi@1.246.13.1, 2010-06-12 02:21:46-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC6
+
+  ntpd/ntpd.1@1.246.13.1, 2010-06-12 02:21:46-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC6
+
+  ntpdc/ntpdc-opts.c@1.244.13.1, 2010-06-12 02:21:46-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC6
+
+  ntpdc/ntpdc-opts.h@1.244.13.1, 2010-06-12 02:21:46-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P2_RC6
+
+  ntpdc/ntpdc-opts.texi@1.243.13.1, 2010-06-12 02:21:46-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC6
+
+  ntpdc/ntpdc.1@1.243.13.1, 2010-06-12 02:21:46-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC6
+
+  ntpq/ntpq-opts.c@1.245.13.1, 2010-06-12 02:21:46-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC6
+
+  ntpq/ntpq-opts.h@1.245.13.1, 2010-06-12 02:21:46-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P2_RC6
+
+  ntpq/ntpq-opts.texi@1.244.13.1, 2010-06-12 02:21:46-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC6
+
+  ntpq/ntpq.1@1.244.13.1, 2010-06-12 02:21:46-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC6
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.123.14.1, 2010-06-12 02:21:47-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC6
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.123.14.1, 2010-06-12 02:21:47-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P2_RC6
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.123.14.1, 2010-06-12 02:21:47-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC6
+
+  ntpsnmpd/ntpsnmpd.1@1.122.14.1, 2010-06-12 02:21:47-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC6
+
+  packageinfo.sh@1.255.15.1, 2010-06-12 02:21:47-04:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_6P2_RC6
+
+  sntp/sntp-opts.c@1.117.13.1, 2010-06-12 02:21:47-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC6
+
+  sntp/sntp-opts.h@1.117.13.1, 2010-06-12 02:21:47-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P2_RC6
+
+  sntp/sntp-opts.texi@1.117.13.1, 2010-06-12 02:21:47-04:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_6P2_RC6
+
+  sntp/sntp.1@1.117.13.1, 2010-06-12 02:21:47-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC6
+
+  sntp/sntp.html@1.7.13.1, 2010-06-12 02:21:47-04:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_6P2_RC6
+
+  util/ntp-keygen-opts.c@1.247.13.1, 2010-06-12 02:21:47-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC6
+
+  util/ntp-keygen-opts.h@1.247.13.1, 2010-06-12 02:21:47-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P2_RC6
+
+  util/ntp-keygen-opts.texi@1.246.13.1, 2010-06-12 02:21:47-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC6
+
+  util/ntp-keygen.1@1.246.13.1, 2010-06-12 02:21:48-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC6
+
+ChangeSet@1.2082.4.97, 2010-06-08 13:15:32+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  [Bug 715] libisc Linux IPv6 interface iteration drops multicast flags.
+
+  ChangeLog@1.496.26.71, 2010-06-08 13:15:31+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+    [Bug 715] libisc Linux IPv6 interface iteration drops multicast flags.
+
+  lib/isc/unix/interfaceiter.c@1.18, 2010-06-08 13:15:31+00:00, davehart@shiny.ad.hartbrothers.com +32 -3
+    [Bug 715] libisc Linux IPv6 interface iteration drops multicast flags.
+      patch from joerg@dorchain.net adapted from original by
+      peter.pramberger@1012surf.net
+
+ChangeSet@1.2153, 2010-06-08 02:24:01+02:00, jnperlin@hydra.localnet +2 -0
+  Rewrite of multiprecision macros in 'ntp_fp.h' from J. Perlinger
+
+  ChangeLog@1.590, 2010-06-08 02:24:01+02:00, jnperlin@hydra.localnet +2 -0
+    Rewrite of multiprecision macros in 'ntp_fp.h' from J. Perlinger
+
+  include/ntp_fp.h@1.20, 2010-06-08 02:24:01+02:00, jnperlin@hydra.localnet +97 -132
+    Rewrite of M_xxx macros: cleanup in unsigned & overflow handling
+
 ChangeSet@1.2152, 2010-06-05 06:47:24+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P34
   TAG: NTP_4_2_7P34
