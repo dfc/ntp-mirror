@@ -1,3 +1,106 @@
+ChangeSet@1.2158, 2010-06-15 10:09:41+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P36
+  TAG: NTP_4_2_7P36
+
+  ChangeLog@1.595, 2010-06-15 10:09:39+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P36
+
+  ntpd/ntpd-opts.c@1.37, 2010-06-15 10:09:39+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P36
+
+  ntpd/ntpd-opts.h@1.37, 2010-06-15 10:09:39+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P36
+
+  ntpd/ntpd-opts.texi@1.37, 2010-06-15 10:09:39+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P36
+
+  ntpd/ntpd.1@1.37, 2010-06-15 10:09:39+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P36
+
+  ntpdc/ntpdc-opts.c@1.37, 2010-06-15 10:09:39+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P36
+
+  ntpdc/ntpdc-opts.h@1.37, 2010-06-15 10:09:39+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P36
+
+  ntpdc/ntpdc-opts.texi@1.37, 2010-06-15 10:09:39+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P36
+
+  ntpdc/ntpdc.1@1.37, 2010-06-15 10:09:39+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P36
+
+  ntpq/ntpq-opts.c@1.37, 2010-06-15 10:09:39+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P36
+
+  ntpq/ntpq-opts.h@1.37, 2010-06-15 10:09:39+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P36
+
+  ntpq/ntpq-opts.texi@1.37, 2010-06-15 10:09:39+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P36
+
+  ntpq/ntpq.1@1.37, 2010-06-15 10:09:39+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P36
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.37, 2010-06-15 10:09:39+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P36
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.37, 2010-06-15 10:09:39+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P36
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.37, 2010-06-15 10:09:39+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P36
+
+  ntpsnmpd/ntpsnmpd.1@1.37, 2010-06-15 10:09:39+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P36
+
+  packageinfo.sh@1.38, 2010-06-15 10:09:39+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P36
+
+  sntp/sntp-opts.c@1.37, 2010-06-15 10:09:39+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P36
+
+  sntp/sntp-opts.h@1.37, 2010-06-15 10:09:39+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P36
+
+  sntp/sntp-opts.texi@1.37, 2010-06-15 10:09:39+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P36
+
+  sntp/sntp.1@1.37, 2010-06-15 10:09:39+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P36
+
+  sntp/sntp.html@1.37, 2010-06-15 10:09:39+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P36
+
+  util/ntp-keygen-opts.c@1.37, 2010-06-15 10:09:39+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P36
+
+  util/ntp-keygen-opts.h@1.37, 2010-06-15 10:09:39+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P36
+
+  util/ntp-keygen-opts.texi@1.37, 2010-06-15 10:09:39+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P36
+
+  util/ntp-keygen.1@1.37, 2010-06-15 10:09:39+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P36
+
+ChangeSet@1.2157, 2010-06-15 00:24:37-04:00, stenn@deacon.udel.edu +5 -0
+  orphanwait changes (Bug 1560) and clockfilter/reachability fixes from Dave Mills
+
+  ChangeLog@1.594, 2010-06-15 00:24:25-04:00, stenn@deacon.udel.edu +2 -0
+    orphanwait changes (Bug 1560) and clockfilter/reachability fixes from Dave Mills
+
+  include/ntp.h@1.179, 2010-06-15 00:06:53-04:00, stenn@deacon.udel.edu +2 -0
+    orphanwait changes from Dave Mills
+
+  include/ntpd.h@1.153, 2010-06-15 00:06:54-04:00, stenn@deacon.udel.edu +1 -0
+    orphanwait changes from Dave Mills
+
+  ntpd/ntp_proto.c@1.311, 2010-06-15 00:21:24-04:00, stenn@deacon.udel.edu +14 -6
+    orphanwait changes and clockfilter/reachability fixes from Dave Mills
+
+  ntpd/ntp_timer.c@1.59, 2010-06-15 00:06:44-04:00, stenn@deacon.udel.edu +3 -1
+    orphanwait changes from Dave Mills
+
 ChangeSet@1.2156, 2010-06-12 04:25:31-04:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P35
   TAG: NTP_4_2_7P35
