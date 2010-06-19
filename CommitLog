@@ -1,3 +1,97 @@
+ChangeSet@1.2160, 2010-06-19 10:09:44+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P37
+  TAG: NTP_4_2_7P37
+
+  ChangeLog@1.597, 2010-06-19 10:09:41+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P37
+
+  ntpd/ntpd-opts.c@1.38, 2010-06-19 10:09:42+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P37
+
+  ntpd/ntpd-opts.h@1.38, 2010-06-19 10:09:42+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P37
+
+  ntpd/ntpd-opts.texi@1.38, 2010-06-19 10:09:42+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P37
+
+  ntpd/ntpd.1@1.38, 2010-06-19 10:09:42+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P37
+
+  ntpdc/ntpdc-opts.c@1.38, 2010-06-19 10:09:42+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P37
+
+  ntpdc/ntpdc-opts.h@1.38, 2010-06-19 10:09:42+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P37
+
+  ntpdc/ntpdc-opts.texi@1.38, 2010-06-19 10:09:42+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P37
+
+  ntpdc/ntpdc.1@1.38, 2010-06-19 10:09:42+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P37
+
+  ntpq/ntpq-opts.c@1.38, 2010-06-19 10:09:42+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P37
+
+  ntpq/ntpq-opts.h@1.38, 2010-06-19 10:09:42+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P37
+
+  ntpq/ntpq-opts.texi@1.38, 2010-06-19 10:09:42+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P37
+
+  ntpq/ntpq.1@1.38, 2010-06-19 10:09:42+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P37
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.38, 2010-06-19 10:09:42+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P37
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.38, 2010-06-19 10:09:42+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P37
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.38, 2010-06-19 10:09:42+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P37
+
+  ntpsnmpd/ntpsnmpd.1@1.38, 2010-06-19 10:09:42+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P37
+
+  packageinfo.sh@1.39, 2010-06-19 10:09:42+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P37
+
+  sntp/sntp-opts.c@1.38, 2010-06-19 10:09:42+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P37
+
+  sntp/sntp-opts.h@1.38, 2010-06-19 10:09:42+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P37
+
+  sntp/sntp-opts.texi@1.38, 2010-06-19 10:09:42+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P37
+
+  sntp/sntp.1@1.38, 2010-06-19 10:09:42+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P37
+
+  sntp/sntp.html@1.38, 2010-06-19 10:09:42+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P37
+
+  util/ntp-keygen-opts.c@1.38, 2010-06-19 10:09:42+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P37
+
+  util/ntp-keygen-opts.h@1.38, 2010-06-19 10:09:43+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P37
+
+  util/ntp-keygen-opts.texi@1.38, 2010-06-19 10:09:43+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P37
+
+  util/ntp-keygen.1@1.38, 2010-06-19 10:09:43+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P37
+
+ChangeSet@1.2159, 2010-06-18 21:59:28-07:00, stenn@stenn.ntp.org +2 -0
+  [Bug 1576] sys/sysctl.h depends on sys/param.h on OpenBSD
+
+  ChangeLog@1.596, 2010-06-18 21:59:21-07:00, stenn@stenn.ntp.org +1 -0
+    [Bug 1576] sys/sysctl.h depends on sys/param.h on OpenBSD
+
+  configure.ac@1.484, 2010-06-18 21:59:21-07:00, stenn@stenn.ntp.org +7 -2
+    [Bug 1576] sys/sysctl.h depends on sys/param.h on OpenBSD
+
 ChangeSet@1.2158, 2010-06-15 10:09:41+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P36
   TAG: NTP_4_2_7P36
