@@ -1,3 +1,97 @@
+ChangeSet@1.2163, 2010-06-20 10:10:46+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P38
+  TAG: NTP_4_2_7P38
+
+  ChangeLog@1.600, 2010-06-20 10:10:43+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P38
+
+  ntpd/ntpd-opts.c@1.39, 2010-06-20 10:10:43+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P38
+
+  ntpd/ntpd-opts.h@1.39, 2010-06-20 10:10:43+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P38
+
+  ntpd/ntpd-opts.texi@1.39, 2010-06-20 10:10:43+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P38
+
+  ntpd/ntpd.1@1.39, 2010-06-20 10:10:43+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P38
+
+  ntpdc/ntpdc-opts.c@1.39, 2010-06-20 10:10:43+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P38
+
+  ntpdc/ntpdc-opts.h@1.39, 2010-06-20 10:10:44+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P38
+
+  ntpdc/ntpdc-opts.texi@1.39, 2010-06-20 10:10:44+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P38
+
+  ntpdc/ntpdc.1@1.39, 2010-06-20 10:10:44+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P38
+
+  ntpq/ntpq-opts.c@1.39, 2010-06-20 10:10:44+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P38
+
+  ntpq/ntpq-opts.h@1.39, 2010-06-20 10:10:44+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P38
+
+  ntpq/ntpq-opts.texi@1.39, 2010-06-20 10:10:44+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P38
+
+  ntpq/ntpq.1@1.39, 2010-06-20 10:10:44+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P38
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.39, 2010-06-20 10:10:44+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P38
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.39, 2010-06-20 10:10:44+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P38
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.39, 2010-06-20 10:10:44+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P38
+
+  ntpsnmpd/ntpsnmpd.1@1.39, 2010-06-20 10:10:44+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P38
+
+  packageinfo.sh@1.40, 2010-06-20 10:10:44+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P38
+
+  sntp/sntp-opts.c@1.39, 2010-06-20 10:10:44+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P38
+
+  sntp/sntp-opts.h@1.39, 2010-06-20 10:10:44+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P38
+
+  sntp/sntp-opts.texi@1.39, 2010-06-20 10:10:44+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P38
+
+  sntp/sntp.1@1.39, 2010-06-20 10:10:44+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P38
+
+  sntp/sntp.html@1.39, 2010-06-20 10:10:44+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P38
+
+  util/ntp-keygen-opts.c@1.39, 2010-06-20 10:10:45+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P38
+
+  util/ntp-keygen-opts.h@1.39, 2010-06-20 10:10:45+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P38
+
+  util/ntp-keygen-opts.texi@1.39, 2010-06-20 10:10:45+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P38
+
+  util/ntp-keygen.1@1.39, 2010-06-20 10:10:45+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P38
+
+ChangeSet@1.2162, 2010-06-19 18:28:21-04:00, stenn@deacon.udel.edu +2 -0
+  typo fix in comment
+
+  ChangeLog@1.599, 2010-06-19 18:28:13-04:00, stenn@deacon.udel.edu +1 -0
+    typo fix in comment
+
+  ntpd/ntp_proto.c@1.312, 2010-06-19 18:28:13-04:00, stenn@deacon.udel.edu +1 -1
+    typo fix in comment
+
 ChangeSet@1.2160, 2010-06-19 10:09:44+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P37
   TAG: NTP_4_2_7P37
@@ -83,6 +177,115 @@ ChangeSet@1.2160, 2010-06-19 10:09:44+00:00, stenn@deacon.udel.edu +27 -0
   util/ntp-keygen.1@1.38, 2010-06-19 10:09:43+00:00, stenn@deacon.udel.edu +2 -2
     NTP_4_2_7P37
 
+ChangeSet@1.2082.4.103, 2010-06-19 02:49:04-04:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_6P2_RC7
+  TAG: NTP_4_2_6P2_RC7
+
+  ChangeLog@1.496.26.77, 2010-06-19 02:49:00-04:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_6P2_RC7
+
+  ntpd/ntpd-opts.c@1.248.14.1, 2010-06-19 02:49:00-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC7
+
+  ntpd/ntpd-opts.h@1.248.14.1, 2010-06-19 02:49:00-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P2_RC7
+
+  ntpd/ntpd-opts.texi@1.246.14.1, 2010-06-19 02:49:00-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC7
+
+  ntpd/ntpd.1@1.246.14.1, 2010-06-19 02:49:00-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC7
+
+  ntpdc/ntpdc-opts.c@1.244.14.1, 2010-06-19 02:49:00-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC7
+
+  ntpdc/ntpdc-opts.h@1.244.14.1, 2010-06-19 02:49:00-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P2_RC7
+
+  ntpdc/ntpdc-opts.texi@1.243.14.1, 2010-06-19 02:49:00-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC7
+
+  ntpdc/ntpdc.1@1.243.14.1, 2010-06-19 02:49:00-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC7
+
+  ntpq/ntpq-opts.c@1.245.14.1, 2010-06-19 02:49:00-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC7
+
+  ntpq/ntpq-opts.h@1.245.14.1, 2010-06-19 02:49:01-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P2_RC7
+
+  ntpq/ntpq-opts.texi@1.244.14.1, 2010-06-19 02:49:01-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC7
+
+  ntpq/ntpq.1@1.244.14.1, 2010-06-19 02:49:01-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC7
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.123.15.1, 2010-06-19 02:49:01-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC7
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.123.15.1, 2010-06-19 02:49:01-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P2_RC7
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.123.15.1, 2010-06-19 02:49:01-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC7
+
+  ntpsnmpd/ntpsnmpd.1@1.122.15.1, 2010-06-19 02:49:01-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC7
+
+  packageinfo.sh@1.255.16.1, 2010-06-19 02:49:01-04:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_6P2_RC7
+
+  sntp/sntp-opts.c@1.117.14.1, 2010-06-19 02:49:01-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC7
+
+  sntp/sntp-opts.h@1.117.14.1, 2010-06-19 02:49:01-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P2_RC7
+
+  sntp/sntp-opts.texi@1.117.14.1, 2010-06-19 02:49:01-04:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_6P2_RC7
+
+  sntp/sntp.1@1.117.14.1, 2010-06-19 02:49:01-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC7
+
+  sntp/sntp.html@1.7.14.1, 2010-06-19 02:49:01-04:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_6P2_RC7
+
+  util/ntp-keygen-opts.c@1.247.14.1, 2010-06-19 02:49:01-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC7
+
+  util/ntp-keygen-opts.h@1.247.14.1, 2010-06-19 02:49:01-04:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P2_RC7
+
+  util/ntp-keygen-opts.texi@1.246.14.1, 2010-06-19 02:49:01-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC7
+
+  util/ntp-keygen.1@1.246.14.1, 2010-06-19 02:49:01-04:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2_RC7
+
+ChangeSet@1.2082.4.102, 2010-06-19 02:32:32-04:00, stenn@deacon.udel.edu +2 -0
+  [Bug 1570] serial clock drivers get outdated input from kernel tty line buffer after startup
+
+  ChangeLog@1.496.26.76, 2010-06-19 02:32:09-04:00, stenn@deacon.udel.edu +2 -0
+    [Bug 1570] serial clock drivers get outdated input from kernel tty line buffer after startup
+
+  ntpd/ntp_refclock.c@1.92.1.1, 2010-06-19 02:32:25-04:00, stenn@deacon.udel.edu +21 -0
+    [Bug 1570] serial clock drivers get outdated input from kernel tty line buffer after startup
+
+ChangeSet@1.2082.4.101, 2010-06-19 01:59:33-04:00, stenn@deacon.udel.edu +1 -0
+  merge cleanup
+
+  ChangeLog@1.496.26.75, 2010-06-19 01:59:28-04:00, stenn@deacon.udel.edu +2 -3
+    merge cleanup
+
+ChangeSet@1.2082.21.1, 2010-06-19 01:57:32-04:00, stenn@deacon.udel.edu +2 -0
+  [Bug 1576] sys/sysctl.h depends on sys/param.h on OpenBSD
+
+  ChangeLog@1.496.45.1, 2010-06-19 01:51:39-04:00, stenn@deacon.udel.edu +4 -0
+    [Bug 1576] sys/sysctl.h depends on sys/param.h on OpenBSD
+
+  configure.ac@1.465.1.12, 2010-06-19 01:51:39-04:00, stenn@deacon.udel.edu +7 -2
+    [Bug 1576] sys/sysctl.h depends on sys/param.h on OpenBSD
+
 ChangeSet@1.2159, 2010-06-18 21:59:28-07:00, stenn@stenn.ntp.org +2 -0
   [Bug 1576] sys/sysctl.h depends on sys/param.h on OpenBSD
 
@@ -91,6 +294,21 @@ ChangeSet@1.2159, 2010-06-18 21:59:28-07:00, stenn@stenn.ntp.org +2 -0
 
   configure.ac@1.484, 2010-06-18 21:59:21-07:00, stenn@stenn.ntp.org +7 -2
     [Bug 1576] sys/sysctl.h depends on sys/param.h on OpenBSD
+
+ChangeSet@1.2082.4.99, 2010-06-15 08:25:18-04:00, perlinger@psp-deb1.ntp.org +4 -0
+  [Bug 1575] use snprintf with LIB_BUFLENGTH in inttoa.c, tvtoa.c, utvtoa.c
+
+  ChangeLog@1.496.26.73, 2010-06-15 08:25:16-04:00, perlinger@psp-deb1.ntp.org +3 -0
+    [Bug 1575] use snprintf with LIB_BUFLENGTH in inttoa.c, tvtoa.c, utvtoa.c
+
+  libntp/inttoa.c@1.4, 2010-06-15 08:25:17-04:00, perlinger@psp-deb1.ntp.org +1 -1
+    [Bug 1575] use snprintf with LIB_BUFLENGTH in inttoa.c, tvtoa.c, utvtoa.c
+
+  libntp/tvtoa.c@1.4, 2010-06-15 08:25:17-04:00, perlinger@psp-deb1.ntp.org +1 -1
+    [Bug 1575] use snprintf with LIB_BUFLENGTH in inttoa.c, tvtoa.c, utvtoa.c
+
+  libntp/utvtoa.c@1.4, 2010-06-15 08:25:17-04:00, perlinger@psp-deb1.ntp.org +1 -1
+    [Bug 1575] use snprintf with LIB_BUFLENGTH in inttoa.c, tvtoa.c, utvtoa.c
 
 ChangeSet@1.2158, 2010-06-15 10:09:41+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P36
