@@ -1,3 +1,240 @@
+ChangeSet@1.2168, 2010-07-09 10:09:15+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P39
+  TAG: NTP_4_2_7P39
+
+  ChangeLog@1.605, 2010-07-09 10:09:13+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P39
+
+  ntpd/ntpd-opts.c@1.40, 2010-07-09 10:09:14+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P39
+
+  ntpd/ntpd-opts.h@1.40, 2010-07-09 10:09:14+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P39
+
+  ntpd/ntpd-opts.texi@1.40, 2010-07-09 10:09:14+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P39
+
+  ntpd/ntpd.1@1.40, 2010-07-09 10:09:14+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P39
+
+  ntpdc/ntpdc-opts.c@1.40, 2010-07-09 10:09:14+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P39
+
+  ntpdc/ntpdc-opts.h@1.40, 2010-07-09 10:09:14+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P39
+
+  ntpdc/ntpdc-opts.texi@1.40, 2010-07-09 10:09:14+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P39
+
+  ntpdc/ntpdc.1@1.40, 2010-07-09 10:09:14+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P39
+
+  ntpq/ntpq-opts.c@1.40, 2010-07-09 10:09:14+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P39
+
+  ntpq/ntpq-opts.h@1.40, 2010-07-09 10:09:14+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P39
+
+  ntpq/ntpq-opts.texi@1.40, 2010-07-09 10:09:14+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P39
+
+  ntpq/ntpq.1@1.40, 2010-07-09 10:09:14+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P39
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.40, 2010-07-09 10:09:14+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P39
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.40, 2010-07-09 10:09:14+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P39
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.40, 2010-07-09 10:09:14+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P39
+
+  ntpsnmpd/ntpsnmpd.1@1.40, 2010-07-09 10:09:14+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P39
+
+  packageinfo.sh@1.41, 2010-07-09 10:09:14+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P39
+
+  sntp/sntp-opts.c@1.40, 2010-07-09 10:09:14+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P39
+
+  sntp/sntp-opts.h@1.40, 2010-07-09 10:09:14+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P39
+
+  sntp/sntp-opts.texi@1.40, 2010-07-09 10:09:14+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P39
+
+  sntp/sntp.1@1.40, 2010-07-09 10:09:14+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P39
+
+  sntp/sntp.html@1.40, 2010-07-09 10:09:14+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P39
+
+  util/ntp-keygen-opts.c@1.40, 2010-07-09 10:09:14+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P39
+
+  util/ntp-keygen-opts.h@1.40, 2010-07-09 10:09:14+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P39
+
+  util/ntp-keygen-opts.texi@1.40, 2010-07-09 10:09:14+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P39
+
+  util/ntp-keygen.1@1.40, 2010-07-09 10:09:14+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P39
+
+ChangeSet@1.2167, 2010-07-09 02:03:53-04:00, stenn@deacon.udel.edu +2 -0
+  Fix typo in driver28.html
+
+  ChangeLog@1.604, 2010-07-09 02:03:47-04:00, stenn@deacon.udel.edu +1 -0
+    Fix typo in driver28.html
+
+  html/drivers/driver28.html@1.13, 2010-07-09 02:03:16-04:00, stenn@deacon.udel.edu +1 -1
+    Fix typo in driver28.html
+
+ChangeSet@1.2082.4.107, 2010-07-09 02:25:58+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_6P2
+  TAG: NTP_4_2_6P2
+
+  ChangeLog@1.496.26.79, 2010-07-09 02:25:55+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_6P2
+
+  ntpd/ntpd-opts.c@1.248.15.1, 2010-07-09 02:25:55+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2
+
+  ntpd/ntpd-opts.h@1.248.15.1, 2010-07-09 02:25:55+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P2
+
+  ntpd/ntpd-opts.texi@1.246.15.1, 2010-07-09 02:25:55+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2
+
+  ntpd/ntpd.1@1.246.15.1, 2010-07-09 02:25:55+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2
+
+  ntpdc/ntpdc-opts.c@1.244.15.1, 2010-07-09 02:25:55+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2
+
+  ntpdc/ntpdc-opts.h@1.244.15.1, 2010-07-09 02:25:55+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P2
+
+  ntpdc/ntpdc-opts.texi@1.243.15.1, 2010-07-09 02:25:55+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2
+
+  ntpdc/ntpdc.1@1.243.15.1, 2010-07-09 02:25:56+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2
+
+  ntpq/ntpq-opts.c@1.245.15.1, 2010-07-09 02:25:56+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2
+
+  ntpq/ntpq-opts.h@1.245.15.1, 2010-07-09 02:25:56+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P2
+
+  ntpq/ntpq-opts.texi@1.244.15.1, 2010-07-09 02:25:56+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2
+
+  ntpq/ntpq.1@1.244.15.1, 2010-07-09 02:25:56+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.123.16.1, 2010-07-09 02:25:56+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.123.16.1, 2010-07-09 02:25:56+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P2
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.123.16.1, 2010-07-09 02:25:56+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2
+
+  ntpsnmpd/ntpsnmpd.1@1.122.16.1, 2010-07-09 02:25:56+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2
+
+  packageinfo.sh@1.255.17.2, 2010-07-09 02:25:56+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2
+
+  sntp/sntp-opts.c@1.117.15.1, 2010-07-09 02:25:56+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2
+
+  sntp/sntp-opts.h@1.117.15.1, 2010-07-09 02:25:56+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P2
+
+  sntp/sntp-opts.texi@1.117.15.1, 2010-07-09 02:25:57+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_6P2
+
+  sntp/sntp.1@1.117.15.1, 2010-07-09 02:25:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2
+
+  sntp/sntp.html@1.7.15.1, 2010-07-09 02:25:57+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_6P2
+
+  util/ntp-keygen-opts.c@1.247.15.1, 2010-07-09 02:25:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2
+
+  util/ntp-keygen-opts.h@1.247.15.1, 2010-07-09 02:25:57+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P2
+
+  util/ntp-keygen-opts.texi@1.246.15.1, 2010-07-09 02:25:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2
+
+  util/ntp-keygen.1@1.246.15.1, 2010-07-09 02:25:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P2
+
+ChangeSet@1.2165, 2010-07-09 01:59:14+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  Correct the attribution of the next -stable tarball to 4.2.6p2
+
+  ChangeLog@1.602, 2010-07-09 01:59:14+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    Correct the attribution of the next -stable tarball to 4.2.6p2
+
+ChangeSet@1.2082.4.106, 2010-07-08 21:55:47-04:00, stenn@deacon.udel.edu +2 -0
+  release 4.2.6p2
+
+  NEWS@1.107, 2010-07-08 21:53:59-04:00, stenn@deacon.udel.edu +39 -0
+    NEWS file for 4.2.6p2
+
+  packageinfo.sh@1.255.17.1, 2010-07-08 21:55:33-04:00, stenn@deacon.udel.edu +1 -1
+    release 4.2.6p2
+
+ChangeSet@1.2082.4.105, 2010-07-08 21:49:08-04:00, stenn@deacon.udel.edu +1 -0
+  Use the new mirror server names for the trigger mirror update script
+
+  BitKeeper/triggers/2mirrors@1.6, 2010-07-08 21:49:01-04:00, stenn@deacon.udel.edu +2 -2
+    Use the new mirror server names for the trigger mirror update script
+
+ChangeSet@1.2082.4.104, 2010-07-02 07:43:21+01:00, davehart@shiny.ad.hartbrothers.com +10 -0
+  [Bug 1581] size_t printf format string mismatches, IRIG string buffers
+    undersized.  Mostly backported from earlier ntp-dev fixes by Jürgen
+    Perlinger, The exceptions are ntp_intres.c and refclock_irig.c.
+
+  ChangeLog@1.496.26.78, 2010-07-02 07:43:19+01:00, davehart@shiny.ad.hartbrothers.com +6 -0
+    [Bug 1581] size_t printf format string mismatches, IRIG string buffers
+      undersized.  Mostly backported from earlier ntp-dev fixes by Jürgen
+      Perlinger, The exceptions are ntp_intres.c and refclock_irig.c.
+
+  libntp/ssl_init.c@1.4.1.2, 2010-07-02 07:43:19+01:00, davehart@shiny.ad.hartbrothers.com +5 -4
+    [Bug 1581] size_t printf format string mismatches (backported from ntp-dev).
+
+  ntpd/ntp_config.c@1.241.1.4, 2010-07-02 07:43:19+01:00, davehart@shiny.ad.hartbrothers.com +4 -4
+    [Bug 1581] size_t printf format string mismatches (backported from ntp-dev).
+
+  ntpd/ntp_intres.c@1.79.1.1, 2010-07-02 07:43:19+01:00, davehart@shiny.ad.hartbrothers.com +6 -4
+    [Bug 1581] size_t printf format string mismatches.
+
+  ntpd/ntp_request.c@1.82.1.2, 2010-07-02 07:43:19+01:00, davehart@shiny.ad.hartbrothers.com +8 -7
+    [Bug 1581] size_t printf format string mismatches (backported from ntp-dev).
+
+  ntpd/ntp_scanner.c@1.31.1.1, 2010-07-02 07:43:19+01:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    [Bug 1581] size_t printf format string mismatches (backported from ntp-dev).
+
+  ntpd/refclock_acts.c@1.36.1.1, 2010-07-02 07:43:20+01:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    [Bug 1581] size_t printf format string mismatches (backported from ntp-dev).
+
+  ntpd/refclock_irig.c@1.33, 2010-07-02 07:43:20+01:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    [Bug 1581] sscanf() target buffers lack room for terminating null.
+
+  ntpdc/ntpdc.c@1.75.1.2, 2010-07-02 07:43:20+01:00, davehart@shiny.ad.hartbrothers.com +7 -7
+    [Bug 1581] size_t printf format string mismatches (backported from ntp-dev).
+
+  ntpq/ntpq.c@1.97.1.5, 2010-07-02 07:43:20+01:00, davehart@shiny.ad.hartbrothers.com +6 -6
+    [Bug 1581] size_t printf format string mismatches (backported from ntp-dev).
+
 ChangeSet@1.2163, 2010-06-20 10:10:46+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P38
   TAG: NTP_4_2_7P38
