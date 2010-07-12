@@ -70,34 +70,34 @@ ARFLAGS = cru
 libntpd_a_AR = $(AR) $(ARFLAGS)
 libntpd_a_LIBADD =
 am__objects_1 =
-am_libntpd_a_OBJECTS = ntp_control.$(OBJEXT) ntp_crypto.$(OBJEXT) \
-	ntp_data_structures.$(OBJEXT) ntp_filegen.$(OBJEXT) \
-	ntp_intres.$(OBJEXT) ntp_loopfilter.$(OBJEXT) \
-	ntp_monitor.$(OBJEXT) ntp_peer.$(OBJEXT) ntp_proto.$(OBJEXT) \
-	ntp_refclock.$(OBJEXT) ntp_request.$(OBJEXT) \
-	ntp_restrict.$(OBJEXT) ntp_signd.$(OBJEXT) ntp_timer.$(OBJEXT) \
-	ntp_util.$(OBJEXT) ntp_worker.$(OBJEXT) \
-	refclock_acts.$(OBJEXT) refclock_arbiter.$(OBJEXT) \
-	refclock_arc.$(OBJEXT) refclock_as2201.$(OBJEXT) \
-	refclock_atom.$(OBJEXT) refclock_bancomm.$(OBJEXT) \
-	refclock_chronolog.$(OBJEXT) refclock_chu.$(OBJEXT) \
-	refclock_conf.$(OBJEXT) refclock_datum.$(OBJEXT) \
-	refclock_dumbclock.$(OBJEXT) refclock_fg.$(OBJEXT) \
-	refclock_gpsvme.$(OBJEXT) refclock_heath.$(OBJEXT) \
-	refclock_hopfser.$(OBJEXT) refclock_hopfpci.$(OBJEXT) \
-	refclock_hpgps.$(OBJEXT) refclock_irig.$(OBJEXT) \
-	refclock_jjy.$(OBJEXT) refclock_jupiter.$(OBJEXT) \
-	refclock_leitch.$(OBJEXT) refclock_local.$(OBJEXT) \
-	refclock_mx4200.$(OBJEXT) refclock_neoclock4x.$(OBJEXT) \
-	refclock_nmea.$(OBJEXT) refclock_oncore.$(OBJEXT) \
-	refclock_palisade.$(OBJEXT) refclock_parse.$(OBJEXT) \
-	refclock_pcf.$(OBJEXT) refclock_pst.$(OBJEXT) \
-	refclock_ripencc.$(OBJEXT) refclock_shm.$(OBJEXT) \
-	refclock_tpro.$(OBJEXT) refclock_true.$(OBJEXT) \
-	refclock_tt560.$(OBJEXT) refclock_ulink.$(OBJEXT) \
-	refclock_wwv.$(OBJEXT) refclock_wwvb.$(OBJEXT) \
-	refclock_zyfer.$(OBJEXT) work_fork.$(OBJEXT) \
-	work_thread.$(OBJEXT) $(am__objects_1)
+am_libntpd_a_OBJECTS = cmd_args.$(OBJEXT) ntp_control.$(OBJEXT) \
+	ntp_crypto.$(OBJEXT) ntp_data_structures.$(OBJEXT) \
+	ntp_filegen.$(OBJEXT) ntp_intres.$(OBJEXT) \
+	ntp_loopfilter.$(OBJEXT) ntp_monitor.$(OBJEXT) \
+	ntp_peer.$(OBJEXT) ntp_proto.$(OBJEXT) ntp_refclock.$(OBJEXT) \
+	ntp_request.$(OBJEXT) ntp_restrict.$(OBJEXT) \
+	ntp_signd.$(OBJEXT) ntp_timer.$(OBJEXT) ntp_util.$(OBJEXT) \
+	ntp_worker.$(OBJEXT) refclock_acts.$(OBJEXT) \
+	refclock_arbiter.$(OBJEXT) refclock_arc.$(OBJEXT) \
+	refclock_as2201.$(OBJEXT) refclock_atom.$(OBJEXT) \
+	refclock_bancomm.$(OBJEXT) refclock_chronolog.$(OBJEXT) \
+	refclock_chu.$(OBJEXT) refclock_conf.$(OBJEXT) \
+	refclock_datum.$(OBJEXT) refclock_dumbclock.$(OBJEXT) \
+	refclock_fg.$(OBJEXT) refclock_gpsvme.$(OBJEXT) \
+	refclock_heath.$(OBJEXT) refclock_hopfser.$(OBJEXT) \
+	refclock_hopfpci.$(OBJEXT) refclock_hpgps.$(OBJEXT) \
+	refclock_irig.$(OBJEXT) refclock_jjy.$(OBJEXT) \
+	refclock_jupiter.$(OBJEXT) refclock_leitch.$(OBJEXT) \
+	refclock_local.$(OBJEXT) refclock_mx4200.$(OBJEXT) \
+	refclock_neoclock4x.$(OBJEXT) refclock_nmea.$(OBJEXT) \
+	refclock_oncore.$(OBJEXT) refclock_palisade.$(OBJEXT) \
+	refclock_parse.$(OBJEXT) refclock_pcf.$(OBJEXT) \
+	refclock_pst.$(OBJEXT) refclock_ripencc.$(OBJEXT) \
+	refclock_shm.$(OBJEXT) refclock_tpro.$(OBJEXT) \
+	refclock_true.$(OBJEXT) refclock_tt560.$(OBJEXT) \
+	refclock_ulink.$(OBJEXT) refclock_wwv.$(OBJEXT) \
+	refclock_wwvb.$(OBJEXT) refclock_zyfer.$(OBJEXT) \
+	work_fork.$(OBJEXT) work_thread.$(OBJEXT) $(am__objects_1)
 libntpd_a_OBJECTS = $(am_libntpd_a_OBJECTS)
 am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(sbindir)" \
 	"$(DESTDIR)$(man1dir)"
@@ -109,15 +109,14 @@ check_y2k_DEPENDENCIES = $(am__DEPENDENCIES_1) ../libntp/libntp.a
 keyword_gen_SOURCES = keyword-gen.c
 keyword_gen_OBJECTS = keyword-gen.$(OBJEXT)
 keyword_gen_DEPENDENCIES = ../libntp/libntp.a
-am_ntpd_OBJECTS = cmd_args.$(OBJEXT) ntp_config.$(OBJEXT) \
-	ntp_io.$(OBJEXT) ntp_parser.$(OBJEXT) ntp_scanner.$(OBJEXT) \
-	ntpd.$(OBJEXT) ntpd-opts.$(OBJEXT) $(am__objects_1)
+am_ntpd_OBJECTS = ntp_config.$(OBJEXT) ntp_io.$(OBJEXT) \
+	ntp_parser.$(OBJEXT) ntp_scanner.$(OBJEXT) ntpd.$(OBJEXT) \
+	ntpd-opts.$(OBJEXT) $(am__objects_1)
 ntpd_OBJECTS = $(am_ntpd_OBJECTS)
 am__DEPENDENCIES_2 =
 ntpd_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_2) \
 	../libntp/libntp.a
-am__objects_2 = ntpdsim-cmd_args.$(OBJEXT) \
-	ntpdsim-ntp_config.$(OBJEXT) ntpdsim-ntp_io.$(OBJEXT) \
+am__objects_2 = ntpdsim-ntp_config.$(OBJEXT) ntpdsim-ntp_io.$(OBJEXT) \
 	ntpdsim-ntp_parser.$(OBJEXT) ntpdsim-ntp_scanner.$(OBJEXT) \
 	ntpdsim-ntpd.$(OBJEXT) ntpdsim-ntpd-opts.$(OBJEXT) \
 	$(am__objects_1)
@@ -405,7 +404,6 @@ std_def_list = $(top_srcdir)/include/autogen-version.def 	\
 		$(top_srcdir)/include/version.def
 
 ntpd_SOURCES = \
-	cmd_args.c		\
 	ntp_config.c		\
 	ntp_keyword.h		\
 	ntp_io.c		\
@@ -425,6 +423,7 @@ ntpdsim_SOURCES = \
 
 # libntpd_a_SOURCES do not use #ifdef SIM
 libntpd_a_SOURCES = \
+	cmd_args.c		\
 	jupiter.h		\
 	ntp_control.c		\
 	ntp_crypto.c		\
@@ -673,7 +672,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ntp_worker.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ntpd-opts.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ntpd.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ntpdsim-cmd_args.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ntpdsim-ntp_config.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ntpdsim-ntp_io.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ntpdsim-ntp_parser.Po@am__quote@
@@ -743,20 +741,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='$<' object='$@' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(LTCOMPILE) -c -o $@ $<
-
-ntpdsim-cmd_args.o: cmd_args.c
-@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -MT ntpdsim-cmd_args.o -MD -MP -MF $(DEPDIR)/ntpdsim-cmd_args.Tpo -c -o ntpdsim-cmd_args.o `test -f 'cmd_args.c' || echo '$(srcdir)/'`cmd_args.c
-@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/ntpdsim-cmd_args.Tpo $(DEPDIR)/ntpdsim-cmd_args.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cmd_args.c' object='ntpdsim-cmd_args.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -c -o ntpdsim-cmd_args.o `test -f 'cmd_args.c' || echo '$(srcdir)/'`cmd_args.c
-
-ntpdsim-cmd_args.obj: cmd_args.c
-@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -MT ntpdsim-cmd_args.obj -MD -MP -MF $(DEPDIR)/ntpdsim-cmd_args.Tpo -c -o ntpdsim-cmd_args.obj `if test -f 'cmd_args.c'; then $(CYGPATH_W) 'cmd_args.c'; else $(CYGPATH_W) '$(srcdir)/cmd_args.c'; fi`
-@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/ntpdsim-cmd_args.Tpo $(DEPDIR)/ntpdsim-cmd_args.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cmd_args.c' object='ntpdsim-cmd_args.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -c -o ntpdsim-cmd_args.obj `if test -f 'cmd_args.c'; then $(CYGPATH_W) 'cmd_args.c'; else $(CYGPATH_W) '$(srcdir)/cmd_args.c'; fi`
 
 ntpdsim-ntp_config.o: ntp_config.c
 @am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -MT ntpdsim-ntp_config.o -MD -MP -MF $(DEPDIR)/ntpdsim-ntp_config.Tpo -c -o ntpdsim-ntp_config.o `test -f 'ntp_config.c' || echo '$(srcdir)/'`ntp_config.c

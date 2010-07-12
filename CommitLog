@@ -1,3 +1,103 @@
+ChangeSet@1.2171, 2010-07-12 10:09:56+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P40
+  TAG: NTP_4_2_7P40
+
+  ChangeLog@1.607, 2010-07-12 10:09:52+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P40
+
+  ntpd/ntpd-opts.c@1.43, 2010-07-12 10:09:52+00:00, stenn@deacon.udel.edu +5 -5
+    NTP_4_2_7P40
+
+  ntpd/ntpd-opts.h@1.43, 2010-07-12 10:09:52+00:00, stenn@deacon.udel.edu +4 -4
+    NTP_4_2_7P40
+
+  ntpd/ntpd-opts.texi@1.42, 2010-07-12 10:09:53+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P40
+
+  ntpd/ntpd.1@1.42, 2010-07-12 10:09:53+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P40
+
+  ntpdc/ntpdc-opts.c@1.41, 2010-07-12 10:09:54+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P40
+
+  ntpdc/ntpdc-opts.h@1.41, 2010-07-12 10:09:54+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P40
+
+  ntpdc/ntpdc-opts.texi@1.41, 2010-07-12 10:09:54+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P40
+
+  ntpdc/ntpdc.1@1.41, 2010-07-12 10:09:54+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P40
+
+  ntpq/ntpq-opts.c@1.41, 2010-07-12 10:09:54+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P40
+
+  ntpq/ntpq-opts.h@1.41, 2010-07-12 10:09:54+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P40
+
+  ntpq/ntpq-opts.texi@1.41, 2010-07-12 10:09:54+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P40
+
+  ntpq/ntpq.1@1.41, 2010-07-12 10:09:54+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P40
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.41, 2010-07-12 10:09:54+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P40
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.41, 2010-07-12 10:09:54+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P40
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.41, 2010-07-12 10:09:55+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P40
+
+  ntpsnmpd/ntpsnmpd.1@1.41, 2010-07-12 10:09:55+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P40
+
+  packageinfo.sh@1.42, 2010-07-12 10:09:55+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P40
+
+  sntp/sntp-opts.c@1.41, 2010-07-12 10:09:55+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P40
+
+  sntp/sntp-opts.h@1.41, 2010-07-12 10:09:55+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P40
+
+  sntp/sntp-opts.texi@1.41, 2010-07-12 10:09:55+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P40
+
+  sntp/sntp.1@1.41, 2010-07-12 10:09:55+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P40
+
+  sntp/sntp.html@1.41, 2010-07-12 10:09:55+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P40
+
+  util/ntp-keygen-opts.c@1.41, 2010-07-12 10:09:55+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P40
+
+  util/ntp-keygen-opts.h@1.41, 2010-07-12 10:09:55+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P40
+
+  util/ntp-keygen-opts.texi@1.41, 2010-07-12 10:09:55+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P40
+
+  util/ntp-keygen.1@1.41, 2010-07-12 10:09:55+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P40
+
+ChangeSet@1.2170, 2010-07-09 23:35:54+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+  updated output of ntpdbase-opts.def
+
+  ntpd/ntpd-opts.c@1.42, 2010-07-09 23:35:53+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    updated output of ntpdbase-opts.def
+
+  ntpd/ntpd-opts.h@1.42, 2010-07-09 23:35:53+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    updated output of ntpdbase-opts.def
+
+  ntpd/ntpd-opts.texi@1.41, 2010-07-09 23:35:53+00:00, davehart@shiny.ad.hartbrothers.com +64 -5
+    updated output of ntpdbase-opts.def
+
+  ntpd/ntpd.1@1.41, 2010-07-09 23:35:53+00:00, davehart@shiny.ad.hartbrothers.com +27 -5
+    updated output of ntpdbase-opts.def
+
 ChangeSet@1.2168, 2010-07-09 10:09:15+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P39
   TAG: NTP_4_2_7P39
@@ -5,10 +105,10 @@ ChangeSet@1.2168, 2010-07-09 10:09:15+00:00, stenn@deacon.udel.edu +27 -0
   ChangeLog@1.605, 2010-07-09 10:09:13+00:00, stenn@deacon.udel.edu +1 -0
     NTP_4_2_7P39
 
-  ntpd/ntpd-opts.c@1.40, 2010-07-09 10:09:14+00:00, stenn@deacon.udel.edu +2 -2
+  ntpd/ntpd-opts.c@1.39.1.1, 2010-07-09 10:09:14+00:00, stenn@deacon.udel.edu +2 -2
     NTP_4_2_7P39
 
-  ntpd/ntpd-opts.h@1.40, 2010-07-09 10:09:14+00:00, stenn@deacon.udel.edu +3 -3
+  ntpd/ntpd-opts.h@1.39.1.1, 2010-07-09 10:09:14+00:00, stenn@deacon.udel.edu +3 -3
     NTP_4_2_7P39
 
   ntpd/ntpd-opts.texi@1.40, 2010-07-09 10:09:14+00:00, stenn@deacon.udel.edu +2 -2
@@ -198,6 +298,55 @@ ChangeSet@1.2082.4.105, 2010-07-08 21:49:08-04:00, stenn@deacon.udel.edu +1 -0
   BitKeeper/triggers/2mirrors@1.6, 2010-07-08 21:49:01-04:00, stenn@deacon.udel.edu +2 -2
     Use the new mirror server names for the trigger mirror update script
 
+ChangeSet@1.2163.1.3, 2010-07-06 04:18:16+00:00, davehart@shiny.ad.hartbrothers.com +10 -0
+  Remove orphan mode startup workaround from ntp_proto.c, it's
+    not needed with the addition of sys_orphwait.
+  Add "tos orphanwait" to set sys_orphwait.
+
+  ntpd/complete.conf@1.8, 2010-07-06 04:18:15+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    add "tos orphanwait 300"
+
+  ntpd/keyword-gen-utd@1.7, 2010-07-06 04:18:15+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    sentinel that ntp_keyword.h is current with keyword-gen.c
+
+  ntpd/keyword-gen.c@1.12, 2010-07-06 04:18:15+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    add T_Orphanwait "orphanwait" for tos orphanwait
+
+  ntpd/ntp_config.c@1.260.1.3, 2010-07-06 04:18:15+00:00, davehart@shiny.ad.hartbrothers.com +5 -0
+    tos orphanwait
+
+  ntpd/ntp_keyword.h@1.9, 2010-07-06 04:18:15+00:00, davehart@shiny.ad.hartbrothers.com +498 -493
+    generated by keyword-gen.c
+
+  ntpd/ntp_parser.c@1.58, 2010-07-06 04:18:15+00:00, davehart@shiny.ad.hartbrothers.com +907 -898
+    generated from ntp_parser.y
+
+  ntpd/ntp_parser.h@1.37, 2010-07-06 04:18:15+00:00, davehart@shiny.ad.hartbrothers.com +131 -129
+    generated from ntp_parser.y
+
+  ntpd/ntp_parser.y@1.53, 2010-07-06 04:18:15+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
+    tos orphanwait
+
+  ntpd/ntp_proto.c@1.300, 2010-07-06 04:18:15+00:00, davehart@shiny.ad.hartbrothers.com +1 -6
+    remove orphan mode at startup workaround, no longer needed for
+      [Bug 1395] --wait-sync with DLM's sys_orphwait change.
+
+  ntpd/ntpd.c@1.113, 2010-07-06 04:18:16+00:00, davehart@shiny.ad.hartbrothers.com +0 -7
+    leftover merge cleanup, remove locals leftover from code
+      moved from ntpdmain() to close_all_beyond().
+
+ChangeSet@1.2163.1.2, 2010-07-05 14:58:16+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
+  merge cleanup
+
+  ntpd/ntp_config.c@1.260.1.2, 2010-07-05 14:58:15+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    correct merge for removal of default_ai_family from ntpd.
+
+  ntpd/ntpd-opts.c@1.40, 2010-07-05 14:58:15+00:00, davehart@shiny.ad.hartbrothers.com +97 -20
+    Autogen output
+
+  ntpd/ntpd-opts.h@1.40, 2010-07-05 14:58:15+00:00, davehart@shiny.ad.hartbrothers.com +18 -11
+    Autogen output
+
 ChangeSet@1.2082.4.104, 2010-07-02 07:43:21+01:00, davehart@shiny.ad.hartbrothers.com +10 -0
   [Bug 1581] size_t printf format string mismatches, IRIG string buffers
     undersized.  Mostly backported from earlier ntp-dev fixes by Jürgen
@@ -326,7 +475,7 @@ ChangeSet@1.2162, 2010-06-19 18:28:21-04:00, stenn@deacon.udel.edu +2 -0
   ChangeLog@1.599, 2010-06-19 18:28:13-04:00, stenn@deacon.udel.edu +1 -0
     typo fix in comment
 
-  ntpd/ntp_proto.c@1.312, 2010-06-19 18:28:13-04:00, stenn@deacon.udel.edu +1 -1
+  ntpd/ntp_proto.c@1.297.1.15, 2010-06-19 18:28:13-04:00, stenn@deacon.udel.edu +1 -1
     typo fix in comment
 
 ChangeSet@1.2160, 2010-06-19 10:09:44+00:00, stenn@deacon.udel.edu +27 -0
@@ -517,7 +666,7 @@ ChangeSet@1.2082.4.101, 2010-06-19 01:59:33-04:00, stenn@deacon.udel.edu +1 -0
 ChangeSet@1.2082.21.1, 2010-06-19 01:57:32-04:00, stenn@deacon.udel.edu +2 -0
   [Bug 1576] sys/sysctl.h depends on sys/param.h on OpenBSD
 
-  ChangeLog@1.496.45.1, 2010-06-19 01:51:39-04:00, stenn@deacon.udel.edu +4 -0
+  ChangeLog@1.496.46.1, 2010-06-19 01:51:39-04:00, stenn@deacon.udel.edu +4 -0
     [Bug 1576] sys/sysctl.h depends on sys/param.h on OpenBSD
 
   configure.ac@1.465.1.12, 2010-06-19 01:51:39-04:00, stenn@deacon.udel.edu +7 -2
@@ -641,10 +790,10 @@ ChangeSet@1.2157, 2010-06-15 00:24:37-04:00, stenn@deacon.udel.edu +5 -0
   include/ntp.h@1.179, 2010-06-15 00:06:53-04:00, stenn@deacon.udel.edu +2 -0
     orphanwait changes from Dave Mills
 
-  include/ntpd.h@1.153, 2010-06-15 00:06:54-04:00, stenn@deacon.udel.edu +1 -0
+  include/ntpd.h@1.137.1.16, 2010-06-15 00:06:54-04:00, stenn@deacon.udel.edu +1 -0
     orphanwait changes from Dave Mills
 
-  ntpd/ntp_proto.c@1.311, 2010-06-15 00:21:24-04:00, stenn@deacon.udel.edu +14 -6
+  ntpd/ntp_proto.c@1.297.1.14, 2010-06-15 00:21:24-04:00, stenn@deacon.udel.edu +14 -6
     orphanwait changes and clockfilter/reachability fixes from Dave Mills
 
   ntpd/ntp_timer.c@1.59, 2010-06-15 00:06:44-04:00, stenn@deacon.udel.edu +3 -1
@@ -1579,7 +1728,7 @@ ChangeSet@1.2082.4.91, 2010-05-11 03:56:04-04:00, stenn@deacon.udel.edu +27 -0
 ChangeSet@1.2082.20.1, 2010-05-11 02:31:19-04:00, stenn@deacon.udel.edu +2 -0
   Windows compiling hints/winnt.html update from G. Sunil Tej
 
-  ChangeLog@1.496.44.1, 2010-05-11 02:30:34-04:00, stenn@deacon.udel.edu +1 -0
+  ChangeLog@1.496.45.1, 2010-05-11 02:30:34-04:00, stenn@deacon.udel.edu +1 -0
     Windows compiling hints/winnt.html update from G. Sunil Tej
 
   html/hints/winnt.html@1.19.1.1, 2010-05-11 02:30:34-04:00, stenn@deacon.udel.edu +13 -11
@@ -2534,7 +2683,7 @@ ChangeSet@1.2119.1.1, 2010-04-22 10:06:01+00:00, davehart@shiny.ad.hartbrothers.
       implementations in one place, NTP code can then use the OpenSSL API
       regardless.
 
-  include/ntpd.h@1.152, 2010-04-22 10:05:59+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
+  include/ntpd.h@1.137.1.15, 2010-04-22 10:05:59+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
     expose ntp_scanner.c's conf_file_sum
 
   libntp/a_md5encrypt.c@1.27, 2010-04-22 10:05:59+00:00, davehart@shiny.ad.hartbrothers.com +3 -38
@@ -2772,7 +2921,7 @@ ChangeSet@1.2082.4.71, 2010-04-14 21:16:25+00:00, davehart@shiny.ad.hartbrothers
     conservatively.
   
 
-  ChangeLog@1.496.43.1, 2010-04-14 21:16:25+00:00, davehart@shiny.ad.hartbrothers.com +5 -0
+  ChangeLog@1.496.44.1, 2010-04-14 21:16:25+00:00, davehart@shiny.ad.hartbrothers.com +5 -0
     [Bug 1518] Windows ntpd should lock to one processor more
       conservatively.
     
@@ -2783,7 +2932,7 @@ ChangeSet@1.2082.19.2, 2010-04-14 20:55:27+00:00, davehart@shiny.ad.hartbrothers
   [Bug 1522] Enable range syntax "trustedkey (301 ... 399)".
   Update html/authopt.html controlkey, requestkey, and trustedkey docs.
 
-  ChangeLog@1.496.42.1, 2010-04-14 20:55:26+00:00, davehart@shiny.ad.hartbrothers.com +5 -0
+  ChangeLog@1.496.43.1, 2010-04-14 20:55:26+00:00, davehart@shiny.ad.hartbrothers.com +5 -0
     [Bug 1522] Enable range syntax "trustedkey (301 ... 399)".
     Update html/authopt.html controlkey, requestkey, and trustedkey docs.
     
@@ -2814,7 +2963,7 @@ ChangeSet@1.2082.18.3, 2010-04-14 04:44:52+00:00, davehart@shiny.ad.hartbrothers
   include/ntp_net.h@1.3.1.1, 2010-04-14 04:44:51+00:00, davehart@shiny.ad.hartbrothers.com +34 -13
     [Bug 1503] Auto-enabling of monitor for "restrict ... limited" wrong.
 
-  include/ntpd.h@1.137.1.1, 2010-04-14 04:44:51+00:00, davehart@shiny.ad.hartbrothers.com +4 -4
+  include/ntpd.h@1.137.2.1, 2010-04-14 04:44:51+00:00, davehart@shiny.ad.hartbrothers.com +4 -4
     [Bug 1503] Auto-enabling of monitor for "restrict ... limited" wrong.
 
   ntpd/ntp_io.c@1.306.1.4, 2010-04-14 04:44:51+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
@@ -3026,7 +3175,7 @@ ChangeSet@1.2112.1.18, 2010-04-10 03:29:56+00:00, davehart@shiny.ad.hartbrothers
 ChangeSet@1.2082.19.1, 2010-04-10 02:26:43+00:00, davehart@shiny.ad.hartbrothers.com +10 -0
   [Bug 1522] Enable range syntax "trustedkey (301 ... 399)".
 
-  include/ntp_config.h@1.67.1.1, 2010-04-10 02:26:37+00:00, davehart@shiny.ad.hartbrothers.com +7 -5
+  include/ntp_config.h@1.66.2.1, 2010-04-10 02:26:37+00:00, davehart@shiny.ad.hartbrothers.com +7 -5
     add u_int u to attr_val.value union.
 
   include/ntp_stdlib.h@1.40.1.1, 2010-04-10 02:26:37+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
@@ -3061,7 +3210,7 @@ ChangeSet@1.2082.19.1, 2010-04-10 02:26:43+00:00, davehart@shiny.ad.hartbrothers
 ChangeSet@1.2112.3.2, 2010-04-09 12:33:43-04:00, perlinger@psp-deb1.ntp.org +1 -0
   fixed minor format glitch in ntpd/ntpd.c
 
-  ntpd/ntpd.c@1.117, 2010-04-09 12:33:41-04:00, perlinger@psp-deb1.ntp.org +4 -1
+  ntpd/ntpd.c@1.110.1.7, 2010-04-09 12:33:41-04:00, perlinger@psp-deb1.ntp.org +4 -1
     parametric length in format strings must be 'int' -- fixed that in 'change_logfile()'
 
 ChangeSet@1.2082.18.2, 2010-04-09 08:15:04+00:00, stenn@deacon.udel.edu +27 -0
@@ -3176,7 +3325,7 @@ ChangeSet@1.2112.3.1, 2010-04-06 19:08:47+02:00, jnperlin@hydra.localnet +10 -0
   ntpd/ntp_scanner.c@1.34, 2010-04-06 19:08:47+02:00, jnperlin@hydra.localnet +3 -3
     format 'size_t' with '%lu' (64-bit issue); fixed is_special() (also 64-bit trouble)
 
-  ntpd/ntpd.c@1.116, 2010-04-06 19:08:47+02:00, jnperlin@hydra.localnet +3 -3
+  ntpd/ntpd.c@1.110.1.6, 2010-04-06 19:08:47+02:00, jnperlin@hydra.localnet +3 -3
     format 'size_t' with '%lu' (64-bit issue); avoid possible format string attack to msyslog()
 
   ntpd/refclock_acts.c@1.37, 2010-04-06 19:08:47+02:00, jnperlin@hydra.localnet +2 -2
@@ -3423,7 +3572,7 @@ ChangeSet@1.2112.1.10, 2010-04-01 03:13:14-04:00, stenn@deacon.udel.edu +2 -0
   ChangeLog@1.546, 2010-04-01 03:13:05-04:00, stenn@deacon.udel.edu +1 -0
     [Bug 1432] Don't set inheritable flag for linux capabilities
 
-  ntpd/ntpd.c@1.115, 2010-04-01 03:13:05-04:00, stenn@deacon.udel.edu +2 -2
+  ntpd/ntpd.c@1.110.1.5, 2010-04-01 03:13:05-04:00, stenn@deacon.udel.edu +2 -2
     [Bug 1432] Don't set inheritable flag for linux capabilities
 
 ChangeSet@1.2112.2.7, 2010-03-31 09:16:48+00:00, stenn@deacon.udel.edu +27 -0
@@ -3608,7 +3757,7 @@ ChangeSet@1.2082.4.66, 2010-03-31 04:11:55-04:00, stenn@deacon.udel.edu +2 -0
   ChangeLog@1.496.26.45, 2010-03-31 04:11:43-04:00, stenn@deacon.udel.edu +1 -0
     [Bug 1514] Typo in ntp_proto.c: fabs(foo < .4) should be fabs(foo) < .4
 
-  ntpd/ntp_proto.c@1.297.1.1, 2010-03-31 04:11:43-04:00, stenn@deacon.udel.edu +1 -1
+  ntpd/ntp_proto.c@1.297.2.1, 2010-03-31 04:11:43-04:00, stenn@deacon.udel.edu +1 -1
     [Bug 1514] Typo in ntp_proto.c: fabs(foo < .4) should be fabs(foo) < .4
 
 ChangeSet@1.2082.4.65, 2010-03-31 03:17:27-04:00, stenn@deacon.udel.edu +4 -0
@@ -3687,7 +3836,7 @@ ChangeSet@1.2112.1.8, 2010-03-25 16:12:20+00:00, davehart@shiny.ad.hartbrothers.
       drops 10% of incoming packets from matching addresses), eliminating
       conflict with RES_TIMEOUT provided by some systems DNS headers.
 
-  ntpd/ntp_proto.c@1.309, 2010-03-25 16:12:15+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+  ntpd/ntp_proto.c@1.297.1.12, 2010-03-25 16:12:15+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
     rename RES_TIMEOUT to RES_FLAKE to reflect v4 use (as a flakeway which
       drops 10% of incoming packets from matching addresses).
 
@@ -3739,7 +3888,7 @@ ChangeSet@1.2110.1.30, 2010-03-25 01:42:06+00:00, davehart@shiny.ad.hartbrothers
   ntpd/ntp_peer.c@1.133, 2010-03-25 01:41:58+00:00, davehart@shiny.ad.hartbrothers.com +0 -3
     debug message cleanup for integration with ntp-dev
 
-  ntpd/ntp_proto.c@1.308, 2010-03-25 01:41:58+00:00, davehart@shiny.ad.hartbrothers.com +1 -2
+  ntpd/ntp_proto.c@1.297.1.11, 2010-03-25 01:41:58+00:00, davehart@shiny.ad.hartbrothers.com +1 -2
     debug message cleanup for integration with ntp-dev
 
   ntpq/ntpq-subs.c@1.63, 2010-03-25 01:41:59+00:00, davehart@shiny.ad.hartbrothers.com +13 -14
@@ -3830,7 +3979,7 @@ ChangeSet@1.2110.1.27, 2010-03-12 21:25:12+00:00, davehart@shiny.ad.hartbrothers
   include/ntp_control.h@1.45, 2010-03-12 21:25:11+00:00, davehart@shiny.ad.hartbrothers.com +2 -1
     add "ntpq -c ifstats" modeled on "ntpdc -c ifstats"
 
-  include/ntpd.h@1.150, 2010-03-12 21:25:11+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  include/ntpd.h@1.137.1.13, 2010-03-12 21:25:11+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
     add "ntpq -c ifstats" modeled on "ntpdc -c ifstats"
 
   ntpd/ntp_control.c@1.133.1.13, 2010-03-12 21:25:11+00:00, davehart@shiny.ad.hartbrothers.com +224 -47
@@ -3969,7 +4118,7 @@ ChangeSet@1.2110.1.21, 2010-03-08 21:23:01+00:00, davehart@shiny.ad.hartbrothers
   add support for filtering MRU list by interface (local addr):
     ntpq -c "mru laddr=192.168.1.1"
 
-  include/ntpd.h@1.149, 2010-03-08 21:23:00+00:00, davehart@shiny.ad.hartbrothers.com +3 -2
+  include/ntpd.h@1.137.1.12, 2010-03-08 21:23:00+00:00, davehart@shiny.ad.hartbrothers.com +3 -2
     expose ntp_io.c getinterface() for ntp_control.c use.
 
   ntpd/ntp_control.c@1.133.1.10, 2010-03-08 21:23:00+00:00, davehart@shiny.ad.hartbrothers.com +133 -50
@@ -3992,7 +4141,7 @@ ChangeSet@1.2110.1.20, 2010-03-08 10:44:22+00:00, davehart@shiny.ad.hartbrothers
   ntpd/ntp_control.c@1.133.1.9, 2010-03-08 10:44:21+00:00, davehart@shiny.ad.hartbrothers.com +74 -20
     expose variables needed for "ntpq -c sysstats" similar to "ntpdc -c sysstats"
 
-  ntpd/ntp_proto.c@1.307, 2010-03-08 10:44:21+00:00, davehart@shiny.ad.hartbrothers.com +2 -1
+  ntpd/ntp_proto.c@1.297.1.10, 2010-03-08 10:44:21+00:00, davehart@shiny.ad.hartbrothers.com +2 -1
     reset sys_kodsent in proto_clr_stats().
 
   ntpd/ntp_request.c@1.90, 2010-03-08 10:44:21+00:00, davehart@shiny.ad.hartbrothers.com +0 -3
@@ -4119,7 +4268,7 @@ ChangeSet@1.2110.1.16, 2010-03-04 17:17:47+00:00, davehart@shiny.ad.hartbrothers
       ntpq can use it.
     add sptoa()/sockporttoa() similar to stoa()/socktoa().
 
-  include/ntpd.h@1.148, 2010-03-04 17:17:45+00:00, davehart@shiny.ad.hartbrothers.com +6 -2
+  include/ntpd.h@1.137.1.11, 2010-03-04 17:17:45+00:00, davehart@shiny.ad.hartbrothers.com +6 -2
     move sock_hash from ntpd/ntp_util.c to libntp/socktoa.c so
       ntpq can use it.
     expose MON_HASH(), mon_hash[] so ntp_control.c can use them.
@@ -4228,7 +4377,7 @@ ChangeSet@1.2110.1.15, 2010-03-02 10:00:34+00:00, davehart@shiny.ad.hartbrothers
     rename info_monitor, info_monitor_1 fields to reflect their
       use, lasttime -> avg_int and firsttime -> last_int.
 
-  include/ntpd.h@1.147, 2010-03-02 10:00:28+00:00, davehart@shiny.ad.hartbrothers.com +7 -3
+  include/ntpd.h@1.137.1.10, 2010-03-02 10:00:28+00:00, davehart@shiny.ad.hartbrothers.com +7 -3
     add prototype for win_time_stepped(), previously called
       time_stepped().
 
@@ -4246,7 +4395,7 @@ ChangeSet@1.2110.1.15, 2010-03-02 10:00:34+00:00, davehart@shiny.ad.hartbrothers
     prepare for ntpq mrulist command by converting MRU entry timestamps
       from current_time (seconds) to l_fp (32:32 NTP standard).
 
-  ntpd/ntp_proto.c@1.306, 2010-03-02 10:00:28+00:00, davehart@shiny.ad.hartbrothers.com +3 -1
+  ntpd/ntp_proto.c@1.297.1.9, 2010-03-02 10:00:28+00:00, davehart@shiny.ad.hartbrothers.com +3 -1
     use u_short for restrict_mask type in receive(), expand comment.
 
   ntpd/ntp_request.c@1.89, 2010-03-02 10:00:28+00:00, davehart@shiny.ad.hartbrothers.com +23 -13
@@ -4357,7 +4506,7 @@ ChangeSet@1.2110.1.12, 2010-02-27 23:34:22+00:00, davehart@shiny.ad.hartbrothers
   ntp_proto.c:
     broadcast demobilization fix from DLM
 
-  ntpd/ntp_proto.c@1.305, 2010-02-27 23:34:15+00:00, davehart@shiny.ad.hartbrothers.com +4 -4
+  ntpd/ntp_proto.c@1.297.1.8, 2010-02-27 23:34:15+00:00, davehart@shiny.ad.hartbrothers.com +4 -4
     broadcast demobilization fix from DLM
 
 ChangeSet@1.2110.1.11, 2010-02-27 22:48:05+00:00, davehart@shiny.ad.hartbrothers.com +14 -0
@@ -4377,7 +4526,7 @@ ChangeSet@1.2110.1.11, 2010-02-27 22:48:05+00:00, davehart@shiny.ad.hartbrothers
   include/ntp_control.h@1.41, 2010-02-27 22:48:01+00:00, davehart@shiny.ad.hartbrothers.com +17 -9
     more MRU knobs
 
-  include/ntpd.h@1.146, 2010-02-27 22:48:01+00:00, davehart@shiny.ad.hartbrothers.com +11 -7
+  include/ntpd.h@1.137.1.9, 2010-02-27 22:48:01+00:00, davehart@shiny.ad.hartbrothers.com +11 -7
     more MRU knobs
 
   ntpd/complete.conf@1.6, 2010-02-27 22:48:01+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
@@ -4450,14 +4599,14 @@ ChangeSet@1.2110.1.9, 2010-02-27 08:47:04+00:00, davehart@shiny.ad.hartbrothers.
   include/ntp.h@1.172, 2010-02-27 08:47:02+00:00, davehart@shiny.ad.hartbrothers.com +0 -1
     remove redundant storage of port in mon_entry, rmtadr has it.
 
-  include/ntp_config.h@1.71, 2010-02-27 08:47:02+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  include/ntp_config.h@1.66.1.5, 2010-02-27 08:47:02+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
     add MRU sizing knobs:
       mru mindepth 600 maxage 64 maxdepth 1024 maxmem 4096
     entries beyond 600 which are older than 64s are reclaimed,
       with a hard upper limit on the size of maxdepth (indirectly
       set by maxmem).
 
-  include/ntpd.h@1.145, 2010-02-27 08:47:02+00:00, davehart@shiny.ad.hartbrothers.com +4 -1
+  include/ntpd.h@1.137.1.8, 2010-02-27 08:47:02+00:00, davehart@shiny.ad.hartbrothers.com +4 -1
     add MRU sizing knobs:
       mru mindepth 600 maxage 64 maxdepth 1024 maxmem 4096
     entries beyond 600 which are older than 64s are reclaimed,
@@ -4525,7 +4674,7 @@ ChangeSet@1.2110.1.8, 2010-02-26 22:59:36+00:00, davehart@shiny.ad.hartbrothers.
     Dr. Mills doesn't like depending on && not evaluating right side
       if left is false.
 
-  ntpd/ntp_proto.c@1.304, 2010-02-26 22:59:32+00:00, davehart@shiny.ad.hartbrothers.com +21 -12
+  ntpd/ntp_proto.c@1.297.1.7, 2010-02-26 22:59:32+00:00, davehart@shiny.ad.hartbrothers.com +21 -12
     timeout demobilizations don't seem to be working for preemptibles.
 
 ChangeSet@1.2110.1.7, 2010-02-26 15:53:49+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
@@ -4540,7 +4689,7 @@ ChangeSet@1.2110.1.7, 2010-02-26 15:53:49+00:00, davehart@shiny.ad.hartbrothers.
   ntpd/ntp_control.c@1.133.1.4, 2010-02-26 15:53:39+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
     DLM changes via email notes
 
-  ntpd/ntp_proto.c@1.303, 2010-02-26 15:53:39+00:00, davehart@shiny.ad.hartbrothers.com +15 -42
+  ntpd/ntp_proto.c@1.297.1.6, 2010-02-26 15:53:39+00:00, davehart@shiny.ad.hartbrothers.com +15 -42
     DLM changes via email notes.
     remove "unlucky" experiment to track DLM changes.
 
@@ -4554,7 +4703,7 @@ ChangeSet@1.2110.1.6, 2010-02-25 15:45:14+00:00, davehart@shiny.ad.hartbrothers.
   ntp_proto.c:
     experiment with turning over 50% of preemptibles daily
 
-  ntpd/ntp_proto.c@1.302, 2010-02-25 15:45:06+00:00, davehart@shiny.ad.hartbrothers.com +26 -2
+  ntpd/ntp_proto.c@1.297.1.5, 2010-02-25 15:45:06+00:00, davehart@shiny.ad.hartbrothers.com +26 -2
     experiment with turning over 50% of preemptibles daily
 
   ports/winnt/ntpd/nt_clockstuff.c@1.41, 2010-02-25 15:45:06+00:00, davehart@shiny.ad.hartbrothers.com +23 -19
@@ -4580,7 +4729,7 @@ ChangeSet@1.2110.1.5, 2010-02-25 06:34:58+00:00, davehart@shiny.ad.hartbrothers.
   include/ntp_control.h@1.40, 2010-02-25 06:34:51+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
     whitespace only
 
-  include/ntpd.h@1.144, 2010-02-25 06:34:51+00:00, davehart@shiny.ad.hartbrothers.com +4 -2
+  include/ntpd.h@1.137.1.7, 2010-02-25 06:34:51+00:00, davehart@shiny.ad.hartbrothers.com +4 -2
     add retry argument to getaddrinfo_sometime() so that pool lookups
       can be one-shot.
 
@@ -4595,7 +4744,7 @@ ChangeSet@1.2110.1.5, 2010-02-25 06:34:58+00:00, davehart@shiny.ad.hartbrothers.
   ntpd/ntp_peer.c@1.132, 2010-02-25 06:34:51+00:00, davehart@shiny.ad.hartbrothers.com +11 -7
     test speer->flags not peer->flags for FLAG_PREEMPT
 
-  ntpd/ntp_proto.c@1.301, 2010-02-25 06:34:51+00:00, davehart@shiny.ad.hartbrothers.com +17 -11
+  ntpd/ntp_proto.c@1.297.1.4, 2010-02-25 06:34:51+00:00, davehart@shiny.ad.hartbrothers.com +17 -11
     cull from preemptibles randomly as well as when unreachable
       long enough.
 
@@ -4680,7 +4829,7 @@ ChangeSet@1.2110.1.3, 2010-02-23 09:47:25+00:00, davehart@shiny.ad.hartbrothers.
       struct refclockstat pointer const.
     remove prototypes for previously-removed functions.
 
-  include/ntpd.h@1.143, 2010-02-23 09:47:22+00:00, davehart@shiny.ad.hartbrothers.com +3 -2
+  include/ntpd.h@1.137.1.6, 2010-02-23 09:47:22+00:00, davehart@shiny.ad.hartbrothers.com +3 -2
     add restrict_source() to add/remove restrictions for each
       association automatically ("restrict source ...")
 
@@ -4719,7 +4868,7 @@ ChangeSet@1.2110.1.3, 2010-02-23 09:47:25+00:00, davehart@shiny.ad.hartbrothers.
   ntpd/ntp_peer.c@1.130, 2010-02-23 09:47:22+00:00, davehart@shiny.ad.hartbrothers.com +17 -13
     "restrict source ..." to set restrictions for peers.
 
-  ntpd/ntp_proto.c@1.300, 2010-02-23 09:47:23+00:00, davehart@shiny.ad.hartbrothers.com +10 -0
+  ntpd/ntp_proto.c@1.297.1.3, 2010-02-23 09:47:23+00:00, davehart@shiny.ad.hartbrothers.com +10 -0
     "restrict source ..." to set restrictions for peers.
 
   ntpd/ntp_refclock.c@1.91.1.3, 2010-02-23 09:47:23+00:00, davehart@shiny.ad.hartbrothers.com +3 -2
@@ -4774,10 +4923,10 @@ ChangeSet@1.2110.1.2, 2010-02-20 17:52:58+00:00, davehart@shiny.ad.hartbrothers.
     add MDF_SOLICIT_MASK (MDF_ACAST | MDF_POOL).
     
 
-  include/ntp_config.h@1.70, 2010-02-20 17:52:56+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+  include/ntp_config.h@1.66.1.4, 2010-02-20 17:52:56+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
     change address_node->type (family) type from short to u_short.
 
-  include/ntpd.h@1.142, 2010-02-20 17:52:56+00:00, davehart@shiny.ad.hartbrothers.com +10 -7
+  include/ntpd.h@1.137.1.5, 2010-02-20 17:52:56+00:00, davehart@shiny.ad.hartbrothers.com +10 -7
     changes for pool
 
   ntpd/ntp_config.c@1.249, 2010-02-20 17:52:56+00:00, davehart@shiny.ad.hartbrothers.com +54 -53
@@ -4789,7 +4938,7 @@ ChangeSet@1.2110.1.2, 2010-02-20 17:52:58+00:00, davehart@shiny.ad.hartbrothers.
   ntpd/ntp_peer.c@1.129, 2010-02-20 17:52:57+00:00, davehart@shiny.ad.hartbrothers.com +198 -109
     changes for pool
 
-  ntpd/ntp_proto.c@1.299, 2010-02-20 17:52:57+00:00, davehart@shiny.ad.hartbrothers.com +215 -58
+  ntpd/ntp_proto.c@1.297.1.2, 2010-02-20 17:52:57+00:00, davehart@shiny.ad.hartbrothers.com +215 -58
     changes for pool
 
   ntpd/ntp_refclock.c@1.91.1.2, 2010-02-20 17:52:57+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
@@ -4899,7 +5048,7 @@ ChangeSet@1.2110.1.1, 2010-02-17 09:54:32+00:00, davehart@shiny.ad.hartbrothers.
       addresses, enabling removal of duplicated code.
     
 
-  include/ntp_config.h@1.69, 2010-02-17 09:54:18+00:00, davehart@shiny.ad.hartbrothers.com +19 -18
+  include/ntp_config.h@1.66.1.3, 2010-02-17 09:54:18+00:00, davehart@shiny.ad.hartbrothers.com +19 -18
     add uint u to attr_val.value union.
 
   include/ntp_crypto.h@1.47, 2010-02-17 09:54:18+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
@@ -4928,7 +5077,7 @@ ChangeSet@1.2110.1.1, 2010-02-17 09:54:32+00:00, davehart@shiny.ad.hartbrothers.
   include/ntp_types.h@1.19, 2010-02-17 09:54:19+00:00, davehart@shiny.ad.hartbrothers.com +3 -1
     add ASSOCID_MAX, KEYID_T_MAX
 
-  include/ntpd.h@1.141, 2010-02-17 09:54:19+00:00, davehart@shiny.ad.hartbrothers.com +73 -59
+  include/ntpd.h@1.137.1.4, 2010-02-17 09:54:19+00:00, davehart@shiny.ad.hartbrothers.com +73 -59
     Add comments clarifying and demarcing division of file into
       two parts, with only variable extern declarations in the
       second half.
@@ -4990,7 +5139,7 @@ ChangeSet@1.2110.1.1, 2010-02-17 09:54:32+00:00, davehart@shiny.ad.hartbrothers.
     rename ntp_monclearinterface() -> mon_clearinterface().
     implement localaddrtoa(), similar to socktoa().
 
-  ntpd/ntp_loopfilter.c@1.154, 2010-02-17 09:54:21+00:00, davehart@shiny.ad.hartbrothers.com +0 -4
+  ntpd/ntp_loopfilter.c@1.153.1.1, 2010-02-17 09:54:21+00:00, davehart@shiny.ad.hartbrothers.com +0 -4
     remove VMS-specific include that is no longer required.
 
   ntpd/ntp_monitor.c@1.26, 2010-02-17 09:54:21+00:00, davehart@shiny.ad.hartbrothers.com +98 -132
@@ -5013,7 +5162,7 @@ ChangeSet@1.2110.1.1, 2010-02-17 09:54:32+00:00, davehart@shiny.ad.hartbrothers.
     change initial, incremental peer allocs from 15, 5 to 8, 4.
     do not zero variables at startup that are zero-initialized.
 
-  ntpd/ntp_proto.c@1.298, 2010-02-17 09:54:21+00:00, davehart@shiny.ad.hartbrothers.com +125 -137
+  ntpd/ntp_proto.c@1.297.1.1, 2010-02-17 09:54:21+00:00, davehart@shiny.ad.hartbrothers.com +125 -137
     remove VMS-specific include of ntp_refclock.h, appears unneeded.
     silence many truncation and implicit conversion warnings by changing
       types or typecasting.
@@ -5264,7 +5413,7 @@ ChangeSet@1.2102.2.1, 2010-02-09 18:19:12+00:00, davehart@shiny.ad.hartbrothers.
     Use async DNS to resolve trap directive hostnames.
     
 
-  include/ntp_config.h@1.68, 2010-02-09 18:19:11+00:00, davehart@shiny.ad.hartbrothers.com +13 -2
+  include/ntp_config.h@1.66.1.2, 2010-02-09 18:19:11+00:00, davehart@shiny.ad.hartbrothers.com +13 -2
     add settrap_params structure for trap_name_resolved()
 
   include/ntp_stdlib.h@1.42, 2010-02-09 18:19:11+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
@@ -5484,7 +5633,7 @@ ChangeSet@1.2102.1.1, 2010-02-09 03:23:58-05:00, stenn@whimsy.udel.edu +1 -0
 ChangeSet@1.2082.17.1, 2010-02-09 02:49:34-05:00, stenn@whimsy.udel.edu +4 -0
   [Bug 1140] Clean up debug.html, decode.html, and ntpq.html
 
-  ChangeLog@1.496.41.1, 2010-02-09 02:49:18-05:00, stenn@whimsy.udel.edu +1 -0
+  ChangeLog@1.496.42.1, 2010-02-09 02:49:18-05:00, stenn@whimsy.udel.edu +1 -0
     [Bug 1140] Clean up debug.html, decode.html, and ntpq.html
 
   html/debug.html@1.27.1.1, 2010-02-09 02:49:18-05:00, stenn@whimsy.udel.edu +3 -3
@@ -5614,7 +5763,7 @@ ChangeSet@1.2101, 2010-02-06 05:22:44+00:00, davehart@shiny.ad.hartbrothers.com 
   include/ntp_rfc2553.h@1.35, 2010-02-06 05:22:43+00:00, davehart@shiny.ad.hartbrothers.com +10 -1
     add copy_addrinfo_list()
 
-  include/ntpd.h@1.140, 2010-02-06 05:22:43+00:00, davehart@shiny.ad.hartbrothers.com +15 -6
+  include/ntpd.h@1.137.1.3, 2010-02-06 05:22:43+00:00, davehart@shiny.ad.hartbrothers.com +15 -6
     mention copy_addrinfo_list() near getaddrinfo_sometime() prototype.
 
   libntp/ntp_rfc2553.c@1.42, 2010-02-06 05:22:43+00:00, davehart@shiny.ad.hartbrothers.com +92 -0
@@ -6411,7 +6560,7 @@ ChangeSet@1.2084.13.5, 2010-02-01 04:40:15+00:00, davehart@shiny.ad.hartbrothers
   ntpd/ntp_io.c@1.312, 2010-02-01 04:40:06+00:00, davehart@shiny.ad.hartbrothers.com +5 -3
     [Bug 1471] CID 120 CID 121 CID 122 is_ip_address() uninit family.
 
-  ntpd/ntpd.c@1.114, 2010-02-01 04:40:06+00:00, davehart@shiny.ad.hartbrothers.com +7 -4
+  ntpd/ntpd.c@1.110.1.4, 2010-02-01 04:40:06+00:00, davehart@shiny.ad.hartbrothers.com +7 -4
     [Bug 1471] CID 120 CID 121 CID 122 is_ip_address() uninit family.
     [Bug 1472] CID 116 CID 117 minor warnings in new DNS code.
 
@@ -6777,7 +6926,7 @@ ChangeSet@1.2084.1.27, 2010-01-27 21:16:20+00:00, davehart@shiny.ad.hartbrothers
   convert leftover debugging msyslog() to DPRINTF()
     "attempting to open log %s"
 
-  ntpd/ntpd.c@1.113, 2010-01-27 21:16:19+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+  ntpd/ntpd.c@1.110.1.3, 2010-01-27 21:16:19+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
     convert leftover debugging msyslog() to DPRINTF()
       "attempting to open log %s"
 
@@ -6859,7 +7008,7 @@ ChangeSet@1.2084.1.25, 2010-01-27 18:45:33+00:00, davehart@shiny.ad.hartbrothers
     #include <config.h> from all .c files and do not include it
       from any .h files.
 
-  include/ntp_machine.h@1.27, 2010-01-27 18:45:23+00:00, davehart@shiny.ad.hartbrothers.com +6 -170
+  include/ntp_machine.h@1.26.1.1, 2010-01-27 18:45:23+00:00, davehart@shiny.ad.hartbrothers.com +6 -170
     #include <config.h> from all .c files and do not include it
       from any .h files.
     Remove huge blob of #if 0 code from pre-Autoconf days, our
@@ -6871,7 +7020,7 @@ ChangeSet@1.2084.1.25, 2010-01-27 18:45:33+00:00, davehart@shiny.ad.hartbrothers
       from any .h files.
     Handle platform differences with alloca()
 
-  include/ntp_proto.h@1.5, 2010-01-27 18:45:23+00:00, davehart@shiny.ad.hartbrothers.com +3 -7
+  include/ntp_proto.h@1.4.1.1, 2010-01-27 18:45:23+00:00, davehart@shiny.ad.hartbrothers.com +3 -7
     #include <config.h> from all .c files and do not include it
       from any .h files.
     Stay out of system/compiler underscore-prefixed namespace.
@@ -6915,7 +7064,7 @@ ChangeSet@1.2084.1.25, 2010-01-27 18:45:33+00:00, davehart@shiny.ad.hartbrothers
 
   include/ntp_workimpl.h@1.0, 2010-01-27 18:44:50+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
 
-  include/ntpd.h@1.139, 2010-01-27 18:45:23+00:00, davehart@shiny.ad.hartbrothers.com +72 -42
+  include/ntpd.h@1.137.1.2, 2010-01-27 18:45:23+00:00, davehart@shiny.ad.hartbrothers.com +72 -42
     handle relative path to logfile correctly despite re-opening
       after fork() with a different curdir.
     remove declarations from old ntp_intres.c implementation, add
@@ -7152,7 +7301,7 @@ ChangeSet@1.2084.1.25, 2010-01-27 18:45:33+00:00, davehart@shiny.ad.hartbrothers
   ntpd/Makefile.am@1.87, 2010-01-27 18:45:25+00:00, davehart@shiny.ad.hartbrothers.com +4 -1
     add ntp_worker.c, work_fork.c, work_thread.c references.
 
-  ntpd/cmd_args.c@1.59, 2010-01-27 18:45:25+00:00, davehart@shiny.ad.hartbrothers.com +2 -3
+  ntpd/cmd_args.c@1.56.1.3, 2010-01-27 18:45:25+00:00, davehart@shiny.ad.hartbrothers.com +2 -3
     remove unused leftover global specific_interface.
     rindex() -> strrchr()
 
@@ -7196,7 +7345,7 @@ ChangeSet@1.2084.1.25, 2010-01-27 18:45:33+00:00, davehart@shiny.ad.hartbrothers
 
   ntpd/ntp_worker.c@1.0, 2010-01-27 18:44:51+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
 
-  ntpd/ntpd.c@1.112, 2010-01-27 18:45:26+00:00, davehart@shiny.ad.hartbrothers.com +231 -123
+  ntpd/ntpd.c@1.110.1.2, 2010-01-27 18:45:26+00:00, davehart@shiny.ad.hartbrothers.com +231 -123
     [Bug 1010] getaddrinfo() could block and thus should not be called by
       the main thread/process.
     remove unused leftover global specific_interface.
@@ -7539,7 +7688,7 @@ ChangeSet@1.2082.4.45, 2010-01-24 03:44:05-05:00, stenn@whimsy.udel.edu +1 -0
 ChangeSet@1.2082.4.44, 2010-01-24 03:39:27-05:00, stenn@whimsy.udel.edu +1 -0
   [Bug 1449] SLEW is no longer needed by the simulator
 
-  include/ntpsim.h@1.13, 2010-01-24 03:38:33-05:00, stenn@whimsy.udel.edu +0 -1
+  include/ntpsim.h@1.12.1.1, 2010-01-24 03:38:33-05:00, stenn@whimsy.udel.edu +0 -1
     [Bug 1449] SLEW is no longer needed by the simulator
 
 ChangeSet@1.2084.1.21, 2010-01-24 00:16:39-05:00, mayer@pogo.udel.edu +2 -0
@@ -7802,7 +7951,7 @@ ChangeSet@1.2082.16.2, 2010-01-08 17:21:14+00:00, davehart@shiny.ad.hartbrothers
 ChangeSet@1.2082.16.1, 2010-01-06 18:52:49+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
   [Bug 1453] Use $CC in config.cache filename in ./build script.
 
-  ChangeLog@1.496.40.1, 2010-01-06 18:52:48+00:00, davehart@shiny.ad.hartbrothers.com +4 -3
+  ChangeLog@1.496.41.1, 2010-01-06 18:52:48+00:00, davehart@shiny.ad.hartbrothers.com +4 -3
     [Bug 1453] Use $CC in config.cache filename in ./build script.
 
   build@1.34, 2010-01-06 18:52:48+00:00, davehart@shiny.ad.hartbrothers.com +26 -27
@@ -7824,7 +7973,7 @@ ChangeSet@1.2082.15.1, 2010-01-03 21:52:33+00:00, davehart@shiny.ad.hartbrothers
   [Bug 1451] CID 115: sntp leaks KoD entry when updating existing
     entry.
 
-  ChangeLog@1.496.39.1, 2010-01-03 21:52:32+00:00, davehart@shiny.ad.hartbrothers.com +4 -3
+  ChangeLog@1.496.40.1, 2010-01-03 21:52:32+00:00, davehart@shiny.ad.hartbrothers.com +4 -3
     [Bug 1451] CID 115: sntp leaks KoD entry when updating existing
       entry.
 
@@ -7871,16 +8020,16 @@ ChangeSet@1.2084.6.41, 2009-12-30 21:55:52+00:00, davehart@shiny.ad.hartbrothers
   include/ntp_cmdargs.h@1.6, 2009-12-30 21:55:49+00:00, davehart@shiny.ad.hartbrothers.com +1 -4
     remove unused cruft
 
-  include/ntpd.h@1.138, 2009-12-30 21:55:49+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  include/ntpd.h@1.137.1.1, 2009-12-30 21:55:49+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
     expose parse_cmdline_opts() for use by ntservice.c
 
-  ntpd/cmd_args.c@1.58, 2009-12-30 21:55:49+00:00, davehart@shiny.ad.hartbrothers.com +6 -3
+  ntpd/cmd_args.c@1.56.1.2, 2009-12-30 21:55:49+00:00, davehart@shiny.ad.hartbrothers.com +6 -3
     comment only
 
   ntpd/ntp_config.c@1.242, 2009-12-30 21:55:49+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
     minor cleanup
 
-  ntpd/ntpd.c@1.111, 2009-12-30 21:55:49+00:00, davehart@shiny.ad.hartbrothers.com +12 -10
+  ntpd/ntpd.c@1.110.1.1, 2009-12-30 21:55:49+00:00, davehart@shiny.ad.hartbrothers.com +12 -10
     [Bug 702] ntpd service logic should use libopts to examine cmdline.
 
   ports/winnt/include/ntservice.h@1.4, 2009-12-30 21:55:49+00:00, davehart@shiny.ad.hartbrothers.com +4 -9
@@ -8289,7 +8438,7 @@ ChangeSet@1.2082.14.1, 2009-12-27 09:16:20+00:00, davehart@shiny.ad.hartbrothers
   [Bug 1439] .texi generation must wait until after binary is linked.
   Quiet RES_TIMEOUT redefinition warning compiling ntp_intres.c
 
-  ChangeLog@1.496.38.1, 2009-12-27 09:16:18+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+  ChangeLog@1.496.39.1, 2009-12-27 09:16:18+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
     [Bug 1439] .texi generation must wait until after binary is linked.
 
   ntpd/Makefile.am@1.80.1.3, 2009-12-27 09:16:18+00:00, davehart@shiny.ad.hartbrothers.com +16 -10
@@ -8542,7 +8691,7 @@ ChangeSet@1.2082.4.28, 2009-12-25 09:31:42+00:00, stenn@whimsy.udel.edu +27 -0
 ChangeSet@1.2082.13.1, 2009-12-25 00:19:40-05:00, stenn@whimsy.udel.edu +2 -0
   [Bug 1435] sntp: Test for -lresolv using the same tests as in ntp
 
-  ChangeLog@1.496.37.1, 2009-12-25 00:19:29-05:00, stenn@whimsy.udel.edu +1 -0
+  ChangeLog@1.496.38.1, 2009-12-25 00:19:29-05:00, stenn@whimsy.udel.edu +1 -0
     [Bug 1435] sntp: Test for -lresolv using the same tests as in ntp
 
   sntp/configure.ac@1.29.1.1, 2009-12-25 00:19:29-05:00, stenn@whimsy.udel.edu +3 -0
@@ -8570,7 +8719,7 @@ ChangeSet@1.2082.4.26, 2009-12-24 22:04:26+00:00, davehart@shiny.ad.hartbrothers
   ntpd/ntp_config.c@1.241, 2009-12-24 22:04:25+00:00, davehart@shiny.ad.hartbrothers.com +0 -2
     [Bug 1425] unpeer by association ID sets up for duplicate free().
 
-  ntpsnmpd/netsnmp_daemonize.c@1.2, 2009-12-24 22:04:25+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+  ntpsnmpd/netsnmp_daemonize.c@1.1.1.1, 2009-12-24 22:04:25+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
     Use HAVE_WORKING_FORK instead of HAVE_FORK preemptively, some rare
       systems have a broken fork()
 
@@ -8674,13 +8823,13 @@ ChangeSet@1.2084.6.23, 2009-12-24 07:42:08+00:00, davehart@shiny.ad.hartbrothers
 ChangeSet@1.2082.12.1, 2009-12-24 02:27:39-05:00, stenn@deacon.udel.edu +6 -0
   System headers must come before ntp headers in ntp_intres.c
 
-  ChangeLog@1.496.36.1, 2009-12-24 02:25:49-05:00, stenn@deacon.udel.edu +1 -0
+  ChangeLog@1.496.37.1, 2009-12-24 02:25:49-05:00, stenn@deacon.udel.edu +1 -0
     System headers must come before ntp headers in ntp_intres.c
 
   include/Makefile.am@1.38, 2009-12-24 02:25:55-05:00, stenn@deacon.udel.edu +1 -0
     System headers must come before ntp headers in ntp_intres.c
 
-  include/ntp_config.h@1.67, 2009-12-24 02:25:57-05:00, stenn@deacon.udel.edu +0 -10
+  include/ntp_config.h@1.66.1.1, 2009-12-24 02:25:57-05:00, stenn@deacon.udel.edu +0 -10
     System headers must come before ntp headers in ntp_intres.c
 
   include/ntp_intres.h@1.1, 2009-12-24 02:08:32-05:00, stenn@deacon.udel.edu +14 -0
@@ -8700,7 +8849,7 @@ ChangeSet@1.2082.4.24, 2009-12-23 11:01:44+00:00, davehart@shiny.ad.hartbrothers
   ChangeLog@1.496.26.16, 2009-12-23 11:01:43+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
     [Bug 1429] -4 command line option to ntpd does not reliably force IPv4 resolution
 
-  ntpd/cmd_args.c@1.57, 2009-12-23 11:01:43+00:00, davehart@shiny.ad.hartbrothers.com +12 -5
+  ntpd/cmd_args.c@1.56.1.1, 2009-12-23 11:01:43+00:00, davehart@shiny.ad.hartbrothers.com +12 -5
     [Bug 1429] -4 command line option to ntpd does not reliably force IPv4 resolution
 
   ntpd/ntp_config.c@1.239, 2009-12-23 11:01:43+00:00, davehart@shiny.ad.hartbrothers.com +2 -8
@@ -8849,7 +8998,7 @@ ChangeSet@1.2082.4.18, 2009-12-22 04:15:31+00:00, davehart@shiny.ad.hartbrothers
 ChangeSet@1.2082.11.1, 2009-12-22 00:55:19+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
   [Bug 1428] Use AC_HEADER_RESOLV to fix breaks from resolv.h
 
-  ChangeLog@1.496.35.1, 2009-12-22 00:55:19+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+  ChangeLog@1.496.36.1, 2009-12-22 00:55:19+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
     [Bug 1428] Use AC_HEADER_RESOLV to fix breaks from resolv.h
 
   configure.ac@1.465.1.4, 2009-12-22 00:55:19+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
@@ -9089,6 +9238,70 @@ ChangeSet@1.2082.4.10, 2009-12-19 21:47:40-05:00, stenn@whimsy.udel.edu +3 -0
 
   ntpsnmpd/Makefile.am@1.15.1.1, 2009-12-19 21:47:30-05:00, stenn@whimsy.udel.edu +1 -1
     [Bug 1415] Fix Mac OS X link problem
+
+ChangeSet@1.2060.25.1, 2009-12-19 03:29:38+00:00, davehart@shiny.ad.hartbrothers.com +19 -0
+  [Bug 1395] ease ntpdate elimination with ntpd -w/--wait-sync
+  [Bug 1396] allow servers on ntpd command line like ntpdate
+
+  ChangeLog@1.496.35.1, 2009-12-19 03:29:36+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+    [Bug 1395] ease ntpdate elimination with ntpd -w/--wait-sync
+    [Bug 1396] allow servers on ntpd command line like ntpdate
+
+  include/ntp_config.h@1.67, 2009-12-19 03:29:36+00:00, davehart@shiny.ad.hartbrothers.com +5 -1
+    [Bug 1396] allow servers on ntpd command line like ntpdate
+
+  include/ntp_machine.h@1.27, 2009-12-19 03:29:36+00:00, davehart@shiny.ad.hartbrothers.com +0 -2
+    remove NODETACH, nptd uses HAVE_WORKING_FORK instead
+
+  include/ntp_proto.h@1.5, 2009-12-19 03:29:36+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    stay out of system/compiler underscore namespace
+
+  include/ntpd.h@1.138, 2009-12-19 03:29:36+00:00, davehart@shiny.ad.hartbrothers.com +5 -1
+    add waitsync_fd_to_close from ntpd.c
+
+  include/ntpsim.h@1.13, 2009-12-19 03:29:36+00:00, davehart@shiny.ad.hartbrothers.com +0 -1
+    remove no-longer-used SLEW which conflicted with autoopts over -x/--slew
+
+  ntpd/Makefile.am@1.78.1.1, 2009-12-19 03:29:36+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    cmd_args.c no longer differs between SIM and !SIM
+
+  ntpd/cmd_args.c@1.57, 2009-12-19 03:29:36+00:00, davehart@shiny.ad.hartbrothers.com +18 -19
+    [Bug 1396] allow servers on ntpd command line like ntpdate
+
+  ntpd/ntp_config.c@1.237.1.1, 2009-12-19 03:29:36+00:00, davehart@shiny.ad.hartbrothers.com +65 -22
+    [Bug 1396] allow servers on ntpd command line like ntpdate
+
+  ntpd/ntp_loopfilter.c@1.154, 2009-12-19 03:29:36+00:00, davehart@shiny.ad.hartbrothers.com +7 -7
+    comment typo corrections, leading tabs cleanup, msyslog
+      "kernel time sync disabledx"
+    excess 'x' excised.
+
+  ntpd/ntp_proto.c@1.298, 2009-12-19 03:29:36+00:00, davehart@shiny.ad.hartbrothers.com +21 -3
+    [Bug 1396] allow servers on ntpd command line like ntpdate
+
+  ntpd/ntpd-opts.c@1.242.1.1, 2009-12-19 03:29:37+00:00, davehart@shiny.ad.hartbrothers.com +97 -20
+    Autogen output
+
+  ntpd/ntpd-opts.def@1.6, 2009-12-19 03:29:37+00:00, davehart@shiny.ad.hartbrothers.com +3 -2
+    [Bug 1396] allow servers on ntpd command line like ntpdate
+
+  ntpd/ntpd-opts.h@1.242.1.1, 2009-12-19 03:29:37+00:00, davehart@shiny.ad.hartbrothers.com +18 -11
+    Autogen output
+
+  ntpd/ntpd-opts.texi@1.240.1.1, 2009-12-19 03:29:37+00:00, davehart@shiny.ad.hartbrothers.com +72 -8
+    Autogen output
+
+  ntpd/ntpd.1@1.240.1.1, 2009-12-19 03:29:37+00:00, davehart@shiny.ad.hartbrothers.com +28 -6
+    Autogen output
+
+  ntpd/ntpd.c@1.111, 2009-12-19 03:29:37+00:00, davehart@shiny.ad.hartbrothers.com +440 -309
+    [Bug 1395] ease ntpdate elimination with ntpd -w/--wait-sync
+
+  ntpd/ntpdbase-opts.def@1.21, 2009-12-19 03:29:37+00:00, davehart@shiny.ad.hartbrothers.com +34 -2
+    [Bug 1395] ease ntpdate elimination with ntpd -w/--wait-sync
+
+  ntpsnmpd/netsnmp_daemonize.c@1.2, 2009-12-19 03:29:37+00:00, davehart@shiny.ad.hartbrothers.com +7 -3
+    HAVE_WORKING_FORK is more appropriate than HAVE_FORK here
 
 ChangeSet@1.2084.1.15, 2009-12-18 03:39:13-05:00, murray@pogo.udel.edu +1 -0
   ChangeLog:
