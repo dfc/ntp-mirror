@@ -1,3 +1,149 @@
+ChangeSet@1.2176, 2010-07-28 05:48:23+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P41
+  TAG: NTP_4_2_7P41
+
+  ChangeLog@1.612, 2010-07-28 05:48:21+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P41
+
+  ntpd/ntpd-opts.c@1.44, 2010-07-28 05:48:21+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P41
+
+  ntpd/ntpd-opts.h@1.44, 2010-07-28 05:48:21+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P41
+
+  ntpd/ntpd-opts.texi@1.43, 2010-07-28 05:48:21+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P41
+
+  ntpd/ntpd.1@1.43, 2010-07-28 05:48:21+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P41
+
+  ntpdc/ntpdc-opts.c@1.42, 2010-07-28 05:48:21+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P41
+
+  ntpdc/ntpdc-opts.h@1.42, 2010-07-28 05:48:21+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P41
+
+  ntpdc/ntpdc-opts.texi@1.42, 2010-07-28 05:48:21+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P41
+
+  ntpdc/ntpdc.1@1.42, 2010-07-28 05:48:21+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P41
+
+  ntpq/ntpq-opts.c@1.42, 2010-07-28 05:48:21+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P41
+
+  ntpq/ntpq-opts.h@1.42, 2010-07-28 05:48:22+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P41
+
+  ntpq/ntpq-opts.texi@1.42, 2010-07-28 05:48:22+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P41
+
+  ntpq/ntpq.1@1.42, 2010-07-28 05:48:22+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P41
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.42, 2010-07-28 05:48:22+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P41
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.42, 2010-07-28 05:48:22+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P41
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.42, 2010-07-28 05:48:22+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P41
+
+  ntpsnmpd/ntpsnmpd.1@1.42, 2010-07-28 05:48:22+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P41
+
+  packageinfo.sh@1.43, 2010-07-28 05:48:22+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P41
+
+  sntp/sntp-opts.c@1.42, 2010-07-28 05:48:22+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P41
+
+  sntp/sntp-opts.h@1.42, 2010-07-28 05:48:22+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P41
+
+  sntp/sntp-opts.texi@1.42, 2010-07-28 05:48:22+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P41
+
+  sntp/sntp.1@1.42, 2010-07-28 05:48:22+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P41
+
+  sntp/sntp.html@1.42, 2010-07-28 05:48:22+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P41
+
+  util/ntp-keygen-opts.c@1.42, 2010-07-28 05:48:22+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P41
+
+  util/ntp-keygen-opts.h@1.42, 2010-07-28 05:48:22+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P41
+
+  util/ntp-keygen-opts.texi@1.42, 2010-07-28 05:48:22+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P41
+
+  util/ntp-keygen.1@1.42, 2010-07-28 05:48:22+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P41
+
+ChangeSet@1.2175, 2010-07-27 23:14:28-04:00, stenn@pogo.udel.edu +1 -0
+  merge cleanup
+
+  ChangeLog@1.611, 2010-07-27 23:13:49-04:00, stenn@pogo.udel.edu +2 -0
+    merge cleanup
+
+ChangeSet@1.2171.1.1, 2010-07-27 22:59:12-04:00, stenn@deacon.udel.edu +3 -0
+  orphanwait documentation changes
+
+  ChangeLog@1.607.1.1, 2010-07-27 17:53:57-04:00, stenn@deacon.udel.edu +1 -0
+    orphanwait documentation changes
+
+  html/assoc.html@1.30, 2010-07-27 17:53:49-04:00, stenn@deacon.udel.edu +4 -3
+    orphanwait documentation changes
+
+  html/miscopt.html@1.55, 2010-07-27 17:53:50-04:00, stenn@deacon.udel.edu +8 -4
+    orphanwait documentation changes
+
+ChangeSet@1.2173, 2010-07-20 18:02:12+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
+  Avoid race with parallel builds using same source directory in
+    scripts/genver by using build directory for temporary files.
+
+  ChangeLog@1.609, 2010-07-20 18:02:11+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+    Avoid race with parallel builds using same source directory in
+      scripts/genver by using build directory for temporary files.
+
+  Makefile.am@1.94, 2010-07-20 18:02:11+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    Avoid race with parallel builds using same source directory in
+      scripts/genver by using build directory for temporary files.
+
+  scripts/genver@1.6, 2010-07-20 18:02:11+00:00, davehart@shiny.ad.hartbrothers.com +23 -15
+    Avoid race with parallel builds using same source directory in
+      scripts/genver by using build directory for temporary files.
+
+ChangeSet@1.2172, 2010-07-20 15:21:33+00:00, davehart@shiny.ad.hartbrothers.com +5 -0
+  [Bug 1586] ntpd 4.2.7p40 doesn't write to syslog after fork on QNX.
+    Add closelog() before closing most or all descriptors after fork().
+
+  ChangeLog@1.608, 2010-07-20 15:21:31+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1586] ntpd 4.2.7p40 doesn't write to syslog after fork on QNX.
+      Add closelog() before closing most or all descriptors after fork().
+
+  include/ntp_io.h@1.16, 2010-07-20 15:21:31+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1586] ntpd 4.2.7p40 doesn't write to syslog after fork on QNX.
+
+  ntpd/ntp_io.c@1.320, 2010-07-20 15:21:31+00:00, davehart@shiny.ad.hartbrothers.com +19 -0
+    [Bug 1586] ntpd 4.2.7p40 doesn't write to syslog after fork on QNX.
+      Add closelog() before closing most or all descriptors after fork().
+    Close all descriptors (excepting waitsync_fd_to_close) not only those
+      after it.  This was a merge failure.
+
+  ntpd/ntpd.c@1.114, 2010-07-20 15:21:32+00:00, davehart@shiny.ad.hartbrothers.com +4 -3
+    [Bug 1586] ntpd 4.2.7p40 doesn't write to syslog after fork on QNX.
+      Add closelog() before closing most or all descriptors after fork().
+    Close all descriptors (excepting waitsync_fd_to_close) not only those
+      after it.  This was a merge failure.
+
+  ntpd/work_fork.c@1.5, 2010-07-20 15:21:32+00:00, davehart@shiny.ad.hartbrothers.com +2 -1
+    [Bug 1586] ntpd 4.2.7p40 doesn't write to syslog after fork on QNX.
+      Add closelog() before closing most or all descriptors after fork().
+
 ChangeSet@1.2171, 2010-07-12 10:09:56+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P40
   TAG: NTP_4_2_7P40
