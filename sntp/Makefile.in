@@ -70,7 +70,8 @@ PROGRAMS = $(bin_PROGRAMS) $(sbin_PROGRAMS)
 am__objects_1 =
 am_sntp_OBJECTS = crypto.$(OBJEXT) kod_management.$(OBJEXT) \
 	log.$(OBJEXT) main.$(OBJEXT) networking.$(OBJEXT) \
-	sntp-opts.$(OBJEXT) utilities.$(OBJEXT) $(am__objects_1)
+	sntp.$(OBJEXT) sntp-opts.$(OBJEXT) utilities.$(OBJEXT) \
+	$(am__objects_1)
 sntp_OBJECTS = $(am_sntp_OBJECTS)
 sntp_LDADD = $(LDADD)
 am__DEPENDENCIES_1 =
@@ -298,8 +299,10 @@ sntp_SOURCES = \
 	log.c		\
 	log.h		\
 	main.c		\
+	main.h		\
 	networking.c	\
 	networking.h	\
+	sntp.c		\
 	sntp-opts.c	\
 	sntp-opts.h	\
 	utilities.c	\
@@ -495,6 +498,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/networking.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sntp-opts.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sntp.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/utilities.Po@am__quote@
 
 .c.o:
