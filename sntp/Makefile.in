@@ -54,6 +54,7 @@ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/libopts/m4/libopts.m4 \
 	$(top_srcdir)/../m4/ntp_cacheversion.m4 \
 	$(top_srcdir)/../m4/ntp_dir_sep.m4 \
+	$(top_srcdir)/../m4/ntp_lib_m.m4 \
 	$(top_srcdir)/../m4/ntp_openssl.m4 $(top_srcdir)/../version.m4 \
 	$(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
@@ -75,7 +76,8 @@ am_sntp_OBJECTS = crypto.$(OBJEXT) kod_management.$(OBJEXT) \
 sntp_OBJECTS = $(am_sntp_OBJECTS)
 sntp_LDADD = $(LDADD)
 am__DEPENDENCIES_1 =
-sntp_DEPENDENCIES = $(am__DEPENDENCIES_1) ../libntp/libntp.a
+sntp_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+	../libntp/libntp.a
 DEFAULT_INCLUDES = -I.@am__isrc@
 depcomp = $(SHELL) $(top_srcdir)/depcomp
 am__depfiles_maybe = depfiles
@@ -198,6 +200,7 @@ INSTALL_SCRIPT = @INSTALL_SCRIPT@
 INSTALL_STRIP_PROGRAM = @INSTALL_STRIP_PROGRAM@
 LCRYPTO = @LCRYPTO@
 LDFLAGS = @LDFLAGS@
+LIBM = @LIBM@
 LIBOBJS = @LIBOBJS@
 LIBOPTS_CFLAGS = @LIBOPTS_CFLAGS@
 LIBOPTS_DIR = @LIBOPTS_DIR@
@@ -283,7 +286,7 @@ AM_CPPFLAGS = $(LIBOPTS_CFLAGS) -I$(top_srcdir)/../include \
 	-I$(top_srcdir)/../lib/isc/nothreads/include \
 	-I$(top_srcdir)/../lib/isc/unix/include
 
-LDADD = $(LIBOPTS_LDADD) -lm ../libntp/libntp.a @LCRYPTO@
+LDADD = $(LIBOPTS_LDADD) $(LIBM) ../libntp/libntp.a @LCRYPTO@
 run_ag = cd $(srcdir) &&	env PATH="$(abs_builddir):$(PATH)"	\
 		autogen -L ../include --writable
 

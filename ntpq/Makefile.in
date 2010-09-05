@@ -51,7 +51,7 @@ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/libopts/m4/libopts.m4 \
 	$(top_srcdir)/m4/define_dir.m4 \
 	$(top_srcdir)/m4/ntp_cacheversion.m4 \
-	$(top_srcdir)/m4/ntp_dir_sep.m4 \
+	$(top_srcdir)/m4/ntp_dir_sep.m4 $(top_srcdir)/m4/ntp_lib_m.m4 \
 	$(top_srcdir)/m4/ntp_lineeditlibs.m4 \
 	$(top_srcdir)/m4/ntp_openssl.m4 \
 	$(top_srcdir)/m4/ntp_vpathhack.m4 \
@@ -77,7 +77,8 @@ am_ntpq_OBJECTS = ntpq.$(OBJEXT) ntpq-subs.$(OBJEXT) \
 	ntpq-opts.$(OBJEXT)
 ntpq_OBJECTS = $(am_ntpq_OBJECTS)
 am__DEPENDENCIES_1 =
-ntpq_DEPENDENCIES = version.o $(am__DEPENDENCIES_1) ../libntp/libntp.a
+ntpq_DEPENDENCIES = version.o $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1) ../libntp/libntp.a
 DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/depcomp
 am__depfiles_maybe = depfiles
@@ -160,6 +161,7 @@ INSTALL_SCRIPT = @INSTALL_SCRIPT@
 INSTALL_STRIP_PROGRAM = @INSTALL_STRIP_PROGRAM@
 LCRYPTO = @LCRYPTO@
 LDFLAGS = @LDFLAGS@
+LIBM = @LIBM@
 LIBOBJS = @LIBOBJS@
 LIBOPTS_CFLAGS = @LIBOPTS_CFLAGS@
 LIBOPTS_DIR = @LIBOPTS_DIR@
@@ -270,7 +272,7 @@ AM_CPPFLAGS = -I$(top_srcdir)/include -I$(top_srcdir)/lib/isc/include \
 
 
 # LDADD might need RESLIB and ADJLIB
-ntpq_LDADD = version.o $(LIBOPTS_LDADD) ../libntp/libntp.a \
+ntpq_LDADD = version.o $(LIBOPTS_LDADD) $(LIBM) ../libntp/libntp.a \
 		@EDITLINE_LIBS@ @LCRYPTO@
 
 noinst_HEADERS = ntpq.h

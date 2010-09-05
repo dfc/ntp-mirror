@@ -53,7 +53,7 @@ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/libopts/m4/libopts.m4 \
 	$(top_srcdir)/m4/define_dir.m4 \
 	$(top_srcdir)/m4/ntp_cacheversion.m4 \
-	$(top_srcdir)/m4/ntp_dir_sep.m4 \
+	$(top_srcdir)/m4/ntp_dir_sep.m4 $(top_srcdir)/m4/ntp_lib_m.m4 \
 	$(top_srcdir)/m4/ntp_lineeditlibs.m4 \
 	$(top_srcdir)/m4/ntp_openssl.m4 \
 	$(top_srcdir)/m4/ntp_vpathhack.m4 \
@@ -115,7 +115,7 @@ am_ntpd_OBJECTS = ntp_config.$(OBJEXT) ntp_io.$(OBJEXT) \
 ntpd_OBJECTS = $(am_ntpd_OBJECTS)
 am__DEPENDENCIES_2 =
 ntpd_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_2) \
-	../libntp/libntp.a
+	../libntp/libntp.a $(am__DEPENDENCIES_2)
 am__objects_2 = ntpdsim-ntp_config.$(OBJEXT) ntpdsim-ntp_io.$(OBJEXT) \
 	ntpdsim-ntp_parser.$(OBJEXT) ntpdsim-ntp_scanner.$(OBJEXT) \
 	ntpdsim-ntpd.$(OBJEXT) ntpdsim-ntpd-opts.$(OBJEXT) \
@@ -124,7 +124,7 @@ am_ntpdsim_OBJECTS = $(am__objects_2) ntpdsim-ntpsim.$(OBJEXT) \
 	$(am__objects_1)
 ntpdsim_OBJECTS = $(am_ntpdsim_OBJECTS)
 ntpdsim_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_2) \
-	../libntp/libntpsim.a
+	$(am__DEPENDENCIES_2) ../libntp/libntpsim.a
 ntpdsim_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
 	--mode=link $(CCLD) $(ntpdsim_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
 	$(LDFLAGS) -o $@
@@ -215,6 +215,7 @@ INSTALL_SCRIPT = @INSTALL_SCRIPT@
 INSTALL_STRIP_PROGRAM = @INSTALL_STRIP_PROGRAM@
 LCRYPTO = @LCRYPTO@
 LDFLAGS = @LDFLAGS@
+LIBM = @LIBM@
 LIBOBJS = @LIBOBJS@
 LIBOPTS_CFLAGS = @LIBOPTS_CFLAGS@
 LIBOPTS_DIR = @LIBOPTS_DIR@
@@ -360,14 +361,8 @@ man_MANS = $(srcdir)/ntpd.1
 # ntpdsim.1 is a remnant along with all the ntpdsim-opts.* files, the
 # simulator currently uses ntpd-opts.[ch].  This also means there is no
 # longer a reason to have ntpdbase-opts.def split off of ntpd-opts.def.
-
-# ntpd may need:
-# log10                               refclock_wwv.o
-# sqrt                                ntp_control.o
-# floor                               refclock_wwv.o
-# which are (usually) provided by -lm.
-ntpd_LDADD = $(LDADD) $(LIBOPTS_LDADD) ../libntp/libntp.a -lm @LCRYPTO@ @LSCF@
-ntpdsim_LDADD = $(LDADD) $(LIBOPTS_LDADD) ../libntp/libntpsim.a -lm @LCRYPTO@ @LSCF@
+ntpd_LDADD = $(LDADD) $(LIBOPTS_LDADD) ../libntp/libntp.a $(LIBM) @LCRYPTO@ @LSCF@
+ntpdsim_LDADD = $(LDADD) $(LIBOPTS_LDADD) $(LIBM) ../libntp/libntpsim.a @LCRYPTO@ @LSCF@
 ntpdsim_CFLAGS = $(CFLAGS) -DSIM
 check_y2k_LDADD = $(LDADD) ../libntp/libntp.a
 keyword_gen_LDADD = ../libntp/libntp.a	# we don't want $(LDADD) here

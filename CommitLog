@@ -1,3 +1,123 @@
+ChangeSet@1.2184, 2010-09-05 10:11:24+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P45
+  TAG: NTP_4_2_7P45
+
+  ChangeLog@1.620, 2010-09-05 10:11:22+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P45
+
+  ntpd/ntpd-opts.c@1.48, 2010-09-05 10:11:22+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P45
+
+  ntpd/ntpd-opts.h@1.48, 2010-09-05 10:11:22+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P45
+
+  ntpd/ntpd-opts.texi@1.47, 2010-09-05 10:11:22+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P45
+
+  ntpd/ntpd.1@1.47, 2010-09-05 10:11:22+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P45
+
+  ntpdc/ntpdc-opts.c@1.46, 2010-09-05 10:11:22+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P45
+
+  ntpdc/ntpdc-opts.h@1.46, 2010-09-05 10:11:22+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P45
+
+  ntpdc/ntpdc-opts.texi@1.46, 2010-09-05 10:11:22+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P45
+
+  ntpdc/ntpdc.1@1.46, 2010-09-05 10:11:22+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P45
+
+  ntpq/ntpq-opts.c@1.46, 2010-09-05 10:11:22+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P45
+
+  ntpq/ntpq-opts.h@1.46, 2010-09-05 10:11:22+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P45
+
+  ntpq/ntpq-opts.texi@1.46, 2010-09-05 10:11:22+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P45
+
+  ntpq/ntpq.1@1.46, 2010-09-05 10:11:22+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P45
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.46, 2010-09-05 10:11:22+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P45
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.46, 2010-09-05 10:11:22+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P45
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.46, 2010-09-05 10:11:22+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P45
+
+  ntpsnmpd/ntpsnmpd.1@1.46, 2010-09-05 10:11:22+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P45
+
+  packageinfo.sh@1.47, 2010-09-05 10:11:22+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P45
+
+  sntp/sntp-opts.c@1.46, 2010-09-05 10:11:22+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P45
+
+  sntp/sntp-opts.h@1.46, 2010-09-05 10:11:22+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P45
+
+  sntp/sntp-opts.texi@1.46, 2010-09-05 10:11:23+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P45
+
+  sntp/sntp.1@1.46, 2010-09-05 10:11:23+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P45
+
+  sntp/sntp.html@1.46, 2010-09-05 10:11:23+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P45
+
+  util/ntp-keygen-opts.c@1.46, 2010-09-05 10:11:23+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P45
+
+  util/ntp-keygen-opts.h@1.46, 2010-09-05 10:11:23+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P45
+
+  util/ntp-keygen-opts.texi@1.46, 2010-09-05 10:11:23+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P45
+
+  util/ntp-keygen.1@1.46, 2010-09-05 10:11:23+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P45
+
+ChangeSet@1.2183, 2010-09-05 02:41:15-04:00, stenn@deacon.udel.edu +10 -0
+  [Bug 1578] Consistently use -lm when needed
+
+  ChangeLog@1.619, 2010-09-05 02:40:35-04:00, stenn@deacon.udel.edu +1 -0
+    [Bug 1578] Consistently use -lm when needed
+
+  clockstuff/Makefile.am@1.10, 2010-09-05 02:40:35-04:00, stenn@deacon.udel.edu +1 -2
+    [Bug 1578] Consistently use -lm when needed
+
+  configure.ac@1.486, 2010-09-05 02:40:35-04:00, stenn@deacon.udel.edu +1 -0
+    [Bug 1578] Consistently use -lm when needed
+
+  m4/ntp_lib_m.m4@1.1, 2010-09-05 02:39:41-04:00, stenn@deacon.udel.edu +14 -0
+    BitKeeper file /deacon/backroom/ntp-dev-1578/m4/ntp_lib_m.m4
+
+  m4/ntp_lib_m.m4@1.0, 2010-09-05 02:39:41-04:00, stenn@deacon.udel.edu +0 -0
+
+  ntpd/Makefile.am@1.93, 2010-09-05 02:40:35-04:00, stenn@deacon.udel.edu +2 -7
+    [Bug 1578] Consistently use -lm when needed
+
+  ntpdate/Makefile.am@1.24, 2010-09-05 02:40:35-04:00, stenn@deacon.udel.edu +1 -1
+    [Bug 1578] Consistently use -lm when needed
+
+  ntpq/Makefile.am@1.49, 2010-09-05 02:40:36-04:00, stenn@deacon.udel.edu +1 -1
+    [Bug 1578] Consistently use -lm when needed
+
+  sntp/Makefile.am@1.34, 2010-09-05 02:40:36-04:00, stenn@deacon.udel.edu +1 -1
+    [Bug 1578] Consistently use -lm when needed
+
+  sntp/configure.ac@1.35, 2010-09-05 02:40:35-04:00, stenn@deacon.udel.edu +1 -1
+    [Bug 1578] Consistently use -lm when needed
+
+  util/Makefile.am@1.50, 2010-09-05 02:41:01-04:00, stenn@deacon.udel.edu +1 -1
+    [Bug 1578] Consistently use -lm when needed
+
 ChangeSet@1.2182, 2010-08-27 10:09:33+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P44
   TAG: NTP_4_2_7P44

@@ -57,7 +57,7 @@ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/libopts/m4/libopts.m4 \
 	$(top_srcdir)/m4/define_dir.m4 \
 	$(top_srcdir)/m4/ntp_cacheversion.m4 \
-	$(top_srcdir)/m4/ntp_dir_sep.m4 \
+	$(top_srcdir)/m4/ntp_dir_sep.m4 $(top_srcdir)/m4/ntp_lib_m.m4 \
 	$(top_srcdir)/m4/ntp_lineeditlibs.m4 \
 	$(top_srcdir)/m4/ntp_openssl.m4 \
 	$(top_srcdir)/m4/ntp_vpathhack.m4 \
@@ -125,7 +125,7 @@ tg_LDADD = $(LDADD)
 tg_DEPENDENCIES = ../libntp/libntp.a
 tg2_SOURCES = tg2.c
 tg2_OBJECTS = tg2.$(OBJEXT)
-tg2_DEPENDENCIES =
+tg2_DEPENDENCIES = $(am__DEPENDENCIES_1)
 tickadj_SOURCES = tickadj.c
 tickadj_OBJECTS = tickadj.$(OBJEXT)
 tickadj_LDADD = $(LDADD)
@@ -219,6 +219,7 @@ INSTALL_SCRIPT = @INSTALL_SCRIPT@
 INSTALL_STRIP_PROGRAM = @INSTALL_STRIP_PROGRAM@
 LCRYPTO = @LCRYPTO@
 LDFLAGS = @LDFLAGS@
+LIBM = @LIBM@
 LIBOBJS = @LIBOBJS@
 LIBOPTS_CFLAGS = @LIBOPTS_CFLAGS@
 LIBOPTS_DIR = @LIBOPTS_DIR@
@@ -331,7 +332,7 @@ AM_CPPFLAGS = -I$(top_srcdir)/include -I$(top_srcdir)/lib/isc/include \
 
 # LDADD might need RESLIB and ADJLIB
 LDADD = ../libntp/libntp.a
-tg2_LDADD = -lm
+tg2_LDADD = $(LIBM)
 ntp_keygen_SOURCES = ntp-keygen.c ntp-keygen-opts.c ntp-keygen-opts.h
 ntp_keygen_LDADD = $(LIBOPTS_LDADD) ../libntp/libntp.a @LCRYPTO@
 ETAGS_ARGS = Makefile.am

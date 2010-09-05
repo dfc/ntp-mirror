@@ -42,7 +42,7 @@ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/libopts/m4/libopts.m4 \
 	$(top_srcdir)/m4/define_dir.m4 \
 	$(top_srcdir)/m4/ntp_cacheversion.m4 \
-	$(top_srcdir)/m4/ntp_dir_sep.m4 \
+	$(top_srcdir)/m4/ntp_dir_sep.m4 $(top_srcdir)/m4/ntp_lib_m.m4 \
 	$(top_srcdir)/m4/ntp_lineeditlibs.m4 \
 	$(top_srcdir)/m4/ntp_openssl.m4 \
 	$(top_srcdir)/m4/ntp_vpathhack.m4 \
@@ -63,7 +63,8 @@ clktest_OBJECTS = clktest.$(OBJEXT)
 clktest_DEPENDENCIES = ../libntp/libntp.a
 propdelay_SOURCES = propdelay.c
 propdelay_OBJECTS = propdelay.$(OBJEXT)
-propdelay_DEPENDENCIES = ../libntp/libntp.a
+am__DEPENDENCIES_1 =
+propdelay_DEPENDENCIES = $(am__DEPENDENCIES_1) ../libntp/libntp.a
 DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/depcomp
 am__depfiles_maybe = depfiles
@@ -120,6 +121,7 @@ INSTALL_SCRIPT = @INSTALL_SCRIPT@
 INSTALL_STRIP_PROGRAM = @INSTALL_STRIP_PROGRAM@
 LCRYPTO = @LCRYPTO@
 LDFLAGS = @LDFLAGS@
+LIBM = @LIBM@
 LIBOBJS = @LIBOBJS@
 LIBOPTS_CFLAGS = @LIBOPTS_CFLAGS@
 LIBOPTS_DIR = @LIBOPTS_DIR@
@@ -227,8 +229,7 @@ top_srcdir = @top_srcdir@
 AUTOMAKE_OPTIONS = 
 noinst_PROGRAMS = @PROPDELAY@ @CHUTEST@ @CLKTEST@
 INCLUDES = -I$(top_srcdir)/include
-# We need -lm (and perhaps $(COMPAT) for propdelay, -lntp for {chu,clk}test
-propdelay_LDADD = -lm ../libntp/libntp.a
+propdelay_LDADD = $(LIBM) ../libntp/libntp.a
 chutest_LDADD = ../libntp/libntp.a
 clktest_LDADD = ../libntp/libntp.a
 ETAGS_ARGS = Makefile.am
