@@ -1,8 +1,498 @@
-ChangeSet@1.2184, 2010-09-05 10:11:24+00:00, stenn@deacon.udel.edu +27 -0
+ChangeSet@1.2179, 2010-09-11 10:16:58+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P47
+  TAG: NTP_4_2_7P47
+
+  ChangeLog@1.614, 2010-09-11 10:16:56+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P47
+
+  ntpd/ntpd-opts.c@1.50, 2010-09-11 10:16:56+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P47
+
+  ntpd/ntpd-opts.h@1.50, 2010-09-11 10:16:56+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P47
+
+  ntpd/ntpd-opts.texi@1.49, 2010-09-11 10:16:56+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P47
+
+  ntpd/ntpd.1@1.49, 2010-09-11 10:16:56+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P47
+
+  ntpdc/ntpdc-opts.c@1.48, 2010-09-11 10:16:56+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P47
+
+  ntpdc/ntpdc-opts.h@1.48, 2010-09-11 10:16:56+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P47
+
+  ntpdc/ntpdc-opts.texi@1.48, 2010-09-11 10:16:56+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P47
+
+  ntpdc/ntpdc.1@1.48, 2010-09-11 10:16:56+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P47
+
+  ntpq/ntpq-opts.c@1.48, 2010-09-11 10:16:56+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P47
+
+  ntpq/ntpq-opts.h@1.48, 2010-09-11 10:16:57+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P47
+
+  ntpq/ntpq-opts.texi@1.48, 2010-09-11 10:16:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P47
+
+  ntpq/ntpq.1@1.48, 2010-09-11 10:16:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P47
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.48, 2010-09-11 10:16:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P47
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.48, 2010-09-11 10:16:57+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P47
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.48, 2010-09-11 10:16:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P47
+
+  ntpsnmpd/ntpsnmpd.1@1.48, 2010-09-11 10:16:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P47
+
+  packageinfo.sh@1.49, 2010-09-11 10:16:57+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P47
+
+  sntp/sntp-opts.c@1.48, 2010-09-11 10:16:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P47
+
+  sntp/sntp-opts.h@1.48, 2010-09-11 10:16:57+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P47
+
+  sntp/sntp-opts.texi@1.48, 2010-09-11 10:16:57+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P47
+
+  sntp/sntp.1@1.48, 2010-09-11 10:16:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P47
+
+  sntp/sntp.html@1.48, 2010-09-11 10:16:57+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P47
+
+  util/ntp-keygen-opts.c@1.45, 2010-09-11 10:16:57+00:00, stenn@deacon.udel.edu +5 -5
+    NTP_4_2_7P47
+
+  util/ntp-keygen-opts.h@1.45, 2010-09-11 10:16:57+00:00, stenn@deacon.udel.edu +4 -4
+    NTP_4_2_7P47
+
+  util/ntp-keygen-opts.texi@1.48, 2010-09-11 10:16:57+00:00, stenn@deacon.udel.edu +17 -17
+    NTP_4_2_7P47
+
+  util/ntp-keygen.1@1.48, 2010-09-11 10:16:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P47
+
+ChangeSet@1.2082.4.112, 2010-09-11 02:14:22-04:00, stenn@deacon.udel.edu +1 -0
+  temporary mirror trigger update
+
+  BitKeeper/triggers/2mirrors@1.7, 2010-09-11 02:14:17-04:00, stenn@deacon.udel.edu +2 -1
+    temporary mirror trigger update
+
+ChangeSet@1.2177, 2010-09-11 01:56:46-04:00, stenn@deacon.udel.edu +84 -0
+  Documentation updates from Dave Mills
+
+  BitKeeper/deleted/.del-description.jpg~1683404a7f1dcae@1.2, 2010-09-11 01:30:41-04:00, stenn@deacon.udel.edu +0 -0
+    Delete: html/description_files/description.jpg
+
+  BitKeeper/deleted/.del-gadget.html~155e509d29e44428@1.5, 2010-09-11 01:28:17-04:00, stenn@deacon.udel.edu +0 -0
+    Delete: html/gadget.html
+
+  ChangeLog@1.613, 2010-09-11 01:56:40-04:00, stenn@deacon.udel.edu +1 -0
+    Documentation updates from Dave Mills
+
+  html/access.html@1.1, 2010-09-11 01:53:44-04:00, stenn@deacon.udel.edu +50 -0
+    BitKeeper file /deacon/backroom/ntp-dev/html/access.html
+
+  html/access.html@1.0, 2010-09-11 01:53:44-04:00, stenn@deacon.udel.edu +0 -0
+
+  html/accopt.html@1.37, 2010-09-11 01:55:51-04:00, stenn@deacon.udel.edu +65 -184
+    Documentation updates from Dave Mills
+
+  html/assoc.html@1.31, 2010-09-11 01:55:51-04:00, stenn@deacon.udel.edu +83 -94
+    Documentation updates from Dave Mills
+
+  html/audio.html@1.22, 2010-09-11 01:55:51-04:00, stenn@deacon.udel.edu +178 -179
+    Documentation updates from Dave Mills
+
+  html/authentic.html@1.1, 2010-09-11 01:53:44-04:00, stenn@deacon.udel.edu +54 -0
+    BitKeeper file /deacon/backroom/ntp-dev/html/authentic.html
+
+  html/authentic.html@1.0, 2010-09-11 01:53:44-04:00, stenn@deacon.udel.edu +0 -0
+
+  html/authopt.html@1.61, 2010-09-11 01:55:51-04:00, stenn@deacon.udel.edu +68 -473
+    Documentation updates from Dave Mills
+
+  html/autokey.html@1.1, 2010-09-11 01:53:44-04:00, stenn@deacon.udel.edu +206 -0
+    BitKeeper file /deacon/backroom/ntp-dev/html/autokey.html
+
+  html/autokey.html@1.0, 2010-09-11 01:53:44-04:00, stenn@deacon.udel.edu +0 -0
+
+  html/bugs.html@1.6, 2010-09-11 01:55:51-04:00, stenn@deacon.udel.edu +28 -30
+    Documentation updates from Dave Mills
+
+  html/build.html@1.24, 2010-09-11 01:55:51-04:00, stenn@deacon.udel.edu +55 -57
+    Documentation updates from Dave Mills
+
+  html/clock.html@1.1, 2010-09-11 01:53:44-04:00, stenn@deacon.udel.edu +31 -0
+    BitKeeper file /deacon/backroom/ntp-dev/html/clock.html
+
+  html/clock.html@1.0, 2010-09-11 01:53:44-04:00, stenn@deacon.udel.edu +0 -0
+
+  html/clockopt.html@1.23, 2010-09-11 01:55:51-04:00, stenn@deacon.udel.edu +55 -67
+    Documentation updates from Dave Mills
+
+  html/comdex.html@1.3, 2010-09-11 01:55:51-04:00, stenn@deacon.udel.edu +24 -29
+    Documentation updates from Dave Mills
+
+  html/confopt.html@1.50, 2010-09-11 01:55:51-04:00, stenn@deacon.udel.edu +13 -37
+    Documentation updates from Dave Mills
+
+  html/copyright.html@1.51, 2010-09-11 01:55:52-04:00, stenn@deacon.udel.edu +75 -79
+    Documentation updates from Dave Mills
+
+  html/debug.html@1.30, 2010-09-11 01:55:52-04:00, stenn@deacon.udel.edu +90 -94
+    Documentation updates from Dave Mills
+
+  html/decode.html@1.15, 2010-09-11 01:55:52-04:00, stenn@deacon.udel.edu +628 -806
+    Documentation updates from Dave Mills
+
+  html/discover.html@1.1, 2010-09-11 01:53:44-04:00, stenn@deacon.udel.edu +72 -0
+    BitKeeper file /deacon/backroom/ntp-dev/html/discover.html
+
+  html/discover.html@1.0, 2010-09-11 01:53:44-04:00, stenn@deacon.udel.edu +0 -0
+
+  html/drivers/driver1.html@1.17, 2010-09-11 01:56:01-04:00, stenn@deacon.udel.edu +48 -48
+    Documentation updates from Dave Mills
+
+  html/drivers/driver10.html@1.13, 2010-09-11 01:56:01-04:00, stenn@deacon.udel.edu +51 -51
+    Documentation updates from Dave Mills
+
+  html/drivers/driver11.html@1.13, 2010-09-11 01:56:01-04:00, stenn@deacon.udel.edu +60 -60
+    Documentation updates from Dave Mills
+
+  html/drivers/driver12.html@1.12, 2010-09-11 01:56:01-04:00, stenn@deacon.udel.edu +47 -47
+    Documentation updates from Dave Mills
+
+  html/drivers/driver18.html@1.17, 2010-09-11 01:56:01-04:00, stenn@deacon.udel.edu +80 -80
+    Documentation updates from Dave Mills
+
+  html/drivers/driver19.html@1.12, 2010-09-11 01:56:01-04:00, stenn@deacon.udel.edu +53 -53
+    Documentation updates from Dave Mills
+
+  html/drivers/driver22.html@1.19, 2010-09-11 01:56:01-04:00, stenn@deacon.udel.edu +81 -93
+    Documentation updates from Dave Mills
+
+  html/drivers/driver3.html@1.12, 2010-09-11 01:56:01-04:00, stenn@deacon.udel.edu +52 -52
+    Documentation updates from Dave Mills
+
+  html/drivers/driver36.html@1.33, 2010-09-11 01:56:01-04:00, stenn@deacon.udel.edu +148 -145
+    Documentation updates from Dave Mills
+
+  html/drivers/driver4.html@1.16, 2010-09-11 01:56:01-04:00, stenn@deacon.udel.edu +39 -71
+    Documentation updates from Dave Mills
+
+  html/drivers/driver6.html@1.26, 2010-09-11 01:56:01-04:00, stenn@deacon.udel.edu +79 -74
+    Documentation updates from Dave Mills
+
+  html/drivers/driver7.html@1.28, 2010-09-11 01:56:01-04:00, stenn@deacon.udel.edu +123 -129
+    Documentation updates from Dave Mills
+
+  html/extern.html@1.16, 2010-09-11 01:55:52-04:00, stenn@deacon.udel.edu +46 -48
+    Documentation updates from Dave Mills
+
+  html/hints.html@1.18, 2010-09-11 01:55:52-04:00, stenn@deacon.udel.edu +20 -22
+    Documentation updates from Dave Mills
+
+  html/howto.html@1.23, 2010-09-11 01:55:52-04:00, stenn@deacon.udel.edu +106 -114
+    Documentation updates from Dave Mills
+
+  html/huffpuff.html@1.1, 2010-09-11 01:53:44-04:00, stenn@deacon.udel.edu +20 -0
+    BitKeeper file /deacon/backroom/ntp-dev/html/huffpuff.html
+
+  html/huffpuff.html@1.0, 2010-09-11 01:53:44-04:00, stenn@deacon.udel.edu +0 -0
+
+  html/index.html@1.42, 2010-09-11 01:55:52-04:00, stenn@deacon.udel.edu +97 -89
+    Documentation updates from Dave Mills
+
+  html/kern.html@1.18, 2010-09-11 01:55:52-04:00, stenn@deacon.udel.edu +29 -31
+    Documentation updates from Dave Mills
+
+  html/kernpps.html@1.3, 2010-09-11 01:55:52-04:00, stenn@deacon.udel.edu +46 -47
+    Documentation updates from Dave Mills
+
+  html/keygen.html@1.20, 2010-09-11 01:55:52-04:00, stenn@deacon.udel.edu +103 -174
+    Documentation updates from Dave Mills
+
+  html/leap.html@1.1, 2010-09-11 01:53:44-04:00, stenn@deacon.udel.edu +24 -0
+    BitKeeper file /deacon/backroom/ntp-dev/html/leap.html
+
+  html/leap.html@1.0, 2010-09-11 01:53:44-04:00, stenn@deacon.udel.edu +0 -0
+
+  html/miscopt.html@1.56, 2010-09-11 01:55:52-04:00, stenn@deacon.udel.edu +164 -167
+    Documentation updates from Dave Mills
+
+  html/monopt.html@1.32, 2010-09-11 01:55:52-04:00, stenn@deacon.udel.edu +486 -487
+    Documentation updates from Dave Mills
+
+  html/msyslog.html@1.10, 2010-09-11 01:55:52-04:00, stenn@deacon.udel.edu +127 -123
+    Documentation updates from Dave Mills
+
+  html/ntp_conf.html@1.4, 2010-09-11 01:55:52-04:00, stenn@deacon.udel.edu +171 -171
+    Documentation updates from Dave Mills
+
+  html/ntpd.html@1.52, 2010-09-11 01:55:52-04:00, stenn@deacon.udel.edu +166 -223
+    Documentation updates from Dave Mills
+
+  html/ntpdate.html@1.19, 2010-09-11 01:55:52-04:00, stenn@deacon.udel.edu +67 -69
+    Documentation updates from Dave Mills
+
+  html/ntpdc.html@1.32, 2010-09-11 01:55:52-04:00, stenn@deacon.udel.edu +170 -213
+    Documentation updates from Dave Mills
+
+  html/ntpdsim.html@1.8, 2010-09-11 01:55:52-04:00, stenn@deacon.udel.edu +61 -63
+    Documentation updates from Dave Mills
+
+  html/ntpdsim_new.html@1.5, 2010-09-11 01:55:52-04:00, stenn@deacon.udel.edu +55 -55
+    Documentation updates from Dave Mills
+
+  html/ntpq.html@1.41, 2010-09-11 01:55:52-04:00, stenn@deacon.udel.edu +639 -655
+    Documentation updates from Dave Mills
+
+  html/ntptime.html@1.17, 2010-09-11 01:55:53-04:00, stenn@deacon.udel.edu +44 -46
+    Documentation updates from Dave Mills
+
+  html/ntptrace.html@1.15, 2010-09-11 01:55:53-04:00, stenn@deacon.udel.edu +41 -43
+    Documentation updates from Dave Mills
+
+  html/orphan.html@1.1, 2010-09-11 01:53:44-04:00, stenn@deacon.udel.edu +36 -0
+    BitKeeper file /deacon/backroom/ntp-dev/html/orphan.html
+
+  html/orphan.html@1.0, 2010-09-11 01:53:44-04:00, stenn@deacon.udel.edu +0 -0
+
+  html/pic/fig_3_1.gif@1.1, 2010-09-11 01:53:44-04:00, stenn@deacon.udel.edu +528 -0
+    BitKeeper file /deacon/backroom/ntp-dev/html/pic/fig_3_1.gif
+
+  html/pic/fig_3_1.gif@1.0, 2010-09-11 01:53:44-04:00, stenn@deacon.udel.edu +0 -0
+
+  html/pic/group.gif@1.1, 2010-09-11 01:53:44-04:00, stenn@deacon.udel.edu +63 -0
+    BitKeeper file /deacon/backroom/ntp-dev/html/pic/group.gif
+
+  html/pic/group.gif@1.0, 2010-09-11 01:53:44-04:00, stenn@deacon.udel.edu +0 -0
+
+  html/pps.html@1.21, 2010-09-11 01:55:53-04:00, stenn@deacon.udel.edu +44 -47
+    Documentation updates from Dave Mills
+
+  html/prefer.html@1.23, 2010-09-11 01:55:53-04:00, stenn@deacon.udel.edu +61 -112
+    Documentation updates from Dave Mills
+
+  html/quick.html@1.21, 2010-09-11 01:55:53-04:00, stenn@deacon.udel.edu +43 -44
+    Documentation updates from Dave Mills
+
+  html/rate.html@1.6, 2010-09-11 01:55:53-04:00, stenn@deacon.udel.edu +53 -69
+    Documentation updates from Dave Mills
+
+  html/rdebug.html@1.17, 2010-09-11 01:55:53-04:00, stenn@deacon.udel.edu +29 -29
+    Documentation updates from Dave Mills
+
+  html/refclock.html@1.35, 2010-09-11 01:55:53-04:00, stenn@deacon.udel.edu +89 -88
+    Documentation updates from Dave Mills
+
+  html/release.html@1.37, 2010-09-11 01:55:53-04:00, stenn@deacon.udel.edu +66 -59
+    Documentation updates from Dave Mills
+
+  html/scripts/accopt.txt@1.2, 2010-09-11 01:56:06-04:00, stenn@deacon.udel.edu +4 -4
+    Documentation updates from Dave Mills
+
+  html/scripts/audio.txt@1.2, 2010-09-11 01:56:06-04:00, stenn@deacon.udel.edu +6 -6
+    Documentation updates from Dave Mills
+
+  html/scripts/authopt.txt@1.3, 2010-09-11 01:56:07-04:00, stenn@deacon.udel.edu +9 -9
+    Documentation updates from Dave Mills
+
+  html/scripts/clockopt.txt@1.2, 2010-09-11 01:56:07-04:00, stenn@deacon.udel.edu +3 -3
+    Documentation updates from Dave Mills
+
+  html/scripts/command.txt@1.3, 2010-09-11 01:56:07-04:00, stenn@deacon.udel.edu +9 -11
+    Documentation updates from Dave Mills
+
+  html/scripts/config.txt@1.3, 2010-09-11 01:56:07-04:00, stenn@deacon.udel.edu +5 -7
+    Documentation updates from Dave Mills
+
+  html/scripts/confopt.txt@1.3, 2010-09-11 01:56:07-04:00, stenn@deacon.udel.edu +11 -11
+    Documentation updates from Dave Mills
+
+  html/scripts/external.txt@1.3, 2010-09-11 01:56:07-04:00, stenn@deacon.udel.edu +17 -15
+    Documentation updates from Dave Mills
+
+  html/scripts/hand.txt@1.1, 2010-09-11 01:53:44-04:00, stenn@deacon.udel.edu +11 -0
+    BitKeeper file /deacon/backroom/ntp-dev/html/scripts/hand.txt
+
+  html/scripts/hand.txt@1.0, 2010-09-11 01:53:44-04:00, stenn@deacon.udel.edu +0 -0
+
+  html/scripts/install.txt@1.3, 2010-09-11 01:56:07-04:00, stenn@deacon.udel.edu +10 -12
+    Documentation updates from Dave Mills
+
+  html/scripts/manual.txt@1.3, 2010-09-11 01:56:07-04:00, stenn@deacon.udel.edu +13 -13
+    Documentation updates from Dave Mills
+
+  html/scripts/misc.txt@1.2, 2010-09-11 01:56:07-04:00, stenn@deacon.udel.edu +9 -9
+    Documentation updates from Dave Mills
+
+  html/scripts/miscopt.txt@1.5, 2010-09-11 01:56:07-04:00, stenn@deacon.udel.edu +19 -19
+    Documentation updates from Dave Mills
+
+  html/scripts/monopt.txt@1.2, 2010-09-11 01:56:07-04:00, stenn@deacon.udel.edu +4 -4
+    Documentation updates from Dave Mills
+
+  html/scripts/refclock.txt@1.2, 2010-09-11 01:56:07-04:00, stenn@deacon.udel.edu +6 -6
+    Documentation updates from Dave Mills
+
+  html/scripts/special.txt@1.1, 2010-09-11 01:53:44-04:00, stenn@deacon.udel.edu +11 -0
+    BitKeeper file /deacon/backroom/ntp-dev/html/scripts/special.txt
+
+  html/scripts/special.txt@1.0, 2010-09-11 01:53:44-04:00, stenn@deacon.udel.edu +0 -0
+
+  html/sitemap.html@1.4, 2010-09-11 01:55:53-04:00, stenn@deacon.udel.edu +31 -34
+    Documentation updates from Dave Mills
+
+  html/sntp.html@1.7, 2010-09-11 01:55:53-04:00, stenn@deacon.udel.edu +52 -54
+    Documentation updates from Dave Mills
+
+  html/tickadj.html@1.16, 2010-09-11 01:55:53-04:00, stenn@deacon.udel.edu +43 -44
+    Documentation updates from Dave Mills
+
+  html/warp.html@1.1, 2010-09-11 01:53:44-04:00, stenn@deacon.udel.edu +51 -0
+    BitKeeper file /deacon/backroom/ntp-dev/html/warp.html
+
+  html/warp.html@1.0, 2010-09-11 01:53:44-04:00, stenn@deacon.udel.edu +0 -0
+
+  html/xleave.html@1.5, 2010-09-11 01:55:53-04:00, stenn@deacon.udel.edu +28 -39
+    Documentation updates from Dave Mills
+
+ChangeSet@1.2176, 2010-09-11 01:16:34-04:00, stenn@deacon.udel.edu +2 -0
+  [Bug 1616] refclock_acts.c: if (pp->leap == 2) is always false.
+
+  ChangeLog@1.612, 2010-09-11 01:16:13-04:00, stenn@deacon.udel.edu +1 -0
+    [Bug 1616] refclock_acts.c: if (pp->leap == 2) is always false.
+
+  ntpd/refclock_acts.c@1.39, 2010-09-11 01:16:28-04:00, stenn@deacon.udel.edu +1 -1
+    [Bug 1616] refclock_acts.c: if (pp->leap == 2) is always false.
+
+ChangeSet@1.2175, 2010-09-11 01:11:46-04:00, stenn@pogo.udel.edu +4 -0
+  [Bug 1620] [Backward Incompatible] "discard minimum" value should be in seconds, not log2 seconds
+
+  ChangeLog@1.611, 2010-09-11 01:10:20-04:00, stenn@pogo.udel.edu +2 -0
+    [Bug 1620] [Backward Incompatible] "discard minimum" value should be in seconds, not log2 seconds
+
+  include/ntp.h@1.181, 2010-09-11 01:10:31-04:00, stenn@pogo.udel.edu +1 -1
+    [Bug 1620] [Backward Incompatible] "discard minimum" value should be in seconds, not log2 seconds
+
+  ntpd/ntp_monitor.c@1.36, 2010-09-11 01:10:48-04:00, stenn@pogo.udel.edu +1 -1
+    [Bug 1620] [Backward Incompatible] "discard minimum" value should be in seconds, not log2 seconds
+
+  ntpd/ntp_proto.c@1.302, 2010-09-11 01:10:49-04:00, stenn@pogo.udel.edu +4 -6
+    [Bug 1620] [Backward Incompatible] "discard minimum" value should be in seconds, not log2 seconds
+
+ChangeSet@1.2171.1.15, 2010-09-10 10:12:03+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P46
+  TAG: NTP_4_2_7P46
+
+  ChangeLog@1.607.1.15, 2010-09-10 10:12:00+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P46
+
+  ntpd/ntpd-opts.c@1.49, 2010-09-10 10:12:01+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P46
+
+  ntpd/ntpd-opts.h@1.49, 2010-09-10 10:12:01+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P46
+
+  ntpd/ntpd-opts.texi@1.48, 2010-09-10 10:12:01+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P46
+
+  ntpd/ntpd.1@1.48, 2010-09-10 10:12:01+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P46
+
+  ntpdc/ntpdc-opts.c@1.47, 2010-09-10 10:12:01+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P46
+
+  ntpdc/ntpdc-opts.h@1.47, 2010-09-10 10:12:01+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P46
+
+  ntpdc/ntpdc-opts.texi@1.47, 2010-09-10 10:12:01+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P46
+
+  ntpdc/ntpdc.1@1.47, 2010-09-10 10:12:01+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P46
+
+  ntpq/ntpq-opts.c@1.47, 2010-09-10 10:12:01+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P46
+
+  ntpq/ntpq-opts.h@1.47, 2010-09-10 10:12:01+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P46
+
+  ntpq/ntpq-opts.texi@1.47, 2010-09-10 10:12:01+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P46
+
+  ntpq/ntpq.1@1.47, 2010-09-10 10:12:01+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P46
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.47, 2010-09-10 10:12:01+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P46
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.47, 2010-09-10 10:12:01+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P46
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.47, 2010-09-10 10:12:01+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P46
+
+  ntpsnmpd/ntpsnmpd.1@1.47, 2010-09-10 10:12:01+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P46
+
+  packageinfo.sh@1.48, 2010-09-10 10:12:01+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P46
+
+  sntp/sntp-opts.c@1.47, 2010-09-10 10:12:01+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P46
+
+  sntp/sntp-opts.h@1.47, 2010-09-10 10:12:02+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P46
+
+  sntp/sntp-opts.texi@1.47, 2010-09-10 10:12:02+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P46
+
+  sntp/sntp.1@1.47, 2010-09-10 10:12:02+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P46
+
+  sntp/sntp.html@1.47, 2010-09-10 10:12:02+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P46
+
+  util/ntp-keygen-opts.c@1.41.1.6, 2010-09-10 10:12:02+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P46
+
+  util/ntp-keygen-opts.h@1.41.1.6, 2010-09-10 10:12:02+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P46
+
+  util/ntp-keygen-opts.texi@1.47, 2010-09-10 10:12:02+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P46
+
+  util/ntp-keygen.1@1.47, 2010-09-10 10:12:02+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P46
+
+ChangeSet@1.2171.1.14, 2010-09-10 00:26:46-04:00, stenn@deacon.udel.edu +2 -0
+  Use AC_SEARCH_LIBS instead of AC_CHECK_LIB for NTP_LIB_M
+
+  ChangeLog@1.607.1.14, 2010-09-10 00:26:39-04:00, stenn@deacon.udel.edu +1 -0
+    Use AC_SEARCH_LIBS instead of AC_CHECK_LIB for NTP_LIB_M
+
+  m4/ntp_lib_m.m4@1.2, 2010-09-10 00:26:20-04:00, stenn@deacon.udel.edu +1 -1
+    Use AC_SEARCH_LIBS instead of AC_CHECK_LIB for NTP_LIB_M
+
+ChangeSet@1.2171.1.13, 2010-09-05 10:11:24+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P45
   TAG: NTP_4_2_7P45
 
-  ChangeLog@1.620, 2010-09-05 10:11:22+00:00, stenn@deacon.udel.edu +1 -0
+  ChangeLog@1.607.1.13, 2010-09-05 10:11:22+00:00, stenn@deacon.udel.edu +1 -0
     NTP_4_2_7P45
 
   ntpd/ntpd-opts.c@1.48, 2010-09-05 10:11:22+00:00, stenn@deacon.udel.edu +2 -2
@@ -71,10 +561,10 @@ ChangeSet@1.2184, 2010-09-05 10:11:24+00:00, stenn@deacon.udel.edu +27 -0
   sntp/sntp.html@1.46, 2010-09-05 10:11:23+00:00, stenn@deacon.udel.edu +1 -1
     NTP_4_2_7P45
 
-  util/ntp-keygen-opts.c@1.46, 2010-09-05 10:11:23+00:00, stenn@deacon.udel.edu +2 -2
+  util/ntp-keygen-opts.c@1.41.1.5, 2010-09-05 10:11:23+00:00, stenn@deacon.udel.edu +2 -2
     NTP_4_2_7P45
 
-  util/ntp-keygen-opts.h@1.46, 2010-09-05 10:11:23+00:00, stenn@deacon.udel.edu +3 -3
+  util/ntp-keygen-opts.h@1.41.1.5, 2010-09-05 10:11:23+00:00, stenn@deacon.udel.edu +3 -3
     NTP_4_2_7P45
 
   util/ntp-keygen-opts.texi@1.46, 2010-09-05 10:11:23+00:00, stenn@deacon.udel.edu +2 -2
@@ -83,16 +573,16 @@ ChangeSet@1.2184, 2010-09-05 10:11:24+00:00, stenn@deacon.udel.edu +27 -0
   util/ntp-keygen.1@1.46, 2010-09-05 10:11:23+00:00, stenn@deacon.udel.edu +2 -2
     NTP_4_2_7P45
 
-ChangeSet@1.2183, 2010-09-05 02:41:15-04:00, stenn@deacon.udel.edu +10 -0
+ChangeSet@1.2171.1.12, 2010-09-05 02:41:15-04:00, stenn@deacon.udel.edu +10 -0
   [Bug 1578] Consistently use -lm when needed
 
-  ChangeLog@1.619, 2010-09-05 02:40:35-04:00, stenn@deacon.udel.edu +1 -0
+  ChangeLog@1.607.1.12, 2010-09-05 02:40:35-04:00, stenn@deacon.udel.edu +1 -0
     [Bug 1578] Consistently use -lm when needed
 
   clockstuff/Makefile.am@1.10, 2010-09-05 02:40:35-04:00, stenn@deacon.udel.edu +1 -2
     [Bug 1578] Consistently use -lm when needed
 
-  configure.ac@1.486, 2010-09-05 02:40:35-04:00, stenn@deacon.udel.edu +1 -0
+  configure.ac@1.485.1.1, 2010-09-05 02:40:35-04:00, stenn@deacon.udel.edu +1 -0
     [Bug 1578] Consistently use -lm when needed
 
   m4/ntp_lib_m.m4@1.1, 2010-09-05 02:39:41-04:00, stenn@deacon.udel.edu +14 -0
@@ -118,11 +608,11 @@ ChangeSet@1.2183, 2010-09-05 02:41:15-04:00, stenn@deacon.udel.edu +10 -0
   util/Makefile.am@1.50, 2010-09-05 02:41:01-04:00, stenn@deacon.udel.edu +1 -1
     [Bug 1578] Consistently use -lm when needed
 
-ChangeSet@1.2182, 2010-08-27 10:09:33+00:00, stenn@deacon.udel.edu +27 -0
+ChangeSet@1.2171.1.11, 2010-08-27 10:09:33+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P44
   TAG: NTP_4_2_7P44
 
-  ChangeLog@1.618, 2010-08-27 10:09:30+00:00, stenn@deacon.udel.edu +1 -0
+  ChangeLog@1.607.1.11, 2010-08-27 10:09:30+00:00, stenn@deacon.udel.edu +1 -0
     NTP_4_2_7P44
 
   ntpd/ntpd-opts.c@1.47, 2010-08-27 10:09:30+00:00, stenn@deacon.udel.edu +2 -2
@@ -191,10 +681,10 @@ ChangeSet@1.2182, 2010-08-27 10:09:33+00:00, stenn@deacon.udel.edu +27 -0
   sntp/sntp.html@1.45, 2010-08-27 10:09:31+00:00, stenn@deacon.udel.edu +1 -1
     NTP_4_2_7P44
 
-  util/ntp-keygen-opts.c@1.45, 2010-08-27 10:09:31+00:00, stenn@deacon.udel.edu +2 -2
+  util/ntp-keygen-opts.c@1.41.1.4, 2010-08-27 10:09:31+00:00, stenn@deacon.udel.edu +2 -2
     NTP_4_2_7P44
 
-  util/ntp-keygen-opts.h@1.45, 2010-08-27 10:09:31+00:00, stenn@deacon.udel.edu +3 -3
+  util/ntp-keygen-opts.h@1.41.1.4, 2010-08-27 10:09:31+00:00, stenn@deacon.udel.edu +3 -3
     NTP_4_2_7P44
 
   util/ntp-keygen-opts.texi@1.45, 2010-08-27 10:09:31+00:00, stenn@deacon.udel.edu +2 -2
@@ -203,11 +693,11 @@ ChangeSet@1.2182, 2010-08-27 10:09:33+00:00, stenn@deacon.udel.edu +27 -0
   util/ntp-keygen.1@1.45, 2010-08-27 10:09:31+00:00, stenn@deacon.udel.edu +2 -2
     NTP_4_2_7P44
 
-ChangeSet@1.2178.1.5, 2010-08-26 09:34:12+00:00, stenn@deacon.udel.edu +27 -0
+ChangeSet@1.2171.6.5, 2010-08-26 09:34:12+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P43
   TAG: NTP_4_2_7P43
 
-  ChangeLog@1.614.1.3, 2010-08-26 09:34:10+00:00, stenn@deacon.udel.edu +1 -0
+  ChangeLog@1.607.5.3, 2010-08-26 09:34:10+00:00, stenn@deacon.udel.edu +1 -0
     NTP_4_2_7P43
 
   ntpd/ntpd-opts.c@1.46, 2010-08-26 09:34:10+00:00, stenn@deacon.udel.edu +2 -2
@@ -276,10 +766,10 @@ ChangeSet@1.2178.1.5, 2010-08-26 09:34:12+00:00, stenn@deacon.udel.edu +27 -0
   sntp/sntp.html@1.44, 2010-08-26 09:34:11+00:00, stenn@deacon.udel.edu +1 -1
     NTP_4_2_7P43
 
-  util/ntp-keygen-opts.c@1.44, 2010-08-26 09:34:11+00:00, stenn@deacon.udel.edu +2 -2
+  util/ntp-keygen-opts.c@1.41.1.3, 2010-08-26 09:34:11+00:00, stenn@deacon.udel.edu +2 -2
     NTP_4_2_7P43
 
-  util/ntp-keygen-opts.h@1.44, 2010-08-26 09:34:11+00:00, stenn@deacon.udel.edu +3 -3
+  util/ntp-keygen-opts.h@1.41.1.3, 2010-08-26 09:34:11+00:00, stenn@deacon.udel.edu +3 -3
     NTP_4_2_7P43
 
   util/ntp-keygen-opts.texi@1.44, 2010-08-26 09:34:11+00:00, stenn@deacon.udel.edu +2 -2
@@ -288,23 +778,23 @@ ChangeSet@1.2178.1.5, 2010-08-26 09:34:12+00:00, stenn@deacon.udel.edu +27 -0
   util/ntp-keygen.1@1.44, 2010-08-26 09:34:11+00:00, stenn@deacon.udel.edu +2 -2
     NTP_4_2_7P43
 
-ChangeSet@1.2178.2.1, 2010-08-21 12:05:58+02:00, linus@beam.lund.zozs.se +1 -0
+ChangeSet@1.2171.7.1, 2010-08-21 12:05:58+02:00, linus@beam.lund.zozs.se +1 -0
   Reverted sntp/log.c refactoring.
 
   sntp/log.c@1.15, 2010-08-21 12:05:57+02:00, linus@beam.lund.zozs.se +1 -2
     Reverted sntp/log.c refactoring.
 
-ChangeSet@1.2178.1.3, 2010-08-19 06:16:56+00:00, stenn@psp-fb2.ntp.org +1 -0
+ChangeSet@1.2171.6.3, 2010-08-19 06:16:56+00:00, stenn@psp-fb2.ntp.org +1 -0
   [Bug 1602] Refactor some of the sntp/ directory to facililtate testing
 
-  ChangeLog@1.614.1.2, 2010-08-19 06:16:31+00:00, stenn@psp-fb2.ntp.org +1 -0
+  ChangeLog@1.607.5.2, 2010-08-19 06:16:31+00:00, stenn@psp-fb2.ntp.org +1 -0
     [Bug 1602] Refactor some of the sntp/ directory to facililtate testing
 
-ChangeSet@1.2178.1.1, 2010-08-18 10:09:59+00:00, stenn@deacon.udel.edu +27 -0
+ChangeSet@1.2171.6.1, 2010-08-18 10:09:59+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P42
   TAG: NTP_4_2_7P42
 
-  ChangeLog@1.614.1.1, 2010-08-18 10:09:57+00:00, stenn@deacon.udel.edu +1 -0
+  ChangeLog@1.607.5.1, 2010-08-18 10:09:57+00:00, stenn@deacon.udel.edu +1 -0
     NTP_4_2_7P42
 
   ntpd/ntpd-opts.c@1.45, 2010-08-18 10:09:57+00:00, stenn@deacon.udel.edu +2 -2
@@ -373,10 +863,10 @@ ChangeSet@1.2178.1.1, 2010-08-18 10:09:59+00:00, stenn@deacon.udel.edu +27 -0
   sntp/sntp.html@1.43, 2010-08-18 10:09:58+00:00, stenn@deacon.udel.edu +1 -1
     NTP_4_2_7P42
 
-  util/ntp-keygen-opts.c@1.43, 2010-08-18 10:09:58+00:00, stenn@deacon.udel.edu +2 -2
+  util/ntp-keygen-opts.c@1.41.1.2, 2010-08-18 10:09:58+00:00, stenn@deacon.udel.edu +2 -2
     NTP_4_2_7P42
 
-  util/ntp-keygen-opts.h@1.43, 2010-08-18 10:09:58+00:00, stenn@deacon.udel.edu +3 -3
+  util/ntp-keygen-opts.h@1.41.1.2, 2010-08-18 10:09:58+00:00, stenn@deacon.udel.edu +3 -3
     NTP_4_2_7P42
 
   util/ntp-keygen-opts.texi@1.43, 2010-08-18 10:09:58+00:00, stenn@deacon.udel.edu +2 -2
@@ -394,52 +884,52 @@ ChangeSet@1.2082.4.111, 2010-08-18 11:26:41+02:00, linus@beam.lund.zozs.se +2 -0
   sntp/main.c@1.24.1.2, 2010-08-18 11:26:41+02:00, linus@beam.lund.zozs.se +2 -2
     [BUG 1573] Miscalculation of offset in sntp.
 
-ChangeSet@1.2175.2.11, 2010-08-13 16:54:32+02:00, linus@beam.lund.zozs.se +1 -0
+ChangeSet@1.2171.4.11, 2010-08-13 16:54:32+02:00, linus@beam.lund.zozs.se +1 -0
   Minor refactoring to allow redirection of debug messages from unit tests.
 
   sntp/log.c@1.14, 2010-08-13 16:54:31+02:00, linus@beam.lund.zozs.se +2 -1
     Minor refactoring to allow redirection of debug messages from unit tests.
 
-ChangeSet@1.2175.3.3, 2010-08-11 01:40:34+02:00, linus@beam.lund.zozs.se +1 -0
+ChangeSet@1.2171.5.3, 2010-08-11 01:40:34+02:00, linus@beam.lund.zozs.se +1 -0
   [Bug 1597] packet processing ignores RATE KoD packets.
 
-  ChangeLog@1.611.2.3, 2010-08-11 01:40:34+02:00, linus@beam.lund.zozs.se +1 -1
+  ChangeLog@1.607.4.3, 2010-08-11 01:40:34+02:00, linus@beam.lund.zozs.se +1 -1
     [Bug 1597] packet processing ignores RATE KoD packets.
 
-ChangeSet@1.2175.3.2, 2010-08-11 01:34:52+02:00, linus@beam.lund.zozs.se +1 -0
+ChangeSet@1.2171.5.2, 2010-08-11 01:34:52+02:00, linus@beam.lund.zozs.se +1 -0
   [Bug 1597] packet processing ignores RATE KoD packets, because of a bug in string comparision.
 
-  ChangeLog@1.611.2.2, 2010-08-11 01:34:52+02:00, linus@beam.lund.zozs.se +7 -2
+  ChangeLog@1.607.4.2, 2010-08-11 01:34:52+02:00, linus@beam.lund.zozs.se +7 -2
     [Bug 1597] packet processing ignores RATE KoD packets, because of a bug in string comparision.
 
-ChangeSet@1.2175.1.4, 2010-08-11 01:31:43+02:00, linus@beam.lund.zozs.se +1 -0
+ChangeSet@1.2171.3.4, 2010-08-11 01:31:43+02:00, linus@beam.lund.zozs.se +1 -0
   [Bug 1595] empty last line in key file causes duplicate key to be added
 
-  ChangeLog@1.611.1.3, 2010-08-11 01:31:42+02:00, linus@beam.lund.zozs.se +6 -1
+  ChangeLog@1.607.3.3, 2010-08-11 01:31:42+02:00, linus@beam.lund.zozs.se +6 -1
     [Bug 1595] empty last line in key file causes duplicate key to be added
 
-ChangeSet@1.2175.2.10, 2010-08-10 13:04:29+02:00, linus@beam.lund.zozs.se +1 -0
+ChangeSet@1.2171.4.10, 2010-08-10 13:04:29+02:00, linus@beam.lund.zozs.se +1 -0
   Modified evaluation order to accept NULL as argument to spkt.
 
   sntp/networking.c@1.39, 2010-08-10 13:04:29+02:00, linus@beam.lund.zozs.se +1 -1
     Modified evaluation order to accept NULL as argument to spkt.
 
-ChangeSet@1.2175.2.9, 2010-08-10 12:09:28+02:00, linus@beam.lund.zozs.se +2 -0
+ChangeSet@1.2171.4.9, 2010-08-10 12:09:28+02:00, linus@beam.lund.zozs.se +2 -0
   Moved check for valid response to process_pkt() to simplify testing.
 
   sntp/networking.c@1.38, 2010-08-10 12:09:28+02:00, linus@beam.lund.zozs.se +21 -19
     Moved check for valid response to process_pkt() to simplify testing.
 
-  sntp/networking.h@1.20, 2010-08-10 12:09:28+02:00, linus@beam.lund.zozs.se +1 -1
+  sntp/networking.h@1.18.1.2, 2010-08-10 12:09:28+02:00, linus@beam.lund.zozs.se +1 -1
     Moved check for valid response to process_pkt() to simplify testing.
 
-ChangeSet@1.2175.2.8, 2010-08-03 23:44:21+02:00, linus@beam.lund.zozs.se +1 -0
+ChangeSet@1.2171.4.8, 2010-08-03 23:44:21+02:00, linus@beam.lund.zozs.se +1 -0
   Moved time dependent code out of the offset calculations.
 
   sntp/main.c@1.32, 2010-08-03 23:44:21+02:00, linus@beam.lund.zozs.se +3 -2
     Moved time dependent code out of the offset calculations.
 
-ChangeSet@1.2175.2.7, 2010-08-03 15:10:22+02:00, linus@beam.lund.zozs.se +2 -0
+ChangeSet@1.2171.4.7, 2010-08-03 15:10:22+02:00, linus@beam.lund.zozs.se +2 -0
   Moved definition of progname and debug to sntp.c
 
   sntp/main.c@1.31, 2010-08-03 15:10:22+02:00, linus@beam.lund.zozs.se +0 -3
@@ -448,7 +938,7 @@ ChangeSet@1.2175.2.7, 2010-08-03 15:10:22+02:00, linus@beam.lund.zozs.se +2 -0
   sntp/sntp.c@1.2, 2010-08-03 15:10:22+02:00, linus@beam.lund.zozs.se +3 -0
     Moved definition of progname and debug to sntp.c
 
-ChangeSet@1.2175.2.6, 2010-08-03 13:26:19+02:00, linus@beam.lund.zozs.se +2 -0
+ChangeSet@1.2171.4.6, 2010-08-03 13:26:19+02:00, linus@beam.lund.zozs.se +2 -0
   Moved the time offset calculations to a separate function.
 
   sntp/main.c@1.30, 2010-08-03 13:26:19+02:00, linus@beam.lund.zozs.se +72 -56
@@ -457,7 +947,7 @@ ChangeSet@1.2175.2.6, 2010-08-03 13:26:19+02:00, linus@beam.lund.zozs.se +2 -0
   sntp/main.h@1.3, 2010-08-03 13:26:19+02:00, linus@beam.lund.zozs.se +4 -0
     Added prototypes for the new functions.
 
-ChangeSet@1.2175.2.5, 2010-08-02 20:36:02+02:00, linus@beam.lund.zozs.se +1 -0
+ChangeSet@1.2171.4.5, 2010-08-02 20:36:02+02:00, linus@beam.lund.zozs.se +1 -0
   Refactoring of packet parsing for unit testing.
   Moved packet parsing to a new function.
 
@@ -465,7 +955,7 @@ ChangeSet@1.2175.2.5, 2010-08-02 20:36:02+02:00, linus@beam.lund.zozs.se +1 -0
     Refactoring of packet parsing for unit testing.
     Moved packet parsing to a new function.
 
-ChangeSet@1.2175.2.4, 2010-08-02 17:53:13+02:00, linus@beam.lund.zozs.se +2 -0
+ChangeSet@1.2171.4.4, 2010-08-02 17:53:13+02:00, linus@beam.lund.zozs.se +2 -0
   Factored out packet generation to a new function.
 
   sntp/main.c@1.28, 2010-08-02 17:53:13+02:00, linus@beam.lund.zozs.se +32 -19
@@ -474,7 +964,7 @@ ChangeSet@1.2175.2.4, 2010-08-02 17:53:13+02:00, linus@beam.lund.zozs.se +2 -0
   sntp/main.h@1.2, 2010-08-02 17:53:13+02:00, linus@beam.lund.zozs.se +7 -3
     Factored out packet generation to a new function.
 
-ChangeSet@1.2175.2.3, 2010-08-02 14:20:12+02:00, linus@beam.lund.zozs.se +4 -0
+ChangeSet@1.2171.4.3, 2010-08-02 14:20:12+02:00, linus@beam.lund.zozs.se +4 -0
   Moved main() function to a new file to make unit testing easier.
 
   sntp/Makefile.am@1.33, 2010-08-02 14:20:12+02:00, linus@beam.lund.zozs.se +2 -0
@@ -502,13 +992,13 @@ ChangeSet@1.2082.22.1, 2010-07-31 21:59:50+02:00, linus@beam.lund.zozs.se +2 -0
   sntp/networking.c@1.29.1.7, 2010-07-31 21:59:50+02:00, linus@beam.lund.zozs.se +3 -3
     [BUG 1597] packet processing ignores RATE KoD packets because of a bug in string comparison.
 
-ChangeSet@1.2175.2.2, 2010-07-30 13:14:50+02:00, linus@beam.lund.zozs.se +1 -0
+ChangeSet@1.2171.4.2, 2010-07-30 13:14:50+02:00, linus@beam.lund.zozs.se +1 -0
   Added prototype to header
 
-  sntp/networking.h@1.19, 2010-07-30 13:14:50+02:00, linus@beam.lund.zozs.se +2 -0
+  sntp/networking.h@1.18.1.1, 2010-07-30 13:14:50+02:00, linus@beam.lund.zozs.se +2 -0
     Added prototype to header
 
-ChangeSet@1.2175.2.1, 2010-07-30 12:37:05+02:00, linus@beam.lund.zozs.se +1 -0
+ChangeSet@1.2171.4.1, 2010-07-30 12:37:05+02:00, linus@beam.lund.zozs.se +1 -0
   Made process_pkt() a public function to ease testing.
 
   sntp/networking.c@1.37, 2010-07-30 12:37:05+02:00, linus@beam.lund.zozs.se +1 -1
@@ -526,11 +1016,11 @@ ChangeSet@1.2082.4.108, 2010-07-28 18:18:55+02:00, linus@beam.lund.zozs.se +1 -0
   sntp/crypto.c@1.10.1.3, 2010-07-28 18:18:44+02:00, linus@beam.lund.zozs.se +3 -1
     [Bug 1595] empty last line in key file causes duplicate key to be added
 
-ChangeSet@1.2175.1.1, 2010-07-28 05:48:23+00:00, stenn@deacon.udel.edu +27 -0
+ChangeSet@1.2171.3.1, 2010-07-28 05:48:23+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P41
   TAG: NTP_4_2_7P41
 
-  ChangeLog@1.611.1.1, 2010-07-28 05:48:21+00:00, stenn@deacon.udel.edu +1 -0
+  ChangeLog@1.607.3.1, 2010-07-28 05:48:21+00:00, stenn@deacon.udel.edu +1 -0
     NTP_4_2_7P41
 
   ntpd/ntpd-opts.c@1.44, 2010-07-28 05:48:21+00:00, stenn@deacon.udel.edu +2 -2
@@ -599,10 +1089,10 @@ ChangeSet@1.2175.1.1, 2010-07-28 05:48:23+00:00, stenn@deacon.udel.edu +27 -0
   sntp/sntp.html@1.42, 2010-07-28 05:48:22+00:00, stenn@deacon.udel.edu +1 -1
     NTP_4_2_7P41
 
-  util/ntp-keygen-opts.c@1.42, 2010-07-28 05:48:22+00:00, stenn@deacon.udel.edu +2 -2
+  util/ntp-keygen-opts.c@1.41.1.1, 2010-07-28 05:48:22+00:00, stenn@deacon.udel.edu +2 -2
     NTP_4_2_7P41
 
-  util/ntp-keygen-opts.h@1.42, 2010-07-28 05:48:22+00:00, stenn@deacon.udel.edu +3 -3
+  util/ntp-keygen-opts.h@1.41.1.1, 2010-07-28 05:48:22+00:00, stenn@deacon.udel.edu +3 -3
     NTP_4_2_7P41
 
   util/ntp-keygen-opts.texi@1.42, 2010-07-28 05:48:22+00:00, stenn@deacon.udel.edu +2 -2
@@ -611,10 +1101,10 @@ ChangeSet@1.2175.1.1, 2010-07-28 05:48:23+00:00, stenn@deacon.udel.edu +27 -0
   util/ntp-keygen.1@1.42, 2010-07-28 05:48:22+00:00, stenn@deacon.udel.edu +2 -2
     NTP_4_2_7P41
 
-ChangeSet@1.2176, 2010-07-28 05:33:53+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
+ChangeSet@1.2171.1.5, 2010-07-28 05:33:53+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
   [Bug 1593] ntpd abort in free() with logconfig syntax error.
 
-  ChangeLog@1.612, 2010-07-28 05:33:52+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  ChangeLog@1.607.1.5, 2010-07-28 05:33:52+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
     [Bug 1593] ntpd abort in free() with logconfig syntax error.
 
   ntpd/ntp_parser.c@1.59, 2010-07-28 05:33:52+00:00, davehart@shiny.ad.hartbrothers.com +62 -52
@@ -623,16 +1113,16 @@ ChangeSet@1.2176, 2010-07-28 05:33:53+00:00, davehart@shiny.ad.hartbrothers.com 
   ntpd/ntp_parser.y@1.54, 2010-07-28 05:33:52+00:00, davehart@shiny.ad.hartbrothers.com +17 -7
     [Bug 1593] ntpd abort in free() with logconfig syntax error.
 
-ChangeSet@1.2175, 2010-07-27 23:14:28-04:00, stenn@pogo.udel.edu +1 -0
+ChangeSet@1.2171.1.4, 2010-07-27 23:14:28-04:00, stenn@pogo.udel.edu +1 -0
   merge cleanup
 
-  ChangeLog@1.611, 2010-07-27 23:13:49-04:00, stenn@pogo.udel.edu +2 -0
+  ChangeLog@1.607.1.4, 2010-07-27 23:13:49-04:00, stenn@pogo.udel.edu +2 -0
     merge cleanup
 
-ChangeSet@1.2171.1.1, 2010-07-27 22:59:12-04:00, stenn@deacon.udel.edu +3 -0
+ChangeSet@1.2171.2.1, 2010-07-27 22:59:12-04:00, stenn@deacon.udel.edu +3 -0
   orphanwait documentation changes
 
-  ChangeLog@1.607.1.1, 2010-07-27 17:53:57-04:00, stenn@deacon.udel.edu +1 -0
+  ChangeLog@1.607.2.1, 2010-07-27 17:53:57-04:00, stenn@deacon.udel.edu +1 -0
     orphanwait documentation changes
 
   html/assoc.html@1.30, 2010-07-27 17:53:49-04:00, stenn@deacon.udel.edu +4 -3
@@ -641,11 +1131,11 @@ ChangeSet@1.2171.1.1, 2010-07-27 22:59:12-04:00, stenn@deacon.udel.edu +3 -0
   html/miscopt.html@1.55, 2010-07-27 17:53:50-04:00, stenn@deacon.udel.edu +8 -4
     orphanwait documentation changes
 
-ChangeSet@1.2173, 2010-07-20 18:02:12+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
+ChangeSet@1.2171.1.2, 2010-07-20 18:02:12+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
   Avoid race with parallel builds using same source directory in
     scripts/genver by using build directory for temporary files.
 
-  ChangeLog@1.609, 2010-07-20 18:02:11+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  ChangeLog@1.607.1.2, 2010-07-20 18:02:11+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
     Avoid race with parallel builds using same source directory in
       scripts/genver by using build directory for temporary files.
 
@@ -657,11 +1147,11 @@ ChangeSet@1.2173, 2010-07-20 18:02:12+00:00, davehart@shiny.ad.hartbrothers.com 
     Avoid race with parallel builds using same source directory in
       scripts/genver by using build directory for temporary files.
 
-ChangeSet@1.2172, 2010-07-20 15:21:33+00:00, davehart@shiny.ad.hartbrothers.com +5 -0
+ChangeSet@1.2171.1.1, 2010-07-20 15:21:33+00:00, davehart@shiny.ad.hartbrothers.com +5 -0
   [Bug 1586] ntpd 4.2.7p40 doesn't write to syslog after fork on QNX.
     Add closelog() before closing most or all descriptors after fork().
 
-  ChangeLog@1.608, 2010-07-20 15:21:31+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  ChangeLog@1.607.1.1, 2010-07-20 15:21:31+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
     [Bug 1586] ntpd 4.2.7p40 doesn't write to syslog after fork on QNX.
       Add closelog() before closing most or all descriptors after fork().
 
@@ -683,6 +1173,97 @@ ChangeSet@1.2172, 2010-07-20 15:21:33+00:00, davehart@shiny.ad.hartbrothers.com 
   ntpd/work_fork.c@1.5, 2010-07-20 15:21:32+00:00, davehart@shiny.ad.hartbrothers.com +2 -1
     [Bug 1586] ntpd 4.2.7p40 doesn't write to syslog after fork on QNX.
       Add closelog() before closing most or all descriptors after fork().
+
+ChangeSet@1.2172, 2010-07-19 16:58:15+00:00, davehart@shiny.ad.hartbrothers.com +29 -0
+  [Bug 1588] finish configure --disable-autokey implementation,
+    add --disable-autokey to flock-build -no-refclocks flavor.
+
+  ChangeLog@1.608, 2010-07-19 16:58:11+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1588] finish configure --disable-autokey implementation.
+
+  configure.ac@1.486, 2010-07-19 16:58:11+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    [Bug 1588] finish configure --disable-autokey implementation.
+
+  flock-build@1.47, 2010-07-19 16:58:11+00:00, davehart@shiny.ad.hartbrothers.com +3 -2
+    add --disable-autokey to -no-refclocks flavor
+
+  include/ntp.h@1.180, 2010-07-19 16:58:11+00:00, davehart@shiny.ad.hartbrothers.com +6 -8
+    [Bug 1588] finish configure --disable-autokey implementation.
+
+  include/ntp_control.h@1.47, 2010-07-19 16:58:11+00:00, davehart@shiny.ad.hartbrothers.com +110 -109
+    [Bug 1588] finish configure --disable-autokey implementation.
+
+  include/ntp_crypto.h@1.49, 2010-07-19 16:58:11+00:00, davehart@shiny.ad.hartbrothers.com +9 -8
+    [Bug 1588] finish configure --disable-autokey implementation.
+
+  include/ntp_md5.h@1.6, 2010-07-19 16:58:11+00:00, davehart@shiny.ad.hartbrothers.com +17 -11
+    [Bug 1588] finish configure --disable-autokey implementation.
+
+  include/ntpd.h@1.140, 2010-07-19 16:58:11+00:00, davehart@shiny.ad.hartbrothers.com +4 -4
+    [Bug 1588] finish configure --disable-autokey implementation.
+
+  libntp/a_md5encrypt.c@1.29, 2010-07-19 16:58:11+00:00, davehart@shiny.ad.hartbrothers.com +1 -5
+    [Bug 1588] finish configure --disable-autokey implementation.
+
+  libntp/authreadkeys.c@1.17, 2010-07-19 16:58:11+00:00, davehart@shiny.ad.hartbrothers.com +9 -8
+    [Bug 1588] finish configure --disable-autokey implementation.
+
+  libntp/ssl_init.c@1.10, 2010-07-19 16:58:11+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1588] finish configure --disable-autokey implementation.
+
+  libntp/statestr.c@1.21, 2010-07-19 16:58:11+00:00, davehart@shiny.ad.hartbrothers.com +4 -4
+    [Bug 1588] finish configure --disable-autokey implementation.
+
+  ntpd/ntp_config.c@1.263, 2010-07-19 16:58:11+00:00, davehart@shiny.ad.hartbrothers.com +9 -9
+    [Bug 1588] finish configure --disable-autokey implementation.
+
+  ntpd/ntp_control.c@1.140, 2010-07-19 16:58:11+00:00, davehart@shiny.ad.hartbrothers.com +124 -131
+    [Bug 1588] finish configure --disable-autokey implementation.
+
+  ntpd/ntp_crypto.c@1.148, 2010-07-19 16:58:12+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    [Bug 1588] finish configure --disable-autokey implementation.
+
+  ntpd/ntp_peer.c@1.134, 2010-07-19 16:58:12+00:00, davehart@shiny.ad.hartbrothers.com +4 -7
+    [Bug 1588] finish configure --disable-autokey implementation.
+
+  ntpd/ntp_proto.c@1.301, 2010-07-19 16:58:12+00:00, davehart@shiny.ad.hartbrothers.com +51 -51
+    [Bug 1588] finish configure --disable-autokey implementation.
+
+  ntpd/ntp_request.c@1.95, 2010-07-19 16:58:12+00:00, davehart@shiny.ad.hartbrothers.com +4 -4
+    [Bug 1588] finish configure --disable-autokey implementation.
+
+  ntpd/ntp_timer.c@1.60, 2010-07-19 16:58:12+00:00, davehart@shiny.ad.hartbrothers.com +13 -13
+    [Bug 1588] finish configure --disable-autokey implementation.
+
+  ntpd/ntp_util.c@1.82, 2010-07-19 16:58:12+00:00, davehart@shiny.ad.hartbrothers.com +25 -25
+    [Bug 1588] finish configure --disable-autokey implementation.
+
+  ntpdc/ntpdc.c@1.86, 2010-07-19 16:58:12+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+    [Bug 1588] finish configure --disable-autokey implementation.
+
+  ntpq/ntpq.c@1.116, 2010-07-19 16:58:12+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+    [Bug 1588] finish configure --disable-autokey implementation.
+
+  ports/winnt/include/ntp_timer.h@1.6, 2010-07-19 16:58:13+00:00, davehart@shiny.ad.hartbrothers.com +4 -6
+    [Bug 1588] finish configure --disable-autokey implementation.
+
+  sntp/crypto.h@1.10, 2010-07-19 16:58:13+00:00, davehart@shiny.ad.hartbrothers.com +1 -5
+    [Bug 1588] finish configure --disable-autokey implementation.
+
+  sntp/networking.h@1.19, 2010-07-19 16:58:13+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    [Bug 1588] finish configure --disable-autokey implementation.
+
+  util/ntp-keygen-opts.c@1.42, 2010-07-19 16:58:13+00:00, davehart@shiny.ad.hartbrothers.com +46 -46
+    [Bug 1588] finish configure --disable-autokey implementation.
+
+  util/ntp-keygen-opts.def@1.12, 2010-07-19 16:58:13+00:00, davehart@shiny.ad.hartbrothers.com +15 -15
+    [Bug 1588] finish configure --disable-autokey implementation.
+
+  util/ntp-keygen-opts.h@1.42, 2010-07-19 16:58:13+00:00, davehart@shiny.ad.hartbrothers.com +8 -8
+    [Bug 1588] finish configure --disable-autokey implementation.
+
+  util/ntp-keygen.c@1.65, 2010-07-19 16:58:13+00:00, davehart@shiny.ad.hartbrothers.com +19 -19
+    [Bug 1588] finish configure --disable-autokey implementation.
 
 ChangeSet@1.2171, 2010-07-12 10:09:56+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P40
