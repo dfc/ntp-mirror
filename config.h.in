@@ -445,9 +445,6 @@
 /* Define to 1 if you have the `kvm_open' function. */
 #undef HAVE_KVM_OPEN
 
-/* Define to 1 if you have the `advapi32' library (-ladvapi32). */
-#undef HAVE_LIBADVAPI32
-
 /* Define to 1 if you have the `elf' library (-lelf). */
 #undef HAVE_LIBELF
 
@@ -471,9 +468,6 @@
 
 /* Define to 1 if you have the `posix4' library (-lposix4). */
 #undef HAVE_LIBPOSIX4
-
-/* Define to 1 if you have the `resolv' library (-lresolv). */
-#undef HAVE_LIBRESOLV
 
 /* Define to 1 if you have the `rt' library (-lrt). */
 #undef HAVE_LIBRT
