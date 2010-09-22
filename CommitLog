@@ -1,3 +1,137 @@
+ChangeSet@1.2207, 2010-09-22 10:10:38+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P55
+  TAG: NTP_4_2_7P55
+
+  ChangeLog@1.638, 2010-09-22 10:10:35+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P55
+
+  ntpd/ntpd-opts.c@1.58, 2010-09-22 10:10:35+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P55
+
+  ntpd/ntpd-opts.h@1.58, 2010-09-22 10:10:35+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P55
+
+  ntpd/ntpd-opts.texi@1.57, 2010-09-22 10:10:35+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P55
+
+  ntpd/ntpd.1@1.57, 2010-09-22 10:10:35+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P55
+
+  ntpdc/ntpdc-opts.c@1.56, 2010-09-22 10:10:35+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P55
+
+  ntpdc/ntpdc-opts.h@1.56, 2010-09-22 10:10:35+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P55
+
+  ntpdc/ntpdc-opts.texi@1.56, 2010-09-22 10:10:35+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P55
+
+  ntpdc/ntpdc.1@1.56, 2010-09-22 10:10:35+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P55
+
+  ntpq/ntpq-opts.c@1.56, 2010-09-22 10:10:35+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P55
+
+  ntpq/ntpq-opts.h@1.56, 2010-09-22 10:10:35+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P55
+
+  ntpq/ntpq-opts.texi@1.56, 2010-09-22 10:10:35+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P55
+
+  ntpq/ntpq.1@1.56, 2010-09-22 10:10:35+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P55
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.56, 2010-09-22 10:10:35+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P55
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.56, 2010-09-22 10:10:35+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P55
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.56, 2010-09-22 10:10:35+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P55
+
+  ntpsnmpd/ntpsnmpd.1@1.56, 2010-09-22 10:10:35+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P55
+
+  packageinfo.sh@1.57, 2010-09-22 10:10:35+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P55
+
+  sntp/sntp-opts.c@1.56, 2010-09-22 10:10:35+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P55
+
+  sntp/sntp-opts.h@1.56, 2010-09-22 10:10:35+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P55
+
+  sntp/sntp-opts.texi@1.56, 2010-09-22 10:10:35+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P55
+
+  sntp/sntp.1@1.56, 2010-09-22 10:10:35+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P55
+
+  sntp/sntp.html@1.56, 2010-09-22 10:10:36+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P55
+
+  util/ntp-keygen-opts.c@1.53, 2010-09-22 10:10:36+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P55
+
+  util/ntp-keygen-opts.h@1.53, 2010-09-22 10:10:36+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P55
+
+  util/ntp-keygen-opts.texi@1.56, 2010-09-22 10:10:36+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P55
+
+  util/ntp-keygen.1@1.56, 2010-09-22 10:10:36+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P55
+
+ChangeSet@1.2206, 2010-09-22 01:22:45-04:00, stenn@deacon.udel.edu +1 -0
+  Documentation updates from Dave Mills
+
+  html/pic/discipline.gif@1.1, 2010-09-22 01:22:38-04:00, stenn@deacon.udel.edu +153 -0
+    BitKeeper file /deacon/backroom/ntp-dev/html/pic/discipline.gif
+
+  html/pic/discipline.gif@1.0, 2010-09-22 01:22:38-04:00, stenn@deacon.udel.edu +0 -0
+
+ChangeSet@1.2205, 2010-09-22 01:18:30-04:00, stenn@deacon.udel.edu +1 -0
+  Documentation updates from Dave Mills
+
+  html/discipline.html@1.1, 2010-09-22 01:18:17-04:00, stenn@deacon.udel.edu +45 -0
+    BitKeeper file /deacon/backroom/ntp-dev/html/discipline.html
+
+  html/discipline.html@1.0, 2010-09-22 01:18:17-04:00, stenn@deacon.udel.edu +0 -0
+
+ChangeSet@1.2204, 2010-09-22 01:08:53-04:00, stenn@deacon.udel.edu +4 -0
+  Documentation updates from Dave Mills
+
+  ChangeLog@1.637, 2010-09-22 01:08:08-04:00, stenn@deacon.udel.edu +1 -0
+    Documentation updates from Dave Mills
+
+  html/miscopt.html@1.59, 2010-09-22 01:08:18-04:00, stenn@deacon.udel.edu +2 -2
+    Documentation updates from Dave Mills
+
+  html/scripts/special.txt@1.2, 2010-09-22 01:08:24-04:00, stenn@deacon.udel.edu +1 -0
+    Documentation updates from Dave Mills
+
+  html/warp.html@1.6, 2010-09-22 01:08:19-04:00, stenn@deacon.udel.edu +27 -91
+    Documentation updates from Dave Mills
+
+ChangeSet@1.2203, 2010-09-21 17:10:47+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  correct Bison output of merged ntp_parser.y
+
+  ntpd/ntp_parser.c@1.63, 2010-09-21 17:10:46+00:00, davehart@shiny.ad.hartbrothers.com +165 -155
+    correct Bison output of merged ntp_parser.y
+
+ChangeSet@1.2082.4.118, 2010-09-21 16:29:51+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
+  [Bug 1636] yyparse() segfault after denied filegen remote config.
+
+  ChangeLog@1.496.26.87, 2010-09-21 16:29:50+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1636] yyparse() segfault after denied filegen remote config.
+
+  ntpd/ntp_parser.c@1.52.1.4, 2010-09-21 16:29:50+00:00, davehart@shiny.ad.hartbrothers.com +149 -139
+    [Bug 1636] yyparse() segfault after denied filegen remote config.
+
+  ntpd/ntp_parser.y@1.47.1.4, 2010-09-21 16:29:50+00:00, davehart@shiny.ad.hartbrothers.com +13 -3
+    [Bug 1636] yyparse() segfault after denied filegen remote config.
+
 ChangeSet@1.2201, 2010-09-21 05:39:47+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P54
   TAG: NTP_4_2_7P54
