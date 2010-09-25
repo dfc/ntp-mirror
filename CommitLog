@@ -1,3 +1,242 @@
+ChangeSet@1.2215, 2010-09-25 21:45:40+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P56
+  TAG: NTP_4_2_7P56
+
+  ChangeLog@1.645, 2010-09-25 21:45:37+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P56
+
+  ntpd/ntpd-opts.c@1.59, 2010-09-25 21:45:37+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P56
+
+  ntpd/ntpd-opts.h@1.59, 2010-09-25 21:45:37+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P56
+
+  ntpd/ntpd-opts.texi@1.58, 2010-09-25 21:45:38+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P56
+
+  ntpd/ntpd.1@1.58, 2010-09-25 21:45:38+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P56
+
+  ntpdc/ntpdc-opts.c@1.57, 2010-09-25 21:45:38+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P56
+
+  ntpdc/ntpdc-opts.h@1.57, 2010-09-25 21:45:38+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P56
+
+  ntpdc/ntpdc-opts.texi@1.57, 2010-09-25 21:45:38+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P56
+
+  ntpdc/ntpdc.1@1.57, 2010-09-25 21:45:38+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P56
+
+  ntpq/ntpq-opts.c@1.57, 2010-09-25 21:45:38+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P56
+
+  ntpq/ntpq-opts.h@1.57, 2010-09-25 21:45:38+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P56
+
+  ntpq/ntpq-opts.texi@1.57, 2010-09-25 21:45:38+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P56
+
+  ntpq/ntpq.1@1.57, 2010-09-25 21:45:38+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P56
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.57, 2010-09-25 21:45:38+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P56
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.57, 2010-09-25 21:45:38+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P56
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.57, 2010-09-25 21:45:38+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P56
+
+  ntpsnmpd/ntpsnmpd.1@1.57, 2010-09-25 21:45:38+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P56
+
+  packageinfo.sh@1.58, 2010-09-25 21:45:38+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P56
+
+  sntp/sntp-opts.c@1.57, 2010-09-25 21:45:38+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P56
+
+  sntp/sntp-opts.h@1.57, 2010-09-25 21:45:38+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P56
+
+  sntp/sntp-opts.texi@1.57, 2010-09-25 21:45:38+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P56
+
+  sntp/sntp.1@1.57, 2010-09-25 21:45:38+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P56
+
+  sntp/sntp.html@1.57, 2010-09-25 21:45:38+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P56
+
+  util/ntp-keygen-opts.c@1.54, 2010-09-25 21:45:38+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P56
+
+  util/ntp-keygen-opts.h@1.54, 2010-09-25 21:45:38+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P56
+
+  util/ntp-keygen-opts.texi@1.57, 2010-09-25 21:45:39+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P56
+
+  util/ntp-keygen.1@1.57, 2010-09-25 21:45:39+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P56
+
+ChangeSet@1.2082.4.121, 2010-09-25 17:32:37-04:00, stenn@deacon.udel.edu +1 -0
+  typo fix
+
+  ntpd/refclock_ripencc.c@1.7.1.2, 2010-09-25 17:32:18-04:00, stenn@deacon.udel.edu +1 -1
+    typo fix
+
+ChangeSet@1.2082.4.120, 2010-09-25 21:14:57+00:00, stenn@psp-fb2.ntp.org +2 -0
+  [Bug 1643]: Range-check the decoding of the RIPE-NCC status codes
+
+  ChangeLog@1.496.26.89, 2010-09-25 21:14:49+00:00, stenn@psp-fb2.ntp.org +3 -0
+    [Bug 1643]: Range-check the decoding of the RIPE-NCC status codes
+
+  ntpd/refclock_ripencc.c@1.7.1.1, 2010-09-25 21:14:49+00:00, stenn@psp-fb2.ntp.org +11 -6
+    [Bug 1643]: Range-check the decoding of the RIPE-NCC status codes
+
+ChangeSet@1.2212, 2010-09-25 21:11:34+00:00, stenn@psp-fb2.ntp.org +2 -0
+  [Bug 1643] from 4.2.6p3: Range-check the decoding of the RIPE-NCC status codes
+
+  ChangeLog@1.643, 2010-09-25 21:11:26+00:00, stenn@psp-fb2.ntp.org +2 -0
+    [Bug 1643] from 4.2.6p3: Range-check the decoding of the RIPE-NCC status codes
+
+  ntpd/refclock_ripencc.c@1.9, 2010-09-25 21:11:26+00:00, stenn@psp-fb2.ntp.org +8 -3
+    [Bug 1643] from 4.2.6p3: Range-check the decoding of the RIPE-NCC status codes
+
+ChangeSet@1.2082.4.119, 2010-09-25 18:22:19+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_6P3_RC2
+  TAG: NTP_4_2_6P3_RC2
+
+  ChangeLog@1.496.26.88, 2010-09-25 18:22:16+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_6P3_RC2
+
+  ntpd/ntpd-opts.c@1.248.18.1, 2010-09-25 18:22:16+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC2
+
+  ntpd/ntpd-opts.h@1.248.18.1, 2010-09-25 18:22:16+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P3_RC2
+
+  ntpd/ntpd-opts.texi@1.246.18.1, 2010-09-25 18:22:16+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC2
+
+  ntpd/ntpd.1@1.246.18.1, 2010-09-25 18:22:16+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC2
+
+  ntpdc/ntpdc-opts.c@1.244.18.1, 2010-09-25 18:22:16+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC2
+
+  ntpdc/ntpdc-opts.h@1.244.18.1, 2010-09-25 18:22:16+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P3_RC2
+
+  ntpdc/ntpdc-opts.texi@1.243.18.1, 2010-09-25 18:22:16+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC2
+
+  ntpdc/ntpdc.1@1.243.18.1, 2010-09-25 18:22:16+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC2
+
+  ntpq/ntpq-opts.c@1.245.18.1, 2010-09-25 18:22:16+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC2
+
+  ntpq/ntpq-opts.h@1.245.18.1, 2010-09-25 18:22:16+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P3_RC2
+
+  ntpq/ntpq-opts.texi@1.244.18.1, 2010-09-25 18:22:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC2
+
+  ntpq/ntpq.1@1.244.18.1, 2010-09-25 18:22:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC2
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.123.19.1, 2010-09-25 18:22:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC2
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.123.19.1, 2010-09-25 18:22:17+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P3_RC2
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.123.19.1, 2010-09-25 18:22:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC2
+
+  ntpsnmpd/ntpsnmpd.1@1.122.19.1, 2010-09-25 18:22:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC2
+
+  packageinfo.sh@1.255.20.1, 2010-09-25 18:22:17+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_6P3_RC2
+
+  sntp/sntp-opts.c@1.117.18.1, 2010-09-25 18:22:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC2
+
+  sntp/sntp-opts.h@1.117.18.1, 2010-09-25 18:22:17+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P3_RC2
+
+  sntp/sntp-opts.texi@1.117.18.1, 2010-09-25 18:22:17+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_6P3_RC2
+
+  sntp/sntp.1@1.117.18.1, 2010-09-25 18:22:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC2
+
+  sntp/sntp.html@1.7.18.1, 2010-09-25 18:22:17+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_6P3_RC2
+
+  util/ntp-keygen-opts.c@1.247.18.1, 2010-09-25 18:22:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC2
+
+  util/ntp-keygen-opts.h@1.247.18.1, 2010-09-25 18:22:17+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P3_RC2
+
+  util/ntp-keygen-opts.texi@1.246.18.1, 2010-09-25 18:22:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC2
+
+  util/ntp-keygen.1@1.246.18.1, 2010-09-25 18:22:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC2
+
+ChangeSet@1.2210, 2010-09-25 13:43:49-04:00, stenn@deacon.udel.edu +4 -0
+  Documentation updates from Dave Mills
+
+  ChangeLog@1.641, 2010-09-25 13:43:26-04:00, stenn@deacon.udel.edu +1 -0
+    Documentation updates from Dave Mills
+
+  html/discipline.html@1.2, 2010-09-25 13:43:38-04:00, stenn@deacon.udel.edu +11 -9
+    Documentation updates from Dave Mills
+
+  html/kern.html@1.19, 2010-09-25 13:43:38-04:00, stenn@deacon.udel.edu +4 -3
+    Documentation updates from Dave Mills
+
+  html/prefer.html@1.24, 2010-09-25 13:43:39-04:00, stenn@deacon.udel.edu +13 -6
+    Documentation updates from Dave Mills
+
+ChangeSet@1.2209, 2010-09-25 13:39:59-04:00, stenn@deacon.udel.edu +2 -0
+  Clock combining algorithm improvements from Dave Mills
+
+  ChangeLog@1.640, 2010-09-25 13:39:40-04:00, stenn@deacon.udel.edu +1 -0
+    Clock combining algorithm improvements from Dave Mills
+
+  ntpd/ntp_proto.c@1.303, 2010-09-25 13:39:41-04:00, stenn@deacon.udel.edu +7 -7
+    Clock combining algorithm improvements from Dave Mills
+
+ChangeSet@1.2208, 2010-09-25 07:44:52+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+  [Bug 1642] ntpdsim can't find simulate block in config file.
+
+  ChangeLog@1.639, 2010-09-25 07:44:51+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1642] ntpdsim can't find simulate block in config file.
+
+  ntpd/ntp_config.c@1.265, 2010-09-25 07:44:51+00:00, davehart@shiny.ad.hartbrothers.com +14 -13
+    Invert #ifdef SIM conditionalization of create_sim_script_info(),
+      create_sim_server(), and get_next_address().
+    Fix infinite loop in create_sim_script_info() caused by failing to
+      advance my_attr_val through script_queue before looping.
+
+  ntpd/ntp_scanner.c@1.37, 2010-09-25 07:44:51+00:00, davehart@shiny.ad.hartbrothers.com +15 -6
+    Assumption that '=' is followed by a string (for setvar) is not
+      valid inside simulator configuration.
+    Assumption that 'server' is always followed by a string (not a
+      token) is not valid inside simulator config block.
+
+  ntpd/ntpd.c@1.115, 2010-09-25 07:44:51+00:00, davehart@shiny.ad.hartbrothers.com +5 -1
+    Honor -d and -D in ntpdsim.
+
 ChangeSet@1.2207, 2010-09-22 10:10:38+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P55
   TAG: NTP_4_2_7P55

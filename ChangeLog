@@ -1,3 +1,9 @@
+(4.2.7p56) 2010/09/25 Released by Harlan Stenn <stenn@ntp.org>
+* Clock combining algorithm improvements from Dave Mills.
+* Documentation updates from Dave Mills.
+* [Bug 1642] ntpdsim can't find simulate block in config file.
+* [Bug 1643] from 4.2.6p3: Range-check the decoding of the RIPE-NCC status
+  codes.
 (4.2.7p55) 2010/09/22 Released by Harlan Stenn <stenn@ntp.org>
 * Documentation updates from Dave Mills.
 * [Bug 1636] from 4.2.6p3-RC2: segfault after denied remote config.
@@ -352,6 +358,10 @@
 (4.2.7) 2009/12/09 Released by Harlan Stenn <stenn@ntp.org>
 * [Bug 1407] configure.ac: recent GNU Make -v does not include "version".
 ---
+* [Bug 1643]: Range-check the decoding of the RIPE-NCC status codes.
+
+---
+(4.2.6p3-RC2) 2010/09/25 Released by Harlan Stenn <stenn@ntp.org>
 
 * [Bug 1635] "filegen ... enable" is not default.
 * [Bug 1636] yyparse() segfault after denied filegen remote config.
