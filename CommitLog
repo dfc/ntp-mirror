@@ -1,3 +1,126 @@
+ChangeSet@1.2219, 2010-09-27 10:11:56+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P57
+  TAG: NTP_4_2_7P57
+
+  ChangeLog@1.647, 2010-09-27 10:11:54+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P57
+
+  ntpd/ntpd-opts.c@1.60, 2010-09-27 10:11:54+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P57
+
+  ntpd/ntpd-opts.h@1.60, 2010-09-27 10:11:54+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P57
+
+  ntpd/ntpd-opts.texi@1.59, 2010-09-27 10:11:54+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P57
+
+  ntpd/ntpd.1@1.59, 2010-09-27 10:11:54+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P57
+
+  ntpdc/ntpdc-opts.c@1.58, 2010-09-27 10:11:54+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P57
+
+  ntpdc/ntpdc-opts.h@1.58, 2010-09-27 10:11:54+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P57
+
+  ntpdc/ntpdc-opts.texi@1.58, 2010-09-27 10:11:54+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P57
+
+  ntpdc/ntpdc.1@1.58, 2010-09-27 10:11:54+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P57
+
+  ntpq/ntpq-opts.c@1.58, 2010-09-27 10:11:54+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P57
+
+  ntpq/ntpq-opts.h@1.58, 2010-09-27 10:11:54+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P57
+
+  ntpq/ntpq-opts.texi@1.58, 2010-09-27 10:11:54+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P57
+
+  ntpq/ntpq.1@1.58, 2010-09-27 10:11:54+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P57
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.58, 2010-09-27 10:11:54+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P57
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.58, 2010-09-27 10:11:54+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P57
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.58, 2010-09-27 10:11:54+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P57
+
+  ntpsnmpd/ntpsnmpd.1@1.58, 2010-09-27 10:11:54+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P57
+
+  packageinfo.sh@1.59, 2010-09-27 10:11:55+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P57
+
+  sntp/sntp-opts.c@1.58, 2010-09-27 10:11:55+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P57
+
+  sntp/sntp-opts.h@1.58, 2010-09-27 10:11:55+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P57
+
+  sntp/sntp-opts.texi@1.58, 2010-09-27 10:11:55+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P57
+
+  sntp/sntp.1@1.58, 2010-09-27 10:11:55+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P57
+
+  sntp/sntp.html@1.58, 2010-09-27 10:11:55+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P57
+
+  util/ntp-keygen-opts.c@1.55, 2010-09-27 10:11:55+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P57
+
+  util/ntp-keygen-opts.h@1.55, 2010-09-27 10:11:55+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P57
+
+  util/ntp-keygen-opts.texi@1.58, 2010-09-27 10:11:55+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P57
+
+  util/ntp-keygen.1@1.58, 2010-09-27 10:11:55+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P57
+
+ChangeSet@1.2218, 2010-09-26 15:27:53-04:00, stenn@deacon.udel.edu +3 -0
+  Documentation updates from Dave Mills
+
+  html/pic/flt1.gif@1.1, 2010-09-26 15:27:44-04:00, stenn@deacon.udel.edu +202 -0
+    BitKeeper file /deacon/backroom/ntp-dev/html/pic/flt1.gif
+
+  html/pic/flt1.gif@1.0, 2010-09-26 15:27:44-04:00, stenn@deacon.udel.edu +0 -0
+
+  html/pic/flt2.gif@1.1, 2010-09-26 15:27:44-04:00, stenn@deacon.udel.edu +71 -0
+    BitKeeper file /deacon/backroom/ntp-dev/html/pic/flt2.gif
+
+  html/pic/flt2.gif@1.0, 2010-09-26 15:27:44-04:00, stenn@deacon.udel.edu +0 -0
+
+  html/pic/flt5.gif@1.1, 2010-09-26 15:27:44-04:00, stenn@deacon.udel.edu +237 -0
+    BitKeeper file /deacon/backroom/ntp-dev/html/pic/flt5.gif
+
+  html/pic/flt5.gif@1.0, 2010-09-26 15:27:44-04:00, stenn@deacon.udel.edu +0 -0
+
+ChangeSet@1.2217, 2010-09-26 15:23:27-04:00, stenn@deacon.udel.edu +1 -0
+  Documentation updates from Dave Mills
+
+  html/filter.html@1.1, 2010-09-26 15:23:19-04:00, stenn@deacon.udel.edu +30 -0
+    BitKeeper file /deacon/backroom/ntp-dev/html/filter.html
+
+  html/filter.html@1.0, 2010-09-26 15:23:19-04:00, stenn@deacon.udel.edu +0 -0
+
+ChangeSet@1.2216, 2010-09-26 14:40:09-04:00, stenn@deacon.udel.edu +3 -0
+  Documentation updates from Dave Mills
+
+  ChangeLog@1.646, 2010-09-26 14:39:44-04:00, stenn@deacon.udel.edu +1 -0
+    Documentation updates from Dave Mills
+
+  html/scripts/special.txt@1.3, 2010-09-26 14:39:44-04:00, stenn@deacon.udel.edu +1 -0
+    Documentation updates from Dave Mills
+
+  html/warp.html@1.7, 2010-09-26 14:39:44-04:00, stenn@deacon.udel.edu +2 -5
+    Documentation updates from Dave Mills
+
 ChangeSet@1.2215, 2010-09-25 21:45:40+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P56
   TAG: NTP_4_2_7P56
