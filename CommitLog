@@ -1,8 +1,132 @@
-ChangeSet@1.2219, 2010-09-27 10:11:56+00:00, stenn@deacon.udel.edu +27 -0
+ChangeSet@1.2225, 2010-09-30 05:11:53+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P58
+  TAG: NTP_4_2_7P58
+
+  ChangeLog@1.653, 2010-09-30 05:11:49+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P58
+
+  ntpd/ntpd-opts.c@1.61, 2010-09-30 05:11:49+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P58
+
+  ntpd/ntpd-opts.h@1.61, 2010-09-30 05:11:49+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P58
+
+  ntpd/ntpd-opts.texi@1.60, 2010-09-30 05:11:49+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P58
+
+  ntpd/ntpd.1@1.60, 2010-09-30 05:11:49+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P58
+
+  ntpdc/ntpdc-opts.c@1.59, 2010-09-30 05:11:50+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P58
+
+  ntpdc/ntpdc-opts.h@1.59, 2010-09-30 05:11:50+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P58
+
+  ntpdc/ntpdc-opts.texi@1.59, 2010-09-30 05:11:50+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P58
+
+  ntpdc/ntpdc.1@1.59, 2010-09-30 05:11:50+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P58
+
+  ntpq/ntpq-opts.c@1.59, 2010-09-30 05:11:50+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P58
+
+  ntpq/ntpq-opts.h@1.59, 2010-09-30 05:11:50+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P58
+
+  ntpq/ntpq-opts.texi@1.59, 2010-09-30 05:11:50+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P58
+
+  ntpq/ntpq.1@1.59, 2010-09-30 05:11:50+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P58
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.59, 2010-09-30 05:11:50+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P58
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.59, 2010-09-30 05:11:50+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P58
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.59, 2010-09-30 05:11:50+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P58
+
+  ntpsnmpd/ntpsnmpd.1@1.59, 2010-09-30 05:11:50+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P58
+
+  packageinfo.sh@1.60, 2010-09-30 05:11:50+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P58
+
+  sntp/sntp-opts.c@1.59, 2010-09-30 05:11:50+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P58
+
+  sntp/sntp-opts.h@1.59, 2010-09-30 05:11:50+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P58
+
+  sntp/sntp-opts.texi@1.59, 2010-09-30 05:11:50+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P58
+
+  sntp/sntp.1@1.59, 2010-09-30 05:11:50+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P58
+
+  sntp/sntp.html@1.59, 2010-09-30 05:11:50+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P58
+
+  util/ntp-keygen-opts.c@1.56, 2010-09-30 05:11:50+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P58
+
+  util/ntp-keygen-opts.h@1.56, 2010-09-30 05:11:50+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P58
+
+  util/ntp-keygen-opts.texi@1.59, 2010-09-30 05:11:50+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P58
+
+  util/ntp-keygen.1@1.59, 2010-09-30 05:11:50+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P58
+
+ChangeSet@1.2223, 2010-09-30 00:50:30-04:00, stenn@deacon.udel.edu +2 -0
+  Clock select bugfix from Dave Mills.
+  [Bug 1554]: peer may stay selected as system peer after becoming
+  unreachable.
+
+  ChangeLog@1.651, 2010-09-30 00:43:09-04:00, stenn@deacon.udel.edu +3 -0
+    Clock select bugfix from Dave Mills.
+    [Bug 155]: peer may stay selected as system peer after becoming
+    unreachable.
+
+  ntpd/ntp_proto.c@1.304, 2010-09-30 00:43:09-04:00, stenn@deacon.udel.edu +10 -3
+    Clock select bugfix from Dave Mills.
+    [Bug 155]: peer may stay selected as system peer after becoming
+    unreachable.
+
+ChangeSet@1.2221, 2010-09-30 00:16:29-04:00, stenn@deacon.udel.edu +1 -0
+  ChangeLog cleanup
+
+  ChangeLog@1.649, 2010-09-30 00:16:12-04:00, stenn@deacon.udel.edu +1 -1
+    cleanup
+
+ChangeSet@1.2082.4.122, 2010-09-30 00:14:03-04:00, stenn@deacon.udel.edu +2 -0
+  [Bug 1644]: cvo.sh should use lsb_release to identify linux distros.
+
+  ChangeLog@1.496.26.90, 2010-09-30 00:13:52-04:00, stenn@deacon.udel.edu +2 -0
+    [Bug 1644]: cvo.sh should use lsb_release to identify linux distros.
+
+  scripts/cvo.sh@1.3.1.1, 2010-09-30 00:13:52-04:00, stenn@deacon.udel.edu +4 -3
+    [Bug 1644]: cvo.sh should use lsb_release to identify linux distros.
+
+ChangeSet@1.2218.2.1, 2010-09-27 18:06:28+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  [Bug 1646] ntpd crashes with relative path to logfile.
+
+  ChangeLog@1.646.2.1, 2010-09-27 18:06:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1646] ntpd crashes with relative path to logfile.
+
+  ntpd/ntpd.c@1.116, 2010-09-27 18:06:24+00:00, davehart@shiny.ad.hartbrothers.com +2 -5
+    [Bug 1646] ntpd crashes with relative path to logfile.
+
+ChangeSet@1.2218.1.1, 2010-09-27 10:11:56+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P57
   TAG: NTP_4_2_7P57
 
-  ChangeLog@1.647, 2010-09-27 10:11:54+00:00, stenn@deacon.udel.edu +1 -0
+  ChangeLog@1.646.1.1, 2010-09-27 10:11:54+00:00, stenn@deacon.udel.edu +1 -0
     NTP_4_2_7P57
 
   ntpd/ntpd-opts.c@1.60, 2010-09-27 10:11:54+00:00, stenn@deacon.udel.edu +2 -2
@@ -82,6 +206,15 @@ ChangeSet@1.2219, 2010-09-27 10:11:56+00:00, stenn@deacon.udel.edu +27 -0
 
   util/ntp-keygen.1@1.58, 2010-09-27 10:11:55+00:00, stenn@deacon.udel.edu +2 -2
     NTP_4_2_7P57
+
+ChangeSet@1.2219, 2010-09-27 01:31:15-04:00, stenn@psp-deb1.ntp.org +2 -0
+  [Bug 1644] from 4.2.6p3: cvo.sh doesn't handle some unstable/testing linux distros
+
+  ChangeLog@1.647, 2010-09-27 01:31:06-04:00, stenn@psp-deb1.ntp.org +2 -0
+    [Bug 1644] from 4.2.6p3: cvo.sh doesn't handle some unstable/testing linux distros
+
+  scripts/cvo.sh@1.4, 2010-09-27 01:31:06-04:00, stenn@psp-deb1.ntp.org +4 -3
+    [Bug 1644] from 4.2.6p3: cvo.sh doesn't handle some unstable/testing linux distros
 
 ChangeSet@1.2218, 2010-09-26 15:27:53-04:00, stenn@deacon.udel.edu +3 -0
   Documentation updates from Dave Mills

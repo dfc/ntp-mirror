@@ -1,3 +1,10 @@
+(4.2.7p58) 2010/09/30 Released by Harlan Stenn <stenn@ntp.org>
+* Clock select bugfix from Dave Mills.
+* [Bug 1554]: peer may stay selected as system peer after becoming
+  unreachable.
+* [Bug 1644] from 4.2.6p3: cvo.sh should use lsb_release to identify
+  linux distros.
+* [Bug 1646] ntpd crashes with relative path to logfile.
 (4.2.7p57) 2010/09/27 Released by Harlan Stenn <stenn@ntp.org>
 * Documentation updates from Dave Mills.
 (4.2.7p56) 2010/09/25 Released by Harlan Stenn <stenn@ntp.org>
@@ -360,7 +367,9 @@
 (4.2.7) 2009/12/09 Released by Harlan Stenn <stenn@ntp.org>
 * [Bug 1407] configure.ac: recent GNU Make -v does not include "version".
 ---
+
 * [Bug 1643]: Range-check the decoding of the RIPE-NCC status codes.
+* [Bug 1644]: cvo.sh should use lsb_release to identify linux distros.
 
 ---
 (4.2.6p3-RC2) 2010/09/25 Released by Harlan Stenn <stenn@ntp.org>
@@ -385,7 +394,7 @@
 (4.2.6p2) 2010/07/09 Released by Harlan Stenn <stenn@ntp.org>
 
 * [Bug 1581] size_t printf format string mismatches, IRIG string buffers
-  undersized.  Mostly backported from earlier ntp-dev fixes by Juergen
+  undersized.  Mostly backported from earlier ntp-dev fixes by Jürgen
   Perlinger.
 
 ---
