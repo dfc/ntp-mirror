@@ -1,3 +1,130 @@
+ChangeSet@1.2230, 2010-10-02 08:00:59+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P59
+  TAG: NTP_4_2_7P59
+
+  ChangeLog@1.657, 2010-10-02 08:00:57+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P59
+
+  ntpd/ntpd-opts.c@1.62, 2010-10-02 08:00:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P59
+
+  ntpd/ntpd-opts.h@1.62, 2010-10-02 08:00:57+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P59
+
+  ntpd/ntpd-opts.texi@1.61, 2010-10-02 08:00:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P59
+
+  ntpd/ntpd.1@1.61, 2010-10-02 08:00:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P59
+
+  ntpdc/ntpdc-opts.c@1.60, 2010-10-02 08:00:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P59
+
+  ntpdc/ntpdc-opts.h@1.60, 2010-10-02 08:00:57+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P59
+
+  ntpdc/ntpdc-opts.texi@1.60, 2010-10-02 08:00:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P59
+
+  ntpdc/ntpdc.1@1.60, 2010-10-02 08:00:58+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P59
+
+  ntpq/ntpq-opts.c@1.60, 2010-10-02 08:00:58+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P59
+
+  ntpq/ntpq-opts.h@1.60, 2010-10-02 08:00:58+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P59
+
+  ntpq/ntpq-opts.texi@1.60, 2010-10-02 08:00:58+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P59
+
+  ntpq/ntpq.1@1.60, 2010-10-02 08:00:58+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P59
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.60, 2010-10-02 08:00:58+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P59
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.60, 2010-10-02 08:00:58+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P59
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.60, 2010-10-02 08:00:58+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P59
+
+  ntpsnmpd/ntpsnmpd.1@1.60, 2010-10-02 08:00:58+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P59
+
+  packageinfo.sh@1.61, 2010-10-02 08:00:58+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P59
+
+  sntp/sntp-opts.c@1.60, 2010-10-02 08:00:58+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P59
+
+  sntp/sntp-opts.h@1.60, 2010-10-02 08:00:58+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P59
+
+  sntp/sntp-opts.texi@1.60, 2010-10-02 08:00:58+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P59
+
+  sntp/sntp.1@1.60, 2010-10-02 08:00:58+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P59
+
+  sntp/sntp.html@1.60, 2010-10-02 08:00:58+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P59
+
+  util/ntp-keygen-opts.c@1.57, 2010-10-02 08:00:58+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P59
+
+  util/ntp-keygen-opts.h@1.57, 2010-10-02 08:00:58+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P59
+
+  util/ntp-keygen-opts.texi@1.60, 2010-10-02 08:00:58+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P59
+
+  util/ntp-keygen.1@1.60, 2010-10-02 08:00:58+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P59
+
+ChangeSet@1.2228, 2010-10-02 03:47:56-04:00, stenn@deacon.udel.edu +5 -0
+  Documentation updates from Dave Mills
+
+  ChangeLog@1.656, 2010-10-02 03:47:46-04:00, stenn@deacon.udel.edu +1 -0
+    Documentation updates from Dave Mills
+
+  html/filter.html@1.2, 2010-10-02 03:47:13-04:00, stenn@deacon.udel.edu +7 -6
+    Documentation updates from Dave Mills
+
+  html/huffpuff.html@1.2, 2010-10-02 03:47:13-04:00, stenn@deacon.udel.edu +8 -3
+    Documentation updates from Dave Mills
+
+  html/scripts/special.txt@1.4, 2010-10-02 03:47:20-04:00, stenn@deacon.udel.edu +3 -0
+    Documentation updates from Dave Mills
+
+  html/warp.html@1.8, 2010-10-02 03:47:14-04:00, stenn@deacon.udel.edu +9 -10
+    Documentation updates from Dave Mills
+
+ChangeSet@1.2227, 2010-10-02 03:45:18-04:00, stenn@deacon.udel.edu +2 -0
+  Variable name cleanup from Dave Mills
+
+  ChangeLog@1.655, 2010-10-02 03:45:11-04:00, stenn@deacon.udel.edu +1 -0
+    Variable name cleanup from Dave Mills
+
+  ntpd/ntp_proto.c@1.305, 2010-10-02 03:45:11-04:00, stenn@deacon.udel.edu +4 -4
+    Variable name cleanup from Dave Mills
+
+ChangeSet@1.2226, 2010-10-02 00:36:46-07:00, harlan@hms-mbp.lan +2 -0
+  [Bug 1657] darwin needs res_9_init, not res_init.
+
+  ChangeLog@1.654, 2010-10-02 00:36:33-07:00, harlan@hms-mbp.lan +1 -0
+    [Bug 1657] darwin needs res_9_init, not res_init.
+
+  configure.ac@1.491, 2010-10-02 00:36:33-07:00, harlan@hms-mbp.lan +5 -3
+    [Bug 1657] darwin needs res_9_init, not res_init.
+
+ChangeSet@1.2082.4.123, 2010-10-02 00:31:32-04:00, stenn@deacon.udel.edu +1 -0
+  Update the NEWS file for 4.2.6p3
+
+  NEWS@1.108, 2010-10-02 00:31:25-04:00, stenn@deacon.udel.edu +31 -0
+    Update the NEWS file for 4.2.6p3
+
 ChangeSet@1.2225, 2010-09-30 05:11:53+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P58
   TAG: NTP_4_2_7P58
