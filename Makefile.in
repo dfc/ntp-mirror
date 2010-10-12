@@ -188,6 +188,7 @@ PATH_NET_SNMP_CONFIG = @PATH_NET_SNMP_CONFIG@
 PATH_PERL = @PATH_PERL@
 PATH_SEPARATOR = @PATH_SEPARATOR@
 PATH_SH = @PATH_SH@
+PATH_TEST = @PATH_TEST@
 PROPDELAY = @PROPDELAY@
 RANLIB = @RANLIB@
 SET_MAKE = @SET_MAKE@
@@ -901,7 +902,7 @@ dist-hook:
 
 CommitLog: FRC.CommitLog
 	cd $(srcdir)					\
-	&& /bin/test -e CommitLog			\
+	&& $(PATH_TEST) -e CommitLog			\
 		-a SCCS/s.ChangeSet -ot CommitLog	\
 	|| scripts/genCommitLog
 

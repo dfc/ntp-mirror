@@ -1,3 +1,206 @@
+ChangeSet@1.2243, 2010-10-12 10:13:07+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P62
+  TAG: NTP_4_2_7P62
+
+  ChangeLog@1.668, 2010-10-12 10:13:03+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P62
+
+  ntpd/ntpd-opts.c@1.65, 2010-10-12 10:13:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P62
+
+  ntpd/ntpd-opts.h@1.65, 2010-10-12 10:13:03+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P62
+
+  ntpd/ntpd-opts.texi@1.64, 2010-10-12 10:13:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P62
+
+  ntpd/ntpd.1@1.64, 2010-10-12 10:13:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P62
+
+  ntpdc/ntpdc-opts.c@1.63, 2010-10-12 10:13:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P62
+
+  ntpdc/ntpdc-opts.h@1.63, 2010-10-12 10:13:04+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P62
+
+  ntpdc/ntpdc-opts.texi@1.63, 2010-10-12 10:13:04+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P62
+
+  ntpdc/ntpdc.1@1.63, 2010-10-12 10:13:04+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P62
+
+  ntpq/ntpq-opts.c@1.63, 2010-10-12 10:13:04+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P62
+
+  ntpq/ntpq-opts.h@1.63, 2010-10-12 10:13:04+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P62
+
+  ntpq/ntpq-opts.texi@1.63, 2010-10-12 10:13:04+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P62
+
+  ntpq/ntpq.1@1.63, 2010-10-12 10:13:04+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P62
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.63, 2010-10-12 10:13:04+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P62
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.63, 2010-10-12 10:13:04+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P62
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.63, 2010-10-12 10:13:04+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P62
+
+  ntpsnmpd/ntpsnmpd.1@1.63, 2010-10-12 10:13:04+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P62
+
+  packageinfo.sh@1.64, 2010-10-12 10:13:04+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P62
+
+  sntp/sntp-opts.c@1.63, 2010-10-12 10:13:04+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P62
+
+  sntp/sntp-opts.h@1.63, 2010-10-12 10:13:04+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P62
+
+  sntp/sntp-opts.texi@1.63, 2010-10-12 10:13:04+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P62
+
+  sntp/sntp.1@1.63, 2010-10-12 10:13:05+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P62
+
+  sntp/sntp.html@1.63, 2010-10-12 10:13:05+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P62
+
+  util/ntp-keygen-opts.c@1.60, 2010-10-12 10:13:05+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P62
+
+  util/ntp-keygen-opts.h@1.60, 2010-10-12 10:13:05+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P62
+
+  util/ntp-keygen-opts.texi@1.63, 2010-10-12 10:13:05+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P62
+
+  util/ntp-keygen.1@1.63, 2010-10-12 10:13:05+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P62
+
+ChangeSet@1.2082.4.127, 2010-10-12 01:28:24-04:00, stenn@deacon.udel.edu +2 -0
+  [Bug 750]: Non-existing device causes coredump with RIPE-NCC driver
+
+  ChangeLog@1.496.26.95, 2010-10-12 01:27:19-04:00, stenn@deacon.udel.edu +7 -7
+    [Bug 750]: Non-existing device causes coredump with RIPE-NCC driver
+
+  ntpd/refclock_ripencc.c@1.7.1.5, 2010-10-12 01:27:19-04:00, stenn@deacon.udel.edu +1 -1
+    [Bug 750]: Non-existing device causes coredump with RIPE-NCC driver
+
+ChangeSet@1.2082.4.126, 2010-10-12 01:06:48-04:00, stenn@deacon.udel.edu +2 -0
+  [Bug 750]: Non-existing device causes coredump with RIPE-NCC driver
+
+  ChangeLog@1.496.26.94, 2010-10-12 01:06:32-04:00, stenn@deacon.udel.edu +3 -2
+    [Bug 750]: Non-existing device causes coredump with RIPE-NCC driver
+
+  ntpd/refclock_ripencc.c@1.7.1.4, 2010-10-12 01:06:33-04:00, stenn@deacon.udel.edu +18 -9
+    [Bug 750]: Non-existing device causes coredump with RIPE-NCC driver
+
+ChangeSet@1.2240, 2010-10-12 00:11:52-04:00, stenn@deacon.udel.edu +7 -0
+  Documentation updates from Dave Mills
+
+  ChangeLog@1.665, 2010-10-12 00:10:57-04:00, stenn@deacon.udel.edu +1 -0
+    Documentation updates from Dave Mills
+
+  html/assoc.html@1.33, 2010-10-12 00:11:03-04:00, stenn@deacon.udel.edu +8 -9
+    Documentation updates from Dave Mills
+
+  html/confopt.html@1.52, 2010-10-12 00:11:04-04:00, stenn@deacon.udel.edu +38 -113
+    Documentation updates from Dave Mills
+
+  html/discipline.html@1.3, 2010-10-12 00:11:04-04:00, stenn@deacon.udel.edu +2 -8
+    Documentation updates from Dave Mills
+
+  html/ntpq.html@1.42, 2010-10-12 00:11:05-04:00, stenn@deacon.udel.edu +2 -2
+    Documentation updates from Dave Mills
+
+  html/scripts/special.txt@1.5, 2010-10-12 00:11:36-04:00, stenn@deacon.udel.edu +1 -0
+    Documentation updates from Dave Mills
+
+  html/warp.html@1.10, 2010-10-12 00:11:06-04:00, stenn@deacon.udel.edu +12 -10
+    Documentation updates from Dave Mills
+
+ChangeSet@1.2239, 2010-10-12 00:06:48-04:00, stenn@deacon.udel.edu +3 -0
+  Lose peer_count from ntp_peer.c and ntp_proto.c (Dave Mills)
+
+  ChangeLog@1.664, 2010-10-12 00:06:40-04:00, stenn@deacon.udel.edu +1 -0
+    Lose peer_count from ntp_peer.c and ntp_proto.c (Dave Mills)
+
+  ntpd/ntp_peer.c@1.135, 2010-10-12 00:06:04-04:00, stenn@deacon.udel.edu +1 -8
+    Lose peer_count from ntp_peer.c and ntp_proto.c (Dave Mills)
+
+  ntpd/ntp_proto.c@1.307, 2010-10-12 00:06:05-04:00, stenn@deacon.udel.edu +10 -5
+    Lose peer_count from ntp_peer.c and ntp_proto.c (Dave Mills)
+
+ChangeSet@1.2082.4.124, 2010-10-11 20:18:23-07:00, stenn@stenn.ntp.org +2 -0
+  [Bug 1661]: Re-indent refclock_ripencc.c
+
+  ChangeLog@1.496.26.92, 2010-10-11 20:18:16-07:00, stenn@stenn.ntp.org +1 -0
+    [Bug 1661]: Re-indent refclock_ripencc.c
+
+  ntpd/refclock_ripencc.c@1.7.1.3, 2010-10-11 20:18:17-07:00, stenn@stenn.ntp.org +1909 -1530
+    [Bug 1661]: Re-indent refclock_ripencc.c
+
+ChangeSet@1.2082.24.1, 2010-10-11 22:36:49-04:00, stenn@deacon.udel.edu +3 -0
+  [Bug 1660]: On some systems, test is in /usr/bin, not /bin
+
+  ChangeLog@1.496.49.1, 2010-10-11 22:34:47-04:00, stenn@deacon.udel.edu +1 -0
+    [Bug 1660]: On some systems, test is in /usr/bin, not /bin
+
+  Makefile.am@1.93.1.1, 2010-10-11 22:34:47-04:00, stenn@deacon.udel.edu +1 -1
+    [Bug 1660]: On some systems, test is in /usr/bin, not /bin
+
+  configure.ac@1.465.1.13, 2010-10-11 22:34:48-04:00, stenn@deacon.udel.edu +3 -1
+    [Bug 1660]: On some systems, test is in /usr/bin, not /bin
+
+ChangeSet@1.2082.23.3, 2010-10-09 10:10:10+00:00, davehart@shiny.ad.hartbrothers.com +8 -0
+  [Bug 1567] Support Arbiter 1093C Satellite Clock on Windows.
+  [Bug 1659] Support Truetime Satellite Clocks on Windows.
+  
+
+  ChangeLog@1.496.48.2, 2010-10-09 10:10:08+00:00, davehart@shiny.ad.hartbrothers.com +4 -2
+    [Bug 1567] Support Arbiter 1093C Satellite Clock on Windows.
+    [Bug 1659] Support Truetime Satellite Clocks on Windows.
+    
+
+  ntpd/refclock_arbiter.c@1.16, 2010-10-09 10:10:08+00:00, davehart@shiny.ad.hartbrothers.com +34 -9
+    [Bug 1567] Support Arbiter 1093C Satellite Clock on Windows.
+    
+
+  ntpd/refclock_true.c@1.11.1.2, 2010-10-09 10:10:08+00:00, davehart@shiny.ad.hartbrothers.com +15 -0
+    [Bug 1659] Support Truetime Satellite Clocks on Windows.
+    
+
+  ports/winnt/include/config.h@1.79.1.2, 2010-10-09 10:10:08+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+    [Bug 1567] Support Arbiter 1093C Satellite Clock on Windows.
+    [Bug 1659] Support Truetime Satellite Clocks on Windows.
+    
+
+  ports/winnt/vc6/ntpd.dsp@1.39.1.3, 2010-10-09 10:10:08+00:00, davehart@shiny.ad.hartbrothers.com +0 -2
+    [Bug 1567] Support Arbiter 1093C Satellite Clock on Windows.
+    [Bug 1659] Support Truetime Satellite Clocks on Windows.
+    
+
+  ports/winnt/vs2003/ntpd.vcproj@1.4.1.1, 2010-10-09 10:10:08+00:00, davehart@shiny.ad.hartbrothers.com +4 -8
+    [Bug 1567] Support Arbiter 1093C Satellite Clock on Windows.
+    [Bug 1659] Support Truetime Satellite Clocks on Windows.
+    
+
+  ports/winnt/vs2005/ntpd.vcproj@1.4.1.1, 2010-10-09 10:10:08+00:00, davehart@shiny.ad.hartbrothers.com +0 -4
+    [Bug 1567] Support Arbiter 1093C Satellite Clock on Windows.
+    [Bug 1659] Support Truetime Satellite Clocks on Windows.
+    
+
+  ports/winnt/vs2008/ntpd/ntpd.vcproj@1.21.1.2, 2010-10-09 10:10:08+00:00, davehart@shiny.ad.hartbrothers.com +0 -4
+    [Bug 1567] Support Arbiter 1093C Satellite Clock on Windows.
+    [Bug 1659] Support Truetime Satellite Clocks on Windows.
+    
+
 ChangeSet@1.2236, 2010-10-06 10:09:59+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P61
   TAG: NTP_4_2_7P61
@@ -367,7 +570,7 @@ ChangeSet@1.2226, 2010-10-02 00:36:46-07:00, harlan@hms-mbp.lan +2 -0
   configure.ac@1.491, 2010-10-02 00:36:33-07:00, harlan@hms-mbp.lan +5 -3
     [Bug 1657] darwin needs res_9_init, not res_init.
 
-ChangeSet@1.2082.4.123, 2010-10-02 00:31:32-04:00, stenn@deacon.udel.edu +1 -0
+ChangeSet@1.2082.23.2, 2010-10-02 00:31:32-04:00, stenn@deacon.udel.edu +1 -0
   Update the NEWS file for 4.2.6p3
 
   NEWS@1.108, 2010-10-02 00:31:25-04:00, stenn@deacon.udel.edu +31 -0
@@ -479,13 +682,13 @@ ChangeSet@1.2221, 2010-09-30 00:16:29-04:00, stenn@deacon.udel.edu +1 -0
   ChangeLog@1.649, 2010-09-30 00:16:12-04:00, stenn@deacon.udel.edu +1 -1
     cleanup
 
-ChangeSet@1.2082.4.122, 2010-09-30 00:14:03-04:00, stenn@deacon.udel.edu +2 -0
+ChangeSet@1.2082.23.1, 2010-09-30 00:14:03-04:00, stenn@deacon.udel.edu +2 -0
   [Bug 1644]: cvo.sh should use lsb_release to identify linux distros.
 
-  ChangeLog@1.496.26.90, 2010-09-30 00:13:52-04:00, stenn@deacon.udel.edu +2 -0
+  ChangeLog@1.496.48.1, 2010-09-30 00:13:52-04:00, stenn@deacon.udel.edu +2 -0
     [Bug 1644]: cvo.sh should use lsb_release to identify linux distros.
 
-  scripts/cvo.sh@1.3.1.1, 2010-09-30 00:13:52-04:00, stenn@deacon.udel.edu +4 -3
+  scripts/cvo.sh@1.3.2.1, 2010-09-30 00:13:52-04:00, stenn@deacon.udel.edu +4 -3
     [Bug 1644]: cvo.sh should use lsb_release to identify linux distros.
 
 ChangeSet@1.2218.2.1, 2010-09-27 18:06:28+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
@@ -581,6 +784,15 @@ ChangeSet@1.2218.1.1, 2010-09-27 10:11:56+00:00, stenn@deacon.udel.edu +27 -0
 
   util/ntp-keygen.1@1.58, 2010-09-27 10:11:55+00:00, stenn@deacon.udel.edu +2 -2
     NTP_4_2_7P57
+
+ChangeSet@1.2082.4.122, 2010-09-27 01:33:39-04:00, stenn@psp-deb1.ntp.org +2 -0
+  [Bug 1644]: cvo.sh doesn't handle some unstable/testing linux distros
+
+  ChangeLog@1.496.26.90, 2010-09-27 01:33:22-04:00, stenn@psp-deb1.ntp.org +2 -0
+    [Bug 1644]: cvo.sh doesn't handle some unstable/testing linux distros
+
+  scripts/cvo.sh@1.3.1.1, 2010-09-27 01:33:22-04:00, stenn@psp-deb1.ntp.org +4 -3
+    [Bug 1644]: cvo.sh doesn't handle some unstable/testing linux distros
 
 ChangeSet@1.2219, 2010-09-27 01:31:15-04:00, stenn@psp-deb1.ntp.org +2 -0
   [Bug 1644] from 4.2.6p3: cvo.sh doesn't handle some unstable/testing linux distros
