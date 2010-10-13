@@ -1,3 +1,135 @@
+ChangeSet@1.2248, 2010-10-13 10:13:18+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P63
+  TAG: NTP_4_2_7P63
+
+  ChangeLog@1.673, 2010-10-13 10:13:15+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P63
+
+  ntpd/ntpd-opts.c@1.66, 2010-10-13 10:13:15+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P63
+
+  ntpd/ntpd-opts.h@1.66, 2010-10-13 10:13:15+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P63
+
+  ntpd/ntpd-opts.texi@1.65, 2010-10-13 10:13:15+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P63
+
+  ntpd/ntpd.1@1.65, 2010-10-13 10:13:15+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P63
+
+  ntpdc/ntpdc-opts.c@1.64, 2010-10-13 10:13:15+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P63
+
+  ntpdc/ntpdc-opts.h@1.64, 2010-10-13 10:13:15+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P63
+
+  ntpdc/ntpdc-opts.texi@1.64, 2010-10-13 10:13:15+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P63
+
+  ntpdc/ntpdc.1@1.64, 2010-10-13 10:13:15+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P63
+
+  ntpq/ntpq-opts.c@1.64, 2010-10-13 10:13:15+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P63
+
+  ntpq/ntpq-opts.h@1.64, 2010-10-13 10:13:15+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P63
+
+  ntpq/ntpq-opts.texi@1.64, 2010-10-13 10:13:15+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P63
+
+  ntpq/ntpq.1@1.64, 2010-10-13 10:13:15+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P63
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.64, 2010-10-13 10:13:15+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P63
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.64, 2010-10-13 10:13:16+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P63
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.64, 2010-10-13 10:13:16+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P63
+
+  ntpsnmpd/ntpsnmpd.1@1.64, 2010-10-13 10:13:16+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P63
+
+  packageinfo.sh@1.65, 2010-10-13 10:13:16+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P63
+
+  sntp/sntp-opts.c@1.64, 2010-10-13 10:13:16+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P63
+
+  sntp/sntp-opts.h@1.64, 2010-10-13 10:13:16+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P63
+
+  sntp/sntp-opts.texi@1.64, 2010-10-13 10:13:16+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P63
+
+  sntp/sntp.1@1.64, 2010-10-13 10:13:16+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P63
+
+  sntp/sntp.html@1.64, 2010-10-13 10:13:16+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P63
+
+  util/ntp-keygen-opts.c@1.61, 2010-10-13 10:13:16+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P63
+
+  util/ntp-keygen-opts.h@1.61, 2010-10-13 10:13:16+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P63
+
+  util/ntp-keygen-opts.texi@1.64, 2010-10-13 10:13:16+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P63
+
+  util/ntp-keygen.1@1.64, 2010-10-13 10:13:16+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P63
+
+ChangeSet@1.2245.1.1, 2010-10-13 02:10:33-04:00, stenn@deacon.udel.edu +1 -0
+  Add missing [bug 750] update to Changelog
+
+  ChangeLog@1.670.1.1, 2010-10-13 02:10:27-04:00, stenn@deacon.udel.edu +2 -0
+    Add missing [bug 750] update to Changelog
+
+ChangeSet@1.2245, 2010-10-12 21:33:17-07:00, stenn@stenn.ntp.org +3 -0
+  Documentation nit cleanup
+
+  ChangeLog@1.670, 2010-10-12 21:33:09-07:00, stenn@stenn.ntp.org +1 -0
+    Documentation nit cleanup
+
+  html/drivers/driver38.html@1.14, 2010-10-12 21:33:09-07:00, stenn@stenn.ntp.org +1 -1
+    Documentation nit cleanup
+
+  html/parsenew.html@1.12, 2010-10-12 21:33:09-07:00, stenn@stenn.ntp.org +2 -2
+    Documentation nit cleanup
+
+ChangeSet@1.2244, 2010-10-13 00:19:17-04:00, stenn@deacon.udel.edu +2 -0
+  Documentation updates from Dave Mills
+
+  ChangeLog@1.669, 2010-10-13 00:19:11-04:00, stenn@deacon.udel.edu +1 -0
+    Documentation updates from Dave Mills
+
+  html/poll.html@1.1, 2010-10-13 00:18:07-04:00, stenn@deacon.udel.edu +24 -0
+    BitKeeper file /deacon/backroom/ntp-dev/html/poll.html
+
+  html/poll.html@1.0, 2010-10-13 00:18:07-04:00, stenn@deacon.udel.edu +0 -0
+
+ChangeSet@1.2082.22.21, 2010-10-12 14:27:43+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+  [Bug 1080] ntpd on ipv6 routers very chatty.
+
+  ChangeLog@1.496.47.17, 2010-10-12 14:27:42+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1080] ntpd on ipv6 routers very chatty.
+
+  configure.ac@1.465.1.14, 2010-10-12 14:27:42+00:00, davehart@shiny.ad.hartbrothers.com +33 -11
+    [Bug 1080] ntpd on ipv6 routers very chatty.
+
+  include/ntp_net.h@1.3.1.2, 2010-10-12 14:27:42+00:00, davehart@shiny.ad.hartbrothers.com +9 -0
+    [Bug 1080] ntpd on ipv6 routers very chatty.
+
+  ntpd/ntp_io.c@1.306.1.5, 2010-10-12 14:27:42+00:00, davehart@shiny.ad.hartbrothers.com +39 -0
+    [Bug 1080] ntpd on ipv6 routers very chatty.
+    patch originally supplied to freebsd's head/contrib/ntp/ntpd/ntp_io.c
+     by ume@freebsd.org
+    http://www.mail-archive.com/svn-src-all@freebsd.org/msg16141.html
+
 ChangeSet@1.2243, 2010-10-12 10:13:07+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P62
   TAG: NTP_4_2_7P62
@@ -83,19 +215,19 @@ ChangeSet@1.2243, 2010-10-12 10:13:07+00:00, stenn@deacon.udel.edu +27 -0
   util/ntp-keygen.1@1.63, 2010-10-12 10:13:05+00:00, stenn@deacon.udel.edu +2 -2
     NTP_4_2_7P62
 
-ChangeSet@1.2082.4.127, 2010-10-12 01:28:24-04:00, stenn@deacon.udel.edu +2 -0
+ChangeSet@1.2082.22.20, 2010-10-12 01:28:24-04:00, stenn@deacon.udel.edu +2 -0
   [Bug 750]: Non-existing device causes coredump with RIPE-NCC driver
 
-  ChangeLog@1.496.26.95, 2010-10-12 01:27:19-04:00, stenn@deacon.udel.edu +7 -7
+  ChangeLog@1.496.47.16, 2010-10-12 01:27:19-04:00, stenn@deacon.udel.edu +7 -7
     [Bug 750]: Non-existing device causes coredump with RIPE-NCC driver
 
   ntpd/refclock_ripencc.c@1.7.1.5, 2010-10-12 01:27:19-04:00, stenn@deacon.udel.edu +1 -1
     [Bug 750]: Non-existing device causes coredump with RIPE-NCC driver
 
-ChangeSet@1.2082.4.126, 2010-10-12 01:06:48-04:00, stenn@deacon.udel.edu +2 -0
+ChangeSet@1.2082.22.19, 2010-10-12 01:06:48-04:00, stenn@deacon.udel.edu +2 -0
   [Bug 750]: Non-existing device causes coredump with RIPE-NCC driver
 
-  ChangeLog@1.496.26.94, 2010-10-12 01:06:32-04:00, stenn@deacon.udel.edu +3 -2
+  ChangeLog@1.496.47.15, 2010-10-12 01:06:32-04:00, stenn@deacon.udel.edu +3 -2
     [Bug 750]: Non-existing device causes coredump with RIPE-NCC driver
 
   ntpd/refclock_ripencc.c@1.7.1.4, 2010-10-12 01:06:33-04:00, stenn@deacon.udel.edu +18 -9
@@ -137,19 +269,19 @@ ChangeSet@1.2239, 2010-10-12 00:06:48-04:00, stenn@deacon.udel.edu +3 -0
   ntpd/ntp_proto.c@1.307, 2010-10-12 00:06:05-04:00, stenn@deacon.udel.edu +10 -5
     Lose peer_count from ntp_peer.c and ntp_proto.c (Dave Mills)
 
-ChangeSet@1.2082.4.124, 2010-10-11 20:18:23-07:00, stenn@stenn.ntp.org +2 -0
+ChangeSet@1.2082.22.17, 2010-10-11 20:18:23-07:00, stenn@stenn.ntp.org +2 -0
   [Bug 1661]: Re-indent refclock_ripencc.c
 
-  ChangeLog@1.496.26.92, 2010-10-11 20:18:16-07:00, stenn@stenn.ntp.org +1 -0
+  ChangeLog@1.496.47.13, 2010-10-11 20:18:16-07:00, stenn@stenn.ntp.org +1 -0
     [Bug 1661]: Re-indent refclock_ripencc.c
 
   ntpd/refclock_ripencc.c@1.7.1.3, 2010-10-11 20:18:17-07:00, stenn@stenn.ntp.org +1909 -1530
     [Bug 1661]: Re-indent refclock_ripencc.c
 
-ChangeSet@1.2082.24.1, 2010-10-11 22:36:49-04:00, stenn@deacon.udel.edu +3 -0
+ChangeSet@1.2082.25.1, 2010-10-11 22:36:49-04:00, stenn@deacon.udel.edu +3 -0
   [Bug 1660]: On some systems, test is in /usr/bin, not /bin
 
-  ChangeLog@1.496.49.1, 2010-10-11 22:34:47-04:00, stenn@deacon.udel.edu +1 -0
+  ChangeLog@1.496.50.1, 2010-10-11 22:34:47-04:00, stenn@deacon.udel.edu +1 -0
     [Bug 1660]: On some systems, test is in /usr/bin, not /bin
 
   Makefile.am@1.93.1.1, 2010-10-11 22:34:47-04:00, stenn@deacon.udel.edu +1 -1
@@ -158,12 +290,12 @@ ChangeSet@1.2082.24.1, 2010-10-11 22:36:49-04:00, stenn@deacon.udel.edu +3 -0
   configure.ac@1.465.1.13, 2010-10-11 22:34:48-04:00, stenn@deacon.udel.edu +3 -1
     [Bug 1660]: On some systems, test is in /usr/bin, not /bin
 
-ChangeSet@1.2082.23.3, 2010-10-09 10:10:10+00:00, davehart@shiny.ad.hartbrothers.com +8 -0
+ChangeSet@1.2082.24.3, 2010-10-09 10:10:10+00:00, davehart@shiny.ad.hartbrothers.com +8 -0
   [Bug 1567] Support Arbiter 1093C Satellite Clock on Windows.
   [Bug 1659] Support Truetime Satellite Clocks on Windows.
   
 
-  ChangeLog@1.496.48.2, 2010-10-09 10:10:08+00:00, davehart@shiny.ad.hartbrothers.com +4 -2
+  ChangeLog@1.496.49.2, 2010-10-09 10:10:08+00:00, davehart@shiny.ad.hartbrothers.com +4 -2
     [Bug 1567] Support Arbiter 1093C Satellite Clock on Windows.
     [Bug 1659] Support Truetime Satellite Clocks on Windows.
     
@@ -570,7 +702,7 @@ ChangeSet@1.2226, 2010-10-02 00:36:46-07:00, harlan@hms-mbp.lan +2 -0
   configure.ac@1.491, 2010-10-02 00:36:33-07:00, harlan@hms-mbp.lan +5 -3
     [Bug 1657] darwin needs res_9_init, not res_init.
 
-ChangeSet@1.2082.23.2, 2010-10-02 00:31:32-04:00, stenn@deacon.udel.edu +1 -0
+ChangeSet@1.2082.24.2, 2010-10-02 00:31:32-04:00, stenn@deacon.udel.edu +1 -0
   Update the NEWS file for 4.2.6p3
 
   NEWS@1.108, 2010-10-02 00:31:25-04:00, stenn@deacon.udel.edu +31 -0
@@ -682,10 +814,10 @@ ChangeSet@1.2221, 2010-09-30 00:16:29-04:00, stenn@deacon.udel.edu +1 -0
   ChangeLog@1.649, 2010-09-30 00:16:12-04:00, stenn@deacon.udel.edu +1 -1
     cleanup
 
-ChangeSet@1.2082.23.1, 2010-09-30 00:14:03-04:00, stenn@deacon.udel.edu +2 -0
+ChangeSet@1.2082.24.1, 2010-09-30 00:14:03-04:00, stenn@deacon.udel.edu +2 -0
   [Bug 1644]: cvo.sh should use lsb_release to identify linux distros.
 
-  ChangeLog@1.496.48.1, 2010-09-30 00:13:52-04:00, stenn@deacon.udel.edu +2 -0
+  ChangeLog@1.496.49.1, 2010-09-30 00:13:52-04:00, stenn@deacon.udel.edu +2 -0
     [Bug 1644]: cvo.sh should use lsb_release to identify linux distros.
 
   scripts/cvo.sh@1.3.2.1, 2010-09-30 00:13:52-04:00, stenn@deacon.udel.edu +4 -3
@@ -785,10 +917,10 @@ ChangeSet@1.2218.1.1, 2010-09-27 10:11:56+00:00, stenn@deacon.udel.edu +27 -0
   util/ntp-keygen.1@1.58, 2010-09-27 10:11:55+00:00, stenn@deacon.udel.edu +2 -2
     NTP_4_2_7P57
 
-ChangeSet@1.2082.4.122, 2010-09-27 01:33:39-04:00, stenn@psp-deb1.ntp.org +2 -0
+ChangeSet@1.2082.22.15, 2010-09-27 01:33:39-04:00, stenn@psp-deb1.ntp.org +2 -0
   [Bug 1644]: cvo.sh doesn't handle some unstable/testing linux distros
 
-  ChangeLog@1.496.26.90, 2010-09-27 01:33:22-04:00, stenn@psp-deb1.ntp.org +2 -0
+  ChangeLog@1.496.47.11, 2010-09-27 01:33:22-04:00, stenn@psp-deb1.ntp.org +2 -0
     [Bug 1644]: cvo.sh doesn't handle some unstable/testing linux distros
 
   scripts/cvo.sh@1.3.1.1, 2010-09-27 01:33:22-04:00, stenn@psp-deb1.ntp.org +4 -3
@@ -926,16 +1058,16 @@ ChangeSet@1.2215, 2010-09-25 21:45:40+00:00, stenn@deacon.udel.edu +27 -0
   util/ntp-keygen.1@1.57, 2010-09-25 21:45:39+00:00, stenn@deacon.udel.edu +2 -2
     NTP_4_2_7P56
 
-ChangeSet@1.2082.4.121, 2010-09-25 17:32:37-04:00, stenn@deacon.udel.edu +1 -0
+ChangeSet@1.2082.22.14, 2010-09-25 17:32:37-04:00, stenn@deacon.udel.edu +1 -0
   typo fix
 
   ntpd/refclock_ripencc.c@1.7.1.2, 2010-09-25 17:32:18-04:00, stenn@deacon.udel.edu +1 -1
     typo fix
 
-ChangeSet@1.2082.4.120, 2010-09-25 21:14:57+00:00, stenn@psp-fb2.ntp.org +2 -0
+ChangeSet@1.2082.22.13, 2010-09-25 21:14:57+00:00, stenn@psp-fb2.ntp.org +2 -0
   [Bug 1643]: Range-check the decoding of the RIPE-NCC status codes
 
-  ChangeLog@1.496.26.89, 2010-09-25 21:14:49+00:00, stenn@psp-fb2.ntp.org +3 -0
+  ChangeLog@1.496.47.10, 2010-09-25 21:14:49+00:00, stenn@psp-fb2.ntp.org +3 -0
     [Bug 1643]: Range-check the decoding of the RIPE-NCC status codes
 
   ntpd/refclock_ripencc.c@1.7.1.1, 2010-09-25 21:14:49+00:00, stenn@psp-fb2.ntp.org +11 -6
@@ -950,11 +1082,11 @@ ChangeSet@1.2212, 2010-09-25 21:11:34+00:00, stenn@psp-fb2.ntp.org +2 -0
   ntpd/refclock_ripencc.c@1.9, 2010-09-25 21:11:26+00:00, stenn@psp-fb2.ntp.org +8 -3
     [Bug 1643] from 4.2.6p3: Range-check the decoding of the RIPE-NCC status codes
 
-ChangeSet@1.2082.4.119, 2010-09-25 18:22:19+00:00, stenn@deacon.udel.edu +27 -0
+ChangeSet@1.2082.22.12, 2010-09-25 18:22:19+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_6P3_RC2
   TAG: NTP_4_2_6P3_RC2
 
-  ChangeLog@1.496.26.88, 2010-09-25 18:22:16+00:00, stenn@deacon.udel.edu +1 -0
+  ChangeLog@1.496.47.9, 2010-09-25 18:22:16+00:00, stenn@deacon.udel.edu +1 -0
     NTP_4_2_6P3_RC2
 
   ntpd/ntpd-opts.c@1.248.18.1, 2010-09-25 18:22:16+00:00, stenn@deacon.udel.edu +2 -2
@@ -1202,10 +1334,10 @@ ChangeSet@1.2203, 2010-09-21 17:10:47+00:00, davehart@shiny.ad.hartbrothers.com 
   ntpd/ntp_parser.c@1.63, 2010-09-21 17:10:46+00:00, davehart@shiny.ad.hartbrothers.com +165 -155
     correct Bison output of merged ntp_parser.y
 
-ChangeSet@1.2082.4.118, 2010-09-21 16:29:51+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
+ChangeSet@1.2082.22.11, 2010-09-21 16:29:51+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
   [Bug 1636] yyparse() segfault after denied filegen remote config.
 
-  ChangeLog@1.496.26.87, 2010-09-21 16:29:50+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  ChangeLog@1.496.47.8, 2010-09-21 16:29:50+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
     [Bug 1636] yyparse() segfault after denied filegen remote config.
 
   ntpd/ntp_parser.c@1.52.1.4, 2010-09-21 16:29:50+00:00, davehart@shiny.ad.hartbrothers.com +149 -139
@@ -1332,10 +1464,10 @@ ChangeSet@1.2198, 2010-09-20 23:22:02+00:00, davehart@shiny.ad.hartbrothers.com 
   ntpd/ntp_parser.c@1.61, 2010-09-20 23:22:01+00:00, davehart@shiny.ad.hartbrothers.com +1174 -999
     Bison output of merged ntp_parser.y
 
-ChangeSet@1.2082.4.117, 2010-09-20 22:41:37+00:00, davehart@shiny.ad.hartbrothers.com +6 -0
+ChangeSet@1.2082.22.10, 2010-09-20 22:41:37+00:00, davehart@shiny.ad.hartbrothers.com +6 -0
   [Bug 1635] "filegen ... enable" is not default.
 
-  ChangeLog@1.496.26.86, 2010-09-20 22:41:35+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+  ChangeLog@1.496.47.7, 2010-09-20 22:41:35+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
     [Bug 1635] "filegen ... enable" is not default.
 
   ntpd/ntp_config.c@1.241.1.5, 2010-09-20 22:41:36+00:00, davehart@shiny.ad.hartbrothers.com +5 -2
@@ -1638,11 +1770,11 @@ ChangeSet@1.2191, 2010-09-18 10:10:58+00:00, stenn@deacon.udel.edu +27 -0
   util/ntp-keygen.1@1.52, 2010-09-18 10:10:56+00:00, stenn@deacon.udel.edu +2 -2
     NTP_4_2_7P51
 
-ChangeSet@1.2082.4.116, 2010-09-18 05:42:06+00:00, stenn@deacon.udel.edu +27 -0
+ChangeSet@1.2082.22.9, 2010-09-18 05:42:06+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_6P3_RC1
   TAG: NTP_4_2_6P3_RC1
 
-  ChangeLog@1.496.26.85, 2010-09-18 05:42:02+00:00, stenn@deacon.udel.edu +1 -0
+  ChangeLog@1.496.47.6, 2010-09-18 05:42:02+00:00, stenn@deacon.udel.edu +1 -0
     NTP_4_2_6P3_RC1
 
   ntpd/ntpd-opts.c@1.248.17.1, 2010-09-18 05:42:02+00:00, stenn@deacon.udel.edu +2 -2
@@ -1723,17 +1855,17 @@ ChangeSet@1.2082.4.116, 2010-09-18 05:42:06+00:00, stenn@deacon.udel.edu +27 -0
   util/ntp-keygen.1@1.246.17.1, 2010-09-18 05:42:04+00:00, stenn@deacon.udel.edu +2 -2
     NTP_4_2_6P3_RC1
 
-ChangeSet@1.2082.4.115, 2010-09-18 01:25:26-04:00, stenn@deacon.udel.edu +1 -0
+ChangeSet@1.2082.22.8, 2010-09-18 01:25:26-04:00, stenn@deacon.udel.edu +1 -0
   4.2.6p3-RC1
 
   packageinfo.sh@1.255.19.1, 2010-09-18 01:25:17-04:00, stenn@deacon.udel.edu +1 -1
     4.2.6p3-RC1
 
-ChangeSet@1.2082.4.114, 2010-09-17 04:20:03+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+ChangeSet@1.2082.22.7, 2010-09-17 04:20:03+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
   [Bug 1344] ntpd on Windows exits without logging cause.
   
 
-  ChangeLog@1.496.26.84, 2010-09-17 04:20:03+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+  ChangeLog@1.496.47.5, 2010-09-17 04:20:03+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
     [Bug 1344] ntpd on Windows exits without logging cause.
     
 
@@ -2203,11 +2335,11 @@ ChangeSet@1.2177.1.2, 2010-09-11 10:16:58+00:00, stenn@deacon.udel.edu +27 -0
   util/ntp-keygen.1@1.48, 2010-09-11 10:16:57+00:00, stenn@deacon.udel.edu +2 -2
     NTP_4_2_7P47
 
-ChangeSet@1.2082.4.113, 2010-09-11 06:50:03+00:00, stenn@deacon.udel.edu +27 -0
+ChangeSet@1.2082.22.6, 2010-09-11 06:50:03+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_6P3_BETA1
   TAG: NTP_4_2_6P3_BETA1
 
-  ChangeLog@1.496.26.83, 2010-09-11 06:50:01+00:00, stenn@deacon.udel.edu +1 -0
+  ChangeLog@1.496.47.4, 2010-09-11 06:50:01+00:00, stenn@deacon.udel.edu +1 -0
     NTP_4_2_6P3_BETA1
 
   ntpd/ntpd-opts.c@1.248.16.1, 2010-09-11 06:50:01+00:00, stenn@deacon.udel.edu +2 -2
@@ -2288,7 +2420,7 @@ ChangeSet@1.2082.4.113, 2010-09-11 06:50:03+00:00, stenn@deacon.udel.edu +27 -0
   util/ntp-keygen.1@1.246.16.1, 2010-09-11 06:50:02+00:00, stenn@deacon.udel.edu +2 -2
     NTP_4_2_6P3_BETA1
 
-ChangeSet@1.2082.4.112, 2010-09-11 02:14:22-04:00, stenn@deacon.udel.edu +1 -0
+ChangeSet@1.2082.22.5, 2010-09-11 02:14:22-04:00, stenn@deacon.udel.edu +1 -0
   temporary mirror trigger update
 
   BitKeeper/triggers/2mirrors@1.7, 2010-09-11 02:14:17-04:00, stenn@deacon.udel.edu +2 -1
@@ -3080,10 +3212,10 @@ ChangeSet@1.2171.6.1, 2010-08-18 10:09:59+00:00, stenn@deacon.udel.edu +27 -0
   util/ntp-keygen.1@1.43, 2010-08-18 10:09:58+00:00, stenn@deacon.udel.edu +2 -2
     NTP_4_2_7P42
 
-ChangeSet@1.2082.4.111, 2010-08-18 11:26:41+02:00, linus@beam.lund.zozs.se +2 -0
+ChangeSet@1.2082.22.4, 2010-08-18 11:26:41+02:00, linus@beam.lund.zozs.se +2 -0
   [BUG 1573] Miscalculation of offset in sntp.
 
-  ChangeLog@1.496.26.82, 2010-08-18 11:26:41+02:00, linus@beam.lund.zozs.se +1 -0
+  ChangeLog@1.496.47.3, 2010-08-18 11:26:41+02:00, linus@beam.lund.zozs.se +1 -0
     [BUG 1573] Miscalculation of offset in sntp.
 
   sntp/main.c@1.24.1.2, 2010-08-18 11:26:41+02:00, linus@beam.lund.zozs.se +2 -2
@@ -3188,10 +3320,10 @@ ChangeSet@1.2171.4.3, 2010-08-02 14:20:12+02:00, linus@beam.lund.zozs.se +4 -0
 
   sntp/sntp.c@1.0, 2010-08-02 14:20:12+02:00, linus@beam.lund.zozs.se +0 -0
 
-ChangeSet@1.2082.22.1, 2010-07-31 21:59:50+02:00, linus@beam.lund.zozs.se +2 -0
+ChangeSet@1.2082.23.1, 2010-07-31 21:59:50+02:00, linus@beam.lund.zozs.se +2 -0
   [BUG 1597] packet processing ignores RATE KoD packets because of a bug in string comparison.
 
-  ChangeLog@1.496.47.1, 2010-07-31 21:59:50+02:00, linus@beam.lund.zozs.se +5 -0
+  ChangeLog@1.496.48.1, 2010-07-31 21:59:50+02:00, linus@beam.lund.zozs.se +5 -0
     [BUG 1597] packet processing ignores RATE KoD packets because of a bug in string comparison.
 
   sntp/networking.c@1.29.1.7, 2010-07-31 21:59:50+02:00, linus@beam.lund.zozs.se +3 -3
@@ -3209,13 +3341,13 @@ ChangeSet@1.2171.4.1, 2010-07-30 12:37:05+02:00, linus@beam.lund.zozs.se +1 -0
   sntp/networking.c@1.37, 2010-07-30 12:37:05+02:00, linus@beam.lund.zozs.se +1 -1
     Made process_pkt() a public function to ease testing.
 
-ChangeSet@1.2082.4.109, 2010-07-28 18:30:17+02:00, linus@beam.lund.zozs.se +1 -0
+ChangeSet@1.2082.22.2, 2010-07-28 18:30:17+02:00, linus@beam.lund.zozs.se +1 -0
   [Bug 1595] empty last line in key file causes duplicate key to be added
 
-  ChangeLog@1.496.26.80, 2010-07-28 18:30:06+02:00, linus@beam.lund.zozs.se +4 -0
+  ChangeLog@1.496.47.1, 2010-07-28 18:30:06+02:00, linus@beam.lund.zozs.se +4 -0
     [Bug 1595] empty last line in key file causes duplicate key to be added
 
-ChangeSet@1.2082.4.108, 2010-07-28 18:18:55+02:00, linus@beam.lund.zozs.se +1 -0
+ChangeSet@1.2082.22.1, 2010-07-28 18:18:55+02:00, linus@beam.lund.zozs.se +1 -0
   [Bug 1595] empty last line in key file causes duplicate key to be added
 
   sntp/crypto.c@1.10.1.3, 2010-07-28 18:18:44+02:00, linus@beam.lund.zozs.se +3 -1
@@ -3554,6 +3686,15 @@ ChangeSet@1.2171, 2010-07-12 10:09:56+00:00, stenn@deacon.udel.edu +27 -0
 
   util/ntp-keygen.1@1.41, 2010-07-12 10:09:55+00:00, stenn@deacon.udel.edu +2 -2
     NTP_4_2_7P40
+
+ChangeSet@1.2082.4.108, 2010-07-10 18:11:54+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  [Bug 1581] missed one previously
+
+  ChangeLog@1.496.26.80, 2010-07-10 18:11:54+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+    [Bug 1581] missed one previously
+
+  ntpd/ntp_intres.c@1.79.1.2, 2010-07-10 18:11:54+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    [Bug 1581] missed one previously
 
 ChangeSet@1.2170, 2010-07-09 23:35:54+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
   updated output of ntpdbase-opts.def
