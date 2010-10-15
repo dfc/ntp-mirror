@@ -20,7 +20,6 @@
 # subdir to warn folks if there is another version there.
 
 
-
 VPATH = @srcdir@
 pkgdatadir = $(datadir)/@PACKAGE@
 pkgincludedir = $(includedir)/@PACKAGE@
@@ -41,9 +40,8 @@ POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
 EXTRA_PROGRAMS = ntpsnmpd$(EXEEXT)
-DIST_COMMON = README $(noinst_HEADERS) $(srcdir)/Makefile.am \
-	$(srcdir)/Makefile.in $(top_srcdir)/bincheck.mf \
-	$(top_srcdir)/depsver.mf
+DIST_COMMON = README $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
+	$(top_srcdir)/bincheck.mf $(top_srcdir)/depsver.mf
 subdir = ntpsnmpd
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/libopts/m4/libopts.m4 \
@@ -111,7 +109,6 @@ man1dir = $(mandir)/man1
 NROFF = nroff
 MANS = $(man_MANS)
 DATA = $(noinst_DATA)
-HEADERS = $(noinst_HEADERS)
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
@@ -262,9 +259,9 @@ AUTOMAKE_OPTIONS =
 @NTP_BINSUBDIR_IS_BIN_TRUE@bin_PROGRAMS = @MAKE_NTPSNMPD@
 @NTP_BINSUBDIR_IS_BIN_FALSE@sbin_PROGRAMS = @MAKE_NTPSNMPD@
 ntpsnmpd_SOURCES = netsnmp_daemonize.c ntpsnmpd.c ntpSnmpSubagentObject.c \
-			ntpsnmpd-opts.c ntpsnmpd-opts.h
+		ntpsnmpd-opts.c ntpsnmpd-opts.h ntpSnmpSubagentObject.h \
+		ntp_snmp.h
 
-noinst_HEADERS = ntpSnmpSubagentObject.h
 # HMS: we probably want a version.o file here, too.
 LDADD = ../ntpq/libntpq.a ../libntp/libntp.a @LCRYPTO@ @SNMP_LIBS@ \
 		$(LIBOPTS_LDADD)
@@ -590,7 +587,7 @@ distdir: $(DISTFILES)
 check-am: all-am
 check: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) check-am
-all-am: Makefile $(PROGRAMS) $(MANS) $(DATA) $(HEADERS)
+all-am: Makefile $(PROGRAMS) $(MANS) $(DATA)
 installdirs:
 	for dir in "$(DESTDIR)$(bindir)" "$(DESTDIR)$(sbindir)" "$(DESTDIR)$(man1dir)"; do \
 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \

@@ -1,3 +1,348 @@
+ChangeSet@1.2260, 2010-10-15 07:18:13+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P64
+  TAG: NTP_4_2_7P64
+
+  ChangeLog@1.681, 2010-10-15 07:18:08+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P64
+
+  ntpd/ntpd-opts.c@1.67, 2010-10-15 07:18:08+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P64
+
+  ntpd/ntpd-opts.h@1.67, 2010-10-15 07:18:08+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P64
+
+  ntpd/ntpd-opts.texi@1.66, 2010-10-15 07:18:08+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P64
+
+  ntpd/ntpd.1@1.66, 2010-10-15 07:18:08+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P64
+
+  ntpdc/ntpdc-opts.c@1.65, 2010-10-15 07:18:08+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P64
+
+  ntpdc/ntpdc-opts.h@1.65, 2010-10-15 07:18:08+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P64
+
+  ntpdc/ntpdc-opts.texi@1.65, 2010-10-15 07:18:08+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P64
+
+  ntpdc/ntpdc.1@1.65, 2010-10-15 07:18:09+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P64
+
+  ntpq/ntpq-opts.c@1.65, 2010-10-15 07:18:09+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P64
+
+  ntpq/ntpq-opts.h@1.65, 2010-10-15 07:18:09+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P64
+
+  ntpq/ntpq-opts.texi@1.65, 2010-10-15 07:18:09+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P64
+
+  ntpq/ntpq.1@1.65, 2010-10-15 07:18:09+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P64
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.65, 2010-10-15 07:18:09+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P64
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.65, 2010-10-15 07:18:09+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P64
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.65, 2010-10-15 07:18:09+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P64
+
+  ntpsnmpd/ntpsnmpd.1@1.65, 2010-10-15 07:18:09+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P64
+
+  packageinfo.sh@1.66, 2010-10-15 07:18:09+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P64
+
+  sntp/sntp-opts.c@1.65, 2010-10-15 07:18:09+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P64
+
+  sntp/sntp-opts.h@1.65, 2010-10-15 07:18:09+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P64
+
+  sntp/sntp-opts.texi@1.65, 2010-10-15 07:18:09+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P64
+
+  sntp/sntp.1@1.65, 2010-10-15 07:18:09+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P64
+
+  sntp/sntp.html@1.65, 2010-10-15 07:18:09+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P64
+
+  util/ntp-keygen-opts.c@1.62, 2010-10-15 07:18:09+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P64
+
+  util/ntp-keygen-opts.h@1.62, 2010-10-15 07:18:09+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P64
+
+  util/ntp-keygen-opts.texi@1.65, 2010-10-15 07:18:09+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P64
+
+  util/ntp-keygen.1@1.65, 2010-10-15 07:18:09+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P64
+
+ChangeSet@1.2259, 2010-10-15 03:00:04-04:00, stenn@deacon.udel.edu +1 -0
+  typo cleanup
+
+  ChangeLog@1.680, 2010-10-15 02:59:58-04:00, stenn@deacon.udel.edu +2 -2
+    typo cleanup
+
+ChangeSet@1.2258, 2010-10-15 02:56:35-04:00, stenn@deacon.udel.edu +8 -0
+  Documentation updates from Dave Mills
+
+  html/authopt.html@1.65, 2010-10-15 02:55:34-04:00, stenn@deacon.udel.edu +4 -4
+    Documentation updates from Dave Mills
+
+  html/confopt.html@1.53, 2010-10-15 02:55:34-04:00, stenn@deacon.udel.edu +9 -9
+    Documentation updates from Dave Mills
+
+  html/decode.html@1.17, 2010-10-15 02:55:34-04:00, stenn@deacon.udel.edu +15 -15
+    Documentation updates from Dave Mills
+
+  html/drivers/driver16.html@1.11, 2010-10-15 02:55:53-04:00, stenn@deacon.udel.edu +24 -24
+    Documentation updates from Dave Mills
+
+  html/drivers/driver2.html@1.12, 2010-10-15 02:55:53-04:00, stenn@deacon.udel.edu +50 -50
+    Documentation updates from Dave Mills
+
+  html/drivers/driver5.html@1.13, 2010-10-15 02:55:53-04:00, stenn@deacon.udel.edu +65 -65
+    Documentation updates from Dave Mills
+
+  html/pic/fig_3_1.gif@1.2, 2010-10-15 02:56:12-04:00, stenn@deacon.udel.edu +232 -527
+    Documentation updates from Dave Mills
+
+  html/warp.html@1.12, 2010-10-15 02:55:35-04:00, stenn@deacon.udel.edu +3 -2
+    Documentation updates from Dave Mills
+
+ChangeSet@1.2257, 2010-10-15 02:24:55-04:00, stenn@deacon.udel.edu +3 -0
+  Remove 'calldelay' and 'sign' keywords (Dave Mills)
+
+  ChangeLog@1.679, 2010-10-15 02:23:20-04:00, stenn@deacon.udel.edu +1 -0
+    Remove 'calldelay' and 'sign' keywords (Dave Mills)
+
+  include/ntp_crypto.h@1.50, 2010-10-15 02:23:20-04:00, stenn@deacon.udel.edu +3 -4
+    Remove 'calldelay' and 'sign' keywords (Dave Mills)
+
+  ntpd/ntp_config.c@1.266, 2010-10-15 02:23:20-04:00, stenn@deacon.udel.edu +1 -5
+    Remove 'calldelay' and 'sign' keywords (Dave Mills)
+
+ChangeSet@1.2256, 2010-10-15 01:56:16+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
+  removed unused "calldelay" and "sign" tokens from keyword
+    scanner, yet to be removed from parser once DLM's update
+    to ntp_config.c is integrated.
+
+  ntpd/keyword-gen-utd@1.8, 2010-10-15 01:56:16+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    removed unused "calldelay" and "sign" tokens from keyword
+      scanner, yet to be removed from parser once DLM's update
+      to ntp_config.c is integrated.
+
+  ntpd/keyword-gen.c@1.13, 2010-10-15 01:56:16+00:00, davehart@shiny.ad.hartbrothers.com +0 -2
+    removed unused "calldelay" and "sign" tokens from keyword
+      scanner, yet to be removed from parser once DLM's update
+      to ntp_config.c is integrated.
+
+  ntpd/ntp_keyword.h@1.10, 2010-10-15 01:56:16+00:00, davehart@shiny.ad.hartbrothers.com +571 -579
+    removed unused "calldelay" and "sign" tokens from keyword
+      scanner, yet to be removed from parser once DLM's update
+      to ntp_config.c is integrated.
+
+ChangeSet@1.2255, 2010-10-15 00:23:01+00:00, davehart@shiny.ad.hartbrothers.com +6 -0
+  [Bug 1663] ntpdsim should not open net sockets.
+
+  ChangeLog@1.678, 2010-10-15 00:23:00+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1663] ntpdsim should not open net sockets.
+
+  include/ntp_data_structures.h@1.8, 2010-10-15 00:23:00+00:00, davehart@shiny.ad.hartbrothers.com +13 -9
+    [Bug 1663] ntpdsim should not open net sockets.
+
+  ntpd/ntp_data_structures.c@1.13, 2010-10-15 00:23:00+00:00, davehart@shiny.ad.hartbrothers.com +4 -6
+    [Bug 1663] ntpdsim should not open net sockets.
+
+  ntpd/ntp_io.c@1.323, 2010-10-15 00:23:00+00:00, davehart@shiny.ad.hartbrothers.com +4 -4
+    [Bug 1663] ntpdsim should not open net sockets.
+
+  ntpd/ntp_timer.c@1.61, 2010-10-15 00:23:00+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    [Bug 1663] ntpdsim should not open net sockets.
+
+  ntpd/ntpsim.c@1.25, 2010-10-15 00:23:00+00:00, davehart@shiny.ad.hartbrothers.com +102 -89
+    [Bug 1663] ntpdsim should not open net sockets.
+
+ChangeSet@1.2082.4.116, 2010-10-14 19:13:29+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  [Bug 1659] Need CLOCK_TRUETIME not CLOCK_TRUE.
+
+  ChangeLog@1.496.26.86, 2010-10-14 19:13:28+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1659] Need CLOCK_TRUETIME not CLOCK_TRUE.
+
+  ports/winnt/include/config.h@1.79.1.3, 2010-10-14 19:13:28+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    [Bug 1659] Need CLOCK_TRUETIME not CLOCK_TRUE.
+
+ChangeSet@1.2082.4.115, 2010-10-14 14:47:37+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  constantly more fun
+
+  ntpq/libntpq.c@1.3.1.4, 2010-10-14 14:47:37+00:00, davehart@shiny.ad.hartbrothers.com +6 -6
+    constantly more fun
+
+ChangeSet@1.2252, 2010-10-14 14:32:58+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  correct prior merge of ntpq.c
+
+  ntpq/libntpq.c@1.7, 2010-10-14 14:32:57+00:00, davehart@shiny.ad.hartbrothers.com +6 -6
+    more const fun
+
+  ntpq/ntpq.c@1.118, 2010-10-14 14:32:57+00:00, davehart@shiny.ad.hartbrothers.com +0 -70
+    correct prior merge of ntpq.c
+
+ChangeSet@1.2082.4.114, 2010-10-14 14:07:21+00:00, davehart@shiny.ad.hartbrothers.com +8 -0
+  const additions needed for ntp-dev
+
+  ChangeLog@1.496.26.85, 2010-10-14 14:07:20+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1665] is_anycast() u_int32_t should be u_int32.
+    const additions needed for ntp-dev
+
+  ntpd/ntp_io.c@1.306.1.6, 2010-10-14 14:07:20+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    [Bug 1665] is_anycast() u_int32_t should be u_int32.
+
+  ntpq/libntpq.c@1.3.1.3, 2010-10-14 14:07:20+00:00, davehart@shiny.ad.hartbrothers.com +66 -62
+    const additions needed for ntp-dev
+
+  ntpq/libntpq.h@1.3.1.2, 2010-10-14 14:07:20+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    const additions needed for ntp-dev
+
+  ntpq/libntpq_subs.c@1.2.1.1, 2010-10-14 14:07:20+00:00, davehart@shiny.ad.hartbrothers.com +13 -3
+    const additions needed for ntp-dev
+
+  ntpq/ntpq-subs.c@1.39.2.4, 2010-10-14 14:07:20+00:00, davehart@shiny.ad.hartbrothers.com +42 -38
+    const additions needed for ntp-dev
+
+  ntpq/ntpq.c@1.97.1.6, 2010-10-14 14:07:20+00:00, davehart@shiny.ad.hartbrothers.com +144 -84
+    const additions needed for ntp-dev
+
+  ntpq/ntpq.h@1.10.1.3, 2010-10-14 14:07:20+00:00, davehart@shiny.ad.hartbrothers.com +7 -3
+    const additions needed for ntp-dev
+
+ChangeSet@1.2082.4.113, 2010-10-14 09:38:42+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
+  ntpsnmpd, libntpq warning cleanup.
+  
+
+  ChangeLog@1.496.26.84, 2010-10-14 09:38:41+00:00, davehart@shiny.ad.hartbrothers.com +5 -1
+    ntpsnmpd, libntpq warning cleanup.
+    
+
+  ntpq/libntpq.c@1.3.1.2, 2010-10-14 09:38:41+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    ntpsnmpd, libntpq warning cleanup.
+    
+
+  ntpsnmpd/ntpsnmpd.c@1.3.1.3, 2010-10-14 09:38:41+00:00, davehart@shiny.ad.hartbrothers.com +1 -2
+    ntpsnmpd, libntpq warning cleanup.
+    
+
+ChangeSet@1.2082.4.112, 2010-10-14 07:51:07+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_6P3_RC3
+  TAG: NTP_4_2_6P3_RC3
+
+  ChangeLog@1.496.26.83, 2010-10-14 07:51:01+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_6P3_RC3
+
+  ntpd/ntpd-opts.c@1.248.19.1, 2010-10-14 07:51:01+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC3
+
+  ntpd/ntpd-opts.h@1.248.19.1, 2010-10-14 07:51:02+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P3_RC3
+
+  ntpd/ntpd-opts.texi@1.246.19.1, 2010-10-14 07:51:02+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC3
+
+  ntpd/ntpd.1@1.246.19.1, 2010-10-14 07:51:02+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC3
+
+  ntpdc/ntpdc-opts.c@1.244.19.1, 2010-10-14 07:51:02+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC3
+
+  ntpdc/ntpdc-opts.h@1.244.19.1, 2010-10-14 07:51:02+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P3_RC3
+
+  ntpdc/ntpdc-opts.texi@1.243.19.1, 2010-10-14 07:51:02+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC3
+
+  ntpdc/ntpdc.1@1.243.19.1, 2010-10-14 07:51:02+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC3
+
+  ntpq/ntpq-opts.c@1.245.19.1, 2010-10-14 07:51:02+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC3
+
+  ntpq/ntpq-opts.h@1.245.19.1, 2010-10-14 07:51:02+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P3_RC3
+
+  ntpq/ntpq-opts.texi@1.244.19.1, 2010-10-14 07:51:02+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC3
+
+  ntpq/ntpq.1@1.244.19.1, 2010-10-14 07:51:02+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC3
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.123.20.1, 2010-10-14 07:51:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC3
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.123.20.1, 2010-10-14 07:51:03+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P3_RC3
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.123.20.1, 2010-10-14 07:51:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC3
+
+  ntpsnmpd/ntpsnmpd.1@1.122.20.1, 2010-10-14 07:51:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC3
+
+  packageinfo.sh@1.255.21.1, 2010-10-14 07:51:03+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_6P3_RC3
+
+  sntp/sntp-opts.c@1.117.19.1, 2010-10-14 07:51:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC3
+
+  sntp/sntp-opts.h@1.117.19.1, 2010-10-14 07:51:04+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P3_RC3
+
+  sntp/sntp-opts.texi@1.117.19.1, 2010-10-14 07:51:04+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_6P3_RC3
+
+  sntp/sntp.1@1.117.19.1, 2010-10-14 07:51:04+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC3
+
+  sntp/sntp.html@1.7.19.1, 2010-10-14 07:51:04+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_6P3_RC3
+
+  util/ntp-keygen-opts.c@1.247.19.1, 2010-10-14 07:51:04+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC3
+
+  util/ntp-keygen-opts.h@1.247.19.1, 2010-10-14 07:51:04+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P3_RC3
+
+  util/ntp-keygen-opts.texi@1.246.19.1, 2010-10-14 07:51:05+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC3
+
+  util/ntp-keygen.1@1.246.19.1, 2010-10-14 07:51:05+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC3
+
+ChangeSet@1.2082.4.110, 2010-10-14 03:19:02-04:00, stenn@deacon.udel.edu +1 -0
+  Update the NEWS file
+
+  NEWS@1.109, 2010-10-14 03:18:47-04:00, stenn@deacon.udel.edu +5 -1
+    Update the NEWS file
+
+ChangeSet@1.2249, 2010-10-14 02:34:58-04:00, stenn@deacon.udel.edu +4 -0
+  Documentation updates from Dave Mills
+
+  ChangeLog@1.674, 2010-10-14 02:34:41-04:00, stenn@deacon.udel.edu +1 -0
+    Documentation updates from Dave Mills
+
+  html/assoc.html@1.34, 2010-10-14 02:34:47-04:00, stenn@deacon.udel.edu +14 -18
+    Documentation updates from Dave Mills
+
+  html/decode.html@1.16, 2010-10-14 02:34:47-04:00, stenn@deacon.udel.edu +3 -3
+    Documentation updates from Dave Mills
+
+  html/warp.html@1.11, 2010-10-14 02:34:49-04:00, stenn@deacon.udel.edu +2 -2
+    Documentation updates from Dave Mills
+
 ChangeSet@1.2248, 2010-10-13 10:13:18+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P63
   TAG: NTP_4_2_7P63
@@ -278,10 +623,10 @@ ChangeSet@1.2082.22.17, 2010-10-11 20:18:23-07:00, stenn@stenn.ntp.org +2 -0
   ntpd/refclock_ripencc.c@1.7.1.3, 2010-10-11 20:18:17-07:00, stenn@stenn.ntp.org +1909 -1530
     [Bug 1661]: Re-indent refclock_ripencc.c
 
-ChangeSet@1.2082.25.1, 2010-10-11 22:36:49-04:00, stenn@deacon.udel.edu +3 -0
+ChangeSet@1.2082.26.1, 2010-10-11 22:36:49-04:00, stenn@deacon.udel.edu +3 -0
   [Bug 1660]: On some systems, test is in /usr/bin, not /bin
 
-  ChangeLog@1.496.50.1, 2010-10-11 22:34:47-04:00, stenn@deacon.udel.edu +1 -0
+  ChangeLog@1.496.51.1, 2010-10-11 22:34:47-04:00, stenn@deacon.udel.edu +1 -0
     [Bug 1660]: On some systems, test is in /usr/bin, not /bin
 
   Makefile.am@1.93.1.1, 2010-10-11 22:34:47-04:00, stenn@deacon.udel.edu +1 -1
@@ -289,6 +634,38 @@ ChangeSet@1.2082.25.1, 2010-10-11 22:36:49-04:00, stenn@deacon.udel.edu +3 -0
 
   configure.ac@1.465.1.13, 2010-10-11 22:34:48-04:00, stenn@deacon.udel.edu +3 -1
     [Bug 1660]: On some systems, test is in /usr/bin, not /bin
+
+ChangeSet@1.2082.25.1, 2010-10-12 01:16:13+00:00, davehart@shiny.ad.hartbrothers.com +9 -0
+  [Bug 1584]: ntpsnmpd OID must be mib-2.197.
+
+  ChangeLog@1.496.50.1, 2010-10-12 01:16:12+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1584]: ntpsnmpd OID must be mib-2.197.
+
+  ntpq/libntpq.c@1.3.1.1, 2010-10-12 01:16:12+00:00, davehart@shiny.ad.hartbrothers.com +58 -65
+    [Bug 1584]: ntpsnmpd OID must be mib-2.197.
+
+  ntpq/libntpq.h@1.3.1.1, 2010-10-12 01:16:12+00:00, davehart@shiny.ad.hartbrothers.com +5 -5
+    [Bug 1584]: ntpsnmpd OID must be mib-2.197.
+
+  ntpsnmpd/Makefile.am@1.16.1.4, 2010-10-12 01:16:12+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    [Bug 1584]: ntpsnmpd OID must be mib-2.197.
+
+  ntpsnmpd/ntpSnmpSubagentObject.c@1.3.1.1, 2010-10-12 01:16:12+00:00, davehart@shiny.ad.hartbrothers.com +96 -285
+    [Bug 1584]: ntpsnmpd OID must be mib-2.197.
+
+  ntpsnmpd/ntpSnmpSubagentObject.h@1.3, 2010-10-12 01:16:12+00:00, davehart@shiny.ad.hartbrothers.com +41 -35
+    [Bug 1584]: ntpsnmpd OID must be mib-2.197.
+
+  ntpsnmpd/ntp_snmp.h@1.1, 2010-10-12 01:16:06+00:00, davehart@shiny.ad.hartbrothers.com +34 -0
+    work around PACKAGE_* redefinitions with net-snmp/net-snmp-config.h
+
+  ntpsnmpd/ntp_snmp.h@1.0, 2010-10-12 01:16:06+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+
+  ntpsnmpd/ntpsnmpd.c@1.3.1.2, 2010-10-12 01:16:12+00:00, davehart@shiny.ad.hartbrothers.com +1 -11
+    [Bug 1584]: ntpsnmpd OID must be mib-2.197.
+
+  ntpsnmpd/ntpv4-mib.mib@1.2, 2010-10-12 01:16:12+00:00, davehart@shiny.ad.hartbrothers.com +244 -357
+    [Bug 1584]: ntpsnmpd OID must be mib-2.197.
 
 ChangeSet@1.2082.24.3, 2010-10-09 10:10:10+00:00, davehart@shiny.ad.hartbrothers.com +8 -0
   [Bug 1567] Support Arbiter 1093C Satellite Clock on Windows.
