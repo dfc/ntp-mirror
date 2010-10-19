@@ -1,3 +1,250 @@
+ChangeSet@1.2270, 2010-10-19 10:10:23+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P66
+  TAG: NTP_4_2_7P66
+
+  ChangeLog@1.687, 2010-10-19 10:10:20+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P66
+
+  ntpd/ntpd-opts.c@1.69, 2010-10-19 10:10:21+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P66
+
+  ntpd/ntpd-opts.h@1.69, 2010-10-19 10:10:21+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P66
+
+  ntpd/ntpd-opts.texi@1.68, 2010-10-19 10:10:21+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P66
+
+  ntpd/ntpd.1@1.68, 2010-10-19 10:10:21+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P66
+
+  ntpdc/ntpdc-opts.c@1.67, 2010-10-19 10:10:21+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P66
+
+  ntpdc/ntpdc-opts.h@1.67, 2010-10-19 10:10:21+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P66
+
+  ntpdc/ntpdc-opts.texi@1.67, 2010-10-19 10:10:21+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P66
+
+  ntpdc/ntpdc.1@1.67, 2010-10-19 10:10:21+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P66
+
+  ntpq/ntpq-opts.c@1.67, 2010-10-19 10:10:21+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P66
+
+  ntpq/ntpq-opts.h@1.67, 2010-10-19 10:10:21+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P66
+
+  ntpq/ntpq-opts.texi@1.67, 2010-10-19 10:10:21+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P66
+
+  ntpq/ntpq.1@1.67, 2010-10-19 10:10:21+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P66
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.67, 2010-10-19 10:10:21+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P66
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.67, 2010-10-19 10:10:21+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P66
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.67, 2010-10-19 10:10:21+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P66
+
+  ntpsnmpd/ntpsnmpd.1@1.67, 2010-10-19 10:10:21+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P66
+
+  packageinfo.sh@1.68, 2010-10-19 10:10:21+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P66
+
+  sntp/sntp-opts.c@1.67, 2010-10-19 10:10:21+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P66
+
+  sntp/sntp-opts.h@1.67, 2010-10-19 10:10:21+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P66
+
+  sntp/sntp-opts.texi@1.67, 2010-10-19 10:10:21+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P66
+
+  sntp/sntp.1@1.67, 2010-10-19 10:10:21+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P66
+
+  sntp/sntp.html@1.67, 2010-10-19 10:10:21+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P66
+
+  util/ntp-keygen-opts.c@1.64, 2010-10-19 10:10:21+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P66
+
+  util/ntp-keygen-opts.h@1.64, 2010-10-19 10:10:21+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P66
+
+  util/ntp-keygen-opts.texi@1.67, 2010-10-19 10:10:21+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P66
+
+  util/ntp-keygen.1@1.67, 2010-10-19 10:10:21+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P66
+
+ChangeSet@1.2269, 2010-10-18 20:15:32-04:00, stenn@deacon.udel.edu +1 -0
+  ChangeLog:
+    * [Bug 1277] Provide and use O(1) FIFOs, esp. in the config tree code.
+    * Remove unused 'bias' configuration keyword.
+
+  ChangeLog@1.686, 2010-10-18 20:15:03-04:00, stenn@deacon.udel.edu +2 -0
+    * [Bug 1277] Provide and use O(1) FIFOs, esp. in the config tree code.
+    * Remove unused 'bias' configuration keyword.
+
+ChangeSet@1.2268, 2010-10-18 15:42:39+00:00, davehart@shiny.ad.hartbrothers.com +5 -0
+  quiet ntpdsim build warnings about unused funcs,
+
+  include/ntpd.h@1.142, 2010-10-18 15:42:38+00:00, davehart@shiny.ad.hartbrothers.com +1 -2
+    quiet ntpdsim build warnings about unused funcs,
+
+  libntp/emalloc.c@1.13, 2010-10-18 15:42:38+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+    warning pointed out bug
+
+  ntpd/ntp_config.c@1.269, 2010-10-18 15:42:38+00:00, davehart@shiny.ad.hartbrothers.com +57 -33
+    quiet ntpdsim build warnings about unused funcs,
+
+  ntpd/ntp_scanner.h@1.17, 2010-10-18 15:42:38+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+    quiet ntpdsim build warnings about unused funcs,
+
+  ntpd/ntpsim.c@1.28, 2010-10-18 15:42:38+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    do the header shuffle
+
+ChangeSet@1.2267, 2010-10-18 14:49:33+00:00, davehart@shiny.ad.hartbrothers.com +6 -0
+  merge cleanup, simulator fixes, generated files from previous merge.
+
+  ntpd/keyword-gen-utd@1.11, 2010-10-18 14:49:31+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    generated from previously merged source
+
+  ntpd/ntp_keyword.h@1.13, 2010-10-18 14:49:31+00:00, davehart@shiny.ad.hartbrothers.com +705 -709
+    generated from previously merged source
+
+  ntpd/ntp_parser.c@1.66, 2010-10-18 14:49:31+00:00, davehart@shiny.ad.hartbrothers.com +1298 -1173
+    generated from previously merged source
+
+  ntpd/ntp_parser.h@1.40, 2010-10-18 14:49:32+00:00, davehart@shiny.ad.hartbrothers.com +133 -132
+    generated from previously merged source
+
+  ntpd/ntp_parser.y@1.59, 2010-10-18 14:49:32+00:00, davehart@shiny.ad.hartbrothers.com +6 -3
+    merge cleanup, simulator fix
+
+  ntpd/ntpsim.c@1.27, 2010-10-18 14:49:32+00:00, davehart@shiny.ad.hartbrothers.com +5 -5
+    correct config tree walking in simulator
+
+ChangeSet@1.2196.1.1, 2010-10-18 13:35:09+00:00, davehart@shiny.ad.hartbrothers.com +27 -0
+  [Bug 1277] provide, use O(1) FIFOs, esp. config tree.
+
+  include/Makefile.am@1.40, 2010-10-18 13:35:05+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    [Bug 1277] provide, use O(1) FIFOs, esp. config tree.
+      rename ntp_data_structures.[ch] to ntp_prio_q.[ch], use
+      them only in the simulator build
+
+  include/ntp_config.h@1.69, 2010-10-18 13:35:05+00:00, davehart@shiny.ad.hartbrothers.com +204 -125
+    [Bug 1277] provide, use O(1) FIFOs, esp. config tree.
+
+  include/ntp_lists.h@1.8, 2010-10-18 13:35:05+00:00, davehart@shiny.ad.hartbrothers.com +142 -1
+    [Bug 1277] provide, use O(1) FIFOs, esp. config tree.
+    Add FIFO (A.K.A. STAILQ) macros.
+
+  include/ntp_prio_q.h@1.7.1.2, 2010-10-18 13:35:05+00:00, davehart@shiny.ad.hartbrothers.com +6 -7
+    [Bug 1277] provide, use O(1) FIFOs, esp. config tree.
+      rename ntp_data_structures.[ch] to ntp_prio_q.[ch], use
+      them only in the simulator build
+
+  include/ntp_prio_q.h@1.7.1.1, 2010-10-18 13:20:17+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: include/ntp_data_structures.h -> include/ntp_prio_q.h
+
+  include/ntp_stdlib.h@1.47, 2010-10-18 13:35:05+00:00, davehart@shiny.ad.hartbrothers.com +5 -3
+    [Bug 1277] provide, use O(1) FIFOs, esp. config tree.
+    add emalloc_zero()
+
+  include/ntpd.h@1.141, 2010-10-18 13:35:05+00:00, davehart@shiny.ad.hartbrothers.com +2 -1
+    [Bug 1277] provide, use O(1) FIFOs, esp. config tree.
+
+  include/ntpsim.h@1.15, 2010-10-18 13:35:05+00:00, davehart@shiny.ad.hartbrothers.com +22 -17
+    [Bug 1277] provide, use O(1) FIFOs, esp. config tree.
+
+  libntp/emalloc.c@1.12, 2010-10-18 13:35:05+00:00, davehart@shiny.ad.hartbrothers.com +20 -3
+    [Bug 1277] provide, use O(1) FIFOs, esp. config tree.
+    add emalloc_zero()
+
+  libntp/ntp_rfc2553.c@1.43, 2010-10-18 13:35:05+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    [Bug 1277] provide, use O(1) FIFOs, esp. config tree.
+    add emalloc_zero()
+
+  ntpd/Makefile.am@1.94, 2010-10-18 13:35:05+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    [Bug 1277] provide, use O(1) FIFOs, esp. config tree.
+      rename ntp_data_structures.[ch] to ntp_prio_q.[ch], use
+      them only in the simulator build
+
+  ntpd/complete.conf@1.9, 2010-10-18 13:35:05+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    [Bug 1277] provide, use O(1) FIFOs, esp. config tree.
+    Remove unused "bias" server option
+
+  ntpd/keyword-gen-utd@1.7.1.1, 2010-10-18 13:35:05+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    [Bug 1277] provide, use O(1) FIFOs, esp. config tree.
+    Remove unused "bias" server option
+
+  ntpd/keyword-gen.c@1.12.1.1, 2010-10-18 13:35:05+00:00, davehart@shiny.ad.hartbrothers.com +0 -1
+    [Bug 1277] provide, use O(1) FIFOs, esp. config tree.
+    Remove unused "bias" server option
+
+  ntpd/ntp_config.c@1.263.1.1, 2010-10-18 13:35:05+00:00, davehart@shiny.ad.hartbrothers.com +1008 -1074
+    [Bug 1277] provide, use O(1) FIFOs, esp. config tree.
+
+  ntpd/ntp_filegen.c@1.17.1.1, 2010-10-18 13:35:05+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    whitespace only
+
+  ntpd/ntp_keyword.h@1.9.1.1, 2010-10-18 13:35:06+00:00, davehart@shiny.ad.hartbrothers.com +713 -717
+    [Bug 1277] provide, use O(1) FIFOs, esp. config tree.
+    Remove unused "bias" server option
+
+  ntpd/ntp_parser.c@1.59.1.1, 2010-10-18 13:35:06+00:00, davehart@shiny.ad.hartbrothers.com +1508 -1373
+    [Bug 1277] provide, use O(1) FIFOs, esp. config tree.
+
+  ntpd/ntp_parser.h@1.37.1.1, 2010-10-18 13:35:06+00:00, davehart@shiny.ad.hartbrothers.com +139 -139
+    [Bug 1277] provide, use O(1) FIFOs, esp. config tree.
+
+  ntpd/ntp_parser.y@1.54.1.1, 2010-10-18 13:35:06+00:00, davehart@shiny.ad.hartbrothers.com +483 -263
+    [Bug 1277] provide, use O(1) FIFOs, esp. config tree.
+
+  ntpd/ntp_prio_q.c@1.12.1.2, 2010-10-18 13:35:06+00:00, davehart@shiny.ad.hartbrothers.com +5 -5
+    [Bug 1277] provide, use O(1) FIFOs, esp. config tree.
+      rename ntp_data_structures.[ch] to ntp_prio_q.[ch], use
+      them only in the simulator build
+
+  ntpd/ntp_prio_q.c@1.12.1.1, 2010-10-18 13:20:16+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: ntpd/ntp_data_structures.c -> ntpd/ntp_prio_q.c
+
+  ntpd/ntp_scanner.h@1.16, 2010-10-18 13:35:07+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    [Bug 1277] provide, use O(1) FIFOs, esp. config tree.
+
+  ntpd/ntp_util.c@1.82.1.1, 2010-10-18 13:35:07+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    whitespace only
+
+  ntpd/ntpsim.c@1.24.1.1, 2010-10-18 13:35:07+00:00, davehart@shiny.ad.hartbrothers.com +0 -1
+    [Bug 1277] provide, use O(1) FIFOs, esp. config tree.
+
+  ports/winnt/vc6/ntpd.dsp@1.47.1.1, 2010-10-18 13:35:07+00:00, davehart@shiny.ad.hartbrothers.com +0 -4
+    [Bug 1277] provide, use O(1) FIFOs, esp. config tree.
+    Rename ntp_data_structures.[ch] to ntp_prio_q.[ch], use
+      them only in the simulator build.
+
+  ports/winnt/vs2003/ntpd.vcproj@1.8.1.1, 2010-10-18 13:35:07+00:00, davehart@shiny.ad.hartbrothers.com +0 -22
+    [Bug 1277] provide, use O(1) FIFOs, esp. config tree.
+    Rename ntp_data_structures.[ch] to ntp_prio_q.[ch], use
+      them only in the simulator build.
+
+  ports/winnt/vs2005/ntpd.vcproj@1.8.1.1, 2010-10-18 13:35:07+00:00, davehart@shiny.ad.hartbrothers.com +0 -22
+    [Bug 1277] provide, use O(1) FIFOs, esp. config tree.
+    Rename ntp_data_structures.[ch] to ntp_prio_q.[ch], use
+      them only in the simulator build.
+
+  ports/winnt/vs2008/ntpd/ntpd.vcproj@1.27.1.1, 2010-10-18 13:35:07+00:00, davehart@shiny.ad.hartbrothers.com +24 -8
+    [Bug 1277] provide, use O(1) FIFOs, esp. config tree.
+    Rename ntp_data_structures.[ch] to ntp_prio_q.[ch], use
+      them only in the simulator build.
+
 ChangeSet@1.2265, 2010-10-16 05:20:17+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P65
   TAG: NTP_4_2_7P65

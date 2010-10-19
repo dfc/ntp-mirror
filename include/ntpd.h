@@ -331,7 +331,7 @@ extern int	config_priority_override;
 extern int	config_priority;
 #endif
 extern char *ntp_signd_socket;
-extern struct config_tree *cfg_tree_history;
+extern struct config_tree_tag *cfg_tree_history;
 
 #ifdef BC_LIST_FRAMEWORK_NOT_YET_USED
 /*
