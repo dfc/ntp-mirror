@@ -1,3 +1,105 @@
+ChangeSet@1.2273, 2010-10-21 10:10:05+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P67
+  TAG: NTP_4_2_7P67
+
+  ChangeLog@1.689, 2010-10-21 10:10:02+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P67
+
+  ntpd/ntpd-opts.c@1.70, 2010-10-21 10:10:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P67
+
+  ntpd/ntpd-opts.h@1.70, 2010-10-21 10:10:03+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P67
+
+  ntpd/ntpd-opts.texi@1.69, 2010-10-21 10:10:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P67
+
+  ntpd/ntpd.1@1.69, 2010-10-21 10:10:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P67
+
+  ntpdc/ntpdc-opts.c@1.68, 2010-10-21 10:10:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P67
+
+  ntpdc/ntpdc-opts.h@1.68, 2010-10-21 10:10:03+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P67
+
+  ntpdc/ntpdc-opts.texi@1.68, 2010-10-21 10:10:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P67
+
+  ntpdc/ntpdc.1@1.68, 2010-10-21 10:10:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P67
+
+  ntpq/ntpq-opts.c@1.68, 2010-10-21 10:10:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P67
+
+  ntpq/ntpq-opts.h@1.68, 2010-10-21 10:10:03+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P67
+
+  ntpq/ntpq-opts.texi@1.68, 2010-10-21 10:10:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P67
+
+  ntpq/ntpq.1@1.68, 2010-10-21 10:10:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P67
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.68, 2010-10-21 10:10:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P67
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.68, 2010-10-21 10:10:03+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P67
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.68, 2010-10-21 10:10:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P67
+
+  ntpsnmpd/ntpsnmpd.1@1.68, 2010-10-21 10:10:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P67
+
+  packageinfo.sh@1.69, 2010-10-21 10:10:03+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P67
+
+  sntp/sntp-opts.c@1.68, 2010-10-21 10:10:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P67
+
+  sntp/sntp-opts.h@1.68, 2010-10-21 10:10:03+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P67
+
+  sntp/sntp-opts.texi@1.68, 2010-10-21 10:10:03+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P67
+
+  sntp/sntp.1@1.68, 2010-10-21 10:10:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P67
+
+  sntp/sntp.html@1.68, 2010-10-21 10:10:03+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P67
+
+  util/ntp-keygen-opts.c@1.65, 2010-10-21 10:10:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P67
+
+  util/ntp-keygen-opts.h@1.65, 2010-10-21 10:10:03+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P67
+
+  util/ntp-keygen-opts.texi@1.68, 2010-10-21 10:10:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P67
+
+  util/ntp-keygen.1@1.68, 2010-10-21 10:10:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P67
+
+ChangeSet@1.2272, 2010-10-19 21:30:15+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  Exclude keyword-gen.c and ntp_parser.y from release as well as
+    debug Windows builds.
+
+  ports/winnt/vs2008/ntpd/ntpd.vcproj@1.30, 2010-10-19 21:30:14+00:00, davehart@shiny.ad.hartbrothers.com +16 -0
+    Exclude keyword-gen.c and ntp_parser.y from release as well as
+      debug Windows builds.
+
+ChangeSet@1.2082.4.121, 2010-10-19 21:10:14+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  [Bug 1649] Require NMEA checksum if $GPRMC or previously seen.
+
+  ChangeLog@1.496.26.89, 2010-10-19 21:10:12+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+    [Bug 1649] Require NMEA checksum if $GPRMC or previously seen.
+
+  ntpd/refclock_nmea.c@1.46.1.2, 2010-10-19 21:10:12+00:00, davehart@shiny.ad.hartbrothers.com +104 -56
+    [Bug 1649] Require NMEA checksum if $GPRMC or previously seen.
+
 ChangeSet@1.2270, 2010-10-19 10:10:23+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P66
   TAG: NTP_4_2_7P66
