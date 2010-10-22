@@ -1,3 +1,8 @@
+(4.2.7p68) 2010/10/22 Released by Harlan Stenn <stenn@ntp.org>
+* [Bug 1669] from 4.2.6p3-RC5: NTP fails to compile on IBM AIX 5.3.
+* [Bug 1670] Fix peer->bias and broadcastdelay.
+* Documentation updates from Dave Mills.
+* Documentation EOL cleanup.
 (4.2.7p67) 2010/10/21 Released by Harlan Stenn <stenn@ntp.org>
 * [Bug 1649] from 4.2.6p3-RC5: Require NMEA checksum if $GPRMC or
   previously seen.
@@ -410,8 +415,10 @@
 (4.2.7) 2009/12/09 Released by Harlan Stenn <stenn@ntp.org>
 * [Bug 1407] configure.ac: recent GNU Make -v does not include "version".
 ---
+(4.2.6p3-RC5) 2010/10/22 Released by Harlan Stenn <stenn@ntp.org>
 
 * [Bug 1649] Require NMEA checksum if $GPRMC or previously seen.
+* [Bug 1669] NTP 4.2.6p2 fails to compile on IBM AIX 5.3.
 
 ---
 (4.2.6p3-RC4) 2010/10/16 Released by Harlan Stenn <stenn@ntp.org>
