@@ -1,3 +1,100 @@
+ChangeSet@1.2282, 2010-10-23 10:09:49+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P69
+  TAG: NTP_4_2_7P69
+
+  ChangeLog@1.697, 2010-10-23 10:09:47+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P69
+
+  ntpd/ntpd-opts.c@1.72, 2010-10-23 10:09:47+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P69
+
+  ntpd/ntpd-opts.h@1.72, 2010-10-23 10:09:48+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P69
+
+  ntpd/ntpd-opts.texi@1.71, 2010-10-23 10:09:48+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P69
+
+  ntpd/ntpd.1@1.71, 2010-10-23 10:09:48+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P69
+
+  ntpdc/ntpdc-opts.c@1.70, 2010-10-23 10:09:48+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P69
+
+  ntpdc/ntpdc-opts.h@1.70, 2010-10-23 10:09:48+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P69
+
+  ntpdc/ntpdc-opts.texi@1.70, 2010-10-23 10:09:48+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P69
+
+  ntpdc/ntpdc.1@1.70, 2010-10-23 10:09:48+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P69
+
+  ntpq/ntpq-opts.c@1.70, 2010-10-23 10:09:48+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P69
+
+  ntpq/ntpq-opts.h@1.70, 2010-10-23 10:09:48+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P69
+
+  ntpq/ntpq-opts.texi@1.70, 2010-10-23 10:09:48+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P69
+
+  ntpq/ntpq.1@1.70, 2010-10-23 10:09:48+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P69
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.70, 2010-10-23 10:09:48+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P69
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.70, 2010-10-23 10:09:48+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P69
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.70, 2010-10-23 10:09:48+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P69
+
+  ntpsnmpd/ntpsnmpd.1@1.70, 2010-10-23 10:09:48+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P69
+
+  packageinfo.sh@1.71, 2010-10-23 10:09:48+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P69
+
+  sntp/sntp-opts.c@1.70, 2010-10-23 10:09:48+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P69
+
+  sntp/sntp-opts.h@1.70, 2010-10-23 10:09:48+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P69
+
+  sntp/sntp-opts.texi@1.70, 2010-10-23 10:09:48+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P69
+
+  sntp/sntp.1@1.70, 2010-10-23 10:09:48+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P69
+
+  sntp/sntp.html@1.70, 2010-10-23 10:09:48+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P69
+
+  util/ntp-keygen-opts.c@1.67, 2010-10-23 10:09:48+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P69
+
+  util/ntp-keygen-opts.h@1.67, 2010-10-23 10:09:48+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P69
+
+  util/ntp-keygen-opts.texi@1.70, 2010-10-23 10:09:48+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P69
+
+  util/ntp-keygen.1@1.70, 2010-10-23 10:09:48+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P69
+
+ChangeSet@1.2281, 2010-10-22 14:57:46-04:00, stenn@deacon.udel.edu +3 -0
+  [Bug 1671] Audoomatic delay calibration is sometimes inaccurate
+
+  ChangeLog@1.696, 2010-10-22 14:55:17-04:00, stenn@deacon.udel.edu +1 -0
+    [Bug 1671] Audoomatic delay calibration is sometimes inaccurate
+
+  ntpd/ntp_loopfilter.c@1.159, 2010-10-22 14:55:22-04:00, stenn@deacon.udel.edu +1 -1
+    [Bug 1671] Audoomatic delay calibration is sometimes inaccurate
+
+  ntpd/ntp_proto.c@1.309, 2010-10-22 14:55:22-04:00, stenn@deacon.udel.edu +1 -1
+    [Bug 1671] Audoomatic delay calibration is sometimes inaccurate
+
 ChangeSet@1.2280, 2010-10-22 08:31:07+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P68
   TAG: NTP_4_2_7P68
