@@ -1,3 +1,229 @@
+ChangeSet@1.2297, 2010-10-25 08:33:05+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P71
+  TAG: NTP_4_2_7P71
+
+  ChangeLog@1.710, 2010-10-25 08:33:02+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P71
+
+  ntpd/ntpd-opts.c@1.74, 2010-10-25 08:33:02+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P71
+
+  ntpd/ntpd-opts.h@1.74, 2010-10-25 08:33:02+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P71
+
+  ntpd/ntpd-opts.texi@1.73, 2010-10-25 08:33:02+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P71
+
+  ntpd/ntpd.1@1.73, 2010-10-25 08:33:02+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P71
+
+  ntpdc/ntpdc-opts.c@1.72, 2010-10-25 08:33:02+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P71
+
+  ntpdc/ntpdc-opts.h@1.72, 2010-10-25 08:33:02+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P71
+
+  ntpdc/ntpdc-opts.texi@1.72, 2010-10-25 08:33:02+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P71
+
+  ntpdc/ntpdc.1@1.72, 2010-10-25 08:33:02+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P71
+
+  ntpq/ntpq-opts.c@1.72, 2010-10-25 08:33:02+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P71
+
+  ntpq/ntpq-opts.h@1.72, 2010-10-25 08:33:03+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P71
+
+  ntpq/ntpq-opts.texi@1.72, 2010-10-25 08:33:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P71
+
+  ntpq/ntpq.1@1.72, 2010-10-25 08:33:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P71
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.72, 2010-10-25 08:33:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P71
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.72, 2010-10-25 08:33:03+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P71
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.72, 2010-10-25 08:33:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P71
+
+  ntpsnmpd/ntpsnmpd.1@1.72, 2010-10-25 08:33:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P71
+
+  packageinfo.sh@1.73, 2010-10-25 08:33:03+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P71
+
+  sntp/sntp-opts.c@1.72, 2010-10-25 08:33:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P71
+
+  sntp/sntp-opts.h@1.72, 2010-10-25 08:33:03+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P71
+
+  sntp/sntp-opts.texi@1.72, 2010-10-25 08:33:03+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P71
+
+  sntp/sntp.1@1.72, 2010-10-25 08:33:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P71
+
+  sntp/sntp.html@1.72, 2010-10-25 08:33:03+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P71
+
+  util/ntp-keygen-opts.c@1.69, 2010-10-25 08:33:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P71
+
+  util/ntp-keygen-opts.h@1.69, 2010-10-25 08:33:03+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P71
+
+  util/ntp-keygen-opts.texi@1.72, 2010-10-25 08:33:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P71
+
+  util/ntp-keygen.1@1.72, 2010-10-25 08:33:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P71
+
+ChangeSet@1.2295, 2010-10-25 04:06:09-04:00, stenn@deacon.udel.edu +1 -0
+  merge cleanup
+
+  ChangeLog@1.708, 2010-10-25 04:06:02-04:00, stenn@deacon.udel.edu +3 -0
+    merge cleanup
+
+ChangeSet@1.2082.4.133, 2010-10-25 07:49:22+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_6P3_RC7
+  TAG: NTP_4_2_6P3_RC7
+
+  ChangeLog@1.496.26.97, 2010-10-25 07:49:20+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_6P3_RC7
+
+  ntpd/ntpd-opts.c@1.248.23.1, 2010-10-25 07:49:20+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC7
+
+  ntpd/ntpd-opts.h@1.248.23.1, 2010-10-25 07:49:20+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P3_RC7
+
+  ntpd/ntpd-opts.texi@1.246.23.1, 2010-10-25 07:49:20+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC7
+
+  ntpd/ntpd.1@1.246.23.1, 2010-10-25 07:49:20+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC7
+
+  ntpdc/ntpdc-opts.c@1.244.23.1, 2010-10-25 07:49:20+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC7
+
+  ntpdc/ntpdc-opts.h@1.244.23.1, 2010-10-25 07:49:20+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P3_RC7
+
+  ntpdc/ntpdc-opts.texi@1.243.23.1, 2010-10-25 07:49:20+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC7
+
+  ntpdc/ntpdc.1@1.243.23.1, 2010-10-25 07:49:20+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC7
+
+  ntpq/ntpq-opts.c@1.245.23.1, 2010-10-25 07:49:20+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC7
+
+  ntpq/ntpq-opts.h@1.245.23.1, 2010-10-25 07:49:20+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P3_RC7
+
+  ntpq/ntpq-opts.texi@1.244.23.1, 2010-10-25 07:49:20+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC7
+
+  ntpq/ntpq.1@1.244.23.1, 2010-10-25 07:49:20+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC7
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.123.24.1, 2010-10-25 07:49:20+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC7
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.123.24.1, 2010-10-25 07:49:20+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P3_RC7
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.123.24.1, 2010-10-25 07:49:20+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC7
+
+  ntpsnmpd/ntpsnmpd.1@1.122.24.1, 2010-10-25 07:49:20+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC7
+
+  packageinfo.sh@1.255.25.1, 2010-10-25 07:49:21+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_6P3_RC7
+
+  sntp/sntp-opts.c@1.117.23.1, 2010-10-25 07:49:21+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC7
+
+  sntp/sntp-opts.h@1.117.23.1, 2010-10-25 07:49:21+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P3_RC7
+
+  sntp/sntp-opts.texi@1.117.23.1, 2010-10-25 07:49:21+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_6P3_RC7
+
+  sntp/sntp.1@1.117.23.1, 2010-10-25 07:49:21+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC7
+
+  sntp/sntp.html@1.7.23.1, 2010-10-25 07:49:21+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_6P3_RC7
+
+  util/ntp-keygen-opts.c@1.247.23.1, 2010-10-25 07:49:21+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC7
+
+  util/ntp-keygen-opts.h@1.247.23.1, 2010-10-25 07:49:21+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_6P3_RC7
+
+  util/ntp-keygen-opts.texi@1.246.23.1, 2010-10-25 07:49:21+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC7
+
+  util/ntp-keygen.1@1.246.23.1, 2010-10-25 07:49:21+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_6P3_RC7
+
+ChangeSet@1.2294, 2010-10-25 03:34:31-04:00, stenn@deacon.udel.edu +1 -0
+  merge cleanup
+
+  ChangeLog@1.707, 2010-10-25 03:34:23-04:00, stenn@deacon.udel.edu +0 -1
+    merge cleanup
+
+ChangeSet@1.2082.4.132, 2010-10-25 03:26:31-04:00, stenn@deacon.udel.edu +3 -0
+  Added scripts/checkChangeLog
+
+  ChangeLog@1.496.26.96, 2010-10-25 03:26:25-04:00, stenn@deacon.udel.edu +4 -3
+    Added scripts/checkChangeLog
+
+  scripts/Makefile.am@1.17.1.2, 2010-10-25 03:17:34-04:00, stenn@deacon.udel.edu +1 -0
+    Added scripts/checkChangeLog
+
+  scripts/checkChangeLog@1.1, 2010-10-25 03:16:54-04:00, stenn@deacon.udel.edu +28 -0
+    BitKeeper file /deacon/backroom/ntp-stable/scripts/checkChangeLog
+
+  scripts/checkChangeLog@1.0, 2010-10-25 03:16:54-04:00, stenn@deacon.udel.edu +0 -0
+
+ChangeSet@1.2290.1.1, 2010-10-25 02:19:58-04:00, stenn@deacon.udel.edu +1 -0
+  typo fixes
+
+  ChangeLog@1.703.1.1, 2010-10-25 02:19:52-04:00, stenn@deacon.udel.edu +2 -2
+    typo fixes
+
+ChangeSet@1.2291, 2010-10-25 05:42:26+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+  [Bug 1678] "restrict source" treated as "restrict default".
+
+  ChangeLog@1.704, 2010-10-25 05:42:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1678] "restrict source" treated as "restrict default".
+
+  ntpd/Makefile.am@1.95, 2010-10-25 05:42:25+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    Make complete.conf roundtrip saveconfig failures easier to see.
+
+  ntpd/ntp_parser.c@1.69, 2010-10-25 05:42:25+00:00, davehart@shiny.ad.hartbrothers.com +676 -723
+    Bison output
+
+  ntpd/ntp_parser.y@1.63, 2010-10-25 05:42:25+00:00, davehart@shiny.ad.hartbrothers.com +16 -36
+    [Bug 1678] "restrict source" treated as "restrict default".
+
+ChangeSet@1.2082.4.131, 2010-10-24 06:17:47-04:00, perlinger@psp-deb1.ntp.org +2 -0
+  [Bug 1676] fixed in refclock_nmea (GPGLL did not work after fix 1571)
+
+  ChangeLog@1.496.26.95, 2010-10-24 06:17:46-04:00, perlinger@psp-deb1.ntp.org +4 -0
+    [Bug 1676] fixed in refclock_nmea (GPGLL did not work after fix 1571)
+
+  ntpd/refclock_nmea.c@1.46.1.8, 2010-10-24 06:17:46-04:00, perlinger@psp-deb1.ntp.org +1 -1
+    fixed cut&paste error that lead to bug 1676
+
 ChangeSet@1.2290, 2010-10-24 07:48:42+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P70
   TAG: NTP_4_2_7P70
