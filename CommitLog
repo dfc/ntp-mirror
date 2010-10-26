@@ -1,3 +1,107 @@
+ChangeSet@1.2300, 2010-10-26 09:20:22+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P72
+  TAG: NTP_4_2_7P72
+
+  ChangeLog@1.712, 2010-10-26 09:20:19+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P72
+
+  ntpd/ntpd-opts.c@1.75, 2010-10-26 09:20:20+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P72
+
+  ntpd/ntpd-opts.h@1.75, 2010-10-26 09:20:20+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P72
+
+  ntpd/ntpd-opts.texi@1.74, 2010-10-26 09:20:20+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P72
+
+  ntpd/ntpd.1@1.74, 2010-10-26 09:20:20+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P72
+
+  ntpdc/ntpdc-opts.c@1.73, 2010-10-26 09:20:20+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P72
+
+  ntpdc/ntpdc-opts.h@1.73, 2010-10-26 09:20:20+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P72
+
+  ntpdc/ntpdc-opts.texi@1.73, 2010-10-26 09:20:20+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P72
+
+  ntpdc/ntpdc.1@1.73, 2010-10-26 09:20:20+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P72
+
+  ntpq/ntpq-opts.c@1.73, 2010-10-26 09:20:20+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P72
+
+  ntpq/ntpq-opts.h@1.73, 2010-10-26 09:20:20+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P72
+
+  ntpq/ntpq-opts.texi@1.73, 2010-10-26 09:20:20+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P72
+
+  ntpq/ntpq.1@1.73, 2010-10-26 09:20:20+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P72
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.73, 2010-10-26 09:20:20+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P72
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.73, 2010-10-26 09:20:20+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P72
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.73, 2010-10-26 09:20:20+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P72
+
+  ntpsnmpd/ntpsnmpd.1@1.73, 2010-10-26 09:20:20+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P72
+
+  packageinfo.sh@1.74, 2010-10-26 09:20:20+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P72
+
+  sntp/sntp-opts.c@1.73, 2010-10-26 09:20:20+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P72
+
+  sntp/sntp-opts.h@1.73, 2010-10-26 09:20:20+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P72
+
+  sntp/sntp-opts.texi@1.73, 2010-10-26 09:20:20+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P72
+
+  sntp/sntp.1@1.73, 2010-10-26 09:20:20+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P72
+
+  sntp/sntp.html@1.73, 2010-10-26 09:20:21+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P72
+
+  util/ntp-keygen-opts.c@1.70, 2010-10-26 09:20:21+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P72
+
+  util/ntp-keygen-opts.h@1.70, 2010-10-26 09:20:21+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P72
+
+  util/ntp-keygen-opts.texi@1.73, 2010-10-26 09:20:21+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P72
+
+  util/ntp-keygen.1@1.73, 2010-10-26 09:20:21+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P72
+
+ChangeSet@1.2299, 2010-10-26 05:05:56-04:00, stenn@deacon.udel.edu +1 -0
+  [Bug 1679] Fix test for -lsocket.
+
+  sntp/configure.ac@1.37, 2010-10-26 05:05:50-04:00, stenn@deacon.udel.edu +5 -0
+    [Bug 1679] Fix test for -lsocket.
+
+ChangeSet@1.2298, 2010-10-26 04:49:14-04:00, stenn@deacon.udel.edu +2 -0
+  configure.ac, ChangeLog:
+    * [Bug 1679] Fix test for -lsocket.
+    * Clean up missing ;; entries in configure.ac
+
+  ChangeLog@1.711, 2010-10-26 04:46:29-04:00, stenn@deacon.udel.edu +2 -0
+    * [Bug 1679] Fix test for -lsocket.
+    * Clean up missing ;; entries in configure.ac
+
+  configure.ac@1.494, 2010-10-26 04:46:40-04:00, stenn@deacon.udel.edu +89 -27
+    * [Bug 1679] Fix test for -lsocket.
+    * Clean up missing ;; entries in configure.ac
+
 ChangeSet@1.2297, 2010-10-25 08:33:05+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P71
   TAG: NTP_4_2_7P71
