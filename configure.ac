@@ -4893,6 +4893,24 @@ AC_CONFIG_FILES(scripts/plot_summary,	[chmod +x scripts/plot_summary])
 AC_CONFIG_FILES(scripts/summary,	[chmod +x scripts/summary])
 AC_CONFIG_FILES(util/Makefile)
 
+AC_PROG_CXX
+
+AC_PATH_PROG([GTEST_CONFIG], [gtest-config])
+if test x${GTEST_CONFIG} != x ; then
+	GTEST_LDFLAGS=`$GTEST_CONFIG --ldflags`
+	GTEST_LIBS=`$GTEST_CONFIG --libs`
+	GTEST_CXXFLAGS=`$GTEST_CONFIG --cxxflags`
+	GTEST_CPPFLAGS=`$GTEST_CONFIG --cppflags`
+	AC_SUBST(GTEST_LDFLAGS)
+	AC_SUBST(GTEST_LIBS)
+	AC_SUBST(GTEST_CXXFLAGS)
+	AC_SUBST(GTEST_CPPFLAGS)
+fi
+AM_CONDITIONAL([GTEST_AVAILABLE], [test x${GTEST_CONFIG} != x])
+
+AC_CONFIG_FILES(tests/Makefile)
+AC_CONFIG_FILES(tests/libntp/Makefile)
+
 AC_CONFIG_SUBDIRS(sntp)
 
 AC_OUTPUT
