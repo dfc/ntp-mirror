@@ -1,0 +1,54 @@
+check_PROGRAMS = tests
+LDADD = @LCRYPTO@ @GTEST_LDFLAGS@ @GTEST_LIBS@ @top_builddir@/libntp/libntp.a
+AM_CXXFLAGS = @GTEST_CXXFLAGS@
+AM_CPPFLAGS = @GTEST_CPPFLAGS@
+tests_SOURCES = $(top_srcdir)/sntp/tests_main.cpp	\
+		libntptest.cpp		\
+		a_md5encrypt.cpp	\
+		atoint.cpp		\
+		atouint.cpp		\
+		authkeys.cpp		\
+		buftvtots.cpp		\
+		caljulian.cpp		\
+		caltontp.cpp		\
+		calyearstart.cpp	\
+		clocktime.cpp		\
+		decodenetnum.cpp	\
+		hextoint.cpp		\
+		hextolfp.cpp		\
+		humandate.cpp		\
+		inttoa.cpp		\
+		lfptostr.cpp		\
+		modetoa.cpp		\
+		netof.cpp		\
+		numtoa.cpp		\
+		numtohost.cpp		\
+		octtoint.cpp		\
+		prettydate.cpp		\
+		recvbuff.cpp		\
+		refnumtoa.cpp		\
+		sfptostr.cpp		\
+		socktoa.cpp		\
+		ssl_init.cpp		\
+		statestr.cpp		\
+		strtolfp.cpp		\
+		tsftomsu.cpp		\
+		tstotv.cpp		\
+		tvtots.cpp		\
+		uglydate.cpp		\
+		uinttoa.cpp		\
+		ymd2yd.cpp
+
+
+INCLUDES = 						\
+	-I$(top_srcdir)/include				\
+	-I$(top_srcdir)/lib/isc/include			\
+	-I$(top_srcdir)/lib/isc/nothreads/include	\
+	-I$(top_srcdir)/lib/isc/unix/include		\
+	-I$(top_srcdir)/sntp
+
+TESTS = 
+
+if !NTP_CROSSCOMPILE
+TESTS += tests
+endif

@@ -267,7 +267,7 @@ ACLOCAL_AMFLAGS = -I m4 -I libopts/m4
 NULL = 
 SUBDIRS = scripts include ElectricFence $(NULL) $(am__append_1) libntp \
 	libparse ntpd ntpdate ntpdc ntpq ntpsnmpd parseutil adjtimed \
-	clockstuff kernel sntp util $(NULL) tests $(NULL)
+	clockstuff kernel sntp util tests $(NULL)
 DIST_SUBDIRS = \
 	scripts		\
 	include		\
@@ -286,6 +286,7 @@ DIST_SUBDIRS = \
 	kernel		\
 	sntp		\
 	util		\
+	tests		\
 	$(NULL)
 
 DISTCHECK_CONFIGURE_FLAGS = -C

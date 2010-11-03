@@ -1,3 +1,115 @@
+ChangeSet@1.2246, 2010-11-03 10:10:10+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P77
+  TAG: NTP_4_2_7P77
+
+  ChangeLog@1.638, 2010-11-03 10:10:08+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P77
+
+  ntpd/ntpd-opts.c@1.80, 2010-11-03 10:10:08+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P77
+
+  ntpd/ntpd-opts.h@1.80, 2010-11-03 10:10:08+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P77
+
+  ntpd/ntpd-opts.texi@1.79, 2010-11-03 10:10:08+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P77
+
+  ntpd/ntpd.1@1.79, 2010-11-03 10:10:08+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P77
+
+  ntpdc/ntpdc-opts.c@1.78, 2010-11-03 10:10:08+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P77
+
+  ntpdc/ntpdc-opts.h@1.78, 2010-11-03 10:10:08+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P77
+
+  ntpdc/ntpdc-opts.texi@1.78, 2010-11-03 10:10:08+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P77
+
+  ntpdc/ntpdc.1@1.78, 2010-11-03 10:10:08+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P77
+
+  ntpq/ntpq-opts.c@1.78, 2010-11-03 10:10:08+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P77
+
+  ntpq/ntpq-opts.h@1.78, 2010-11-03 10:10:08+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P77
+
+  ntpq/ntpq-opts.texi@1.78, 2010-11-03 10:10:09+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P77
+
+  ntpq/ntpq.1@1.78, 2010-11-03 10:10:09+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P77
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.78, 2010-11-03 10:10:09+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P77
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.78, 2010-11-03 10:10:09+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P77
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.78, 2010-11-03 10:10:09+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P77
+
+  ntpsnmpd/ntpsnmpd.1@1.78, 2010-11-03 10:10:09+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P77
+
+  packageinfo.sh@1.79, 2010-11-03 10:10:09+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P77
+
+  sntp/sntp-opts.c@1.78, 2010-11-03 10:10:09+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P77
+
+  sntp/sntp-opts.h@1.78, 2010-11-03 10:10:09+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P77
+
+  sntp/sntp-opts.texi@1.78, 2010-11-03 10:10:09+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P77
+
+  sntp/sntp.1@1.78, 2010-11-03 10:10:09+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P77
+
+  sntp/sntp.html@1.78, 2010-11-03 10:10:09+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P77
+
+  util/ntp-keygen-opts.c@1.75, 2010-11-03 10:10:09+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P77
+
+  util/ntp-keygen-opts.h@1.75, 2010-11-03 10:10:09+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P77
+
+  util/ntp-keygen-opts.texi@1.78, 2010-11-03 10:10:09+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P77
+
+  util/ntp-keygen.1@1.78, 2010-11-03 10:10:09+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P77
+
+ChangeSet@1.2243.2.1, 2010-11-02 21:46:55-04:00, stenn@deacon.udel.edu +3 -0
+  [Bug 1692] packageinfo.sh needs to be "sourced" using ./
+
+  ChangeLog@1.635.1.1, 2010-11-02 21:46:14-04:00, stenn@deacon.udel.edu +1 -0
+    [Bug 1692] packageinfo.sh needs to be "sourced" using ./
+
+  scripts/checkChangeLog@1.2, 2010-11-02 21:46:20-04:00, stenn@deacon.udel.edu +1 -1
+    [Bug 1692] packageinfo.sh needs to be "sourced" using ./
+
+  scripts/genCommitLog@1.6, 2010-11-02 21:46:21-04:00, stenn@deacon.udel.edu +1 -1
+    [Bug 1692] packageinfo.sh needs to be "sourced" using ./
+
+ChangeSet@1.2243.1.1, 2010-11-02 18:55:37+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  [Bug 1695] ntpdate takes longer than necessary.
+
+  ChangeLog@1.636, 2010-11-02 18:55:36+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1695] ntpdate takes longer than necessary.
+
+  ntpdate/ntpdate.c@1.75, 2010-11-02 18:55:36+00:00, davehart@shiny.ad.hartbrothers.com +11 -0
+    [Bug 1695] ntpdate takes longer than necessary.
+
+ChangeSet@1.2244, 2010-11-02 01:31:41-04:00, stenn@deacon.udel.edu +1 -0
+  Distribute the test/ subdir
+
+  Makefile.am@1.98, 2010-11-02 01:31:34-04:00, stenn@deacon.udel.edu +1 -3
+    Distribute the test/ subdir
+
 ChangeSet@1.2243, 2010-11-02 04:50:36+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P76
   TAG: NTP_4_2_7P76
