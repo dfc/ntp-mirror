@@ -14,6 +14,7 @@
 # PARTICULAR PURPOSE.
 
 @SET_MAKE@
+
 VPATH = @srcdir@
 pkgdatadir = $(datadir)/@PACKAGE@
 pkgincludedir = $(includedir)/@PACKAGE@
@@ -37,7 +38,8 @@ check_PROGRAMS = tests$(EXEEXT)
 TESTS = $(am__EXEEXT_1)
 @NTP_CROSSCOMPILE_FALSE@am__append_1 = tests
 subdir = tests/libntp
-DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
+DIST_COMMON = $(noinst_HEADERS) $(srcdir)/Makefile.am \
+	$(srcdir)/Makefile.in
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/libopts/m4/libopts.m4 \
 	$(top_srcdir)/m4/define_dir.m4 \
@@ -56,17 +58,17 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am_tests_OBJECTS = tests_main.$(OBJEXT) libntptest.$(OBJEXT) \
 	a_md5encrypt.$(OBJEXT) atoint.$(OBJEXT) atouint.$(OBJEXT) \
-	authkeys.$(OBJEXT) buftvtots.$(OBJEXT) caljulian.$(OBJEXT) \
-	caltontp.$(OBJEXT) calyearstart.$(OBJEXT) clocktime.$(OBJEXT) \
-	decodenetnum.$(OBJEXT) hextoint.$(OBJEXT) hextolfp.$(OBJEXT) \
-	humandate.$(OBJEXT) inttoa.$(OBJEXT) lfptostr.$(OBJEXT) \
-	modetoa.$(OBJEXT) netof.$(OBJEXT) numtoa.$(OBJEXT) \
-	numtohost.$(OBJEXT) octtoint.$(OBJEXT) prettydate.$(OBJEXT) \
-	recvbuff.$(OBJEXT) refnumtoa.$(OBJEXT) sfptostr.$(OBJEXT) \
-	socktoa.$(OBJEXT) ssl_init.$(OBJEXT) statestr.$(OBJEXT) \
-	strtolfp.$(OBJEXT) tsftomsu.$(OBJEXT) tstotv.$(OBJEXT) \
-	tvtots.$(OBJEXT) uglydate.$(OBJEXT) uinttoa.$(OBJEXT) \
-	ymd2yd.$(OBJEXT)
+	authkeys.$(OBJEXT) buftvtots.$(OBJEXT) calendar.$(OBJEXT) \
+	caljulian.$(OBJEXT) caltontp.$(OBJEXT) calyearstart.$(OBJEXT) \
+	clocktime.$(OBJEXT) decodenetnum.$(OBJEXT) hextoint.$(OBJEXT) \
+	hextolfp.$(OBJEXT) humandate.$(OBJEXT) inttoa.$(OBJEXT) \
+	lfptostr.$(OBJEXT) modetoa.$(OBJEXT) netof.$(OBJEXT) \
+	numtoa.$(OBJEXT) numtohost.$(OBJEXT) octtoint.$(OBJEXT) \
+	prettydate.$(OBJEXT) recvbuff.$(OBJEXT) refnumtoa.$(OBJEXT) \
+	sfptostr.$(OBJEXT) socktoa.$(OBJEXT) ssl_init.$(OBJEXT) \
+	statestr.$(OBJEXT) strtolfp.$(OBJEXT) tsftomsu.$(OBJEXT) \
+	tstotv.$(OBJEXT) tvtots.$(OBJEXT) uglydate.$(OBJEXT) \
+	uinttoa.$(OBJEXT) ymd2yd.$(OBJEXT)
 tests_OBJECTS = $(am_tests_OBJECTS)
 tests_LDADD = $(LDADD)
 tests_DEPENDENCIES = @top_builddir@/libntp/libntp.a
@@ -85,6 +87,7 @@ CXXLINK = $(LIBTOOL) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
 	$(LDFLAGS) -o $@
 SOURCES = $(tests_SOURCES)
 DIST_SOURCES = $(tests_SOURCES)
+HEADERS = $(noinst_HEADERS)
 ETAGS = etags
 CTAGS = ctags
 am__tty_colors = \
@@ -253,6 +256,7 @@ tests_SOURCES = $(top_srcdir)/sntp/tests_main.cpp	\
 		atouint.cpp		\
 		authkeys.cpp		\
 		buftvtots.cpp		\
+		calendar.cpp		\
 		caljulian.cpp		\
 		caltontp.cpp		\
 		calyearstart.cpp	\
@@ -282,6 +286,10 @@ tests_SOURCES = $(top_srcdir)/sntp/tests_main.cpp	\
 		uglydate.cpp		\
 		uinttoa.cpp		\
 		ymd2yd.cpp
+
+noinst_HEADERS = lfptest.h	\
+			libntptest.h	\
+			sockaddrtest.h
 
 INCLUDES = \
 	-I$(top_srcdir)/include				\
@@ -348,6 +356,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/atouint.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/authkeys.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/buftvtots.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/calendar.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/caljulian.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/caltontp.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/calyearstart.Po@am__quote@
@@ -599,7 +608,7 @@ check-am: all-am
 	$(MAKE) $(AM_MAKEFLAGS) $(check_PROGRAMS)
 	$(MAKE) $(AM_MAKEFLAGS) check-TESTS
 check: check-am
-all-am: Makefile
+all-am: Makefile $(HEADERS)
 installdirs:
 install: install-am
 install-exec: install-exec-am

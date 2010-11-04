@@ -72,23 +72,24 @@ am__objects_2 = a_md5encrypt.$(OBJEXT) adjtime.$(OBJEXT) \
 	lib_strbuf.$(OBJEXT) machines.$(OBJEXT) mfptoa.$(OBJEXT) \
 	ntp_lineedit.$(OBJEXT) mfptoms.$(OBJEXT) mktime.$(OBJEXT) \
 	modetoa.$(OBJEXT) mstolfp.$(OBJEXT) msutotsf.$(OBJEXT) \
-	msyslog.$(OBJEXT) netof.$(OBJEXT) ntp_rfc2553.$(OBJEXT) \
-	numtoa.$(OBJEXT) numtohost.$(OBJEXT) octtoint.$(OBJEXT) \
-	prettydate.$(OBJEXT) ntp_random.$(OBJEXT) recvbuff.$(OBJEXT) \
-	refnumtoa.$(OBJEXT) snprintf.$(OBJEXT) socktoa.$(OBJEXT) \
-	socktohost.$(OBJEXT) ssl_init.$(OBJEXT) statestr.$(OBJEXT) \
-	strdup.$(OBJEXT) syssignal.$(OBJEXT) tsftomsu.$(OBJEXT) \
-	tstotv.$(OBJEXT) tvtots.$(OBJEXT) uglydate.$(OBJEXT) \
-	uinttoa.$(OBJEXT) ymd2yd.$(OBJEXT) assertions.$(OBJEXT) \
-	buffer.$(OBJEXT) condition.$(OBJEXT) dir.$(OBJEXT) \
-	error.$(OBJEXT) errno2result.$(OBJEXT) event.$(OBJEXT) \
-	file.$(OBJEXT) inet_ntop.$(OBJEXT) inet_pton.$(OBJEXT) \
-	interfaceiter.$(OBJEXT) lib.$(OBJEXT) log.$(OBJEXT) \
-	md5.$(OBJEXT) msgcat.$(OBJEXT) net.$(OBJEXT) netaddr.$(OBJEXT) \
-	netscope.$(OBJEXT) ondestroy.$(OBJEXT) random.$(OBJEXT) \
-	result.$(OBJEXT) stdio.$(OBJEXT) stdtime.$(OBJEXT) \
-	strerror.$(OBJEXT) task.$(OBJEXT) thread.$(OBJEXT) \
-	time.$(OBJEXT) sockaddr.$(OBJEXT) $(am__objects_1)
+	msyslog.$(OBJEXT) netof.$(OBJEXT) ntp_calendar.$(OBJEXT) \
+	ntp_rfc2553.$(OBJEXT) numtoa.$(OBJEXT) numtohost.$(OBJEXT) \
+	octtoint.$(OBJEXT) prettydate.$(OBJEXT) ntp_random.$(OBJEXT) \
+	recvbuff.$(OBJEXT) refnumtoa.$(OBJEXT) snprintf.$(OBJEXT) \
+	socktoa.$(OBJEXT) socktohost.$(OBJEXT) ssl_init.$(OBJEXT) \
+	statestr.$(OBJEXT) strdup.$(OBJEXT) syssignal.$(OBJEXT) \
+	tsftomsu.$(OBJEXT) tstotv.$(OBJEXT) tvtots.$(OBJEXT) \
+	uglydate.$(OBJEXT) uinttoa.$(OBJEXT) ymd2yd.$(OBJEXT) \
+	assertions.$(OBJEXT) buffer.$(OBJEXT) condition.$(OBJEXT) \
+	dir.$(OBJEXT) error.$(OBJEXT) errno2result.$(OBJEXT) \
+	event.$(OBJEXT) file.$(OBJEXT) inet_ntop.$(OBJEXT) \
+	inet_pton.$(OBJEXT) interfaceiter.$(OBJEXT) lib.$(OBJEXT) \
+	log.$(OBJEXT) md5.$(OBJEXT) msgcat.$(OBJEXT) net.$(OBJEXT) \
+	netaddr.$(OBJEXT) netscope.$(OBJEXT) ondestroy.$(OBJEXT) \
+	random.$(OBJEXT) result.$(OBJEXT) stdio.$(OBJEXT) \
+	stdtime.$(OBJEXT) strerror.$(OBJEXT) task.$(OBJEXT) \
+	thread.$(OBJEXT) time.$(OBJEXT) sockaddr.$(OBJEXT) \
+	$(am__objects_1)
 am_libntp_a_OBJECTS = systime.$(OBJEXT) $(am__objects_2)
 libntp_a_OBJECTS = $(am_libntp_a_OBJECTS)
 libntpsim_a_AR = $(AR) $(ARFLAGS)
@@ -316,6 +317,7 @@ libntp_a_SRCS = \
 	msutotsf.c					\
 	msyslog.c					\
 	netof.c						\
+	ntp_calendar.c					\
 	ntp_rfc2553.c					\
 	numtoa.c					\
 	numtohost.c					\
@@ -488,6 +490,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/netaddr.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/netof.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/netscope.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ntp_calendar.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ntp_lineedit.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ntp_random.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ntp_rfc2553.Po@am__quote@

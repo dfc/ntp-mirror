@@ -14,6 +14,7 @@
 # PARTICULAR PURPOSE.
 
 @SET_MAKE@
+
 VPATH = @srcdir@
 pkgdatadir = $(datadir)/@PACKAGE@
 pkgincludedir = $(includedir)/@PACKAGE@
@@ -36,7 +37,8 @@ host_triplet = @host@
 check_PROGRAMS = tests$(EXEEXT)
 @SNTP_CROSSCOMPILE_FALSE@am__append_1 = $(check_PROGRAMS)
 subdir = tests
-DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
+DIST_COMMON = $(dist_check_SCRIPTS) $(noinst_HEADERS) \
+	$(srcdir)/Makefile.am $(srcdir)/Makefile.in
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/libopts/m4/libopts.m4 \
 	$(top_srcdir)/../m4/ntp_cacheversion.m4 \
@@ -50,16 +52,24 @@ mkinstalldirs = $(install_sh) -d
 CONFIG_HEADER = $(top_builddir)/config.h
 CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
-am__objects_1 = tests_main.$(OBJEXT) sntptest.$(OBJEXT)
-am_tests_OBJECTS = $(am__objects_1) crypto.$(OBJEXT) keyFile.$(OBJEXT) \
+am__objects_1 =
+am__objects_2 = tests_main.$(OBJEXT) sntptest.$(OBJEXT) \
+	$(am__objects_1)
+am_tests_OBJECTS = $(am__objects_2) crypto.$(OBJEXT) keyFile.$(OBJEXT) \
 	kodDatabase.$(OBJEXT) kodFile.$(OBJEXT) logFile.$(OBJEXT) \
 	networking.$(OBJEXT) packetHandling.$(OBJEXT) \
-	packetProcessing.$(OBJEXT) utilities.$(OBJEXT)
+	packetProcessing.$(OBJEXT) utilities.$(OBJEXT) \
+	$(am__objects_1)
 tests_OBJECTS = $(am_tests_OBJECTS)
 tests_LDADD = $(LDADD)
 am__DEPENDENCIES_1 =
+am__DEPENDENCIES_2 = $(sntp_objs)/crypto.o \
+	$(sntp_objs)/kod_management.o $(sntp_objs)/log.o \
+	$(sntp_objs)/main.o $(sntp_objs)/networking.o \
+	$(sntp_objs)/sntp-opts.o $(sntp_objs)/utilities.o \
+	$(am__DEPENDENCIES_1)
 tests_DEPENDENCIES = $(am__DEPENDENCIES_1) \
-	@top_builddir@/../libntp/libntp.a $(sntp_SOURCES_USED)
+	@top_builddir@/../libntp/libntp.a $(am__DEPENDENCIES_2)
 DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/depcomp
 am__depfiles_maybe = depfiles
@@ -75,6 +85,7 @@ CXXLINK = $(LIBTOOL) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
 	$(LDFLAGS) -o $@
 SOURCES = $(tests_SOURCES)
 DIST_SOURCES = $(tests_SOURCES)
+HEADERS = $(noinst_HEADERS)
 ETAGS = etags
 CTAGS = ctags
 am__tty_colors = \
@@ -199,17 +210,20 @@ target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
+NULL = 
 sntp_objs = ..
 sntp_SOURCES_USED = $(sntp_objs)/crypto.o		\
 			$(sntp_objs)/kod_management.o	\
 			$(sntp_objs)/log.o		\
 			$(sntp_objs)/main.o		\
 			$(sntp_objs)/networking.o	\
-			$(sntp_objs)/sntp-opts.o		\
-			$(sntp_objs)/utilities.o
+			$(sntp_objs)/sntp-opts.o	\
+			$(sntp_objs)/utilities.o	\
+			$(NULL)
 
 base_SOURCES = $(srcdir)/../tests_main.cpp	\
-			sntptest.cpp
+			sntptest.cpp			\
+			$(NULL)
 
 tests_SOURCES = $(base_SOURCES)		\
 		crypto.cpp		\
@@ -220,7 +234,25 @@ tests_SOURCES = $(base_SOURCES)		\
 		networking.cpp		\
 		packetHandling.cpp	\
 		packetProcessing.cpp	\
-		utilities.cpp
+		utilities.cpp		\
+		$(NULL)
+
+noinst_HEADERS = sntptest.h		\
+			fileHandlingTest.h	\
+			$(NULL)
+
+dist_check_SCRIPTS = test-driver
+EXTRA_DIST = data
+CLEANFILES = data/log-output-debug		\
+		data/kod-output-multiple	\
+		data/kod-output-single		\
+		data/debug-output-pkt		\
+		data/debug-output-lfp-dec	\
+		data/kod-output-blank		\
+		data/log-output-log		\
+		data/debug-output-lfp-bin	\
+		data/debug-output-lfp-hex	\
+		$(NULL)
 
 LDADD = @GTEST_LDFLAGS@			\
 		@GTEST_LIBS@			\
@@ -231,14 +263,11 @@ LDADD = @GTEST_LDFLAGS@			\
 
 AM_CXXFLAGS = @GTEST_CXXFLAGS@
 AM_CPPFLAGS = @GTEST_CPPFLAGS@
-INCLUDES = $(LIBOPTS_CFLAGS)				\
-	-I$(top_srcdir)/../include			\
-	-I$(top_srcdir)/../lib/isc/include		\
-	-I$(top_srcdir)/../lib/isc/nothreads/include	\
-	-I$(top_srcdir)/../lib/isc/unix/include		\
-	-I$(top_srcdir)/../tests			\
-	-I$(top_srcdir)
-
+INCLUDES = $(LIBOPTS_CFLAGS) -I$(top_srcdir)/../include \
+	-I$(top_srcdir)/../lib/isc/include \
+	-I$(top_srcdir)/../lib/isc/nothreads/include \
+	-I$(top_srcdir)/../lib/isc/unix/include \
+	-I$(top_srcdir)/../tests -I$(top_srcdir)
 TESTS = $(am__append_1)
 TEST_INPUT_DIR = $(abs_srcdir)/data
 TEST_OUTPUT_DIR = $(abs_builddir)/data
@@ -524,10 +553,11 @@ distdir: $(DISTFILES)
 	  fi; \
 	done
 check-am: all-am
-	$(MAKE) $(AM_MAKEFLAGS) $(check_PROGRAMS)
+	$(MAKE) $(AM_MAKEFLAGS) $(check_PROGRAMS) \
+	  $(dist_check_SCRIPTS)
 	$(MAKE) $(AM_MAKEFLAGS) check-TESTS
 check: check-am
-all-am: Makefile
+all-am: Makefile $(HEADERS)
 installdirs:
 install: install-am
 install-exec: install-exec-am
@@ -546,6 +576,7 @@ install-strip:
 mostlyclean-generic:
 
 clean-generic:
+	-test -z "$(CLEANFILES)" || rm -f $(CLEANFILES)
 
 distclean-generic:
 	-test -z "$(CONFIG_CLEAN_FILES)" || rm -f $(CONFIG_CLEAN_FILES)

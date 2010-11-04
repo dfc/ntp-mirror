@@ -1,3 +1,186 @@
+ChangeSet@1.2252, 2010-11-04 10:10:40+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P78
+  TAG: NTP_4_2_7P78
+
+  ChangeLog@1.641, 2010-11-04 10:10:37+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P78
+
+  ntpd/ntpd-opts.c@1.81, 2010-11-04 10:10:37+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P78
+
+  ntpd/ntpd-opts.h@1.81, 2010-11-04 10:10:37+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P78
+
+  ntpd/ntpd-opts.texi@1.80, 2010-11-04 10:10:37+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P78
+
+  ntpd/ntpd.1@1.80, 2010-11-04 10:10:37+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P78
+
+  ntpdc/ntpdc-opts.c@1.79, 2010-11-04 10:10:37+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P78
+
+  ntpdc/ntpdc-opts.h@1.79, 2010-11-04 10:10:37+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P78
+
+  ntpdc/ntpdc-opts.texi@1.79, 2010-11-04 10:10:37+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P78
+
+  ntpdc/ntpdc.1@1.79, 2010-11-04 10:10:37+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P78
+
+  ntpq/ntpq-opts.c@1.79, 2010-11-04 10:10:37+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P78
+
+  ntpq/ntpq-opts.h@1.79, 2010-11-04 10:10:37+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P78
+
+  ntpq/ntpq-opts.texi@1.79, 2010-11-04 10:10:37+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P78
+
+  ntpq/ntpq.1@1.79, 2010-11-04 10:10:37+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P78
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.79, 2010-11-04 10:10:37+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P78
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.79, 2010-11-04 10:10:37+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P78
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.79, 2010-11-04 10:10:37+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P78
+
+  ntpsnmpd/ntpsnmpd.1@1.79, 2010-11-04 10:10:37+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P78
+
+  packageinfo.sh@1.80, 2010-11-04 10:10:37+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P78
+
+  sntp/sntp-opts.c@1.79, 2010-11-04 10:10:37+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P78
+
+  sntp/sntp-opts.h@1.79, 2010-11-04 10:10:38+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P78
+
+  sntp/sntp-opts.texi@1.79, 2010-11-04 10:10:38+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P78
+
+  sntp/sntp.1@1.79, 2010-11-04 10:10:38+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P78
+
+  sntp/sntp.html@1.79, 2010-11-04 10:10:38+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P78
+
+  util/ntp-keygen-opts.c@1.76, 2010-11-04 10:10:38+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P78
+
+  util/ntp-keygen-opts.h@1.76, 2010-11-04 10:10:38+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P78
+
+  util/ntp-keygen-opts.texi@1.79, 2010-11-04 10:10:38+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P78
+
+  util/ntp-keygen.1@1.79, 2010-11-04 10:10:38+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P78
+
+ChangeSet@1.2251, 2010-11-04 03:05:07-04:00, stenn@deacon.udel.edu +3 -0
+  Documentation updates from Dave Mills
+
+  ChangeLog@1.640, 2010-11-04 03:04:06-04:00, stenn@deacon.udel.edu +1 -0
+    Documentation updates from Dave Mills
+
+  html/autokey.html@1.5, 2010-11-04 03:04:22-04:00, stenn@deacon.udel.edu +28 -4
+    Documentation updates from Dave Mills
+
+  html/pps.html@1.23, 2010-11-04 03:04:23-04:00, stenn@deacon.udel.edu +2 -2
+    Documentation updates from Dave Mills
+
+ChangeSet@1.2250, 2010-11-04 02:24:39+00:00, hart@psp-deb1.ntp.org +1 -0
+  Makefile.am:
+    move test-driver from EXTRA_DIST to noinst_check_SCRIPTS
+
+  sntp/tests/Makefile.am@1.16, 2010-11-04 02:24:08+00:00, hart@psp-deb1.ntp.org +3 -3
+    move test-driver from EXTRA_DIST to noinst_check_SCRIPTS
+
+ChangeSet@1.2249, 2010-11-04 00:06:45+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
+  fix make distcheck with gtest by distributing test pieces
+
+  sntp/Makefile.am@1.37, 2010-11-04 00:06:44+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    fix make distcheck with gtest by distributing test pieces
+
+  sntp/tests/Makefile.am@1.15, 2010-11-04 00:06:44+00:00, davehart@shiny.ad.hartbrothers.com +35 -11
+    fix make distcheck with gtest by distributing test pieces.
+    get rid of most tabs in INCLUDES which show up in command lines.
+
+  tests/libntp/Makefile.am@1.24, 2010-11-04 00:06:44+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
+    fix make distcheck with gtest by distributing test pieces
+
+ChangeSet@1.2248, 2010-11-03 21:24:43+00:00, davehart@shiny.ad.hartbrothers.com +13 -0
+  Add ChangeLog entries, Windows build tweaks to Juergen Perlinger's
+    calendar refactoring and [Bug 1697]
+
+  ChangeLog@1.639, 2010-11-03 21:24:39+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+    [Bug 1697] filegen implementation should be improved.
+    Refactor calendar functions in terms of new common code.
+    
+
+  configure.ac@1.494, 2010-11-03 21:24:40+00:00, davehart@shiny.ad.hartbrothers.com +4 -3
+    Add sizeof(short) test since we now depend on SIZEOF_SHORT
+
+  ports/winnt/include/config.h@1.89, 2010-11-03 21:24:40+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    add SIZEOF_SHORT needed by perlinger's calendar changes
+
+  ports/winnt/vc6/libntp.dsp@1.53, 2010-11-03 21:24:40+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+    add libntp/ntp_calendar.c to Windows build
+
+  ports/winnt/vs2003/libntp.vcproj@1.11, 2010-11-03 21:24:40+00:00, davehart@shiny.ad.hartbrothers.com +21 -0
+    add libntp/ntp_calendar.c to Windows build
+
+  ports/winnt/vs2005/libntp.vcproj@1.9, 2010-11-03 21:24:40+00:00, davehart@shiny.ad.hartbrothers.com +22 -0
+    add libntp/ntp_calendar.c to Windows build
+
+  ports/winnt/vs2008/libntp/libntp.vcproj@1.30, 2010-11-03 21:24:40+00:00, davehart@shiny.ad.hartbrothers.com +6 -2
+    add libntp/ntp_calendar.c to Windows build
+
+  sntp/configure.ac@1.41, 2010-11-03 21:24:40+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    Add sizeof(short) test since we now depend on SIZEOF_SHORT
+
+  sntp/tests/crypto.cpp@1.4, 2010-11-03 21:24:40+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+    conditionalize tests that only work with OPENSSL
+
+  tests/libntp/a_md5encrypt.cpp@1.4, 2010-11-03 21:24:40+00:00, davehart@shiny.ad.hartbrothers.com +5 -0
+    ensure NID_md5 is defined (by openssl headers or ntp_stdlib.h)
+
+  tests/libntp/authkeys.cpp@1.6, 2010-11-03 21:24:40+00:00, davehart@shiny.ad.hartbrothers.com +5 -0
+    ensure NID_md5 is defined (by openssl headers or ntp_stdlib.h)
+
+  tests/libntp/refnumtoa.cpp@1.2, 2010-11-03 21:24:40+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+    conditionalize tests that require REFCLOCK
+
+  tests/libntp/ssl_init.cpp@1.3, 2010-11-03 21:24:40+00:00, davehart@shiny.ad.hartbrothers.com +9 -0
+    ensure NID_md5 is defined (by openssl headers or ntp_stdlib.h)
+    conditionalize tests that only work with OPENSSL
+
+ChangeSet@1.2243.1.3, 2010-11-03 19:42:16+01:00, jnperlin@hydra.localnet +5 -0
+  added calendar regression tests, fixed german umlaut mixup
+
+  include/ntp_filegen.h@1.9, 2010-11-03 19:42:16+01:00, jnperlin@hydra.localnet +1 -1
+    fixed german umlaut codepage problem
+
+  libntp/ntp_calendar.c@1.2, 2010-11-03 19:42:16+01:00, jnperlin@hydra.localnet +11 -73
+    removed runtime assert, since regression test is available
+
+  ntpd/ntp_filegen.c@1.21, 2010-11-03 19:42:16+01:00, jnperlin@hydra.localnet +1 -1
+    fixed german umlaut codepage problem
+
+  tests/libntp/Makefile.am@1.23, 2010-11-03 19:42:16+01:00, jnperlin@hydra.localnet +1 -0
+    added calendar regression tests
+
+  tests/libntp/calendar.cpp@1.1, 2010-11-03 19:42:16+01:00, jnperlin@hydra.localnet +337 -0
+    calendar module regression tests
+
+  tests/libntp/calendar.cpp@1.0, 2010-11-03 19:42:16+01:00, jnperlin@hydra.localnet +0 -0
+
 ChangeSet@1.2246, 2010-11-03 10:10:10+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P77
   TAG: NTP_4_2_7P77
@@ -83,19 +266,34 @@ ChangeSet@1.2246, 2010-11-03 10:10:10+00:00, stenn@deacon.udel.edu +27 -0
   util/ntp-keygen.1@1.78, 2010-11-03 10:10:09+00:00, stenn@deacon.udel.edu +2 -2
     NTP_4_2_7P77
 
-ChangeSet@1.2243.2.1, 2010-11-02 21:46:55-04:00, stenn@deacon.udel.edu +3 -0
+ChangeSet@1.2243.3.1, 2010-11-02 21:46:55-04:00, stenn@deacon.udel.edu +3 -0
   [Bug 1692] packageinfo.sh needs to be "sourced" using ./
 
   ChangeLog@1.635.1.1, 2010-11-02 21:46:14-04:00, stenn@deacon.udel.edu +1 -0
     [Bug 1692] packageinfo.sh needs to be "sourced" using ./
 
-  scripts/checkChangeLog@1.2, 2010-11-02 21:46:20-04:00, stenn@deacon.udel.edu +1 -1
+  scripts/checkChangeLog@1.1.1.1, 2010-11-02 21:46:20-04:00, stenn@deacon.udel.edu +1 -1
     [Bug 1692] packageinfo.sh needs to be "sourced" using ./
 
   scripts/genCommitLog@1.6, 2010-11-02 21:46:21-04:00, stenn@deacon.udel.edu +1 -1
     [Bug 1692] packageinfo.sh needs to be "sourced" using ./
 
-ChangeSet@1.2243.1.1, 2010-11-02 18:55:37+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+ChangeSet@1.2243.1.2, 2010-11-02 20:21:30+01:00, jnperlin@hydra.localnet +4 -0
+  fixes for regression test
+
+  libntp/prettydate.c@1.16, 2010-11-02 20:21:29+01:00, jnperlin@hydra.localnet +2 -2
+    changed format string back according to regression test expectation
+
+  libntp/ymd2yd.c@1.5, 2010-11-02 20:21:29+01:00, jnperlin@hydra.localnet +13 -25
+    rewritten in terms of low-level calendar function
+
+  scripts/checkChangeLog@1.2, 2010-11-02 20:21:29+01:00, jnperlin@hydra.localnet +1 -1
+    added path spec to '.' (source) command -- sh balked about it
+
+  tests/libntp/calyearstart.cpp@1.2, 2010-11-02 20:21:29+01:00, jnperlin@hydra.localnet +14 -15
+    fixed testcases for new calyearstart() API
+
+ChangeSet@1.2243.2.1, 2010-11-02 18:55:37+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
   [Bug 1695] ntpdate takes longer than necessary.
 
   ChangeLog@1.636, 2010-11-02 18:55:36+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
@@ -103,6 +301,56 @@ ChangeSet@1.2243.1.1, 2010-11-02 18:55:37+00:00, davehart@shiny.ad.hartbrothers.
 
   ntpdate/ntpdate.c@1.75, 2010-11-02 18:55:36+00:00, davehart@shiny.ad.hartbrothers.com +11 -0
     [Bug 1695] ntpdate takes longer than necessary.
+
+ChangeSet@1.2156.20.1, 2010-11-02 07:12:48+01:00, jnperlin@hydra.localnet +15 -0
+  added modular calendar functions
+
+  include/ntp_calendar.h@1.5, 2010-11-02 07:12:47+01:00, jnperlin@hydra.localnet +278 -23
+    added prototypes for modular calendar functions
+
+  include/ntp_filegen.h@1.8, 2010-11-02 07:12:47+01:00, jnperlin@hydra.localnet +5 -4
+    fixed prototypes to use u_int32 for NTP timestamps
+
+  include/ntp_fp.h@1.22, 2010-11-02 07:12:47+01:00, jnperlin@hydra.localnet +1 -1
+    fixed prototypes to use u_int32 for NTP timestamps
+
+  include/ntp_stdlib.h@1.48, 2010-11-02 07:12:47+01:00, jnperlin@hydra.localnet +12 -2
+    fixed prototypes to use u_int32 for NTP timestamps; added functions for start of month/week/day
+
+  include/ntp_types.h@1.20, 2010-11-02 07:12:47+01:00, jnperlin@hydra.localnet +92 -1
+    added 'vint64' type definition
+
+  include/ntp_unixtime.h@1.7, 2010-11-02 07:12:47+01:00, jnperlin@hydra.localnet +5 -0
+    added multiple inclusion guard
+
+  libntp/Makefile.am@1.53, 2010-11-02 07:12:47+01:00, jnperlin@hydra.localnet +1 -0
+    added calendar module
+
+  libntp/caljulian.c@1.13, 2010-11-02 07:12:47+01:00, jnperlin@hydra.localnet +15 -173
+    rewritten in terms of modular calendar
+
+  libntp/caltontp.c@1.5, 2010-11-02 07:12:47+01:00, jnperlin@hydra.localnet +19 -57
+    rewritten in terms of modular calendar
+
+  libntp/calyearstart.c@1.6, 2010-11-02 07:12:47+01:00, jnperlin@hydra.localnet +70 -39
+    rewritten in terms of modular calendar; added month/wee/day start fuctions
+
+  libntp/clocktime.c@1.4, 2010-11-02 07:12:47+01:00, jnperlin@hydra.localnet +128 -94
+    rewritten in terms of modular calendar; changed algorithm to *always* find the smallest difference solution for a time-of-year spec.
+
+  libntp/ntp_calendar.c@1.1, 2010-11-02 07:12:47+01:00, jnperlin@hydra.localnet +1390 -0
+    modular calendar functions
+
+  libntp/ntp_calendar.c@1.0, 2010-11-02 07:12:47+01:00, jnperlin@hydra.localnet +0 -0
+
+  libntp/prettydate.c@1.15, 2010-11-02 07:12:47+01:00, jnperlin@hydra.localnet +149 -123
+    rewritten in terms of modular calendar
+
+  ntpd/ntp_filegen.c@1.20, 2010-11-02 07:12:47+01:00, jnperlin@hydra.localnet +126 -126
+    minimise calendar calculations
+
+  ntpd/ntp_util.c@1.86, 2010-11-02 07:12:47+01:00, jnperlin@hydra.localnet +35 -56
+    changed 'leap_month' to use modular alendar
 
 ChangeSet@1.2244, 2010-11-02 01:31:41-04:00, stenn@deacon.udel.edu +1 -0
   Distribute the test/ subdir
