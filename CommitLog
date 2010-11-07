@@ -1,3 +1,97 @@
+ChangeSet@1.2254, 2010-11-07 02:15:51+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P79
+  TAG: NTP_4_2_7P79
+
+  ChangeLog@1.643, 2010-11-07 02:15:47+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P79
+
+  ntpd/ntpd-opts.c@1.82, 2010-11-07 02:15:48+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P79
+
+  ntpd/ntpd-opts.h@1.82, 2010-11-07 02:15:48+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P79
+
+  ntpd/ntpd-opts.texi@1.81, 2010-11-07 02:15:48+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P79
+
+  ntpd/ntpd.1@1.81, 2010-11-07 02:15:48+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P79
+
+  ntpdc/ntpdc-opts.c@1.80, 2010-11-07 02:15:48+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P79
+
+  ntpdc/ntpdc-opts.h@1.80, 2010-11-07 02:15:48+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P79
+
+  ntpdc/ntpdc-opts.texi@1.80, 2010-11-07 02:15:48+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P79
+
+  ntpdc/ntpdc.1@1.80, 2010-11-07 02:15:48+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P79
+
+  ntpq/ntpq-opts.c@1.80, 2010-11-07 02:15:48+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P79
+
+  ntpq/ntpq-opts.h@1.80, 2010-11-07 02:15:48+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P79
+
+  ntpq/ntpq-opts.texi@1.80, 2010-11-07 02:15:48+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P79
+
+  ntpq/ntpq.1@1.80, 2010-11-07 02:15:48+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P79
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.80, 2010-11-07 02:15:48+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P79
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.80, 2010-11-07 02:15:48+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P79
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.80, 2010-11-07 02:15:48+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P79
+
+  ntpsnmpd/ntpsnmpd.1@1.80, 2010-11-07 02:15:48+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P79
+
+  packageinfo.sh@1.81, 2010-11-07 02:15:48+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P79
+
+  sntp/sntp-opts.c@1.80, 2010-11-07 02:15:48+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P79
+
+  sntp/sntp-opts.h@1.80, 2010-11-07 02:15:49+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P79
+
+  sntp/sntp-opts.texi@1.80, 2010-11-07 02:15:49+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P79
+
+  sntp/sntp.1@1.80, 2010-11-07 02:15:49+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P79
+
+  sntp/sntp.html@1.80, 2010-11-07 02:15:49+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P79
+
+  util/ntp-keygen-opts.c@1.77, 2010-11-07 02:15:49+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P79
+
+  util/ntp-keygen-opts.h@1.77, 2010-11-07 02:15:49+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P79
+
+  util/ntp-keygen-opts.texi@1.80, 2010-11-07 02:15:49+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P79
+
+  util/ntp-keygen.1@1.80, 2010-11-07 02:15:49+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P79
+
+ChangeSet@1.2253, 2010-11-06 22:00:48-04:00, stenn@deacon.udel.edu +2 -0
+  Correct frequency estimate with no drift file, from David Mills
+
+  ChangeLog@1.642, 2010-11-06 22:00:26-04:00, stenn@deacon.udel.edu +1 -0
+    Correct frequency estimate with no drift file, from David Mills
+
+  ntpd/ntp_loopfilter.c@1.161, 2010-11-06 22:00:26-04:00, stenn@deacon.udel.edu +1 -1
+    Correct frequency estimate with no drift file, from David Mills
+
 ChangeSet@1.2252, 2010-11-04 10:10:40+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P78
   TAG: NTP_4_2_7P78
