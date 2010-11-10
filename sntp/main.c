@@ -9,6 +9,24 @@ int ai_fam_pref = AF_UNSPEC;
 
 struct key *keys = NULL;
 
+void set_li_vn_mode (struct pkt *spkt, char leap, char version, char mode); 
+int sntp_main (int argc, char **argv);
+int on_wire (struct addrinfo *host, struct addrinfo *bcastaddr);
+int set_time (double offset);
+
+#define NORMALIZE_TIMEVAL(tv)				\
+do {							\
+	while ((tv).tv_usec < 0) {			\
+		(tv).tv_usec += 1000000;		\
+		(tv).tv_sec--;				\
+	}						\
+	while ((tv).tv_usec > 999999) {			\
+		(tv).tv_usec -= 1000000;		\
+		(tv).tv_sec++;				\
+	}						\
+} while (0)
+
+
 /*
  * The actual main function.
  */
@@ -45,8 +63,6 @@ sntp_main (
 			ai_fam_pref = AF_INET6;
 	}
 
-	log_msg("Started sntp", 0);
-
 	optct = optionProcess(&sntpOptions, argc, argv);
 	argc -= optct;
 	argv += optct; 
@@ -56,6 +72,8 @@ sntp_main (
 	/* Initialize logging system */
 	if (HAVE_OPT(FILELOG))
 		init_log(OPT_ARG(FILELOG));
+
+	log_msg("Started sntp", LOG_CONS);
 
 	/* 
 	 * If there's a specified KOD file init KOD system.  If not use
@@ -210,7 +228,7 @@ handle_pkt (
 			 "Received a KOD packet with code %c%c%c%c from %s, demobilizing all connections", 
 			 ref[0], ref[1], ref[2], ref[3],
 			 hostname);
-		log_msg(log_str, 2);
+		log_msg(log_str, LOG_WARNING | LOG_CONS);
 		free(log_str);
 		break;
 
@@ -373,7 +391,7 @@ on_wire (
 	getnameinfo(host->ai_addr, host->ai_addrlen, addr_buf, sizeof(addr_buf), NULL, 0, NI_NUMERICHOST);
 
 	snprintf(logmsg, sizeof(logmsg), "Received no useable packet from %s!", addr_buf);
-	log_msg(logmsg, 1);
+	log_msg(logmsg, LOG_DEBUG | LOG_CONS);
 
 	if (ENABLED_OPT(NORMALVERBOSE))
 		printf("sntp on_wire: Received no useable packet from %s!\n", addr_buf);
@@ -416,23 +434,26 @@ set_time(
 {
 	struct timeval tp;
 
-	if(ENABLED_OPT(SETTOD)) {
-		GETTIMEOFDAY(&tp, (struct timezone *)NULL);
+	if (ENABLED_OPT(SETTOD)) {
+		GETTIMEOFDAY(&tp, NULL);
 
-		tp.tv_sec += (int) offset;
-		tp.tv_usec += offset - (double)((int)offset);
+		tp.tv_sec += (long)offset;
+		tp.tv_usec += 1e6 * (offset - (long)offset);
+		NORMALIZE_TIMEVAL(tp);
 
-		if(SETTIMEOFDAY(&tp, (struct timezone *)NULL) < 0) {
+		if (SETTIMEOFDAY(&tp, NULL) < 0) {
 			printf("set_time: settimeofday(): Time not set: %s\n",
 				strerror(errno));
 			return -1;
 		}
 		return 0;
 	}
-	tp.tv_sec = (int) offset;
-	tp.tv_usec = offset - (double)((int)offset);
 
-	if(ADJTIMEOFDAY(&tp, NULL) < 0) {
+	tp.tv_sec = (long)offset;
+	tp.tv_usec = 1e6 * (offset - (long)offset);
+	NORMALIZE_TIMEVAL(tp);
+
+	if (ADJTIMEOFDAY(&tp, NULL) < 0) {
 		printf("set_time: adjtime(): Time not set: %s\n",
 			strerror(errno));
 		return -1;
