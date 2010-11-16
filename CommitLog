@@ -1,3 +1,97 @@
+ChangeSet@1.2274, 2010-11-16 10:10:15+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P82
+  TAG: NTP_4_2_7P82
+
+  ChangeLog@1.657, 2010-11-16 10:10:10+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P82
+
+  ntpd/ntpd-opts.c@1.85, 2010-11-16 10:10:11+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P82
+
+  ntpd/ntpd-opts.h@1.85, 2010-11-16 10:10:11+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P82
+
+  ntpd/ntpd-opts.texi@1.84, 2010-11-16 10:10:11+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P82
+
+  ntpd/ntpd.1@1.84, 2010-11-16 10:10:11+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P82
+
+  ntpdc/ntpdc-opts.c@1.83, 2010-11-16 10:10:11+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P82
+
+  ntpdc/ntpdc-opts.h@1.83, 2010-11-16 10:10:11+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P82
+
+  ntpdc/ntpdc-opts.texi@1.83, 2010-11-16 10:10:11+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P82
+
+  ntpdc/ntpdc.1@1.83, 2010-11-16 10:10:11+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P82
+
+  ntpq/ntpq-opts.c@1.83, 2010-11-16 10:10:11+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P82
+
+  ntpq/ntpq-opts.h@1.83, 2010-11-16 10:10:11+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P82
+
+  ntpq/ntpq-opts.texi@1.83, 2010-11-16 10:10:11+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P82
+
+  ntpq/ntpq.1@1.83, 2010-11-16 10:10:11+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P82
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.83, 2010-11-16 10:10:11+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P82
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.83, 2010-11-16 10:10:11+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P82
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.83, 2010-11-16 10:10:11+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P82
+
+  ntpsnmpd/ntpsnmpd.1@1.83, 2010-11-16 10:10:11+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P82
+
+  packageinfo.sh@1.84, 2010-11-16 10:10:11+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P82
+
+  sntp/sntp-opts.c@1.83, 2010-11-16 10:10:11+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P82
+
+  sntp/sntp-opts.h@1.83, 2010-11-16 10:10:11+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P82
+
+  sntp/sntp-opts.texi@1.83, 2010-11-16 10:10:11+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P82
+
+  sntp/sntp.1@1.83, 2010-11-16 10:10:11+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P82
+
+  sntp/sntp.html@1.83, 2010-11-16 10:10:11+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P82
+
+  util/ntp-keygen-opts.c@1.80, 2010-11-16 10:10:12+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P82
+
+  util/ntp-keygen-opts.h@1.80, 2010-11-16 10:10:12+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P82
+
+  util/ntp-keygen-opts.texi@1.83, 2010-11-16 10:10:12+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P82
+
+  util/ntp-keygen.1@1.83, 2010-11-16 10:10:12+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P82
+
+ChangeSet@1.2082.4.153, 2010-11-15 23:53:16-05:00, stenn@deacon.udel.edu +2 -0
+  [Bug 1728] In ntp_openssl.m4, don't add -I/usr/include or -L/usr/lib to CPPFLAGS or LDFLAGS
+
+  ChangeLog@1.496.26.113, 2010-11-15 23:52:46-05:00, stenn@deacon.udel.edu +5 -0
+    [Bug 1728] In ntp_openssl.m4, don't add -I/usr/include or -L/usr/lib to CPPFLAGS or LDFLAGS
+
+  m4/ntp_openssl.m4@1.2, 2010-11-15 23:52:46-05:00, stenn@deacon.udel.edu +12 -4
+    [Bug 1728] In ntp_openssl.m4, don't add -I/usr/include or -L/usr/lib to CPPFLAGS or LDFLAGS
+
 ChangeSet@1.2272, 2010-11-14 23:36:16+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P81
   TAG: NTP_4_2_7P81
