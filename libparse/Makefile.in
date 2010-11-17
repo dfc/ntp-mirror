@@ -40,7 +40,7 @@ DIST_COMMON = README $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
 	$(top_srcdir)/depsver.mf
 subdir = libparse
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/libopts/m4/libopts.m4 \
+am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/m4/define_dir.m4 \
 	$(top_srcdir)/m4/ntp_cacheversion.m4 \
 	$(top_srcdir)/m4/ntp_dir_sep.m4 $(top_srcdir)/m4/ntp_lib_m.m4 \

@@ -33,7 +33,9 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
-@NEED_LIBOPTS_TRUE@am__append_1 = libopts
+@NEED_LIBOPTS_TRUE@am__append_1 = \
+@NEED_LIBOPTS_TRUE@	sntp/libopts
+
 subdir = .
 DIST_COMMON = README $(am__configure_deps) $(srcdir)/Makefile.am \
 	$(srcdir)/Makefile.in $(srcdir)/config.h.in \
@@ -41,7 +43,7 @@ DIST_COMMON = README $(am__configure_deps) $(srcdir)/Makefile.am \
 	config.guess config.sub depcomp install-sh ltmain.sh missing \
 	ylwrap
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/libopts/m4/libopts.m4 \
+am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/m4/define_dir.m4 \
 	$(top_srcdir)/m4/ntp_cacheversion.m4 \
 	$(top_srcdir)/m4/ntp_dir_sep.m4 $(top_srcdir)/m4/ntp_lib_m.m4 \
@@ -263,7 +265,7 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 AUTOMAKE_OPTIONS = foreign 1.10
-ACLOCAL_AMFLAGS = -I m4 -I libopts/m4
+ACLOCAL_AMFLAGS = -I m4 -I sntp/libopts/m4
 NULL = 
 SUBDIRS = scripts include ElectricFence $(NULL) $(am__append_1) libntp \
 	libparse ntpd ntpdate ntpdc ntpq ntpsnmpd parseutil adjtimed \
@@ -273,7 +275,6 @@ DIST_SUBDIRS = \
 	include		\
 	ElectricFence	\
 	libntp		\
-	libopts		\
 	libparse	\
 	ntpd		\
 	ntpdate		\
@@ -333,9 +334,6 @@ EXTRA_DIST = \
 CLEANFILES = 
 DISTCLEANFILES = .gcc-warning
 ETAGS_ARGS = Makefile.am configure.ac
-
-# HMS: make ports be the last directory...
-# DIST_HOOK_DIRS = conf html scripts ports
 
 # HMS: Keep .gcc-warning first, as that way it gets printed first.
 BUILT_SOURCES = \
@@ -902,7 +900,6 @@ libtool: $(LIBTOOL_DEPS)
 
 dist-hook:
 	@find $(distdir) -type d -name SCCS -print | xargs rm -rf
-	@chmod u+w $(distdir)/ports/winnt
 
 .gcc-warning:
 	@echo "Compiling with GCC now generates lots of new warnings."

@@ -7160,7 +7160,7 @@ AC_SUBST([am__tar])
 AC_SUBST([am__untar])
 ]) # _AM_PROG_TAR
 
-m4_include([libopts/m4/libopts.m4])
+m4_include([sntp/libopts/m4/libopts.m4])
 m4_include([m4/define_dir.m4])
 m4_include([m4/ntp_cacheversion.m4])
 m4_include([m4/ntp_dir_sep.m4])

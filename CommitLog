@@ -1,3 +1,341 @@
+ChangeSet@1.2278, 2010-11-17 10:10:38+00:00, stenn@deacon.udel.edu +27 -0
+  NTP_4_2_7P83
+  TAG: NTP_4_2_7P83
+
+  ChangeLog@1.661, 2010-11-17 10:10:36+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P83
+
+  ntpd/ntpd-opts.c@1.86, 2010-11-17 10:10:36+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P83
+
+  ntpd/ntpd-opts.h@1.86, 2010-11-17 10:10:36+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P83
+
+  ntpd/ntpd-opts.texi@1.85, 2010-11-17 10:10:36+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P83
+
+  ntpd/ntpd.1@1.85, 2010-11-17 10:10:37+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P83
+
+  ntpdc/ntpdc-opts.c@1.84, 2010-11-17 10:10:37+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P83
+
+  ntpdc/ntpdc-opts.h@1.84, 2010-11-17 10:10:37+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P83
+
+  ntpdc/ntpdc-opts.texi@1.84, 2010-11-17 10:10:37+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P83
+
+  ntpdc/ntpdc.1@1.84, 2010-11-17 10:10:37+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P83
+
+  ntpq/ntpq-opts.c@1.84, 2010-11-17 10:10:37+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P83
+
+  ntpq/ntpq-opts.h@1.84, 2010-11-17 10:10:37+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P83
+
+  ntpq/ntpq-opts.texi@1.84, 2010-11-17 10:10:37+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P83
+
+  ntpq/ntpq.1@1.84, 2010-11-17 10:10:37+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P83
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.84, 2010-11-17 10:10:37+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P83
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.84, 2010-11-17 10:10:37+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P83
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.84, 2010-11-17 10:10:37+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P83
+
+  ntpsnmpd/ntpsnmpd.1@1.84, 2010-11-17 10:10:37+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P83
+
+  packageinfo.sh@1.85, 2010-11-17 10:10:37+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P83
+
+  sntp/sntp-opts.c@1.84, 2010-11-17 10:10:37+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P83
+
+  sntp/sntp-opts.h@1.84, 2010-11-17 10:10:37+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P83
+
+  sntp/sntp-opts.texi@1.84, 2010-11-17 10:10:37+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P83
+
+  sntp/sntp.1@1.84, 2010-11-17 10:10:37+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P83
+
+  sntp/sntp.html@1.84, 2010-11-17 10:10:37+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P83
+
+  util/ntp-keygen-opts.c@1.81, 2010-11-17 10:10:37+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P83
+
+  util/ntp-keygen-opts.h@1.81, 2010-11-17 10:10:37+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P83
+
+  util/ntp-keygen-opts.texi@1.84, 2010-11-17 10:10:37+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P83
+
+  util/ntp-keygen.1@1.84, 2010-11-17 10:10:37+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P83
+
+ChangeSet@1.2274.1.1, 2010-11-16 20:00:54-05:00, stenn@deacon.udel.edu +3 -0
+  Documentation updates from Dave Mills
+
+  ChangeLog@1.657.1.1, 2010-11-16 20:00:37-05:00, stenn@deacon.udel.edu +1 -0
+    Documentation updates from Dave Mills
+
+  html/autokey.html@1.7, 2010-11-16 20:00:44-05:00, stenn@deacon.udel.edu +2 -2
+    Documentation updates from Dave Mills
+
+  html/miscopt.html@1.61, 2010-11-16 20:00:45-05:00, stenn@deacon.udel.edu +4 -4
+    Documentation updates from Dave Mills
+
+ChangeSet@1.2276, 2010-11-16 20:36:48+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  [Bug 1727] ntp-keygen PLEN, ILEN undeclared --without-crypto.
+
+  ChangeLog@1.659, 2010-11-16 20:36:46+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1727] ntp-keygen PLEN, ILEN undeclared --without-crypto.
+
+  util/ntp-keygen.c@1.67, 2010-11-16 20:36:47+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    [Bug 1727] ntp-keygen PLEN, ILEN undeclared --without-crypto.
+
+ChangeSet@1.2275, 2010-11-16 19:52:26+00:00, davehart@shiny.ad.hartbrothers.com +76 -0
+  get rid of duplicate libopts copy
+
+  BitKeeper/deleted/04/README~5bc90a91ec6411e6@1.3, 2010-11-16 19:51:33+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/README -> BitKeeper/deleted/04/README~5bc90a91ec6411e6
+
+  BitKeeper/deleted/04/value-type.h~8c9e9714f716dd59@1.6, 2010-11-16 19:51:33+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/value-type.h -> BitKeeper/deleted/04/value-type.h~8c9e9714f716dd59
+
+  BitKeeper/deleted/07/usage.c~5148c9dc95efdc1a@1.5, 2010-11-16 19:51:33+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/usage.c -> BitKeeper/deleted/07/usage.c~5148c9dc95efdc1a
+
+  BitKeeper/deleted/0e/putshell.c~1e2cc4a1ffb8fafd@1.5, 2010-11-16 19:51:33+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/putshell.c -> BitKeeper/deleted/0e/putshell.c~1e2cc4a1ffb8fafd
+
+  BitKeeper/deleted/13/tokenize.c~c52b9718bf168782@1.3, 2010-11-16 19:51:33+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/tokenize.c -> BitKeeper/deleted/13/tokenize.c~c52b9718bf168782
+
+  BitKeeper/deleted/16/load.c~1667134a8de0561c@1.5, 2010-11-16 19:51:33+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/load.c -> BitKeeper/deleted/16/load.c~1667134a8de0561c
+
+  BitKeeper/deleted/18/streqvcmp.c~59b1ce7223f3432@1.5, 2010-11-16 19:51:33+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/streqvcmp.c -> BitKeeper/deleted/18/streqvcmp.c~59b1ce7223f3432
+
+  BitKeeper/deleted/1b/file.c~67e1b8b29a3953c9@1.5, 2010-11-16 19:51:33+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/file.c -> BitKeeper/deleted/1b/file.c~67e1b8b29a3953c9
+
+  BitKeeper/deleted/20/cook.c~a6052eddf9363b9@1.5, 2010-11-16 19:51:33+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/cook.c -> BitKeeper/deleted/20/cook.c~a6052eddf9363b9
+
+  BitKeeper/deleted/27/makeshell.c~20cbf9416110166e@1.5, 2010-11-16 19:51:33+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/makeshell.c -> BitKeeper/deleted/27/makeshell.c~20cbf9416110166e
+
+  BitKeeper/deleted/29/compat.h~7caca4e98e77c39@1.5, 2010-11-16 19:51:34+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/compat/compat.h -> BitKeeper/deleted/29/compat.h~7caca4e98e77c39
+
+  BitKeeper/deleted/29/enumeration.c~95e4ac5ad1bbc51d@1.5, 2010-11-16 19:51:34+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/enumeration.c -> BitKeeper/deleted/29/enumeration.c~95e4ac5ad1bbc51d
+
+  BitKeeper/deleted/2a/genshell.c~3290a02566a5dbb7@1.6, 2010-11-16 19:51:34+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/genshell.c -> BitKeeper/deleted/2a/genshell.c~3290a02566a5dbb7
+
+  BitKeeper/deleted/2b/sort.c~a0f0aca832b2554c@1.5, 2010-11-16 19:51:34+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/sort.c -> BitKeeper/deleted/2b/sort.c~a0f0aca832b2554c
+
+  BitKeeper/deleted/2c/pgusage.c~a31853764946ed10@1.5, 2010-11-16 19:51:34+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/pgusage.c -> BitKeeper/deleted/2c/pgusage.c~a31853764946ed10
+
+  BitKeeper/deleted/36/version.c~c1c141f1786ce61c@1.5, 2010-11-16 19:51:34+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/version.c -> BitKeeper/deleted/36/version.c~c1c141f1786ce61c
+
+  BitKeeper/deleted/3b/text_mmap.c~b601dfb63675456e@1.5, 2010-11-16 19:51:34+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/text_mmap.c -> BitKeeper/deleted/3b/text_mmap.c~b601dfb63675456e
+
+  BitKeeper/deleted/46/strchr.c~e00f88c19bec996f@1.2, 2010-11-16 19:51:34+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/compat/strchr.c -> BitKeeper/deleted/46/strchr.c~e00f88c19bec996f
+
+  BitKeeper/deleted/48/MakeDefs.inc~c629403b9830e97a@1.2, 2010-11-16 19:51:34+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/MakeDefs.inc -> BitKeeper/deleted/48/MakeDefs.inc~c629403b9830e97a
+
+  BitKeeper/deleted/4b/value-type.c~eab6702e458dce8d@1.3, 2010-11-16 19:51:34+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/value-type.c -> BitKeeper/deleted/4b/value-type.c~eab6702e458dce8d
+
+  BitKeeper/deleted/4c/boolean.c~8e1af2515312893c@1.5, 2010-11-16 19:51:35+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/boolean.c -> BitKeeper/deleted/4c/boolean.c~8e1af2515312893c
+
+  BitKeeper/deleted/67/environment.c~3cd90226bb7b2b17@1.6, 2010-11-16 19:51:35+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/environment.c -> BitKeeper/deleted/67/environment.c~3cd90226bb7b2b17
+
+  BitKeeper/deleted/6b/usage-txt.h~ca24f451aac51f1f@1.6, 2010-11-16 19:51:35+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/autoopts/usage-txt.h -> BitKeeper/deleted/6b/usage-txt.h~ca24f451aac51f1f
+
+  BitKeeper/deleted/6c/snprintf.c~4020216a304b1fdf@1.2, 2010-11-16 19:51:35+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/compat/snprintf.c -> BitKeeper/deleted/6c/snprintf.c~4020216a304b1fdf
+
+  BitKeeper/deleted/6c/windows-config.h~461ddbe1169c297b@1.5, 2010-11-16 19:51:35+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/compat/windows-config.h -> BitKeeper/deleted/6c/windows-config.h~461ddbe1169c297b
+
+  BitKeeper/deleted/7a/autoopts.c~54350751ea38f4a9@1.5, 2010-11-16 19:51:35+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/autoopts.c -> BitKeeper/deleted/7a/autoopts.c~54350751ea38f4a9
+
+  BitKeeper/deleted/82/xat-attribute.h~7d19c77e5ff1a904@1.6, 2010-11-16 19:51:35+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/xat-attribute.h -> BitKeeper/deleted/82/xat-attribute.h~7d19c77e5ff1a904
+
+  BitKeeper/deleted/8f/options.h~f2e0c23c8e5e59e8@1.6, 2010-11-16 19:51:35+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/autoopts/options.h -> BitKeeper/deleted/8f/options.h~f2e0c23c8e5e59e8
+
+  BitKeeper/deleted/91/parse-duration.c~43baef4a99281837@1.2, 2010-11-16 19:51:35+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/parse-duration.c -> BitKeeper/deleted/91/parse-duration.c~43baef4a99281837
+
+  BitKeeper/deleted/94/xat-attribute.c~8a808fcad835c47f@1.3, 2010-11-16 19:51:35+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/xat-attribute.c -> BitKeeper/deleted/94/xat-attribute.c~8a808fcad835c47f
+
+  BitKeeper/deleted/9b/genshell.h~c39a618c8d4061cd@1.6, 2010-11-16 19:51:36+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/genshell.h -> BitKeeper/deleted/9b/genshell.h~c39a618c8d4061cd
+
+  BitKeeper/deleted/9c/nested.c~f07a7d9124c8d2aa@1.5, 2010-11-16 19:51:36+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/nested.c -> BitKeeper/deleted/9c/nested.c~f07a7d9124c8d2aa
+
+  BitKeeper/deleted/a0/autoopts.h~56d3d4b1ff6e5a32@1.5, 2010-11-16 19:51:36+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/autoopts.h -> BitKeeper/deleted/a0/autoopts.h~56d3d4b1ff6e5a32
+
+  BitKeeper/deleted/a0/reset.c~676b344e8e06553d@1.5, 2010-11-16 19:51:36+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/reset.c -> BitKeeper/deleted/a0/reset.c~676b344e8e06553d
+
+  BitKeeper/deleted/bb/configfile.c~edfc1b173dd4ca72@1.5, 2010-11-16 19:51:36+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/configfile.c -> BitKeeper/deleted/bb/configfile.c~edfc1b173dd4ca72
+
+  BitKeeper/deleted/bc/COPYING.mbsd~a5472d893521969b@1.2, 2010-11-16 19:51:36+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/COPYING.mbsd -> BitKeeper/deleted/bc/COPYING.mbsd~a5472d893521969b
+
+  BitKeeper/deleted/c0/COPYING.lgplv3~40be4cbf4ae10117@1.2, 2010-11-16 19:51:36+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/COPYING.lgplv3 -> BitKeeper/deleted/c0/COPYING.lgplv3~40be4cbf4ae10117
+
+  BitKeeper/deleted/c4/strdup.c~d58e7b55af5b3f83@1.2, 2010-11-16 19:51:36+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/compat/strdup.c -> BitKeeper/deleted/c4/strdup.c~d58e7b55af5b3f83
+
+  BitKeeper/deleted/c6/stack.c~159a2b84f1ceafab@1.5, 2010-11-16 19:51:36+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/stack.c -> BitKeeper/deleted/c6/stack.c~159a2b84f1ceafab
+
+  BitKeeper/deleted/cd/libopts.c~3ef92daf425d2b@1.2, 2010-11-16 19:51:36+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/libopts.c -> BitKeeper/deleted/cd/libopts.c~3ef92daf425d2b
+
+  BitKeeper/deleted/ce/numeric.c~2cd8f01381095e42@1.5, 2010-11-16 19:51:36+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/numeric.c -> BitKeeper/deleted/ce/numeric.c~2cd8f01381095e42
+
+  BitKeeper/deleted/d4/pathfind.c~91eee34e6931c147@1.5, 2010-11-16 19:51:37+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/compat/pathfind.c -> BitKeeper/deleted/d4/pathfind.c~91eee34e6931c147
+
+  BitKeeper/deleted/d7/time.c~41f39a05ffd762ac@1.5, 2010-11-16 19:51:37+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/time.c -> BitKeeper/deleted/d7/time.c~41f39a05ffd762ac
+
+  BitKeeper/deleted/da/liboptschk.m4~1413f38bcfcfd143@1.5, 2010-11-16 19:51:37+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/m4/liboptschk.m4 -> BitKeeper/deleted/da/liboptschk.m4~1413f38bcfcfd143
+
+  BitKeeper/deleted/e1/Makefile.am~b7467cbc80acbbcc@1.3, 2010-11-16 19:51:37+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/Makefile.am -> BitKeeper/deleted/e1/Makefile.am~b7467cbc80acbbcc
+
+  BitKeeper/deleted/e5/ag-char-map.h~bedbb0c05ab02a70@1.6, 2010-11-16 19:51:37+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/ag-char-map.h -> BitKeeper/deleted/e5/ag-char-map.h~bedbb0c05ab02a70
+
+  BitKeeper/deleted/e8/libopts.m4~93a05c922cf88420@1.6, 2010-11-16 19:51:37+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/m4/libopts.m4 -> BitKeeper/deleted/e8/libopts.m4~93a05c922cf88420
+
+  BitKeeper/deleted/f4/proto.h~f433f2d660b72a7d@1.6, 2010-11-16 19:51:37+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/proto.h -> BitKeeper/deleted/f4/proto.h~f433f2d660b72a7d
+
+  BitKeeper/deleted/f6/COPYING.gplv3~f03d8366c675c284@1.2, 2010-11-16 19:51:37+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/COPYING.gplv3 -> BitKeeper/deleted/f6/COPYING.gplv3~f03d8366c675c284
+
+  BitKeeper/deleted/f7/parse-duration.h~17a3a3e1c22145d@1.2, 2010-11-16 19:51:37+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/parse-duration.h -> BitKeeper/deleted/f7/parse-duration.h~17a3a3e1c22145d
+
+  BitKeeper/deleted/f8/restore.c~7503fbe1eb367c27@1.5, 2010-11-16 19:51:37+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/restore.c -> BitKeeper/deleted/f8/restore.c~7503fbe1eb367c27
+
+  BitKeeper/deleted/fc/save.c~c7023eeab566cc5a@1.6, 2010-11-16 19:51:38+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: libopts/save.c -> BitKeeper/deleted/fc/save.c~c7023eeab566cc5a
+
+  ChangeLog@1.658, 2010-11-16 19:52:21+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    Remove top-level libopts, use sntp/libopts.
+
+  Makefile.am@1.99, 2010-11-16 19:52:21+00:00, davehart@shiny.ad.hartbrothers.com +8 -12
+    Remove top-level libopts, use sntp/libopts.
+
+  configure.ac@1.496, 2010-11-16 19:52:21+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    Remove top-level libopts, use sntp/libopts.
+
+  deps-ver@1.2, 2010-11-16 19:52:22+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    bump deps-ver to trigger clean build with removal of top-level
+      copy of libopts
+
+  ports/winnt/vc6/libntp.dsp@1.54, 2010-11-16 19:52:22+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    Remove top-level libopts, use sntp/libopts.
+
+  ports/winnt/vc6/ntpd.dsp@1.50, 2010-11-16 19:52:22+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    Remove top-level libopts, use sntp/libopts.
+
+  ports/winnt/vc6/ntpdc.dsp@1.29, 2010-11-16 19:52:22+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    Remove top-level libopts, use sntp/libopts.
+
+  ports/winnt/vc6/ntpkeygen.dsp@1.21, 2010-11-16 19:52:22+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    Remove top-level libopts, use sntp/libopts.
+
+  ports/winnt/vc6/ntpq.dsp@1.30, 2010-11-16 19:52:22+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    Remove top-level libopts, use sntp/libopts.
+
+  ports/winnt/vs2003/libntp.vcproj@1.12, 2010-11-16 19:52:22+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    Remove top-level libopts, use sntp/libopts.
+
+  ports/winnt/vs2003/ntpd.vcproj@1.11, 2010-11-16 19:52:22+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    Remove top-level libopts, use sntp/libopts.
+
+  ports/winnt/vs2003/ntpdc.vcproj@1.5, 2010-11-16 19:52:22+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    Remove top-level libopts, use sntp/libopts.
+
+  ports/winnt/vs2003/ntpkeygen.vcproj@1.4, 2010-11-16 19:52:22+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    Remove top-level libopts, use sntp/libopts.
+
+  ports/winnt/vs2003/ntpq.vcproj@1.5, 2010-11-16 19:52:22+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    Remove top-level libopts, use sntp/libopts.
+
+  ports/winnt/vs2005/libntp.vcproj@1.10, 2010-11-16 19:52:22+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    Remove top-level libopts, use sntp/libopts.
+
+  ports/winnt/vs2005/ntpd.vcproj@1.11, 2010-11-16 19:52:22+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    Remove top-level libopts, use sntp/libopts.
+
+  ports/winnt/vs2005/ntpdc.vcproj@1.5, 2010-11-16 19:52:22+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    Remove top-level libopts, use sntp/libopts.
+
+  ports/winnt/vs2005/ntpkeygen.vcproj@1.4, 2010-11-16 19:52:22+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    Remove top-level libopts, use sntp/libopts.
+
+  ports/winnt/vs2005/ntpq.vcproj@1.5, 2010-11-16 19:52:22+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    Remove top-level libopts, use sntp/libopts.
+
+  ports/winnt/vs2008/libntp/libntp.vcproj@1.31, 2010-11-16 19:52:22+00:00, davehart@shiny.ad.hartbrothers.com +4 -4
+    Remove top-level libopts, use sntp/libopts.
+
+  ports/winnt/vs2008/ntp-keygen/ntp-keygen.vcproj@1.11, 2010-11-16 19:52:22+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    Remove top-level libopts, use sntp/libopts.
+
+  ports/winnt/vs2008/ntpd/ntpd.vcproj@1.33, 2010-11-16 19:52:22+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    Remove top-level libopts, use sntp/libopts.
+
+  ports/winnt/vs2008/ntpdc/ntpdc.vcproj@1.14, 2010-11-16 19:52:22+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    Remove top-level libopts, use sntp/libopts.
+
+  ports/winnt/vs2008/ntpq/ntpq.vcproj@1.13, 2010-11-16 19:52:22+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    Remove top-level libopts, use sntp/libopts.
+
 ChangeSet@1.2274, 2010-11-16 10:10:15+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P82
   TAG: NTP_4_2_7P82
