@@ -1,8 +1,868 @@
-ChangeSet@1.2278, 2010-11-17 10:10:38+00:00, stenn@deacon.udel.edu +27 -0
+ChangeSet@1.2293, 2010-11-22 05:27:59+00:00, stenn@deacon.udel.edu +33 -0
+  NTP_4_2_7P84
+  TAG: NTP_4_2_7P84
+
+  ChangeLog@1.667, 2010-11-22 05:27:56+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P84
+
+  ntpd/ntpd-opts.c@1.88, 2010-11-22 05:27:56+00:00, stenn@deacon.udel.edu +5 -5
+    NTP_4_2_7P84
+
+  ntpd/ntpd-opts.h@1.88, 2010-11-22 05:27:56+00:00, stenn@deacon.udel.edu +4 -4
+    NTP_4_2_7P84
+
+  ntpd/ntpd-opts.menu@1.4, 2010-11-22 05:27:56+00:00, stenn@deacon.udel.edu +3 -61
+    NTP_4_2_7P84
+
+  ntpd/ntpd-opts.texi@1.86, 2010-11-22 05:27:56+00:00, stenn@deacon.udel.edu +0 -642
+    NTP_4_2_7P84
+
+  ntpd/ntpd.1@1.86, 2010-11-22 05:27:56+00:00, stenn@deacon.udel.edu +4 -3
+    NTP_4_2_7P84
+
+  ntpdc/ntpdc-opts.c@1.85, 2010-11-22 05:27:56+00:00, stenn@deacon.udel.edu +75 -72
+    NTP_4_2_7P84
+
+  ntpdc/ntpdc-opts.h@1.85, 2010-11-22 05:27:56+00:00, stenn@deacon.udel.edu +22 -24
+    NTP_4_2_7P84
+
+  ntpdc/ntpdc-opts.menu@1.4, 2010-11-22 05:27:56+00:00, stenn@deacon.udel.edu +2 -66
+    NTP_4_2_7P84
+
+  ntpdc/ntpdc-opts.texi@1.85, 2010-11-22 05:27:56+00:00, stenn@deacon.udel.edu +0 -271
+    NTP_4_2_7P84
+
+  ntpdc/ntpdc.1@1.85, 2010-11-22 05:27:56+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P84
+
+  ntpq/ntpq-opts.c@1.85, 2010-11-22 05:27:57+00:00, stenn@deacon.udel.edu +73 -68
+    NTP_4_2_7P84
+
+  ntpq/ntpq-opts.h@1.85, 2010-11-22 05:27:57+00:00, stenn@deacon.udel.edu +22 -24
+    NTP_4_2_7P84
+
+  ntpq/ntpq-opts.menu@1.4, 2010-11-22 05:27:57+00:00, stenn@deacon.udel.edu +2 -51
+    NTP_4_2_7P84
+
+  ntpq/ntpq-opts.texi@1.85, 2010-11-22 05:27:57+00:00, stenn@deacon.udel.edu +0 -226
+    NTP_4_2_7P84
+
+  ntpq/ntpq.1@1.85, 2010-11-22 05:27:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P84
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.85, 2010-11-22 05:27:57+00:00, stenn@deacon.udel.edu +55 -52
+    NTP_4_2_7P84
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.85, 2010-11-22 05:27:57+00:00, stenn@deacon.udel.edu +22 -24
+    NTP_4_2_7P84
+
+  ntpsnmpd/ntpsnmpd-opts.menu@1.4, 2010-11-22 05:27:57+00:00, stenn@deacon.udel.edu +2 -24
+    NTP_4_2_7P84
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.85, 2010-11-22 05:27:57+00:00, stenn@deacon.udel.edu +0 -78
+    NTP_4_2_7P84
+
+  ntpsnmpd/ntpsnmpd.1@1.85, 2010-11-22 05:27:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P84
+
+  packageinfo.sh@1.86, 2010-11-22 05:27:57+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P84
+
+  sntp/sntp-opts.c@1.85, 2010-11-22 05:27:57+00:00, stenn@deacon.udel.edu +81 -78
+    NTP_4_2_7P84
+
+  sntp/sntp-opts.h@1.85, 2010-11-22 05:27:57+00:00, stenn@deacon.udel.edu +22 -24
+    NTP_4_2_7P84
+
+  sntp/sntp-opts.menu@1.4, 2010-11-22 05:27:57+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P84
+
+  sntp/sntp-opts.texi@1.85, 2010-11-22 05:27:57+00:00, stenn@deacon.udel.edu +0 -213
+    NTP_4_2_7P84
+
+  sntp/sntp.1@1.85, 2010-11-22 05:27:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P84
+
+  sntp/sntp.html@1.85, 2010-11-22 05:27:57+00:00, stenn@deacon.udel.edu +62 -6
+    NTP_4_2_7P84
+
+  util/ntp-keygen-opts.c@1.83, 2010-11-22 05:27:57+00:00, stenn@deacon.udel.edu +5 -5
+    NTP_4_2_7P84
+
+  util/ntp-keygen-opts.h@1.83, 2010-11-22 05:27:57+00:00, stenn@deacon.udel.edu +4 -4
+    NTP_4_2_7P84
+
+  util/ntp-keygen-opts.menu@1.5, 2010-11-22 05:27:57+00:00, stenn@deacon.udel.edu +51 -1
+    NTP_4_2_7P84
+
+  util/ntp-keygen-opts.texi@1.86, 2010-11-22 05:27:57+00:00, stenn@deacon.udel.edu +0 -374
+    NTP_4_2_7P84
+
+  util/ntp-keygen.1@1.86, 2010-11-22 05:27:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P84
+
+ChangeSet@1.2082.39.1, 2010-11-22 03:54:12+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+  Bump minimum Automake version to 1.11, required for AM_COND_IF
+    use in LIBOPTS_CHECK.
+
+  BitKeeper/etc/attr@1.1.1.1, 2010-11-22 03:54:12+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+
+  ChangeLog@1.496.26.117, 2010-11-22 03:54:11+00:00, davehart@shiny.ad.hartbrothers.com +3 -1
+    Bump minimum Automake version to 1.11, required for AM_COND_IF
+      use in LIBOPTS_CHECK.
+
+  Makefile.am@1.93.2.6, 2010-11-22 03:54:11+00:00, davehart@shiny.ad.hartbrothers.com +2 -1
+    bump minimum Automake version to 1.11 for AM_COND_IF support
+      needed by local mod to libopts/m4/libopts.m4
+
+  sntp/Makefile.am@1.21.2.1, 2010-11-22 03:54:11+00:00, davehart@shiny.ad.hartbrothers.com +2 -1
+    bump minimum Automake version to 1.11 for AM_COND_IF support
+      needed by local mod to libopts/m4/libopts.m4
+
+ChangeSet@1.2291, 2010-11-22 03:17:40+00:00, davehart@shiny.ad.hartbrothers.com +7 -0
+  Add "nonvolatile" ntp.conf directive to control how often the
+    driftfile is written.
+
+  ChangeLog@1.665, 2010-11-22 03:17:38+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+    Add "nonvolatile" ntp.conf directive to control how often the
+      driftfile is written.
+
+  include/ntp.h@1.188, 2010-11-22 03:17:38+00:00, davehart@shiny.ad.hartbrothers.com +0 -1
+    "tos nonvolatile" was mistaken
+
+  ntpd/complete.conf@1.12, 2010-11-22 03:17:38+00:00, davehart@shiny.ad.hartbrothers.com +3 -2
+    Add "nonvolatile" ntp.conf directive to control how often the
+      driftfile is written.
+
+  ntpd/ntp_config.c@1.275, 2010-11-22 03:17:38+00:00, davehart@shiny.ad.hartbrothers.com +63 -34
+    Add "nonvolatile" ntp.conf directive to control how often the
+      driftfile is written.
+
+  ntpd/ntp_parser.c@1.71, 2010-11-22 03:17:39+00:00, davehart@shiny.ad.hartbrothers.com +403 -401
+    bison output
+
+  ntpd/ntp_parser.y@1.65, 2010-11-22 03:17:39+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    Add "nonvolatile" ntp.conf directive to control how often the
+      driftfile is written.
+
+  ntpd/ntp_scanner.c@1.39, 2010-11-22 03:17:39+00:00, davehart@shiny.ad.hartbrothers.com +6 -8
+    Allow doubles with exponent and without a decimal point.
+
+ChangeSet@1.2290, 2010-11-21 23:12:16+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  [Bug 1618] Unreachable code in jjy_start().
+  JJY driver improvements for Tristate JJY01/02, including changes
+    to its clockstats format.
+  
+  applies to prior cset merged from a -stable repo
+
+  ChangeLog@1.664, 2010-11-21 23:12:16+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
+    [Bug 1618] Unreachable code in jjy_start().
+    JJY driver improvements for Tristate JJY01/02, including changes
+      to its clockstats format.
+    
+
+ChangeSet@1.2082.4.171, 2010-11-21 23:03:15+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
+  [Bug 1618] jjy_start() unreachable code.
+  refclock_jjy.c Tristate JJY01/02 improvements.
+
+  BitKeeper/etc/attr@1.2, 2010-11-21 23:03:15+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+
+  html/copyright.html@1.46.1.2, 2010-11-21 23:03:14+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    Credit refclock_jjy author Takao Abe
+
+  ntpd/refclock_jjy.c@1.19, 2010-11-21 23:03:15+00:00, davehart@shiny.ad.hartbrothers.com +586 -348
+    [Bug 1618] jjy_start() unreachable code.
+    refclock_jjy.c Tristate JJY01/02 improvements.
+
+ChangeSet@1.2287, 2010-11-20 23:22:10+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+  remove Autogen 5.10 --wait-sync workaround from ntpdbase-opts.def, ntpd.c
+
+  ntpd/ntpd-opts.c@1.87, 2010-11-20 23:22:09+00:00, davehart@shiny.ad.hartbrothers.com +147 -170
+    autogen output
+
+  ntpd/ntpd-opts.h@1.87, 2010-11-20 23:22:09+00:00, davehart@shiny.ad.hartbrothers.com +24 -22
+    autogen output
+
+  ntpd/ntpd.c@1.119, 2010-11-20 23:22:09+00:00, davehart@shiny.ad.hartbrothers.com +1 -2
+    remove Autogen 5.10 --wait-sync workaround from ntpdbase-opts.def, ntpd.c
+
+  ntpd/ntpdbase-opts.def@1.22, 2010-11-20 23:22:09+00:00, davehart@shiny.ad.hartbrothers.com +1 -6
+    remove Autogen 5.10 --wait-sync workaround from ntpdbase-opts.def, ntpd.c
+
+ChangeSet@1.2082.4.170, 2010-11-20 17:18:02-05:00, stenn@deacon.udel.edu +1 -0
+  hack around a problem building sntp/sntp.html
+
+  sntp/Makefile.am@1.21.1.11, 2010-11-20 17:17:56-05:00, stenn@deacon.udel.edu +1 -1
+    hack around a problem building sntp/sntp.html
+
+ChangeSet@1.2082.4.169, 2010-11-20 16:54:28-05:00, stenn@deacon.udel.edu +1 -0
+  Add support for "br-flock -1"
+
+  br-flock@1.15, 2010-11-20 16:54:19-05:00, stenn@deacon.udel.edu +14 -1
+    Add support for "br-flock -1"
+
+ChangeSet@1.2082.4.168, 2010-11-20 20:53:00+00:00, davehart@shiny.ad.hartbrothers.com +5 -0
+  repair make distcheck failure with sntp/libopts/Makefile
+
+  Makefile.am@1.93.2.5, 2010-11-20 20:52:59+00:00, davehart@shiny.ad.hartbrothers.com +2 -8
+    move sntp earlier than libopts users in SUBDIRS,
+    remove sntp/libopts from SUBDIRS, to repair make distcheck
+    with a shared libopts.
+
+  bootstrap@1.28.1.5, 2010-11-20 20:52:59+00:00, davehart@shiny.ad.hartbrothers.com +5 -1
+    once again use workaround of invoking autoreconf in sntp after the
+      top level, to ensure a correct sntp/libopts/Makefile.in.
+
+  configure.ac@1.465.1.17, 2010-11-20 20:52:59+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    do not AC_CONFIG_FILES(sntp/libopts/Makefile)
+
+  sntp/Makefile.am@1.21.1.10, 2010-11-20 20:52:59+00:00, davehart@shiny.ad.hartbrothers.com +10 -11
+    remove . from SUBDIRS
+
+  sntp/libopts/m4/libopts.m4@1.8, 2010-11-20 20:52:59+00:00, davehart@shiny.ad.hartbrothers.com +12 -7
+    add 2nd arg to LIBOPTS_CHECK controlling AC_CONFIG_FILES(libopts/Makefile])
+
+ChangeSet@1.2082.4.167, 2010-11-20 02:50:43-05:00, stenn@deacon.udel.edu +52 -0
+  Remove top-level libopts/
+
+  BitKeeper/deleted/.del-COPYING.gplv3~f03d8366c675c284@1.1.1.1, 2010-11-20 02:40:40-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/COPYING.gplv3
+
+  BitKeeper/deleted/.del-COPYING.lgplv3~40be4cbf4ae10117@1.1.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/COPYING.lgplv3
+
+  BitKeeper/deleted/.del-COPYING.mbsd~a5472d893521969b@1.1.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/COPYING.mbsd
+
+  BitKeeper/deleted/.del-MakeDefs.inc~c629403b9830e97a@1.1.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/MakeDefs.inc
+
+  BitKeeper/deleted/.del-Makefile.am~b7467cbc80acbbcc@1.2.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/Makefile.am
+
+  BitKeeper/deleted/.del-README~5bc90a91ec6411e6@1.2.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/README
+
+  BitKeeper/deleted/.del-ag-char-map.h~bedbb0c05ab02a70@1.5.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/ag-char-map.h
+
+  BitKeeper/deleted/.del-autoopts.c~54350751ea38f4a9@1.4.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/autoopts.c
+
+  BitKeeper/deleted/.del-autoopts.h~56d3d4b1ff6e5a32@1.4.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/autoopts.h
+
+  BitKeeper/deleted/.del-boolean.c~8e1af2515312893c@1.4.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/boolean.c
+
+  BitKeeper/deleted/.del-compat.h~7caca4e98e77c39@1.4.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/compat/compat.h
+
+  BitKeeper/deleted/.del-configfile.c~edfc1b173dd4ca72@1.4.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/configfile.c
+
+  BitKeeper/deleted/.del-cook.c~a6052eddf9363b9@1.4.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/cook.c
+
+  BitKeeper/deleted/.del-enumeration.c~95e4ac5ad1bbc51d@1.4.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/enumeration.c
+
+  BitKeeper/deleted/.del-environment.c~3cd90226bb7b2b17@1.5.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/environment.c
+
+  BitKeeper/deleted/.del-file.c~67e1b8b29a3953c9@1.4.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/file.c
+
+  BitKeeper/deleted/.del-genshell.c~3290a02566a5dbb7@1.5.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/genshell.c
+
+  BitKeeper/deleted/.del-genshell.h~c39a618c8d4061cd@1.5.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/genshell.h
+
+  BitKeeper/deleted/.del-libopts.c~3ef92daf425d2b@1.1.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/libopts.c
+
+  BitKeeper/deleted/.del-libopts.m4~93a05c922cf88420@1.5.1.1, 2010-11-20 02:40:42-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/m4/libopts.m4
+
+  BitKeeper/deleted/.del-liboptschk.m4~1413f38bcfcfd143@1.4.1.1, 2010-11-20 02:40:42-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/m4/liboptschk.m4
+
+  BitKeeper/deleted/.del-load.c~1667134a8de0561c@1.4.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/load.c
+
+  BitKeeper/deleted/.del-makeshell.c~20cbf9416110166e@1.4.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/makeshell.c
+
+  BitKeeper/deleted/.del-nested.c~f07a7d9124c8d2aa@1.4.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/nested.c
+
+  BitKeeper/deleted/.del-numeric.c~2cd8f01381095e42@1.4.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/numeric.c
+
+  BitKeeper/deleted/.del-options.h~f2e0c23c8e5e59e8@1.5.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/autoopts/options.h
+
+  BitKeeper/deleted/.del-parse-duration.c~43baef4a99281837@1.1.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/parse-duration.c
+
+  BitKeeper/deleted/.del-parse-duration.h~17a3a3e1c22145d@1.1.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/parse-duration.h
+
+  BitKeeper/deleted/.del-pathfind.c~91eee34e6931c147@1.4.1.1, 2010-11-20 02:40:42-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/compat/pathfind.c
+
+  BitKeeper/deleted/.del-pgusage.c~a31853764946ed10@1.4.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/pgusage.c
+
+  BitKeeper/deleted/.del-proto.h~f433f2d660b72a7d@1.5.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/proto.h
+
+  BitKeeper/deleted/.del-putshell.c~1e2cc4a1ffb8fafd@1.4.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/putshell.c
+
+  BitKeeper/deleted/.del-reset.c~676b344e8e06553d@1.4.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/reset.c
+
+  BitKeeper/deleted/.del-restore.c~7503fbe1eb367c27@1.4.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/restore.c
+
+  BitKeeper/deleted/.del-save.c~c7023eeab566cc5a@1.5.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/save.c
+
+  BitKeeper/deleted/.del-snprintf.c~4020216a304b1fdf@1.1.1.1, 2010-11-20 02:40:42-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/compat/snprintf.c
+
+  BitKeeper/deleted/.del-sort.c~a0f0aca832b2554c@1.4.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/sort.c
+
+  BitKeeper/deleted/.del-stack.c~159a2b84f1ceafab@1.4.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/stack.c
+
+  BitKeeper/deleted/.del-strchr.c~e00f88c19bec996f@1.1.1.1, 2010-11-20 02:40:42-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/compat/strchr.c
+
+  BitKeeper/deleted/.del-strdup.c~d58e7b55af5b3f83@1.1.1.1, 2010-11-20 02:40:42-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/compat/strdup.c
+
+  BitKeeper/deleted/.del-streqvcmp.c~59b1ce7223f3432@1.4.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/streqvcmp.c
+
+  BitKeeper/deleted/.del-text_mmap.c~b601dfb63675456e@1.4.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/text_mmap.c
+
+  BitKeeper/deleted/.del-time.c~41f39a05ffd762ac@1.4.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/time.c
+
+  BitKeeper/deleted/.del-tokenize.c~c52b9718bf168782@1.2.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/tokenize.c
+
+  BitKeeper/deleted/.del-usage-txt.h~ca24f451aac51f1f@1.5.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/autoopts/usage-txt.h
+
+  BitKeeper/deleted/.del-usage.c~5148c9dc95efdc1a@1.4.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/usage.c
+
+  BitKeeper/deleted/.del-value-type.c~eab6702e458dce8d@1.2.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/value-type.c
+
+  BitKeeper/deleted/.del-value-type.h~8c9e9714f716dd59@1.5.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/value-type.h
+
+  BitKeeper/deleted/.del-version.c~c1c141f1786ce61c@1.4.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/version.c
+
+  BitKeeper/deleted/.del-windows-config.h~461ddbe1169c297b@1.4.1.1, 2010-11-20 02:40:42-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/compat/windows-config.h
+
+  BitKeeper/deleted/.del-xat-attribute.c~8a808fcad835c47f@1.2.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/xat-attribute.c
+
+  BitKeeper/deleted/.del-xat-attribute.h~7d19c77e5ff1a904@1.5.1.1, 2010-11-20 02:40:41-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libopts/xat-attribute.h
+
+ChangeSet@1.2082.4.166, 2010-11-20 02:18:46-05:00, stenn@deacon.udel.edu +1 -0
+  backport the html timestamp fixes for bootstrap
+
+  bootstrap@1.28.1.4, 2010-11-20 02:18:41-05:00, stenn@deacon.udel.edu +8 -4
+    backport the html timestamp fixes for bootstrap
+
+ChangeSet@1.2284, 2010-11-20 07:15:32+00:00, davehart@shiny.ad.hartbrothers.com +8 -0
+  Add ntp-keygen -l/--lifetime to control certificate expiry.
+
+  ChangeLog@1.663, 2010-11-20 07:15:30+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    Add ntp-keygen -l/--lifetime to control certificate expiry.
+
+  util/ntp-keygen-opts.c@1.82, 2010-11-20 07:15:30+00:00, davehart@shiny.ad.hartbrothers.com +149 -126
+    add ntp-keygen -l/--lifetime # to set days until expiration
+
+  util/ntp-keygen-opts.def@1.13, 2010-11-20 07:15:31+00:00, davehart@shiny.ad.hartbrothers.com +13 -1
+    add ntp-keygen -l/--lifetime # to set days until expiration
+
+  util/ntp-keygen-opts.h@1.82, 2010-11-20 07:15:31+00:00, davehart@shiny.ad.hartbrothers.com +47 -38
+    add ntp-keygen -l/--lifetime # to set days until expiration
+
+  util/ntp-keygen-opts.menu@1.2.1.1, 2010-11-20 07:15:31+00:00, davehart@shiny.ad.hartbrothers.com +1 -94
+    add ntp-keygen -l/--lifetime # to set days until expiration
+
+  util/ntp-keygen-opts.texi@1.85, 2010-11-20 07:15:31+00:00, davehart@shiny.ad.hartbrothers.com +95 -79
+    add ntp-keygen -l/--lifetime # to set days until expiration
+
+  util/ntp-keygen.1@1.85, 2010-11-20 07:15:31+00:00, davehart@shiny.ad.hartbrothers.com +9 -3
+    add ntp-keygen -l/--lifetime # to set days until expiration
+
+  util/ntp-keygen.c@1.69, 2010-11-20 07:15:31+00:00, davehart@shiny.ad.hartbrothers.com +4 -1
+    add ntp-keygen -l/--lifetime # to set days until expiration
+
+ChangeSet@1.2082.4.165, 2010-11-20 00:20:40-05:00, stenn@deacon.udel.edu +1 -0
+  Properly quote the configure.ac LIBOPTS_CHECK argument
+
+  configure.ac@1.465.1.16, 2010-11-20 00:20:26-05:00, stenn@deacon.udel.edu +1 -1
+    Properly quote the configure.ac LIBOPTS_CHECK argument
+
+ChangeSet@1.2082.4.164, 2010-11-20 00:18:39-05:00, stenn@deacon.udel.edu +8 -0
+  autogen-5.11.3 upgrade
+
+  sntp/libopts/Makefile.am@1.5, 2010-11-20 00:18:16-05:00, stenn@deacon.udel.edu +3 -3
+    autogen-5.11.3 upgrade
+
+  sntp/libopts/ag-char-map.h@1.8, 2010-11-20 00:18:16-05:00, stenn@deacon.udel.edu +1 -1
+    autogen-5.11.3 upgrade
+
+  sntp/libopts/configfile.c@1.7, 2010-11-20 00:18:16-05:00, stenn@deacon.udel.edu +7 -5
+    autogen-5.11.3 upgrade
+
+  sntp/libopts/genshell.c@1.8, 2010-11-20 00:18:16-05:00, stenn@deacon.udel.edu +1 -1
+    autogen-5.11.3 upgrade
+
+  sntp/libopts/genshell.h@1.8, 2010-11-20 00:18:16-05:00, stenn@deacon.udel.edu +1 -1
+    autogen-5.11.3 upgrade
+
+  sntp/libopts/proto.h@1.8, 2010-11-20 00:18:16-05:00, stenn@deacon.udel.edu +1 -1
+    autogen-5.11.3 upgrade
+
+  sntp/libopts/value-type.h@1.8, 2010-11-20 00:18:16-05:00, stenn@deacon.udel.edu +1 -1
+    autogen-5.11.3 upgrade
+
+  sntp/libopts/xat-attribute.h@1.8, 2010-11-20 00:18:16-05:00, stenn@deacon.udel.edu +1 -1
+    autogen-5.11.3 upgrade
+
+ChangeSet@1.2082.4.163, 2010-11-20 00:16:33-05:00, stenn@deacon.udel.edu +6 -0
+  autogen upgrade
+
+  ntpd/ntpd-opts.menu@1.3, 2010-11-20 00:16:24-05:00, stenn@deacon.udel.edu +1 -1
+    autogen upgrade
+
+  ntpdc/ntpdc-opts.menu@1.3, 2010-11-20 00:16:24-05:00, stenn@deacon.udel.edu +3 -3
+    autogen upgrade
+
+  ntpq/ntpq-opts.menu@1.3, 2010-11-20 00:16:24-05:00, stenn@deacon.udel.edu +3 -3
+    autogen upgrade
+
+  ntpsnmpd/ntpsnmpd-opts.menu@1.3, 2010-11-20 00:16:24-05:00, stenn@deacon.udel.edu +24 -2
+    autogen upgrade
+
+  sntp/sntp-opts.menu@1.3, 2010-11-20 00:16:24-05:00, stenn@deacon.udel.edu +56 -1
+    autogen upgrade
+
+  util/ntp-keygen-opts.menu@1.3, 2010-11-20 00:16:24-05:00, stenn@deacon.udel.edu +4 -4
+    autogen upgrade
+
+ChangeSet@1.2082.4.162, 2010-11-20 00:14:13-05:00, stenn@deacon.udel.edu +25 -0
+  autogen upgrade
+
+  ntpd/ntpd-opts.c@1.248.27.1, 2010-11-20 00:13:35-05:00, stenn@deacon.udel.edu +142 -140
+    autogen upgrade
+
+  ntpd/ntpd-opts.h@1.248.27.1, 2010-11-20 00:13:35-05:00, stenn@deacon.udel.edu +20 -22
+    autogen upgrade
+
+  ntpd/ntpd-opts.texi@1.246.27.1, 2010-11-20 00:13:35-05:00, stenn@deacon.udel.edu +0 -583
+    autogen upgrade
+
+  ntpd/ntpd.1@1.246.27.1, 2010-11-20 00:13:35-05:00, stenn@deacon.udel.edu +2 -2
+    autogen upgrade
+
+  ntpdc/ntpdc-opts.c@1.244.27.1, 2010-11-20 00:13:35-05:00, stenn@deacon.udel.edu +74 -71
+    autogen upgrade
+
+  ntpdc/ntpdc-opts.h@1.244.27.1, 2010-11-20 00:13:35-05:00, stenn@deacon.udel.edu +20 -22
+    autogen upgrade
+
+  ntpdc/ntpdc-opts.texi@1.243.27.1, 2010-11-20 00:13:35-05:00, stenn@deacon.udel.edu +0 -271
+    autogen upgrade
+
+  ntpdc/ntpdc.1@1.243.27.1, 2010-11-20 00:13:35-05:00, stenn@deacon.udel.edu +2 -2
+    autogen upgrade
+
+  ntpq/ntpq-opts.c@1.245.27.1, 2010-11-20 00:13:35-05:00, stenn@deacon.udel.edu +72 -67
+    autogen upgrade
+
+  ntpq/ntpq-opts.h@1.245.27.1, 2010-11-20 00:13:36-05:00, stenn@deacon.udel.edu +20 -22
+    autogen upgrade
+
+  ntpq/ntpq-opts.texi@1.244.27.1, 2010-11-20 00:13:36-05:00, stenn@deacon.udel.edu +0 -226
+    autogen upgrade
+
+  ntpq/ntpq.1@1.244.27.1, 2010-11-20 00:13:36-05:00, stenn@deacon.udel.edu +2 -2
+    autogen upgrade
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.123.28.1, 2010-11-20 00:13:36-05:00, stenn@deacon.udel.edu +54 -51
+    autogen upgrade
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.123.28.1, 2010-11-20 00:13:36-05:00, stenn@deacon.udel.edu +20 -22
+    autogen upgrade
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.123.28.1, 2010-11-20 00:13:36-05:00, stenn@deacon.udel.edu +0 -78
+    autogen upgrade
+
+  ntpsnmpd/ntpsnmpd.1@1.122.28.1, 2010-11-20 00:13:36-05:00, stenn@deacon.udel.edu +2 -2
+    autogen upgrade
+
+  sntp/sntp-opts.c@1.117.27.1, 2010-11-20 00:13:37-05:00, stenn@deacon.udel.edu +80 -77
+    autogen upgrade
+
+  sntp/sntp-opts.h@1.117.27.1, 2010-11-20 00:13:37-05:00, stenn@deacon.udel.edu +20 -22
+    autogen upgrade
+
+  sntp/sntp-opts.texi@1.117.27.1, 2010-11-20 00:13:37-05:00, stenn@deacon.udel.edu +0 -213
+    autogen upgrade
+
+  sntp/sntp.1@1.117.27.1, 2010-11-20 00:13:37-05:00, stenn@deacon.udel.edu +2 -2
+    autogen upgrade
+
+  sntp/sntp.html@1.7.27.1, 2010-11-20 00:13:37-05:00, stenn@deacon.udel.edu +61 -5
+    autogen upgrade
+
+  util/ntp-keygen-opts.c@1.247.27.1, 2010-11-20 00:13:37-05:00, stenn@deacon.udel.edu +98 -105
+    autogen upgrade
+
+  util/ntp-keygen-opts.h@1.247.27.1, 2010-11-20 00:13:37-05:00, stenn@deacon.udel.edu +20 -22
+    autogen upgrade
+
+  util/ntp-keygen-opts.texi@1.246.27.1, 2010-11-20 00:13:37-05:00, stenn@deacon.udel.edu +0 -358
+    autogen upgrade
+
+  util/ntp-keygen.1@1.246.27.1, 2010-11-20 00:13:37-05:00, stenn@deacon.udel.edu +2 -2
+    autogen upgrade
+
+ChangeSet@1.2282, 2010-11-20 04:35:13+00:00, davehart@shiny.ad.hartbrothers.com +9 -0
+  add "tos nonvolatile" to control interval between driftfile writes.
+
+  include/ntp.h@1.187, 2010-11-20 04:35:12+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    add "tos nonvolatile" to control interval between driftfile writes.
+
+  ntpd/complete.conf@1.11, 2010-11-20 04:35:12+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    add "tos nonvolatile" to control interval between driftfile writes.
+
+  ntpd/keyword-gen-utd@1.12, 2010-11-20 04:35:12+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    keyword-gen output
+
+  ntpd/keyword-gen.c@1.16, 2010-11-20 04:35:12+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    add "tos nonvolatile" to control interval between driftfile writes.
+
+  ntpd/ntp_config.c@1.274, 2010-11-20 04:35:12+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+    add "tos nonvolatile" to control interval between driftfile writes.
+
+  ntpd/ntp_keyword.h@1.14, 2010-11-20 04:35:12+00:00, davehart@shiny.ad.hartbrothers.com +512 -503
+    keyword-gen output
+
+  ntpd/ntp_parser.c@1.70, 2010-11-20 04:35:12+00:00, davehart@shiny.ad.hartbrothers.com +810 -805
+    bison output
+
+  ntpd/ntp_parser.h@1.41, 2010-11-20 04:35:13+00:00, davehart@shiny.ad.hartbrothers.com +149 -147
+    bison output
+
+  ntpd/ntp_parser.y@1.64, 2010-11-20 04:35:13+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+    add "tos nonvolatile" to control interval between driftfile writes.
+
+ChangeSet@1.2082.4.161, 2010-11-19 23:29:22-05:00, stenn@psp-deb1.ntp.org +5 -0
+  Update generated .menu files
+
+  ntpd/ntpd-opts.menu@1.2, 2010-11-19 23:29:15-05:00, stenn@psp-deb1.ntp.org +122 -1
+    Update generated .menu files
+
+  ntpdc/ntpdc-opts.menu@1.2, 2010-11-19 23:29:15-05:00, stenn@psp-deb1.ntp.org +122 -1
+    Update generated .menu files
+
+  ntpq/ntpq-opts.menu@1.2, 2010-11-19 23:29:15-05:00, stenn@psp-deb1.ntp.org +96 -1
+    Update generated .menu files
+
+  ntpsnmpd/ntpsnmpd-opts.menu@1.2, 2010-11-19 23:29:15-05:00, stenn@psp-deb1.ntp.org +34 -1
+    Update generated .menu files
+
+  util/ntp-keygen-opts.menu@1.2, 2010-11-19 23:29:15-05:00, stenn@psp-deb1.ntp.org +94 -1
+    Update generated .menu files
+
+ChangeSet@1.2082.4.160, 2010-11-19 23:27:51-05:00, stenn@psp-deb1.ntp.org +1 -0
+  Use the new autoopts no-misuse-usage keyword
+
+  include/copyright.def@1.12, 2010-11-19 23:27:41-05:00, stenn@psp-deb1.ntp.org +1 -0
+    Use the new autoopts no-misuse-usage keyword
+
+ChangeSet@1.2082.4.159, 2010-11-19 23:26:17-05:00, stenn@psp-deb1.ntp.org +50 -0
+  Upgrade libopts to 33.3.8 and autogen to 5.11.3
+
+  ChangeLog@1.496.26.116, 2010-11-18 01:27:11-05:00, stenn@psp-deb1.ntp.org +2 -0
+    Use a single copy of libopts/, in sntp/
+
+  Makefile.am@1.93.2.4, 2010-11-18 01:27:11-05:00, stenn@psp-deb1.ntp.org +11 -15
+    Use a single copy of libopts/, in sntp/
+
+  configure.ac@1.465.1.15, 2010-11-18 01:27:11-05:00, stenn@psp-deb1.ntp.org +1 -1
+    Use a single copy of libopts/, in sntp/
+
+  deps-ver@1.1.1.1, 2010-11-18 01:27:11-05:00, stenn@psp-deb1.ntp.org +1 -1
+    Use a single copy of libopts/, in sntp/
+
+  sntp/libopts/COPYING.gplv3@1.3, 2010-11-18 01:04:48-05:00, stenn@psp-deb1.ntp.org +1 -1
+    libopts-33.3.8
+
+  sntp/libopts/COPYING.lgplv3@1.3, 2010-11-18 01:04:48-05:00, stenn@psp-deb1.ntp.org +1 -1
+    libopts-33.3.8
+
+  sntp/libopts/Makefile.am@1.4, 2010-11-18 01:04:48-05:00, stenn@psp-deb1.ntp.org +5 -5
+    libopts-33.3.8
+
+  sntp/libopts/README@1.4, 2010-11-18 01:04:48-05:00, stenn@psp-deb1.ntp.org +1 -1
+    libopts-33.3.8
+
+  sntp/libopts/ag-char-map.h@1.7, 2010-11-18 01:04:48-05:00, stenn@psp-deb1.ntp.org +89 -57
+    libopts-33.3.8
+
+  sntp/libopts/autoopts.c@1.6, 2010-11-18 01:04:49-05:00, stenn@psp-deb1.ntp.org +84 -83
+    libopts-33.3.8
+
+  sntp/libopts/autoopts.h@1.6, 2010-11-18 01:04:49-05:00, stenn@psp-deb1.ntp.org +24 -21
+    libopts-33.3.8
+
+  sntp/libopts/autoopts/options.h@1.7, 2010-11-18 01:05:47-05:00, stenn@psp-deb1.ntp.org +48 -44
+    libopts-33.3.8
+
+  sntp/libopts/autoopts/usage-txt.h@1.7, 2010-11-18 01:05:47-05:00, stenn@psp-deb1.ntp.org +151 -144
+    libopts-33.3.8
+
+  sntp/libopts/boolean.c@1.6, 2010-11-18 01:04:49-05:00, stenn@psp-deb1.ntp.org +5 -4
+    libopts-33.3.8
+
+  sntp/libopts/compat/compat.h@1.6, 2010-11-18 01:06:00-05:00, stenn@psp-deb1.ntp.org +4 -5
+    libopts-33.3.8
+
+  sntp/libopts/compat/pathfind.c@1.6, 2010-11-18 01:06:00-05:00, stenn@psp-deb1.ntp.org +1 -4
+    libopts-33.3.8
+
+  sntp/libopts/compat/windows-config.h@1.6, 2010-11-18 01:06:00-05:00, stenn@psp-deb1.ntp.org +2 -3
+    libopts-33.3.8
+
+  sntp/libopts/configfile.c@1.6, 2010-11-18 01:04:49-05:00, stenn@psp-deb1.ntp.org +242 -219
+    libopts-33.3.8
+
+  sntp/libopts/cook.c@1.6, 2010-11-18 01:04:49-05:00, stenn@psp-deb1.ntp.org +5 -5
+    libopts-33.3.8
+
+  sntp/libopts/enumeration.c@1.6, 2010-11-18 01:04:49-05:00, stenn@psp-deb1.ntp.org +145 -140
+    libopts-33.3.8
+
+  sntp/libopts/environment.c@1.7, 2010-11-18 01:04:49-05:00, stenn@psp-deb1.ntp.org +27 -24
+    libopts-33.3.8
+
+  sntp/libopts/file.c@1.6, 2010-11-18 01:04:49-05:00, stenn@psp-deb1.ntp.org +5 -4
+    libopts-33.3.8
+
+  sntp/libopts/genshell.c@1.7, 2010-11-18 01:04:49-05:00, stenn@psp-deb1.ntp.org +36 -35
+    libopts-33.3.8
+
+  sntp/libopts/genshell.h@1.7, 2010-11-18 01:04:49-05:00, stenn@psp-deb1.ntp.org +20 -22
+    libopts-33.3.8
+
+  sntp/libopts/load.c@1.6, 2010-11-18 01:04:49-05:00, stenn@psp-deb1.ntp.org +47 -65
+    libopts-33.3.8
+
+  sntp/libopts/m4/libopts.m4@1.7, 2010-11-18 01:06:03-05:00, stenn@psp-deb1.ntp.org +48 -46
+    libopts-33.3.8
+
+  sntp/libopts/m4/liboptschk.m4@1.6, 2010-11-18 01:06:03-05:00, stenn@psp-deb1.ntp.org +2 -2
+    libopts-33.3.8
+
+  sntp/libopts/makeshell.c@1.6, 2010-11-18 01:04:49-05:00, stenn@psp-deb1.ntp.org +203 -188
+    libopts-33.3.8
+
+  sntp/libopts/nested.c@1.6, 2010-11-18 01:04:49-05:00, stenn@psp-deb1.ntp.org +116 -136
+    libopts-33.3.8
+
+  sntp/libopts/numeric.c@1.6, 2010-11-18 01:04:49-05:00, stenn@psp-deb1.ntp.org +5 -4
+    libopts-33.3.8
+
+  sntp/libopts/parse-duration.c@1.3, 2010-11-18 01:04:49-05:00, stenn@psp-deb1.ntp.org +2 -2
+    libopts-33.3.8
+
+  sntp/libopts/parse-duration.h@1.3, 2010-11-18 01:04:49-05:00, stenn@psp-deb1.ntp.org +9 -1
+    libopts-33.3.8
+
+  sntp/libopts/pgusage.c@1.6, 2010-11-18 01:04:49-05:00, stenn@psp-deb1.ntp.org +19 -18
+    libopts-33.3.8
+
+  sntp/libopts/proto.h@1.7, 2010-11-18 01:04:49-05:00, stenn@psp-deb1.ntp.org +20 -17
+    libopts-33.3.8
+
+  sntp/libopts/putshell.c@1.6, 2010-11-18 01:04:49-05:00, stenn@psp-deb1.ntp.org +179 -127
+    libopts-33.3.8
+
+  sntp/libopts/reset.c@1.6, 2010-11-18 01:04:49-05:00, stenn@psp-deb1.ntp.org +5 -4
+    libopts-33.3.8
+
+  sntp/libopts/restore.c@1.6, 2010-11-18 01:04:49-05:00, stenn@psp-deb1.ntp.org +20 -19
+    libopts-33.3.8
+
+  sntp/libopts/save.c@1.7, 2010-11-18 01:04:49-05:00, stenn@psp-deb1.ntp.org +77 -77
+    libopts-33.3.8
+
+  sntp/libopts/sort.c@1.6, 2010-11-18 01:04:49-05:00, stenn@psp-deb1.ntp.org +35 -35
+    libopts-33.3.8
+
+  sntp/libopts/stack.c@1.6, 2010-11-18 01:04:49-05:00, stenn@psp-deb1.ntp.org +19 -19
+    libopts-33.3.8
+
+  sntp/libopts/streqvcmp.c@1.6, 2010-11-18 01:04:49-05:00, stenn@psp-deb1.ntp.org +13 -12
+    libopts-33.3.8
+
+  sntp/libopts/text_mmap.c@1.6, 2010-11-18 01:04:49-05:00, stenn@psp-deb1.ntp.org +31 -31
+    libopts-33.3.8
+
+  sntp/libopts/time.c@1.6, 2010-11-18 01:04:49-05:00, stenn@psp-deb1.ntp.org +7 -6
+    libopts-33.3.8
+
+  sntp/libopts/tokenize.c@1.4, 2010-11-18 01:04:49-05:00, stenn@psp-deb1.ntp.org +117 -105
+    libopts-33.3.8
+
+  sntp/libopts/usage.c@1.6, 2010-11-18 01:04:49-05:00, stenn@psp-deb1.ntp.org +299 -196
+    libopts-33.3.8
+
+  sntp/libopts/value-type.c@1.4, 2010-11-18 01:04:49-05:00, stenn@psp-deb1.ntp.org +4 -1
+    libopts-33.3.8
+
+  sntp/libopts/value-type.h@1.7, 2010-11-18 01:04:49-05:00, stenn@psp-deb1.ntp.org +1 -1
+    libopts-33.3.8
+
+  sntp/libopts/version.c@1.6, 2010-11-18 01:04:49-05:00, stenn@psp-deb1.ntp.org +32 -28
+    libopts-33.3.8
+
+  sntp/libopts/xat-attribute.c@1.4, 2010-11-18 01:04:49-05:00, stenn@psp-deb1.ntp.org +4 -1
+    libopts-33.3.8
+
+  sntp/libopts/xat-attribute.h@1.7, 2010-11-18 01:04:49-05:00, stenn@psp-deb1.ntp.org +1 -1
+    libopts-33.3.8
+
+ChangeSet@1.2272.1.7, 2010-11-19 22:27:35-05:00, stenn@deacon.udel.edu +13 -0
+  Initial loopfilter overhaul from Dave Mills
+
+  ChangeLog@1.655.1.7, 2010-11-19 22:26:59-05:00, stenn@deacon.udel.edu +4 -0
+    Initial loopfilter overhaul from Dave Mills
+
+  html/keygen.html@1.23, 2010-11-19 22:27:03-05:00, stenn@deacon.udel.edu +3 -1
+    Initial loopfilter overhaul from Dave Mills
+
+  html/miscopt.html@1.62, 2010-11-19 22:27:03-05:00, stenn@deacon.udel.edu +16 -19
+    Initial loopfilter overhaul from Dave Mills
+
+  include/ntp.h@1.184.1.1, 2010-11-19 22:27:10-05:00, stenn@deacon.udel.edu +4 -5
+    Initial loopfilter overhaul from Dave Mills
+
+  include/ntpd.h@1.143.1.1, 2010-11-19 22:27:11-05:00, stenn@deacon.udel.edu +0 -3
+    Initial loopfilter overhaul from Dave Mills
+
+  ntpd/ntp_config.c@1.271.1.1, 2010-11-19 22:27:16-05:00, stenn@deacon.udel.edu +0 -8
+    Initial loopfilter overhaul from Dave Mills
+
+  ntpd/ntp_loopfilter.c@1.162, 2010-11-19 22:27:17-05:00, stenn@deacon.udel.edu +39 -53
+    Initial loopfilter overhaul from Dave Mills
+
+  ntpd/ntp_proto.c@1.312, 2010-11-19 22:27:17-05:00, stenn@deacon.udel.edu +5 -5
+    Initial loopfilter overhaul from Dave Mills
+
+  ntpd/ntp_request.c@1.95.1.1, 2010-11-19 22:27:17-05:00, stenn@deacon.udel.edu +0 -8
+    Initial loopfilter overhaul from Dave Mills
+
+  ntpd/ntp_timer.c@1.62, 2010-11-19 22:27:17-05:00, stenn@deacon.udel.edu +4 -6
+    Initial loopfilter overhaul from Dave Mills
+
+  ntpd/ntp_util.c@1.87, 2010-11-19 22:27:18-05:00, stenn@deacon.udel.edu +60 -73
+    Initial loopfilter overhaul from Dave Mills
+
+  ntpd/ntpd.c@1.118, 2010-11-19 22:27:18-05:00, stenn@deacon.udel.edu +1 -1
+    Initial loopfilter overhaul from Dave Mills
+
+  ntpd/ntpsim.c@1.29, 2010-11-19 22:27:18-05:00, stenn@deacon.udel.edu +1 -1
+    Initial loopfilter overhaul from Dave Mills
+
+ChangeSet@1.2082.4.158, 2010-11-18 05:09:05+00:00, davehart@shiny.ad.hartbrothers.com +20 -0
+  convert Windows build to share single sntp/libopts
+
+  ports/winnt/vc6/libntp.dsp@1.43.1.10, 2010-11-18 05:09:02+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    convert Windows build to share single sntp/libopts
+
+  ports/winnt/vc6/ntpd.dsp@1.39.1.4, 2010-11-18 05:09:03+00:00, davehart@shiny.ad.hartbrothers.com +4 -4
+    convert Windows build to share single sntp/libopts
+
+  ports/winnt/vc6/ntpdc.dsp@1.28.1.1, 2010-11-18 05:09:03+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    convert Windows build to share single sntp/libopts
+
+  ports/winnt/vc6/ntpkeygen.dsp@1.20.1.1, 2010-11-18 05:09:03+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    convert Windows build to share single sntp/libopts
+
+  ports/winnt/vc6/ntpq.dsp@1.29.1.1, 2010-11-18 05:09:03+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    convert Windows build to share single sntp/libopts
+
+  ports/winnt/vs2003/libntp.vcproj@1.4.1.4, 2010-11-18 05:09:03+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    convert Windows build to share single sntp/libopts
+
+  ports/winnt/vs2003/ntpd.vcproj@1.4.1.2, 2010-11-18 05:09:03+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    convert Windows build to share single sntp/libopts
+
+  ports/winnt/vs2003/ntpdc.vcproj@1.4.1.1, 2010-11-18 05:09:03+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    convert Windows build to share single sntp/libopts
+
+  ports/winnt/vs2003/ntpkeygen.vcproj@1.3.1.1, 2010-11-18 05:09:03+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    convert Windows build to share single sntp/libopts
+
+  ports/winnt/vs2003/ntpq.vcproj@1.4.1.1, 2010-11-18 05:09:03+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    convert Windows build to share single sntp/libopts
+
+  ports/winnt/vs2005/libntp.vcproj@1.4.1.4, 2010-11-18 05:09:03+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    convert Windows build to share single sntp/libopts
+
+  ports/winnt/vs2005/ntpd.vcproj@1.4.1.2, 2010-11-18 05:09:03+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    convert Windows build to share single sntp/libopts
+
+  ports/winnt/vs2005/ntpdc.vcproj@1.4.1.1, 2010-11-18 05:09:03+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    convert Windows build to share single sntp/libopts
+
+  ports/winnt/vs2005/ntpkeygen.vcproj@1.3.1.1, 2010-11-18 05:09:03+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    convert Windows build to share single sntp/libopts
+
+  ports/winnt/vs2005/ntpq.vcproj@1.4.1.1, 2010-11-18 05:09:03+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    convert Windows build to share single sntp/libopts
+
+  ports/winnt/vs2008/libntp/libntp.vcproj@1.20.1.6, 2010-11-18 05:09:03+00:00, davehart@shiny.ad.hartbrothers.com +4 -4
+    convert Windows build to share single sntp/libopts
+
+  ports/winnt/vs2008/ntp-keygen/ntp-keygen.vcproj@1.9.1.1, 2010-11-18 05:09:03+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    convert Windows build to share single sntp/libopts
+
+  ports/winnt/vs2008/ntpd/ntpd.vcproj@1.21.1.3, 2010-11-18 05:09:03+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    convert Windows build to share single sntp/libopts
+
+  ports/winnt/vs2008/ntpdc/ntpdc.vcproj@1.12.1.1, 2010-11-18 05:09:03+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    convert Windows build to share single sntp/libopts
+
+  ports/winnt/vs2008/ntpq/ntpq.vcproj@1.11.1.1, 2010-11-18 05:09:04+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    convert Windows build to share single sntp/libopts
+
+ChangeSet@1.2272.1.6, 2010-11-17 10:10:38+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P83
   TAG: NTP_4_2_7P83
 
-  ChangeLog@1.661, 2010-11-17 10:10:36+00:00, stenn@deacon.udel.edu +1 -0
+  ChangeLog@1.655.1.6, 2010-11-17 10:10:36+00:00, stenn@deacon.udel.edu +1 -0
     NTP_4_2_7P83
 
   ntpd/ntpd-opts.c@1.86, 2010-11-17 10:10:36+00:00, stenn@deacon.udel.edu +2 -2
@@ -83,10 +943,16 @@ ChangeSet@1.2278, 2010-11-17 10:10:38+00:00, stenn@deacon.udel.edu +27 -0
   util/ntp-keygen.1@1.84, 2010-11-17 10:10:37+00:00, stenn@deacon.udel.edu +2 -2
     NTP_4_2_7P83
 
-ChangeSet@1.2274.1.1, 2010-11-16 20:00:54-05:00, stenn@deacon.udel.edu +3 -0
+ChangeSet@1.2277, 2010-11-17 05:31:02+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  remove ChangeLog reference to 1727, integrated first from another branch.
+
+  ChangeLog@1.658, 2010-11-17 05:31:01+00:00, davehart@shiny.ad.hartbrothers.com +0 -1
+    remove ChangeLog reference to 1727, integrated first from another branch.
+
+ChangeSet@1.2272.2.1, 2010-11-16 20:00:54-05:00, stenn@deacon.udel.edu +3 -0
   Documentation updates from Dave Mills
 
-  ChangeLog@1.657.1.1, 2010-11-16 20:00:37-05:00, stenn@deacon.udel.edu +1 -0
+  ChangeLog@1.655.2.1, 2010-11-16 20:00:37-05:00, stenn@deacon.udel.edu +1 -0
     Documentation updates from Dave Mills
 
   html/autokey.html@1.7, 2010-11-16 20:00:44-05:00, stenn@deacon.udel.edu +2 -2
@@ -95,16 +961,16 @@ ChangeSet@1.2274.1.1, 2010-11-16 20:00:54-05:00, stenn@deacon.udel.edu +3 -0
   html/miscopt.html@1.61, 2010-11-16 20:00:45-05:00, stenn@deacon.udel.edu +4 -4
     Documentation updates from Dave Mills
 
-ChangeSet@1.2276, 2010-11-16 20:36:48+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+ChangeSet@1.2272.1.4, 2010-11-16 20:36:48+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
   [Bug 1727] ntp-keygen PLEN, ILEN undeclared --without-crypto.
 
-  ChangeLog@1.659, 2010-11-16 20:36:46+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  ChangeLog@1.655.1.4, 2010-11-16 20:36:46+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
     [Bug 1727] ntp-keygen PLEN, ILEN undeclared --without-crypto.
 
-  util/ntp-keygen.c@1.67, 2010-11-16 20:36:47+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+  util/ntp-keygen.c@1.66.1.1, 2010-11-16 20:36:47+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
     [Bug 1727] ntp-keygen PLEN, ILEN undeclared --without-crypto.
 
-ChangeSet@1.2275, 2010-11-16 19:52:26+00:00, davehart@shiny.ad.hartbrothers.com +76 -0
+ChangeSet@1.2272.1.3, 2010-11-16 19:52:26+00:00, davehart@shiny.ad.hartbrothers.com +76 -0
   get rid of duplicate libopts copy
 
   BitKeeper/deleted/04/README~5bc90a91ec6411e6@1.3, 2010-11-16 19:51:33+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
@@ -263,7 +1129,7 @@ ChangeSet@1.2275, 2010-11-16 19:52:26+00:00, davehart@shiny.ad.hartbrothers.com 
   BitKeeper/deleted/fc/save.c~c7023eeab566cc5a@1.6, 2010-11-16 19:51:38+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
     Rename: libopts/save.c -> BitKeeper/deleted/fc/save.c~c7023eeab566cc5a
 
-  ChangeLog@1.658, 2010-11-16 19:52:21+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  ChangeLog@1.655.1.3, 2010-11-16 19:52:21+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
     Remove top-level libopts, use sntp/libopts.
 
   Makefile.am@1.99, 2010-11-16 19:52:21+00:00, davehart@shiny.ad.hartbrothers.com +8 -12
@@ -336,11 +1202,11 @@ ChangeSet@1.2275, 2010-11-16 19:52:26+00:00, davehart@shiny.ad.hartbrothers.com 
   ports/winnt/vs2008/ntpq/ntpq.vcproj@1.13, 2010-11-16 19:52:22+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
     Remove top-level libopts, use sntp/libopts.
 
-ChangeSet@1.2274, 2010-11-16 10:10:15+00:00, stenn@deacon.udel.edu +27 -0
+ChangeSet@1.2272.1.2, 2010-11-16 10:10:15+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P82
   TAG: NTP_4_2_7P82
 
-  ChangeLog@1.657, 2010-11-16 10:10:10+00:00, stenn@deacon.udel.edu +1 -0
+  ChangeLog@1.655.1.2, 2010-11-16 10:10:10+00:00, stenn@deacon.udel.edu +1 -0
     NTP_4_2_7P82
 
   ntpd/ntpd-opts.c@1.85, 2010-11-16 10:10:11+00:00, stenn@deacon.udel.edu +2 -2
@@ -421,14 +1287,125 @@ ChangeSet@1.2274, 2010-11-16 10:10:15+00:00, stenn@deacon.udel.edu +27 -0
   util/ntp-keygen.1@1.83, 2010-11-16 10:10:12+00:00, stenn@deacon.udel.edu +2 -2
     NTP_4_2_7P82
 
-ChangeSet@1.2082.4.153, 2010-11-15 23:53:16-05:00, stenn@deacon.udel.edu +2 -0
+ChangeSet@1.2082.38.1, 2010-11-15 23:53:16-05:00, stenn@deacon.udel.edu +2 -0
   [Bug 1728] In ntp_openssl.m4, don't add -I/usr/include or -L/usr/lib to CPPFLAGS or LDFLAGS
 
-  ChangeLog@1.496.26.113, 2010-11-15 23:52:46-05:00, stenn@deacon.udel.edu +5 -0
+  ChangeLog@1.496.58.1, 2010-11-15 23:52:46-05:00, stenn@deacon.udel.edu +5 -0
     [Bug 1728] In ntp_openssl.m4, don't add -I/usr/include or -L/usr/lib to CPPFLAGS or LDFLAGS
 
   m4/ntp_openssl.m4@1.2, 2010-11-15 23:52:46-05:00, stenn@deacon.udel.edu +12 -4
     [Bug 1728] In ntp_openssl.m4, don't add -I/usr/include or -L/usr/lib to CPPFLAGS or LDFLAGS
+
+ChangeSet@1.2082.4.156, 2010-11-16 00:53:57+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  correct tests for link-local (fe80) and site-local (fec0) unicast
+    IPv6 addresses in selecting default multicast source addresses.
+
+  ntpd/ntp_io.c@1.306.1.11, 2010-11-16 00:53:54+00:00, davehart@shiny.ad.hartbrothers.com +19 -18
+    correct tests for link-local (fe80) and site-local (fec0) unicast
+      IPv6 addresses in selecting default multicast source addresses.
+
+ChangeSet@1.2275, 2010-11-16 00:07:47+00:00, davehart@shiny.ad.hartbrothers.com +10 -0
+  merge repair
+
+  BitKeeper/deleted/3e/log-expected-log~2cb22a7a98bc5f12@1.3, 2010-11-16 00:07:39+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: sntp/tests/data/log-expected-log -> BitKeeper/deleted/3e/log-expected-log~2cb22a7a98bc5f12
+
+  BitKeeper/deleted/70/log-expected-debug~2e237608238fd4f0@1.3, 2010-11-16 00:07:39+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: sntp/tests/data/log-expected-debug -> BitKeeper/deleted/70/log-expected-debug~2e237608238fd4f0
+
+  BitKeeper/deleted/cc/logFile.cpp~7fc28eb9a26c17c2@1.7, 2010-11-16 00:07:39+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+    Rename: sntp/tests/logFile.cpp -> BitKeeper/deleted/cc/logFile.cpp~7fc28eb9a26c17c2
+
+  include/ntpd.h@1.145, 2010-11-16 00:07:46+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    merge repair
+
+  libntp/ntp_calendar.c@1.3, 2010-11-16 00:07:46+00:00, davehart@shiny.ad.hartbrothers.com +10 -10
+    silence warnings about truncation
+
+  ntpd/ntp_control.c@1.141, 2010-11-16 00:07:46+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    merge repair
+
+  ntpd/ntp_filegen.c@1.22, 2010-11-16 00:07:46+00:00, davehart@shiny.ad.hartbrothers.com +1 -2
+    silence warnings
+
+  ntpd/ntp_io.c@1.329, 2010-11-16 00:07:46+00:00, davehart@shiny.ad.hartbrothers.com +5 -6
+    merge repair
+
+  ntpd/ntp_peer.c@1.137, 2010-11-16 00:07:46+00:00, davehart@shiny.ad.hartbrothers.com +8 -10
+    merge repair
+
+  sntp/tests/Makefile.am@1.17, 2010-11-16 00:07:46+00:00, davehart@shiny.ad.hartbrothers.com +1 -4
+    remove sntp logging unit tests, as sntp uses only msyslog now.
+
+ChangeSet@1.2082.4.155, 2010-11-15 22:39:31+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+  Remove log_msg() and debug_msg() from sntp in favor of msyslog().
+
+  ChangeLog@1.496.26.114, 2010-11-15 22:39:29+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    Remove log_msg() and debug_msg() from sntp in favor of msyslog().
+
+  sntp/log.c@1.11.1.4, 2010-11-15 22:39:29+00:00, davehart@shiny.ad.hartbrothers.com +0 -19
+    Remove log_msg() and debug_msg() from sntp in favor of msyslog().
+
+  sntp/log.h@1.10, 2010-11-15 22:39:29+00:00, davehart@shiny.ad.hartbrothers.com +0 -3
+    Remove log_msg() and debug_msg() from sntp in favor of msyslog().
+
+  sntp/main.c@1.24.1.7, 2010-11-15 22:39:30+00:00, davehart@shiny.ad.hartbrothers.com +6 -11
+    Remove log_msg() and debug_msg() from sntp in favor of msyslog().
+
+ChangeSet@1.2273, 2010-11-15 22:30:55+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  [Bug 1727] ntp-keygen PLEN, ILEN undeclared --without-crypto.
+
+  ChangeLog@1.656, 2010-11-15 22:30:54+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1727] ntp-keygen PLEN, ILEN undeclared --without-crypto.
+
+  util/ntp-keygen.c@1.67, 2010-11-15 22:30:54+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    [Bug 1727] ntp-keygen PLEN, ILEN undeclared --without-crypto.
+
+ChangeSet@1.2082.4.154, 2010-11-15 20:09:00+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  Do not send multicast from both link-local and global addresses on 
+    the same underlying network interface.
+
+  ntpd/ntp_io.c@1.306.1.10, 2010-11-15 20:08:58+00:00, davehart@shiny.ad.hartbrothers.com +74 -32
+    Do not send multicast from both link-local and global addresses on 
+      the same underlying network interface.
+
+ChangeSet@1.2082.4.153, 2010-11-15 18:24:32+00:00, davehart@shiny.ad.hartbrothers.com +10 -0
+  [Bug 1725] ntpd sends multicast from only one address.
+
+  ChangeLog@1.496.26.113, 2010-11-15 18:24:31+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+    [Bug 1725] ntpd sends multicast from only one address.
+
+  include/ntp.h@1.168.1.3, 2010-11-15 18:24:31+00:00, davehart@shiny.ad.hartbrothers.com +29 -23
+    [Bug 1725] ntpd sends multicast from only one address.
+    begin changing internal references from "struct interface" to "endpt"
+
+  include/ntpd.h@1.137.2.2, 2010-11-15 18:24:31+00:00, davehart@shiny.ad.hartbrothers.com +9 -9
+    [Bug 1725] ntpd sends multicast from only one address.
+    begin changing internal references from "struct interface" to "endpt"
+
+  ntpd/ntp_config.c@1.241.1.7, 2010-11-15 18:24:31+00:00, davehart@shiny.ad.hartbrothers.com +2 -3
+    use ZERO_SOCK() in two places
+
+  ntpd/ntp_io.c@1.306.1.9, 2010-11-15 18:24:31+00:00, davehart@shiny.ad.hartbrothers.com +320 -283
+    [Bug 1725] ntpd sends multicast from only one address.
+    begin changing internal references from "struct interface" to "endpt"
+
+  ntpd/ntp_peer.c@1.126.1.1, 2010-11-15 18:24:31+00:00, davehart@shiny.ad.hartbrothers.com +62 -69
+    refactor select_peerinterface() to reduce duplication, indents
+    reduce #ifdef WINNT clutter
+
+  ntpd/ntp_request.c@1.82.1.3, 2010-11-15 18:24:31+00:00, davehart@shiny.ad.hartbrothers.com +21 -21
+    [Bug 1725] ntpd sends multicast from only one address.
+    begin changing internal references from "struct interface" to "endpt"
+
+  ports/winnt/include/ntp_iocompletionport.h@1.18, 2010-11-15 18:24:31+00:00, davehart@shiny.ad.hartbrothers.com +1 -2
+    reduce sendpkt() ifdefs around sendto()
+
+  ports/winnt/ntpd/ntp_iocompletionport.c@1.49.1.1, 2010-11-15 18:24:31+00:00, davehart@shiny.ad.hartbrothers.com +34 -32
+    reduce sendpkt() ifdefs around sendto()
+
+  ports/winnt/ntpd/ntservice.c@1.22.1.1, 2010-11-15 18:24:31+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    reduce #ifdef WINNT clutter
 
 ChangeSet@1.2272, 2010-11-14 23:36:16+00:00, stenn@deacon.udel.edu +27 -0
   NTP_4_2_7P81

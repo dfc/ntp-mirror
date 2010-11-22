@@ -172,31 +172,37 @@ typedef char s_char;
 
 /*
  * The interface structure is used to hold the addresses and socket
- * numbers of each of the interfaces we are using.
+ * numbers of each of the local network addresses we are using.
+ * Because "interface" is a reserved word in C++ and has so many
+ * varied meanings, a change to "endpt" (via typedef) is under way.
+ * Eventually the struct tag will change from interface to endpt_tag.
+ * endpt is unrelated to the select algorithm's struct endpoint.
  */
+typedef struct interface endpt;
 struct interface {
-	struct interface *link;	/* interface list link */
-	SOCKET fd;		/* socket this is opened on */
-	SOCKET bfd;		/* socket for receiving broadcasts */
-	sockaddr_u sin;		/* interface address */
-	sockaddr_u bcast;	/* broadcast address */
-	sockaddr_u mask;	/* interface mask */
-	char name[32];		/* name of interface */
-	u_short family;		/* Address family */
-	u_short phase;		/* phase in update cycle */
-	u_int32 flags;		/* interface flags */
-	int last_ttl;		/* last TTL specified */
-	u_int32 addr_refid;	/* IPv4 addr or IPv6 hash */
-	int num_mcast;		/* No. of IP addresses in multicast socket */
-	u_long starttime;	/* current_time as of creation of interface structure */
-	volatile long received;	/* number of incoming packets */
-	long sent;		/* number of outgoing packets */
-	long notsent;		/* number of send failures */
-	u_int scopeid;		/* Scope used for Multicasting */
-	u_int ifnum;		/* sequential interface instance count */
-	isc_boolean_t ignore_packets; /* listen-read-drop this? */
-	struct peer *peers;	/* list of peers for the interface */
-	u_int peercnt;		/* peers referencing this interface */
+	endpt *		elink;		/* endpt list link */
+	endpt *		mclink;		/* per-AF_* multicast list */
+	SOCKET		fd;		/* socket descriptor */
+	SOCKET		bfd;		/* for receiving broadcasts */
+	u_int32		ifnum;		/* endpt instance count */
+	sockaddr_u	sin;		/* unicast address */
+	sockaddr_u	mask;		/* subnet mask */
+	sockaddr_u	bcast;		/* broadcast address */
+	char		name[32];	/* name of interface */
+	u_short		family;		/* AF_INET/AF_INET6 */
+	u_short		phase;		/* phase in update cycle */
+	u_int32		flags;		/* interface flags */
+	int		last_ttl;	/* last TTL specified */
+	u_int32		addr_refid;	/* IPv4 addr or IPv6 hash */
+	int		num_mcast;	/* mcast addrs enabled */
+	u_long		starttime;	/* current_time at creation */
+	volatile long	received;	/* number of incoming packets */
+	long		sent;		/* number of outgoing packets */
+	long		notsent;	/* number of send failures */
+	u_int		scopeid;	/* scope for multicasting */
+	isc_boolean_t	ignore_packets; /* listen-read-drop this? */
+	struct peer *	peers;		/* list of peers using endpt */
+	u_int		peercnt;	/* count of same */
 };
 
 /*
@@ -703,8 +709,8 @@ struct pkt {
 /*
  * Configuration items for the loop filter
  */
-#define	LOOP_DRIFTINIT		1	/* set initial frequency offset */
-#define LOOP_DRIFTCOMP		2	/* set frequency offset */
+#define	LOOP_DRIFTINIT		1	/* iniitialize frequency */
+#define	LOOP_KERN_CLEAR		2	/* set initial frequency offset */
 #define LOOP_MAX		3	/* set step offset */
 #define LOOP_PANIC		4	/* set panic offseet */
 #define LOOP_PHI		5	/* set dispersion rate */
@@ -713,9 +719,8 @@ struct pkt {
 #define LOOP_ALLAN		8	/* set minimum Allan intercept */
 #define LOOP_HUFFPUFF		9	/* set huff-n'-puff filter length */
 #define LOOP_FREQ		10	/* set initial frequency */
-#define LOOP_KERN_CLEAR		11	/* reset kernel pll parameters */
-#define LOOP_CODEC		12	/* set audio codec frequency */
-#define	LOOP_LEAP		13	/* insert leap after second 23:59 */
+#define LOOP_CODEC		11	/* set audio codec frequency */
+#define	LOOP_LEAP		12	/* insert leap after second 23:59 */
 
 /*
  * Configuration items for the stats printer

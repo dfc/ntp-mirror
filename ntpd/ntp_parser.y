@@ -163,6 +163,7 @@
 %token	<Integer>	T_Nolink
 %token	<Integer>	T_Nomodify
 %token	<Integer>	T_None
+%token	<Integer>	T_Nonvolatile
 %token	<Integer>	T_Nopeer
 %token	<Integer>	T_Noquery
 %token	<Integer>	T_Noselect
@@ -1094,6 +1095,7 @@ miscellaneous_command
 
 misc_cmd_dbl_keyword
 	:	T_Broadcastdelay
+	|	T_Nonvolatile
 	|	T_Tick
 	;
 

@@ -754,8 +754,7 @@ ntpdmain(
 	do {					/* 'loop' once */
 		if (!HAVE_OPT( WAIT_SYNC ))
 			break;
-/* should be 	wait_sync = OPT_VALUE_WAIT_SYNC;  after Autogen 5.10 fixed */
-	 	wait_sync = DESC(WAIT_SYNC).optArg.argInt;
+		wait_sync = OPT_VALUE_WAIT_SYNC;
 		if (wait_sync <= 0) {
 			wait_sync = 0;
 			break;
@@ -1000,8 +999,8 @@ ntpdmain(
 	 * since this will definitely be different for the gizmo board.
 	 */
 	getconfig(argc, argv);
+	loop_config(LOOP_DRIFTINIT, 0);
 	report_event(EVNT_SYSRESTART, NULL, NULL);
-	loop_config(LOOP_DRIFTCOMP, old_drift);
 	initializing = 0;
 
 # ifdef HAVE_DROPROOT

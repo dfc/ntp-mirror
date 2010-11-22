@@ -1615,9 +1615,7 @@ setclr_flags(
 	)
 {
 	register u_int flags;
-	int prev_kern_enable;
 
-	prev_kern_enable = kern_enable;
 	if (INFO_NITEMS(inpkt->err_nitems) > 1) {
 		msyslog(LOG_ERR, "setclr_flags: err_nitems > 1");
 		req_ack(srcadr, inter, inpkt, INFO_ERR_FMT);
@@ -1656,12 +1654,6 @@ setclr_flags(
 	if (flags & SYS_FLAG_CAL)
 		proto_config(PROTO_CAL, set, 0., NULL);
 	req_ack(srcadr, inter, inpkt, INFO_OKAY);
-
-	/* Reset the kernel ntp parameters if the kernel flag changed. */
-	if (prev_kern_enable && !kern_enable)
-	     	loop_config(LOOP_KERN_CLEAR, 0.0);
-	if (!prev_kern_enable && kern_enable)
-	     	loop_config(LOOP_DRIFTCOMP, drift_comp);
 }
 
 /*
@@ -2661,40 +2653,40 @@ fill_info_if_stats(void *data, interface_info_t *interface_info)
 {
 	struct info_if_stats **ifsp = (struct info_if_stats **)data;
 	struct info_if_stats *ifs = *ifsp;
-	struct interface *interface = interface_info->interface;
+	endpt *ep = interface_info->ep;
 	
 	memset(ifs, 0, sizeof(*ifs));
 	
-	if (IS_IPV6(&interface->sin)) {
+	if (IS_IPV6(&ep->sin)) {
 		if (!client_v6_capable) {
 			return;
 		}
 		ifs->v6_flag = 1;
-		ifs->unaddr.addr6 = SOCK_ADDR6(&interface->sin);
-		ifs->unbcast.addr6 = SOCK_ADDR6(&interface->bcast);
-		ifs->unmask.addr6 = SOCK_ADDR6(&interface->mask);
+		ifs->unaddr.addr6 = SOCK_ADDR6(&ep->sin);
+		ifs->unbcast.addr6 = SOCK_ADDR6(&ep->bcast);
+		ifs->unmask.addr6 = SOCK_ADDR6(&ep->mask);
 	} else {
 		ifs->v6_flag = 0;
-		ifs->unaddr.addr = SOCK_ADDR4(&interface->sin);
-		ifs->unbcast.addr = SOCK_ADDR4(&interface->bcast);
-		ifs->unmask.addr = SOCK_ADDR4(&interface->mask);
+		ifs->unaddr.addr = SOCK_ADDR4(&ep->sin);
+		ifs->unbcast.addr = SOCK_ADDR4(&ep->bcast);
+		ifs->unmask.addr = SOCK_ADDR4(&ep->mask);
 	}
 	ifs->v6_flag = htonl(ifs->v6_flag);
-	strncpy(ifs->name, interface->name, sizeof(ifs->name));
-	ifs->family = htons(interface->family);
-	ifs->flags = htonl(interface->flags);
-	ifs->last_ttl = htonl(interface->last_ttl);
-	ifs->num_mcast = htonl(interface->num_mcast);
-	ifs->received = htonl(interface->received);
-	ifs->sent = htonl(interface->sent);
-	ifs->notsent = htonl(interface->notsent);
-	ifs->scopeid = htonl(interface->scopeid);
+	strncpy(ifs->name, ep->name, sizeof(ifs->name));
+	ifs->family = htons(ep->family);
+	ifs->flags = htonl(ep->flags);
+	ifs->last_ttl = htonl(ep->last_ttl);
+	ifs->num_mcast = htonl(ep->num_mcast);
+	ifs->received = htonl(ep->received);
+	ifs->sent = htonl(ep->sent);
+	ifs->notsent = htonl(ep->notsent);
+	ifs->scopeid = htonl(ep->scopeid);
 	/* ifindex was always zero, now no longer in struct interface */
 	ifs->ifindex = 0;
-	ifs->ifnum = htonl(interface->ifnum);
-	ifs->uptime = htonl(current_time - interface->starttime);
-	ifs->ignore_packets = interface->ignore_packets;
-	ifs->peercnt = htonl(interface->peercnt);
+	ifs->ifnum = htonl(ep->ifnum);
+	ifs->uptime = htonl(current_time - ep->starttime);
+	ifs->ignore_packets = ep->ignore_packets;
+	ifs->peercnt = htonl(ep->peercnt);
 	ifs->action = interface_info->action;
 	
 	*ifsp = (struct info_if_stats *)more_pkt();
