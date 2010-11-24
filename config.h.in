@@ -553,6 +553,9 @@
 /* Define to 1 if you have the <net/if_var.h> header file. */
 #undef HAVE_NET_IF_VAR_H
 
+/* Define to 1 if you have the <net/netmp.h> header file. */
+#undef HAVE_NET_NETMP_H
+
 /* Define to 1 if you have the <net/route.h> header file. */
 #undef HAVE_NET_ROUTE_H
 
@@ -1435,3 +1438,13 @@ typedef unsigned int	uintptr_t;
 
 /* Does the compiler like "volatile"? */
 #undef volatile
+
+
+#ifndef MPINFOU_PREDECLARED
+# define MPINFOU_PREDECLARED
+typedef union mpinfou {		/* For lint */
+	struct pdk_mpinfo *pdkptr;
+	struct mpinfo *pikptr;
+} mpinfou_t;
+#endif
+

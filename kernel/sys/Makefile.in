@@ -233,9 +233,9 @@ $(srcdir)/Makefile.in:  $(srcdir)/Makefile.am  $(am__configure_deps)
 	      exit 1;; \
 	  esac; \
 	done; \
-	echo ' cd $(top_srcdir) && $(AUTOMAKE) --foreign kernel/sys/Makefile'; \
+	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu kernel/sys/Makefile'; \
 	$(am__cd) $(top_srcdir) && \
-	  $(AUTOMAKE) --foreign kernel/sys/Makefile
+	  $(AUTOMAKE) --gnu kernel/sys/Makefile
 .PRECIOUS: Makefile
 Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
 	@case '$?' in \

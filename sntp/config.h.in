@@ -85,6 +85,9 @@
 /* Define to 1 if you have the <netinet/in.h> header file. */
 #undef HAVE_NETINET_IN_H
 
+/* Define to 1 if you have the <net/netmp.h> header file. */
+#undef HAVE_NET_NETMP_H
+
 /* sntp does not care about 'nice' */
 #undef HAVE_NO_NICE
 
@@ -331,6 +334,9 @@
 /* Do we need an s_char typedef? */
 #undef NEED_S_CHAR_TYPEDEF
 
+/* Define to 1 if your C compiler doesn't accept -c and -o together. */
+#undef NO_MINUS_C_MINUS_O
+
 /* Define this if optional arguments are disallowed */
 #undef NO_OPTIONAL_OPT_ARGS
 
@@ -457,3 +463,13 @@
 
 /* Define as `fork' if `vfork' does not work. */
 #undef vfork
+
+
+#ifndef MPINFOU_PREDECLARED
+# define MPINFOU_PREDECLARED
+typedef union mpinfou {		/* For lint */
+	struct pdk_mpinfo *pdkptr;
+	struct mpinfo *pikptr;
+} mpinfou_t;
+#endif
+
