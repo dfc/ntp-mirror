@@ -307,7 +307,10 @@
 /* have IPv6? */
 #undef ISC_PLATFORM_HAVEIPV6
 
-/* have sin6_scope_id? */
+/* struct sockaddr has sa_len? */
+#undef ISC_PLATFORM_HAVESALEN
+
+/* sin6_scope_id? */
 #undef ISC_PLATFORM_HAVESCOPEID
 
 /* missing in6addr_any? */
@@ -325,9 +328,6 @@
 /* ISC: provide inet_pton() */
 #undef ISC_PLATFORM_NEEDPTON
 
-/* Do we need netinet6/in6.h? */
-#undef LWRES_PLATFORM_NEEDNETINET6IN6H
-
 /* Does the target support multicast IP? */
 #undef MCAST
 
@@ -339,6 +339,9 @@
 
 /* Define this if optional arguments are disallowed */
 #undef NO_OPTIONAL_OPT_ARGS
+
+/* Should we avoid #warning on option name collisions? */
+#undef NO_OPTION_NAME_WARNINGS
 
 /* Use OpenSSL? */
 #undef OPENSSL
@@ -419,7 +422,7 @@
 /* Version number of package */
 #undef VERSION
 
-/* ISC: Want IPv6? */
+/* configure --enable-ipv6 */
 #undef WANT_IPV6
 
 /* Define this if a working libregex can be found */
