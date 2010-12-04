@@ -57,14 +57,16 @@ CONFIG_CLEAN_VPATH_FILES =
 PROGRAMS = $(noinst_PROGRAMS)
 chutest_SOURCES = chutest.c
 chutest_OBJECTS = chutest.$(OBJEXT)
+chutest_LDADD = $(LDADD)
 chutest_DEPENDENCIES = ../libntp/libntp.a
-clktest_SOURCES = clktest.c
-clktest_OBJECTS = clktest.$(OBJEXT)
+am_clktest_OBJECTS = clktest.$(OBJEXT) clktest-opts.$(OBJEXT)
+clktest_OBJECTS = $(am_clktest_OBJECTS)
+clktest_LDADD = $(LDADD)
 clktest_DEPENDENCIES = ../libntp/libntp.a
 propdelay_SOURCES = propdelay.c
 propdelay_OBJECTS = propdelay.$(OBJEXT)
 am__DEPENDENCIES_1 =
-propdelay_DEPENDENCIES = $(am__DEPENDENCIES_1) ../libntp/libntp.a
+propdelay_DEPENDENCIES = $(am__DEPENDENCIES_1) $(LDADD)
 DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/depcomp
 am__depfiles_maybe = depfiles
@@ -78,8 +80,8 @@ CCLD = $(CC)
 LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
 	--mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
 	$(LDFLAGS) -o $@
-SOURCES = chutest.c clktest.c propdelay.c
-DIST_SOURCES = chutest.c clktest.c propdelay.c
+SOURCES = chutest.c $(clktest_SOURCES) propdelay.c
+DIST_SOURCES = chutest.c $(clktest_SOURCES) propdelay.c
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
@@ -238,17 +240,25 @@ target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-
-#AUTOMAKE_OPTIONS = ../ansi2knr no-dependencies
 AUTOMAKE_OPTIONS = 
 noinst_PROGRAMS = @PROPDELAY@ @CHUTEST@ @CLKTEST@
-INCLUDES = -I$(top_srcdir)/include
-propdelay_LDADD = $(LIBM) ../libntp/libntp.a
-chutest_LDADD = ../libntp/libntp.a
-clktest_LDADD = ../libntp/libntp.a
-ETAGS_ARGS = Makefile.am
-#EXTRA_DIST = TAGS
-BUILT_SOURCES = .deps-ver
+BUILT_SOURCES = clktest-opts.c clktest-opts.h .deps-ver
+EXTRA_DIST = clktest-opts.def
+clktest_SOURCES = clktest.c clktest-opts.c
+INCLUDES = -I$(top_srcdir)/include -I$(top_srcdir)/lib/isc/include \
+	-I$(top_srcdir)/lib/isc/nothreads/include \
+	-I$(top_srcdir)/lib/isc/unix/include $(LIBOPTS_CFLAGS)
+LDADD = ../libntp/libntp.a
+propdelay_LDADD = $(LIBM) $(LDADD)
+run_ag = cd $(srcdir) &&	env PATH="$(abs_builddir):$(PATH)"	\
+		autogen -L ../include --writable
+
+std_def_list = $(top_srcdir)/include/debug-opt.def		\
+		$(top_srcdir)/include/autogen-version.def 	\
+		$(top_srcdir)/include/copyright.def 		\
+		$(top_srcdir)/include/homerc.def 		\
+		$(top_srcdir)/include/version.def
+
 CLEANFILES = .deps-ver
 all: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) all-am
@@ -294,6 +304,12 @@ clean-noinstPROGRAMS:
 	list=`for p in $$list; do echo "$$p"; done | sed 's/$(EXEEXT)$$//'`; \
 	echo " rm -f" $$list; \
 	rm -f $$list
+chutest$(EXEEXT): $(chutest_OBJECTS) $(chutest_DEPENDENCIES) 
+	@rm -f chutest$(EXEEXT)
+	$(LINK) $(chutest_OBJECTS) $(chutest_LDADD) $(LIBS)
+clktest$(EXEEXT): $(clktest_OBJECTS) $(clktest_DEPENDENCIES) 
+	@rm -f clktest$(EXEEXT)
+	$(LINK) $(clktest_OBJECTS) $(clktest_LDADD) $(LIBS)
 propdelay$(EXEEXT): $(propdelay_OBJECTS) $(propdelay_DEPENDENCIES) 
 	@rm -f propdelay$(EXEEXT)
 	$(LINK) $(propdelay_OBJECTS) $(propdelay_LDADD) $(LIBS)
@@ -305,6 +321,7 @@ distclean-compile:
 	-rm -f *.tab.c
 
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/chutest.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/clktest-opts.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/clktest.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/propdelay.Po@am__quote@
 
@@ -537,11 +554,14 @@ uninstall-am:
 	pdf pdf-am ps ps-am tags uninstall uninstall-am
 
 
-# clktest-opts.def wants ../include/copyright.def ../include/homerc.def
+$(srcdir)/clktest-opts.h: $(srcdir)/clktest-opts.c
+	@: do-nothing action to avoid default SCCS get, .h built with .c
 
-chutest$(EXEEXT): ../libntp/libntp.a
+$(srcdir)/clktest-opts.c: $(srcdir)/clktest-opts.def $(std_def_list)
+	$(run_ag) clktest-opts.def
 
-clktest$(EXEEXT): ../libntp/libntp.a
+../libntp/libntp.a:
+	cd ../libntp && $(MAKE)
 $(DEPDIR)/deps-ver: $(top_srcdir)/deps-ver
 	@[ -f $@ ] ||							\
 		cp $(top_srcdir)/deps-ver $@

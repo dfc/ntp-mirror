@@ -547,9 +547,6 @@
 /* Define to 1 if you have the <net/if_var.h> header file. */
 #undef HAVE_NET_IF_VAR_H
 
-/* Define to 1 if you have the <net/netmp.h> header file. */
-#undef HAVE_NET_NETMP_H
-
 /* Define to 1 if you have the <net/route.h> header file. */
 #undef HAVE_NET_ROUTE_H
 
@@ -718,6 +715,9 @@
 /* Define to 1 if you have the <string.h> header file. */
 #undef HAVE_STRING_H
 
+/* Define to 1 if you have the <stropts.h> header file. */
+#undef HAVE_STROPTS_H
+
 /* Define to 1 if you have the `strrchr' function. */
 #undef HAVE_STRRCHR
 
@@ -759,6 +759,9 @@
 
 /* Define to 1 if you have the <sys/capability.h> header file. */
 #undef HAVE_SYS_CAPABILITY_H
+
+/* Define to 1 if you have the <sys/chudefs.h> header file. */
+#undef HAVE_SYS_CHUDEFS_H
 
 /* Define to 1 if you have the <sys/clkdefs.h> header file. */
 #undef HAVE_SYS_CLKDEFS_H
@@ -932,12 +935,6 @@
 
 /* Do we have the TIO serial stuff? */
 #undef HAVE_TIO_SERIAL_STUFF
-
-/* Does u_int64_t exist? */
-#undef HAVE_TYPE_U_INT64_T
-
-/* Does u_int8_t exist? */
-#undef HAVE_TYPE_U_INT8_T
 
 /* Define to 1 if the system has the type `uint16_t'. */
 #undef HAVE_UINT16_T
@@ -1237,9 +1234,6 @@
 /* Preset a value for 'tickadj'? */
 #undef PRESET_TICKADJ
 
-/* Does qsort expect to work on "void *" stuff? */
-#undef QSORT_USES_VOID_P
-
 /* Should we not IGNPAR (Linux)? */
 #undef RAWDCF_NO_IGNPAR
 
@@ -1408,9 +1402,6 @@ typedef unsigned int	uintptr_t;
 # undef __CHAR_UNSIGNED__
 #endif
 
-/* Define to empty if `const' does not conform to ANSI C. */
-#undef const
-
 /* Define to `int' if <sys/types.h> doesn't define. */
 #undef gid_t
 
@@ -1441,7 +1432,7 @@ typedef unsigned int	uintptr_t;
 
 #ifndef MPINFOU_PREDECLARED
 # define MPINFOU_PREDECLARED
-typedef union mpinfou {		/* For lint */
+typedef union mpinfou {
 	struct pdk_mpinfo *pdkptr;
 	struct mpinfo *pikptr;
 } mpinfou_t;
