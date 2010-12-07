@@ -1,3 +1,120 @@
+ChangeSet@1.2321, 2010-12-07 10:11:21+00:00, stenn@deacon.udel.edu +29 -0
+  NTP_4_2_7P91
+  TAG: NTP_4_2_7P91
+
+  ChangeLog@1.685, 2010-12-07 10:11:18+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P91
+
+  clockstuff/clktest-opts.c@1.15, 2010-12-07 10:11:18+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P91
+
+  clockstuff/clktest-opts.h@1.15, 2010-12-07 10:11:18+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P91
+
+  ntpd/ntpd-opts.c@1.95, 2010-12-07 10:11:18+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P91
+
+  ntpd/ntpd-opts.h@1.95, 2010-12-07 10:11:18+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P91
+
+  ntpd/ntpd-opts.texi@1.93, 2010-12-07 10:11:19+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P91
+
+  ntpd/ntpd.1@1.93, 2010-12-07 10:11:19+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P91
+
+  ntpdc/ntpdc-opts.c@1.92, 2010-12-07 10:11:19+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P91
+
+  ntpdc/ntpdc-opts.h@1.92, 2010-12-07 10:11:19+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P91
+
+  ntpdc/ntpdc-opts.texi@1.92, 2010-12-07 10:11:19+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P91
+
+  ntpdc/ntpdc.1@1.92, 2010-12-07 10:11:19+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P91
+
+  ntpq/ntpq-opts.c@1.92, 2010-12-07 10:11:19+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P91
+
+  ntpq/ntpq-opts.h@1.92, 2010-12-07 10:11:19+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P91
+
+  ntpq/ntpq-opts.texi@1.92, 2010-12-07 10:11:19+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P91
+
+  ntpq/ntpq.1@1.92, 2010-12-07 10:11:19+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P91
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.92, 2010-12-07 10:11:19+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P91
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.92, 2010-12-07 10:11:19+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P91
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.92, 2010-12-07 10:11:19+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P91
+
+  ntpsnmpd/ntpsnmpd.1@1.92, 2010-12-07 10:11:19+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P91
+
+  packageinfo.sh@1.93, 2010-12-07 10:11:19+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P91
+
+  sntp/sntp-opts.c@1.92, 2010-12-07 10:11:19+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P91
+
+  sntp/sntp-opts.h@1.92, 2010-12-07 10:11:19+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P91
+
+  sntp/sntp-opts.texi@1.92, 2010-12-07 10:11:19+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P91
+
+  sntp/sntp.1@1.92, 2010-12-07 10:11:19+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P91
+
+  sntp/sntp.html@1.92, 2010-12-07 10:11:20+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P91
+
+  util/ntp-keygen-opts.c@1.90, 2010-12-07 10:11:20+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P91
+
+  util/ntp-keygen-opts.h@1.90, 2010-12-07 10:11:20+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P91
+
+  util/ntp-keygen-opts.texi@1.93, 2010-12-07 10:11:20+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P91
+
+  util/ntp-keygen.1@1.93, 2010-12-07 10:11:20+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P91
+
+ChangeSet@1.2319, 2010-12-07 08:42:46+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  [Bug 1732] ntpd ties up CPU on disconnected USB device.
+
+  ChangeLog@1.683, 2010-12-07 08:42:44+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1732] ntpd ties up CPU on disconnected USB device.
+
+  ntpd/ntp_io.c@1.332, 2010-12-07 08:42:44+00:00, davehart@shiny.ad.hartbrothers.com +16 -9
+    Remove closed file descriptors from I/O loop select() set.
+
+ChangeSet@1.2082.41.1, 2010-12-07 03:37:36-05:00, stenn@deacon.udel.edu +2 -0
+  [Bug 1742] Fix a typo in an error message in the "build" script
+
+  ChangeLog@1.496.26.123, 2010-12-07 03:37:28-05:00, stenn@deacon.udel.edu +1 -0
+    [Bug 1742] Fix a typo in an error message in the "build" script
+
+  build@1.38, 2010-12-07 03:37:28-05:00, stenn@deacon.udel.edu +1 -1
+    [Bug 1742] Fix a typo in an error message in the "build" script
+
+ChangeSet@1.2082.40.14, 2010-12-06 08:01:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  correct relatively harmless retrying GetAdaptersAddresses() on errors
+    other than ERROR_BUFFER_OVERFLOW.
+
+  lib/isc/win32/interfaceiter.c@1.19, 2010-12-06 08:01:21+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    correct relatively harmless retrying GetAdaptersAddresses() on errors
+      other than ERROR_BUFFER_OVERFLOW.
+
 ChangeSet@1.2317, 2010-12-06 07:49:43+00:00, stenn@deacon.udel.edu +29 -0
   NTP_4_2_7P90
   TAG: NTP_4_2_7P90
