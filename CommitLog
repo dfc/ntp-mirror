@@ -1,3 +1,297 @@
+ChangeSet@1.2329, 2010-12-13 08:28:59+00:00, stenn@deacon.udel.edu +29 -0
+  NTP_4_2_7P93
+  TAG: NTP_4_2_7P93
+
+  ChangeLog@1.691, 2010-12-13 08:28:54+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P93
+
+  clockstuff/clktest-opts.c@1.17, 2010-12-13 08:28:55+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P93
+
+  clockstuff/clktest-opts.h@1.17, 2010-12-13 08:28:55+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P93
+
+  ntpd/ntpd-opts.c@1.97, 2010-12-13 08:28:55+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P93
+
+  ntpd/ntpd-opts.h@1.97, 2010-12-13 08:28:55+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P93
+
+  ntpd/ntpd-opts.texi@1.95, 2010-12-13 08:28:55+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P93
+
+  ntpd/ntpd.1@1.95, 2010-12-13 08:28:55+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P93
+
+  ntpdc/ntpdc-opts.c@1.94, 2010-12-13 08:28:55+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P93
+
+  ntpdc/ntpdc-opts.h@1.94, 2010-12-13 08:28:55+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P93
+
+  ntpdc/ntpdc-opts.texi@1.94, 2010-12-13 08:28:55+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P93
+
+  ntpdc/ntpdc.1@1.94, 2010-12-13 08:28:55+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P93
+
+  ntpq/ntpq-opts.c@1.94, 2010-12-13 08:28:56+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P93
+
+  ntpq/ntpq-opts.h@1.94, 2010-12-13 08:28:56+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P93
+
+  ntpq/ntpq-opts.texi@1.94, 2010-12-13 08:28:56+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P93
+
+  ntpq/ntpq.1@1.94, 2010-12-13 08:28:56+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P93
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.94, 2010-12-13 08:28:56+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P93
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.94, 2010-12-13 08:28:56+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P93
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.94, 2010-12-13 08:28:56+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P93
+
+  ntpsnmpd/ntpsnmpd.1@1.94, 2010-12-13 08:28:56+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P93
+
+  packageinfo.sh@1.95, 2010-12-13 08:28:56+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P93
+
+  sntp/sntp-opts.c@1.94, 2010-12-13 08:28:56+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P93
+
+  sntp/sntp-opts.h@1.94, 2010-12-13 08:28:57+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P93
+
+  sntp/sntp-opts.texi@1.94, 2010-12-13 08:28:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P93
+
+  sntp/sntp.1@1.94, 2010-12-13 08:28:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P93
+
+  sntp/sntp.html@1.94, 2010-12-13 08:28:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P93
+
+  util/ntp-keygen-opts.c@1.92, 2010-12-13 08:28:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P93
+
+  util/ntp-keygen-opts.h@1.92, 2010-12-13 08:28:57+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P93
+
+  util/ntp-keygen-opts.texi@1.95, 2010-12-13 08:28:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P93
+
+  util/ntp-keygen.1@1.95, 2010-12-13 08:28:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P93
+
+ChangeSet@1.2328, 2010-12-13 01:55:38-05:00, stenn@deacon.udel.edu +2 -0
+  Documentation updates from Dave Mills.
+
+  html/autokey.html@1.10, 2010-12-13 01:55:22-05:00, stenn@deacon.udel.edu +47 -48
+    Documentation updates from Dave Mills.
+
+  html/keygen.html@1.25, 2010-12-13 01:55:23-05:00, stenn@deacon.udel.edu +2 -1
+    Documentation updates from Dave Mills.
+
+ChangeSet@1.2323.2.2, 2010-12-13 01:29:30-05:00, stenn@deacon.udel.edu +9 -0
+  "server ... ident <groupname>" changes from Dave Mills
+
+  ChangeLog@1.687.1.2, 2010-12-13 01:23:02-05:00, stenn@deacon.udel.edu +1 -0
+    "server ... ident <groupname>" changes from Dave Mills
+
+  include/ntp.h@1.188.1.1, 2010-12-13 01:23:09-05:00, stenn@deacon.udel.edu +1 -0
+    "server ... ident <groupname>" changes from Dave Mills
+
+  include/ntp_control.h@1.47.1.1, 2010-12-13 01:23:09-05:00, stenn@deacon.udel.edu +2 -1
+    "server ... ident <groupname>" changes from Dave Mills
+
+  include/ntpd.h@1.147.1.1, 2010-12-13 01:23:09-05:00, stenn@deacon.udel.edu +1 -1
+    "server ... ident <groupname>" changes from Dave Mills
+
+  ntpd/ntp_control.c@1.141.1.1, 2010-12-13 01:27:26-05:00, stenn@deacon.udel.edu +12 -2
+    "server ... ident <groupname>" changes from Dave Mills
+
+  ntpd/ntp_crypto.c@1.149, 2010-12-13 01:27:26-05:00, stenn@deacon.udel.edu +7 -29
+    "server ... ident <groupname>" changes from Dave Mills
+
+  ntpd/ntp_peer.c@1.138.1.1, 2010-12-13 01:27:56-05:00, stenn@deacon.udel.edu +4 -2
+    "server ... ident <groupname>" changes from Dave Mills
+
+  ntpd/ntp_proto.c@1.313, 2010-12-13 01:27:56-05:00, stenn@deacon.udel.edu +4 -4
+    "server ... ident <groupname>" changes from Dave Mills
+
+  util/ntp-keygen.c@1.70, 2010-12-13 01:26:50-05:00, stenn@deacon.udel.edu +7 -23
+    "server ... ident <groupname>" changes from Dave Mills
+
+ChangeSet@1.2323.2.1, 2010-12-13 01:16:09-05:00, stenn@deacon.udel.edu +4 -0
+  Documentation updates from Dave Mills.
+
+  ChangeLog@1.687.1.1, 2010-12-13 01:15:58-05:00, stenn@deacon.udel.edu +1 -0
+    Documentation updates from Dave Mills.
+
+  html/autokey.html@1.9, 2010-12-13 01:15:41-05:00, stenn@deacon.udel.edu +23 -3
+    Documentation updates from Dave Mills.
+
+  html/keygen.html@1.24, 2010-12-13 01:15:42-05:00, stenn@deacon.udel.edu +39 -49
+    Documentation updates from Dave Mills.
+
+  html/miscopt.html@1.63, 2010-12-13 01:15:42-05:00, stenn@deacon.udel.edu +3 -3
+    Documentation updates from Dave Mills.
+
+ChangeSet@1.2323.1.3, 2010-12-12 08:30:28+00:00, davehart@shiny.ad.hartbrothers.com +5 -0
+  Add test for socktoa(), sockporttoa() with scoped address.
+  Correct unit tests for sntp offset_calculation() arg change.
+
+  ntpd/ntp_control.c@1.143, 2010-12-12 08:30:27+00:00, davehart@shiny.ad.hartbrothers.com +0 -2
+    Cleanup merge, remove redundant local maclen that triggered
+      shadow warning.
+
+  ntpd/ntpsim.c@1.30, 2010-12-12 08:30:28+00:00, davehart@shiny.ad.hartbrothers.com +19 -17
+    correct ntpsim.c for peer_config group ident arg change.
+
+  sntp/tests/packetHandling.cpp@1.5, 2010-12-12 08:30:28+00:00, davehart@shiny.ad.hartbrothers.com +4 -2
+    Correct unit tests for sntp offset_calculation() arg change.
+
+  sntp/tests/utilities.cpp@1.6, 2010-12-12 08:30:28+00:00, davehart@shiny.ad.hartbrothers.com +3 -2
+    No stack garbage for scope ID, thanks.
+
+  tests/libntp/socktoa.cpp@1.2, 2010-12-12 08:30:28+00:00, davehart@shiny.ad.hartbrothers.com +32 -5
+    Add test for socktoa(), sockporttoa() with scoped address.
+
+ChangeSet@1.2323.1.1, 2010-12-12 07:23:59+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  include non-zero scope in IPv6 stoa() output
+
+  libntp/socktoa.c@1.13, 2010-12-12 07:23:59+00:00, davehart@shiny.ad.hartbrothers.com +24 -13
+    include non-zero scope in IPv6 stoa() output
+
+ChangeSet@1.2082.40.17, 2010-12-12 07:11:37+00:00, davehart@shiny.ad.hartbrothers.com +21 -0
+  [Bug 1741] Enable multicast reception on each address (Windows).
+  Minimize local address flip-flopping by avoiding peer_refresh_allinterfaces()
+    if nothing has changed in the interface list since the last scan.
+  Separate handling of scope ID embedded in many in6_addr from ifindex used
+    for IPv6 multicasting ioctls.
+  Add INT_PRIVACY endpt bit flag for IPv6 RFC 4941 privacy addresses.
+  Enable outbound multicast from only one address per interface in the same
+    subnet, and in that case prefer embedded MAC address modified EUI-64 IPv6
+    addresses first, then static, and last RFC 4941 privacy addresses.
+  Use setsockopt(IP[V6]_MULTICAST_IF) before each send to multicast to select
+    the local source address, using the correct socket isn't enough.
+
+  ChangeLog@1.496.59.1, 2010-12-12 07:11:34+00:00, davehart@shiny.ad.hartbrothers.com +12 -0
+    * [Bug 1741] Enable multicast reception on each address (Windows).
+    * Other manycastclient repairs:
+      Separate handling of scope ID embedded in many in6_addr from ifindex
+      used for IPv6 multicasting ioctls.
+      Add INT_PRIVACY endpt bit flag for IPv6 RFC 4941 privacy addresses.
+      Enable outbound multicast from only one address per interface in the
+      same subnet, and in that case prefer embedded MAC address modified
+      EUI-64 IPv6 addresses first, then static, and last RFC 4941 privacy
+      addresses.
+      Use setsockopt(IP[V6]_MULTICAST_IF) before each send to multicast to
+      select the local source address, using the correct socket is not
+      enough.
+    
+
+  include/isc/mem.h@1.4, 2010-12-12 07:11:35+00:00, davehart@shiny.ad.hartbrothers.com +9 -8
+    use macro-arg-protecting () only where helpful.
+
+  include/ntp.h@1.168.1.4, 2010-12-12 07:11:34+00:00, davehart@shiny.ad.hartbrothers.com +3 -2
+    add INT_PRIVACY endpt.flags bit to indicate RFC 4941 privacy addresses
+
+  include/ntp_control.h@1.38.1.1, 2010-12-12 07:11:34+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    use offsetof instead of hard_coding CTL_HEADER_LEN
+
+  include/ntp_io.h@1.13.1.2, 2010-12-12 07:11:34+00:00, davehart@shiny.ad.hartbrothers.com +4 -4
+    housekeeping (use #ifdef not #if for HAVE_*)
+
+  include/ntp_net.h@1.3.1.3, 2010-12-12 07:11:35+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+    add IS_IID_UNIV() to test for universal scope interface identifier
+      to differentiate embedded-MAC modified EUI-64 from static and
+      privacy addresses.
+
+  include/ntp_stdlib.h@1.40.1.3, 2010-12-12 07:11:35+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    mark socktoa(), socktohost() args const
+
+  include/ntpd.h@1.137.2.3, 2010-12-12 07:11:35+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    whitespace only
+
+  lib/isc/include/isc/interfaceiter.h@1.8, 2010-12-12 07:11:35+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+    add ifindex to struct isc_interface to manage need for index
+     distinct from sin6_scope_id for setsockopt IPV6_MULTICAST_IF
+     and IPV6_JOIN_GROUP.
+    add INTERFACE_F_PRIVACY flag set when the source of the IID
+     is RFC 4941 privacy addresses or another random scheme.
+
+  lib/isc/unix/ifiter_ioctl.c@1.29, 2010-12-12 07:11:35+00:00, davehart@shiny.ad.hartbrothers.com +2 -6
+    set ifindex in libisc interface enumerator, and for link-local
+      addresses, use it as the scope ID (AKA zone).
+
+  lib/isc/unix/ifiter_sysctl.c@1.16, 2010-12-12 07:11:35+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    set ifindex in libisc interface enumerator
+
+  lib/isc/unix/interfaceiter.c@1.19, 2010-12-12 07:11:35+00:00, davehart@shiny.ad.hartbrothers.com +3 -1
+    set ifindex in libisc interface enumerator
+
+  lib/isc/win32/include/isc/ipv6.h@1.10, 2010-12-12 07:11:35+00:00, davehart@shiny.ad.hartbrothers.com +4 -4
+    Fix bugs in Windows libisc IN6_IS_ADDR_{LINK|SITE}LOCAL()
+
+  lib/isc/win32/interfaceiter.c@1.20, 2010-12-12 07:11:35+00:00, davehart@shiny.ad.hartbrothers.com +29 -16
+    Add INTERFACE_F_PRIVACY detection, set new ifindex in isc_interface_t.
+    Skip deprecated addresses.
+    nonfunctional cleanup of [Bug 1738] changes.
+
+  libntp/socktoa.c@1.11.1.1, 2010-12-12 07:11:35+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    socktoa() input now const
+
+  libntp/socktohost.c@1.7.1.1, 2010-12-12 07:11:35+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    socktohost() input now const
+
+  ntpd/ntp_control.c@1.129.1.5, 2010-12-12 07:11:35+00:00, davehart@shiny.ad.hartbrothers.com +0 -2
+    eliminate gcc4 warning in rendundant code by removing it.
+      authencrypt() jams the keyid into the packet structure.
+
+  ntpd/ntp_io.c@1.306.1.13, 2010-12-12 07:11:35+00:00, davehart@shiny.ad.hartbrothers.com +357 -308
+    [Bug 1741] Enable multicast reception on each address (Windows).
+    Minimize local address flip-flopping by avoiding peer_refresh_allinterfaces()
+      if nothing has changed in the interface list since the last scan.
+    Separate handling of scope ID embedded in many in6_addr from ifindex used
+      for IPv6 multicasting ioctls.
+    Add INT_PRIVACY endpt bit flag for IPv6 RFC 4941 privacy addresses.
+    Enable outbound multicast from only one address per interface in the same
+      subnet, and in that case prefer embedded MAC address modified EUI-64 IPv6
+      addresses first, then static, and last RFC 4941 privacy addresses.
+    Use setsockopt(IP[V6]_MULTICAST_IF) before each send to multicast to select
+      the local source address, using the correct socket isn't enough.
+
+  ntpd/ntp_peer.c@1.126.1.2, 2010-12-12 07:11:35+00:00, davehart@shiny.ad.hartbrothers.com +49 -50
+    cleanup
+
+  ntpd/ntp_request.c@1.82.1.4, 2010-12-12 07:11:35+00:00, davehart@shiny.ad.hartbrothers.com +18 -16
+    scopeid member of endpt replaced with ifindex
+
+  ntpd/ntpd.c@1.110.2.2, 2010-12-12 07:11:36+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    typo in msyslog text "Attemping"
+
+ChangeSet@1.2082.41.5, 2010-12-10 12:52:28+01:00, burnicki@pogo.udel.edu +1 -0
+  Updated changelog.
+
+  ChangeLog@1.496.26.125, 2010-12-10 12:52:28+01:00, burnicki@pogo.udel.edu +1 -0
+    Updated changelog.
+
+ChangeSet@1.2082.41.4, 2010-12-10 12:47:54+01:00, burnicki@pogo.udel.edu +2 -0
+  [Bug 1510] Add modes 20/21 for driver 8 to support RAWDCF @ 75 baud.
+
+  html/drivers/driver8.html@1.25, 2010-12-10 12:47:53+01:00, burnicki@pogo.udel.edu +12 -0
+    [Bug 1510] Add modes 20/21 for driver 8 to support RAWDCF @ 75 baud.
+
+  ntpd/refclock_parse.c@1.52.1.1, 2010-12-10 12:47:53+01:00, burnicki@pogo.udel.edu +49 -0
+    [Bug 1510] Add modes 20/21 for driver 8 to support RAWDCF @ 75 baud.
+
 ChangeSet@1.2323, 2010-12-08 10:11:00+00:00, stenn@deacon.udel.edu +29 -0
   NTP_4_2_7P92
   TAG: NTP_4_2_7P92
