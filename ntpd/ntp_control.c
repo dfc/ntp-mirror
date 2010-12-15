@@ -563,7 +563,6 @@ ctl_error(
 	)
 {
 	int		maclen;
-	keyid_t *	pkid;
 
 	numctlerrors++;
 	DPRINTF(3, ("sending control error %u\n", errcode));
@@ -2611,7 +2610,9 @@ static void configure(
 	int restrict_mask
 	)
 {
-	int data_count, retval, replace_nl;
+	size_t data_count;
+	int retval;
+	int replace_nl;
 
 	/* I haven't yet implemented changes to an existing association.
 	 * Hence check if the association id is 0

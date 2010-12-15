@@ -1,3 +1,6 @@
+(4.2.7p94) 2010/12/15 Released by Harlan Stenn <stenn@ntp.org>
+* [Bug 1751] from 4.2.6p3-RC12: Support for Atari FreeMiNT OS.
+* Documentation updates from Dave Mills.
 (4.2.7p93) 2010/12/13 Released by Harlan Stenn <stenn@ntp.org>
 * [Bug 1510] from 4.2.6p3-RC12: Add modes 20/21 for driver 8 to support
   RAWDCF @ 75 baud.
@@ -541,10 +544,13 @@
 ---
 
 * [Bug 1510] Add modes 20/21 for driver 8 to support RAWDCF @ 75 baud.
+* [Bug 1618] Unreachable code in jjy_start(). (backport from ntp-dev)
+* [Bug 1719] ntp-keygen -V crash. (backport)
 * [Bug 1741] Enable multicast reception on each address (Windows).
 * [Bug 1742] Fix a typo in an error message in the "build" script.
 * [Bug 1743] Display timezone offset when showing time for sntp in the
   local timezone.
+* [Bug 1751] Support for Atari FreeMiNT OS.
 * Clean up m4 quoting in configure.ac, *.m4 files, resolving
   intermittent AC_LANG_PROGRAM possibly undefined errors.
 * Clean up the SNTP documentation.

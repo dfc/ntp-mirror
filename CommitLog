@@ -1,3 +1,241 @@
+ChangeSet@1.2337, 2010-12-15 10:12:49+00:00, stenn@deacon.udel.edu +29 -0
+  NTP_4_2_7P94
+  TAG: NTP_4_2_7P94
+
+  ChangeLog@1.695, 2010-12-15 10:12:40+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P94
+
+  clockstuff/clktest-opts.c@1.18, 2010-12-15 10:12:40+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P94
+
+  clockstuff/clktest-opts.h@1.18, 2010-12-15 10:12:40+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P94
+
+  ntpd/ntpd-opts.c@1.98, 2010-12-15 10:12:40+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P94
+
+  ntpd/ntpd-opts.h@1.98, 2010-12-15 10:12:40+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P94
+
+  ntpd/ntpd-opts.texi@1.96, 2010-12-15 10:12:40+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P94
+
+  ntpd/ntpd.1@1.96, 2010-12-15 10:12:40+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P94
+
+  ntpdc/ntpdc-opts.c@1.95, 2010-12-15 10:12:40+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P94
+
+  ntpdc/ntpdc-opts.h@1.95, 2010-12-15 10:12:40+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P94
+
+  ntpdc/ntpdc-opts.texi@1.95, 2010-12-15 10:12:41+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P94
+
+  ntpdc/ntpdc.1@1.95, 2010-12-15 10:12:41+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P94
+
+  ntpq/ntpq-opts.c@1.95, 2010-12-15 10:12:41+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P94
+
+  ntpq/ntpq-opts.h@1.95, 2010-12-15 10:12:41+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P94
+
+  ntpq/ntpq-opts.texi@1.95, 2010-12-15 10:12:41+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P94
+
+  ntpq/ntpq.1@1.95, 2010-12-15 10:12:41+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P94
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.95, 2010-12-15 10:12:41+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P94
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.95, 2010-12-15 10:12:41+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P94
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.95, 2010-12-15 10:12:41+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P94
+
+  ntpsnmpd/ntpsnmpd.1@1.95, 2010-12-15 10:12:41+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P94
+
+  packageinfo.sh@1.96, 2010-12-15 10:12:41+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P94
+
+  sntp/sntp-opts.c@1.95, 2010-12-15 10:12:41+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P94
+
+  sntp/sntp-opts.h@1.95, 2010-12-15 10:12:41+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P94
+
+  sntp/sntp-opts.texi@1.95, 2010-12-15 10:12:41+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P94
+
+  sntp/sntp.1@1.95, 2010-12-15 10:12:41+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P94
+
+  sntp/sntp.html@1.95, 2010-12-15 10:12:41+00:00, stenn@deacon.udel.edu +4 -7
+    NTP_4_2_7P94
+
+  util/ntp-keygen-opts.c@1.93, 2010-12-15 10:12:41+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P94
+
+  util/ntp-keygen-opts.h@1.93, 2010-12-15 10:12:42+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P94
+
+  util/ntp-keygen-opts.texi@1.96, 2010-12-15 10:12:42+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P94
+
+  util/ntp-keygen.1@1.96, 2010-12-15 10:12:42+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P94
+
+ChangeSet@1.2082.4.173, 2010-12-15 08:27:35+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  [Bug 1618] Unreachable code in jjy_start(). (backport from ntp-dev)
+    (applies to -stable changes previously pulled to -dev only)
+  [Bug 1719] ntp-keygen -V crash. (backport)
+
+  ChangeLog@1.496.26.128, 2010-12-15 08:27:34+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+    [Bug 1618] Unreachable code in jjy_start(). (backport from ntp-dev)
+    [Bug 1719] ntp-keygen -V crash. (backport)
+
+  util/ntp-keygen.c@1.64.1.1, 2010-12-15 08:27:34+00:00, davehart@shiny.ad.hartbrothers.com +0 -1
+    [Bug 1719] ntp-keygen -V crash. (backport)
+
+ChangeSet@1.2329.1.1, 2010-12-15 01:49:59-05:00, stenn@deacon.udel.edu +6 -0
+  Documentation updates from Dave Mills.
+
+  ChangeLog@1.691.1.1, 2010-12-15 01:48:40-05:00, stenn@deacon.udel.edu +1 -0
+    Documentation updates from Dave Mills.
+
+  html/authopt.html@1.67, 2010-12-15 01:48:46-05:00, stenn@deacon.udel.edu +13 -10
+    Documentation updates from Dave Mills.
+
+  html/autokey.html@1.11, 2010-12-15 01:48:46-05:00, stenn@deacon.udel.edu +49 -62
+    Documentation updates from Dave Mills.
+
+  html/copyright.html@1.53, 2010-12-15 01:48:46-05:00, stenn@deacon.udel.edu +61 -82
+    Documentation updates from Dave Mills.
+
+  html/drivers/driver8.html@1.26, 2010-12-15 01:49:39-05:00, stenn@deacon.udel.edu +244 -278
+    Documentation updates from Dave Mills.
+
+  html/keygen.html@1.26, 2010-12-15 01:48:47-05:00, stenn@deacon.udel.edu +9 -10
+    Documentation updates from Dave Mills.
+
+ChangeSet@1.2082.40.22, 2010-12-15 01:23:25+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  get along better with OpenSSL 1.0.0c headers by including
+  evp.h instead of rand.h in ssl_init.c and configure.ac tests.
+
+  libntp/ssl_init.c@1.4.1.3, 2010-12-15 01:23:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    get along better with OpenSSL 1.0.0c headers by including
+    evp.h instead of rand.h in ssl_init.c and configure.ac tests.
+
+  m4/ntp_openssl.m4@1.4.1.3, 2010-12-15 01:23:24+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    get along better with OpenSSL 1.0.0c headers by including
+    evp.h instead of rand.h in ssl_init.c and configure.ac tests.
+
+ChangeSet@1.2333, 2010-12-15 00:14:11+00:00, davehart@shiny.ad.hartbrothers.com +6 -0
+  quiet gcc4 warnings
+  alloc/free peer group identity member
+
+  ntpd/ntp_control.c@1.146, 2010-12-15 00:14:09+00:00, davehart@shiny.ad.hartbrothers.com +0 -1
+    remove unused local 'pkid' from ctl_error()
+
+  ntpd/ntp_io.c@1.334, 2010-12-15 00:14:10+00:00, davehart@shiny.ad.hartbrothers.com +2 -1
+    use unsigned type for select_count to silence gcc signed
+      overflow warning.
+
+  ntpd/ntp_peer.c@1.141, 2010-12-15 00:14:10+00:00, davehart@shiny.ad.hartbrothers.com +4 -1
+    make copy of group identity in newpeer()
+
+  ntpd/refclock_jjy.c@1.20, 2010-12-15 00:14:10+00:00, davehart@shiny.ad.hartbrothers.com +15 -10
+    quiet gcc4 signed overflow warnings with unsigned use.
+
+  ntpd/refclock_mx4200.c@1.27, 2010-12-15 00:14:10+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    eliminate int compared to pointer warning
+
+  sntp/tests/packetHandling.cpp@1.6, 2010-12-15 00:14:10+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    suppress gcc4 warning of negative left shift count from use
+      of LOGTOD(), substitute ULOGTOD()
+
+ChangeSet@1.2082.40.21, 2010-12-14 20:49:32+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  [Bug 1751] correct -lcrypto -lz dependency test
+
+  m4/ntp_openssl.m4@1.4.1.2, 2010-12-14 20:48:35+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+    [Bug 1751] correct -lcrypto -lz dependency test
+
+ChangeSet@1.2331, 2010-12-14 20:10:12+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  cleanup merge flub
+
+  ntpq/ntpq-subs.c@1.71, 2010-12-14 20:10:12+00:00, davehart@shiny.ad.hartbrothers.com +4 -2
+    cleanup merge flub
+
+ChangeSet@1.2082.40.20, 2010-12-14 19:40:18+00:00, davehart@shiny.ad.hartbrothers.com +20 -0
+  [Bug 1751] Support for Atari FreeMiNT OS.
+
+  ChangeLog@1.496.26.127, 2010-12-14 19:40:16+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1751] Support for Atari FreeMiNT OS.
+
+  configure.ac@1.465.1.23, 2010-12-14 19:40:16+00:00, davehart@shiny.ad.hartbrothers.com +4 -1
+    [Bug 1751] Support for Atari FreeMiNT OS.
+
+  lib/isc/unix/net.c@1.15, 2010-12-14 19:40:16+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    [Bug 1751] Support for Atari FreeMiNT OS.
+
+  m4/ntp_openssl.m4@1.4.1.1, 2010-12-14 19:40:16+00:00, davehart@shiny.ad.hartbrothers.com +52 -0
+    [Bug 1751] Atari FreeMiNT needs -lcrypto -lz for LCRYPTO
+
+  ntpd/ntp_config.c@1.241.1.8, 2010-12-14 19:40:16+00:00, davehart@shiny.ad.hartbrothers.com +4 -5
+    attempt to silence gcc4 apparently bogus warning about simplifying
+      conditional "if (i)" to a constant.
+
+  ntpd/ntp_control.c@1.129.1.6, 2010-12-14 19:40:16+00:00, davehart@shiny.ad.hartbrothers.com +3 -1
+    quiet gcc4 signed overflow warning
+
+  ntpd/ntp_refclock.c@1.92.1.2, 2010-12-14 19:40:16+00:00, davehart@shiny.ad.hartbrothers.com +6 -32
+    quiet gcc4 signed overflow warning
+
+  ntpd/refclock_conf.c@1.28, 2010-12-14 19:40:16+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    [Bug 1751] Atari FreeMiNT termios.h doesn't have TIOCMSET
+
+  ntpd/refclock_palisade.c@1.31.1.2, 2010-12-14 19:40:16+00:00, davehart@shiny.ad.hartbrothers.com +12 -6
+    [Bug 1751] Atari FreeMiNT termios.h doesn't have TIOCMSET
+
+  ntpdate/ntpdate.c@1.69.2.2, 2010-12-14 19:40:16+00:00, davehart@shiny.ad.hartbrothers.com +32 -27
+    attempt to silence gcc4 signed wraparound/overflow warnings.
+
+  ntpdc/ntpdc.c@1.75.1.3, 2010-12-14 19:40:16+00:00, davehart@shiny.ad.hartbrothers.com +35 -55
+    4.2.6 requires ANSI C so qsort() signature is nailed down.
+
+  ntpdc/ntpdc_ops.c@1.62.1.2, 2010-12-14 19:40:17+00:00, davehart@shiny.ad.hartbrothers.com +65 -67
+    Attempt to silence apparently bogus "simplifying conditional
+      to constant" warning from gcc4 re "if (res)"
+
+  ntpq/libntpq.c@1.3.1.5, 2010-12-14 19:40:17+00:00, davehart@shiny.ad.hartbrothers.com +62 -73
+    use associd_t instead of int
+
+  ntpq/libntpq.h@1.3.1.3, 2010-12-14 19:40:17+00:00, davehart@shiny.ad.hartbrothers.com +10 -12
+    use associd_t instead of int
+
+  ntpq/libntpq_subs.c@1.2.1.2, 2010-12-14 19:40:17+00:00, davehart@shiny.ad.hartbrothers.com +4 -10
+    use associd_t instead of int
+
+  ntpq/ntpq-subs.c@1.39.2.5, 2010-12-14 19:40:17+00:00, davehart@shiny.ad.hartbrothers.com +99 -88
+    use associd_t instead of int
+
+  ntpq/ntpq.c@1.97.1.7, 2010-12-14 19:40:17+00:00, davehart@shiny.ad.hartbrothers.com +119 -174
+    use associd_t instead of int
+
+  ntpq/ntpq.h@1.10.1.4, 2010-12-14 19:40:17+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    use associd_t not int
+
+  sntp/main.c@1.24.1.9, 2010-12-14 19:40:17+00:00, davehart@shiny.ad.hartbrothers.com +5 -4
+    toy with gcc4 apparently spurious "simplifying conditional to constant"
+      warning.
+
+  util/tickadj.c@1.9, 2010-12-14 19:40:17+00:00, davehart@shiny.ad.hartbrothers.com +3 -1
+    [Bug 1751] Support for Atari FreeMiNT OS.
+
 ChangeSet@1.2329, 2010-12-13 08:28:59+00:00, stenn@deacon.udel.edu +29 -0
   NTP_4_2_7P93
   TAG: NTP_4_2_7P93
@@ -142,6 +380,18 @@ ChangeSet@1.2323.2.1, 2010-12-13 01:16:09-05:00, stenn@deacon.udel.edu +4 -0
 
   html/miscopt.html@1.63, 2010-12-13 01:15:42-05:00, stenn@deacon.udel.edu +3 -3
     Documentation updates from Dave Mills.
+
+ChangeSet@1.2082.40.19, 2010-12-13 01:06:37-05:00, stenn@deacon.udel.edu +3 -0
+  SNTP documentation cleanup
+
+  sntp/Makefile.am@1.21.1.13, 2010-12-13 01:06:27-05:00, stenn@deacon.udel.edu +4 -0
+    SNTP documentation cleanup
+
+  sntp/sntp.html@1.7.29.1, 2010-12-13 01:06:27-05:00, stenn@deacon.udel.edu +297 -11
+    SNTP documentation cleanup
+
+  sntp/sntp.texi@1.6, 2010-12-13 01:06:27-05:00, stenn@deacon.udel.edu +2 -2
+    SNTP documentation cleanup
 
 ChangeSet@1.2323.1.3, 2010-12-12 08:30:28+00:00, davehart@shiny.ad.hartbrothers.com +5 -0
   Add test for socktoa(), sockporttoa() with scoped address.
