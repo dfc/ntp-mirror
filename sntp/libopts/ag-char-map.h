@@ -1,5 +1,5 @@
 /*
- *   Character mapping generated 11/18/10 11:54:12
+ *   Character mapping generated 12/16/10 15:59:15
  *
  *  This file contains the character classifications
  *  used by AutoGen and AutoOpts for identifying tokens.

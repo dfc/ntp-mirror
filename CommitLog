@@ -1,3 +1,470 @@
+ChangeSet@1.2348, 2010-12-17 04:38:38+00:00, stenn@deacon.udel.edu +29 -0
+  NTP_4_2_7P95
+  TAG: NTP_4_2_7P95
+
+  ChangeLog@1.703, 2010-12-17 04:38:32+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P95
+
+  clockstuff/clktest-opts.c@1.19, 2010-12-17 04:38:32+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P95
+
+  clockstuff/clktest-opts.h@1.19, 2010-12-17 04:38:32+00:00, stenn@deacon.udel.edu +15 -6
+    NTP_4_2_7P95
+
+  ntpd/ntpd-opts.c@1.99, 2010-12-17 04:38:32+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P95
+
+  ntpd/ntpd-opts.h@1.99, 2010-12-17 04:38:32+00:00, stenn@deacon.udel.edu +15 -6
+    NTP_4_2_7P95
+
+  ntpd/ntpd-opts.texi@1.97, 2010-12-17 04:38:32+00:00, stenn@deacon.udel.edu +2 -75
+    NTP_4_2_7P95
+
+  ntpd/ntpd.1@1.97, 2010-12-17 04:38:33+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P95
+
+  ntpdc/ntpdc-opts.c@1.96, 2010-12-17 04:38:33+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P95
+
+  ntpdc/ntpdc-opts.h@1.96, 2010-12-17 04:38:33+00:00, stenn@deacon.udel.edu +15 -6
+    NTP_4_2_7P95
+
+  ntpdc/ntpdc-opts.texi@1.96, 2010-12-17 04:38:33+00:00, stenn@deacon.udel.edu +2 -66
+    NTP_4_2_7P95
+
+  ntpdc/ntpdc.1@1.96, 2010-12-17 04:38:33+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P95
+
+  ntpq/ntpq-opts.c@1.96, 2010-12-17 04:38:33+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P95
+
+  ntpq/ntpq-opts.h@1.96, 2010-12-17 04:38:33+00:00, stenn@deacon.udel.edu +15 -6
+    NTP_4_2_7P95
+
+  ntpq/ntpq-opts.texi@1.96, 2010-12-17 04:38:33+00:00, stenn@deacon.udel.edu +2 -51
+    NTP_4_2_7P95
+
+  ntpq/ntpq.1@1.96, 2010-12-17 04:38:33+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P95
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.96, 2010-12-17 04:38:33+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P95
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.96, 2010-12-17 04:38:33+00:00, stenn@deacon.udel.edu +15 -6
+    NTP_4_2_7P95
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.96, 2010-12-17 04:38:33+00:00, stenn@deacon.udel.edu +2 -24
+    NTP_4_2_7P95
+
+  ntpsnmpd/ntpsnmpd.1@1.96, 2010-12-17 04:38:33+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P95
+
+  packageinfo.sh@1.97, 2010-12-17 04:38:33+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P95
+
+  sntp/sntp-opts.c@1.96, 2010-12-17 04:38:34+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P95
+
+  sntp/sntp-opts.h@1.96, 2010-12-17 04:38:34+00:00, stenn@deacon.udel.edu +15 -6
+    NTP_4_2_7P95
+
+  sntp/sntp-opts.texi@1.96, 2010-12-17 04:38:34+00:00, stenn@deacon.udel.edu +2 -56
+    NTP_4_2_7P95
+
+  sntp/sntp.1@1.96, 2010-12-17 04:38:34+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P95
+
+  sntp/sntp.html@1.96, 2010-12-17 04:38:34+00:00, stenn@deacon.udel.edu +2 -56
+    NTP_4_2_7P95
+
+  util/ntp-keygen-opts.c@1.94, 2010-12-17 04:38:34+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P95
+
+  util/ntp-keygen-opts.h@1.94, 2010-12-17 04:38:34+00:00, stenn@deacon.udel.edu +15 -6
+    NTP_4_2_7P95
+
+  util/ntp-keygen-opts.texi@1.97, 2010-12-17 04:38:34+00:00, stenn@deacon.udel.edu +2 -47
+    NTP_4_2_7P95
+
+  util/ntp-keygen.1@1.97, 2010-12-17 04:38:34+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P95
+
+ChangeSet@1.2346, 2010-12-16 22:02:02-05:00, stenn@deacon.udel.edu +2 -0
+  Documentation updates from Dave Mills
+
+  ChangeLog@1.701, 2010-12-16 22:01:02-05:00, stenn@deacon.udel.edu +1 -0
+    Documentation updates from Dave Mills
+
+  html/confopt.html@1.54, 2010-12-16 22:01:02-05:00, stenn@deacon.udel.edu +10 -8
+    Documentation updates from Dave Mills
+
+ChangeSet@1.2082.4.182, 2010-12-17 02:53:54+00:00, davehart@shiny.ad.hartbrothers.com +5 -0
+  [Bug 1757] oncore snprintf("%m") doesn't expand %m.
+
+  ChangeLog@1.496.26.133, 2010-12-17 02:53:53+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1757] oncore snprintf("%m") doesn't expand %m.
+
+  include/ntp_stdlib.h@1.40.1.4, 2010-12-17 02:53:53+00:00, davehart@shiny.ad.hartbrothers.com +4 -1
+    add mvsnprintf(), msnprintf() clones of vsnprintf() and snprintf() which
+      expand %m to strerror(errno) like msyslog()
+
+  libntp/msyslog.c@1.24.1.2, 2010-12-17 02:53:53+00:00, davehart@shiny.ad.hartbrothers.com +43 -23
+    add mvsnprintf(), msnprintf() clones of vsnprintf() and snprintf() which
+      expand %m to strerror(errno) like msyslog()
+
+  ntpd/ntp_io.c@1.306.1.14, 2010-12-17 02:53:53+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    silence potentially uninit warning
+
+  ntpd/refclock_oncore.c@1.82.1.1, 2010-12-17 02:53:53+00:00, davehart@shiny.ad.hartbrothers.com +5 -5
+    [Bug 1757] oncore snprintf("%m") doesn't expand %m.
+
+ChangeSet@1.2082.42.3, 2010-12-17 01:59:53+00:00, hart@psp-os1.ntp.org +20 -0
+  Many files:
+    Autogen 5.11.6pre3 output
+
+  ntpd/ntpd-opts.c@1.248.30.1, 2010-12-17 01:58:20+00:00, hart@psp-os1.ntp.org +5 -5
+    Autogen 5.11.6pre3 output
+
+  ntpd/ntpd-opts.h@1.248.30.1, 2010-12-17 01:58:20+00:00, hart@psp-os1.ntp.org +13 -4
+    Autogen 5.11.6pre3 output
+
+  ntpd/ntpd-opts.texi@1.246.30.1, 2010-12-17 01:58:20+00:00, hart@psp-os1.ntp.org +1 -1
+    Autogen 5.11.6pre3 output
+
+  ntpd/ntpd.1@1.246.30.1, 2010-12-17 01:58:20+00:00, hart@psp-os1.ntp.org +2 -2
+    Autogen 5.11.6pre3 output
+
+  ntpdc/ntpdc-opts.c@1.244.30.1, 2010-12-17 01:58:20+00:00, hart@psp-os1.ntp.org +5 -5
+    Autogen 5.11.6pre3 output
+
+  ntpdc/ntpdc-opts.h@1.244.30.1, 2010-12-17 01:58:20+00:00, hart@psp-os1.ntp.org +13 -4
+    Autogen 5.11.6pre3 output
+
+  ntpdc/ntpdc-opts.texi@1.243.30.1, 2010-12-17 01:58:20+00:00, hart@psp-os1.ntp.org +1 -1
+    Autogen 5.11.6pre3 output
+
+  ntpdc/ntpdc.1@1.243.30.1, 2010-12-17 01:58:21+00:00, hart@psp-os1.ntp.org +2 -2
+    Autogen 5.11.6pre3 output
+
+  ntpq/ntpq-opts.c@1.245.30.1, 2010-12-17 01:58:21+00:00, hart@psp-os1.ntp.org +5 -5
+    Autogen 5.11.6pre3 output
+
+  ntpq/ntpq-opts.h@1.245.30.1, 2010-12-17 01:58:21+00:00, hart@psp-os1.ntp.org +13 -4
+    Autogen 5.11.6pre3 output
+
+  ntpq/ntpq-opts.texi@1.244.30.1, 2010-12-17 01:58:21+00:00, hart@psp-os1.ntp.org +1 -1
+    Autogen 5.11.6pre3 output
+
+  ntpq/ntpq.1@1.244.30.1, 2010-12-17 01:58:21+00:00, hart@psp-os1.ntp.org +2 -2
+    Autogen 5.11.6pre3 output
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.123.31.1, 2010-12-17 01:58:21+00:00, hart@psp-os1.ntp.org +5 -5
+    Autogen 5.11.6pre3 output
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.123.31.1, 2010-12-17 01:58:21+00:00, hart@psp-os1.ntp.org +13 -4
+    Autogen 5.11.6pre3 output
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.123.31.1, 2010-12-17 01:58:21+00:00, hart@psp-os1.ntp.org +1 -1
+    Autogen 5.11.6pre3 output
+
+  ntpsnmpd/ntpsnmpd.1@1.122.31.1, 2010-12-17 01:58:21+00:00, hart@psp-os1.ntp.org +2 -2
+    Autogen 5.11.6pre3 output
+
+  util/ntp-keygen-opts.c@1.247.30.1, 2010-12-17 01:58:21+00:00, hart@psp-os1.ntp.org +5 -5
+    Autogen 5.11.6pre3 output
+
+  util/ntp-keygen-opts.h@1.247.30.1, 2010-12-17 01:58:21+00:00, hart@psp-os1.ntp.org +13 -4
+    Autogen 5.11.6pre3 output
+
+  util/ntp-keygen-opts.texi@1.246.30.1, 2010-12-17 01:58:21+00:00, hart@psp-os1.ntp.org +1 -1
+    Autogen 5.11.6pre3 output
+
+  util/ntp-keygen.1@1.246.30.1, 2010-12-17 01:58:21+00:00, hart@psp-os1.ntp.org +2 -2
+    Autogen 5.11.6pre3 output
+
+ChangeSet@1.2082.42.2, 2010-12-17 01:46:51+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  restore NTP local patch to LIBOPTS_CHECK to not build libopts
+    from the top-level configure.ac.
+
+  sntp/libopts/m4/libopts.m4@1.12, 2010-12-17 01:46:51+00:00, davehart@shiny.ad.hartbrothers.com +10 -7
+    restore NTP local patch to LIBOPTS_CHECK to not build libopts
+      from the top-level configure.ac.
+
+ChangeSet@1.2082.42.1, 2010-12-17 01:43:41+00:00, davehart@shiny.ad.hartbrothers.com +14 -0
+  libopts 33.5.8 unmodified from AutoGen 5.11.6pre3
+
+  ChangeLog@1.496.26.132, 2010-12-17 01:43:38+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    libopts 33.5.8 unmodified from AutoGen 5.11.6pre3
+
+  sntp/libopts/Makefile.am@1.7, 2010-12-17 01:43:38+00:00, davehart@shiny.ad.hartbrothers.com +5 -5
+    libopts 33.5.8 unmodified from AutoGen 5.11.6pre3
+
+  sntp/libopts/README@1.5, 2010-12-17 01:43:38+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    libopts 33.5.8 unmodified from AutoGen 5.11.6pre3
+
+  sntp/libopts/ag-char-map.h@1.10, 2010-12-17 01:43:38+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    libopts 33.5.8 unmodified from AutoGen 5.11.6pre3
+
+  sntp/libopts/autoopts/options.h@1.9, 2010-12-17 01:43:39+00:00, davehart@shiny.ad.hartbrothers.com +12 -5
+    libopts 33.5.8 unmodified from AutoGen 5.11.6pre3
+
+  sntp/libopts/autoopts/usage-txt.h@1.9, 2010-12-17 01:43:39+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    libopts 33.5.8 unmodified from AutoGen 5.11.6pre3
+
+  sntp/libopts/configfile.c@1.9, 2010-12-17 01:43:38+00:00, davehart@shiny.ad.hartbrothers.com +14 -7
+    libopts 33.5.8 unmodified from AutoGen 5.11.6pre3
+
+  sntp/libopts/genshell.c@1.10, 2010-12-17 01:43:38+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    libopts 33.5.8 unmodified from AutoGen 5.11.6pre3
+
+  sntp/libopts/genshell.h@1.10, 2010-12-17 01:43:39+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    libopts 33.5.8 unmodified from AutoGen 5.11.6pre3
+
+  sntp/libopts/m4/libopts.m4@1.11, 2010-12-17 01:43:39+00:00, davehart@shiny.ad.hartbrothers.com +8 -11
+    libopts 33.5.8 unmodified from AutoGen 5.11.6pre3
+
+  sntp/libopts/makeshell.c@1.7, 2010-12-17 01:43:39+00:00, davehart@shiny.ad.hartbrothers.com +17 -9
+    libopts 33.5.8 unmodified from AutoGen 5.11.6pre3
+
+  sntp/libopts/proto.h@1.10, 2010-12-17 01:43:39+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    libopts 33.5.8 unmodified from AutoGen 5.11.6pre3
+
+  sntp/libopts/value-type.h@1.10, 2010-12-17 01:43:39+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    libopts 33.5.8 unmodified from AutoGen 5.11.6pre3
+
+  sntp/libopts/xat-attribute.h@1.10, 2010-12-17 01:43:39+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    libopts 33.5.8 unmodified from AutoGen 5.11.6pre3
+
+ChangeSet@1.2082.4.179, 2010-12-16 20:22:36-05:00, stenn@deacon.udel.edu +20 -0
+  libopts upgrade
+
+  ntpd/ntpd-opts.c@1.248.29.1, 2010-12-16 20:21:26-05:00, stenn@deacon.udel.edu +5 -5
+    libopts upgrade
+
+  ntpd/ntpd-opts.h@1.248.29.1, 2010-12-16 20:21:26-05:00, stenn@deacon.udel.edu +13 -4
+    libopts upgrade
+
+  ntpd/ntpd-opts.texi@1.246.29.1, 2010-12-16 20:21:27-05:00, stenn@deacon.udel.edu +61 -2
+    libopts upgrade
+
+  ntpd/ntpd.1@1.246.29.1, 2010-12-16 20:21:27-05:00, stenn@deacon.udel.edu +2 -2
+    libopts upgrade
+
+  ntpdc/ntpdc-opts.c@1.244.29.1, 2010-12-16 20:21:27-05:00, stenn@deacon.udel.edu +5 -5
+    libopts upgrade
+
+  ntpdc/ntpdc-opts.h@1.244.29.1, 2010-12-16 20:21:27-05:00, stenn@deacon.udel.edu +13 -4
+    libopts upgrade
+
+  ntpdc/ntpdc-opts.texi@1.243.29.1, 2010-12-16 20:21:27-05:00, stenn@deacon.udel.edu +66 -2
+    libopts upgrade
+
+  ntpdc/ntpdc.1@1.243.29.1, 2010-12-16 20:21:27-05:00, stenn@deacon.udel.edu +2 -2
+    libopts upgrade
+
+  ntpq/ntpq-opts.c@1.245.29.1, 2010-12-16 20:21:27-05:00, stenn@deacon.udel.edu +5 -5
+    libopts upgrade
+
+  ntpq/ntpq-opts.h@1.245.29.1, 2010-12-16 20:21:27-05:00, stenn@deacon.udel.edu +13 -4
+    libopts upgrade
+
+  ntpq/ntpq-opts.texi@1.244.29.1, 2010-12-16 20:21:27-05:00, stenn@deacon.udel.edu +51 -2
+    libopts upgrade
+
+  ntpq/ntpq.1@1.244.29.1, 2010-12-16 20:21:27-05:00, stenn@deacon.udel.edu +2 -2
+    libopts upgrade
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.123.30.1, 2010-12-16 20:21:27-05:00, stenn@deacon.udel.edu +5 -5
+    libopts upgrade
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.123.30.1, 2010-12-16 20:21:27-05:00, stenn@deacon.udel.edu +13 -4
+    libopts upgrade
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.123.30.1, 2010-12-16 20:21:27-05:00, stenn@deacon.udel.edu +24 -2
+    libopts upgrade
+
+  ntpsnmpd/ntpsnmpd.1@1.122.30.1, 2010-12-16 20:21:27-05:00, stenn@deacon.udel.edu +2 -2
+    libopts upgrade
+
+  util/ntp-keygen-opts.c@1.247.29.1, 2010-12-16 20:21:27-05:00, stenn@deacon.udel.edu +5 -5
+    libopts upgrade
+
+  util/ntp-keygen-opts.h@1.247.29.1, 2010-12-16 20:21:27-05:00, stenn@deacon.udel.edu +13 -4
+    libopts upgrade
+
+  util/ntp-keygen-opts.texi@1.246.29.1, 2010-12-16 20:21:28-05:00, stenn@deacon.udel.edu +45 -2
+    libopts upgrade
+
+  util/ntp-keygen.1@1.246.29.1, 2010-12-16 20:21:28-05:00, stenn@deacon.udel.edu +2 -2
+    libopts upgrade
+
+ChangeSet@1.2082.4.178, 2010-12-16 23:57:51+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  first verbose --version attempt caused --help to segfault.
+
+  libntp/ntp_libopts.c@1.3, 2010-12-16 23:57:50+00:00, davehart@shiny.ad.hartbrothers.com +7 -6
+    first verbose --version attempt caused --help to segfault.
+
+ChangeSet@1.2082.4.177, 2010-12-16 09:07:58+00:00, davehart@shiny.ad.hartbrothers.com +16 -0
+  Upgrade to libopts 33.4.8 from AutoGen 5.11.6pre1.
+
+  ChangeLog@1.496.26.131, 2010-12-16 09:07:56+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    Upgrade to libopts 33.4.8 from AutoGen 5.11.6pre1.
+
+  sntp/libopts/Makefile.am@1.6, 2010-12-16 09:07:56+00:00, davehart@shiny.ad.hartbrothers.com +5 -5
+    libopts 33.4.8
+
+  sntp/libopts/ag-char-map.h@1.9, 2010-12-16 09:07:56+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    libopts 33.4.8
+
+  sntp/libopts/autoopts.c@1.7, 2010-12-16 09:07:56+00:00, davehart@shiny.ad.hartbrothers.com +5 -5
+    libopts 33.4.8
+
+  sntp/libopts/autoopts/options.h@1.8, 2010-12-16 09:07:57+00:00, davehart@shiny.ad.hartbrothers.com +4 -4
+    libopts 33.4.8
+
+  sntp/libopts/autoopts/usage-txt.h@1.8, 2010-12-16 09:07:57+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    libopts 33.4.8
+
+  sntp/libopts/configfile.c@1.8, 2010-12-16 09:07:56+00:00, davehart@shiny.ad.hartbrothers.com +4 -1
+    libopts 33.4.8
+
+  sntp/libopts/environment.c@1.8, 2010-12-16 09:07:56+00:00, davehart@shiny.ad.hartbrothers.com +26 -20
+    libopts 33.4.8
+
+  sntp/libopts/genshell.c@1.9, 2010-12-16 09:07:56+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    libopts 33.4.8
+
+  sntp/libopts/genshell.h@1.9, 2010-12-16 09:07:56+00:00, davehart@shiny.ad.hartbrothers.com +13 -4
+    libopts 33.4.8
+
+  sntp/libopts/load.c@1.7, 2010-12-16 09:07:56+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    libopts 33.4.8
+
+  sntp/libopts/m4/libopts.m4@1.10, 2010-12-16 09:07:57+00:00, davehart@shiny.ad.hartbrothers.com +6 -6
+    libopts 33.4.8
+      plus local patch to fix single shared libopts between sntp subproj
+      and top-level
+
+  sntp/libopts/m4/liboptschk.m4@1.7, 2010-12-16 09:07:57+00:00, davehart@shiny.ad.hartbrothers.com +20 -33
+    libopts 33.4.8
+
+  sntp/libopts/proto.h@1.9, 2010-12-16 09:07:57+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    libopts 33.4.8
+
+  sntp/libopts/value-type.h@1.9, 2010-12-16 09:07:57+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    libopts 33.4.8
+
+  sntp/libopts/xat-attribute.h@1.9, 2010-12-16 09:07:57+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    libopts 33.4.8
+
+ChangeSet@1.2082.4.176, 2010-12-16 06:16:02+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
+  #include <config.h> in new file libntp/ntp_libopts.c
+  add libopts includes to libntp INCLUDES = now that ntp_libopts.c
+    uses them.
+
+  ChangeLog@1.496.26.130, 2010-12-16 06:16:01+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    typo
+
+  libntp/Makefile.am@1.51.1.2, 2010-12-16 06:16:01+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    add libopts includes to libntp INCLUDES = now that ntp_libopts.c
+      uses them.
+
+  libntp/ntp_libopts.c@1.2, 2010-12-16 06:16:02+00:00, davehart@shiny.ad.hartbrothers.com +4 -1
+    #include <config.h> in new file libntp/ntp_libopts.c
+
+ChangeSet@1.2082.4.175, 2010-12-16 04:42:37+00:00, davehart@shiny.ad.hartbrothers.com +21 -0
+  * [Bug 1740] ntpdc treats many counters as signed. (backport)
+  * [Bug 1754] --version output should be more verbose.
+  * Suppress ntp-keygen OpenSSL version display for --help, --version,
+    display both build and runtime OpenSLL versions when they differ.
+
+  ChangeLog@1.496.26.129, 2010-12-16 04:42:35+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+    * [Bug 1740] ntpdc treats many counters as signed. (backport)
+    * [Bug 1754] --version output should be more verbose.
+    * Suppress ntp-keygen OpenSSL version display for --help, --version,
+      display both build and runtime OpenSLL versions when they differ.
+    
+
+  include/Makefile.am@1.38.1.1, 2010-12-16 04:42:35+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    add ntp_libopts.h
+
+  include/ntp_libopts.h@1.1, 2010-12-16 04:41:58+00:00, davehart@shiny.ad.hartbrothers.com +13 -0
+    new wrapper ntpOptionProcess() makes --version output more verbose.
+
+  include/ntp_libopts.h@1.0, 2010-12-16 04:41:58+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+
+  libntp/Makefile.am@1.51.1.1, 2010-12-16 04:42:35+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    add ntp_libopts.c
+
+  libntp/ntp_libopts.c@1.1, 2010-12-16 04:41:59+00:00, davehart@shiny.ad.hartbrothers.com +50 -0
+    new wrapper ntpOptionProcess() makes --version output more verbose.
+
+  libntp/ntp_libopts.c@1.0, 2010-12-16 04:41:59+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+
+  ntpd/ntp_scanner.c@1.31.1.3, 2010-12-16 04:42:35+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    suppress gcc4 warning about signed overflow by using
+      unsigned counter and index
+
+  ntpd/ntpd.c@1.110.2.3, 2010-12-16 04:42:35+00:00, davehart@shiny.ad.hartbrothers.com +2 -1
+    [Bug 1754] --version output should be more verbose.
+
+  ntpdc/ntpdc.c@1.75.1.4, 2010-12-16 04:42:35+00:00, davehart@shiny.ad.hartbrothers.com +2 -1
+    [Bug 1754] --version output should be more verbose.
+
+  ntpdc/ntpdc_ops.c@1.62.1.3, 2010-12-16 04:42:35+00:00, davehart@shiny.ad.hartbrothers.com +191 -197
+    [Bug 1740] ntpdc treats many counters as signed. (backport)
+
+  ntpq/ntpq.c@1.97.1.8, 2010-12-16 04:42:35+00:00, davehart@shiny.ad.hartbrothers.com +2 -1
+    [Bug 1754] --version output should be more verbose.
+
+  ports/winnt/vc6/libntp.dsp@1.43.1.11, 2010-12-16 04:42:35+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+    add libntp/ntp_libopts.c reference
+
+  ports/winnt/vc6/ntpkeygen.dsp@1.20.1.2, 2010-12-16 04:42:35+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    correct ntp-keygen Version string to mention ntp-keygen not ntpkeygen
+
+  ports/winnt/vs2003/libntp.vcproj@1.4.1.5, 2010-12-16 04:42:35+00:00, davehart@shiny.ad.hartbrothers.com +3 -0
+    add libntp/ntp_libopts.c reference
+
+  ports/winnt/vs2003/ntpkeygen.vcproj@1.3.1.2, 2010-12-16 04:42:35+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    correct ntp-keygen Version string to mention ntp-keygen not ntpkeygen
+
+  ports/winnt/vs2005/libntp.vcproj@1.4.1.5, 2010-12-16 04:42:35+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+    add libntp/ntp_libopts.c reference
+
+  ports/winnt/vs2005/ntpkeygen.vcproj@1.3.1.2, 2010-12-16 04:42:35+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    correct ntp-keygen Version string to mention ntp-keygen not ntpkeygen
+
+  ports/winnt/vs2008/libntp/libntp.vcproj@1.20.3.1, 2010-12-16 04:42:35+00:00, davehart@shiny.ad.hartbrothers.com +8 -0
+    add libntp/ntp_libopts.c reference
+
+  ports/winnt/vs2008/ntp-keygen/ntp-keygen.vcproj@1.9.2.1, 2010-12-16 04:42:35+00:00, davehart@shiny.ad.hartbrothers.com +2 -68
+    correct ntp-keygen Version string to mention ntp-keygen not ntpkeygen
+
+  ports/winnt/vs2008/ntpd/ntpd.vcproj@1.21.2.1, 2010-12-16 04:42:36+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+    add include/ntp_libopts.h reference
+
+  util/Makefile.am@1.45.1.5, 2010-12-16 04:42:36+00:00, davehart@shiny.ad.hartbrothers.com +9 -1
+    Generate, use version.c for verbose --version output
+
+  util/ntp-keygen.c@1.64.1.2, 2010-12-16 04:42:36+00:00, davehart@shiny.ad.hartbrothers.com +13 -2
+    [Bug 1754] --version output should be more verbose.
+
+ChangeSet@1.2082.4.174, 2010-12-15 20:23:17+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+  Use LIBS not LDFLAGS for configure tests of -lcrypto, -lcrypto -lz
+
+  m4/ntp_openssl.m4@1.4.1.4, 2010-12-15 20:23:17+00:00, davehart@shiny.ad.hartbrothers.com +6 -6
+    Use LIBS not LDFLAGS for configure tests of -lcrypto, -lcrypto -lz
+
+ChangeSet@1.2338, 2010-12-15 19:01:12+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  [Bug 1753] 4.2.7p94 faults on startup in newpeer(), strdup(NULL).
+
+  ChangeLog@1.696, 2010-12-15 19:01:11+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1753] 4.2.7p94 faults on startup in newpeer(), strdup(NULL).
+
+  ntpd/ntp_peer.c@1.142, 2010-12-15 19:01:11+00:00, davehart@shiny.ad.hartbrothers.com +2 -1
+    [Bug 1753] 4.2.7p94 faults on startup in newpeer(), strdup(NULL).
+
 ChangeSet@1.2337, 2010-12-15 10:12:49+00:00, stenn@deacon.udel.edu +29 -0
   NTP_4_2_7P94
   TAG: NTP_4_2_7P94

@@ -98,7 +98,8 @@ longsize_DEPENDENCIES = ../libntp/libntp.a
 am_ntp_keygen_OBJECTS = ntp-keygen.$(OBJEXT) ntp-keygen-opts.$(OBJEXT)
 ntp_keygen_OBJECTS = $(am_ntp_keygen_OBJECTS)
 am__DEPENDENCIES_1 =
-ntp_keygen_DEPENDENCIES = $(am__DEPENDENCIES_1) ../libntp/libntp.a
+ntp_keygen_DEPENDENCIES = version.o $(am__DEPENDENCIES_1) \
+	../libntp/libntp.a
 ntptime_SOURCES = ntptime.c
 ntptime_OBJECTS = ntptime.$(OBJEXT)
 ntptime_LDADD = $(LDADD)
@@ -347,12 +348,13 @@ AM_CPPFLAGS = -I$(top_srcdir)/include -I$(top_srcdir)/lib/isc/include \
 LDADD = ../libntp/libntp.a
 tg2_LDADD = $(LIBM)
 ntp_keygen_SOURCES = ntp-keygen.c ntp-keygen-opts.c ntp-keygen-opts.h
-ntp_keygen_LDADD = $(LIBOPTS_LDADD) ../libntp/libntp.a @LCRYPTO@
+ntp_keygen_LDADD = version.o $(LIBOPTS_LDADD) ../libntp/libntp.a @LCRYPTO@
 ETAGS_ARGS = Makefile.am
 #EXTRA_DIST=	README TAGS
 EXTRA_DIST = ntp-keygen-opts.def ntp-keygen.1 ntp-keygen-opts.texi ntp-keygen-opts.menu
 BUILT_SOURCES = ntp-keygen-opts.c ntp-keygen-opts.h .deps-ver
 CLEANFILES = .deps-ver
+DISTCLEANFILES = .version version.c
 noinst_DATA = $(srcdir)/ntp-keygen-opts.texi $(srcdir)/ntp-keygen-opts.menu
 man_MANS = $(srcdir)/ntp-keygen.1
 run_ag = cd $(srcdir) &&	env PATH="$(abs_builddir):$(PATH)"	\
@@ -751,6 +753,7 @@ clean-generic:
 distclean-generic:
 	-test -z "$(CONFIG_CLEAN_FILES)" || rm -f $(CONFIG_CLEAN_FILES)
 	-test . = "$(srcdir)" || test -z "$(CONFIG_CLEAN_VPATH_FILES)" || rm -f $(CONFIG_CLEAN_VPATH_FILES)
+	-test -z "$(DISTCLEANFILES)" || rm -f $(DISTCLEANFILES)
 
 maintainer-clean-generic:
 	@echo "This command is intended for maintainers to use"
@@ -870,6 +873,13 @@ $(srcdir)/ntp-keygen-opts.texi: $(srcdir)/ntp-keygen-opts.def $(std_def_list)
 
 kern.o: kern.c
 	$(COMPILE) -DHAVE_TIMEX_H -c kern.c
+
+$(top_srcdir)/version :
+	cd $(top_srcdir) && $(MAKE) version
+
+version.o: $(ntpq_OBJECTS) ../libntp/libntp.a Makefile $(top_srcdir)/version
+	env CSET=`cat $(top_srcdir)/version` $(top_builddir)/scripts/mkver ntp-keygen
+	$(COMPILE) -c version.c
 
 install-exec-hook:
 	@case ${BINSUBDIR} in						\
