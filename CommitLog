@@ -1,3 +1,122 @@
+ChangeSet@1.2352, 2010-12-18 11:29:06+00:00, stenn@deacon.udel.edu +29 -0
+  NTP_4_2_7P96
+  TAG: NTP_4_2_7P96
+
+  ChangeLog@1.706, 2010-12-18 11:29:00+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P96
+
+  clockstuff/clktest-opts.c@1.20, 2010-12-18 11:29:00+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P96
+
+  clockstuff/clktest-opts.h@1.20, 2010-12-18 11:29:00+00:00, stenn@deacon.udel.edu +5 -5
+    NTP_4_2_7P96
+
+  ntpd/ntpd-opts.c@1.100, 2010-12-18 11:29:00+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P96
+
+  ntpd/ntpd-opts.h@1.100, 2010-12-18 11:29:00+00:00, stenn@deacon.udel.edu +5 -5
+    NTP_4_2_7P96
+
+  ntpd/ntpd-opts.texi@1.98, 2010-12-18 11:29:00+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P96
+
+  ntpd/ntpd.1@1.98, 2010-12-18 11:29:00+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P96
+
+  ntpdc/ntpdc-opts.c@1.97, 2010-12-18 11:29:01+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P96
+
+  ntpdc/ntpdc-opts.h@1.97, 2010-12-18 11:29:01+00:00, stenn@deacon.udel.edu +5 -5
+    NTP_4_2_7P96
+
+  ntpdc/ntpdc-opts.texi@1.97, 2010-12-18 11:29:01+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P96
+
+  ntpdc/ntpdc.1@1.97, 2010-12-18 11:29:01+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P96
+
+  ntpq/ntpq-opts.c@1.97, 2010-12-18 11:29:01+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P96
+
+  ntpq/ntpq-opts.h@1.97, 2010-12-18 11:29:01+00:00, stenn@deacon.udel.edu +5 -5
+    NTP_4_2_7P96
+
+  ntpq/ntpq-opts.texi@1.97, 2010-12-18 11:29:01+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P96
+
+  ntpq/ntpq.1@1.97, 2010-12-18 11:29:01+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P96
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.97, 2010-12-18 11:29:01+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P96
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.97, 2010-12-18 11:29:01+00:00, stenn@deacon.udel.edu +5 -5
+    NTP_4_2_7P96
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.97, 2010-12-18 11:29:02+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P96
+
+  ntpsnmpd/ntpsnmpd.1@1.97, 2010-12-18 11:29:02+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P96
+
+  packageinfo.sh@1.98, 2010-12-18 11:29:02+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P96
+
+  sntp/sntp-opts.c@1.97, 2010-12-18 11:29:02+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P96
+
+  sntp/sntp-opts.h@1.97, 2010-12-18 11:29:02+00:00, stenn@deacon.udel.edu +5 -5
+    NTP_4_2_7P96
+
+  sntp/sntp-opts.texi@1.97, 2010-12-18 11:29:02+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P96
+
+  sntp/sntp.1@1.97, 2010-12-18 11:29:02+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P96
+
+  sntp/sntp.html@1.97, 2010-12-18 11:29:02+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P96
+
+  util/ntp-keygen-opts.c@1.95, 2010-12-18 11:29:03+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P96
+
+  util/ntp-keygen-opts.h@1.95, 2010-12-18 11:29:03+00:00, stenn@deacon.udel.edu +5 -5
+    NTP_4_2_7P96
+
+  util/ntp-keygen-opts.texi@1.98, 2010-12-18 11:29:03+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P96
+
+  util/ntp-keygen.1@1.98, 2010-12-18 11:29:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P96
+
+ChangeSet@1.2351, 2010-12-18 01:07:11-05:00, stenn@deacon.udel.edu +2 -0
+  Documentation updates from Dave Mills
+
+  ChangeLog@1.705, 2010-12-18 01:07:03-05:00, stenn@deacon.udel.edu +1 -0
+    Documentation updates from Dave Mills
+
+  html/autokey.html@1.12, 2010-12-18 01:07:03-05:00, stenn@deacon.udel.edu +24 -3
+    Documentation updates from Dave Mills
+
+ChangeSet@1.2350, 2010-12-18 03:22:45+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  Log listening address as addr:port.
+  remove assoc_number < 0 check now that it is unsigned.
+
+  ntpd/ntp_io.c@1.337, 2010-12-18 03:22:44+00:00, davehart@shiny.ad.hartbrothers.com +2 -3
+    Log listening address as addr:port
+
+  ntpq/libntpq.c@1.10, 2010-12-18 03:22:44+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    remove assoc_number < 0 check now that it is unsigned.
+
+ChangeSet@1.2082.44.1, 2010-12-18 02:38:28+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  [Bug 1758] setsockopt IPV6_MULTICAST_IF with wrong ifindex.
+
+  ChangeLog@1.496.60.1, 2010-12-18 02:38:28+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1758] setsockopt IPV6_MULTICAST_IF with wrong ifindex.
+
+  ntpd/ntp_io.c@1.306.3.1, 2010-12-18 02:38:28+00:00, davehart@shiny.ad.hartbrothers.com +48 -72
+    [Bug 1758] setsockopt IPV6_MULTICAST_IF with wrong ifindex.
+
 ChangeSet@1.2348, 2010-12-17 04:38:38+00:00, stenn@deacon.udel.edu +29 -0
   NTP_4_2_7P95
   TAG: NTP_4_2_7P95
