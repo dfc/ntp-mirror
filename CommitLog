@@ -1,3 +1,242 @@
+ChangeSet@1.2356, 2010-12-19 09:38:06+00:00, stenn@deacon.udel.edu +29 -0
+  NTP_4_2_7P97
+  TAG: NTP_4_2_7P97
+
+  ChangeLog@1.709, 2010-12-19 09:38:02+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P97
+
+  clockstuff/clktest-opts.c@1.21, 2010-12-19 09:38:02+00:00, stenn@deacon.udel.edu +21 -16
+    NTP_4_2_7P97
+
+  clockstuff/clktest-opts.h@1.21, 2010-12-19 09:38:02+00:00, stenn@deacon.udel.edu +5 -5
+    NTP_4_2_7P97
+
+  ntpd/ntpd-opts.c@1.101, 2010-12-19 09:38:02+00:00, stenn@deacon.udel.edu +16 -11
+    NTP_4_2_7P97
+
+  ntpd/ntpd-opts.h@1.101, 2010-12-19 09:38:02+00:00, stenn@deacon.udel.edu +5 -5
+    NTP_4_2_7P97
+
+  ntpd/ntpd-opts.texi@1.99, 2010-12-19 09:38:02+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P97
+
+  ntpd/ntpd.1@1.99, 2010-12-19 09:38:02+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P97
+
+  ntpdc/ntpdc-opts.c@1.98, 2010-12-19 09:38:02+00:00, stenn@deacon.udel.edu +21 -16
+    NTP_4_2_7P97
+
+  ntpdc/ntpdc-opts.h@1.98, 2010-12-19 09:38:02+00:00, stenn@deacon.udel.edu +5 -5
+    NTP_4_2_7P97
+
+  ntpdc/ntpdc-opts.texi@1.98, 2010-12-19 09:38:03+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P97
+
+  ntpdc/ntpdc.1@1.98, 2010-12-19 09:38:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P97
+
+  ntpq/ntpq-opts.c@1.98, 2010-12-19 09:38:03+00:00, stenn@deacon.udel.edu +21 -16
+    NTP_4_2_7P97
+
+  ntpq/ntpq-opts.h@1.98, 2010-12-19 09:38:03+00:00, stenn@deacon.udel.edu +5 -5
+    NTP_4_2_7P97
+
+  ntpq/ntpq-opts.texi@1.98, 2010-12-19 09:38:03+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P97
+
+  ntpq/ntpq.1@1.98, 2010-12-19 09:38:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P97
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.98, 2010-12-19 09:38:03+00:00, stenn@deacon.udel.edu +20 -15
+    NTP_4_2_7P97
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.98, 2010-12-19 09:38:03+00:00, stenn@deacon.udel.edu +5 -5
+    NTP_4_2_7P97
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.98, 2010-12-19 09:38:03+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P97
+
+  ntpsnmpd/ntpsnmpd.1@1.98, 2010-12-19 09:38:03+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P97
+
+  packageinfo.sh@1.99, 2010-12-19 09:38:03+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P97
+
+  sntp/sntp-opts.c@1.98, 2010-12-19 09:38:04+00:00, stenn@deacon.udel.edu +23 -18
+    NTP_4_2_7P97
+
+  sntp/sntp-opts.h@1.98, 2010-12-19 09:38:04+00:00, stenn@deacon.udel.edu +5 -5
+    NTP_4_2_7P97
+
+  sntp/sntp-opts.texi@1.98, 2010-12-19 09:38:04+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P97
+
+  sntp/sntp.1@1.98, 2010-12-19 09:38:04+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P97
+
+  sntp/sntp.html@1.98, 2010-12-19 09:38:04+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P97
+
+  util/ntp-keygen-opts.c@1.96, 2010-12-19 09:38:04+00:00, stenn@deacon.udel.edu +21 -16
+    NTP_4_2_7P97
+
+  util/ntp-keygen-opts.h@1.96, 2010-12-19 09:38:04+00:00, stenn@deacon.udel.edu +5 -5
+    NTP_4_2_7P97
+
+  util/ntp-keygen-opts.texi@1.99, 2010-12-19 09:38:04+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P97
+
+  util/ntp-keygen.1@1.99, 2010-12-19 09:38:04+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P97
+
+ChangeSet@1.2355, 2010-12-19 00:00:18-05:00, stenn@deacon.udel.edu +2 -0
+  Documentation updates from Dave Mills
+
+  ChangeLog@1.708, 2010-12-19 00:00:05-05:00, stenn@deacon.udel.edu +1 -0
+    Documentation updates from Dave Mills
+
+  html/autokey.html@1.13, 2010-12-19 00:00:05-05:00, stenn@deacon.udel.edu +17 -29
+    Documentation updates from Dave Mills
+
+ChangeSet@1.2082.44.6, 2010-12-19 03:42:39+00:00, hart@psp-os1.ntp.org +5 -0
+  sntp AutoGen 5.11.6pre5 output
+
+  sntp/sntp-opts.c@1.117.29.1, 2010-12-19 03:42:25+00:00, hart@psp-os1.ntp.org +29 -30
+    sntp AutoGen 5.11.6pre5 output
+
+  sntp/sntp-opts.h@1.117.29.1, 2010-12-19 03:42:26+00:00, hart@psp-os1.ntp.org +13 -4
+    sntp AutoGen 5.11.6pre5 output
+
+  sntp/sntp-opts.texi@1.117.29.1, 2010-12-19 03:42:26+00:00, hart@psp-os1.ntp.org +85 -19
+    sntp AutoGen 5.11.6pre5 output
+
+  sntp/sntp.1@1.117.29.1, 2010-12-19 03:42:26+00:00, hart@psp-os1.ntp.org +8 -6
+    sntp AutoGen 5.11.6pre5 output
+
+  sntp/sntp.html@1.7.30.1, 2010-12-19 03:42:26+00:00, hart@psp-os1.ntp.org +79 -16
+    sntp AutoGen 5.11.6pre5 output
+
+ChangeSet@1.2082.44.5, 2010-12-19 01:10:44+00:00, hart@psp-os1.ntp.org +20 -0
+  AutoGen 5.11.6pre5 output
+
+  ntpd/ntpd-opts.c@1.248.31.1, 2010-12-19 01:10:23+00:00, hart@psp-os1.ntp.org +15 -10
+    AutoGen 5.11.6pre5 output
+
+  ntpd/ntpd-opts.h@1.248.31.1, 2010-12-19 01:10:23+00:00, hart@psp-os1.ntp.org +3 -3
+    AutoGen 5.11.6pre5 output
+
+  ntpd/ntpd-opts.texi@1.246.31.1, 2010-12-19 01:10:23+00:00, hart@psp-os1.ntp.org +61 -2
+    AutoGen 5.11.6pre5 output
+
+  ntpd/ntpd.1@1.246.31.1, 2010-12-19 01:10:23+00:00, hart@psp-os1.ntp.org +2 -2
+    AutoGen 5.11.6pre5 output
+
+  ntpdc/ntpdc-opts.c@1.244.31.1, 2010-12-19 01:10:23+00:00, hart@psp-os1.ntp.org +20 -15
+    AutoGen 5.11.6pre5 output
+
+  ntpdc/ntpdc-opts.h@1.244.31.1, 2010-12-19 01:10:23+00:00, hart@psp-os1.ntp.org +3 -3
+    AutoGen 5.11.6pre5 output
+
+  ntpdc/ntpdc-opts.texi@1.243.31.1, 2010-12-19 01:10:23+00:00, hart@psp-os1.ntp.org +66 -2
+    AutoGen 5.11.6pre5 output
+
+  ntpdc/ntpdc.1@1.243.31.1, 2010-12-19 01:10:23+00:00, hart@psp-os1.ntp.org +2 -2
+    AutoGen 5.11.6pre5 output
+
+  ntpq/ntpq-opts.c@1.245.31.1, 2010-12-19 01:10:23+00:00, hart@psp-os1.ntp.org +20 -15
+    AutoGen 5.11.6pre5 output
+
+  ntpq/ntpq-opts.h@1.245.31.1, 2010-12-19 01:10:23+00:00, hart@psp-os1.ntp.org +3 -3
+    AutoGen 5.11.6pre5 output
+
+  ntpq/ntpq-opts.texi@1.244.31.1, 2010-12-19 01:10:23+00:00, hart@psp-os1.ntp.org +51 -2
+    AutoGen 5.11.6pre5 output
+
+  ntpq/ntpq.1@1.244.31.1, 2010-12-19 01:10:24+00:00, hart@psp-os1.ntp.org +2 -2
+    AutoGen 5.11.6pre5 output
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.123.32.1, 2010-12-19 01:10:24+00:00, hart@psp-os1.ntp.org +19 -14
+    AutoGen 5.11.6pre5 output
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.123.32.1, 2010-12-19 01:10:24+00:00, hart@psp-os1.ntp.org +3 -3
+    AutoGen 5.11.6pre5 output
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.123.32.1, 2010-12-19 01:10:24+00:00, hart@psp-os1.ntp.org +1 -1
+    AutoGen 5.11.6pre5 output
+
+  ntpsnmpd/ntpsnmpd.1@1.122.32.1, 2010-12-19 01:10:24+00:00, hart@psp-os1.ntp.org +2 -2
+    AutoGen 5.11.6pre5 output
+
+  util/ntp-keygen-opts.c@1.247.31.1, 2010-12-19 01:10:24+00:00, hart@psp-os1.ntp.org +20 -15
+    AutoGen 5.11.6pre5 output
+
+  util/ntp-keygen-opts.h@1.247.31.1, 2010-12-19 01:10:24+00:00, hart@psp-os1.ntp.org +3 -3
+    AutoGen 5.11.6pre5 output
+
+  util/ntp-keygen-opts.texi@1.246.31.1, 2010-12-19 01:10:24+00:00, hart@psp-os1.ntp.org +45 -2
+    AutoGen 5.11.6pre5 output
+
+  util/ntp-keygen.1@1.246.31.1, 2010-12-19 01:10:24+00:00, hart@psp-os1.ntp.org +2 -2
+    AutoGen 5.11.6pre5 output
+
+ChangeSet@1.2082.44.4, 2010-12-19 00:59:46+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  [Bug 1760] ntpd Windows interpolation cannot be disabled.
+  Upgrade to libopts 34.0.9 from AutoGen 5.11.6pre5.
+    applies to prior cset merged from ntp-stable-libopts-upstream
+
+  ChangeLog@1.496.60.2, 2010-12-19 00:59:45+00:00, davehart@shiny.ad.hartbrothers.com +2 -1
+    [Bug 1760] ntpd Windows interpolation cannot be disabled.
+    Upgrade to libopts 34.0.9 from AutoGen 5.11.6pre5.
+    
+
+  ports/winnt/ntpd/nt_clockstuff.c@1.38.1.4, 2010-12-19 00:59:45+00:00, davehart@shiny.ad.hartbrothers.com +3 -1
+    [Bug 1760] ntpd Windows interpolation cannot be disabled.
+
+ChangeSet@1.2082.45.1, 2010-12-19 00:50:10+00:00, davehart@shiny.ad.hartbrothers.com +14 -0
+  libopts 34.0.9 (AutoGen 5.11.6pre5)
+
+  sntp/libopts/Makefile.am@1.8, 2010-12-19 00:49:43+00:00, davehart@shiny.ad.hartbrothers.com +5 -5
+    libopts 34.0.9 (AutoGen 5.11.6pre5)
+
+  sntp/libopts/ag-char-map.h@1.11, 2010-12-19 00:49:44+00:00, davehart@shiny.ad.hartbrothers.com +32 -32
+    libopts 34.0.9 (AutoGen 5.11.6pre5)
+
+  sntp/libopts/autoopts.c@1.8, 2010-12-19 00:49:44+00:00, davehart@shiny.ad.hartbrothers.com +21 -10
+    libopts 34.0.9 (AutoGen 5.11.6pre5)
+
+  sntp/libopts/autoopts.h@1.7, 2010-12-19 00:49:44+00:00, davehart@shiny.ad.hartbrothers.com +19 -18
+    libopts 34.0.9 (AutoGen 5.11.6pre5)
+
+  sntp/libopts/autoopts/options.h@1.10, 2010-12-19 00:49:44+00:00, davehart@shiny.ad.hartbrothers.com +11 -6
+    libopts 34.0.9 (AutoGen 5.11.6pre5)
+
+  sntp/libopts/autoopts/usage-txt.h@1.10, 2010-12-19 00:49:44+00:00, davehart@shiny.ad.hartbrothers.com +175 -168
+    libopts 34.0.9 (AutoGen 5.11.6pre5)
+
+  sntp/libopts/genshell.c@1.11, 2010-12-19 00:49:44+00:00, davehart@shiny.ad.hartbrothers.com +16 -11
+    libopts 34.0.9 (AutoGen 5.11.6pre5)
+
+  sntp/libopts/genshell.h@1.11, 2010-12-19 00:49:44+00:00, davehart@shiny.ad.hartbrothers.com +3 -3
+    libopts 34.0.9 (AutoGen 5.11.6pre5)
+
+  sntp/libopts/load.c@1.8, 2010-12-19 00:49:44+00:00, davehart@shiny.ad.hartbrothers.com +27 -31
+    libopts 34.0.9 (AutoGen 5.11.6pre5)
+
+  sntp/libopts/m4/libopts.m4@1.11.1.1, 2010-12-19 00:49:44+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    libopts 34.0.9 (AutoGen 5.11.6pre5)
+
+  sntp/libopts/proto.h@1.11, 2010-12-19 00:49:44+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    libopts 34.0.9 (AutoGen 5.11.6pre5)
+
+  sntp/libopts/usage.c@1.7, 2010-12-19 00:49:44+00:00, davehart@shiny.ad.hartbrothers.com +23 -24
+    libopts 34.0.9 (AutoGen 5.11.6pre5)
+
+  sntp/libopts/value-type.h@1.11, 2010-12-19 00:49:44+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    libopts 34.0.9 (AutoGen 5.11.6pre5)
+
+  sntp/libopts/xat-attribute.h@1.11, 2010-12-19 00:49:44+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    libopts 34.0.9 (AutoGen 5.11.6pre5)
+
 ChangeSet@1.2352, 2010-12-18 11:29:06+00:00, stenn@deacon.udel.edu +29 -0
   NTP_4_2_7P96
   TAG: NTP_4_2_7P96
@@ -88,6 +327,15 @@ ChangeSet@1.2352, 2010-12-18 11:29:06+00:00, stenn@deacon.udel.edu +29 -0
 
   util/ntp-keygen.1@1.98, 2010-12-18 11:29:03+00:00, stenn@deacon.udel.edu +2 -2
     NTP_4_2_7P96
+
+ChangeSet@1.2082.44.2, 2010-12-18 06:57:45+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+  [Bug 1458] Can not compile NTP on FreeBSD 4.7
+
+  libntp/ntp_lineedit.c@1.9, 2010-12-18 06:57:44+00:00, davehart@shiny.ad.hartbrothers.com +17 -10
+    [Bug 1458] Can not compile NTP on FreeBSD 4.7
+
+  m4/ntp_lineeditlibs.m4@1.10, 2010-12-18 06:57:44+00:00, davehart@shiny.ad.hartbrothers.com +26 -0
+    [Bug 1458] Can not compile NTP on FreeBSD 4.7
 
 ChangeSet@1.2351, 2010-12-18 01:07:11-05:00, stenn@deacon.udel.edu +2 -0
   Documentation updates from Dave Mills
