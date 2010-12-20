@@ -244,7 +244,7 @@ AUTOMAKE_OPTIONS =
 noinst_PROGRAMS = @PROPDELAY@ @CHUTEST@ @CLKTEST@
 BUILT_SOURCES = clktest-opts.c clktest-opts.h .deps-ver
 EXTRA_DIST = clktest-opts.def
-clktest_SOURCES = clktest.c clktest-opts.c
+clktest_SOURCES = clktest.c clktest-opts.c clktest-opts.h
 INCLUDES = -I$(top_srcdir)/include -I$(top_srcdir)/lib/isc/include \
 	-I$(top_srcdir)/lib/isc/nothreads/include \
 	-I$(top_srcdir)/lib/isc/unix/include $(LIBOPTS_CFLAGS)

@@ -1,3 +1,155 @@
+ChangeSet@1.2361, 2010-12-20 09:04:22+00:00, stenn@deacon.udel.edu +29 -0
+  NTP_4_2_7P98
+  TAG: NTP_4_2_7P98
+
+  ChangeLog@1.713, 2010-12-20 09:04:18+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P98
+
+  clockstuff/clktest-opts.c@1.22, 2010-12-20 09:04:18+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P98
+
+  clockstuff/clktest-opts.h@1.22, 2010-12-20 09:04:18+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P98
+
+  ntpd/ntpd-opts.c@1.102, 2010-12-20 09:04:18+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P98
+
+  ntpd/ntpd-opts.h@1.102, 2010-12-20 09:04:18+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P98
+
+  ntpd/ntpd-opts.texi@1.100, 2010-12-20 09:04:18+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P98
+
+  ntpd/ntpd.1@1.100, 2010-12-20 09:04:18+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P98
+
+  ntpdc/ntpdc-opts.c@1.99, 2010-12-20 09:04:18+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P98
+
+  ntpdc/ntpdc-opts.h@1.99, 2010-12-20 09:04:18+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P98
+
+  ntpdc/ntpdc-opts.texi@1.99, 2010-12-20 09:04:18+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P98
+
+  ntpdc/ntpdc.1@1.99, 2010-12-20 09:04:18+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P98
+
+  ntpq/ntpq-opts.c@1.99, 2010-12-20 09:04:18+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P98
+
+  ntpq/ntpq-opts.h@1.99, 2010-12-20 09:04:19+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P98
+
+  ntpq/ntpq-opts.texi@1.99, 2010-12-20 09:04:19+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P98
+
+  ntpq/ntpq.1@1.99, 2010-12-20 09:04:19+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P98
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.99, 2010-12-20 09:04:19+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P98
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.99, 2010-12-20 09:04:19+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P98
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.99, 2010-12-20 09:04:19+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P98
+
+  ntpsnmpd/ntpsnmpd.1@1.99, 2010-12-20 09:04:19+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P98
+
+  packageinfo.sh@1.100, 2010-12-20 09:04:19+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P98
+
+  sntp/sntp-opts.c@1.99, 2010-12-20 09:04:19+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P98
+
+  sntp/sntp-opts.h@1.99, 2010-12-20 09:04:19+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P98
+
+  sntp/sntp-opts.texi@1.99, 2010-12-20 09:04:19+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P98
+
+  sntp/sntp.1@1.99, 2010-12-20 09:04:19+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P98
+
+  sntp/sntp.html@1.99, 2010-12-20 09:04:19+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P98
+
+  util/ntp-keygen-opts.c@1.97, 2010-12-20 09:04:19+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P98
+
+  util/ntp-keygen-opts.h@1.97, 2010-12-20 09:04:19+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P98
+
+  util/ntp-keygen-opts.texi@1.100, 2010-12-20 09:04:19+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P98
+
+  util/ntp-keygen.1@1.100, 2010-12-20 09:04:19+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P98
+
+ChangeSet@1.2360, 2010-12-20 03:50:47-05:00, stenn@deacon.udel.edu +2 -0
+  Documentation updates from Dave Mills
+
+  ChangeLog@1.712, 2010-12-20 03:50:44-05:00, stenn@deacon.udel.edu +1 -0
+    Documentation updates from Dave Mills
+
+  html/autokey.html@1.14, 2010-12-20 03:50:44-05:00, stenn@deacon.udel.edu +23 -17
+    Documentation updates from Dave Mills
+
+ChangeSet@1.2359, 2010-12-20 08:24:12+00:00, hart@psp-fb1.ntp.org +2 -0
+  ntp_parser.c:
+    Bison output
+  complete.conf:
+    add top-level ident directive
+
+  ntpd/complete.conf@1.14, 2010-12-20 08:24:09+00:00, hart@psp-fb1.ntp.org +1 -0
+    add top-level ident directive
+
+  ntpd/ntp_parser.c@1.74, 2010-12-20 08:24:09+00:00, hart@psp-fb1.ntp.org +393 -381
+    Bison output
+
+ChangeSet@1.2358, 2010-12-20 08:12:32+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+  [Bug 1761] clockstuff/clktest-opts.h omitted from tarball.
+
+  ChangeLog@1.711, 2010-12-20 08:12:31+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    [Bug 1761] clockstuff/clktest-opts.h omitted from tarball.
+
+  clockstuff/Makefile.am@1.14, 2010-12-20 08:12:32+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    [Bug 1761] clockstuff/clktest-opts.h omitted from tarball.
+
+  ntpd/ntp_config.c@1.279, 2010-12-20 08:12:32+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+    add "ident <group>" top-level directive at DLM request.
+
+  ntpd/ntp_parser.y@1.68, 2010-12-20 08:12:32+00:00, davehart@shiny.ad.hartbrothers.com +2 -1
+    add "ident <group>" top-level directive at DLM request.
+
+ChangeSet@1.2082.44.8, 2010-12-20 07:54:12+00:00, davehart@shiny.ad.hartbrothers.com +6 -0
+  [Bug 1458] Can not compile NTP on FreeBSD 4.7.
+    -- applies to prior lineedit cset which overlooked ChangeLog
+  [Bug 1762] manycastclient solicitation responses interfere.
+
+  ChangeLog@1.496.60.3, 2010-12-20 07:54:11+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+    [Bug 1458] Can not compile NTP on FreeBSD 4.7.
+      -- applies to prior lineedit cset which overlooked ChangeLog
+    [Bug 1762] manycastclient solicitation responses interfere.
+
+  include/ntp.h@1.168.1.5, 2010-12-20 07:54:11+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    struct interface -> endpt
+
+  include/ntpd.h@1.137.2.4, 2010-12-20 07:54:11+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    [Bug 1762] manycastclient solicitation responses interfere.
+
+  include/recvbuff.h@1.19.1.1, 2010-12-20 07:54:11+00:00, davehart@shiny.ad.hartbrothers.com +1 -1
+    struct interface -> endpt
+
+  ntpd/ntp_peer.c@1.126.1.3, 2010-12-20 07:54:11+00:00, davehart@shiny.ad.hartbrothers.com +33 -13
+    [Bug 1762] manycastclient solicitation responses interfere.
+
+  ntpd/ntp_proto.c@1.297.2.2, 2010-12-20 07:54:11+00:00, davehart@shiny.ad.hartbrothers.com +1 -2
+    [Bug 1762] manycastclient solicitation responses interfere.
+
 ChangeSet@1.2356, 2010-12-19 09:38:06+00:00, stenn@deacon.udel.edu +29 -0
   NTP_4_2_7P97
   TAG: NTP_4_2_7P97
@@ -88,6 +240,12 @@ ChangeSet@1.2356, 2010-12-19 09:38:06+00:00, stenn@deacon.udel.edu +29 -0
 
   util/ntp-keygen.1@1.99, 2010-12-19 09:38:04+00:00, stenn@deacon.udel.edu +2 -2
     NTP_4_2_7P97
+
+ChangeSet@1.2082.44.7, 2010-12-19 00:04:39-05:00, stenn@deacon.udel.edu +1 -0
+  Remove unused libntp/net.c.bak file
+
+  BitKeeper/deleted/.del-net.c.bak~d1c71b19@1.3, 2010-12-19 00:03:17-05:00, stenn@deacon.udel.edu +0 -0
+    Delete: libntp/net.c.bak
 
 ChangeSet@1.2355, 2010-12-19 00:00:18-05:00, stenn@deacon.udel.edu +2 -0
   Documentation updates from Dave Mills

@@ -1,15 +1,15 @@
 /*  
- *  EDIT THIS FILE WITH CAUTION  (sntp-opts.h)
+ *  EDIT THIS FILE WITH CAUTION  (clktest-opts.h)
  *  
- *  It has been AutoGen-ed  December 20, 2010 at 09:02:34 AM by AutoGen 5.11.6pre5
- *  From the definitions    sntp-opts.def
+ *  It has been AutoGen-ed  December 20, 2010 at 09:03:54 AM by AutoGen 5.11.6pre5
+ *  From the definitions    clktest-opts.def
  *  and the template file   options
  *
  * Generated from AutoOpts 34:0:9 templates.
  *
  *  AutoOpts is a copyrighted work.  This header file is not encumbered
  *  by AutoOpts licensing, but is provided under the licensing terms chosen
- *  by the sntp author or copyright holder.  AutoOpts is
+ *  by the clktest author or copyright holder.  AutoOpts is
  *  licensed under the terms of the LGPL.  The redistributable library
  *  (``libopts'') is licensed under the terms of either the LGPL or, at the
  *  users discretion, the BSD license.  See the AutoOpts and/or libopts sources
@@ -17,18 +17,18 @@
  *
  * This source file is copyrighted and licensed under the following terms:
  *
- * sntp copyright (c) 1970-2010 David L. Mills and/or others - all rights reserved
+ * clktest copyright (c) 1970-2010 David L. Mills and/or others - all rights reserved
  *
  * see html/copyright.html
  */
 /*
  *  This file contains the programmatic interface to the Automated
- *  Options generated for the sntp program.
+ *  Options generated for the clktest program.
  *  These macros are documented in the AutoGen info file in the
  *  "AutoOpts" chapter.  Please refer to that doc for usage help.
  */
-#ifndef AUTOOPTS_SNTP_OPTS_H_GUARD
-#define AUTOOPTS_SNTP_OPTS_H_GUARD 1
+#ifndef AUTOOPTS_CLKTEST_OPTS_H_GUARD
+#define AUTOOPTS_CLKTEST_OPTS_H_GUARD 1
 #include "config.h"
 #include <autoopts/options.h>
 
@@ -50,35 +50,28 @@
  *  Enumeration of each option:
  */
 typedef enum {
-    INDEX_OPT_IPV4            =  0,
-    INDEX_OPT_IPV6            =  1,
-    INDEX_OPT_NORMALVERBOSE   =  2,
-    INDEX_OPT_KOD             =  3,
-    INDEX_OPT_SYSLOG          =  4,
-    INDEX_OPT_FILELOG         =  5,
-    INDEX_OPT_SETTOD          =  6,
-    INDEX_OPT_ADJTIME         =  7,
-    INDEX_OPT_BROADCAST       =  8,
-    INDEX_OPT_TIMEOUT         =  9,
-    INDEX_OPT_AUTHENTICATION  = 10,
-    INDEX_OPT_KEYFILE         = 11,
-    INDEX_OPT_VERSION         = 12,
-    INDEX_OPT_HELP            = 13,
-    INDEX_OPT_MORE_HELP       = 14,
-    INDEX_OPT_SAVE_OPTS       = 15,
-    INDEX_OPT_LOAD_OPTS       = 16
+    INDEX_OPT_SPEED       =  0,
+    INDEX_OPT_DEBUG       =  1,
+    INDEX_OPT_CRMOD       =  2,
+    INDEX_OPT_COMMAND     =  3,
+    INDEX_OPT_TIMEOUT     =  4,
+    INDEX_OPT_VERSION     =  5,
+    INDEX_OPT_HELP        =  6,
+    INDEX_OPT_MORE_HELP   =  7,
+    INDEX_OPT_SAVE_OPTS   =  8,
+    INDEX_OPT_LOAD_OPTS   =  9
 } teOptIndex;
 
-#define OPTION_CT    17
-#define SNTP_VERSION       "4.2.7p98"
-#define SNTP_FULL_VERSION  "sntp - standard SNTP program - Ver. 4.2.7p98"
+#define OPTION_CT    10
+#define CLKTEST_VERSION       "4.2.7p98"
+#define CLKTEST_FULL_VERSION  "clktest - test the clock line discipline - Ver. 4.2.7p98"
 
 /*
  *  Interface defines for all options.  Replace "n" with the UPPER_CASED
  *  option name (as in the teOptIndex enumeration above).
- *  e.g. HAVE_OPT(IPV4)
+ *  e.g. HAVE_OPT(SPEED)
  */
-#define         DESC(n) (sntpOptions.pOptDesc[INDEX_OPT_## n])
+#define         DESC(n) (clktestOptions.pOptDesc[INDEX_OPT_## n])
 #define     HAVE_OPT(n) (! UNUSED_OPT(& DESC(n)))
 #define      OPT_ARG(n) (DESC(n).optArg.argString)
 #define    STATE_OPT(n) (DESC(n).fOptState & OPTST_SET_MASK)
@@ -96,100 +89,56 @@ typedef enum {
 
 /* * * * * *
  *
- *  Enumeration of sntp exit codes
+ *  Enumeration of clktest exit codes
  */
 typedef enum {
-    SNTP_EXIT_SUCCESS = 0,
-    SNTP_EXIT_FAILURE = 1
-} sntp_exit_code_t;
+    CLKTEST_EXIT_SUCCESS = 0,
+    CLKTEST_EXIT_FAILURE = 1
+} clktest_exit_code_t;
 
 /*
  *  Make sure there are no #define name conflicts with the option names
  */
 #ifndef     NO_OPTION_NAME_WARNINGS
-# ifdef    IPV4
-#  warning undefining IPV4 due to option name conflict
-#  undef   IPV4
+# ifdef    SPEED
+#  warning undefining SPEED due to option name conflict
+#  undef   SPEED
 # endif
-# ifdef    IPV6
-#  warning undefining IPV6 due to option name conflict
-#  undef   IPV6
+# ifdef    DEBUG
+#  warning undefining DEBUG due to option name conflict
+#  undef   DEBUG
 # endif
-# ifdef    NORMALVERBOSE
-#  warning undefining NORMALVERBOSE due to option name conflict
-#  undef   NORMALVERBOSE
+# ifdef    CRMOD
+#  warning undefining CRMOD due to option name conflict
+#  undef   CRMOD
 # endif
-# ifdef    KOD
-#  warning undefining KOD due to option name conflict
-#  undef   KOD
-# endif
-# ifdef    SYSLOG
-#  warning undefining SYSLOG due to option name conflict
-#  undef   SYSLOG
-# endif
-# ifdef    FILELOG
-#  warning undefining FILELOG due to option name conflict
-#  undef   FILELOG
-# endif
-# ifdef    SETTOD
-#  warning undefining SETTOD due to option name conflict
-#  undef   SETTOD
-# endif
-# ifdef    ADJTIME
-#  warning undefining ADJTIME due to option name conflict
-#  undef   ADJTIME
-# endif
-# ifdef    BROADCAST
-#  warning undefining BROADCAST due to option name conflict
-#  undef   BROADCAST
+# ifdef    COMMAND
+#  warning undefining COMMAND due to option name conflict
+#  undef   COMMAND
 # endif
 # ifdef    TIMEOUT
 #  warning undefining TIMEOUT due to option name conflict
 #  undef   TIMEOUT
 # endif
-# ifdef    AUTHENTICATION
-#  warning undefining AUTHENTICATION due to option name conflict
-#  undef   AUTHENTICATION
-# endif
-# ifdef    KEYFILE
-#  warning undefining KEYFILE due to option name conflict
-#  undef   KEYFILE
-# endif
 #else  /* NO_OPTION_NAME_WARNINGS */
-# undef IPV4
-# undef IPV6
-# undef NORMALVERBOSE
-# undef KOD
-# undef SYSLOG
-# undef FILELOG
-# undef SETTOD
-# undef ADJTIME
-# undef BROADCAST
+# undef SPEED
+# undef DEBUG
+# undef CRMOD
+# undef COMMAND
 # undef TIMEOUT
-# undef AUTHENTICATION
-# undef KEYFILE
 #endif  /*  NO_OPTION_NAME_WARNINGS */
 
 /* * * * * *
  *
  *  Interface defines for specific options.
  */
-#define VALUE_OPT_IPV4           '4'
-#define VALUE_OPT_IPV6           '6'
-#define VALUE_OPT_NORMALVERBOSE  'd'
-#define VALUE_OPT_KOD            'K'
-#define VALUE_OPT_SYSLOG         'p'
-#define VALUE_OPT_FILELOG        'l'
-#define VALUE_OPT_SETTOD         's'
-#define VALUE_OPT_ADJTIME        'j'
-#define VALUE_OPT_BROADCAST      'b'
+#define VALUE_OPT_SPEED          'b'
+#define VALUE_OPT_DEBUG          'd'
+#define VALUE_OPT_CRMOD          'f'
+#define VALUE_OPT_COMMAND        's'
 #define VALUE_OPT_TIMEOUT        't'
 
 #define OPT_VALUE_TIMEOUT        (DESC(TIMEOUT).optArg.argInt)
-#define VALUE_OPT_AUTHENTICATION 'a'
-
-#define OPT_VALUE_AUTHENTICATION (DESC(AUTHENTICATION).optArg.argInt)
-#define VALUE_OPT_KEYFILE        'k'
 #define VALUE_OPT_HELP          '?'
 #define VALUE_OPT_MORE_HELP     '!'
 #define VALUE_OPT_VERSION       INDEX_OPT_VERSION
@@ -202,24 +151,24 @@ typedef enum {
 /*
  *  Interface defines not associated with particular options
  */
-#define ERRSKIP_OPTERR  STMTS(sntpOptions.fOptSet &= ~OPTPROC_ERRSTOP)
-#define ERRSTOP_OPTERR  STMTS(sntpOptions.fOptSet |= OPTPROC_ERRSTOP)
+#define ERRSKIP_OPTERR  STMTS(clktestOptions.fOptSet &= ~OPTPROC_ERRSTOP)
+#define ERRSTOP_OPTERR  STMTS(clktestOptions.fOptSet |= OPTPROC_ERRSTOP)
 #define RESTART_OPT(n)  STMTS( \
-                sntpOptions.curOptIdx = (n); \
-                sntpOptions.pzCurOpt  = NULL)
+                clktestOptions.curOptIdx = (n); \
+                clktestOptions.pzCurOpt  = NULL)
 #define START_OPT       RESTART_OPT(1)
-#define USAGE(c)        (*sntpOptions.pUsageProc)(&sntpOptions, c)
+#define USAGE(c)        (*clktestOptions.pUsageProc)(&clktestOptions, c)
 /* extracted from /usr/local/gnu/share/autogen/opthead.tpl near line 435 */
 
 /* * * * * *
  *
- *  Declare the sntp option descriptor.
+ *  Declare the clktest option descriptor.
  */
 #ifdef  __cplusplus
 extern "C" {
 #endif
 
-extern tOptions   sntpOptions;
+extern tOptions   clktestOptions;
 
 #if defined(ENABLE_NLS)
 # ifndef _
@@ -231,14 +180,14 @@ extern tOptions   sntpOptions;
 #   define _(s)  aoGetsText(s)
 # endif /* _() */
 
-# define OPT_NO_XLAT_CFG_NAMES  STMTS(sntpOptions.fOptSet |= \
+# define OPT_NO_XLAT_CFG_NAMES  STMTS(clktestOptions.fOptSet |= \
                                     OPTPROC_NXLAT_OPT_CFG;)
-# define OPT_NO_XLAT_OPT_NAMES  STMTS(sntpOptions.fOptSet |= \
+# define OPT_NO_XLAT_OPT_NAMES  STMTS(clktestOptions.fOptSet |= \
                                     OPTPROC_NXLAT_OPT|OPTPROC_NXLAT_OPT_CFG;)
 
-# define OPT_XLAT_CFG_NAMES     STMTS(sntpOptions.fOptSet &= \
+# define OPT_XLAT_CFG_NAMES     STMTS(clktestOptions.fOptSet &= \
                                   ~(OPTPROC_NXLAT_OPT|OPTPROC_NXLAT_OPT_CFG);)
-# define OPT_XLAT_OPT_NAMES     STMTS(sntpOptions.fOptSet &= \
+# define OPT_XLAT_OPT_NAMES     STMTS(clktestOptions.fOptSet &= \
                                   ~OPTPROC_NXLAT_OPT;)
 
 #else   /* ENABLE_NLS */
@@ -256,5 +205,5 @@ extern tOptions   sntpOptions;
 #ifdef  __cplusplus
 }
 #endif
-#endif /* AUTOOPTS_SNTP_OPTS_H_GUARD */
-/* sntp-opts.h ends here */
+#endif /* AUTOOPTS_CLKTEST_OPTS_H_GUARD */
+/* clktest-opts.h ends here */
