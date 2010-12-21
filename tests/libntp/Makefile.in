@@ -62,13 +62,13 @@ am_tests_OBJECTS = tests_main.$(OBJEXT) libntptest.$(OBJEXT) \
 	caljulian.$(OBJEXT) caltontp.$(OBJEXT) calyearstart.$(OBJEXT) \
 	clocktime.$(OBJEXT) decodenetnum.$(OBJEXT) hextoint.$(OBJEXT) \
 	hextolfp.$(OBJEXT) humandate.$(OBJEXT) inttoa.$(OBJEXT) \
-	lfptostr.$(OBJEXT) modetoa.$(OBJEXT) netof.$(OBJEXT) \
-	numtoa.$(OBJEXT) numtohost.$(OBJEXT) octtoint.$(OBJEXT) \
-	prettydate.$(OBJEXT) recvbuff.$(OBJEXT) refnumtoa.$(OBJEXT) \
-	sfptostr.$(OBJEXT) socktoa.$(OBJEXT) ssl_init.$(OBJEXT) \
-	statestr.$(OBJEXT) strtolfp.$(OBJEXT) tsftomsu.$(OBJEXT) \
-	tstotv.$(OBJEXT) tvtots.$(OBJEXT) uglydate.$(OBJEXT) \
-	uinttoa.$(OBJEXT) ymd2yd.$(OBJEXT)
+	lfptostr.$(OBJEXT) modetoa.$(OBJEXT) msyslog.$(OBJEXT) \
+	netof.$(OBJEXT) numtoa.$(OBJEXT) numtohost.$(OBJEXT) \
+	octtoint.$(OBJEXT) prettydate.$(OBJEXT) recvbuff.$(OBJEXT) \
+	refnumtoa.$(OBJEXT) sfptostr.$(OBJEXT) socktoa.$(OBJEXT) \
+	ssl_init.$(OBJEXT) statestr.$(OBJEXT) strtolfp.$(OBJEXT) \
+	tsftomsu.$(OBJEXT) tstotv.$(OBJEXT) tvtots.$(OBJEXT) \
+	uglydate.$(OBJEXT) uinttoa.$(OBJEXT) ymd2yd.$(OBJEXT)
 tests_OBJECTS = $(am_tests_OBJECTS)
 tests_LDADD = $(LDADD)
 tests_DEPENDENCIES = @top_builddir@/libntp/libntp.a
@@ -271,6 +271,7 @@ tests_SOURCES = $(top_srcdir)/sntp/tests_main.cpp	\
 		inttoa.cpp		\
 		lfptostr.cpp		\
 		modetoa.cpp		\
+		msyslog.cpp		\
 		netof.cpp		\
 		numtoa.cpp		\
 		numtohost.cpp		\
@@ -372,6 +373,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/lfptostr.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libntptest.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/modetoa.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/msyslog.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/netof.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/numtoa.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/numtohost.Po@am__quote@
