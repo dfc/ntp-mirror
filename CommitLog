@@ -1,3 +1,100 @@
+ChangeSet@1.2369, 2010-12-21 16:21:21-05:00, stenn@deacon.udel.edu +1 -0
+  Documentation updates for sntp
+
+  ChangeLog@1.718, 2010-12-21 16:21:11-05:00, stenn@deacon.udel.edu +2 -0
+    Documentation updates for sntp
+
+ChangeSet@1.2368, 2010-12-21 11:27:17+00:00, stenn@deacon.udel.edu +29 -0
+  NTP_4_2_7P100
+  TAG: NTP_4_2_7P100
+
+  ChangeLog@1.717, 2010-12-21 11:19:08+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P100
+
+  clockstuff/clktest-opts.c@1.24, 2010-12-21 11:19:23+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P100
+
+  clockstuff/clktest-opts.h@1.24, 2010-12-21 11:19:31+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P100
+
+  ntpd/ntpd-opts.c@1.104, 2010-12-21 11:19:33+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P100
+
+  ntpd/ntpd-opts.h@1.104, 2010-12-21 11:19:52+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P100
+
+  ntpd/ntpd-opts.texi@1.102, 2010-12-21 11:20:23+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P100
+
+  ntpd/ntpd.1@1.102, 2010-12-21 11:20:26+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P100
+
+  ntpdc/ntpdc-opts.c@1.101, 2010-12-21 11:20:58+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P100
+
+  ntpdc/ntpdc-opts.h@1.101, 2010-12-21 11:21:17+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P100
+
+  ntpdc/ntpdc-opts.texi@1.101, 2010-12-21 11:21:47+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P100
+
+  ntpdc/ntpdc.1@1.101, 2010-12-21 11:22:18+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P100
+
+  ntpq/ntpq-opts.c@1.101, 2010-12-21 11:22:33+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P100
+
+  ntpq/ntpq-opts.h@1.101, 2010-12-21 11:22:48+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P100
+
+  ntpq/ntpq-opts.texi@1.101, 2010-12-21 11:22:56+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P100
+
+  ntpq/ntpq.1@1.101, 2010-12-21 11:22:57+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P100
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.101, 2010-12-21 11:23:12+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P100
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.101, 2010-12-21 11:23:18+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P100
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.101, 2010-12-21 11:23:49+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P100
+
+  ntpsnmpd/ntpsnmpd.1@1.101, 2010-12-21 11:24:04+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P100
+
+  packageinfo.sh@1.102, 2010-12-21 11:24:18+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P100
+
+  sntp/sntp-opts.c@1.101, 2010-12-21 11:24:48+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P100
+
+  sntp/sntp-opts.h@1.101, 2010-12-21 11:25:19+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P100
+
+  sntp/sntp-opts.texi@1.101, 2010-12-21 11:25:41+00:00, stenn@deacon.udel.edu +5 -4
+    NTP_4_2_7P100
+
+  sntp/sntp.1@1.101, 2010-12-21 11:25:48+00:00, stenn@deacon.udel.edu +8 -4
+    NTP_4_2_7P100
+
+  sntp/sntp.html@1.101, 2010-12-21 11:26:18+00:00, stenn@deacon.udel.edu +5 -4
+    NTP_4_2_7P100
+
+  util/ntp-keygen-opts.c@1.99, 2010-12-21 11:26:22+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P100
+
+  util/ntp-keygen-opts.h@1.99, 2010-12-21 11:26:23+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P100
+
+  util/ntp-keygen-opts.texi@1.102, 2010-12-21 11:26:32+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P100
+
+  util/ntp-keygen.1@1.102, 2010-12-21 11:26:49+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P100
+
 ChangeSet@1.2366, 2010-12-21 09:36:22+00:00, stenn@deacon.udel.edu +29 -0
   NTP_4_2_7P99
   TAG: NTP_4_2_7P99
@@ -89,7 +186,7 @@ ChangeSet@1.2366, 2010-12-21 09:36:22+00:00, stenn@deacon.udel.edu +29 -0
   util/ntp-keygen.1@1.101, 2010-12-21 09:36:20+00:00, stenn@deacon.udel.edu +2 -2
     NTP_4_2_7P99
 
-ChangeSet@1.2082.4.184, 2010-12-21 07:15:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+ChangeSet@1.2082.46.1, 2010-12-21 07:15:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
   handle % at end of string correctly in format_errmsg().
   do not force trailing newline in m[v]snprintf().
 
@@ -120,6 +217,14 @@ ChangeSet@1.2364, 2010-12-21 06:58:01+00:00, davehart@shiny.ad.hartbrothers.com 
     unit tests for msnprintf() and format_errmsg()
 
   tests/libntp/msyslog.cpp@1.0, 2010-12-21 06:58:01+00:00, davehart@shiny.ad.hartbrothers.com +0 -0
+
+ChangeSet@1.2082.4.184, 2010-12-20 18:41:39-08:00, stenn@stenn.ntp.org +2 -0
+  [Bug 1743] update SNTP time reporting documentation
+
+  BitKeeper/etc/attr@1.2.1.2, 2010-12-20 18:41:39-08:00, stenn@stenn.ntp.org +1 -1
+
+  sntp/sntp-opts.def@1.19, 2010-12-20 18:41:18-08:00, stenn@stenn.ntp.org +10 -5
+    [Bug 1743] update SNTP time reporting documentation
 
 ChangeSet@1.2363, 2010-12-20 18:13:16-05:00, stenn@deacon.udel.edu +2 -0
   Documentation updates from Dave Mills
