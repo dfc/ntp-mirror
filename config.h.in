@@ -290,12 +290,6 @@
 /* number of args to el_init() */
 #undef EL_INIT_ARGS
 
-/* fopen(3) accepts a 'b' in the mode flag */
-#undef FOPEN_BINARY_FLAG
-
-/* fopen(3) accepts a 't' in the mode flag */
-#undef FOPEN_TEXT_FLAG
-
 /* force ntpdate to step the clock if !defined(STEP_SLEW) ? */
 #undef FORCE_NTPDATE_STEP
 
@@ -335,9 +329,6 @@
 
 /* Define to 1 if you have the `daemon' function. */
 #undef HAVE_DAEMON
-
-/* Define this if /dev/zero is readable device */
-#undef HAVE_DEV_ZERO
 
 /* Define to 1 if you have the <dirent.h> header file, and it defines `DIR'.
    */
@@ -571,9 +562,6 @@
 /* Do we want support for Samba's signing daemon? */
 #undef HAVE_NTP_SIGND
 
-/* Define this if pathfind(3) works */
-#undef HAVE_PATHFIND
-
 /* Define to 1 if the system has the type `pid_t'. */
 #undef HAVE_PID_T
 
@@ -606,9 +594,6 @@
 
 /* Define to 1 if you have the `readlink' function. */
 #undef HAVE_READLINK
-
-/* Define this if we have a functional realpath(3C) */
-#undef HAVE_REALPATH
 
 /* Define to 1 if you have the `recvmsg' function. */
 #undef HAVE_RECVMSG
@@ -711,9 +696,6 @@
 
 /* Define to 1 if you have the `strerror' function. */
 #undef HAVE_STRERROR
-
-/* Define this if strftime() works */
-#undef HAVE_STRFTIME
 
 /* Define to 1 if you have the <strings.h> header file. */
 #undef HAVE_STRINGS_H
@@ -1171,9 +1153,6 @@
 /* Define to 1 if your C compiler doesn't accept -c and -o together. */
 #undef NO_MINUS_C_MINUS_O
 
-/* Define this if optional arguments are disallowed */
-#undef NO_OPTIONAL_OPT_ARGS
-
 /* Should we avoid #warning on option name collisions? */
 #undef NO_OPTION_NAME_WARNINGS
 
@@ -1248,9 +1227,6 @@
 
 /* Basic refclock support? */
 #undef REFCLOCK
-
-/* name of regex header file */
-#undef REGEX_HEADER
 
 /* Do we want the ReliantUNIX clock hacks? */
 #undef RELIANTUNIX_CLOCK
@@ -1377,9 +1353,6 @@ typedef unsigned int	uintptr_t;
 
 /* configure --enable-ipv6 */
 #undef WANT_IPV6
-
-/* Define this if a working libregex can be found */
-#undef WITH_LIBREGEX
 
 /* Define WORDS_BIGENDIAN to 1 if your processor stores words with the most
    significant byte first (like Motorola and SPARC, unlike Intel). */
