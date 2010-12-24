@@ -1,3 +1,10 @@
+(4.2.7p103) 2010/12/24 Released by Harlan Stenn <stenn@ntp.org>
+* Add ntpq pstats command similar to ntpdc's.
+* Remove ntpq pstatus command, rv/readvar does the same and more.
+* Documentation updates from Dave Mills.
+(4.2.7p102) 2010/12/23 Released by Harlan Stenn <stenn@ntp.org>
+* Allow ntpq &1 associd use without preceding association-fetching.
+* Documentation updates from Dave Mills.
 (4.2.7p101) 2010/12/22 Released by Harlan Stenn <stenn@ntp.org>
 * from 4.2.6p3-RC12: Upgrade to libopts 34.0.9 from AutoGen 5.11.6pre7.
 * from 4.2.6p3-RC12: Relax minimum Automake version to 1.10 with updated

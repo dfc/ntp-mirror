@@ -26,6 +26,7 @@
 #include "ntp_calendar.h"
 #include "ntp_select.h"
 #include "ntp_assert.h"
+#include "lib_strbuf.h"
 #include "ntp_lineedit.h"
 #include "ntp_debug.h"
 #ifdef OPENSSL
@@ -253,7 +254,7 @@ static	int	openhost	(const char *);
 
 static	int	sendpkt		(void *, size_t);
 static	int	getresponse	(int, int, u_short *, int *, const char **, int);
-static	int	sendrequest	(int, associd_t, int, int, char *);
+static	int	sendrequest	(int, associd_t, int, int, const char *);
 static	char *	tstflags	(u_long);
 #ifndef BUILD_AS_LIB
 static	void	getcmds		(void);
@@ -262,9 +263,10 @@ static	RETSIGTYPE abortcmd	(int);
 #endif	/* SYS_WINNT */
 static	void	docmd		(const char *);
 static	void	tokenize	(const char *, char **, int *);
-static	int	getarg		(char *, int, arg_v *);
+static	int	getarg		(const char *, int, arg_v *);
 #endif	/* BUILD_AS_LIB */
-static	int	findcmd		(char *, struct xcmd *, struct xcmd *, struct xcmd **);
+static	int	findcmd		(const char *, struct xcmd *,
+				 struct xcmd *, struct xcmd **);
 static	int	rtdatetolfp	(char *, l_fp *);
 static	int	decodearr	(char *, int *, l_fp *);
 static	void	help		(struct parse *, FILE *);
@@ -424,7 +426,7 @@ long pktdata[DATASIZE/sizeof(long)];
  * Holds association data for use with the &n operator.
  */
 struct association assoc_cache[MAXASSOC];
-int numassoc = 0;		/* number of cached associations */
+u_int numassoc;		/* number of cached associations */
 
 /*
  * For commands typed on the command line (with the -c option)
@@ -436,7 +438,7 @@ const char *ccmds[MAXCMDS];
 /*
  * When multiple hosts are specified.
  */
-int numhosts = 0;
+u_int numhosts;
 const char *chosts[MAXHOSTS];
 #define	ADDHOST(cp)	if (numhosts < MAXHOSTS) chosts[numhosts++] = (cp)
 
@@ -504,7 +506,9 @@ ntpqmain(
 	char *argv[]
 	)
 {
-	extern int ntp_optind;
+	u_int ihost;
+	int icmd;
+
 
 #ifdef SYS_VXWORKS
 	clear_globals();
@@ -551,47 +555,11 @@ ntpqmain(
 
 	old_rv = HAVE_OPT(OLD_RV);
 
-#if 0
-	while ((c = ntp_getopt(argc, argv, "46c:dinp")) != EOF)
-	    switch (c) {
-		case '4':
-		    ai_fam_templ = AF_INET;
-		    break;
-		case '6':
-		    ai_fam_templ = AF_INET6;
-		    break;
-		case 'c':
-		    ADDCMD(ntp_optarg);
-		    break;
-		case 'd':
-		    ++debug;
-		    break;
-		case 'i':
-		    interactive = 1;
-		    break;
-		case 'n':
-		    showhostnames = 0;
-		    break;
-		case 'p':
-		    ADDCMD("peers");
-		    break;
-		default:
-		    errflg++;
-		    break;
-	    }
-	if (errflg) {
-		(void) fprintf(stderr,
-			       "usage: %s [-46dinp] [-c cmd] host ...\n",
-			       progname);
-		exit(2);
-	}
-#endif
-	NTP_INSIST(ntp_optind <= argc);
-	if (ntp_optind == argc) {
+	if (0 == argc) {
 		ADDHOST(DEFHOST);
 	} else {
-		for (; ntp_optind < argc; ntp_optind++)
-			ADDHOST(argv[ntp_optind]);
+		for (ihost = 0; ihost < (u_int)argc; ihost++)
+			ADDHOST(argv[ihost]);
 	}
 
 	if (numcmds == 0 && interactive == 0
@@ -608,9 +576,6 @@ ntpqmain(
 		(void) openhost(chosts[0]);
 		getcmds();
 	} else {
-		int ihost;
-		int icmd;
-
 		for (ihost = 0; ihost < numhosts; ihost++) {
 			if (openhost(chosts[ihost]))
 				for (icmd = 0; icmd < numcmds; icmd++)
@@ -772,6 +737,8 @@ openhost(
 	if (a_info == 0)
 		freeaddrinfo(ai);
 	havehost = 1;
+	numassoc = 0;
+
 	return 1;
 }
 
@@ -1207,7 +1174,7 @@ sendrequest(
 	associd_t associd,
 	int auth,
 	int qsize,
-	char *qdata
+	const char *qdata
 	)
 {
 	struct ntp_control qpkt;
@@ -1391,7 +1358,7 @@ doquery(
 	associd_t associd,
 	int auth,
 	int qsize,
-	char *qdata,
+	const char *qdata,
 	u_short *rstatus,
 	int *rsize,
 	const char **rdata
@@ -1412,7 +1379,7 @@ doqueryex(
 	associd_t associd,
 	int auth,
 	int qsize,
-	char *qdata,
+	const char *qdata,
 	u_short *rstatus,
 	int *rsize,
 	const char **rdata,
@@ -1673,84 +1640,64 @@ tokenize(
  */
 static int
 getarg(
-	char *str,
+	const char *str,
 	int code,
 	arg_v *argp
 	)
 {
-	int isneg;
-	char *cp, *np;
-	static const char *digits = "0123456789";
+	u_long ul;
 
 	switch (code & ~OPT) {
-	    case NTP_STR:
+	case NTP_STR:
 		argp->string = str;
 		break;
-	    case NTP_ADD:
-		if (!getnetnum(str, &(argp->netnum), (char *)0, 0)) {
+
+	case NTP_ADD:
+		if (!getnetnum(str, &argp->netnum, NULL, 0))
+			return 0;
+		break;
+
+	case NTP_UINT:
+		if ('&' == str[0]) {
+			if (!atouint(&str[1], &ul)) {
+				fprintf(stderr,
+					"***Association value `%s' invalid/undecodable\n",
+					str);
+				return 0;
+			}
+			if (0 == numassoc)
+				dogetassoc(stdout);
+			if (ul > numassoc) {
+				fprintf(stderr,
+					"***Association for `%s' unknown (max &%d)\n",
+					str, numassoc);
+				return 0;
+			}
+			argp->uval = assoc_cache[ul - 1].assid;
+			break;
+		}
+		if (!atouint(str, &argp->uval)) {
+			fprintf(stderr, "***Illegal unsigned value %s\n",
+				str);
 			return 0;
 		}
 		break;
-	    case NTP_INT:
-	    case NTP_UINT:
-		isneg = 0;
-		np = str;
-		if (*np == '&') {
-			np++;
-			isneg = atoi(np);
-			if (isneg <= 0) {
-				(void) fprintf(stderr,
-					       "***Association value `%s' invalid/undecodable\n", str);
-				return 0;
-			}
-			if (isneg > numassoc) {
-				if (numassoc == 0) {
-					(void) fprintf(stderr,
-						       "***Association for `%s' unknown (max &%d)\n",
-						       str, numassoc);
-					return 0;
-				} else {
-					isneg = numassoc;
-				}
-			}
-			argp->uval = assoc_cache[isneg-1].assid;
-			break;
-		}
 
-		if (*np == '-') {
-			np++;
-			isneg = 1;
-		}
-
-		argp->uval = 0;
-		do {
-			cp = strchr(digits, *np);
-			if (cp == NULL) {
-				(void) fprintf(stderr,
-					       "***Illegal integer value %s\n", str);
-				return 0;
-			}
-			argp->uval *= 10;
-			argp->uval += (cp - digits);
-		} while (*(++np) != '\0');
-
-		if (isneg) {
-			if ((code & ~OPT) == NTP_UINT) {
-				(void) fprintf(stderr,
-					       "***Value %s should be unsigned\n", str);
-				return 0;
-			}
-			argp->ival = -argp->ival;
+	case NTP_INT:
+		if (!atoint(str, &argp->ival)) {
+			fprintf(stderr, "***Illegal integer value %s\n",
+				str);
+			return 0;
 		}
 		break;
-	     case IP_VERSION:
-		if (!strcmp("-6", str))
-			argp->ival = 6 ;
-		else if (!strcmp("-4", str))
-			argp->ival = 4 ;
-		else {
-			(void) fprintf(stderr,
-			    "***Version must be either 4 or 6\n");
+
+	case IP_VERSION:
+		if (!strcmp("-6", str)) {
+			argp->ival = 6;
+		} else if (!strcmp("-4", str)) {
+			argp->ival = 4;
+		} else {
+			fprintf(stderr, "***Version must be either 4 or 6\n");
 			return 0;
 		}
 		break;
@@ -1766,14 +1713,14 @@ getarg(
  */
 static int
 findcmd(
-	register char *str,
-	struct xcmd *clist1,
-	struct xcmd *clist2,
-	struct xcmd **cmd
+	const char *	str,
+	struct xcmd *	clist1,
+	struct xcmd *	clist2,
+	struct xcmd **	cmd
 	)
 {
-	register struct xcmd *cl;
-	register int clen;
+	struct xcmd *cl;
+	int clen;
 	int nmatch;
 	struct xcmd *nearmatch = NULL;
 	struct xcmd *clist;
@@ -1895,6 +1842,29 @@ nntohost(
 
 
 /*
+ * nntohostp() is the same as nntohost() plus a :port suffix
+ */
+char *
+nntohostp(
+	sockaddr_u *netnum
+	)
+{
+	const char *	hostn;
+	char *		buf;
+
+	if (!showhostnames || SOCK_UNSPEC(netnum))
+		return sptoa(netnum);
+	else if (ISREFCLOCKADR(netnum))
+		return refnumtoa(netnum);
+	
+	hostn = socktohost(netnum);
+	LIB_GETBUF(buf);
+	snprintf(buf, LIB_BUFLENGTH, "%s:%u", hostn, SRCPORT(netnum));
+
+	return buf;
+}
+
+/*
  * rtdatetolfp - decode an RT-11 date into an l_fp
  */
 static int
@@ -1907,10 +1877,6 @@ rtdatetolfp(
 	register int i;
 	struct calendar cal;
 	char buf[4];
-	static const char *months[12] = {
-		"Jan", "Feb", "Mar", "Apr", "May", "Jun",
-		"Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-	};
 
 	cal.yearday = 0;
 
@@ -2172,7 +2138,7 @@ help(
 	)
 {
 	struct xcmd *xcp = NULL;	/* quiet warning */
-	char *cmd;
+	const char *cmd;
 	const char *list[100];
 	size_t word, words;
 	size_t row, rows;
@@ -2347,27 +2313,19 @@ host(
 			ai_fam_templ = AF_INET;
 		else if (!strcmp("-6", pcmd->argval[i].string))
 			ai_fam_templ = AF_INET6;
-		else {
-			if (havehost)
-				(void) fprintf(fp,
-					       "current host remains %s\n",
-					       currenthost);
-			else
-				(void) fprintf(fp, "still no current host\n");
-			return;
-		}
+		else
+			goto no_change;
 		i = 1;
 	}
 	if (openhost(pcmd->argval[i].string)) {
-		(void) fprintf(fp, "current host set to %s\n", currenthost);
-		numassoc = 0;
+		fprintf(fp, "current host set to %s\n", currenthost);
 	} else {
+    no_change:
 		if (havehost)
-			(void) fprintf(fp,
-				       "current host remains %s\n", 
-				       currenthost);
+			fprintf(fp, "current host remains %s\n",
+				currenthost);
 		else
-			(void) fprintf(fp, "still no current host\n");
+			fprintf(fp, "still no current host\n");
 	}
 }
 
@@ -2457,7 +2415,7 @@ passwd(
 	FILE *fp
 	)
 {
-	char *pass;
+	const char *pass;
 
 	if (info_auth_keyid == 0) {
 		info_auth_keyid = getkeyid("Keyid: ");
@@ -2475,7 +2433,8 @@ passwd(
 			return;
 		}
 	}
-	authusekey(info_auth_keyid, info_auth_keytype, (u_char *)pass);
+	authusekey(info_auth_keyid, info_auth_keytype,
+		   (const u_char *)pass);
 	authtrust(info_auth_keyid, 1);
 }
 

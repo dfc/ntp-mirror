@@ -1,3 +1,296 @@
+ChangeSet@1.2378, 2010-12-24 09:44:20+00:00, stenn@deacon.udel.edu +29 -0
+  NTP_4_2_7P103
+  TAG: NTP_4_2_7P103
+
+  ChangeLog@1.726, 2010-12-24 09:44:16+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P103
+
+  clockstuff/clktest-opts.c@1.27, 2010-12-24 09:44:16+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P103
+
+  clockstuff/clktest-opts.h@1.27, 2010-12-24 09:44:16+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P103
+
+  ntpd/ntpd-opts.c@1.107, 2010-12-24 09:44:16+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P103
+
+  ntpd/ntpd-opts.h@1.107, 2010-12-24 09:44:16+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P103
+
+  ntpd/ntpd-opts.texi@1.105, 2010-12-24 09:44:16+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P103
+
+  ntpd/ntpd.1@1.105, 2010-12-24 09:44:16+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P103
+
+  ntpdc/ntpdc-opts.c@1.104, 2010-12-24 09:44:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P103
+
+  ntpdc/ntpdc-opts.h@1.104, 2010-12-24 09:44:17+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P103
+
+  ntpdc/ntpdc-opts.texi@1.104, 2010-12-24 09:44:17+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P103
+
+  ntpdc/ntpdc.1@1.104, 2010-12-24 09:44:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P103
+
+  ntpq/ntpq-opts.c@1.104, 2010-12-24 09:44:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P103
+
+  ntpq/ntpq-opts.h@1.104, 2010-12-24 09:44:17+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P103
+
+  ntpq/ntpq-opts.texi@1.104, 2010-12-24 09:44:17+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P103
+
+  ntpq/ntpq.1@1.104, 2010-12-24 09:44:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P103
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.104, 2010-12-24 09:44:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P103
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.104, 2010-12-24 09:44:17+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P103
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.104, 2010-12-24 09:44:17+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P103
+
+  ntpsnmpd/ntpsnmpd.1@1.104, 2010-12-24 09:44:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P103
+
+  packageinfo.sh@1.105, 2010-12-24 09:44:17+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P103
+
+  sntp/sntp-opts.c@1.104, 2010-12-24 09:44:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P103
+
+  sntp/sntp-opts.h@1.104, 2010-12-24 09:44:17+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P103
+
+  sntp/sntp-opts.texi@1.104, 2010-12-24 09:44:17+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P103
+
+  sntp/sntp.1@1.104, 2010-12-24 09:44:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P103
+
+  sntp/sntp.html@1.104, 2010-12-24 09:44:18+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P103
+
+  util/ntp-keygen-opts.c@1.102, 2010-12-24 09:44:18+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P103
+
+  util/ntp-keygen-opts.h@1.102, 2010-12-24 09:44:18+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P103
+
+  util/ntp-keygen-opts.texi@1.105, 2010-12-24 09:44:18+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P103
+
+  util/ntp-keygen.1@1.105, 2010-12-24 09:44:18+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P103
+
+ChangeSet@1.2377, 2010-12-24 04:03:04-05:00, stenn@deacon.udel.edu +2 -0
+  Documentation updates from Dave Mills
+
+  ChangeLog@1.725, 2010-12-24 04:02:57-05:00, stenn@deacon.udel.edu +1 -0
+    Documentation updates from Dave Mills
+
+  html/autokey.html@1.16, 2010-12-24 04:02:58-05:00, stenn@deacon.udel.edu +33 -40
+    Documentation updates from Dave Mills
+
+ChangeSet@1.2376, 2010-12-24 08:05:27+00:00, davehart@shiny.ad.hartbrothers.com +8 -0
+  Add ntpq pstats command similar to ntpdc's.
+  Remove ntpq pstatus command, rv/readvar does the same and more.
+
+  ChangeLog@1.724, 2010-12-24 08:05:23+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+    Add ntpq pstats command similar to ntpdc's.
+    Remove ntpq pstatus command, rv/readvar does the same and more.
+
+  include/ntp_control.h@1.50, 2010-12-24 08:05:24+00:00, davehart@shiny.ad.hartbrothers.com +9 -1
+    add peer variables needed for ntpq -c "pstats &1" similar to
+      ntpdc -c "pstats 127.127.20.0".
+
+  libntp/statestr.c@1.22, 2010-12-24 08:05:24+00:00, davehart@shiny.ad.hartbrothers.com +4 -4
+    correct switch/case indents.
+
+  ntpd/ntp_control.c@1.147, 2010-12-24 08:05:24+00:00, davehart@shiny.ad.hartbrothers.com +59 -16
+    add peer variables needed for ntpq -c "pstats &1" similar to
+      ntpdc -c "pstats 127.127.20.0".
+
+  ntpdc/ntpdc_ops.c@1.71, 2010-12-24 08:05:24+00:00, davehart@shiny.ad.hartbrothers.com +47 -40
+    repair print_pflag() removing inappropriate bclient, add missing flags.
+
+  ntpq/ntpq-subs.c@1.74, 2010-12-24 08:05:24+00:00, davehart@shiny.ad.hartbrothers.com +120 -62
+    Add ntpq pstats command similar to ntpdc's.
+    Remove ntpq pstatus command, rv/readvar does the same and more.
+
+  ntpq/ntpq.c@1.123, 2010-12-24 08:05:24+00:00, davehart@shiny.ad.hartbrothers.com +24 -0
+    add nntohostp() like nntohost() but including port.
+
+  ntpq/ntpq.h@1.20, 2010-12-24 08:05:24+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    add nntohostp()
+
+ChangeSet@1.2372.1.1, 2010-12-23 19:18:14+00:00, davehart@shiny.ad.hartbrothers.com +4 -0
+  Correct ntpq handling of &1 with multiple servers on cmd line.
+
+  include/ntp_calendar.h@1.7, 2010-12-23 19:18:13+00:00, davehart@shiny.ad.hartbrothers.com +6 -5
+    make pointers in months[] and daynames[] const
+
+  libntp/prettydate.c@1.18, 2010-12-23 19:18:13+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    make pointers in months[] and daynames[] const
+
+  ntpq/ntpq-subs.c@1.73, 2010-12-23 19:18:13+00:00, davehart@shiny.ad.hartbrothers.com +2 -2
+    clean up signed/unsigned comparison warnings
+
+  ntpq/ntpq.c@1.122, 2010-12-23 19:18:13+00:00, davehart@shiny.ad.hartbrothers.com +10 -16
+    Correct ntpq handling of &1 with multiple servers on cmd line.
+
+ChangeSet@1.2374, 2010-12-23 11:12:32+00:00, stenn@deacon.udel.edu +29 -0
+  NTP_4_2_7P102
+  TAG: NTP_4_2_7P102
+
+  ChangeLog@1.723, 2010-12-23 11:12:12+00:00, stenn@deacon.udel.edu +1 -0
+    NTP_4_2_7P102
+
+  clockstuff/clktest-opts.c@1.26, 2010-12-23 11:12:13+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P102
+
+  clockstuff/clktest-opts.h@1.26, 2010-12-23 11:12:13+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P102
+
+  ntpd/ntpd-opts.c@1.106, 2010-12-23 11:12:14+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P102
+
+  ntpd/ntpd-opts.h@1.106, 2010-12-23 11:12:14+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P102
+
+  ntpd/ntpd-opts.texi@1.104, 2010-12-23 11:12:14+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P102
+
+  ntpd/ntpd.1@1.104, 2010-12-23 11:12:14+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P102
+
+  ntpdc/ntpdc-opts.c@1.103, 2010-12-23 11:12:14+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P102
+
+  ntpdc/ntpdc-opts.h@1.103, 2010-12-23 11:12:15+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P102
+
+  ntpdc/ntpdc-opts.texi@1.103, 2010-12-23 11:12:15+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P102
+
+  ntpdc/ntpdc.1@1.103, 2010-12-23 11:12:15+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P102
+
+  ntpq/ntpq-opts.c@1.103, 2010-12-23 11:12:15+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P102
+
+  ntpq/ntpq-opts.h@1.103, 2010-12-23 11:12:16+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P102
+
+  ntpq/ntpq-opts.texi@1.103, 2010-12-23 11:12:16+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P102
+
+  ntpq/ntpq.1@1.103, 2010-12-23 11:12:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P102
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.103, 2010-12-23 11:12:17+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P102
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.103, 2010-12-23 11:12:18+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P102
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.103, 2010-12-23 11:12:18+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P102
+
+  ntpsnmpd/ntpsnmpd.1@1.103, 2010-12-23 11:12:18+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P102
+
+  packageinfo.sh@1.104, 2010-12-23 11:12:18+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P102
+
+  sntp/sntp-opts.c@1.103, 2010-12-23 11:12:19+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P102
+
+  sntp/sntp-opts.h@1.103, 2010-12-23 11:12:19+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P102
+
+  sntp/sntp-opts.texi@1.103, 2010-12-23 11:12:19+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P102
+
+  sntp/sntp.1@1.103, 2010-12-23 11:12:19+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P102
+
+  sntp/sntp.html@1.103, 2010-12-23 11:12:20+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P102
+
+  util/ntp-keygen-opts.c@1.101, 2010-12-23 11:12:20+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P102
+
+  util/ntp-keygen-opts.h@1.101, 2010-12-23 11:12:20+00:00, stenn@deacon.udel.edu +3 -3
+    NTP_4_2_7P102
+
+  util/ntp-keygen-opts.texi@1.104, 2010-12-23 11:12:21+00:00, stenn@deacon.udel.edu +1 -1
+    NTP_4_2_7P102
+
+  util/ntp-keygen.1@1.104, 2010-12-23 11:12:21+00:00, stenn@deacon.udel.edu +2 -2
+    NTP_4_2_7P102
+
+ChangeSet@1.2373, 2010-12-23 02:22:35-05:00, stenn@deacon.udel.edu +6 -0
+  Documentation updates from Dave Mills
+
+  ChangeLog@1.722, 2010-12-23 02:22:27-05:00, stenn@deacon.udel.edu +1 -0
+    Documentation updates from Dave Mills
+
+  html/authopt.html@1.68, 2010-12-23 02:21:40-05:00, stenn@deacon.udel.edu +2 -2
+    Documentation updates from Dave Mills
+
+  html/autokey.html@1.15, 2010-12-23 02:21:40-05:00, stenn@deacon.udel.edu +33 -23
+    Documentation updates from Dave Mills
+
+  html/keygen.html@1.27, 2010-12-23 02:21:41-05:00, stenn@deacon.udel.edu +2 -2
+    Documentation updates from Dave Mills
+
+  html/ntpd.html@1.54, 2010-12-23 02:21:41-05:00, stenn@deacon.udel.edu +14 -14
+    Documentation updates from Dave Mills
+
+  html/ntpq.html@1.43, 2010-12-23 02:21:42-05:00, stenn@deacon.udel.edu +27 -23
+    Documentation updates from Dave Mills
+
+ChangeSet@1.2372, 2010-12-23 07:03:00+00:00, davehart@shiny.ad.hartbrothers.com +10 -0
+  Allow ntpq &1 associd use without preceding association-fetching.
+
+  ChangeLog@1.721, 2010-12-23 07:02:59+00:00, davehart@shiny.ad.hartbrothers.com +1 -0
+    Allow ntpq &1 associd use without preceding association-fetching.
+
+  include/ntp_calendar.h@1.6, 2010-12-23 07:02:59+00:00, davehart@shiny.ad.hartbrothers.com +2 -0
+    declare months[]
+
+  libntp/ntp_calendar.c@1.4, 2010-12-23 07:02:59+00:00, davehart@shiny.ad.hartbrothers.com +7 -7
+    avoid shadows declaration warning with months[]
+
+  libntp/prettydate.c@1.17, 2010-12-23 07:02:59+00:00, davehart@shiny.ad.hartbrothers.com +4 -4
+    match declaration to extern
+
+  ntpd/refclock_oncore.c@1.88, 2010-12-23 07:02:59+00:00, davehart@shiny.ad.hartbrothers.com +5 -5
+    use libntp's months[] instead of local array
+
+  ntpdc/ntpdc.c@1.89, 2010-12-23 07:02:59+00:00, davehart@shiny.ad.hartbrothers.com +0 -57
+    remove ntp_getopt() remains from ntpdc
+
+  ntpq/libntpq_subs.c@1.6, 2010-12-23 07:02:59+00:00, davehart@shiny.ad.hartbrothers.com +7 -9
+    changes reflect dogetassoc() is no longer static
+
+  ntpq/ntpq-subs.c@1.72, 2010-12-23 07:02:59+00:00, davehart@shiny.ad.hartbrothers.com +8 -11
+    make dogetassoc() global so ntpq.c getargs() can use it
+
+  ntpq/ntpq.c@1.121, 2010-12-23 07:02:59+00:00, davehart@shiny.ad.hartbrothers.com +64 -123
+    Allow ntpq &1 associd use without preceding association-fetching.
+    Use libntp's months[]
+
+  ntpq/ntpq.h@1.19, 2010-12-23 07:02:59+00:00, davehart@shiny.ad.hartbrothers.com +6 -3
+    use const
+
 ChangeSet@1.2371, 2010-12-22 12:37:03+00:00, stenn@deacon.udel.edu +29 -0
   NTP_4_2_7P101
   TAG: NTP_4_2_7P101
