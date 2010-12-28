@@ -51,6 +51,7 @@ static	void	lpassociations	(struct parse *, FILE *);
 static	void	radiostatus (struct parse *, FILE *);
 #endif	/* UNUSED */
 
+static	void	authinfo	(struct parse *, FILE *);
 static	void	pstats	 	(struct parse *, FILE *);
 static	long	when		(l_fp *, l_fp *, l_fp *);
 static	char *	prettyinterval	(char *, size_t, long);
@@ -68,6 +69,8 @@ static	void	config_from_file(struct parse *, FILE *);
 static	void	mrulist		(struct parse *, FILE *);
 static	void	ifstats		(struct parse *, FILE *);
 static	void	sysstats	(struct parse *, FILE *);
+static	void	sysinfo		(struct parse *, FILE *);
+static	void	kerninfo	(struct parse *, FILE *);
 static	void	monstats	(struct parse *, FILE *);
 
 /*
@@ -145,7 +148,7 @@ struct xcmd opcmds[] = {
 	  "read clock variables" },
 	{ "pstats",    pstats,    { NTP_UINT, NO, NO, NO },
 	  { "assocID", "", "", "" },
-	  "print status information returned for a peer" },
+	  "show statistics for a peer" },
 	{ "peers",  peers,      { OPT|IP_VERSION, NO, NO, NO },
 	  { "-4|-6", "", "", "" },
 	  "obtain and print a list of the server's peers [IP version]" },
@@ -170,12 +173,21 @@ struct xcmd opcmds[] = {
 	{ "ifstats", ifstats, { NO, NO, NO, NO },
 	  { "", "", "", "" },
 	  "show statistics for each local address ntpd is using" },
+	{ "sysinfo", sysinfo, { NO, NO, NO, NO },
+	  { "", "", "", "" },
+	  "display system summary" },
+	{ "kerninfo", kerninfo, { NO, NO, NO, NO },
+	  { "", "", "", "" },
+	  "display kernel loop and PPS statistics" },
 	{ "sysstats", sysstats, { NO, NO, NO, NO },
 	  { "", "", "", "" },
 	  "display system uptime and packet counts" },
 	{ "monstats", monstats, { NO, NO, NO, NO },
 	  { "", "", "", "" },
 	  "display monitor (mrulist) counters and limits" },
+	{ "authinfo", authinfo, { NO, NO, NO, NO },
+	  { "", "", "", "" },
+	  "display symmetric authentication counters" },
 	{ 0,		0,		{ NO, NO, NO, NO },
 	  { "-4|-6", "", "", "" }, "" }
 };
@@ -294,6 +306,7 @@ typedef struct var_display_collection_tag {
 	union {
 		char *		str;
 		sockaddr_u	sau;	/* NTP_ADD */
+		l_fp		lfp;	/* NTP_LFP */
 	} v;				/* retrieved value */
 } vdc;
 
@@ -311,7 +324,8 @@ static int	qcmp_mru_count(const void *, const void *);
 static int	qcmp_mru_r_count(const void *, const void *);
 static void	validate_ifnum(u_int, int, ifstats_row *);
 static void	another_ifstats_field(int *, ifstats_row *, FILE *);
-static void	collect_display_vdc(associd_t as, vdc *table, FILE *fp);
+static void	collect_display_vdc(associd_t as, vdc *table,
+				    int decodestatus, FILE *fp);
 
 /*
  * static globals
@@ -1548,7 +1562,8 @@ doprintpeers(
 	sockaddr_u dum_store;
 	long hmode = 0;
 	u_long srcport = 0;
-	char *dstadr_refid = "0.0.0.0";
+	u_int32 u32;
+	const char *dstadr_refid = "0.0.0.0";
 	size_t drlen;
 	u_long stratum = 0;
 	long ppoll = 0;
@@ -1564,7 +1579,6 @@ doprintpeers(
 	u_char havevar[MAX_HAVE + 1];
 	u_long poll_sec;
 	char type = '?';
-	char refid_string[10];
 	char whenbuf[8], pollbuf[8];
 	char clock_name[LENHOSTNAME];
 
@@ -1624,12 +1638,8 @@ doprintpeers(
 				if (*value == '\0') {
 					dstadr_refid = "";
 				} else if (strlen(value) <= 4) {
-					refid_string[0] = '.';
-					strncpy(&refid_string[1], value, sizeof(refid_string) - 1);
-					i = strlen(refid_string);
-					refid_string[i] = '.';
-					refid_string[i+1] = '\0';
-					dstadr_refid = refid_string;
+					strncpy((void *)&u32, value, sizeof(u32));
+					dstadr_refid = refid_str(u32, 1);
 				} else if (decodenetnum(value, &dstadr)) {
 					if (ISREFCLOCKADR(&dstadr))
 						dstadr_refid =
@@ -3204,10 +3214,13 @@ static void
 collect_display_vdc(
 	associd_t	as,
 	vdc *		table,
+	int		decodestatus,
 	FILE *		fp
 	)
 {
 	static const char * const suf[2] = { "adr", "port" };
+	static const char * const leapbits[4] = { "00", "01",
+						  "10", "11" };
 	struct varlist vl[MAXLIST];
 	char tagbuf[32];
 	vdc *pvdc;
@@ -3218,9 +3231,10 @@ collect_display_vdc(
 	char *tag;
 	char *val;
 	u_int n;
-	size_t taglen;
+	size_t len;
 	int match;
 	u_long ul;
+	int vtype;
 
 	memset(vl, 0, sizeof(vl));
 	for (pvdc = table; pvdc->tag != NULL; pvdc++) {
@@ -3247,17 +3261,17 @@ collect_display_vdc(
 	 */
 	while (nextvar(&rsize, &rdata, &tag, &val)) {
 		for (pvdc = table; pvdc->tag != NULL; pvdc++) {
-			taglen = strlen(pvdc->tag);
-			if (strncmp(tag, pvdc->tag, taglen))
+			len = strlen(pvdc->tag);
+			if (strncmp(tag, pvdc->tag, len))
 				continue;
 			if (NTP_ADD != pvdc->type) {
-				if ('\0' != tag[taglen])
+				if ('\0' != tag[len])
 					continue;
 				break;
 			}
 			match = FALSE;
 			for (n = 0; n < COUNTOF(suf); n++) {
-				if (strcmp(tag + taglen, suf[n]))
+				if (strcmp(tag + len, suf[n]))
 					continue;
 				match = TRUE;
 				break;
@@ -3267,9 +3281,32 @@ collect_display_vdc(
 		}
 		if (NULL == pvdc->tag)
 			continue;
-		if (NTP_STR == pvdc->type) {
+		switch (pvdc->type) {
+
+		case NTP_STR:
+			/* strip surrounding double quotes */
+			if ('"' == val[0]) {
+				len = strlen(val);
+				if (len > 0 && '"' == val[len - 1]) {
+					val[len - 1] = '\0';
+					val++;
+				}
+			}
+			/* fallthru */
+		case NTP_MODE:	/* fallthru */
+		case NTP_2BIT:
 			pvdc->v.str = estrdup(val);
-		} else if (NTP_ADD == pvdc->type) {
+			break;
+
+		case NTP_LFP:
+			decodets(val, &pvdc->v.lfp);
+			break;
+
+		case NTP_ADP:
+			decodenetnum(val, &pvdc->v.sau);
+			break;
+
+		case NTP_ADD:
 			if (0 == n) {	/* adr */
 				decodenetnum(val, &pvdc->v.sau);
 			} else {	/* port */
@@ -3277,13 +3314,18 @@ collect_display_vdc(
 					SET_PORT(&pvdc->v.sau, 
 						 (u_short)ul);
 			}
+			break;
 		}
 	}
 
 	/* and display */
-	if (as != 0)
+	if (decodestatus) {
+		vtype = (0 == as)
+			    ? TYPE_SYS
+			    : TYPE_PEER;
 		fprintf(fp, "associd=%u status=%04x %s,\n", as, rstatus,
-			statustoa(TYPE_PEER, rstatus));
+			statustoa(vtype, rstatus));
+	}
 
 	for (pvdc = table; pvdc->tag != NULL; pvdc++) {
 		switch (pvdc->type) {
@@ -3297,9 +3339,27 @@ collect_display_vdc(
 			}
 			break;
 
-		case NTP_ADD:
+		case NTP_ADD:	/* fallthru */
+		case NTP_ADP:
 			fprintf(fp, "%s  %s\n", pvdc->display,
 				nntohostp(&pvdc->v.sau));
+			break;
+
+		case NTP_LFP:
+			fprintf(fp, "%s  %s\n", pvdc->display,
+				prettydate(&pvdc->v.lfp));
+			break;
+
+		case NTP_MODE:
+			atouint(pvdc->v.str, &ul);
+			fprintf(fp, "%s  %s\n", pvdc->display,
+				modetoa((int)ul));
+			break;
+
+		case NTP_2BIT:
+			atouint(pvdc->v.str, &ul);
+			fprintf(fp, "%s  %s\n", pvdc->display,
+				leapbits[ul & 0x3]);
 			break;
 
 		default:
@@ -3336,10 +3396,74 @@ sysstats(
 	{ NULL,			NULL,			  0	  }
     };
 
-	collect_display_vdc(0, sysstats_vdc, fp);
+	collect_display_vdc(0, sysstats_vdc, FALSE, fp);
 }
 
-	
+
+/*
+ * sysinfo - modeled on ntpdc's sysinfo
+ */
+static void
+sysinfo(
+	struct parse *pcmd,
+	FILE *fp
+	)
+{
+    static vdc sysinfo_vdc[] = {
+	{ "peeradr",		"system peer:      ", NTP_ADP },
+	{ "peermode",		"system peer mode: ", NTP_MODE },
+	{ "leap",		"leap indicator:   ", NTP_2BIT },
+	{ "stratum",		"stratum:          ", NTP_STR },
+	{ "precision",		"log2 precision:   ", NTP_STR },
+	{ "rootdelay",		"root delay:       ", NTP_STR },
+	{ "rootdisp",		"root dispersion:  ", NTP_STR },
+	{ "refid",		"reference ID:     ", NTP_STR },
+	{ "reftime",		"reference time:   ", NTP_LFP },
+	{ "sys_jitter",		"system jitter:    ", NTP_STR },
+	{ "clk_jitter",		"clock jitter:     ", NTP_STR },
+	{ "clk_wander",		"clock wander:     ", NTP_STR },
+	{ "bcastdelay",		"broadcast delay:  ", NTP_STR },
+	{ "authdelay",		"symm. auth. delay:", NTP_STR },
+	{ NULL,			NULL,		      0	      }
+    };
+
+	collect_display_vdc(0, sysinfo_vdc, TRUE, fp);
+}
+
+
+/*
+ * kerninfo - modeled on ntpdc's kerninfo
+ */
+static void
+kerninfo(
+	struct parse *pcmd,
+	FILE *fp
+	)
+{
+    static vdc kerninfo_vdc[] = {
+	{ "koffset",		"pll offset:          ", NTP_STR },
+	{ "kfreq",		"pll frequency:       ", NTP_STR },
+	{ "kmaxerr",		"maximum error:       ", NTP_STR },
+	{ "kesterr",		"estimated error:     ", NTP_STR },
+	{ "kstflags",		"kernel status:       ", NTP_STR },
+	{ "ktimeconst",		"pll time constant:   ", NTP_STR },
+	{ "kprecis",		"precision:           ", NTP_STR },
+	{ "kfreqtol",		"frequency tolerance: ", NTP_STR },
+	{ "kppsfreq",		"pps frequency:       ", NTP_STR },
+	{ "kppsstab",		"pps stability:       ", NTP_STR },
+	{ "kppsjitter",		"pps jitter:          ", NTP_STR },
+	{ "kppscalibdur",	"calibration interval ", NTP_STR },
+	{ "kppscalibs",		"calibration cycles:  ", NTP_STR },
+	{ "kppsjitexc",		"jitter exceeded:     ", NTP_STR },
+	{ "kppsstbexc",		"stability exceeded:  ", NTP_STR },
+	{ "kppscaliberrs",	"calibration errors:  ", NTP_STR },
+	{ NULL,			NULL,			 0	 }
+    };
+
+	collect_display_vdc(0, kerninfo_vdc, TRUE, fp);
+}
+
+
 /*
  * monstats - implements ntpq -c monstats
  */
@@ -3358,15 +3482,41 @@ monstats(
 	{ "mru_maxage",		"reclaim older than: ", NTP_STR },
 	{ "mru_mem",		"kilobytes:          ", NTP_STR },
 	{ "mru_maxmem",		"maximum kilobytes:  ", NTP_STR },
-	{ NULL,			NULL,			 0	 }
+	{ NULL,			NULL,			0	}
     };
 
-	collect_display_vdc(0, monstats_vdc, fp);
+	collect_display_vdc(0, monstats_vdc, FALSE, fp);
 }
 
 
 /*
- * pstats - print peer statistics returned by the server
+ * monstats - implements ntpq -c monstats
+ */
+static void
+authinfo(
+	struct parse *pcmd,
+	FILE *fp
+	)
+{
+    static vdc authinfo_vdc[] = {
+	{ "authreset",		"time since reset:", NTP_STR },
+	{ "authkeys",		"stored keys:     ", NTP_STR },
+	{ "authfreek",		"free keys:       ", NTP_STR },
+	{ "authklookups",	"key lookups:     ", NTP_STR },
+	{ "authknotfound",	"keys not found:  ", NTP_STR },
+	{ "authkuncached",	"uncached keys:   ", NTP_STR },
+	{ "authkexpired",	"expired keys:    ", NTP_STR },
+	{ "authencrypts",	"encryptions:     ", NTP_STR },
+	{ "authdecrypts",	"decryptions:     ", NTP_STR },
+	{ NULL,			NULL,		     0	     }
+    };
+
+	collect_display_vdc(0, authinfo_vdc, FALSE, fp);
+}
+
+
+/*
+ * pstats - show statistics for a peer
  */
 static void
 pstats(
@@ -3396,6 +3546,6 @@ pstats(
 	if (0 == associd)
 		return;
 
-	collect_display_vdc(associd, pstats_vdc, fp);
+	collect_display_vdc(associd, pstats_vdc, TRUE, fp);
 }
 

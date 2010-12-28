@@ -192,7 +192,38 @@ struct ntp_control {
 #define	CS_SS_LIMITED		41
 #define	CS_SS_KODSENT		42
 #define	CS_SS_PROCESSED		43
-#define	CS_MAX_NOAUTOKEY	CS_SS_PROCESSED
+#define	CS_PEERADR		44
+#define	CS_PEERMODE		45
+#define	CS_BCASTDELAY		46
+#define	CS_AUTHDELAY		47
+#define	CS_AUTHKEYS		48
+#define	CS_AUTHFREEK		49
+#define	CS_AUTHKLOOKUPS		50
+#define	CS_AUTHKNOTFOUND	51
+#define	CS_AUTHKUNCACHED	52
+#define	CS_AUTHKEXPIRED		53
+#define	CS_AUTHENCRYPTS		54
+#define	CS_AUTHDECRYPTS		55
+#define	CS_AUTHRESET		56
+#define	CS_K_OFFSET		57
+#define	CS_K_FREQ		58
+#define	CS_K_MAXERR		59
+#define	CS_K_ESTERR		60
+#define	CS_K_STFLAGS		61
+#define	CS_K_TIMECONST		62
+#define	CS_K_PRECISION		63
+#define	CS_K_FREQTOL		64
+#define	CS_K_PPS_FREQ		65
+#define	CS_K_PPS_STABIL		66
+#define	CS_K_PPS_JITTER		67
+#define	CS_K_PPS_CALIBDUR	68
+#define	CS_K_PPS_CALIBS		69
+#define	CS_K_PPS_CALIBERRS	70
+#define	CS_K_PPS_JITEXC		71
+#define	CS_K_PPS_STBEXC		72
+#define	CS_KERN_FIRST		CS_K_OFFSET
+#define	CS_KERN_LAST		CS_K_PPS_STBEXC
+#define	CS_MAX_NOAUTOKEY	CS_KERN_LAST
 #ifdef AUTOKEY
 #define	CS_FLAGS		(1 + CS_MAX_NOAUTOKEY)
 #define	CS_HOST			(2 + CS_MAX_NOAUTOKEY)
@@ -200,7 +231,7 @@ struct ntp_control {
 #define	CS_CERTIF		(4 + CS_MAX_NOAUTOKEY)
 #define	CS_SIGNATURE		(5 + CS_MAX_NOAUTOKEY)
 #define	CS_REVTIME		(6 + CS_MAX_NOAUTOKEY)
-#define	CS_GROUP		(7 + CS_MAX_NOAUTOKEY)
+#define	CS_IDENT		(7 + CS_MAX_NOAUTOKEY)
 #define	CS_DIGEST		(8 + CS_MAX_NOAUTOKEY)
 #define	CS_MAXCODE		CS_DIGEST
 #else	/* !AUTOKEY follows */

@@ -151,8 +151,8 @@ extern	void	block_io_and_alarm	(void);
 # define	UNBLOCK_IO_AND_ALARM()	do {} while (0)
 # define	BLOCK_IO_AND_ALARM()	do {} while (0)
 #endif
-extern	char *	localaddrtoa(struct interface *);
 #define		latoa(pif)	localaddrtoa(pif)
+extern const char * localaddrtoa(endpt *);
 
 /* ntp_loopfilter.c */
 extern	void	init_loopfilter(void);
@@ -241,6 +241,7 @@ extern	int	sys_orphan;
 extern	double	sys_mindisp;
 extern	double	sys_maxdist;
 
+extern	char	*sys_ident;	/* identity scheme */
 extern	void	poll_update	(struct peer *, u_char);
 
 extern	void	clear		(struct peer *);
@@ -521,6 +522,7 @@ extern int	fdpps;			/* pps file descriptor */
 
 /* ntp_request.c */
 extern keyid_t	info_auth_keyid;	/* keyid used to authenticate requests */
+extern u_long	auth_timereset;
 
 /* ntp_restrict.c */
 extern restrict_u *	restrictlist4;	/* IPv4 restriction list */

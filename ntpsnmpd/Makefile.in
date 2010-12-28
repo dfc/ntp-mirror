@@ -741,6 +741,7 @@ $(srcdir)/ntpsnmpd-opts.menu: $(srcdir)/ntpsnmpd-opts.texi
 
 $(srcdir)/ntpsnmpd-opts.texi: $(srcdir)/ntpsnmpd-opts.def $(std_def_list)
 	$(run_ag) -Taginfo.tpl -DLEVEL=section ntpsnmpd-opts.def
+	$(top_srcdir)/scripts/check--help $@
 
 install-exec-hook:
 	@case ${BINSUBDIR} in						\

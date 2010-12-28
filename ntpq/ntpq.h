@@ -57,6 +57,10 @@
 #define	NTP_INT		0x3	/* signed integer */
 #define	NTP_ADD		0x4	/* IP network address */
 #define IP_VERSION	0x5	/* IP version */
+#define	NTP_ADP		0x6	/* IP address and port */
+#define NTP_LFP		0x7	/* NTP timestamp */
+#define NTP_MODE	0x8	/* peer mode */
+#define NTP_2BIT	0x9	/* leap bits */
 
 /*
  * Arguments are returned in a union
@@ -124,8 +128,8 @@ extern	int	doquery		(int, associd_t, int, int, const char *,
 				 u_short *, int *, const char **);
 extern	int	doqueryex	(int, associd_t, int, int, const char *,
 				 u_short *, int *, const char **, int);
-extern	char *	nntohost	(sockaddr_u *);
-extern	char *	nntohostp	(sockaddr_u *);
+extern	const char * nntohost	(sockaddr_u *);
+extern	const char * nntohostp	(sockaddr_u *);
 extern	int	decodets	(char *, l_fp *);
 extern	int	decodeuint	(char *, u_long *);
 extern	int	nextvar		(int *, const char **, char **, char **);
