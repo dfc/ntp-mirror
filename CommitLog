@@ -1,3 +1,200 @@
+ChangeSet@1.2390, 2010-12-30 10:32:31+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P106
+  TAG: NTP_4_2_7P106
+
+  ChangeLog@1.736 +1 -0
+    NTP_4_2_7P106
+
+  clockstuff/clktest-opts.c@1.30 +2 -2
+    NTP_4_2_7P106
+
+  clockstuff/clktest-opts.h@1.30 +3 -3
+    NTP_4_2_7P106
+
+  ntpd/ntpd-opts.c@1.110 +2 -2
+    NTP_4_2_7P106
+
+  ntpd/ntpd-opts.h@1.110 +3 -3
+    NTP_4_2_7P106
+
+  ntpd/ntpd-opts.texi@1.108 +2 -2
+    NTP_4_2_7P106
+
+  ntpd/ntpd.1@1.108 +2 -2
+    NTP_4_2_7P106
+
+  ntpdc/ntpdc-opts.c@1.107 +2 -2
+    NTP_4_2_7P106
+
+  ntpdc/ntpdc-opts.h@1.107 +3 -3
+    NTP_4_2_7P106
+
+  ntpdc/ntpdc-opts.texi@1.107 +2 -2
+    NTP_4_2_7P106
+
+  ntpdc/ntpdc.1@1.107 +2 -2
+    NTP_4_2_7P106
+
+  ntpq/ntpq-opts.c@1.107 +2 -2
+    NTP_4_2_7P106
+
+  ntpq/ntpq-opts.h@1.107 +3 -3
+    NTP_4_2_7P106
+
+  ntpq/ntpq-opts.texi@1.107 +2 -2
+    NTP_4_2_7P106
+
+  ntpq/ntpq.1@1.107 +2 -2
+    NTP_4_2_7P106
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.107 +2 -2
+    NTP_4_2_7P106
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.107 +3 -3
+    NTP_4_2_7P106
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.107 +2 -2
+    NTP_4_2_7P106
+
+  ntpsnmpd/ntpsnmpd.1@1.107 +2 -2
+    NTP_4_2_7P106
+
+  packageinfo.sh@1.108 +1 -1
+    NTP_4_2_7P106
+
+  sntp/sntp-opts.c@1.107 +2 -2
+    NTP_4_2_7P106
+
+  sntp/sntp-opts.h@1.107 +3 -3
+    NTP_4_2_7P106
+
+  sntp/sntp-opts.texi@1.107 +2 -2
+    NTP_4_2_7P106
+
+  sntp/sntp.1@1.107 +2 -2
+    NTP_4_2_7P106
+
+  sntp/sntp.html@1.107 +2 -2
+    NTP_4_2_7P106
+
+  util/ntp-keygen-opts.c@1.105 +2 -2
+    NTP_4_2_7P106
+
+  util/ntp-keygen-opts.h@1.105 +3 -3
+    NTP_4_2_7P106
+
+  util/ntp-keygen-opts.texi@1.108 +2 -2
+    NTP_4_2_7P106
+
+  util/ntp-keygen.1@1.108 +2 -2
+    NTP_4_2_7P106
+
+ChangeSet@1.2082.4.195, 2010-12-29 19:24:12-05:00, stenn@deacon.udel.edu
+  Update genCommitLog for the bk-5 release
+
+  ChangeLog@1.496.26.139 +1 -0
+    Update genCommitLog for the bk-5 release
+
+  scripts/genCommitLog@1.5.1.2 +1 -1
+    Update genCommitLog for the bk-5 release
+
+ChangeSet@1.2388, 2010-12-29 08:13:01+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P105
+  TAG: NTP_4_2_7P105
+
+  ChangeLog@1.734 +1 -0
+    NTP_4_2_7P105
+
+  clockstuff/clktest-opts.c@1.29 +2 -2
+    NTP_4_2_7P105
+
+  clockstuff/clktest-opts.h@1.29 +3 -3
+    NTP_4_2_7P105
+
+  ntpd/ntpd-opts.c@1.109 +2 -2
+    NTP_4_2_7P105
+
+  ntpd/ntpd-opts.h@1.109 +3 -3
+    NTP_4_2_7P105
+
+  ntpd/ntpd-opts.texi@1.107 +2 -2
+    NTP_4_2_7P105
+
+  ntpd/ntpd.1@1.107 +2 -2
+    NTP_4_2_7P105
+
+  ntpdc/ntpdc-opts.c@1.106 +2 -2
+    NTP_4_2_7P105
+
+  ntpdc/ntpdc-opts.h@1.106 +3 -3
+    NTP_4_2_7P105
+
+  ntpdc/ntpdc-opts.texi@1.106 +2 -2
+    NTP_4_2_7P105
+
+  ntpdc/ntpdc.1@1.106 +2 -2
+    NTP_4_2_7P105
+
+  ntpq/ntpq-opts.c@1.106 +2 -2
+    NTP_4_2_7P105
+
+  ntpq/ntpq-opts.h@1.106 +3 -3
+    NTP_4_2_7P105
+
+  ntpq/ntpq-opts.texi@1.106 +2 -2
+    NTP_4_2_7P105
+
+  ntpq/ntpq.1@1.106 +2 -2
+    NTP_4_2_7P105
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.106 +2 -2
+    NTP_4_2_7P105
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.106 +3 -3
+    NTP_4_2_7P105
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.106 +2 -2
+    NTP_4_2_7P105
+
+  ntpsnmpd/ntpsnmpd.1@1.106 +2 -2
+    NTP_4_2_7P105
+
+  packageinfo.sh@1.107 +1 -1
+    NTP_4_2_7P105
+
+  sntp/sntp-opts.c@1.106 +2 -2
+    NTP_4_2_7P105
+
+  sntp/sntp-opts.h@1.106 +3 -3
+    NTP_4_2_7P105
+
+  sntp/sntp-opts.texi@1.106 +56 -2
+    NTP_4_2_7P105
+
+  sntp/sntp.1@1.106 +2 -2
+    NTP_4_2_7P105
+
+  sntp/sntp.html@1.106 +56 -2
+    NTP_4_2_7P105
+
+  util/ntp-keygen-opts.c@1.104 +2 -2
+    NTP_4_2_7P105
+
+  util/ntp-keygen-opts.h@1.104 +3 -3
+    NTP_4_2_7P105
+
+  util/ntp-keygen-opts.texi@1.107 +2 -2
+    NTP_4_2_7P105
+
+  util/ntp-keygen.1@1.107 +2 -2
+    NTP_4_2_7P105
+
+ChangeSet@1.2082.4.194, 2010-12-29 02:06:21-05:00, stenn@deacon.udel.edu
+  Distribute check--help from the correct variable
+
+  scripts/Makefile.am@1.17.1.4 +1 -1
+    Distribute check--help from the correct variable
+
 ChangeSet@1.2386, 2010-12-28 09:37:12+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P104
   TAG: NTP_4_2_7P104
@@ -88,6 +285,12 @@ ChangeSet@1.2386, 2010-12-28 09:37:12+00:00, stenn@deacon.udel.edu
 
   util/ntp-keygen.1@1.106 +2 -2
     NTP_4_2_7P104
+
+ChangeSet@1.2082.4.193, 2010-12-28 04:20:11-05:00, stenn@deacon.udel.edu
+  Fix location of check--help for sntp
+
+  sntp/Makefile.am@1.21.1.16 +1 -1
+    Fix location of check--help for sntp
 
 ChangeSet@1.2385, 2010-12-28 04:17:05-05:00, stenn@deacon.udel.edu
   Fix location of check--help for sntp
