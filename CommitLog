@@ -1,3 +1,180 @@
+ChangeSet@1.2394, 2010-12-31 10:50:21+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P107
+  TAG: NTP_4_2_7P107
+
+  ChangeLog@1.740 +1 -0
+    NTP_4_2_7P107
+
+  clockstuff/clktest-opts.c@1.31 +2 -2
+    NTP_4_2_7P107
+
+  clockstuff/clktest-opts.h@1.31 +3 -3
+    NTP_4_2_7P107
+
+  ntpd/ntpd-opts.c@1.111 +2 -2
+    NTP_4_2_7P107
+
+  ntpd/ntpd-opts.h@1.111 +3 -3
+    NTP_4_2_7P107
+
+  ntpd/ntpd-opts.texi@1.109 +2 -2
+    NTP_4_2_7P107
+
+  ntpd/ntpd.1@1.109 +2 -2
+    NTP_4_2_7P107
+
+  ntpdc/ntpdc-opts.c@1.108 +2 -2
+    NTP_4_2_7P107
+
+  ntpdc/ntpdc-opts.h@1.108 +3 -3
+    NTP_4_2_7P107
+
+  ntpdc/ntpdc-opts.texi@1.108 +2 -2
+    NTP_4_2_7P107
+
+  ntpdc/ntpdc.1@1.108 +2 -2
+    NTP_4_2_7P107
+
+  ntpq/ntpq-opts.c@1.108 +2 -2
+    NTP_4_2_7P107
+
+  ntpq/ntpq-opts.h@1.108 +3 -3
+    NTP_4_2_7P107
+
+  ntpq/ntpq-opts.texi@1.108 +2 -2
+    NTP_4_2_7P107
+
+  ntpq/ntpq.1@1.108 +2 -2
+    NTP_4_2_7P107
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.108 +2 -2
+    NTP_4_2_7P107
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.108 +3 -3
+    NTP_4_2_7P107
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.108 +2 -2
+    NTP_4_2_7P107
+
+  ntpsnmpd/ntpsnmpd.1@1.108 +2 -2
+    NTP_4_2_7P107
+
+  packageinfo.sh@1.109 +1 -1
+    NTP_4_2_7P107
+
+  sntp/sntp-opts.c@1.108 +2 -2
+    NTP_4_2_7P107
+
+  sntp/sntp-opts.h@1.108 +3 -3
+    NTP_4_2_7P107
+
+  sntp/sntp-opts.texi@1.108 +2 -2
+    NTP_4_2_7P107
+
+  sntp/sntp.1@1.108 +2 -2
+    NTP_4_2_7P107
+
+  sntp/sntp.html@1.108 +2 -2
+    NTP_4_2_7P107
+
+  util/ntp-keygen-opts.c@1.106 +2 -2
+    NTP_4_2_7P107
+
+  util/ntp-keygen-opts.h@1.106 +3 -3
+    NTP_4_2_7P107
+
+  util/ntp-keygen-opts.texi@1.109 +2 -2
+    NTP_4_2_7P107
+
+  util/ntp-keygen.1@1.109 +2 -2
+    NTP_4_2_7P107
+
+ChangeSet@1.2393, 2010-12-31 01:45:11-05:00, stenn@deacon.udel.edu
+  refclock_acts.c updates from Dave Mills
+
+  ChangeLog@1.739 +1 -0
+    refclock_acts.c updates from Dave Mills
+
+  ntpd/refclock_acts.c@1.40 +335 -380
+    refclock_acts.c updates from Dave Mills
+
+ChangeSet@1.2392, 2010-12-31 03:31:28+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 1766] Oncore clock has offset/high jitter at startup.
+
+  ChangeLog@1.738 +1 -0
+    [Bug 1766] Oncore clock has offset/high jitter at startup.
+
+  include/ntp_stdlib.h@1.53 +2 -2
+    correct return types of mvsnprintf() and msnprintf() to match
+      vsnprintf() and snprintf().
+
+  include/ntpd.h@1.154 +1 -0
+    add mprintf_clock_stats() vararg alternative to record_clock_stats()
+
+  libntp/msyslog.c@1.30 +9 -3
+    correct return types of mvsnprintf() and msnprintf() to match
+      vsnprintf() and snprintf().
+
+  ntpd/ntp_util.c@1.88 +25 -0
+    add mprintf_clock_stats() vararg alternative to record_clock_stats()
+
+  ntpd/refclock_oncore.c@1.89 +263 -358
+    [Bug 1766] Oncore clock has offset/high jitter at startup.
+
+  ntpd/refclock_parse.c@1.55 +1 -1
+    eliminate warning
+
+ChangeSet@1.2389.1.1, 2010-12-30 10:52:24+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 1764] Palisade driver doesn't build on Linux.
+  Move ntp_control.h variable IDs to ntp_control.c, remove their use by
+    ntpq.  They are implementation details private to ntpd.  [Bug 597] was
+    caused by ntpq's reliance on these IDs it need not know about.
+
+  ChangeLog@1.735.1.1 +4 -0
+    [Bug 1764] Palisade driver doesn't build on Linux.
+    Move ntp_control.h variable IDs to ntp_control.c, remove their use by
+      ntpq.  They are implementation details private to ntpd.  [Bug 597] was
+      caused by ntpq's reliance on these IDs it need not know about.
+
+  include/ntp_control.h@1.55 +0 -178
+    Move ntp_control.h variable IDs to ntp_control.c, remove their use by
+      ntpq.  They are implementation details private to ntpd.  [Bug 597] was
+      caused by ntpq's reliance on these IDs it need not know about.
+
+  libntp/refnumtoa.c@1.10 +12 -13
+    make refnumtoa() return socktoa() for non-refclock addresses to
+      simplify ntpq peers billboard use.
+
+  ntpd/ntp_control.c@1.152 +178 -0
+    Move ntp_control.h variable IDs to ntp_control.c, remove their use by
+      ntpq.  They are implementation details private to ntpd.  [Bug 597] was
+      caused by ntpq's reliance on these IDs it need not know about.
+
+  ntpd/ntp_io.c@1.340 +2 -1
+    Do not log an error if setsockopt(IPV6_MULTICAST_IF) returns an error and
+      the ifindex we attempted to set is already the scope in the bound address.
+
+  ntpd/refclock_conf.c@1.29 +6 -0
+    [Bug 1764] Palisade driver doesn't build on Linux.
+
+  ntpd/refclock_palisade.c@1.35 +3 -0
+    [Bug 1764] Palisade driver doesn't build on Linux.
+
+  ntpq/ntpq-subs.c@1.78 +46 -123
+    Move ntp_control.h variable IDs to ntp_control.c, remove their use by
+      ntpq.  They are implementation details private to ntpd.  [Bug 597] was
+      caused by ntpq's reliance on these IDs it need not know about.
+
+  ntpq/ntpq.c@1.125 +124 -290
+    Move ntp_control.h variable IDs to ntp_control.c, remove their use by
+      ntpq.  They are implementation details private to ntpd.  [Bug 597] was
+      caused by ntpq's reliance on these IDs it need not know about.
+
+  ntpq/ntpq.h@1.23 +5 -8
+    Move ntp_control.h variable IDs to ntp_control.c, remove their use by
+      ntpq.  They are implementation details private to ntpd.  [Bug 597] was
+      caused by ntpq's reliance on these IDs it need not know about.
+
 ChangeSet@1.2390, 2010-12-30 10:32:31+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P106
   TAG: NTP_4_2_7P106
