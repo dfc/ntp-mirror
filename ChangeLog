@@ -1,3 +1,8 @@
+(4.2.7p108) 2011/01/01 Released by Harlan Stenn <stenn@ntp.org>
+* [Bug 1764] Move Palisade modem control logic to configure.ac.
+* [Bug 1768] TIOCFLUSH undefined in linux for refclock_acts.
+* Autokey multiple identity group improvements from Dave Mills.
+* from 4.2.6p3: Update the copyright year.
 (4.2.7p107) 2010/12/31 Released by Harlan Stenn <stenn@ntp.org>
 * [Bug 1764] Palisade driver doesn't build on Linux.
 * [Bug 1766] Oncore clock has offset/high jitter at startup.
@@ -11,7 +16,7 @@
 (4.2.7p104) 2010/12/28 Released by Harlan Stenn <stenn@ntp.org>
 * from 4.2.6p3: Create and use scripts/check--help when generating
   .texi files.
-* from 4.2.6p3: Update bk triggers or the bk-5 release.
+* from 4.2.6p3: Update bk triggers for the bk-5 release.
 * Support for multiple Autokey identity groups from Dave Mills.
 * Documentation updates from Dave Mills.
 * Add ntpq kerninfo, authinfo, and sysinfo commands similar to ntpdc's.
@@ -599,9 +604,11 @@
 * [Bug 1407] configure.ac: recent GNU Make -v does not include "version".
 ---
 
+* [Bug 1764] Palisade driver doesn't build on Linux
 * Create and use scripts/check--help when generating .texi files.
 * Update bk triggers for the bk-5 release.
 * Update genCommitLog for the bk-5 release.
+* Update the copyright year.
 
 ---
 (4.2.6p3-RC12) 2010/12/25 Released by Harlan Stenn <stenn@ntp.org>

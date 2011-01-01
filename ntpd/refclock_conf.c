@@ -7,12 +7,6 @@
 
 #include <stdio.h>
 #include <sys/types.h>
-#ifdef HAVE_TERMIOS_H
-# include <termios.h>
-#endif
-#ifdef HAVE_SYS_IOCTL_H
-# include <sys/ioctl.h>		/* TIOCMSET here in recent Linux */
-#endif
 
 #include "ntpd.h"
 #include "ntp_refclock.h"
@@ -174,8 +168,8 @@ extern	struct refclock refclock_shm;
 #define refclock_shm refclock_none
 #endif
 
-#if defined(CLOCK_PALISADE) && defined(TIOCMSET)
-extern  struct refclock refclock_palisade;
+#ifdef CLOCK_PALISADE 
+extern	struct refclock refclock_palisade;
 #else
 #define refclock_palisade refclock_none
 #endif
@@ -270,7 +264,7 @@ extern	struct refclock	refclock_neoclock4x;
  *
  * Types are defined in ntp.h.  The index must match this.
  */
-struct refclock *refclock_conf[] = {
+struct refclock * const refclock_conf[] = {
 	&refclock_none,		/* 0 REFCLK_NONE */
 	&refclock_local,	/* 1 REFCLK_LOCAL */
 	&refclock_none,		/* 2 deprecated: REFCLK_GPS_TRAK */

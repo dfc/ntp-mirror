@@ -1,3 +1,189 @@
+ChangeSet@1.2402, 2011-01-01 10:32:58+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P108
+  TAG: NTP_4_2_7P108
+
+  ChangeLog@1.746 +1 -0
+    NTP_4_2_7P108
+
+  clockstuff/clktest-opts.c@1.32 +4 -4
+    NTP_4_2_7P108
+
+  clockstuff/clktest-opts.h@1.32 +4 -4
+    NTP_4_2_7P108
+
+  ntpd/ntpd-opts.c@1.112 +4 -4
+    NTP_4_2_7P108
+
+  ntpd/ntpd-opts.h@1.112 +4 -4
+    NTP_4_2_7P108
+
+  ntpd/ntpd-opts.texi@1.110 +2 -2
+    NTP_4_2_7P108
+
+  ntpd/ntpd.1@1.110 +2 -2
+    NTP_4_2_7P108
+
+  ntpdc/ntpdc-opts.c@1.109 +4 -4
+    NTP_4_2_7P108
+
+  ntpdc/ntpdc-opts.h@1.109 +4 -4
+    NTP_4_2_7P108
+
+  ntpdc/ntpdc-opts.texi@1.109 +2 -2
+    NTP_4_2_7P108
+
+  ntpdc/ntpdc.1@1.109 +2 -2
+    NTP_4_2_7P108
+
+  ntpq/ntpq-opts.c@1.109 +4 -4
+    NTP_4_2_7P108
+
+  ntpq/ntpq-opts.h@1.109 +4 -4
+    NTP_4_2_7P108
+
+  ntpq/ntpq-opts.texi@1.109 +2 -2
+    NTP_4_2_7P108
+
+  ntpq/ntpq.1@1.109 +2 -2
+    NTP_4_2_7P108
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.109 +4 -4
+    NTP_4_2_7P108
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.109 +4 -4
+    NTP_4_2_7P108
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.109 +2 -2
+    NTP_4_2_7P108
+
+  ntpsnmpd/ntpsnmpd.1@1.109 +2 -2
+    NTP_4_2_7P108
+
+  packageinfo.sh@1.110 +1 -1
+    NTP_4_2_7P108
+
+  sntp/sntp-opts.c@1.109 +4 -4
+    NTP_4_2_7P108
+
+  sntp/sntp-opts.h@1.109 +4 -4
+    NTP_4_2_7P108
+
+  sntp/sntp-opts.texi@1.109 +2 -2
+    NTP_4_2_7P108
+
+  sntp/sntp.1@1.109 +2 -2
+    NTP_4_2_7P108
+
+  sntp/sntp.html@1.109 +2 -2
+    NTP_4_2_7P108
+
+  util/ntp-keygen-opts.c@1.107 +4 -4
+    NTP_4_2_7P108
+
+  util/ntp-keygen-opts.h@1.107 +4 -4
+    NTP_4_2_7P108
+
+  util/ntp-keygen-opts.texi@1.110 +2 -2
+    NTP_4_2_7P108
+
+  util/ntp-keygen.1@1.110 +2 -2
+    NTP_4_2_7P108
+
+ChangeSet@1.2400, 2010-12-31 20:41:55-05:00, stenn@deacon.udel.edu
+  Typo cleanup from DLM's recent changes
+
+  ntpd/ntp_control.c@1.154 +1 -1
+    Typo cleanup from DLM's recent changes
+
+  ntpd/ntp_crypto.c@1.152 +0 -1
+    Typo cleanup from DLM's recent changes
+
+ChangeSet@1.2082.4.198, 2010-12-31 20:38:09-05:00, stenn@deacon.udel.edu
+  Update the copyright year
+
+  ChangeLog@1.496.26.141 +1 -0
+    Update the copyright year
+
+  include/copyright.def@1.13 +1 -1
+    Update the copyright year
+
+ChangeSet@1.2396.1.1, 2010-12-31 19:47:13-05:00, stenn@deacon.udel.edu
+  typo
+
+  ChangeLog@1.742.1.1 +1 -1
+    typo
+
+ChangeSet@1.2398, 2010-12-31 23:55:50+00:00, davehart@shiny.ad.hartbrothers.com
+  remove -dev-only remains of earlier [Bug 1764] fix from
+    ntpd/refclock_conf.c
+
+  include/ntpd.h@1.156 +4 -3
+    use gcc printf() format attribute in mprintf_clock_stats() decl
+
+  ntpd/ntp_util.c@1.89 +2 -3
+    fix warning about return; from mprintf_clock_stats() without value.
+
+  ntpd/refclock_conf.c@1.31 +0 -6
+    remove -dev-only remains of earlier [Bug 1764] fix
+
+ChangeSet@1.2082.4.197, 2010-12-31 23:12:25+00:00, davehart@shiny.ad.hartbrothers.com
+  Test for modem control just once in configure.ac
+
+  configure.ac@1.465.1.26 +39 -45
+    Test for modem control support just once
+
+  include/ntpd.h@1.137.2.5 +2 -1
+    make refclock_conf[] pointers const
+
+  ntpd/refclock_conf.c@1.28.1.2 +2 -2
+    make refclock_conf[] pointers const
+
+ChangeSet@1.2396, 2010-12-31 17:34:44-05:00, stenn@deacon.udel.edu
+  Autokey multiple identity group improvements from Dave Mills
+
+  ChangeLog@1.742 +1 -0
+    Autokey multiple identity group improvements from Dave Mills
+
+  html/authopt.html@1.69 +11 -8
+    Autokey multiple identity group improvements from Dave Mills
+
+  html/confopt.html@1.55 +2 -2
+    Autokey multiple identity group improvements from Dave Mills
+
+  ntpd/ntp_control.c@1.153 +2 -2
+    Autokey multiple identity group improvements from Dave Mills
+
+  ntpd/ntp_crypto.c@1.151 +24 -19
+    Autokey multiple identity group improvements from Dave Mills
+
+  util/ntp-keygen.c@1.73 +3 -8
+    Autokey multiple identity group improvements from Dave Mills
+
+ChangeSet@1.2395, 2010-12-31 17:29:22-05:00, stenn@deacon.udel.edu
+  [Bug 1768] TIOCFLUSH undefined in linux for refclock_acts
+
+  ChangeLog@1.741 +1 -0
+    [Bug 1768] TIOCFLUSH undefined in linux for refclock_acts
+
+  ntpd/refclock_acts.c@1.41 +47 -29
+    [Bug 1768] TIOCFLUSH undefined in linux for refclock_acts
+
+ChangeSet@1.2082.4.196, 2010-12-31 16:28:55-05:00, murray@malarky.udel.edu
+  refclock_conf.c, configure.ac, refclock_palisade.c, ChangeLog:
+    [Bug 1764] Palisade driver doesn't build on Linux. (cleanup)
+
+  ChangeLog@1.496.26.140 +1 -0
+    [Bug 1764] Palisade driver doesn't build on Linux. (cleanup)
+
+  configure.ac@1.465.1.25 +16 -9
+    [Bug 1764] Palisade driver doesn't build on Linux. (cleanup)
+
+  ntpd/refclock_conf.c@1.28.1.1 +1 -1
+    [Bug 1764] Palisade driver doesn't build on Linux. (cleanup)
+
+  ntpd/refclock_palisade.c@1.31.1.3 +0 -5
+    [Bug 1764] Palisade driver doesn't build on Linux. (cleanup)
+
 ChangeSet@1.2394, 2010-12-31 10:50:21+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P107
   TAG: NTP_4_2_7P107
