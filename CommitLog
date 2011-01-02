@@ -1,3 +1,228 @@
+ChangeSet@1.2410, 2011-01-02 10:23:49+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P109
+  TAG: NTP_4_2_7P109
+
+  ChangeLog@1.749 +1 -0
+    NTP_4_2_7P109
+
+  clockstuff/clktest-opts.c@1.33 +2 -2
+    NTP_4_2_7P109
+
+  clockstuff/clktest-opts.h@1.33 +3 -3
+    NTP_4_2_7P109
+
+  ntpd/ntpd-opts.c@1.113 +2 -2
+    NTP_4_2_7P109
+
+  ntpd/ntpd-opts.h@1.113 +3 -3
+    NTP_4_2_7P109
+
+  ntpd/ntpd-opts.texi@1.111 +2 -2
+    NTP_4_2_7P109
+
+  ntpd/ntpd.1@1.111 +2 -2
+    NTP_4_2_7P109
+
+  ntpdc/ntpdc-opts.c@1.110 +2 -2
+    NTP_4_2_7P109
+
+  ntpdc/ntpdc-opts.h@1.110 +3 -3
+    NTP_4_2_7P109
+
+  ntpdc/ntpdc-opts.texi@1.110 +2 -2
+    NTP_4_2_7P109
+
+  ntpdc/ntpdc.1@1.110 +2 -2
+    NTP_4_2_7P109
+
+  ntpq/ntpq-opts.c@1.110 +2 -2
+    NTP_4_2_7P109
+
+  ntpq/ntpq-opts.h@1.110 +3 -3
+    NTP_4_2_7P109
+
+  ntpq/ntpq-opts.texi@1.110 +2 -2
+    NTP_4_2_7P109
+
+  ntpq/ntpq.1@1.110 +2 -2
+    NTP_4_2_7P109
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.110 +2 -2
+    NTP_4_2_7P109
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.110 +3 -3
+    NTP_4_2_7P109
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.110 +2 -2
+    NTP_4_2_7P109
+
+  ntpsnmpd/ntpsnmpd.1@1.110 +2 -2
+    NTP_4_2_7P109
+
+  packageinfo.sh@1.111 +1 -1
+    NTP_4_2_7P109
+
+  sntp/sntp-opts.c@1.110 +2 -2
+    NTP_4_2_7P109
+
+  sntp/sntp-opts.h@1.110 +3 -3
+    NTP_4_2_7P109
+
+  sntp/sntp-opts.texi@1.110 +2 -2
+    NTP_4_2_7P109
+
+  sntp/sntp.1@1.110 +2 -2
+    NTP_4_2_7P109
+
+  sntp/sntp.html@1.110 +2 -2
+    NTP_4_2_7P109
+
+  util/ntp-keygen-opts.c@1.108 +2 -2
+    NTP_4_2_7P109
+
+  util/ntp-keygen-opts.h@1.108 +3 -3
+    NTP_4_2_7P109
+
+  util/ntp-keygen-opts.texi@1.111 +2 -2
+    NTP_4_2_7P109
+
+  util/ntp-keygen.1@1.111 +2 -2
+    NTP_4_2_7P109
+
+ChangeSet@1.2409, 2011-01-02 09:50:53+00:00, davehart@shiny.ad.hartbrothers.com
+  quiet warning about n potentially used uninit in ntpq's collect_display_vdc()
+
+  ntpq/ntpq-subs.c@1.80 +1 -0
+    quiet warning about n potentially used uninit in collect_display_vdc()
+
+ChangeSet@1.2408, 2011-01-02 09:41:39+00:00, davehart@shiny.ad.hartbrothers.com
+  refactor peer_st_flags() and kstatus_to_text() to use common
+    data-driven loop instead of repeated macro expansions.
+
+  include/lib_strbuf.h@1.7 +15 -15
+    increase LIB_GETBUF() line limit to 128 from 80, reduce number
+      of buffers from 200 to 16.  Reduces memory footprint from 16k
+      to 4k.  k_st_flags() in statestr.c needs more than 80.
+
+  include/ntp.h@1.192 +0 -6
+    move TRUE/FALSE defines to ntp_types.h so lib_strbuf.h has them.
+
+  include/ntp_stdlib.h@1.54 +3 -5
+    add k_st_flags() declaration, remove declarations for three functions
+      apparently removed long ago.
+
+  include/ntp_types.h@1.21 +8 -0
+    move TRUE/FALSE defines to ntp_types.h so lib_strbuf.h has them.
+
+  libntp/lib_strbuf.c@1.6 +1 -1
+    increase LIB_GETBUF() line limit to 128 from 80, reduce number
+      of buffers from 200 to 16.  Reduces memory footprint from 16k
+      to 4k.  k_st_flags() in statestr.c needs more than 80.
+
+  libntp/statestr.c@1.24 +140 -26
+    refactor peer_st_flags() and kstatus_to_text() to use common
+      data-driven loop instead of repeated macro expansions.
+
+  ntpd/ntp_control.c@1.156 +3 -133
+    use common code from statestr.c for server side of ntpq -c kerninfo's
+      decoding of kernel loop status bits.
+
+  ntpq/ntpq-subs.c@1.79 +2 -0
+    Do not crash on an empty value in collect_display_vdc()
+
+ChangeSet@1.2407, 2011-01-02 06:15:33+00:00, davehart@shiny.ad.hartbrothers.com
+  ChangeLog was omitted accidentally from last cset
+
+  ChangeLog@1.748 +3 -0
+    Remove nearly all strcpy() and most strcat() from NTP distribution.
+      One major pocket remains in ntp_crypto.c.  libopts & libisc also have
+      (safe) uses of strcpy() and strcat() remaining.
+
+ChangeSet@1.2406, 2011-01-02 05:13:56+00:00, davehart@shiny.ad.hartbrothers.com
+  Remove nearly all strcpy() and most strcat() from NTP distribution.
+    One major pocket remains in ntp_crypto.c.  libopts & libisc also have
+    (safe) uses of strcpy() and strcat() remaining
+
+  include/ntpd.h@1.157 +2 -0
+    add mprintf_event() alternative to report_event()
+
+  libntp/findconfig.c@1.4 +4 -2
+    strcpy() -> strncpy()
+
+  libntp/statestr.c@1.23 +88 -82
+    get rid of strcpy(), strcat() use in statustoa()
+    mark constant statestr.c arrays such.
+
+  libntp/systime.c@1.51 +10 -10
+    strcpy() -> strncpy()
+
+  ntpd/ntp_control.c@1.155 +41 -22
+    add mprintf_event() alternative to report_event()
+
+  ntpd/ntp_peer.c@1.144 +2 -7
+    use mprintf_event() in a two places
+
+  ntpd/ntp_util.c@1.90 +38 -33
+    strcpy() -> strncpy()
+
+  ntpd/refclock_arbiter.c@1.17 +3 -2
+    strcpy() -> strncpy()
+
+  ntpd/refclock_as2201.c@1.12 +9 -4
+    bounds-checked strcpy() -> memcpy()
+
+  ntpd/refclock_chu.c@1.49 +1 -1
+    strcpy() -> strncpy()
+
+  ntpd/refclock_hpgps.c@1.11 +2 -2
+    bounds-checked strcpy() -> memcpy(), strcpy() -> strncpy()
+
+  ntpd/refclock_neoclock4x.c@1.19 +9 -8
+    strcpy() -> strncpy()
+
+  ntpd/refclock_oncore.c@1.90 +2 -1
+    add gcc printf format attribute to oncore_log_f declaration.
+
+  ntpd/refclock_parse.c@1.56 +4 -3
+    bounds-checked strcpy() -> memcpy()
+
+  ntpd/refclock_true.c@1.15 +1 -1
+    strcpy() -> strncpy()
+
+  ntpdate/ntpdate.c@1.80 +6 -6
+    strcpy() -> strncpy()
+
+  ntpdc/ntpdc.c@1.91 +2 -2
+    strcpy() -> strncpy()
+
+  ntpdc/ntpdc_ops.c@1.74 +1 -1
+    strcpy() -> strncpy()
+
+  ntpq/ntpq.c@1.126 +1 -1
+    strcpy() -> strncpy()
+
+  ports/winnt/libntp/randfile.c@1.5 +1 -2
+    strcpy()+strcat() -> snprintf()
+
+ChangeSet@1.2405, 2011-01-01 11:30:29+00:00, hart@psp-os1.ntp.org
+  copyright.html:
+    bump copyright.html for 2011
+
+  html/copyright.html@1.56 +2 -2
+    bump copyright.html for 2011
+
+ChangeSet@1.2403, 2011-01-01 06:23:20-05:00, stenn@deacon.udel.edu
+  Documentation updates from Dave Mills
+
+  ChangeLog@1.747 +1 -0
+    Documentation updates from Dave Mills
+
+  html/autokey.html@1.18 +2 -3
+    Documentation updates from Dave Mills
+
+  html/copyright.html@1.54 +19 -1
+    Documentation updates from Dave Mills
+
 ChangeSet@1.2402, 2011-01-01 10:32:58+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P108
   TAG: NTP_4_2_7P108
@@ -88,6 +313,13 @@ ChangeSet@1.2402, 2011-01-01 10:32:58+00:00, stenn@deacon.udel.edu
 
   util/ntp-keygen.1@1.110 +2 -2
     NTP_4_2_7P108
+
+ChangeSet@1.2082.4.199, 2011-01-01 08:35:01+00:00, hart@psp-os1.ntp.org
+  copyright.html:
+    bump copyright.html to 2011
+
+  html/copyright.html@1.46.1.3 +2 -2
+    bump copyright.html to 2011
 
 ChangeSet@1.2400, 2010-12-31 20:41:55-05:00, stenn@deacon.udel.edu
   Typo cleanup from DLM's recent changes
