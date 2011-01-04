@@ -76,6 +76,9 @@ audio_pcm_SOURCES = audio-pcm.c
 audio_pcm_OBJECTS = audio-pcm.$(OBJEXT)
 audio_pcm_LDADD = $(LDADD)
 audio_pcm_DEPENDENCIES = ../libntp/libntp.a
+AM_V_lt = $(am__v_lt_$(V))
+am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
+am__v_lt_0 = --silent
 byteorder_SOURCES = byteorder.c
 byteorder_OBJECTS = byteorder.$(OBJEXT)
 byteorder_LDADD = $(LDADD)
@@ -141,13 +144,26 @@ am__depfiles_maybe = depfiles
 am__mv = mv -f
 COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
-LTCOMPILE = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
-	--mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
-	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+LTCOMPILE = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
+	$(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) \
+	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+	$(AM_CFLAGS) $(CFLAGS)
+AM_V_CC = $(am__v_CC_$(V))
+am__v_CC_ = $(am__v_CC_$(AM_DEFAULT_VERBOSITY))
+am__v_CC_0 = @echo "  CC    " $@;
+AM_V_at = $(am__v_at_$(V))
+am__v_at_ = $(am__v_at_$(AM_DEFAULT_VERBOSITY))
+am__v_at_0 = @
 CCLD = $(CC)
-LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
-	--mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
-	$(LDFLAGS) -o $@
+LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
+	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+AM_V_CCLD = $(am__v_CCLD_$(V))
+am__v_CCLD_ = $(am__v_CCLD_$(AM_DEFAULT_VERBOSITY))
+am__v_CCLD_0 = @echo "  CCLD  " $@;
+AM_V_GEN = $(am__v_GEN_$(V))
+am__v_GEN_ = $(am__v_GEN_$(AM_DEFAULT_VERBOSITY))
+am__v_GEN_0 = @echo "  GEN   " $@;
 SOURCES = audio-pcm.c byteorder.c hist.c $(jitter_SOURCES) kern.c \
 	longsize.c $(ntp_keygen_SOURCES) ntptime.c pps-api.c \
 	precision.c sht.c testrs6000.c tg.c tg2.c tickadj.c timetrim.c
@@ -185,6 +201,7 @@ DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 ACLOCAL = @ACLOCAL@
 ALLOCA = @ALLOCA@
 AMTAR = @AMTAR@
+AM_DEFAULT_VERBOSITY = @AM_DEFAULT_VERBOSITY@
 AR = @AR@
 AUTOCONF = @AUTOCONF@
 AUTOHEADER = @AUTOHEADER@
@@ -491,52 +508,52 @@ clean-sbinPROGRAMS:
 	rm -f $$list
 audio-pcm$(EXEEXT): $(audio_pcm_OBJECTS) $(audio_pcm_DEPENDENCIES) 
 	@rm -f audio-pcm$(EXEEXT)
-	$(LINK) $(audio_pcm_OBJECTS) $(audio_pcm_LDADD) $(LIBS)
+	$(AM_V_CCLD)$(LINK) $(audio_pcm_OBJECTS) $(audio_pcm_LDADD) $(LIBS)
 byteorder$(EXEEXT): $(byteorder_OBJECTS) $(byteorder_DEPENDENCIES) 
 	@rm -f byteorder$(EXEEXT)
-	$(LINK) $(byteorder_OBJECTS) $(byteorder_LDADD) $(LIBS)
+	$(AM_V_CCLD)$(LINK) $(byteorder_OBJECTS) $(byteorder_LDADD) $(LIBS)
 hist$(EXEEXT): $(hist_OBJECTS) $(hist_DEPENDENCIES) 
 	@rm -f hist$(EXEEXT)
-	$(LINK) $(hist_OBJECTS) $(hist_LDADD) $(LIBS)
+	$(AM_V_CCLD)$(LINK) $(hist_OBJECTS) $(hist_LDADD) $(LIBS)
 jitter$(EXEEXT): $(jitter_OBJECTS) $(jitter_DEPENDENCIES) 
 	@rm -f jitter$(EXEEXT)
-	$(LINK) $(jitter_OBJECTS) $(jitter_LDADD) $(LIBS)
+	$(AM_V_CCLD)$(LINK) $(jitter_OBJECTS) $(jitter_LDADD) $(LIBS)
 kern$(EXEEXT): $(kern_OBJECTS) $(kern_DEPENDENCIES) 
 	@rm -f kern$(EXEEXT)
-	$(LINK) $(kern_OBJECTS) $(kern_LDADD) $(LIBS)
+	$(AM_V_CCLD)$(LINK) $(kern_OBJECTS) $(kern_LDADD) $(LIBS)
 longsize$(EXEEXT): $(longsize_OBJECTS) $(longsize_DEPENDENCIES) 
 	@rm -f longsize$(EXEEXT)
-	$(LINK) $(longsize_OBJECTS) $(longsize_LDADD) $(LIBS)
+	$(AM_V_CCLD)$(LINK) $(longsize_OBJECTS) $(longsize_LDADD) $(LIBS)
 ntp-keygen$(EXEEXT): $(ntp_keygen_OBJECTS) $(ntp_keygen_DEPENDENCIES) 
 	@rm -f ntp-keygen$(EXEEXT)
-	$(LINK) $(ntp_keygen_OBJECTS) $(ntp_keygen_LDADD) $(LIBS)
+	$(AM_V_CCLD)$(LINK) $(ntp_keygen_OBJECTS) $(ntp_keygen_LDADD) $(LIBS)
 ntptime$(EXEEXT): $(ntptime_OBJECTS) $(ntptime_DEPENDENCIES) 
 	@rm -f ntptime$(EXEEXT)
-	$(LINK) $(ntptime_OBJECTS) $(ntptime_LDADD) $(LIBS)
+	$(AM_V_CCLD)$(LINK) $(ntptime_OBJECTS) $(ntptime_LDADD) $(LIBS)
 pps-api$(EXEEXT): $(pps_api_OBJECTS) $(pps_api_DEPENDENCIES) 
 	@rm -f pps-api$(EXEEXT)
-	$(LINK) $(pps_api_OBJECTS) $(pps_api_LDADD) $(LIBS)
+	$(AM_V_CCLD)$(LINK) $(pps_api_OBJECTS) $(pps_api_LDADD) $(LIBS)
 precision$(EXEEXT): $(precision_OBJECTS) $(precision_DEPENDENCIES) 
 	@rm -f precision$(EXEEXT)
-	$(LINK) $(precision_OBJECTS) $(precision_LDADD) $(LIBS)
+	$(AM_V_CCLD)$(LINK) $(precision_OBJECTS) $(precision_LDADD) $(LIBS)
 sht$(EXEEXT): $(sht_OBJECTS) $(sht_DEPENDENCIES) 
 	@rm -f sht$(EXEEXT)
-	$(LINK) $(sht_OBJECTS) $(sht_LDADD) $(LIBS)
+	$(AM_V_CCLD)$(LINK) $(sht_OBJECTS) $(sht_LDADD) $(LIBS)
 testrs6000$(EXEEXT): $(testrs6000_OBJECTS) $(testrs6000_DEPENDENCIES) 
 	@rm -f testrs6000$(EXEEXT)
-	$(LINK) $(testrs6000_OBJECTS) $(testrs6000_LDADD) $(LIBS)
+	$(AM_V_CCLD)$(LINK) $(testrs6000_OBJECTS) $(testrs6000_LDADD) $(LIBS)
 tg$(EXEEXT): $(tg_OBJECTS) $(tg_DEPENDENCIES) 
 	@rm -f tg$(EXEEXT)
-	$(LINK) $(tg_OBJECTS) $(tg_LDADD) $(LIBS)
+	$(AM_V_CCLD)$(LINK) $(tg_OBJECTS) $(tg_LDADD) $(LIBS)
 tg2$(EXEEXT): $(tg2_OBJECTS) $(tg2_DEPENDENCIES) 
 	@rm -f tg2$(EXEEXT)
-	$(LINK) $(tg2_OBJECTS) $(tg2_LDADD) $(LIBS)
+	$(AM_V_CCLD)$(LINK) $(tg2_OBJECTS) $(tg2_LDADD) $(LIBS)
 tickadj$(EXEEXT): $(tickadj_OBJECTS) $(tickadj_DEPENDENCIES) 
 	@rm -f tickadj$(EXEEXT)
-	$(LINK) $(tickadj_OBJECTS) $(tickadj_LDADD) $(LIBS)
+	$(AM_V_CCLD)$(LINK) $(tickadj_OBJECTS) $(tickadj_LDADD) $(LIBS)
 timetrim$(EXEEXT): $(timetrim_OBJECTS) $(timetrim_DEPENDENCIES) 
 	@rm -f timetrim$(EXEEXT)
-	$(LINK) $(timetrim_OBJECTS) $(timetrim_LDADD) $(LIBS)
+	$(AM_V_CCLD)$(LINK) $(timetrim_OBJECTS) $(timetrim_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -563,22 +580,25 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/timetrim.Po@am__quote@
 
 .c.o:
-@am__fastdepCC_TRUE@	$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
-@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
+@am__fastdepCC_FALSE@	$(AM_V_CC) @AM_BACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(COMPILE) -c $<
 
 .c.obj:
-@am__fastdepCC_TRUE@	$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ `$(CYGPATH_W) '$<'`
-@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ `$(CYGPATH_W) '$<'`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
+@am__fastdepCC_FALSE@	$(AM_V_CC) @AM_BACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(COMPILE) -c `$(CYGPATH_W) '$<'`
 
 .c.lo:
-@am__fastdepCC_TRUE@	$(LTCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
-@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Plo
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LTCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Plo
+@am__fastdepCC_FALSE@	$(AM_V_CC) @AM_BACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='$<' object='$@' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(LTCOMPILE) -c -o $@ $<

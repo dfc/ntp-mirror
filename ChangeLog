@@ -1,3 +1,13 @@
+(4.2.7p110) 2011/01/04 Released by Harlan Stenn <stenn@ntp.org>
+* [Bug 1771] algorithmic error in 'clocktime()' fixed.
+* Unit tests extended for hard-coded system time.
+* make V=0 and configure --enable-silent-rules supported.
+* setvar modemsetup = ATE0... overrides ACTS driver default.
+* Preserve last timecode in ACTS driver (ntpq -ccv).
+* Tolerate previous ATE1 state when sending ACTS setup.
+* Enable raw tty line discipline in Windows port.
+* Allow tty open/close/open to succeed on Windows port.
+* Enable ACTS and CHU reference clock drivers on Windows.
 (4.2.7p109) 2011/01/02 Released by Harlan Stenn <stenn@ntp.org>
 * Remove nearly all strcpy() and most strcat() from NTP distribution.
   One major pocket remains in ntp_crypto.c.  libopts & libisc also have
@@ -608,6 +618,7 @@
 (4.2.7) 2009/12/09 Released by Harlan Stenn <stenn@ntp.org>
 * [Bug 1407] configure.ac: recent GNU Make -v does not include "version".
 ---
+(4.2.6p3) 2011/01/03 Released by Harlan Stenn <stenn@ntp.org>
 
 * [Bug 1764] Palisade driver doesn't build on Linux
 * Create and use scripts/check--help when generating .texi files.

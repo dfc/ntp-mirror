@@ -67,6 +67,12 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 LIBRARIES = $(noinst_LIBRARIES)
 ARFLAGS = cru
+AM_V_AR = $(am__v_AR_$(V))
+am__v_AR_ = $(am__v_AR_$(AM_DEFAULT_VERBOSITY))
+am__v_AR_0 = @echo "  AR    " $@;
+AM_V_at = $(am__v_at_$(V))
+am__v_at_ = $(am__v_at_$(AM_DEFAULT_VERBOSITY))
+am__v_at_0 = @
 libntpd_a_AR = $(AR) $(ARFLAGS)
 libntpd_a_LIBADD =
 am__objects_1 =
@@ -106,6 +112,9 @@ check_y2k_SOURCES = check_y2k.c
 check_y2k_OBJECTS = check_y2k.$(OBJEXT)
 am__DEPENDENCIES_1 = version.o libntpd.a
 check_y2k_DEPENDENCIES = $(am__DEPENDENCIES_1) ../libntp/libntp.a
+AM_V_lt = $(am__v_lt_$(V))
+am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
+am__v_lt_0 = --silent
 keyword_gen_SOURCES = keyword-gen.c
 keyword_gen_OBJECTS = keyword-gen.$(OBJEXT)
 keyword_gen_DEPENDENCIES = ../libntp/libntp.a
@@ -125,26 +134,39 @@ am_ntpdsim_OBJECTS = $(am__objects_2) ntpdsim-ntp_prio_q.$(OBJEXT) \
 ntpdsim_OBJECTS = $(am_ntpdsim_OBJECTS)
 ntpdsim_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_2) \
 	$(am__DEPENDENCIES_2) ../libntp/libntpsim.a
-ntpdsim_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
-	--mode=link $(CCLD) $(ntpdsim_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
-	$(LDFLAGS) -o $@
+ntpdsim_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
+	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(ntpdsim_CFLAGS) \
+	$(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
 DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/depcomp
 am__depfiles_maybe = depfiles
 am__mv = mv -f
 COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
-LTCOMPILE = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
-	--mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
-	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+LTCOMPILE = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
+	$(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) \
+	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+	$(AM_CFLAGS) $(CFLAGS)
+AM_V_CC = $(am__v_CC_$(V))
+am__v_CC_ = $(am__v_CC_$(AM_DEFAULT_VERBOSITY))
+am__v_CC_0 = @echo "  CC    " $@;
 CCLD = $(CC)
-LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
-	--mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
-	$(LDFLAGS) -o $@
+LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
+	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+AM_V_CCLD = $(am__v_CCLD_$(V))
+am__v_CCLD_ = $(am__v_CCLD_$(AM_DEFAULT_VERBOSITY))
+am__v_CCLD_0 = @echo "  CCLD  " $@;
 YACCCOMPILE = $(YACC) $(YFLAGS) $(AM_YFLAGS)
-LTYACCCOMPILE = $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
-	--mode=compile $(YACC) $(YFLAGS) $(AM_YFLAGS)
+LTYACCCOMPILE = $(LIBTOOL) $(AM_V_lt) $(AM_LIBTOOLFLAGS) \
+	$(LIBTOOLFLAGS) --mode=compile $(YACC) $(YFLAGS) $(AM_YFLAGS)
+AM_V_YACC = $(am__v_YACC_$(V))
+am__v_YACC_ = $(am__v_YACC_$(AM_DEFAULT_VERBOSITY))
+am__v_YACC_0 = @echo "  YACC  " $@;
 YLWRAP = $(top_srcdir)/ylwrap
+AM_V_GEN = $(am__v_GEN_$(V))
+am__v_GEN_ = $(am__v_GEN_$(AM_DEFAULT_VERBOSITY))
+am__v_GEN_0 = @echo "  GEN   " $@;
 SOURCES = $(libntpd_a_SOURCES) check_y2k.c keyword-gen.c \
 	$(ntpd_SOURCES) $(ntpdsim_SOURCES)
 DIST_SOURCES = $(libntpd_a_SOURCES) check_y2k.c keyword-gen.c \
@@ -180,6 +202,7 @@ DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 ACLOCAL = @ACLOCAL@
 ALLOCA = @ALLOCA@
 AMTAR = @AMTAR@
+AM_DEFAULT_VERBOSITY = @AM_DEFAULT_VERBOSITY@
 AR = @AR@
 AUTOCONF = @AUTOCONF@
 AUTOHEADER = @AUTOHEADER@
@@ -534,9 +557,9 @@ $(am__aclocal_m4_deps):
 clean-noinstLIBRARIES:
 	-test -z "$(noinst_LIBRARIES)" || rm -f $(noinst_LIBRARIES)
 libntpd.a: $(libntpd_a_OBJECTS) $(libntpd_a_DEPENDENCIES) 
-	-rm -f libntpd.a
-	$(libntpd_a_AR) libntpd.a $(libntpd_a_OBJECTS) $(libntpd_a_LIBADD)
-	$(RANLIB) libntpd.a
+	$(AM_V_at)-rm -f libntpd.a
+	$(AM_V_AR)$(libntpd_a_AR) libntpd.a $(libntpd_a_OBJECTS) $(libntpd_a_LIBADD)
+	$(AM_V_at)$(RANLIB) libntpd.a
 install-binPROGRAMS: $(bin_PROGRAMS)
 	@$(NORMAL_INSTALL)
 	test -z "$(bindir)" || $(MKDIR_P) "$(DESTDIR)$(bindir)"
@@ -634,10 +657,10 @@ clean-sbinPROGRAMS:
 	rm -f $$list
 check_y2k$(EXEEXT): $(check_y2k_OBJECTS) $(check_y2k_DEPENDENCIES) 
 	@rm -f check_y2k$(EXEEXT)
-	$(LINK) $(check_y2k_OBJECTS) $(check_y2k_LDADD) $(LIBS)
+	$(AM_V_CCLD)$(LINK) $(check_y2k_OBJECTS) $(check_y2k_LDADD) $(LIBS)
 keyword-gen$(EXEEXT): $(keyword_gen_OBJECTS) $(keyword_gen_DEPENDENCIES) 
 	@rm -f keyword-gen$(EXEEXT)
-	$(LINK) $(keyword_gen_OBJECTS) $(keyword_gen_LDADD) $(LIBS)
+	$(AM_V_CCLD)$(LINK) $(keyword_gen_OBJECTS) $(keyword_gen_LDADD) $(LIBS)
 ntp_parser.h: ntp_parser.c
 	@if test ! -f $@; then \
 	  rm -f ntp_parser.c; \
@@ -645,10 +668,10 @@ ntp_parser.h: ntp_parser.c
 	else :; fi
 ntpd$(EXEEXT): $(ntpd_OBJECTS) $(ntpd_DEPENDENCIES) 
 	@rm -f ntpd$(EXEEXT)
-	$(LINK) $(ntpd_OBJECTS) $(ntpd_LDADD) $(LIBS)
+	$(AM_V_CCLD)$(LINK) $(ntpd_OBJECTS) $(ntpd_LDADD) $(LIBS)
 ntpdsim$(EXEEXT): $(ntpdsim_OBJECTS) $(ntpdsim_DEPENDENCIES) 
 	@rm -f ntpdsim$(EXEEXT)
-	$(ntpdsim_LINK) $(ntpdsim_OBJECTS) $(ntpdsim_LDADD) $(LIBS)
+	$(AM_V_CCLD)$(ntpdsim_LINK) $(ntpdsim_OBJECTS) $(ntpdsim_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -731,140 +754,159 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/work_thread.Po@am__quote@
 
 .c.o:
-@am__fastdepCC_TRUE@	$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
-@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
+@am__fastdepCC_FALSE@	$(AM_V_CC) @AM_BACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(COMPILE) -c $<
 
 .c.obj:
-@am__fastdepCC_TRUE@	$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ `$(CYGPATH_W) '$<'`
-@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ `$(CYGPATH_W) '$<'`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
+@am__fastdepCC_FALSE@	$(AM_V_CC) @AM_BACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(COMPILE) -c `$(CYGPATH_W) '$<'`
 
 .c.lo:
-@am__fastdepCC_TRUE@	$(LTCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
-@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Plo
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LTCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Plo
+@am__fastdepCC_FALSE@	$(AM_V_CC) @AM_BACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='$<' object='$@' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(LTCOMPILE) -c -o $@ $<
 
 ntpdsim-ntp_config.o: ntp_config.c
-@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -MT ntpdsim-ntp_config.o -MD -MP -MF $(DEPDIR)/ntpdsim-ntp_config.Tpo -c -o ntpdsim-ntp_config.o `test -f 'ntp_config.c' || echo '$(srcdir)/'`ntp_config.c
-@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/ntpdsim-ntp_config.Tpo $(DEPDIR)/ntpdsim-ntp_config.Po
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -MT ntpdsim-ntp_config.o -MD -MP -MF $(DEPDIR)/ntpdsim-ntp_config.Tpo -c -o ntpdsim-ntp_config.o `test -f 'ntp_config.c' || echo '$(srcdir)/'`ntp_config.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/ntpdsim-ntp_config.Tpo $(DEPDIR)/ntpdsim-ntp_config.Po
+@am__fastdepCC_FALSE@	$(AM_V_CC) @AM_BACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='ntp_config.c' object='ntpdsim-ntp_config.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -c -o ntpdsim-ntp_config.o `test -f 'ntp_config.c' || echo '$(srcdir)/'`ntp_config.c
 
 ntpdsim-ntp_config.obj: ntp_config.c
-@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -MT ntpdsim-ntp_config.obj -MD -MP -MF $(DEPDIR)/ntpdsim-ntp_config.Tpo -c -o ntpdsim-ntp_config.obj `if test -f 'ntp_config.c'; then $(CYGPATH_W) 'ntp_config.c'; else $(CYGPATH_W) '$(srcdir)/ntp_config.c'; fi`
-@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/ntpdsim-ntp_config.Tpo $(DEPDIR)/ntpdsim-ntp_config.Po
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -MT ntpdsim-ntp_config.obj -MD -MP -MF $(DEPDIR)/ntpdsim-ntp_config.Tpo -c -o ntpdsim-ntp_config.obj `if test -f 'ntp_config.c'; then $(CYGPATH_W) 'ntp_config.c'; else $(CYGPATH_W) '$(srcdir)/ntp_config.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/ntpdsim-ntp_config.Tpo $(DEPDIR)/ntpdsim-ntp_config.Po
+@am__fastdepCC_FALSE@	$(AM_V_CC) @AM_BACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='ntp_config.c' object='ntpdsim-ntp_config.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -c -o ntpdsim-ntp_config.obj `if test -f 'ntp_config.c'; then $(CYGPATH_W) 'ntp_config.c'; else $(CYGPATH_W) '$(srcdir)/ntp_config.c'; fi`
 
 ntpdsim-ntp_io.o: ntp_io.c
-@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -MT ntpdsim-ntp_io.o -MD -MP -MF $(DEPDIR)/ntpdsim-ntp_io.Tpo -c -o ntpdsim-ntp_io.o `test -f 'ntp_io.c' || echo '$(srcdir)/'`ntp_io.c
-@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/ntpdsim-ntp_io.Tpo $(DEPDIR)/ntpdsim-ntp_io.Po
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -MT ntpdsim-ntp_io.o -MD -MP -MF $(DEPDIR)/ntpdsim-ntp_io.Tpo -c -o ntpdsim-ntp_io.o `test -f 'ntp_io.c' || echo '$(srcdir)/'`ntp_io.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/ntpdsim-ntp_io.Tpo $(DEPDIR)/ntpdsim-ntp_io.Po
+@am__fastdepCC_FALSE@	$(AM_V_CC) @AM_BACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='ntp_io.c' object='ntpdsim-ntp_io.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -c -o ntpdsim-ntp_io.o `test -f 'ntp_io.c' || echo '$(srcdir)/'`ntp_io.c
 
 ntpdsim-ntp_io.obj: ntp_io.c
-@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -MT ntpdsim-ntp_io.obj -MD -MP -MF $(DEPDIR)/ntpdsim-ntp_io.Tpo -c -o ntpdsim-ntp_io.obj `if test -f 'ntp_io.c'; then $(CYGPATH_W) 'ntp_io.c'; else $(CYGPATH_W) '$(srcdir)/ntp_io.c'; fi`
-@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/ntpdsim-ntp_io.Tpo $(DEPDIR)/ntpdsim-ntp_io.Po
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -MT ntpdsim-ntp_io.obj -MD -MP -MF $(DEPDIR)/ntpdsim-ntp_io.Tpo -c -o ntpdsim-ntp_io.obj `if test -f 'ntp_io.c'; then $(CYGPATH_W) 'ntp_io.c'; else $(CYGPATH_W) '$(srcdir)/ntp_io.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/ntpdsim-ntp_io.Tpo $(DEPDIR)/ntpdsim-ntp_io.Po
+@am__fastdepCC_FALSE@	$(AM_V_CC) @AM_BACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='ntp_io.c' object='ntpdsim-ntp_io.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -c -o ntpdsim-ntp_io.obj `if test -f 'ntp_io.c'; then $(CYGPATH_W) 'ntp_io.c'; else $(CYGPATH_W) '$(srcdir)/ntp_io.c'; fi`
 
 ntpdsim-ntp_parser.o: ntp_parser.c
-@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -MT ntpdsim-ntp_parser.o -MD -MP -MF $(DEPDIR)/ntpdsim-ntp_parser.Tpo -c -o ntpdsim-ntp_parser.o `test -f 'ntp_parser.c' || echo '$(srcdir)/'`ntp_parser.c
-@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/ntpdsim-ntp_parser.Tpo $(DEPDIR)/ntpdsim-ntp_parser.Po
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -MT ntpdsim-ntp_parser.o -MD -MP -MF $(DEPDIR)/ntpdsim-ntp_parser.Tpo -c -o ntpdsim-ntp_parser.o `test -f 'ntp_parser.c' || echo '$(srcdir)/'`ntp_parser.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/ntpdsim-ntp_parser.Tpo $(DEPDIR)/ntpdsim-ntp_parser.Po
+@am__fastdepCC_FALSE@	$(AM_V_CC) @AM_BACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='ntp_parser.c' object='ntpdsim-ntp_parser.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -c -o ntpdsim-ntp_parser.o `test -f 'ntp_parser.c' || echo '$(srcdir)/'`ntp_parser.c
 
 ntpdsim-ntp_parser.obj: ntp_parser.c
-@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -MT ntpdsim-ntp_parser.obj -MD -MP -MF $(DEPDIR)/ntpdsim-ntp_parser.Tpo -c -o ntpdsim-ntp_parser.obj `if test -f 'ntp_parser.c'; then $(CYGPATH_W) 'ntp_parser.c'; else $(CYGPATH_W) '$(srcdir)/ntp_parser.c'; fi`
-@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/ntpdsim-ntp_parser.Tpo $(DEPDIR)/ntpdsim-ntp_parser.Po
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -MT ntpdsim-ntp_parser.obj -MD -MP -MF $(DEPDIR)/ntpdsim-ntp_parser.Tpo -c -o ntpdsim-ntp_parser.obj `if test -f 'ntp_parser.c'; then $(CYGPATH_W) 'ntp_parser.c'; else $(CYGPATH_W) '$(srcdir)/ntp_parser.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/ntpdsim-ntp_parser.Tpo $(DEPDIR)/ntpdsim-ntp_parser.Po
+@am__fastdepCC_FALSE@	$(AM_V_CC) @AM_BACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='ntp_parser.c' object='ntpdsim-ntp_parser.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -c -o ntpdsim-ntp_parser.obj `if test -f 'ntp_parser.c'; then $(CYGPATH_W) 'ntp_parser.c'; else $(CYGPATH_W) '$(srcdir)/ntp_parser.c'; fi`
 
 ntpdsim-ntp_scanner.o: ntp_scanner.c
-@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -MT ntpdsim-ntp_scanner.o -MD -MP -MF $(DEPDIR)/ntpdsim-ntp_scanner.Tpo -c -o ntpdsim-ntp_scanner.o `test -f 'ntp_scanner.c' || echo '$(srcdir)/'`ntp_scanner.c
-@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/ntpdsim-ntp_scanner.Tpo $(DEPDIR)/ntpdsim-ntp_scanner.Po
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -MT ntpdsim-ntp_scanner.o -MD -MP -MF $(DEPDIR)/ntpdsim-ntp_scanner.Tpo -c -o ntpdsim-ntp_scanner.o `test -f 'ntp_scanner.c' || echo '$(srcdir)/'`ntp_scanner.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/ntpdsim-ntp_scanner.Tpo $(DEPDIR)/ntpdsim-ntp_scanner.Po
+@am__fastdepCC_FALSE@	$(AM_V_CC) @AM_BACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='ntp_scanner.c' object='ntpdsim-ntp_scanner.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -c -o ntpdsim-ntp_scanner.o `test -f 'ntp_scanner.c' || echo '$(srcdir)/'`ntp_scanner.c
 
 ntpdsim-ntp_scanner.obj: ntp_scanner.c
-@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -MT ntpdsim-ntp_scanner.obj -MD -MP -MF $(DEPDIR)/ntpdsim-ntp_scanner.Tpo -c -o ntpdsim-ntp_scanner.obj `if test -f 'ntp_scanner.c'; then $(CYGPATH_W) 'ntp_scanner.c'; else $(CYGPATH_W) '$(srcdir)/ntp_scanner.c'; fi`
-@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/ntpdsim-ntp_scanner.Tpo $(DEPDIR)/ntpdsim-ntp_scanner.Po
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -MT ntpdsim-ntp_scanner.obj -MD -MP -MF $(DEPDIR)/ntpdsim-ntp_scanner.Tpo -c -o ntpdsim-ntp_scanner.obj `if test -f 'ntp_scanner.c'; then $(CYGPATH_W) 'ntp_scanner.c'; else $(CYGPATH_W) '$(srcdir)/ntp_scanner.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/ntpdsim-ntp_scanner.Tpo $(DEPDIR)/ntpdsim-ntp_scanner.Po
+@am__fastdepCC_FALSE@	$(AM_V_CC) @AM_BACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='ntp_scanner.c' object='ntpdsim-ntp_scanner.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -c -o ntpdsim-ntp_scanner.obj `if test -f 'ntp_scanner.c'; then $(CYGPATH_W) 'ntp_scanner.c'; else $(CYGPATH_W) '$(srcdir)/ntp_scanner.c'; fi`
 
 ntpdsim-ntpd.o: ntpd.c
-@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -MT ntpdsim-ntpd.o -MD -MP -MF $(DEPDIR)/ntpdsim-ntpd.Tpo -c -o ntpdsim-ntpd.o `test -f 'ntpd.c' || echo '$(srcdir)/'`ntpd.c
-@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/ntpdsim-ntpd.Tpo $(DEPDIR)/ntpdsim-ntpd.Po
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -MT ntpdsim-ntpd.o -MD -MP -MF $(DEPDIR)/ntpdsim-ntpd.Tpo -c -o ntpdsim-ntpd.o `test -f 'ntpd.c' || echo '$(srcdir)/'`ntpd.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/ntpdsim-ntpd.Tpo $(DEPDIR)/ntpdsim-ntpd.Po
+@am__fastdepCC_FALSE@	$(AM_V_CC) @AM_BACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='ntpd.c' object='ntpdsim-ntpd.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -c -o ntpdsim-ntpd.o `test -f 'ntpd.c' || echo '$(srcdir)/'`ntpd.c
 
 ntpdsim-ntpd.obj: ntpd.c
-@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -MT ntpdsim-ntpd.obj -MD -MP -MF $(DEPDIR)/ntpdsim-ntpd.Tpo -c -o ntpdsim-ntpd.obj `if test -f 'ntpd.c'; then $(CYGPATH_W) 'ntpd.c'; else $(CYGPATH_W) '$(srcdir)/ntpd.c'; fi`
-@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/ntpdsim-ntpd.Tpo $(DEPDIR)/ntpdsim-ntpd.Po
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -MT ntpdsim-ntpd.obj -MD -MP -MF $(DEPDIR)/ntpdsim-ntpd.Tpo -c -o ntpdsim-ntpd.obj `if test -f 'ntpd.c'; then $(CYGPATH_W) 'ntpd.c'; else $(CYGPATH_W) '$(srcdir)/ntpd.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/ntpdsim-ntpd.Tpo $(DEPDIR)/ntpdsim-ntpd.Po
+@am__fastdepCC_FALSE@	$(AM_V_CC) @AM_BACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='ntpd.c' object='ntpdsim-ntpd.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -c -o ntpdsim-ntpd.obj `if test -f 'ntpd.c'; then $(CYGPATH_W) 'ntpd.c'; else $(CYGPATH_W) '$(srcdir)/ntpd.c'; fi`
 
 ntpdsim-ntpd-opts.o: ntpd-opts.c
-@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -MT ntpdsim-ntpd-opts.o -MD -MP -MF $(DEPDIR)/ntpdsim-ntpd-opts.Tpo -c -o ntpdsim-ntpd-opts.o `test -f 'ntpd-opts.c' || echo '$(srcdir)/'`ntpd-opts.c
-@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/ntpdsim-ntpd-opts.Tpo $(DEPDIR)/ntpdsim-ntpd-opts.Po
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -MT ntpdsim-ntpd-opts.o -MD -MP -MF $(DEPDIR)/ntpdsim-ntpd-opts.Tpo -c -o ntpdsim-ntpd-opts.o `test -f 'ntpd-opts.c' || echo '$(srcdir)/'`ntpd-opts.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/ntpdsim-ntpd-opts.Tpo $(DEPDIR)/ntpdsim-ntpd-opts.Po
+@am__fastdepCC_FALSE@	$(AM_V_CC) @AM_BACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='ntpd-opts.c' object='ntpdsim-ntpd-opts.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -c -o ntpdsim-ntpd-opts.o `test -f 'ntpd-opts.c' || echo '$(srcdir)/'`ntpd-opts.c
 
 ntpdsim-ntpd-opts.obj: ntpd-opts.c
-@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -MT ntpdsim-ntpd-opts.obj -MD -MP -MF $(DEPDIR)/ntpdsim-ntpd-opts.Tpo -c -o ntpdsim-ntpd-opts.obj `if test -f 'ntpd-opts.c'; then $(CYGPATH_W) 'ntpd-opts.c'; else $(CYGPATH_W) '$(srcdir)/ntpd-opts.c'; fi`
-@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/ntpdsim-ntpd-opts.Tpo $(DEPDIR)/ntpdsim-ntpd-opts.Po
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -MT ntpdsim-ntpd-opts.obj -MD -MP -MF $(DEPDIR)/ntpdsim-ntpd-opts.Tpo -c -o ntpdsim-ntpd-opts.obj `if test -f 'ntpd-opts.c'; then $(CYGPATH_W) 'ntpd-opts.c'; else $(CYGPATH_W) '$(srcdir)/ntpd-opts.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/ntpdsim-ntpd-opts.Tpo $(DEPDIR)/ntpdsim-ntpd-opts.Po
+@am__fastdepCC_FALSE@	$(AM_V_CC) @AM_BACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='ntpd-opts.c' object='ntpdsim-ntpd-opts.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -c -o ntpdsim-ntpd-opts.obj `if test -f 'ntpd-opts.c'; then $(CYGPATH_W) 'ntpd-opts.c'; else $(CYGPATH_W) '$(srcdir)/ntpd-opts.c'; fi`
 
 ntpdsim-ntp_prio_q.o: ntp_prio_q.c
-@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -MT ntpdsim-ntp_prio_q.o -MD -MP -MF $(DEPDIR)/ntpdsim-ntp_prio_q.Tpo -c -o ntpdsim-ntp_prio_q.o `test -f 'ntp_prio_q.c' || echo '$(srcdir)/'`ntp_prio_q.c
-@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/ntpdsim-ntp_prio_q.Tpo $(DEPDIR)/ntpdsim-ntp_prio_q.Po
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -MT ntpdsim-ntp_prio_q.o -MD -MP -MF $(DEPDIR)/ntpdsim-ntp_prio_q.Tpo -c -o ntpdsim-ntp_prio_q.o `test -f 'ntp_prio_q.c' || echo '$(srcdir)/'`ntp_prio_q.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/ntpdsim-ntp_prio_q.Tpo $(DEPDIR)/ntpdsim-ntp_prio_q.Po
+@am__fastdepCC_FALSE@	$(AM_V_CC) @AM_BACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='ntp_prio_q.c' object='ntpdsim-ntp_prio_q.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -c -o ntpdsim-ntp_prio_q.o `test -f 'ntp_prio_q.c' || echo '$(srcdir)/'`ntp_prio_q.c
 
 ntpdsim-ntp_prio_q.obj: ntp_prio_q.c
-@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -MT ntpdsim-ntp_prio_q.obj -MD -MP -MF $(DEPDIR)/ntpdsim-ntp_prio_q.Tpo -c -o ntpdsim-ntp_prio_q.obj `if test -f 'ntp_prio_q.c'; then $(CYGPATH_W) 'ntp_prio_q.c'; else $(CYGPATH_W) '$(srcdir)/ntp_prio_q.c'; fi`
-@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/ntpdsim-ntp_prio_q.Tpo $(DEPDIR)/ntpdsim-ntp_prio_q.Po
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -MT ntpdsim-ntp_prio_q.obj -MD -MP -MF $(DEPDIR)/ntpdsim-ntp_prio_q.Tpo -c -o ntpdsim-ntp_prio_q.obj `if test -f 'ntp_prio_q.c'; then $(CYGPATH_W) 'ntp_prio_q.c'; else $(CYGPATH_W) '$(srcdir)/ntp_prio_q.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/ntpdsim-ntp_prio_q.Tpo $(DEPDIR)/ntpdsim-ntp_prio_q.Po
+@am__fastdepCC_FALSE@	$(AM_V_CC) @AM_BACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='ntp_prio_q.c' object='ntpdsim-ntp_prio_q.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -c -o ntpdsim-ntp_prio_q.obj `if test -f 'ntp_prio_q.c'; then $(CYGPATH_W) 'ntp_prio_q.c'; else $(CYGPATH_W) '$(srcdir)/ntp_prio_q.c'; fi`
 
 ntpdsim-ntpsim.o: ntpsim.c
-@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -MT ntpdsim-ntpsim.o -MD -MP -MF $(DEPDIR)/ntpdsim-ntpsim.Tpo -c -o ntpdsim-ntpsim.o `test -f 'ntpsim.c' || echo '$(srcdir)/'`ntpsim.c
-@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/ntpdsim-ntpsim.Tpo $(DEPDIR)/ntpdsim-ntpsim.Po
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -MT ntpdsim-ntpsim.o -MD -MP -MF $(DEPDIR)/ntpdsim-ntpsim.Tpo -c -o ntpdsim-ntpsim.o `test -f 'ntpsim.c' || echo '$(srcdir)/'`ntpsim.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/ntpdsim-ntpsim.Tpo $(DEPDIR)/ntpdsim-ntpsim.Po
+@am__fastdepCC_FALSE@	$(AM_V_CC) @AM_BACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='ntpsim.c' object='ntpdsim-ntpsim.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -c -o ntpdsim-ntpsim.o `test -f 'ntpsim.c' || echo '$(srcdir)/'`ntpsim.c
 
 ntpdsim-ntpsim.obj: ntpsim.c
-@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -MT ntpdsim-ntpsim.obj -MD -MP -MF $(DEPDIR)/ntpdsim-ntpsim.Tpo -c -o ntpdsim-ntpsim.obj `if test -f 'ntpsim.c'; then $(CYGPATH_W) 'ntpsim.c'; else $(CYGPATH_W) '$(srcdir)/ntpsim.c'; fi`
-@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/ntpdsim-ntpsim.Tpo $(DEPDIR)/ntpdsim-ntpsim.Po
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -MT ntpdsim-ntpsim.obj -MD -MP -MF $(DEPDIR)/ntpdsim-ntpsim.Tpo -c -o ntpdsim-ntpsim.obj `if test -f 'ntpsim.c'; then $(CYGPATH_W) 'ntpsim.c'; else $(CYGPATH_W) '$(srcdir)/ntpsim.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/ntpdsim-ntpsim.Tpo $(DEPDIR)/ntpdsim-ntpsim.Po
+@am__fastdepCC_FALSE@	$(AM_V_CC) @AM_BACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='ntpsim.c' object='ntpdsim-ntpsim.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(ntpdsim_CFLAGS) $(CFLAGS) -c -o ntpdsim-ntpsim.obj `if test -f 'ntpsim.c'; then $(CYGPATH_W) 'ntpsim.c'; else $(CYGPATH_W) '$(srcdir)/ntpsim.c'; fi`
 
 .y.c:
-	$(am__skipyacc) $(SHELL) $(YLWRAP) $< y.tab.c $@ y.tab.h $*.h y.output $*.output -- $(YACCCOMPILE)
+	$(AM_V_YACC)$(am__skipyacc) $(SHELL) $(YLWRAP) $< y.tab.c $@ y.tab.h $*.h y.output $*.output -- $(YACCCOMPILE)
 
 mostlyclean-libtool:
 	-rm -f *.lo

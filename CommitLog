@@ -1,3 +1,353 @@
+ChangeSet@1.2416, 2011-01-04 10:07:56+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P110
+  TAG: NTP_4_2_7P110
+
+  ChangeLog@1.754 +1 -0
+    NTP_4_2_7P110
+
+  clockstuff/clktest-opts.c@1.34 +2 -2
+    NTP_4_2_7P110
+
+  clockstuff/clktest-opts.h@1.34 +3 -3
+    NTP_4_2_7P110
+
+  ntpd/ntpd-opts.c@1.114 +2 -2
+    NTP_4_2_7P110
+
+  ntpd/ntpd-opts.h@1.114 +3 -3
+    NTP_4_2_7P110
+
+  ntpd/ntpd-opts.texi@1.112 +2 -2
+    NTP_4_2_7P110
+
+  ntpd/ntpd.1@1.112 +2 -2
+    NTP_4_2_7P110
+
+  ntpdc/ntpdc-opts.c@1.111 +2 -2
+    NTP_4_2_7P110
+
+  ntpdc/ntpdc-opts.h@1.111 +3 -3
+    NTP_4_2_7P110
+
+  ntpdc/ntpdc-opts.texi@1.111 +2 -2
+    NTP_4_2_7P110
+
+  ntpdc/ntpdc.1@1.111 +2 -2
+    NTP_4_2_7P110
+
+  ntpq/ntpq-opts.c@1.111 +2 -2
+    NTP_4_2_7P110
+
+  ntpq/ntpq-opts.h@1.111 +3 -3
+    NTP_4_2_7P110
+
+  ntpq/ntpq-opts.texi@1.111 +2 -2
+    NTP_4_2_7P110
+
+  ntpq/ntpq.1@1.111 +2 -2
+    NTP_4_2_7P110
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.111 +2 -2
+    NTP_4_2_7P110
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.111 +3 -3
+    NTP_4_2_7P110
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.111 +2 -2
+    NTP_4_2_7P110
+
+  ntpsnmpd/ntpsnmpd.1@1.111 +2 -2
+    NTP_4_2_7P110
+
+  packageinfo.sh@1.112 +1 -1
+    NTP_4_2_7P110
+
+  sntp/sntp-opts.c@1.111 +2 -2
+    NTP_4_2_7P110
+
+  sntp/sntp-opts.h@1.111 +3 -3
+    NTP_4_2_7P110
+
+  sntp/sntp-opts.texi@1.111 +2 -2
+    NTP_4_2_7P110
+
+  sntp/sntp.1@1.111 +2 -2
+    NTP_4_2_7P110
+
+  sntp/sntp.html@1.111 +2 -2
+    NTP_4_2_7P110
+
+  util/ntp-keygen-opts.c@1.109 +2 -2
+    NTP_4_2_7P110
+
+  util/ntp-keygen-opts.h@1.109 +3 -3
+    NTP_4_2_7P110
+
+  util/ntp-keygen-opts.texi@1.112 +2 -2
+    NTP_4_2_7P110
+
+  util/ntp-keygen.1@1.112 +2 -2
+    NTP_4_2_7P110
+
+ChangeSet@1.2415, 2011-01-04 08:47:26+00:00, davehart@shiny.ad.hartbrothers.com
+  don't stop the search on a prefix match in get_ext_sys_var()
+
+  ntpd/ntp_control.c@1.158 +5 -3
+    don't stop the search on a prefix match in get_ext_sys_var()
+
+ChangeSet@1.2414, 2011-01-04 07:06:40+00:00, davehart@shiny.ad.hartbrothers.com
+  make V=0 and configure --enable-silent-rules supported.
+
+  ChangeLog@1.753 +1 -0
+    make V=0 and configure --enable-silent-rules supported.
+
+  configure.ac@1.507 +5 -0
+    support make V=0 and configure --enable-silent-rules
+
+  sntp/configure.ac@1.50 +5 -0
+    support make V=0 and configure --enable-silent-rules
+
+ChangeSet@1.2413, 2011-01-04 06:27:59+00:00, davehart@shiny.ad.hartbrothers.com
+  setvar modemsetup = ATE0... overrides ACTS driver default.
+  Preserve last timecode in ACTS driver (ntpq -ccv).
+  Tolerate previous ATE1 state when sending ACTS setup.
+  Enable raw tty line discipline in Windows port.
+  Allow tty open/close/open to succeed on Windows port.
+  Enable ACTS and CHU reference clock drivers on Windows.
+
+  ChangeLog@1.752 +8 -2
+    setvar modemsetup = ATE0... overrides ACTS driver default.
+    Preserve last timecode in ACTS driver (ntpq -ccv).
+    Tolerate previous ATE1 state when sending ACTS setup.
+    Enable raw tty line discipline in Windows port.
+    Allow tty open/close/open to succeed on Windows port.
+    Enable ACTS and CHU reference clock drivers on Windows.
+    
+
+  include/ntp_machine.h@1.31 +0 -17
+    consolidate windows/posix compatibility shims in ntp_types.h
+
+  include/ntp_refclock.h@1.27 +2 -1
+    add active flag to struct refclockio to help dispense with pending
+      refclock input on Windows serial port close.
+
+  include/ntp_types.h@1.22 +12 -1
+    consolidate windows/posix compatibility shims in ntp_types.h
+
+  include/ntpd.h@1.158 +1 -0
+    add get_ext_sys_var() to retrieve value of user-defined vars
+
+  libntp/dolfptoa.c@1.9 +3 -3
+    quiet warning about signed/unsigned > comparison
+
+  libntp/icom.c@1.14 +10 -2
+    enable CHU refclock for Windows ntpd
+
+  libntp/msyslog.c@1.31 +1 -3
+    slight cleanup
+
+  libntp/recvbuff.c@1.35 +18 -14
+    cleanup
+
+  ntpd/complete.conf@1.15 +1 -0
+    add coverage for phone directive
+
+  ntpd/ntp_config.c@1.281 +1 -1
+    quote phone strings in saveconfig output
+
+  ntpd/ntp_control.c@1.157 +30 -1
+    add get_ext_sys_var() to retrieve value of user-defined vars
+
+  ntpd/ntp_io.c@1.341 +26 -21
+    add active flag to struct refclockio to help dispense with pending
+      refclock input on Windows serial port close.
+    use closeserial() instead of close() for refclock ttys for Windows'
+      port benefit.
+
+  ntpd/refclock_acts.c@1.42 +96 -64
+    Increment pp->polls in acts_poll().
+    Change UART rate from 9600 to 19200.
+    Allow modem setup string override using: setvar modemsetup = ATE0...
+    Tolerate echo of the setup string in case ATE1 was set previously.
+    Buffer incomplete input lines in unit struct leaving pp->a_lastcode with
+     the last complete line, allowing "ntpq -c cv" to retrieve it.
+    Enable ACTS driver in the Windows port.
+
+  ntpd/refclock_chu.c@1.50 +2 -2
+    Enable CHU driver in the Windows port (MINCHAR in Windows .h files).
+
+  ntpd/refclock_pcf.c@1.11 +2 -1
+    attempt to avoid fault in pcf_shutdown() after unsuccessful start.
+
+  ports/winnt/include/config.h@1.90 +3 -0
+    Enable ACTS and CHU refclock drivers in Windows port.
+
+  ports/winnt/include/termios.h@1.14 +8 -12
+    Support raw line discipline and serial open/close/open in Windows port.
+
+  ports/winnt/libntp/termios.c@1.24 +134 -40
+    Support raw line discipline and serial open/close/open in Windows port.
+
+  ports/winnt/ntpd/ntp_iocompletionport.c@1.55 +196 -70
+    Support raw line discipline and serial open/close/open in Windows port.
+
+  ports/winnt/vc6/libntp.dsp@1.57 +4 -0
+    Enable icom.c compile on Windows.
+
+  ports/winnt/vc6/ntpd.dsp@1.52 +0 -2
+    Enable ACTS and CHU refclocks on Windows.
+
+  ports/winnt/vs2003/libntp.vcproj@1.15 +3 -0
+    Enable icom.c compile on Windows.
+
+  ports/winnt/vs2003/ntpd.vcproj@1.13 +0 -42
+    Enable ACTS and CHU refclocks on Windows.
+
+  ports/winnt/vs2005/libntp.vcproj@1.13 +4 -0
+    Enable icom.c compile on Windows.
+
+  ports/winnt/vs2005/ntpd.vcproj@1.13 +0 -40
+    Enable ACTS and CHU refclocks on Windows.
+
+  ports/winnt/vs2008/libntp/libntp.vcproj@1.34 +2 -4
+    Enable icom.c compile on Windows.
+
+  ports/winnt/vs2008/ntpd/ntpd.vcproj@1.36 +2 -6
+    Enable ACTS and CHU refclocks on Windows.
+
+ChangeSet@1.2082.4.203, 2011-01-03 21:20:42-05:00, stenn@deacon.udel.edu
+  NTP_4_2_6P3
+  TAG: NTP_4_2_6P3
+
+  ChangeLog@1.496.26.142 +1 -0
+    NTP_4_2_6P3
+
+  ntpd/ntpd-opts.c@1.248.33.1 +5 -5
+    NTP_4_2_6P3
+
+  ntpd/ntpd-opts.h@1.248.33.1 +4 -4
+    NTP_4_2_6P3
+
+  ntpd/ntpd-opts.texi@1.246.33.1 +61 -2
+    NTP_4_2_6P3
+
+  ntpd/ntpd.1@1.246.33.1 +2 -2
+    NTP_4_2_6P3
+
+  ntpdc/ntpdc-opts.c@1.244.33.1 +5 -5
+    NTP_4_2_6P3
+
+  ntpdc/ntpdc-opts.h@1.244.33.1 +4 -4
+    NTP_4_2_6P3
+
+  ntpdc/ntpdc-opts.texi@1.243.33.1 +66 -2
+    NTP_4_2_6P3
+
+  ntpdc/ntpdc.1@1.243.33.1 +2 -2
+    NTP_4_2_6P3
+
+  ntpq/ntpq-opts.c@1.245.33.1 +5 -5
+    NTP_4_2_6P3
+
+  ntpq/ntpq-opts.h@1.245.33.1 +4 -4
+    NTP_4_2_6P3
+
+  ntpq/ntpq-opts.texi@1.244.33.1 +51 -2
+    NTP_4_2_6P3
+
+  ntpq/ntpq.1@1.244.33.1 +2 -2
+    NTP_4_2_6P3
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.123.34.1 +5 -5
+    NTP_4_2_6P3
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.123.34.1 +4 -4
+    NTP_4_2_6P3
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.123.34.1 +24 -2
+    NTP_4_2_6P3
+
+  ntpsnmpd/ntpsnmpd.1@1.122.34.1 +2 -2
+    NTP_4_2_6P3
+
+  packageinfo.sh@1.255.31.2 +3 -3
+    NTP_4_2_6P3
+
+  sntp/sntp-opts.c@1.117.31.1 +5 -5
+    NTP_4_2_6P3
+
+  sntp/sntp-opts.h@1.117.31.1 +4 -4
+    NTP_4_2_6P3
+
+  sntp/sntp-opts.texi@1.117.31.1 +56 -2
+    NTP_4_2_6P3
+
+  sntp/sntp.1@1.117.31.1 +2 -2
+    NTP_4_2_6P3
+
+  sntp/sntp.html@1.7.32.1 +56 -2
+    NTP_4_2_6P3
+
+  util/ntp-keygen-opts.c@1.247.33.1 +5 -5
+    NTP_4_2_6P3
+
+  util/ntp-keygen-opts.h@1.247.33.1 +4 -4
+    NTP_4_2_6P3
+
+  util/ntp-keygen-opts.texi@1.246.33.1 +45 -2
+    NTP_4_2_6P3
+
+  util/ntp-keygen.1@1.246.33.1 +2 -2
+    NTP_4_2_6P3
+
+ChangeSet@1.2082.4.202, 2011-01-03 17:52:19-05:00, stenn@deacon.udel.edu
+  4.2.6p3
+
+  packageinfo.sh@1.255.31.1 +1 -1
+    4.2.6p3
+
+ChangeSet@1.2082.4.201, 2011-01-03 17:50:01-05:00, stenn@deacon.udel.edu
+  Fix release date
+
+  NEWS@1.117 +1 -1
+    Fix release date
+
+ChangeSet@1.2082.4.200, 2011-01-03 17:04:32-05:00, stenn@deacon.udel.edu
+  cleanup NEWS file for 4.2.6p3
+
+  NEWS@1.116 +4 -5
+    cleanup
+
+ChangeSet@1.2411, 2011-01-03 20:19:11+01:00, jnperlin@hydra.localnet
+  [Bug 1771] fixed and test cases provided
+
+  ChangeLog@1.750 +2 -0
+    Bug 1771
+
+  include/ntp_calendar.h@1.8 +9 -0
+    [Bug 1771] add 'time()' mockup facility
+
+  libntp/clocktime.c@1.6 +10 -29
+    [Bug 1771] fix algorithmic problem (result should ALWAYS be in +/- 0.5yrs around receive time)
+
+  libntp/ntp_calendar.c@1.5 +36 -4
+    [Bug 1771] add 'time()' mockup facility
+
+  tests/libntp/caljulian.cpp@1.5 +15 -0
+    [Bug 1771] use 'time()' mockup facility
+
+  tests/libntp/calyearstart.cpp@1.3 +21 -11
+    [Bug 1771] use 'time()' mockup facility
+
+  tests/libntp/clocktime.cpp@1.3 +58 -18
+    [Bug 1771] use 'time()' mockup facility, added test for 'wild' clocktime input (lengthy)
+
+  tests/libntp/libntptest.cpp@1.2 +19 -0
+    [Bug 1771] use 'time()' mockup facility
+
+  tests/libntp/libntptest.h@1.4 +6 -0
+    [Bug 1771] use 'time()' mockup facility
+
 ChangeSet@1.2410, 2011-01-02 10:23:49+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P109
   TAG: NTP_4_2_7P109
