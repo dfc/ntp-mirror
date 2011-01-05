@@ -1,3 +1,228 @@
+ChangeSet@1.2419, 2011-01-05 08:46:48+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P111
+  TAG: NTP_4_2_7P111
+
+  ChangeLog@1.756 +1 -0
+    NTP_4_2_7P111
+
+  clockstuff/clktest-opts.c@1.35 +2 -2
+    NTP_4_2_7P111
+
+  clockstuff/clktest-opts.h@1.35 +3 -3
+    NTP_4_2_7P111
+
+  ntpd/ntpd-opts.c@1.115 +2 -2
+    NTP_4_2_7P111
+
+  ntpd/ntpd-opts.h@1.115 +3 -3
+    NTP_4_2_7P111
+
+  ntpd/ntpd-opts.texi@1.113 +2 -2
+    NTP_4_2_7P111
+
+  ntpd/ntpd.1@1.113 +2 -2
+    NTP_4_2_7P111
+
+  ntpdc/ntpdc-opts.c@1.112 +2 -2
+    NTP_4_2_7P111
+
+  ntpdc/ntpdc-opts.h@1.112 +3 -3
+    NTP_4_2_7P111
+
+  ntpdc/ntpdc-opts.texi@1.112 +2 -2
+    NTP_4_2_7P111
+
+  ntpdc/ntpdc.1@1.112 +2 -2
+    NTP_4_2_7P111
+
+  ntpq/ntpq-opts.c@1.112 +2 -2
+    NTP_4_2_7P111
+
+  ntpq/ntpq-opts.h@1.112 +3 -3
+    NTP_4_2_7P111
+
+  ntpq/ntpq-opts.texi@1.112 +2 -2
+    NTP_4_2_7P111
+
+  ntpq/ntpq.1@1.112 +2 -2
+    NTP_4_2_7P111
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.112 +2 -2
+    NTP_4_2_7P111
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.112 +3 -3
+    NTP_4_2_7P111
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.112 +2 -2
+    NTP_4_2_7P111
+
+  ntpsnmpd/ntpsnmpd.1@1.112 +2 -2
+    NTP_4_2_7P111
+
+  packageinfo.sh@1.113 +1 -1
+    NTP_4_2_7P111
+
+  sntp/sntp-opts.c@1.112 +2 -2
+    NTP_4_2_7P111
+
+  sntp/sntp-opts.h@1.112 +3 -3
+    NTP_4_2_7P111
+
+  sntp/sntp-opts.texi@1.112 +2 -2
+    NTP_4_2_7P111
+
+  sntp/sntp.1@1.112 +2 -2
+    NTP_4_2_7P111
+
+  sntp/sntp.html@1.112 +2 -2
+    NTP_4_2_7P111
+
+  util/ntp-keygen-opts.c@1.110 +2 -2
+    NTP_4_2_7P111
+
+  util/ntp-keygen-opts.h@1.110 +3 -3
+    NTP_4_2_7P111
+
+  util/ntp-keygen-opts.texi@1.113 +2 -2
+    NTP_4_2_7P111
+
+  util/ntp-keygen.1@1.113 +2 -2
+    NTP_4_2_7P111
+
+ChangeSet@1.2418, 2011-01-05 08:08:26+00:00, davehart@shiny.ad.hartbrothers.com
+  Quiet warnings
+
+  libntp/ntp_calendar.c@1.6 +15 -15
+    Quiet definition isn't declaration warning for now(), use
+      leading tabs for indents.
+
+  libntp/ssl_init.c@1.12 +2 -2
+    Quiet warning about printf formaat mismatch re: OPENSSL_VERSION_NUMBER
+      building against OpenSSL 1.0.0c.
+
+ChangeSet@1.2417, 2011-01-05 07:35:12+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 1772] refclock_open() return value check wrong for ACTS.
+  Default --with-openssl-libdir and --with-openssl-incdir to the values
+    from pkg-config, falling back on our usual search paths if pkg-config
+    is not available or does not have openssl.pc on PKG_CONFIG_PATH.
+  Change refclock_open() to return -1 on failure like open().
+  Update all refclock_open() callers to check for fd <= 0 indicating
+    failure, so they work with older and newer refclock_open() and can
+    easily backport.
+  Initialize refclockproc.rio.fd to -1, harmonize refclock shutdown
+    entrypoints to avoid crashing, particularly if refclock_open() fails.
+  Enable tickadj-like taming of wildly off-spec Windows clock using
+    NTPD_TICKADJ_PPM env. var. specifying baseline slew.
+
+  ChangeLog@1.755 +12 -0
+    [Bug 1772] refclock_open() return value check wrong for ACTS.
+    Change refclock_open() to return -1 on failure like open().
+    Update all refclock_open() callers to check for fd <= 0 indicating
+      failure, so they work with older and newer refclock_open() and can
+      easily backport.
+    Initialize refclockproc.rio.fd to -1, harmonize refclock shutdown
+      entrypoints to avoid crashing, particularly if refclock_open() fails.
+    Enable tickadj-like taming of wildly off-spec Windows clock using
+      NTPD_TICKADJ_PPM env. var. specifying baseline slew.
+    
+
+  include/ntp_refclock.h@1.28 +1 -2
+    Remove refclock_ioctl() declaration, it's private to ntp_refclock.c
+
+  include/ntp_stdlib.h@1.55 +11 -0
+    SAVE_ERRNO(somecode();) macro
+
+  m4/ntp_openssl.m4@1.10 +37 -3
+    try pkg-config for openssl default location, then our traditional
+      lib and include search paths.
+
+  ntpd/ntp_io.c@1.342 +1 -0
+    initialize refclockproc.rio.fd to -1
+
+  ntpd/ntp_refclock.c@1.99 +72 -41
+    Follow open() convention for refclock_open(), returning -1 on failure.
+
+  ntpd/refclock_acts.c@1.43 +3 -1
+    Update refclocks to treat 0 and -1 as failure so they can backport.
+
+  ntpd/refclock_arbiter.c@1.18 +2 -1
+    Update refclocks to treat 0 and -1 as failure so they can backport.
+
+  ntpd/refclock_arc.c@1.23 +2 -1
+    Update refclocks to treat 0 and -1 as failure so they can backport.
+
+  ntpd/refclock_as2201.c@1.13 +2 -1
+    Update refclocks to treat 0 and -1 as failure so they can backport.
+
+  ntpd/refclock_bancomm.c@1.13 +1 -0
+    add comment about lack of io_addclock()
+
+  ntpd/refclock_chronolog.c@1.11 +2 -1
+    Update refclocks to treat 0 and -1 as failure so they can backport.
+
+  ntpd/refclock_dumbclock.c@1.17 +1 -1
+    Update refclocks to treat 0 and -1 as failure so they can backport.
+
+  ntpd/refclock_fg.c@1.12 +22 -24
+    Update refclocks to treat 0 and -1 as failure so they can backport.
+
+  ntpd/refclock_heath.c@1.16 +3 -2
+    Update refclocks to treat 0 and -1 as failure so they can backport.
+
+  ntpd/refclock_hpgps.c@1.12 +7 -8
+    Update refclocks to treat 0 and -1 as failure so they can backport.
+
+  ntpd/refclock_irig.c@1.34 +1 -2
+    minor cleanup
+
+  ntpd/refclock_jjy.c@1.21 +2 -1
+    Update refclocks to treat 0 and -1 as failure so they can backport.
+
+  ntpd/refclock_jupiter.c@1.26 +2 -2
+    Update refclocks to treat 0 and -1 as failure so they can backport.
+
+  ntpd/refclock_mx4200.c@1.28 +3 -3
+    Update refclocks to treat 0 and -1 as failure so they can backport.
+
+  ntpd/refclock_oncore.c@1.91 +16 -11
+    Update refclocks to treat 0 and -1 as failure so they can backport.
+
+  ntpd/refclock_palisade.c@1.37 +2 -3
+    minor cleanup
+
+  ntpd/refclock_pst.c@1.11 +2 -1
+    Update refclocks to treat 0 and -1 as failure so they can backport.
+
+  ntpd/refclock_ripencc.c@1.15 +5 -8
+    Update refclocks to treat 0 and -1 as failure so they can backport.
+
+  ntpd/refclock_trak.c@1.10 +7 -6
+    Update refclocks to treat 0 and -1 as failure so they can backport.
+
+  ntpd/refclock_true.c@1.16 +11 -11
+    Update refclocks to treat 0 and -1 as failure so they can backport.
+
+  ntpd/refclock_ulink.c@1.15 +11 -28
+    Update refclocks to treat 0 and -1 as failure so they can backport.
+
+  ntpd/refclock_wwvb.c@1.26 +3 -3
+    Update refclocks to treat 0 and -1 as failure so they can backport.
+
+  ntpd/refclock_zyfer.c@1.6 +11 -11
+    Update refclocks to treat 0 and -1 as failure so they can backport.
+
+  ports/winnt/libntp/termios.c@1.25 +44 -22
+    Follow open() convention for refclock_open(), returning -1 on failure.
+
+  ports/winnt/ntpd/nt_clockstuff.c@1.48 +26 -3
+    Enable tickadj-like taming of wildly off-spec Windows clock using
+      NTPD_TICKADJ_PPM env. var. specifying baseline slew.
+    
+
+  ports/winnt/vs2008/ntpd/ntpd.vcproj@1.37 +13 -25
+    Add refclock_fg, refclock_ulink, refclock_zyfer.c references.
+    Remove reference to nonexistent refclock_usno.c
+
 ChangeSet@1.2416, 2011-01-04 10:07:56+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P110
   TAG: NTP_4_2_7P110
