@@ -1,3 +1,134 @@
+ChangeSet@1.2423, 2011-01-06 08:55:50+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P112
+  TAG: NTP_4_2_7P112
+
+  ChangeLog@1.759 +1 -0
+    NTP_4_2_7P112
+
+  clockstuff/clktest-opts.c@1.36 +2 -2
+    NTP_4_2_7P112
+
+  clockstuff/clktest-opts.h@1.36 +3 -3
+    NTP_4_2_7P112
+
+  ntpd/ntpd-opts.c@1.116 +2 -2
+    NTP_4_2_7P112
+
+  ntpd/ntpd-opts.h@1.116 +3 -3
+    NTP_4_2_7P112
+
+  ntpd/ntpd-opts.texi@1.114 +2 -2
+    NTP_4_2_7P112
+
+  ntpd/ntpd.1@1.114 +2 -2
+    NTP_4_2_7P112
+
+  ntpdc/ntpdc-opts.c@1.113 +2 -2
+    NTP_4_2_7P112
+
+  ntpdc/ntpdc-opts.h@1.113 +3 -3
+    NTP_4_2_7P112
+
+  ntpdc/ntpdc-opts.texi@1.113 +2 -2
+    NTP_4_2_7P112
+
+  ntpdc/ntpdc.1@1.113 +2 -2
+    NTP_4_2_7P112
+
+  ntpq/ntpq-opts.c@1.113 +2 -2
+    NTP_4_2_7P112
+
+  ntpq/ntpq-opts.h@1.113 +3 -3
+    NTP_4_2_7P112
+
+  ntpq/ntpq-opts.texi@1.113 +2 -2
+    NTP_4_2_7P112
+
+  ntpq/ntpq.1@1.113 +2 -2
+    NTP_4_2_7P112
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.113 +2 -2
+    NTP_4_2_7P112
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.113 +3 -3
+    NTP_4_2_7P112
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.113 +2 -2
+    NTP_4_2_7P112
+
+  ntpsnmpd/ntpsnmpd.1@1.113 +2 -2
+    NTP_4_2_7P112
+
+  packageinfo.sh@1.114 +1 -1
+    NTP_4_2_7P112
+
+  sntp/sntp-opts.c@1.113 +2 -2
+    NTP_4_2_7P112
+
+  sntp/sntp-opts.h@1.113 +3 -3
+    NTP_4_2_7P112
+
+  sntp/sntp-opts.texi@1.113 +2 -2
+    NTP_4_2_7P112
+
+  sntp/sntp.1@1.113 +2 -2
+    NTP_4_2_7P112
+
+  sntp/sntp.html@1.113 +2 -2
+    NTP_4_2_7P112
+
+  util/ntp-keygen-opts.c@1.111 +2 -2
+    NTP_4_2_7P112
+
+  util/ntp-keygen-opts.h@1.111 +3 -3
+    NTP_4_2_7P112
+
+  util/ntp-keygen-opts.texi@1.114 +2 -2
+    NTP_4_2_7P112
+
+  util/ntp-keygen.1@1.114 +2 -2
+    NTP_4_2_7P112
+
+ChangeSet@1.2422, 2011-01-06 04:43:56+00:00, davehart@shiny.ad.hartbrothers.com
+  ./build makes unit tests with V=0 before make check
+
+  build@1.40 +4 -0
+    Build unit tests first with V=0
+
+  tests/libntp/Makefile.am@1.26 +5 -6
+    Remove tabs from $INCLUDES to make compiler command lines less sparse
+
+ChangeSet@1.2421, 2011-01-06 04:37:31+00:00, hart@psp-deb1.ntp.org
+  Use silent rules for first make invocation in build
+
+  ChangeLog@1.758 +1 -0
+    Use make V=0 in build script to increase signal/noise ratio.
+
+  build@1.39 +1 -1
+    Use make V=0 in build script to increase signal/noise ratio.
+
+ChangeSet@1.2420, 2011-01-06 04:02:24+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 1773] openssl not detected during ./configure.
+  [Bug 1774] Segfaults if cryptostats enabled and built without OpenSSL.
+
+  ChangeLog@1.757 +2 -0
+    [Bug 1773] openssl not detected during ./configure.
+    [Bug 1774] Segfaults if cryptostats enabled and built without OpenSSL.
+    
+
+  m4/ntp_openssl.m4@1.11 +16 -22
+    [Bug 1773] openssl not detected during ./configure.
+    
+
+  ntpd/ntp_config.c@1.282 +12 -0
+    [Bug 1774] Segfaults if cryptostats enabled and built without OpenSSL.
+    
+
+  ntpd/ntp_util.c@1.91 +2 -10
+    filegen_register() timingstats and cryptostats unconditionally, so we do
+      not consider them unrecognized, as it's harmless to attempt to enable
+      cryptostats with a non-autokey ntpd.
+
 ChangeSet@1.2419, 2011-01-05 08:46:48+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P111
   TAG: NTP_4_2_7P111
