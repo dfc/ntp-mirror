@@ -82,14 +82,14 @@ am__objects_2 = a_md5encrypt.$(OBJEXT) adjtime.$(OBJEXT) \
 	ntp_lineedit.$(OBJEXT) ntp_rfc2553.$(OBJEXT) numtoa.$(OBJEXT) \
 	numtohost.$(OBJEXT) octtoint.$(OBJEXT) prettydate.$(OBJEXT) \
 	ntp_random.$(OBJEXT) recvbuff.$(OBJEXT) refnumtoa.$(OBJEXT) \
-	snprintf.$(OBJEXT) socktoa.$(OBJEXT) socktohost.$(OBJEXT) \
-	ssl_init.$(OBJEXT) statestr.$(OBJEXT) strdup.$(OBJEXT) \
-	syssignal.$(OBJEXT) tsftomsu.$(OBJEXT) tstotv.$(OBJEXT) \
-	tvtots.$(OBJEXT) uglydate.$(OBJEXT) uinttoa.$(OBJEXT) \
-	ymd2yd.$(OBJEXT) assertions.$(OBJEXT) buffer.$(OBJEXT) \
-	condition.$(OBJEXT) dir.$(OBJEXT) error.$(OBJEXT) \
-	errno2result.$(OBJEXT) event.$(OBJEXT) file.$(OBJEXT) \
-	inet_ntop.$(OBJEXT) inet_pton.$(OBJEXT) \
+	snprintf.$(OBJEXT) socket.$(OBJEXT) socktoa.$(OBJEXT) \
+	socktohost.$(OBJEXT) ssl_init.$(OBJEXT) statestr.$(OBJEXT) \
+	strdup.$(OBJEXT) syssignal.$(OBJEXT) tsftomsu.$(OBJEXT) \
+	tstotv.$(OBJEXT) tvtots.$(OBJEXT) uglydate.$(OBJEXT) \
+	uinttoa.$(OBJEXT) ymd2yd.$(OBJEXT) assertions.$(OBJEXT) \
+	buffer.$(OBJEXT) condition.$(OBJEXT) dir.$(OBJEXT) \
+	error.$(OBJEXT) errno2result.$(OBJEXT) event.$(OBJEXT) \
+	file.$(OBJEXT) inet_ntop.$(OBJEXT) inet_pton.$(OBJEXT) \
 	interfaceiter.$(OBJEXT) lib.$(OBJEXT) log.$(OBJEXT) \
 	md5.$(OBJEXT) msgcat.$(OBJEXT) net.$(OBJEXT) netaddr.$(OBJEXT) \
 	netscope.$(OBJEXT) ondestroy.$(OBJEXT) random.$(OBJEXT) \
@@ -352,6 +352,7 @@ libntp_a_SRCS = \
 	recvbuff.c					\
 	refnumtoa.c					\
 	snprintf.c					\
+	socket.c					\
 	socktoa.c					\
 	socktohost.c					\
 	ssl_init.c					\
@@ -531,6 +532,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/result.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/snprintf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sockaddr.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/socket.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/socktoa.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/socktohost.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ssl_init.Po@am__quote@

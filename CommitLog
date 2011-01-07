@@ -1,3 +1,217 @@
+ChangeSet@1.2429, 2011-01-07 11:16:32+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P113
+  TAG: NTP_4_2_7P113
+
+  ChangeLog@1.762 +1 -0
+    NTP_4_2_7P113
+
+  clockstuff/clktest-opts.c@1.37 +2 -2
+    NTP_4_2_7P113
+
+  clockstuff/clktest-opts.h@1.37 +3 -3
+    NTP_4_2_7P113
+
+  ntpd/ntpd-opts.c@1.117 +2 -2
+    NTP_4_2_7P113
+
+  ntpd/ntpd-opts.h@1.117 +3 -3
+    NTP_4_2_7P113
+
+  ntpd/ntpd-opts.texi@1.115 +2 -2
+    NTP_4_2_7P113
+
+  ntpd/ntpd.1@1.115 +2 -2
+    NTP_4_2_7P113
+
+  ntpdc/ntpdc-opts.c@1.114 +2 -2
+    NTP_4_2_7P113
+
+  ntpdc/ntpdc-opts.h@1.114 +3 -3
+    NTP_4_2_7P113
+
+  ntpdc/ntpdc-opts.texi@1.114 +2 -2
+    NTP_4_2_7P113
+
+  ntpdc/ntpdc.1@1.114 +2 -2
+    NTP_4_2_7P113
+
+  ntpq/ntpq-opts.c@1.114 +2 -2
+    NTP_4_2_7P113
+
+  ntpq/ntpq-opts.h@1.114 +3 -3
+    NTP_4_2_7P113
+
+  ntpq/ntpq-opts.texi@1.114 +2 -2
+    NTP_4_2_7P113
+
+  ntpq/ntpq.1@1.114 +2 -2
+    NTP_4_2_7P113
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.114 +2 -2
+    NTP_4_2_7P113
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.114 +3 -3
+    NTP_4_2_7P113
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.114 +2 -2
+    NTP_4_2_7P113
+
+  ntpsnmpd/ntpsnmpd.1@1.114 +2 -2
+    NTP_4_2_7P113
+
+  packageinfo.sh@1.115 +1 -1
+    NTP_4_2_7P113
+
+  sntp/sntp-opts.c@1.114 +2 -2
+    NTP_4_2_7P113
+
+  sntp/sntp-opts.h@1.114 +3 -3
+    NTP_4_2_7P113
+
+  sntp/sntp-opts.texi@1.114 +2 -2
+    NTP_4_2_7P113
+
+  sntp/sntp.1@1.114 +2 -2
+    NTP_4_2_7P113
+
+  sntp/sntp.html@1.114 +2 -2
+    NTP_4_2_7P113
+
+  util/ntp-keygen-opts.c@1.112 +2 -2
+    NTP_4_2_7P113
+
+  util/ntp-keygen-opts.h@1.112 +3 -3
+    NTP_4_2_7P113
+
+  util/ntp-keygen-opts.texi@1.115 +2 -2
+    NTP_4_2_7P113
+
+  util/ntp-keygen.1@1.115 +2 -2
+    NTP_4_2_7P113
+
+ChangeSet@1.2428, 2011-01-07 04:16:46-05:00, stenn@deacon.udel.edu
+  portability adjustment
+
+  include/ntp_io.h@1.20 +2 -1
+    portability adjustment
+
+ChangeSet@1.2427, 2011-01-07 04:03:07-05:00, stenn@deacon.udel.edu
+  typo
+
+  libntp/socket.c@1.2 +1 -1
+    typo
+
+ChangeSet@1.2426, 2011-01-07 03:38:35-05:00, stenn@deacon.udel.edu
+  Begin moving some of the low-level socket stuff to libntp
+
+  ChangeLog@1.761 +1 -0
+    Begin moving some of the low-level socket stuff to libntp
+
+  include/Makefile.am@1.42 +1 -0
+    Begin moving some of the low-level socket stuff to libntp
+
+  include/libntp.h@1.1 +16 -0
+    BitKeeper file /deacon/backroom/ntp-dev/include/libntp.h
+
+  include/libntp.h@1.0 +0 -0
+
+  include/ntp_io.h@1.19 +1 -0
+    Begin moving some of the low-level socket stuff to libntp
+
+  libntp/Makefile.am@1.56 +1 -0
+    Begin moving some of the low-level socket stuff to libntp
+
+  libntp/socket.c@1.1 +732 -0
+    BitKeeper file /deacon/backroom/ntp-dev/libntp/socket.c
+
+  libntp/socket.c@1.0 +0 -0
+
+  ntpd/ntp_io.c@1.344 +8 -11
+    Begin moving some of the low-level socket stuff to libntp
+
+ChangeSet@1.2423.1.1, 2011-01-06 23:06:38-05:00, stenn@deacon.udel.edu
+  If the subject-name begins with @, prefix it with the certname
+
+  util/ntp-keygen.c@1.73.1.1 +10 -2
+    If the subject-name begins with @, prefix it with the certname
+
+ChangeSet@1.2424, 2011-01-06 20:56:23+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 1776] sntp mishandles -t/--timeout and -a/--authentication.
+  Default to silent make rules, override with make V=1 or ./configure
+    --disable-silent-rules.
+  Correct --with-openssl-incdir defaulting with pkg-config.
+  Correct ./build on systems without gtest available.
+
+  ChangeLog@1.760 +5 -0
+    [Bug 1776] sntp mishandles -t/--timeout and -a/--authentication.
+    Default to silent make rules, override with make V=1 or ./configure
+      --disable-silent-rules.
+    Correct --with-openssl-incdir defaulting with pkg-config.
+    Correct ./build on systems without gtest available.
+
+  build@1.41 +1 -5
+    Do not attempt to build tests unconditionally, some systems do not have gtest.
+
+  configure.ac@1.508 +2 -40
+    default to silent make rules.
+    move --without-rpath/need_dash_r logic to m4/ntp_openssl.m4 which depends on it.
+
+  include/ntp_md5.h@1.7 +1 -1
+    quiet gcc 4.5.1 warning re: pointers to incompatible types
+
+  libntp/ssl_init.c@1.13 +1 -1
+    quiet unused local warning building w/o openssl
+
+  libparse/Makefile.am@1.21 +2 -17
+    Remove old transitional rule from move of generated .c to $srcdir
+
+  m4/ntp_openssl.m4@1.12 +58 -7
+    Correct --with-openssl-incdir defaulting with pkg-config.
+
+  ntpd/ntp_control.c@1.159 +2 -2
+    quiet shadowing warning seen on linux
+
+  ntpd/ntp_io.c@1.343 +1 -0
+    quiet used potentially uninit warning for some members of sockaddr_u
+
+  ntpd/ntp_peer.c@1.145 +5 -5
+    quiet "group" shadows global warning
+
+  ntpd/ntp_refclock.c@1.100 +1 -1
+    correct printf() format to match change from int to size_t
+
+  ntpd/refclock_acts.c@1.44 +1 -1
+    printf format mismatch %d vs size_t
+
+  ntpdate/ntpdate.c@1.81 +1 -1
+    quiet warning re: recvfrom() fromlen arg by using socklen_t not int.
+
+  ntpdc/ntpdc.c@1.92 +2 -1
+    correct printf() args to match change from int to size_t
+
+  ntpq/ntpq-subs.c@1.81 +16 -15
+    correct printf format mismatch warnings.
+
+  ntpq/ntpq.c@1.127 +12 -16
+    correct printf format mismatch warnings.
+
+  sntp/configure.ac@1.51 +2 -2
+    default to silent make rules
+
+  sntp/main.c@1.42 +22 -9
+    [Bug 1776] sntp mishandles -t/--timeout and -a/--authentication.
+    tighten resolve_hosts 1st arg constness to quiet gcc 4.5.1 warning.
+
+  sntp/networking.c@1.47 +10 -8
+    [Bug 1776] sntp mishandles -t/--timeout and -a/--authentication.
+    tighten resolve_hosts 1st arg constness to quiet gcc 4.5.1 warning.
+
+  sntp/networking.h@1.23 +2 -1
+    tighten resolve_hosts 1st arg constness to quiet gcc 4.5.1 warning.
+
+  util/ntp-keygen.c@1.74 +1 -1
+    quiet warning when building without AUTOKEY
+
 ChangeSet@1.2423, 2011-01-06 08:55:50+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P112
   TAG: NTP_4_2_7P112

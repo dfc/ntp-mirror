@@ -38,6 +38,8 @@
 # include <netinet/ip.h>
 #endif
 
+#include "libntp.h"	/* This needs Something above for GETDTABLESIZE */
+
 /*
  * Define FNDELAY and FASYNC using O_NONBLOCK and O_ASYNC if we need
  * to (and can).  This is here initially for QNX, but may help for
