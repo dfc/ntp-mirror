@@ -1,3 +1,292 @@
+ChangeSet@1.2432, 2011-01-08 09:53:03+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P114
+  TAG: NTP_4_2_7P114
+
+  ChangeLog@1.764 +1 -0
+    NTP_4_2_7P114
+
+  clockstuff/clktest-opts.c@1.38 +2 -2
+    NTP_4_2_7P114
+
+  clockstuff/clktest-opts.h@1.38 +3 -3
+    NTP_4_2_7P114
+
+  ntpd/ntpd-opts.c@1.118 +2 -2
+    NTP_4_2_7P114
+
+  ntpd/ntpd-opts.h@1.118 +3 -3
+    NTP_4_2_7P114
+
+  ntpd/ntpd-opts.texi@1.116 +2 -2
+    NTP_4_2_7P114
+
+  ntpd/ntpd.1@1.116 +2 -2
+    NTP_4_2_7P114
+
+  ntpdc/ntpdc-opts.c@1.115 +2 -2
+    NTP_4_2_7P114
+
+  ntpdc/ntpdc-opts.h@1.115 +3 -3
+    NTP_4_2_7P114
+
+  ntpdc/ntpdc-opts.texi@1.115 +2 -2
+    NTP_4_2_7P114
+
+  ntpdc/ntpdc.1@1.115 +2 -2
+    NTP_4_2_7P114
+
+  ntpq/ntpq-opts.c@1.115 +2 -2
+    NTP_4_2_7P114
+
+  ntpq/ntpq-opts.h@1.115 +3 -3
+    NTP_4_2_7P114
+
+  ntpq/ntpq-opts.texi@1.115 +2 -2
+    NTP_4_2_7P114
+
+  ntpq/ntpq.1@1.115 +2 -2
+    NTP_4_2_7P114
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.115 +2 -2
+    NTP_4_2_7P114
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.115 +3 -3
+    NTP_4_2_7P114
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.115 +2 -2
+    NTP_4_2_7P114
+
+  ntpsnmpd/ntpsnmpd.1@1.115 +2 -2
+    NTP_4_2_7P114
+
+  packageinfo.sh@1.116 +1 -1
+    NTP_4_2_7P114
+
+  sntp/sntp-opts.c@1.115 +2 -2
+    NTP_4_2_7P114
+
+  sntp/sntp-opts.h@1.115 +3 -3
+    NTP_4_2_7P114
+
+  sntp/sntp-opts.texi@1.115 +2 -2
+    NTP_4_2_7P114
+
+  sntp/sntp.1@1.115 +2 -2
+    NTP_4_2_7P114
+
+  sntp/sntp.html@1.115 +2 -2
+    NTP_4_2_7P114
+
+  util/ntp-keygen-opts.c@1.113 +2 -2
+    NTP_4_2_7P114
+
+  util/ntp-keygen-opts.h@1.113 +3 -3
+    NTP_4_2_7P114
+
+  util/ntp-keygen-opts.texi@1.116 +2 -2
+    NTP_4_2_7P114
+
+  util/ntp-keygen.1@1.116 +2 -2
+    NTP_4_2_7P114
+
+ChangeSet@1.2431, 2011-01-08 08:45:17+00:00, davehart@shiny.ad.hartbrothers.com
+  Fix for openssl pkg-config detection eval failure.
+    (applies to prior cset)
+  Add erealloc_zero(), refactor estrdup(), emalloc(), emalloc_zero() to
+    separate tracking callsite file/line from using debug MS C runtime,
+    and to reduce code duplication.
+
+  ChangeLog@1.763 +4 -0
+    Fix for openssl pkg-config detection eval failure.
+      (applies to prior cset)
+    Add erealloc_zero(), refactor estrdup(), emalloc(), emalloc_zero() to
+      separate tracking callsite file/line from using debug MS C runtime,
+      and to reduce code duplication.
+
+  configure.ac@1.509 +1 -43
+    Accept gtest versions greater than 1.5
+    Move google test detection to m4\ntp_googletest.m4
+
+  include/lib_strbuf.h@1.8 +1 -1
+    memset() -> ZERO()
+
+  include/ntp_control.h@1.56 +1 -1
+    rename ctl_trap[] to ctl_traps[] to be distinct from struct tag
+
+  include/ntp_malloc.h@1.5 +17 -0
+    Add erealloc_zero(), refactor estrdup(), emalloc(), emalloc_zero() to
+      separate tracking callsite file/line from using debug MS C runtime,
+      and to reduce code duplication.
+
+  include/ntp_net.h@1.11 +2 -1
+    Add erealloc_zero(), refactor estrdup(), emalloc(), emalloc_zero() to
+      separate tracking callsite file/line from using debug MS C runtime,
+      and to reduce code duplication.
+
+  include/ntp_rfc2553.h@1.37 +11 -7
+    Add erealloc_zero(), refactor estrdup(), emalloc(), emalloc_zero() to
+      separate tracking callsite file/line from using debug MS C runtime,
+      and to reduce code duplication.
+
+  include/ntp_stdlib.h@1.56 +27 -14
+    Add erealloc_zero(), refactor estrdup(), emalloc(), emalloc_zero() to
+      separate tracking callsite file/line from using debug MS C runtime,
+      and to reduce code duplication.
+
+  libntp/authkeys.c@1.21 +2 -2
+    memset() -> ZERO()
+
+  libntp/decodenetnum.c@1.13 +1 -1
+    memset() -> ZERO()
+
+  libntp/dofptoa.c@1.8 +1 -1
+    memset() -> ZERO()
+
+  libntp/dolfptoa.c@1.10 +1 -1
+    memset() -> ZERO()
+
+  libntp/emalloc.c@1.14 +56 -102
+    Add erealloc_zero(), refactor estrdup(), emalloc(), emalloc_zero() to
+      separate tracking callsite file/line from using debug MS C runtime,
+      and to reduce code duplication.
+
+  libntp/netof.c@1.9 +1 -1
+    memset() -> zero_mem()
+
+  libntp/ntp_lineedit.c@1.10 +1 -1
+    memset() -> ZERO()
+
+  libntp/ntp_rfc2553.c@1.44 +7 -16
+    Add erealloc_zero(), refactor estrdup(), emalloc(), emalloc_zero() to
+      separate tracking callsite file/line from using debug MS C runtime,
+      and to reduce code duplication.
+
+  libntp/recvbuff.c@1.36 +3 -4
+    memset() -> ZERO()
+    emalloc() + memset() -> emalloc_zero()
+
+  libntp/socktohost.c@1.12 +1 -1
+    memset() -> ZERO()
+
+  libntp/syssignal.c@1.11 +1 -1
+    memset() -> ZERO()
+
+  libntp/systime.c@1.52 +2 -2
+    memset() -> ZERO()
+
+  m4/ntp_googletest.m4@1.1 +52 -0
+    BitKeeper file C:/ntp/ntp-dev-erealloc-zero/m4/ntp_googletest.m4
+
+  m4/ntp_googletest.m4@1.0 +0 -0
+
+  ntpd/keyword-gen.c@1.17 +1 -2
+    memset() -> ZERO()
+
+  ntpd/ntp_config.c@1.283 +12 -12
+    memset() -> ZERO()
+
+  ntpd/ntp_control.c@1.160 +126 -135
+    memset() -> ZERO()
+    emalloc() + memset() -> emalloc_zero()
+
+  ntpd/ntp_intres.c@1.91 +3 -6
+    emalloc() + memset() -> emalloc_zero()
+
+  ntpd/ntp_io.c@1.345 +16 -18
+    memset() -> ZERO()
+    emalloc() + memset() -> emalloc_zero()
+
+  ntpd/ntp_monitor.c@1.37 +4 -5
+    memset() -> ZERO()
+    emalloc() + memset() -> emalloc_zero()
+
+  ntpd/ntp_peer.c@1.146 +2 -3
+    memset() -> ZERO()
+    emalloc() + memset() -> emalloc_zero()
+
+  ntpd/ntp_refclock.c@1.101 +3 -4
+    memset() -> ZERO()
+    emalloc() + memset() -> emalloc_zero()
+
+  ntpd/ntp_request.c@1.102 +20 -43
+    memset() -> ZERO()
+
+  ntpd/ntp_restrict.c@1.34 +5 -7
+    memset() -> ZERO()
+    memset() -> zero_mem()
+    emalloc() + memset() -> emalloc_zero()
+
+  ntpd/ntp_signd.c@1.3 +5 -5
+    memset() -> ZERO()
+
+  ntpd/ntp_util.c@1.92 +2 -0
+    save a hundred bytes or so on Windows
+
+  ntpd/ntpsim.c@1.31 +2 -2
+    memset() -> ZERO()
+
+  ntpdate/ntpdate.c@1.82 +8 -8
+    memset() -> ZERO()
+    emalloc() + memset() -> emalloc_zero()
+
+  ntpdc/ntpdc.c@1.93 +10 -9
+    use erealloc_zero
+
+  ntpdc/ntpdc_ops.c@1.75 +28 -55
+    memset() -> ZERO()
+
+  ntpq/ntpq-subs.c@1.82 +36 -41
+    memset() -> ZERO()
+    emalloc() + memset() -> emalloc_zero()
+
+  ntpq/ntpq.c@1.128 +21 -26
+    memset() -> ZERO()
+
+  ports/winnt/include/config.h@1.91 +7 -5
+    Add erealloc_zero(), refactor estrdup(), emalloc(), emalloc_zero() to
+      separate tracking callsite file/line from using debug MS C runtime,
+      and to reduce code duplication.
+
+  ports/winnt/libntp/termios.c@1.26 +2 -3
+    erealloc() + memset() -> erealloc_zero()
+
+  ports/winnt/ntpd/nt_clockstuff.c@1.49 +2 -2
+    memset() -> ZERO()
+
+  ports/winnt/ntpd/ntp_iocompletionport.c@1.56 +2 -3
+    memset() -> ZERO()
+    emalloc() + memset() -> emalloc_zero()
+
+  ports/winnt/ntpd/ntservice.c@1.26 +1 -1
+    memset() -> ZERO()
+
+  sntp/configure.ac@1.52 +3 -42
+    Move google test detection to m4\ntp_googletest.m4
+
+  sntp/tests/Makefile.am@1.18 +4 -4
+    put @GTEST_LDFLAGS@ @GTEST_LIBS@ after @LCRYPTO@ in LDADD
+
+ChangeSet@1.2428.1.2, 2011-01-07 17:46:18+00:00, davehart@shiny.ad.hartbrothers.com
+  use tr to deal with trailing newline from pkg-config in ntp_openssl.m4
+
+  m4/ntp_openssl.m4@1.13 +4 -6
+    use tr to deal with trailing newline from pkg-config in ntp_openssl.m4
+
+ChangeSet@1.2428.1.1, 2011-01-07 15:31:38+00:00, davehart@shiny.ad.hartbrothers.com
+  add libntp/socket.c references to Windows libntp projects.
+
+  ports/winnt/vc6/libntp.dsp@1.58 +4 -0
+    add libntp/socket.c references to Windows libntp projects.
+
+  ports/winnt/vs2003/libntp.vcproj@1.16 +3 -18
+    add libntp/socket.c references to Windows libntp projects.
+
+  ports/winnt/vs2005/libntp.vcproj@1.14 +4 -18
+    add libntp/socket.c references to Windows libntp projects.
+
+  ports/winnt/vs2008/libntp/libntp.vcproj@1.35 +6 -16
+    add libntp/socket.c references to Windows libntp projects.
+
 ChangeSet@1.2429, 2011-01-07 11:16:32+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P113
   TAG: NTP_4_2_7P113
