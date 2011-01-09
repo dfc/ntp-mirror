@@ -1,3 +1,147 @@
+ChangeSet@1.2436, 2011-01-09 12:55:33+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P115
+  TAG: NTP_4_2_7P115
+
+  ChangeLog@1.767 +1 -0
+    NTP_4_2_7P115
+
+  clockstuff/clktest-opts.c@1.39 +2 -2
+    NTP_4_2_7P115
+
+  clockstuff/clktest-opts.h@1.39 +3 -3
+    NTP_4_2_7P115
+
+  ntpd/ntpd-opts.c@1.119 +2 -2
+    NTP_4_2_7P115
+
+  ntpd/ntpd-opts.h@1.119 +3 -3
+    NTP_4_2_7P115
+
+  ntpd/ntpd-opts.texi@1.117 +2 -2
+    NTP_4_2_7P115
+
+  ntpd/ntpd.1@1.117 +2 -2
+    NTP_4_2_7P115
+
+  ntpdc/ntpdc-opts.c@1.116 +2 -2
+    NTP_4_2_7P115
+
+  ntpdc/ntpdc-opts.h@1.116 +3 -3
+    NTP_4_2_7P115
+
+  ntpdc/ntpdc-opts.texi@1.116 +2 -2
+    NTP_4_2_7P115
+
+  ntpdc/ntpdc.1@1.116 +2 -2
+    NTP_4_2_7P115
+
+  ntpq/ntpq-opts.c@1.116 +2 -2
+    NTP_4_2_7P115
+
+  ntpq/ntpq-opts.h@1.116 +3 -3
+    NTP_4_2_7P115
+
+  ntpq/ntpq-opts.texi@1.116 +2 -2
+    NTP_4_2_7P115
+
+  ntpq/ntpq.1@1.116 +2 -2
+    NTP_4_2_7P115
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.116 +2 -2
+    NTP_4_2_7P115
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.116 +3 -3
+    NTP_4_2_7P115
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.116 +2 -2
+    NTP_4_2_7P115
+
+  ntpsnmpd/ntpsnmpd.1@1.116 +2 -2
+    NTP_4_2_7P115
+
+  packageinfo.sh@1.117 +1 -1
+    NTP_4_2_7P115
+
+  sntp/sntp-opts.c@1.116 +2 -2
+    NTP_4_2_7P115
+
+  sntp/sntp-opts.h@1.116 +3 -3
+    NTP_4_2_7P115
+
+  sntp/sntp-opts.texi@1.116 +2 -2
+    NTP_4_2_7P115
+
+  sntp/sntp.1@1.116 +2 -2
+    NTP_4_2_7P115
+
+  sntp/sntp.html@1.116 +2 -2
+    NTP_4_2_7P115
+
+  util/ntp-keygen-opts.c@1.114 +2 -2
+    NTP_4_2_7P115
+
+  util/ntp-keygen-opts.h@1.114 +3 -3
+    NTP_4_2_7P115
+
+  util/ntp-keygen-opts.texi@1.117 +2 -2
+    NTP_4_2_7P115
+
+  util/ntp-keygen.1@1.117 +2 -2
+    NTP_4_2_7P115
+
+ChangeSet@1.2435, 2011-01-09 02:46:20+00:00, davehart@shiny.ad.hartbrothers.com
+  correct ntpq nextvar() warning cleanp
+
+  ntpq/ntpq.c@1.130 +2 -2
+    min()/max() mixup
+
+ChangeSet@1.2434, 2011-01-08 20:34:39+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 1781] longlong undefined in sntp handle_pkt() on Debian amd64.
+  Bump deps-ver and sntp/deps-ver to force each directory to be cleaned once,
+    to work around build breaks triggered by changing erealloc() and
+    estrdup() from functions to macros.
+
+  ChangeLog@1.766 +1 -0
+    [Bug 1781] longlong undefined in sntp handle_pkt() on Debian amd64.
+
+  deps-ver@1.4 +1 -1
+    force each directory to be cleaned once, to work around build
+      breaks triggered by changing erealloc() and estrdup() from
+      functions to macros.
+
+  ntpd/ntp_control.c@1.161 +1 -1
+    more gcc 4.5.2 warning hunting
+
+  ntpq/ntpq.c@1.129 +23 -22
+    more gcc 4.5.2 warning hunting
+
+  sntp/Makefile.am@1.48 +1 -1
+    let libntp Makefile decide if libntp.a is up to date, fixes
+      building in sntp subdir before top level.
+
+  sntp/deps-ver@1.2 +1 -1
+    force each directory to be cleaned once, to work around build
+      breaks triggered by changing erealloc() and estrdup() from
+      functions to macros.
+
+  sntp/main.c@1.43 +1 -1
+    [Bug 1781] longlong undefined in sntp handle_pkt() on Debian amd64.
+
+  tests/libntp/Makefile.am@1.27 +1 -1
+    @LCRYPTO@ after libntp.a in LDADD
+
+ChangeSet@1.2433, 2011-01-08 10:54:12+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 1780] Windows ntpd 4.2.7p114 crashes in ioctl().
+
+  ChangeLog@1.765 +1 -0
+    [Bug 1780] Windows ntpd 4.2.7p114 crashes in ioctl().
+
+  libntp/socket.c@1.3 +8 -0
+    [Bug 1780] Windows ntpd 4.2.7p114 crashes in ioctl().
+
+  ntpd/ntp_io.c@1.346 +1 -69
+    [Bug 1780] Windows ntpd 4.2.7p114 crashes in ioctl().
+
 ChangeSet@1.2432, 2011-01-08 09:53:03+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P114
   TAG: NTP_4_2_7P114
