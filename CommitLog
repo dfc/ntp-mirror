@@ -1,3 +1,116 @@
+ChangeSet@1.2439, 2011-01-10 11:38:28+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P116
+  TAG: NTP_4_2_7P116
+
+  ChangeLog@1.769 +1 -0
+    NTP_4_2_7P116
+
+  clockstuff/clktest-opts.c@1.40 +2 -2
+    NTP_4_2_7P116
+
+  clockstuff/clktest-opts.h@1.40 +3 -3
+    NTP_4_2_7P116
+
+  ntpd/ntpd-opts.c@1.120 +2 -2
+    NTP_4_2_7P116
+
+  ntpd/ntpd-opts.h@1.120 +3 -3
+    NTP_4_2_7P116
+
+  ntpd/ntpd-opts.texi@1.118 +2 -2
+    NTP_4_2_7P116
+
+  ntpd/ntpd.1@1.118 +2 -2
+    NTP_4_2_7P116
+
+  ntpdc/ntpdc-opts.c@1.117 +2 -2
+    NTP_4_2_7P116
+
+  ntpdc/ntpdc-opts.h@1.117 +3 -3
+    NTP_4_2_7P116
+
+  ntpdc/ntpdc-opts.texi@1.117 +2 -2
+    NTP_4_2_7P116
+
+  ntpdc/ntpdc.1@1.117 +2 -2
+    NTP_4_2_7P116
+
+  ntpq/ntpq-opts.c@1.117 +2 -2
+    NTP_4_2_7P116
+
+  ntpq/ntpq-opts.h@1.117 +3 -3
+    NTP_4_2_7P116
+
+  ntpq/ntpq-opts.texi@1.117 +2 -2
+    NTP_4_2_7P116
+
+  ntpq/ntpq.1@1.117 +2 -2
+    NTP_4_2_7P116
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.117 +2 -2
+    NTP_4_2_7P116
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.117 +3 -3
+    NTP_4_2_7P116
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.117 +2 -2
+    NTP_4_2_7P116
+
+  ntpsnmpd/ntpsnmpd.1@1.117 +2 -2
+    NTP_4_2_7P116
+
+  packageinfo.sh@1.118 +1 -1
+    NTP_4_2_7P116
+
+  sntp/sntp-opts.c@1.117 +2 -2
+    NTP_4_2_7P116
+
+  sntp/sntp-opts.h@1.117 +3 -3
+    NTP_4_2_7P116
+
+  sntp/sntp-opts.texi@1.117 +2 -2
+    NTP_4_2_7P116
+
+  sntp/sntp.1@1.117 +2 -2
+    NTP_4_2_7P116
+
+  sntp/sntp.html@1.117 +2 -2
+    NTP_4_2_7P116
+
+  util/ntp-keygen-opts.c@1.115 +2 -2
+    NTP_4_2_7P116
+
+  util/ntp-keygen-opts.h@1.115 +3 -3
+    NTP_4_2_7P116
+
+  util/ntp-keygen-opts.texi@1.118 +2 -2
+    NTP_4_2_7P116
+
+  util/ntp-keygen.1@1.118 +2 -2
+    NTP_4_2_7P116
+
+ChangeSet@1.2438, 2011-01-10 00:22:04+00:00, davehart@shiny.ad.hartbrothers.com
+  refclock_nmea.c refactoring by Juergen Perlinger.
+
+  ChangeLog@1.768 +1 -0
+    refclock_nmea.c refactoring by Juergen Perlinger.
+
+  html/drivers/driver20.html@1.23 +99 -341
+    restore current ntp-dev driver20.html, all html edits need to
+      flow through Dr. Mills.
+
+  ntpd/refclock_nmea.c@1.58 +24 -22
+    refclock_nmea.c refactoring by Juergen Perlinger.
+
+ChangeSet@1.2254.1.3, 2011-01-09 20:19:31+00:00, davehart@shiny.ad.hartbrothers.com
+  minor style cleanup of Juergen's refactored NMEA driver
+
+  libntp/atouint.c@1.4 +18 -12
+    Add detailed atouint() doc comment
+
+  ntpd/refclock_nmea.c@1.57 +142 -91
+    minor style cleanup of Juergen's refactored NMEA driver
+
 ChangeSet@1.2436, 2011-01-09 12:55:33+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P115
   TAG: NTP_4_2_7P115
@@ -7647,6 +7760,15 @@ ChangeSet@1.2082.4.149, 2010-11-11 19:20:40+00:00, davehart@shiny.ad.hartbrother
   ntpd/ntpd.c@1.110.2.1 +3 -3
     [Bug 1683] Non-localhost on loopback exempted from nic rules.
 
+ChangeSet@1.2254.1.2, 2010-11-10 19:29:43+01:00, jnperlin@hydra.localnet
+  fixed doc error, improved comments
+
+  html/drivers/driver20.html@1.22 +1 -1
+    fixed wrong mode bit nuber
+
+  ntpd/refclock_nmea.c@1.56 +7 -4
+    changed / moved comments for better strategic grouping
+
 ChangeSet@1.2265, 2010-11-10 05:44:21+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P80
   TAG: NTP_4_2_7P80
@@ -7920,6 +8042,15 @@ ChangeSet@1.2259, 2010-11-09 20:08:29+00:00, davehart@shiny.ad.hartbrothers.com
 
   sntp/utilities.c@1.13 +13 -14
     [Bug 1715] sntp utilitiesTest.IPv6Address failed.
+
+ChangeSet@1.2252.1.1, 2010-11-09 19:38:19+01:00, jnperlin@hydra.localnet
+  reformed NMEA driver implementation and doc
+
+  html/drivers/driver20.html@1.21 +341 -99
+    updated / extended doc
+
+  ntpd/refclock_nmea.c@1.55 +712 -537
+    restructured ('reformed') driver
 
 ChangeSet@1.2082.4.144, 2010-11-09 06:01:12+00:00, davehart@shiny.ad.hartbrothers.com
   Correct missing leading zeros in sntp tv_usec display from tv_to_str().
