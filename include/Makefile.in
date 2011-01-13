@@ -39,16 +39,18 @@ DIST_COMMON = README $(noinst_HEADERS) $(srcdir)/Makefile.am \
 	$(srcdir)/Makefile.in
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
-	$(top_srcdir)/m4/define_dir.m4 \
-	$(top_srcdir)/m4/ntp_cacheversion.m4 \
-	$(top_srcdir)/m4/ntp_dir_sep.m4 \
-	$(top_srcdir)/m4/ntp_googletest.m4 \
-	$(top_srcdir)/m4/ntp_lib_m.m4 \
-	$(top_srcdir)/m4/ntp_lineeditlibs.m4 \
-	$(top_srcdir)/m4/ntp_openssl.m4 \
-	$(top_srcdir)/m4/ntp_vpathhack.m4 \
-	$(top_srcdir)/m4/os_cflags.m4 $(top_srcdir)/version.m4 \
-	$(top_srcdir)/configure.ac
+	$(top_srcdir)/sntp/m4/define_dir.m4 \
+	$(top_srcdir)/sntp/m4/ntp_cacheversion.m4 \
+	$(top_srcdir)/sntp/m4/ntp_dir_sep.m4 \
+	$(top_srcdir)/sntp/m4/ntp_googletest.m4 \
+	$(top_srcdir)/sntp/m4/ntp_ipv6.m4 \
+	$(top_srcdir)/sntp/m4/ntp_lib_m.m4 \
+	$(top_srcdir)/sntp/m4/ntp_libntp.m4 \
+	$(top_srcdir)/sntp/m4/ntp_lineeditlibs.m4 \
+	$(top_srcdir)/sntp/m4/ntp_openssl.m4 \
+	$(top_srcdir)/sntp/m4/ntp_vpathhack.m4 \
+	$(top_srcdir)/sntp/m4/os_cflags.m4 \
+	$(top_srcdir)/sntp/m4/version.m4 $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 mkinstalldirs = $(install_sh) -d
@@ -118,10 +120,12 @@ BINSUBDIR = @BINSUBDIR@
 CC = @CC@
 CCDEPMODE = @CCDEPMODE@
 CFLAGS = @CFLAGS@
+CFLAGS_NTP = @CFLAGS_NTP@
 CHUTEST = @CHUTEST@
 CLKTEST = @CLKTEST@
 CPP = @CPP@
 CPPFLAGS = @CPPFLAGS@
+CPPFLAGS_NTP = @CPPFLAGS_NTP@
 CXX = @CXX@
 CXXCPP = @CXXCPP@
 CXXDEPMODE = @CXXDEPMODE@
@@ -163,6 +167,7 @@ LIBOPTS_LDADD = @LIBOPTS_LDADD@
 LIBPARSE = @LIBPARSE@
 LIBS = @LIBS@
 LIBTOOL = @LIBTOOL@
+LIBTOOL_DEPS = @LIBTOOL_DEPS@
 LN_S = @LN_S@
 LSCF = @LSCF@
 LTLIBOBJS = @LTLIBOBJS@
@@ -204,6 +209,7 @@ SHELL = @SHELL@
 SNMP_CFLAGS = @SNMP_CFLAGS@
 SNMP_CPPFLAGS = @SNMP_CPPFLAGS@
 SNMP_LIBS = @SNMP_LIBS@
+SNTP = @SNTP@
 STRIP = @STRIP@
 TESTDCF = @TESTDCF@
 VERSION = @VERSION@
@@ -265,7 +271,6 @@ top_srcdir = @top_srcdir@
 NULL = 
 AUTOMAKE_OPTIONS = 
 ETAGS_ARGS = $(srcdir)/Makefile.am
-EXTRA_DIST = autogen-version.def copyright.def debug-opt.def homerc.def version.def version.texi
 SUBDIRS = isc
 noinst_HEADERS = \
 	adjtime.h	\

@@ -41,23 +41,26 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
-@NTP_BINSUBDIR_IS_BIN_TRUE@bin_PROGRAMS = sntp$(EXEEXT)
-@NTP_BINSUBDIR_IS_BIN_FALSE@sbin_PROGRAMS = sntp$(EXEEXT)
+EXTRA_PROGRAMS = sntp$(EXEEXT)
 @NEED_LIBOPTS_TRUE@am__append_1 = libopts
 @GTEST_AVAILABLE_TRUE@am__append_2 = tests
 DIST_COMMON = $(am__configure_deps) $(srcdir)/Makefile.am \
 	$(srcdir)/Makefile.in $(srcdir)/config.h.in \
 	$(top_srcdir)/bincheck.mf $(top_srcdir)/configure \
-	$(top_srcdir)/depsver.mf compile config.guess config.sub \
-	depcomp install-sh ltmain.sh missing
+	$(top_srcdir)/depsver.mf build-aux/compile \
+	build-aux/config.guess build-aux/config.sub build-aux/depcomp \
+	build-aux/install-sh build-aux/ltmain.sh build-aux/missing \
+	build-aux/ylwrap compile config.guess config.sub depcomp \
+	install-sh ltmain.sh missing
 subdir = .
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/libopts/m4/libopts.m4 \
-	$(top_srcdir)/../m4/ntp_cacheversion.m4 \
-	$(top_srcdir)/../m4/ntp_dir_sep.m4 \
-	$(top_srcdir)/../m4/ntp_googletest.m4 \
-	$(top_srcdir)/../m4/ntp_lib_m.m4 \
-	$(top_srcdir)/../m4/ntp_openssl.m4 $(top_srcdir)/../version.m4 \
+	$(top_srcdir)/m4/ntp_cacheversion.m4 \
+	$(top_srcdir)/m4/ntp_dir_sep.m4 \
+	$(top_srcdir)/m4/ntp_googletest.m4 \
+	$(top_srcdir)/m4/ntp_ipv6.m4 $(top_srcdir)/m4/ntp_lib_m.m4 \
+	$(top_srcdir)/m4/ntp_libntp.m4 $(top_srcdir)/m4/ntp_openssl.m4 \
+	$(top_srcdir)/m4/os_cflags.m4 $(top_srcdir)/m4/version.m4 \
 	$(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
@@ -84,7 +87,7 @@ AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
 am__v_lt_0 = --silent
 DEFAULT_INCLUDES = -I.@am__isrc@
-depcomp = $(SHELL) $(top_srcdir)/depcomp
+depcomp = $(SHELL) $(top_srcdir)/build-aux/depcomp
 am__depfiles_maybe = depfiles
 am__mv = mv -f
 COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
@@ -150,7 +153,7 @@ AM_RECURSIVE_TARGETS = $(RECURSIVE_TARGETS:-recursive=) \
 	distdir dist dist-all distcheck
 ETAGS = etags
 CTAGS = ctags
-DIST_SUBDIRS = libopts tests
+DIST_SUBDIRS = include libopts tests
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 distdir = $(PACKAGE)-$(VERSION)
 top_distdir = $(distdir)
@@ -198,9 +201,11 @@ AWK = @AWK@
 BINSUBDIR = @BINSUBDIR@
 CC = @CC@
 CCDEPMODE = @CCDEPMODE@
-CFLAGS = @CFLAGS@
+CFLAGS = @CFLAGS_NTP@
+CFLAGS_NTP = @CFLAGS_NTP@
 CPP = @CPP@
 CPPFLAGS = @CPPFLAGS@
+CPPFLAGS_NTP = @CPPFLAGS_NTP@
 CXX = @CXX@
 CXXCPP = @CXXCPP@
 CXXDEPMODE = @CXXDEPMODE@
@@ -237,6 +242,7 @@ LIBOPTS_DIR = @LIBOPTS_DIR@
 LIBOPTS_LDADD = @LIBOPTS_LDADD@
 LIBS = @LIBS@
 LIBTOOL = @LIBTOOL@
+LIBTOOL_DEPS = @LIBTOOL_DEPS@
 LN_S = @LN_S@
 LTLIBOBJS = @LTLIBOBJS@
 MAKEINFO = @MAKEINFO@
@@ -257,6 +263,7 @@ PKG_CONFIG = @PKG_CONFIG@
 RANLIB = @RANLIB@
 SET_MAKE = @SET_MAKE@
 SHELL = @SHELL@
+SNTP = @SNTP@
 STRIP = @STRIP@
 VERSION = @VERSION@
 abs_builddir = @abs_builddir@
@@ -313,18 +320,19 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 NULL = 
 AUTOMAKE_OPTIONS = foreign 1.10
-ACLOCAL_AMFLAGS = -I ../m4 -I libopts/m4
-AM_CPPFLAGS = $(LIBOPTS_CFLAGS) -I$(top_srcdir)/../include \
+ACLOCAL_AMFLAGS = -I m4 -I libopts/m4
+AM_CPPFLAGS = @CPPFLAGS_NTP@
+INCLUDES = $(LIBOPTS_CFLAGS) -I$(top_srcdir)/../include \
 	-I$(top_srcdir)/../lib/isc/include \
 	-I$(top_srcdir)/../lib/isc/nothreads/include \
 	-I$(top_srcdir)/../lib/isc/unix/include
-
 LDADD = $(LIBOPTS_LDADD) $(LIBM) ../libntp/libntp.a @LCRYPTO@
 run_ag = cd $(srcdir) &&	env PATH="$(abs_builddir):$(PATH)"	\
-		autogen -L ../include --writable
+		autogen -L include --writable
 
-CLEANFILES = check-COPYRIGHT-submake .deps-ver
-SUBDIRS = $(am__append_1) $(am__append_2)
+@NTP_BINSUBDIR_IS_BIN_TRUE@bin_PROGRAMS = @SNTP@
+@NTP_BINSUBDIR_IS_BIN_FALSE@sbin_PROGRAMS = @SNTP@
+SUBDIRS = include $(am__append_1) $(am__append_2)
 sntp_SOURCES = \
 	crypto.c	\
 	crypto.h	\
@@ -346,7 +354,6 @@ sntp_SOURCES = \
 	$(NULL)
 
 EXTRA_DIST = \
-	$(srcdir)/autogen-version.def	\
 	bincheck.mf			\
 	$(srcdir)/COPYRIGHT		\
 	deps-ver			\
@@ -358,17 +365,15 @@ EXTRA_DIST = \
 	sntp.html			\
 	sntp.texi			\
 	tests_main.h			\
-	$(srcdir)/version.def		\
-	$(srcdir)/version.m4		\
-	$(srcdir)/version.texi		\
+	$(srcdir)/version		\
+	$(srcdir)/m4/version.m4		\
 	$(NULL)
 
-OLD_EXTRA_DIST = \
-		autogen-version.def version.def version.m4 version.texi
-
-BUILT_SOURCES = check-autogen-version.def check-version.def \
-	check-version.m4 check-version.texi $(srcdir)/COPYRIGHT \
-	libtool $(srcdir)/sntp-opts.c $(srcdir)/sntp-opts.h $(NULL) \
+BUILT_SOURCES = check-libntp $(srcdir)/COPYRIGHT libtool \
+	$(srcdir)/sntp-opts.c $(srcdir)/sntp-opts.h $(srcdir)/version \
+	$(srcdir)/include/version.def $(srcdir)/m4/version.m4 \
+	$(srcdir)/include/version.texi $(NULL) .deps-ver
+CLEANFILES = built-sources-only check-COPYRIGHT-submake $(NULL) \
 	.deps-ver
 man_MANS = $(srcdir)/sntp.1
 
@@ -1077,60 +1082,40 @@ uninstall-man: uninstall-man1
 	uninstall-sbinPROGRAMS
 
 
-FRC:
+FRC FRC.version:
 	@: do-nothing action to prevent default SCCS get
 	@: FRC "force" depends on nothing and is not a file, so is
 	@: always out-of-date causing targets which depend on it to
 	@: similarly always be outdated causing their rules to fire
 	@: each time they or a dependent is built.
 
-check-autogen-version.def: FRC
-	@cd $(srcdir)							\
-	&& test -r ../include/autogen-version.def			\
-	&& ( if cmp -s ../include/autogen-version.def autogen-version.def; \
-	   then : ;							\
-	   else cp ../include/autogen-version.def autogen-version.def;	 \
-		echo "Installing new sntp/autogen-version.def file";	\
-	   fi )
+built-sources-only: $(BUILT_SOURCES)
+	@umask 0 && touch $@
 
-$(srcdir)/autogen-version.def:
-	$(MAKE) check-autogen-version.def
+# HMS: The next bit is still suboptimal.  If bk is present but this NTP
+# repo is not a bk repo, we'll get an error message from the prs command.
+# Unfortunately, I haven't found the necessary magic to redirect this error
+# output to /dev/null under ancient/unique shells like the one Ultrix uses.
+# We'll also get an error if srcdir or version is unwritable.
+$(srcdir)/version: FRC.version
+	-test -r $(srcdir)/../SCCS/s.ChangeSet &&				\
+	    (bk version) >/dev/null 2>&1 &&			\
+	    cd $(srcdir)/.. &&					\
+	    x=`bk -R prs -hr+ -nd:I: ChangeSet` &&		\
+	    y=`cat sntp/version 2>/dev/null` || true &&		\
+	    case "$$x" in ''|$$y) ;; *) echo $$x > sntp/version ;; esac
 
-check-version.def: FRC
-	@cd $(srcdir)					\
-	&& test -r ../include/version.def		\
-	&& ( if cmp -s ../include/version.def version.def;	\
-	   then : ;						\
-	   else cp ../include/version.def version.def;		\
-		echo "Installing new sntp/version.def file";	\
-	   fi )
+$(srcdir)/m4/version.m4: $(srcdir)/../packageinfo.sh
+	TEMPDIR=`pwd` && export TEMPDIR && cd $(srcdir) && \
+	../scripts/genver m4/version.m4
 
-$(srcdir)/version.def:
-	$(MAKE) check-version.def
+$(srcdir)/include/version.def: $(srcdir)/../packageinfo.sh
+	TEMPDIR=`pwd` && export TEMPDIR && cd $(srcdir) && \
+	../scripts/genver include/version.def
 
-check-version.m4: FRC
-	@cd $(srcdir)					\
-	&& test -r ../version.m4			\
-	&& ( if cmp -s ../version.m4 version.m4;	\
-	   then : ;					\
-	   else cp ../version.m4 version.m4;		\
-		echo "Installing new sntp/version.m4 file";	\
-	   fi )
-
-$(srcdir)/version.m4:
-	$(MAKE) check-version.m4
-
-check-version.texi: FRC
-	@cd $(srcdir)					\
-	&& test -r ../include/version.texi			\
-	&& ( if cmp -s ../include/version.texi version.texi;	\
-	   then : ;					\
-	   else cp ../include/version.texi version.texi;	\
-		echo "Installing new sntp/version.texi file";	\
-	   fi )
-
-$(srcdir)/version.texi:
-	$(MAKE) check-version.texi
+$(srcdir)/include/version.texi: $(srcdir)/../packageinfo.sh
+	TEMPDIR=`pwd` && export TEMPDIR && cd $(srcdir) && \
+	../scripts/genver include/version.texi
 
 $(srcdir)/../COPYRIGHT:
 	cd .. && $(MAKE) COPYRIGHT-please
@@ -1152,24 +1137,27 @@ $(srcdir)/COPYRIGHT: check-COPYRIGHT
 $(srcdir)/sntp-opts.h: $(srcdir)/sntp-opts.c
 	@: do-nothing action to avoid default SCCS get, .h built with .c
 
-$(srcdir)/sntp-opts.c: $(srcdir)/sntp-opts.def $(srcdir)/version.def $(srcdir)/../include/copyright.def
+$(srcdir)/sntp-opts.c: $(srcdir)/sntp-opts.def $(srcdir)/include/version.def $(srcdir)/include/copyright.def
 	$(run_ag) sntp-opts.def
 
-$(srcdir)/sntp.1: $(srcdir)/sntp-opts.def $(srcdir)/version.def $(srcdir)/../include/copyright.def
+$(srcdir)/sntp.1: $(srcdir)/sntp-opts.def $(srcdir)/include/version.def $(srcdir)/include/copyright.def
 	$(run_ag) -Tagman1.tpl -bsntp sntp-opts.def
 
 $(srcdir)/sntp-opts.menu: $(srcdir)/sntp-opts.texi
 	@: do-nothing action to avoid default SCCS get, .menu built with .texi
 
-$(srcdir)/sntp-opts.texi: $(srcdir)/sntp-opts.def $(srcdir)/version.def $(srcdir)/../include/copyright.def
+$(srcdir)/sntp-opts.texi: $(srcdir)/sntp-opts.def $(srcdir)/include/version.def $(srcdir)/include/copyright.def
 	$(run_ag) -Taginfo.tpl -DLEVEL=section sntp-opts.def
 	$(top_srcdir)/../scripts/check--help $@
 
-$(srcdir)/sntp.html: $(srcdir)/sntp-opts.menu $(srcdir)/sntp-opts.texi $(srcdir)/sntp.texi $(srcdir)/version.texi
+$(srcdir)/sntp.html: $(srcdir)/sntp-opts.menu $(srcdir)/sntp-opts.texi $(srcdir)/sntp.texi $(srcdir)/include/version.texi
 	cd $(srcdir) && ( makeinfo --force --html --no-split -o sntp.html sntp.texi || true )
 
-../libntp/libntp.a: FRC
-	cd ../libntp && $(MAKE) libntp.a
+check-libntp: FRC
+	cd ../libntp && $(MAKE)
+
+../libntp/libntp.a:
+	cd ../libntp && $(MAKE)
 
 libtool: $(LIBTOOL_DEPS)
 	./config.status --recheck

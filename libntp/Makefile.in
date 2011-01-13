@@ -39,16 +39,18 @@ DIST_COMMON = README $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
 subdir = libntp
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
-	$(top_srcdir)/m4/define_dir.m4 \
-	$(top_srcdir)/m4/ntp_cacheversion.m4 \
-	$(top_srcdir)/m4/ntp_dir_sep.m4 \
-	$(top_srcdir)/m4/ntp_googletest.m4 \
-	$(top_srcdir)/m4/ntp_lib_m.m4 \
-	$(top_srcdir)/m4/ntp_lineeditlibs.m4 \
-	$(top_srcdir)/m4/ntp_openssl.m4 \
-	$(top_srcdir)/m4/ntp_vpathhack.m4 \
-	$(top_srcdir)/m4/os_cflags.m4 $(top_srcdir)/version.m4 \
-	$(top_srcdir)/configure.ac
+	$(top_srcdir)/sntp/m4/define_dir.m4 \
+	$(top_srcdir)/sntp/m4/ntp_cacheversion.m4 \
+	$(top_srcdir)/sntp/m4/ntp_dir_sep.m4 \
+	$(top_srcdir)/sntp/m4/ntp_googletest.m4 \
+	$(top_srcdir)/sntp/m4/ntp_ipv6.m4 \
+	$(top_srcdir)/sntp/m4/ntp_lib_m.m4 \
+	$(top_srcdir)/sntp/m4/ntp_libntp.m4 \
+	$(top_srcdir)/sntp/m4/ntp_lineeditlibs.m4 \
+	$(top_srcdir)/sntp/m4/ntp_openssl.m4 \
+	$(top_srcdir)/sntp/m4/ntp_vpathhack.m4 \
+	$(top_srcdir)/sntp/m4/os_cflags.m4 \
+	$(top_srcdir)/sntp/m4/version.m4 $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 mkinstalldirs = $(install_sh) -d
@@ -105,7 +107,7 @@ libntpsim_a_LIBADD =
 am_libntpsim_a_OBJECTS = systime_s.$(OBJEXT) $(am__objects_2)
 libntpsim_a_OBJECTS = $(am_libntpsim_a_OBJECTS)
 DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
-depcomp = $(SHELL) $(top_srcdir)/depcomp
+depcomp = $(SHELL) $(top_srcdir)/sntp/build-aux/depcomp
 am__depfiles_maybe = depfiles
 am__mv = mv -f
 AM_V_lt = $(am__v_lt_$(V))
@@ -150,10 +152,12 @@ BINSUBDIR = @BINSUBDIR@
 CC = @CC@
 CCDEPMODE = @CCDEPMODE@
 CFLAGS = @CFLAGS@
+CFLAGS_NTP = @CFLAGS_NTP@
 CHUTEST = @CHUTEST@
 CLKTEST = @CLKTEST@
 CPP = @CPP@
 CPPFLAGS = @CPPFLAGS@
+CPPFLAGS_NTP = @CPPFLAGS_NTP@
 CXX = @CXX@
 CXXCPP = @CXXCPP@
 CXXDEPMODE = @CXXDEPMODE@
@@ -195,6 +199,7 @@ LIBOPTS_LDADD = @LIBOPTS_LDADD@
 LIBPARSE = @LIBPARSE@
 LIBS = @LIBS@
 LIBTOOL = @LIBTOOL@
+LIBTOOL_DEPS = @LIBTOOL_DEPS@
 LN_S = @LN_S@
 LSCF = @LSCF@
 LTLIBOBJS = @LTLIBOBJS@
@@ -236,6 +241,7 @@ SHELL = @SHELL@
 SNMP_CFLAGS = @SNMP_CFLAGS@
 SNMP_CPPFLAGS = @SNMP_CPPFLAGS@
 SNMP_LIBS = @SNMP_LIBS@
+SNTP = @SNTP@
 STRIP = @STRIP@
 TESTDCF = @TESTDCF@
 VERSION = @VERSION@
@@ -295,7 +301,6 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 NULL = 
-#AUTOMAKE_OPTIONS = ../ansi2knr no-dependencies
 AUTOMAKE_OPTIONS = 
 BUILT_SOURCES = .deps-ver
 CLEANFILES = .deps-ver
@@ -402,9 +407,10 @@ libntpsim_a_SOURCES = systime_s.c $(libntp_a_SRCS)
 EXTRA_libntp_a_SOURCES = adjtimex.c
 ETAGS_ARGS = Makefile.am
 INCLUDES = -I$(top_srcdir)/include -I$(top_srcdir)/lib/isc/include \
- -I$(top_srcdir)/lib/isc/nothreads/include \
- -I$(top_srcdir)/lib/isc/unix/include $(LIBOPTS_CFLAGS)
-
+	-I$(top_srcdir)/lib/isc/nothreads/include \
+	-I$(top_srcdir)/lib/isc/unix/include $(LIBOPTS_CFLAGS)
+AM_CFLAGS = @CFLAGS_NTP@
+AM_CPPFLAGS = @CPPFLAGS_NTP@
 EXTRA_DIST = README
 all: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) all-am

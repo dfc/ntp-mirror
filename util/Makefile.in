@@ -55,16 +55,18 @@ DIST_COMMON = README $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
 subdir = util
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
-	$(top_srcdir)/m4/define_dir.m4 \
-	$(top_srcdir)/m4/ntp_cacheversion.m4 \
-	$(top_srcdir)/m4/ntp_dir_sep.m4 \
-	$(top_srcdir)/m4/ntp_googletest.m4 \
-	$(top_srcdir)/m4/ntp_lib_m.m4 \
-	$(top_srcdir)/m4/ntp_lineeditlibs.m4 \
-	$(top_srcdir)/m4/ntp_openssl.m4 \
-	$(top_srcdir)/m4/ntp_vpathhack.m4 \
-	$(top_srcdir)/m4/os_cflags.m4 $(top_srcdir)/version.m4 \
-	$(top_srcdir)/configure.ac
+	$(top_srcdir)/sntp/m4/define_dir.m4 \
+	$(top_srcdir)/sntp/m4/ntp_cacheversion.m4 \
+	$(top_srcdir)/sntp/m4/ntp_dir_sep.m4 \
+	$(top_srcdir)/sntp/m4/ntp_googletest.m4 \
+	$(top_srcdir)/sntp/m4/ntp_ipv6.m4 \
+	$(top_srcdir)/sntp/m4/ntp_lib_m.m4 \
+	$(top_srcdir)/sntp/m4/ntp_libntp.m4 \
+	$(top_srcdir)/sntp/m4/ntp_lineeditlibs.m4 \
+	$(top_srcdir)/sntp/m4/ntp_openssl.m4 \
+	$(top_srcdir)/sntp/m4/ntp_vpathhack.m4 \
+	$(top_srcdir)/sntp/m4/os_cflags.m4 \
+	$(top_srcdir)/sntp/m4/version.m4 $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 mkinstalldirs = $(install_sh) -d
@@ -141,7 +143,7 @@ timetrim_OBJECTS = timetrim.$(OBJEXT)
 timetrim_LDADD = $(LDADD)
 timetrim_DEPENDENCIES = ../libntp/libntp.a
 DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
-depcomp = $(SHELL) $(top_srcdir)/depcomp
+depcomp = $(SHELL) $(top_srcdir)/sntp/build-aux/depcomp
 am__depfiles_maybe = depfiles
 am__mv = mv -f
 COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
@@ -213,10 +215,12 @@ BINSUBDIR = @BINSUBDIR@
 CC = @CC@
 CCDEPMODE = @CCDEPMODE@
 CFLAGS = @CFLAGS@
+CFLAGS_NTP = @CFLAGS_NTP@
 CHUTEST = @CHUTEST@
 CLKTEST = @CLKTEST@
 CPP = @CPP@
 CPPFLAGS = @CPPFLAGS@
+CPPFLAGS_NTP = @CPPFLAGS_NTP@
 CXX = @CXX@
 CXXCPP = @CXXCPP@
 CXXDEPMODE = @CXXDEPMODE@
@@ -258,6 +262,7 @@ LIBOPTS_LDADD = @LIBOPTS_LDADD@
 LIBPARSE = @LIBPARSE@
 LIBS = @LIBS@
 LIBTOOL = @LIBTOOL@
+LIBTOOL_DEPS = @LIBTOOL_DEPS@
 LN_S = @LN_S@
 LSCF = @LSCF@
 LTLIBOBJS = @LTLIBOBJS@
@@ -299,6 +304,7 @@ SHELL = @SHELL@
 SNMP_CFLAGS = @SNMP_CFLAGS@
 SNMP_CPPFLAGS = @SNMP_CPPFLAGS@
 SNMP_LIBS = @SNMP_LIBS@
+SNTP = @SNTP@
 STRIP = @STRIP@
 TESTDCF = @TESTDCF@
 VERSION = @VERSION@
@@ -359,10 +365,11 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 NULL = 
 AUTOMAKE_OPTIONS = 
-AM_CPPFLAGS = -I$(top_srcdir)/include -I$(top_srcdir)/lib/isc/include \
+INCLUDES = -I$(top_srcdir)/include -I$(top_srcdir)/lib/isc/include \
 	-I$(top_srcdir)/lib/isc/nothreads/include \
 	-I$(top_srcdir)/lib/isc/unix/include $(LIBOPTS_CFLAGS)
-
+AM_CFLAGS = @CFLAGS_NTP@
+AM_CPPFLAGS = @CPPFLAGS_NTP@
 
 # LDADD might need RESLIB and ADJLIB
 LDADD = ../libntp/libntp.a
@@ -372,19 +379,22 @@ ntp_keygen_LDADD = version.o $(LIBOPTS_LDADD) ../libntp/libntp.a @LCRYPTO@
 ETAGS_ARGS = Makefile.am
 #EXTRA_DIST=	README TAGS
 EXTRA_DIST = ntp-keygen-opts.def ntp-keygen.1 ntp-keygen-opts.texi ntp-keygen-opts.menu
-BUILT_SOURCES = ntp-keygen-opts.c ntp-keygen-opts.h .deps-ver
+BUILT_SOURCES = check-libntp ntp-keygen-opts.c ntp-keygen-opts.h \
+	.deps-ver
 CLEANFILES = .deps-ver
 DISTCLEANFILES = .version version.c
 noinst_DATA = $(srcdir)/ntp-keygen-opts.texi $(srcdir)/ntp-keygen-opts.menu
 man_MANS = $(srcdir)/ntp-keygen.1
 run_ag = cd $(srcdir) &&	env PATH="$(abs_builddir):$(PATH)"	\
-		autogen -L ../include --writable
+		autogen -L ../sntp/include --writable
 
-std_def_list = $(top_srcdir)/include/debug-opt.def		\
-		$(top_srcdir)/include/autogen-version.def 	\
-		$(top_srcdir)/include/copyright.def 		\
-		$(top_srcdir)/include/homerc.def 		\
-		$(top_srcdir)/include/version.def
+std_def_list = \
+	$(top_srcdir)/sntp/include/debug-opt.def		\
+	$(top_srcdir)/sntp/include/autogen-version.def 		\
+	$(top_srcdir)/sntp/include/copyright.def 		\
+	$(top_srcdir)/sntp/include/homerc.def 			\
+	$(top_srcdir)/sntp/include/version.def			\
+	$(NULL)
 
 jitter_SOURCES = jitter.c jitter.h
 jitter_LDADD = 
@@ -892,17 +902,22 @@ $(srcdir)/ntp-keygen-opts.texi: $(srcdir)/ntp-keygen-opts.def $(std_def_list)
 	$(run_ag) -Taginfo.tpl -DLEVEL=section ntp-keygen-opts.def
 	$(top_srcdir)/scripts/check--help $@
 
+check-libntp: FRC
+	cd ../libntp && $(MAKE)
+
+FRC:
+
 ../libntp/libntp.a:
 	cd ../libntp && $(MAKE)
 
 kern.o: kern.c
 	$(COMPILE) -DHAVE_TIMEX_H -c kern.c
 
-$(top_srcdir)/version :
-	cd $(top_srcdir) && $(MAKE) version
+$(top_srcdir)/sntp/version:
+	cd $(top_srcdir)/sntp && $(MAKE) version
 
-version.o: $(ntpq_OBJECTS) ../libntp/libntp.a Makefile $(top_srcdir)/version
-	env CSET=`cat $(top_srcdir)/version` $(top_builddir)/scripts/mkver ntp-keygen
+version.o: $(ntpq_OBJECTS) ../libntp/libntp.a Makefile $(top_srcdir)/sntp/version
+	env CSET=`cat $(top_srcdir)/sntp/version` $(top_builddir)/scripts/mkver ntp-keygen
 	$(COMPILE) -c version.c
 
 install-exec-hook:

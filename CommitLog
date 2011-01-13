@@ -1,3 +1,346 @@
+ChangeSet@1.2445, 2011-01-13 07:32:20+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P117
+  TAG: NTP_4_2_7P117
+
+  ChangeLog@1.771 +1 -0
+    NTP_4_2_7P117
+
+  clockstuff/clktest-opts.c@1.41 +3 -3
+    NTP_4_2_7P117
+
+  clockstuff/clktest-opts.h@1.41 +3 -3
+    NTP_4_2_7P117
+
+  ntpd/ntpd-opts.c@1.121 +3 -3
+    NTP_4_2_7P117
+
+  ntpd/ntpd-opts.h@1.121 +3 -3
+    NTP_4_2_7P117
+
+  ntpd/ntpd-opts.texi@1.119 +2 -2
+    NTP_4_2_7P117
+
+  ntpd/ntpd.1@1.119 +2 -2
+    NTP_4_2_7P117
+
+  ntpdc/ntpdc-opts.c@1.118 +4 -4
+    NTP_4_2_7P117
+
+  ntpdc/ntpdc-opts.h@1.118 +3 -3
+    NTP_4_2_7P117
+
+  ntpdc/ntpdc-opts.texi@1.118 +2 -2
+    NTP_4_2_7P117
+
+  ntpdc/ntpdc.1@1.118 +2 -2
+    NTP_4_2_7P117
+
+  ntpq/ntpq-opts.c@1.118 +4 -4
+    NTP_4_2_7P117
+
+  ntpq/ntpq-opts.h@1.118 +3 -3
+    NTP_4_2_7P117
+
+  ntpq/ntpq-opts.texi@1.118 +2 -2
+    NTP_4_2_7P117
+
+  ntpq/ntpq.1@1.118 +2 -2
+    NTP_4_2_7P117
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.118 +3 -3
+    NTP_4_2_7P117
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.118 +3 -3
+    NTP_4_2_7P117
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.118 +2 -2
+    NTP_4_2_7P117
+
+  ntpsnmpd/ntpsnmpd.1@1.118 +2 -2
+    NTP_4_2_7P117
+
+  packageinfo.sh@1.119 +1 -1
+    NTP_4_2_7P117
+
+  sntp/sntp-opts.c@1.118 +3 -3
+    NTP_4_2_7P117
+
+  sntp/sntp-opts.h@1.118 +3 -3
+    NTP_4_2_7P117
+
+  sntp/sntp-opts.texi@1.118 +2 -2
+    NTP_4_2_7P117
+
+  sntp/sntp.1@1.118 +2 -2
+    NTP_4_2_7P117
+
+  sntp/sntp.html@1.118 +1 -1
+    NTP_4_2_7P117
+
+  util/ntp-keygen-opts.c@1.116 +4 -4
+    NTP_4_2_7P117
+
+  util/ntp-keygen-opts.h@1.116 +3 -3
+    NTP_4_2_7P117
+
+  util/ntp-keygen-opts.texi@1.119 +2 -2
+    NTP_4_2_7P117
+
+  util/ntp-keygen.1@1.119 +2 -2
+    NTP_4_2_7P117
+
+ChangeSet@1.2444, 2011-01-13 01:53:03-05:00, stenn@deacon.udel.edu
+  Make sure the built-sources-only target is writable
+
+  sntp/Makefile.am@1.51 +1 -1
+    Make sure the built-sources-only target is writable
+
+ChangeSet@1.2443, 2011-01-12 18:57:28-05:00, stenn@deacon.udel.edu
+  Some systems do not have strerror_r
+
+  libntp/msyslog.c@1.33 +3 -12
+    Some systems do not have strerror_r
+
+ChangeSet@1.2442, 2011-01-12 16:11:01-05:00, stenn@deacon.udel.edu
+  Improve libntp.a dependency checking
+
+  adjtimed/Makefile.am@1.9 +6 -1
+    Improve libntp.a dependency checking
+
+  clockstuff/Makefile.am@1.16 +6 -1
+    Improve libntp.a dependency checking
+
+  libparse/Makefile.am@1.23 +6 -1
+    Improve libntp.a dependency checking
+
+  ntpd/Makefile.am@1.98 +7 -1
+    Improve libntp.a dependency checking
+
+  ntpdate/Makefile.am@1.26 +6 -1
+    Improve libntp.a dependency checking
+
+  ntpdc/Makefile.am@1.56 +7 -2
+    Improve libntp.a dependency checking
+
+  ntpq/Makefile.am@1.52 +6 -1
+    Improve libntp.a dependency checking
+
+  ntpsnmpd/Makefile.am@1.24 +9 -1
+    Improve libntp.a dependency checking
+
+  sntp/Makefile.am@1.50 +5 -1
+    Improve libntp.a dependency checking
+
+  util/Makefile.am@1.55 +6 -1
+    Improve libntp.a dependency checking
+
+ChangeSet@1.2441, 2011-01-12 15:59:20-05:00, stenn@deacon.udel.edu
+  Keep AC_PROG_LIBTOOL, instead of changing to LT_INIT
+
+  configure.ac@1.511 +1 -1
+    Keep AC_PROG_LIBTOOL, instead of changing to LT_INIT
+
+  sntp/configure.ac@1.54 +1 -1
+    Keep AC_PROG_LIBTOOL, instead of changing to LT_INIT
+
+ChangeSet@1.2440, 2011-01-12 05:23:49+00:00, davehart@shiny.ad.hartbrothers.com
+  Add configure --without-sntp option to disable building sntp and
+    sntp/tests.  withsntp=no in the environment changes the default.
+  Build infrastructure cleanup:
+    Move m4 directory to sntp/m4.
+    Share a single set of genver output between sntp and the top level.
+    Share a single set of autogen included .defs in sntp/include.
+    Share a single set of build-aux scripts (e.g. config.guess, missing).
+    Add ntp_libntp.m4 and ntp_ipv6.m4 to reduce configure.ac duplication.
+    Warn and exit build/flock-build if bootstrap needs to be run.
+
+  BitKeeper/deleted/cc/excludes~3e480692@1.6 +0 -0
+    Rename: excludes -> BitKeeper/deleted/cc/excludes~3e480692
+
+  ChangeLog@1.770 +9 -0
+    Add configure --without-sntp option to disable building sntp and
+      sntp/tests.  withsntp=no in the environment changes the default.
+    Build infrastructure cleanup:
+      Move m4 directory to sntp/m4.
+      Share a single set of genver output between sntp and the top level.
+      Share a single set of autogen included .defs in sntp/include.
+      Share a single set of build-aux scripts (e.g. config.guess, missing).
+      Add ntp_libntp.m4 and ntp_ipv6.m4 to reduce configure.ac duplication.
+      Warn and exit build/flock-build if bootstrap needs to be run.
+    
+
+  Makefile.am@1.104 +10 -40
+    move m4 subdir to sntp/m4.
+    use sntp/version.* files directly in top-level.
+    remove old CVS leftover file "excludes"
+
+  adjtimed/Makefile.am@1.8 +10 -1
+    Use CFGLAGS_NTP, AM_CFLAGS and leave CFLAGS to end user.
+
+  bootstrap@1.37 +12 -17
+    no more duplication of version.* to sntp subdir
+
+  build@1.42 +7 -4
+    use build-aux directory for autotools scripts.
+    Error out if bootstrap is needed.
+
+  clockstuff/Makefile.am@1.15 +15 -8
+    move autogen included .def files to sntp/include
+
+  configure.ac@1.510 +13 -805
+    move m4 subdir to sntp/m4
+    use sntp/version.* files directly in top-level
+    move hunks of common code to ntp_libntp.m4 and ntp_ipv6.m4
+
+  flock-build@1.48 +5 -1
+    Error out if bootstrap is needed.
+    Change with the times, default LIST=pogo
+
+  include/Makefile.am@1.43 +0 -1
+    move autogen included files to sntp/include.
+
+  include/lib_strbuf.h@1.9 +1 -2
+    No need to call init_lib(), lib_nextbuf is already zero initially.
+
+  include/ntp_stdlib.h@1.57 +3 -0
+    add errno_to_str() thread-safe alternative to strerror()
+
+  kernel/Makefile.am@1.4 +0 -1
+    remove ancient cruft
+
+  kernel/sys/Makefile.am@1.5 +0 -1
+    remove old cruft
+
+  libntp/Makefile.am@1.57 +9 -4
+    Use CFGLAGS_NTP, AM_CFLAGS and leave CFLAGS to end user.
+
+  libntp/lib_strbuf.c@1.7 +2 -3
+    no need to zero lib_nextbuf in init_lib(), it's zero initially.
+
+  libntp/msyslog.c@1.32 +45 -4
+    add errno_to_str(), thread-safe alternative to strerror()
+
+  libparse/Makefile.am@1.22 +7 -3
+    Use CFGLAGS_NTP, AM_CFLAGS and leave CFLAGS to end user.
+
+  ntpd/Makefile.am@1.97 +20 -11
+    move autogen included .def files to sntp/include
+
+  ntpdate/Makefile.am@1.25 +12 -8
+    move version to sntp/version
+
+  ntpdc/Makefile.am@1.55 +23 -14
+    move autogen included .def files to sntp/include
+
+  ntpq/Makefile.am@1.51 +20 -13
+    move autogen included .def files to sntp/include
+
+  ntpsnmpd/Makefile.am@1.23 +17 -11
+    move autogen included .def files to sntp/include
+
+  parseutil/Makefile.am@1.13 +4 -2
+    Use CFGLAGS_NTP, AM_CFLAGS and leave CFLAGS to end user.
+
+  ports/winnt/include/config.h@1.92 +4 -4
+    add errno_to_str(), thread-safe alternative to strerror()
+
+  ports/winnt/libntp/syslog.c@1.8 +5 -3
+    Use LIB_GETBUF instead of a static buffer for ntp_strerror()
+
+  ports/winnt/scripts/mkver.bat@1.13 +4 -4
+    move version to sntp/version
+
+  scripts/genver@1.7 +7 -7
+    move m4 subdir to sntp/m4
+    use sntp/version.* files directly in top-level
+
+  sntp/Makefile.am@1.49 +63 -75
+    move m4 subdir to sntp/m4
+    use sntp/version.* files directly in top-level
+    add --without-sntp configure option
+    remove FRC from libntp.a rule, it trips up BSD make
+
+  sntp/configure.ac@1.53 +11 -751
+    move m4 subdir to sntp/m4
+    use sntp/version.* files directly in top-level
+    move hunks of common m4sh code to ntp_libntp.m4 and ntp_ipv6.m4
+
+  sntp/include/Makefile.am@1.1 +18 -0
+    move autogen-included .def files to sntp/include
+
+  sntp/include/Makefile.am@1.0 +0 -0
+
+  sntp/include/autogen-version.def@1.5 +0 -0
+    Rename: include/autogen-version.def -> sntp/include/autogen-version.def
+
+  sntp/include/copyright.def@1.15 +1 -1
+    move version.m4 to sntp/m4
+
+  sntp/include/copyright.def@1.14 +0 -0
+    Rename: include/copyright.def -> sntp/include/copyright.def
+
+  sntp/include/debug-opt.def@1.6 +0 -0
+    Rename: include/debug-opt.def -> sntp/include/debug-opt.def
+
+  sntp/include/homerc.def@1.2 +0 -0
+    Rename: include/homerc.def -> sntp/include/homerc.def
+
+  sntp/m4/define_dir.m4@1.3 +0 -0
+    Rename: m4/define_dir.m4 -> sntp/m4/define_dir.m4
+
+  sntp/m4/ntp_cacheversion.m4@1.11 +0 -0
+    Rename: m4/ntp_cacheversion.m4 -> sntp/m4/ntp_cacheversion.m4
+
+  sntp/m4/ntp_dir_sep.m4@1.4 +0 -0
+    Rename: m4/ntp_dir_sep.m4 -> sntp/m4/ntp_dir_sep.m4
+
+  sntp/m4/ntp_googletest.m4@1.2 +0 -0
+    Rename: m4/ntp_googletest.m4 -> sntp/m4/ntp_googletest.m4
+
+  sntp/m4/ntp_ipv6.m4@1.1 +527 -0
+    Consolidate duplicated IPv6 detection between configure.ac and sntp/configure.ac
+
+  sntp/m4/ntp_ipv6.m4@1.0 +0 -0
+
+  sntp/m4/ntp_lib_m.m4@1.3 +0 -0
+    Rename: m4/ntp_lib_m.m4 -> sntp/m4/ntp_lib_m.m4
+
+  sntp/m4/ntp_libntp.m4@1.1 +281 -0
+    Add configure --without-sntp option to disable building sntp and
+      sntp/tests.  withsntp=no in the environment changes the default.
+    
+
+  sntp/m4/ntp_libntp.m4@1.0 +0 -0
+
+  sntp/m4/ntp_lineeditlibs.m4@1.11 +0 -0
+    Rename: m4/ntp_lineeditlibs.m4 -> sntp/m4/ntp_lineeditlibs.m4
+
+  sntp/m4/ntp_openssl.m4@1.15 +18 -8
+    modify CPPFLAGS_NTP not end-user variable CPPFLAGS
+
+  sntp/m4/ntp_openssl.m4@1.14 +0 -0
+    Rename: m4/ntp_openssl.m4 -> sntp/m4/ntp_openssl.m4
+
+  sntp/m4/ntp_vpathhack.m4@1.5 +0 -0
+    Rename: m4/ntp_vpathhack.m4 -> sntp/m4/ntp_vpathhack.m4
+
+  sntp/m4/os_cflags.m4@1.8 +2 -2
+    modify CFLAGS_NTP not end-user variable CFLAGS
+
+  sntp/m4/os_cflags.m4@1.7 +0 -0
+    Rename: m4/os_cflags.m4 -> sntp/m4/os_cflags.m4
+
+  sntp/tests/Makefile.am@1.19 +9 -4
+    use a single NTP_CROSSCOMPILE conditional for sntp and top-level
+    stay out of user CFLAGS, CPPFLAGS
+
+  tests/libntp/Makefile.am@1.28 +14 -3
+    use AM_CFLAGS and leave CFLAGS to end-user
+
+  util/Makefile.am@1.54 +20 -13
+    move autogen included .def files to sntp/include
+    keep hands off CFLAGS, CPPFLAGS so end-user can override at make time.
+
 ChangeSet@1.2439, 2011-01-10 11:38:28+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P116
   TAG: NTP_4_2_7P116
