@@ -1,3 +1,116 @@
+ChangeSet@1.2449, 2011-01-15 10:47:08+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P118
+  TAG: NTP_4_2_7P118
+
+  ChangeLog@1.774 +1 -0
+    NTP_4_2_7P118
+
+  clockstuff/clktest-opts.c@1.42 +2 -2
+    NTP_4_2_7P118
+
+  clockstuff/clktest-opts.h@1.42 +3 -3
+    NTP_4_2_7P118
+
+  ntpd/ntpd-opts.c@1.122 +2 -2
+    NTP_4_2_7P118
+
+  ntpd/ntpd-opts.h@1.122 +3 -3
+    NTP_4_2_7P118
+
+  ntpd/ntpd-opts.texi@1.120 +2 -2
+    NTP_4_2_7P118
+
+  ntpd/ntpd.1@1.120 +2 -2
+    NTP_4_2_7P118
+
+  ntpdc/ntpdc-opts.c@1.119 +2 -2
+    NTP_4_2_7P118
+
+  ntpdc/ntpdc-opts.h@1.119 +3 -3
+    NTP_4_2_7P118
+
+  ntpdc/ntpdc-opts.texi@1.119 +2 -2
+    NTP_4_2_7P118
+
+  ntpdc/ntpdc.1@1.119 +2 -2
+    NTP_4_2_7P118
+
+  ntpq/ntpq-opts.c@1.119 +2 -2
+    NTP_4_2_7P118
+
+  ntpq/ntpq-opts.h@1.119 +3 -3
+    NTP_4_2_7P118
+
+  ntpq/ntpq-opts.texi@1.119 +2 -2
+    NTP_4_2_7P118
+
+  ntpq/ntpq.1@1.119 +2 -2
+    NTP_4_2_7P118
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.119 +2 -2
+    NTP_4_2_7P118
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.119 +3 -3
+    NTP_4_2_7P118
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.119 +2 -2
+    NTP_4_2_7P118
+
+  ntpsnmpd/ntpsnmpd.1@1.119 +2 -2
+    NTP_4_2_7P118
+
+  packageinfo.sh@1.120 +1 -1
+    NTP_4_2_7P118
+
+  sntp/sntp-opts.c@1.119 +2 -2
+    NTP_4_2_7P118
+
+  sntp/sntp-opts.h@1.119 +3 -3
+    NTP_4_2_7P118
+
+  sntp/sntp-opts.texi@1.119 +2 -2
+    NTP_4_2_7P118
+
+  sntp/sntp.1@1.119 +2 -2
+    NTP_4_2_7P118
+
+  sntp/sntp.html@1.119 +1 -1
+    NTP_4_2_7P118
+
+  util/ntp-keygen-opts.c@1.117 +2 -2
+    NTP_4_2_7P118
+
+  util/ntp-keygen-opts.h@1.117 +3 -3
+    NTP_4_2_7P118
+
+  util/ntp-keygen-opts.texi@1.120 +2 -2
+    NTP_4_2_7P118
+
+  util/ntp-keygen.1@1.120 +2 -2
+    NTP_4_2_7P118
+
+ChangeSet@1.2448, 2011-01-15 02:04:43-05:00, stenn@deacon.udel.edu
+  Use a do-nothing rule to avoid an SCCS "get"
+
+  sntp/Makefile.am@1.53 +1 -0
+    Use a do-nothing rule to avoid an SCCS "get"
+
+ChangeSet@1.2447, 2011-01-15 00:16:55-05:00, stenn@deacon.udel.edu
+  Simplify the built-sources stuff in sntp/
+
+  ChangeLog@1.773 +1 -0
+    Simplify the built-sources stuff in sntp/
+
+  sntp/Makefile.am@1.52 +0 -1
+    Simplify the built-sources stuff in sntp/
+
+ChangeSet@1.2446, 2011-01-14 23:06:12-05:00, stenn@deacon.udel.edu
+  Fix check for -lipv6 on HP-UX 11
+
+  ChangeLog@1.772 +1 -0
+
+  configure.ac@1.512 +4 -8
+
 ChangeSet@1.2445, 2011-01-13 07:32:20+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P117
   TAG: NTP_4_2_7P117
