@@ -1,8 +1,458 @@
-ChangeSet@1.2449, 2011-01-15 10:47:08+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2458, 2011-01-20 11:33:32+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P120
+  TAG: NTP_4_2_7P120
+
+  ChangeLog@1.783 +1 -0
+    NTP_4_2_7P120
+
+  clockstuff/clktest-opts.c@1.44 +2 -2
+    NTP_4_2_7P120
+
+  clockstuff/clktest-opts.h@1.44 +3 -3
+    NTP_4_2_7P120
+
+  ntpd/ntpd-opts.c@1.124 +2 -2
+    NTP_4_2_7P120
+
+  ntpd/ntpd-opts.h@1.124 +3 -3
+    NTP_4_2_7P120
+
+  ntpd/ntpd-opts.texi@1.122 +2 -2
+    NTP_4_2_7P120
+
+  ntpd/ntpd.1@1.122 +2 -2
+    NTP_4_2_7P120
+
+  ntpdc/ntpdc-opts.c@1.121 +2 -2
+    NTP_4_2_7P120
+
+  ntpdc/ntpdc-opts.h@1.121 +3 -3
+    NTP_4_2_7P120
+
+  ntpdc/ntpdc-opts.texi@1.121 +2 -2
+    NTP_4_2_7P120
+
+  ntpdc/ntpdc.1@1.121 +2 -2
+    NTP_4_2_7P120
+
+  ntpq/ntpq-opts.c@1.121 +2 -2
+    NTP_4_2_7P120
+
+  ntpq/ntpq-opts.h@1.121 +3 -3
+    NTP_4_2_7P120
+
+  ntpq/ntpq-opts.texi@1.121 +2 -2
+    NTP_4_2_7P120
+
+  ntpq/ntpq.1@1.121 +2 -2
+    NTP_4_2_7P120
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.121 +2 -2
+    NTP_4_2_7P120
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.121 +3 -3
+    NTP_4_2_7P120
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.121 +2 -2
+    NTP_4_2_7P120
+
+  ntpsnmpd/ntpsnmpd.1@1.121 +2 -2
+    NTP_4_2_7P120
+
+  packageinfo.sh@1.122 +1 -1
+    NTP_4_2_7P120
+
+  sntp/sntp-opts.c@1.121 +2 -2
+    NTP_4_2_7P120
+
+  sntp/sntp-opts.h@1.121 +3 -3
+    NTP_4_2_7P120
+
+  sntp/sntp-opts.texi@1.121 +2 -2
+    NTP_4_2_7P120
+
+  sntp/sntp.1@1.121 +2 -2
+    NTP_4_2_7P120
+
+  sntp/sntp.html@1.121 +1 -1
+    NTP_4_2_7P120
+
+  util/ntp-keygen-opts.c@1.119 +2 -2
+    NTP_4_2_7P120
+
+  util/ntp-keygen-opts.h@1.119 +3 -3
+    NTP_4_2_7P120
+
+  util/ntp-keygen-opts.texi@1.122 +2 -2
+    NTP_4_2_7P120
+
+  util/ntp-keygen.1@1.122 +2 -2
+    NTP_4_2_7P120
+
+ChangeSet@1.2457, 2011-01-20 08:27:32+00:00, davehart@shiny.ad.hartbrothers.com
+  Change new timeval and timespec to string routines to use snprintf()
+    rather than hand-crafted conversion, avoid signed int overflow there.
+  Add configure support for SIZEOF_LONG_LONG to enable portable use of
+    snprintf() with time_t.
+
+  ChangeLog@1.782 +4 -3
+    Change new timeval and timespec to string routines to use snprintf()
+      rather than hand-crafted conversion, avoid signed int overflow there.
+    Add configure support for SIZEOF_LONG_LONG to enable portable use of
+      snprintf() with time_t.
+
+  configure.ac@1.513 +0 -44
+    move more m4 code to ntp_libntp.m4
+
+  libntp/timespecops.c@1.5 +2 -2
+    Change new timeval and timespec to string routines to use snprintf()
+      rather than hand-crafted conversion, avoid signed int overflow there.
+
+  libntp/timevalops.c@1.5 +2 -2
+    Change new timeval and timespec to string routines to use snprintf()
+      rather than hand-crafted conversion, avoid signed int overflow there.
+
+  ports/winnt/include/config.h@1.93 +3 -1
+    SIZEOF_LONG, SIZEOF_LONG_LONG definitions for Win32
+
+  sntp/configure.ac@1.55 +0 -42
+    move more m4 code to ntp_libntp.m4
+
+  sntp/m4/ntp_libntp.m4@1.2 +53 -0
+    Add configure support for SIZEOF_LONG_LONG to enable portable use of
+      snprintf() with time_t.
+    
+
+ChangeSet@1.2456, 2011-01-19 20:43:27+01:00, jnperlin@hydra.localnet
+  changed timeval / timespec string conversion (snprintf() format strings for time_t vs. int / long / long long; avoid signed integer overflow)
+
+  ChangeLog@1.781 +3 -0
+    struct timeval / struct timespec string formatting changes
+
+  libntp/timespecops.c@1.4 +79 -85
+    changed struct timespec string conversion (snprintf() format for time_t)
+
+  libntp/timevalops.c@1.4 +82 -56
+    changed struct timeval string conversion (snprintf() format for time_t)
+
+ChangeSet@1.2455, 2011-01-19 12:26:17+00:00, davehart@shiny.ad.hartbrothers.com
+  Grow ntpd/work_thread.c arrays as needed.
+  Add DEBUG_* variants of ntp_assert.h macros which compile away using
+    ./configure --disable-debugging.
+  Fix tvalops.cpp unit test failures for 32-bit builds.
+  Return to a single autoreconf invocation in ./bootstrap script.
+  Fix warnings seen on FreeBSD 9.
+  NMEA driver documentation update from Juergen Perlinger.
+
+  ChangeLog@1.780 +8 -1
+    Grow ntpd/work_thread.c arrays as needed.
+    Add DEBUG_* variants of ntp_assert.h macros which compile away using
+      ./configure --disable-debugging.
+    Fix tvalops.cpp unit test failures for 32-bit builds.
+    Return to a single autoreconf invocation in ./bootstrap script.
+    Fix warnings seen on FreeBSD 9.
+    NMEA driver documentation update from Juergen Perlinger.
+
+  bootstrap@1.38 +6 -2
+    Use recursive autoreconf again now that we don't trigger bug.
+
+  include/ntp_assert.h@1.4 +47 -16
+    provide assertion macros without NTP_ prefix.
+    provide debug-only DEBUG_REQUIRE(), DEBUG_INSIST(), etc.
+
+  include/ntp_md5.h@1.8 +3 -2
+    silence warning seen on FreeBSD 9
+
+  include/timespecops.h@1.3 +37 -27
+    style cleanup.
+    reduce duplication.
+    comment fixes and additions.
+    TIMESPECOPS_H typos.
+
+  include/timevalops.h@1.2 +42 -35
+    style cleanup.
+    reduce duplication.
+    comment fixes and additions.
+    TIMEVALOPS_H typos.
+
+  libntp/socket.c@1.4 +0 -3
+    isc/util.h is for use by lib/isc code only, not clients
+
+  libntp/timespecops.c@1.3 +91 -88
+    style cleanup.
+    comment fixes and additions.
+    use abs(), labs() where appropriate.
+    reduce duplication.
+    silence int->char trucation warnings.
+
+  libntp/timevalops.c@1.3 +99 -103
+    style cleanup.
+    comment fixes and additions.
+    use abs(), labs() where appropriate.
+    reduce duplication.
+    silence int->char trucation warnings.
+
+  ntpd/refclock_zyfer.c@1.7 +3 -1
+    FreeBSD 9 warns of sys/termios.h deprecation, prefer termios.h
+
+  ntpd/work_thread.c@1.3 +92 -46
+    use dynamic-sized request and response arrays of pointers
+
+  ports/winnt/vc6/libntp.dsp@1.59 +10 -2
+    add timespecops.c, timevalops.c references
+
+  ports/winnt/vs2003/libntp.vcproj@1.17 +7 -19
+    add timespecops.c, timevalops.c references
+
+  ports/winnt/vs2005/libntp.vcproj@1.15 +8 -18
+    add timespecops.c, timevalops.c references
+
+  ports/winnt/vs2008/libntp/libntp.vcproj@1.36 +17 -1
+    add references to timespecops.c and timevalops.c
+
+  tests/libntp/tspecops.cpp@1.4 +54 -33
+    style cleanup.
+    use class not struct for TVAL, LFP.
+
+  tests/libntp/tvalops.cpp@1.2 +109 -75
+    style cleanup.
+    use class not struct for TVAL, LFP.
+    use ASSERT_NEAR() for fuzzy double equality test, fixes 32-bit failures.
+
+  util/ntp-keygen.c@1.76 +1 -1
+    silence time_t -> u_int truncation warning.
+
+ChangeSet@1.2454, 2011-01-19 02:07:09-05:00, stenn@deacon.udel.edu
+  crypo group changes from Dave Mills
+
+  ChangeLog@1.779 +1 -0
+    crypo group changes from Dave Mills
+
+  ntpd/ntp_crypto.c@1.153 +20 -23
+    crypo group changes from Dave Mills
+
+  ntpd/ntp_proto.c@1.316 +119 -9
+    crypo group changes from Dave Mills
+
+ChangeSet@1.2453, 2011-01-19 02:03:53-05:00, stenn@deacon.udel.edu
+  Lose the RANGEGATE check in PPS, from Dave Mills
+
+  ChangeLog@1.778 +1 -0
+    Lose the RANGEGATE check in PPS, from Dave Mills
+
+  include/refclock_atom.h@1.3 +0 -1
+    Lose the RANGEGATE check in PPS, from Dave Mills
+
+  ntpd/ntp_refclock.c@1.102 +0 -10
+    Lose the RANGEGATE check in PPS, from Dave Mills
+
+ChangeSet@1.2452, 2011-01-19 02:01:33-05:00, stenn@deacon.udel.edu
+  ACTS refclock cleanup from Dave Mills
+
+  ChangeLog@1.777 +1 -0
+    ACTS refclock cleanup from Dave Mills
+
+  ntpd/refclock_acts.c@1.45 +2 -28
+    ACTS refclock cleanup from Dave Mills
+
+ChangeSet@1.2451, 2011-01-19 01:58:52-05:00, stenn@deacon.udel.edu
+  Documentation updates from Dave Mills
+
+  ChangeLog@1.776 +1 -0
+    Documentation updates from Dave Mills
+
+  html/authopt.html@1.70 +5 -5
+    Documentation updates from Dave Mills
+
+  html/autokey.html@1.19 +14 -10
+    Documentation updates from Dave Mills
+
+  html/copyright.html@1.57 +2 -2
+    Documentation updates from Dave Mills
+
+  html/drivers/driver20.html@1.24 +339 -101
+    Documentation updates from Dave Mills
+
+  html/keygen.html@1.28 +4 -9
+    Documentation updates from Dave Mills
+
+  html/miscopt.html@1.64 +2 -2
+    Documentation updates from Dave Mills
+
+  html/select.html@1.2 +2 -2
+    Documentation updates from Dave Mills
+
+ChangeSet@1.2448.1.2, 2011-01-18 19:35:18+01:00, jnperlin@hydra.localnet
+  added tests for timevalops.c, enhancements for timespecops.c tests
+
+  tests/libntp/Makefile.am@1.30 +1 -0
+    added timeval tests
+
+  tests/libntp/tspecops.cpp@1.3 +39 -47
+    refactoring and signed conversion tests
+
+  tests/libntp/tvalops.cpp@1.1 +342 -0
+    tests for tvalops
+
+  tests/libntp/tvalops.cpp@1.0 +0 -0
+
+ChangeSet@1.2445.2.1, 2011-01-18 18:09:37+01:00, jnperlin@hydra.localnet
+  Improvements on timeval / timespec ops
+
+  include/lib_strbuf.h@1.10 +3 -2
+    made LIB_BUFLENGTH useable for preprocessor tests
+
+  include/timespecops.h@1.2 +3 -0
+    additional explanation
+
+  libntp/timespecops.c@1.2 +108 -22
+    fixed string conversion and signed conversion
+
+  libntp/timevalops.c@1.2 +75 -27
+    fixed string conversion and signed conversion
+
+  tests/libntp/tspecops.cpp@1.2 +22 -0
+    added string conversion tests
+
+ChangeSet@1.2449, 2011-01-18 11:32:32+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P119
+  TAG: NTP_4_2_7P119
+
+  ChangeLog@1.775 +1 -0
+    NTP_4_2_7P119
+
+  clockstuff/clktest-opts.c@1.43 +2 -2
+    NTP_4_2_7P119
+
+  clockstuff/clktest-opts.h@1.43 +3 -3
+    NTP_4_2_7P119
+
+  ntpd/ntpd-opts.c@1.123 +2 -2
+    NTP_4_2_7P119
+
+  ntpd/ntpd-opts.h@1.123 +3 -3
+    NTP_4_2_7P119
+
+  ntpd/ntpd-opts.texi@1.121 +2 -2
+    NTP_4_2_7P119
+
+  ntpd/ntpd.1@1.121 +2 -2
+    NTP_4_2_7P119
+
+  ntpdc/ntpdc-opts.c@1.120 +2 -2
+    NTP_4_2_7P119
+
+  ntpdc/ntpdc-opts.h@1.120 +3 -3
+    NTP_4_2_7P119
+
+  ntpdc/ntpdc-opts.texi@1.120 +2 -2
+    NTP_4_2_7P119
+
+  ntpdc/ntpdc.1@1.120 +2 -2
+    NTP_4_2_7P119
+
+  ntpq/ntpq-opts.c@1.120 +2 -2
+    NTP_4_2_7P119
+
+  ntpq/ntpq-opts.h@1.120 +3 -3
+    NTP_4_2_7P119
+
+  ntpq/ntpq-opts.texi@1.120 +2 -2
+    NTP_4_2_7P119
+
+  ntpq/ntpq.1@1.120 +2 -2
+    NTP_4_2_7P119
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.120 +2 -2
+    NTP_4_2_7P119
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.120 +3 -3
+    NTP_4_2_7P119
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.120 +2 -2
+    NTP_4_2_7P119
+
+  ntpsnmpd/ntpsnmpd.1@1.120 +2 -2
+    NTP_4_2_7P119
+
+  packageinfo.sh@1.121 +1 -1
+    NTP_4_2_7P119
+
+  sntp/sntp-opts.c@1.120 +2 -2
+    NTP_4_2_7P119
+
+  sntp/sntp-opts.h@1.120 +3 -3
+    NTP_4_2_7P119
+
+  sntp/sntp-opts.texi@1.120 +2 -2
+    NTP_4_2_7P119
+
+  sntp/sntp.1@1.120 +2 -2
+    NTP_4_2_7P119
+
+  sntp/sntp.html@1.120 +1 -1
+    NTP_4_2_7P119
+
+  util/ntp-keygen-opts.c@1.118 +2 -2
+    NTP_4_2_7P119
+
+  util/ntp-keygen-opts.h@1.118 +3 -3
+    NTP_4_2_7P119
+
+  util/ntp-keygen-opts.texi@1.121 +2 -2
+    NTP_4_2_7P119
+
+  util/ntp-keygen.1@1.121 +2 -2
+    NTP_4_2_7P119
+
+ChangeSet@1.2445.1.6, 2011-01-18 07:14:14+00:00, stenn@psp-fb1.ntp.org
+  Distribute timespecops.h and timevalops.h
+
+  include/Makefile.am@1.44 +2 -0
+    Distribute timespecops.h and timevalops.h
+
+ChangeSet@1.2445.1.5, 2011-01-16 14:56:08+01:00, jnperlin@hydra.localnet
+  added timespecops and timevalops for operations on struct timespec and struct timeval
+
+  ChangeLog@1.771.1.4 +2 -0
+    added timespecops and timevalops for operations on struct timespec and struct timeval 
+
+  include/timespecops.h@1.1 +131 -0
+    operations on struct timespec
+
+  include/timespecops.h@1.0 +0 -0
+
+  include/timevalops.h@1.1 +108 -0
+    operations on struct timeval
+
+  include/timevalops.h@1.0 +0 -0
+
+  libntp/Makefile.am@1.58 +2 -0
+    added timespecops and timevalops for operations on struct timespec and struct timeval 
+
+  libntp/timespecops.c@1.1 +347 -0
+    operations on struct timespec
+
+  libntp/timespecops.c@1.0 +0 -0
+
+  libntp/timevalops.c@1.1 +346 -0
+    operations on struct timeval
+
+  libntp/timevalops.c@1.0 +0 -0
+
+  tests/libntp/Makefile.am@1.29 +2 -1
+    added test for timespecops
+
+  tests/libntp/tspecops.cpp@1.1 +327 -0
+    tests for timespecops
+
+  tests/libntp/tspecops.cpp@1.0 +0 -0
+
+ChangeSet@1.2445.1.4, 2011-01-15 10:47:08+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P118
   TAG: NTP_4_2_7P118
 
-  ChangeLog@1.774 +1 -0
+  ChangeLog@1.771.1.3 +1 -0
     NTP_4_2_7P118
 
   clockstuff/clktest-opts.c@1.42 +2 -2
@@ -89,27 +539,36 @@ ChangeSet@1.2449, 2011-01-15 10:47:08+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.120 +2 -2
     NTP_4_2_7P118
 
-ChangeSet@1.2448, 2011-01-15 02:04:43-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2445.1.3, 2011-01-15 02:04:43-05:00, stenn@deacon.udel.edu
   Use a do-nothing rule to avoid an SCCS "get"
 
   sntp/Makefile.am@1.53 +1 -0
     Use a do-nothing rule to avoid an SCCS "get"
 
-ChangeSet@1.2447, 2011-01-15 00:16:55-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2445.1.2, 2011-01-15 00:16:55-05:00, stenn@deacon.udel.edu
   Simplify the built-sources stuff in sntp/
 
-  ChangeLog@1.773 +1 -0
+  ChangeLog@1.771.1.2 +1 -0
     Simplify the built-sources stuff in sntp/
 
   sntp/Makefile.am@1.52 +0 -1
     Simplify the built-sources stuff in sntp/
 
-ChangeSet@1.2446, 2011-01-14 23:06:12-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2445.1.1, 2011-01-14 23:06:12-05:00, stenn@deacon.udel.edu
   Fix check for -lipv6 on HP-UX 11
 
-  ChangeLog@1.772 +1 -0
+  ChangeLog@1.771.1.1 +1 -0
 
   configure.ac@1.512 +4 -8
+
+ChangeSet@1.2446, 2011-01-14 07:50:28+00:00, davehart@shiny.ad.hartbrothers.com
+  Correct msyslog.c build break on Solaris 2.9 from #ifdef/#if mixup.
+
+  ChangeLog@1.772 +1 -0
+    Correct msyslog.c build break on Solaris 2.9 from #ifdef/#if mixup.
+
+  libntp/msyslog.c@1.34 +12 -3
+    Correct msyslog.c build break on Solaris 2.9 from #ifdef/#if mixup.
 
 ChangeSet@1.2445, 2011-01-13 07:32:20+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P117
