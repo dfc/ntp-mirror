@@ -1,3 +1,103 @@
+ChangeSet@1.2460, 2011-01-21 11:15:05+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P121
+  TAG: NTP_4_2_7P121
+
+  ChangeLog@1.785 +1 -0
+    NTP_4_2_7P121
+
+  clockstuff/clktest-opts.c@1.45 +2 -2
+    NTP_4_2_7P121
+
+  clockstuff/clktest-opts.h@1.45 +3 -3
+    NTP_4_2_7P121
+
+  ntpd/ntpd-opts.c@1.125 +2 -2
+    NTP_4_2_7P121
+
+  ntpd/ntpd-opts.h@1.125 +3 -3
+    NTP_4_2_7P121
+
+  ntpd/ntpd-opts.texi@1.123 +2 -2
+    NTP_4_2_7P121
+
+  ntpd/ntpd.1@1.123 +2 -2
+    NTP_4_2_7P121
+
+  ntpdc/ntpdc-opts.c@1.122 +2 -2
+    NTP_4_2_7P121
+
+  ntpdc/ntpdc-opts.h@1.122 +3 -3
+    NTP_4_2_7P121
+
+  ntpdc/ntpdc-opts.texi@1.122 +2 -2
+    NTP_4_2_7P121
+
+  ntpdc/ntpdc.1@1.122 +2 -2
+    NTP_4_2_7P121
+
+  ntpq/ntpq-opts.c@1.122 +2 -2
+    NTP_4_2_7P121
+
+  ntpq/ntpq-opts.h@1.122 +3 -3
+    NTP_4_2_7P121
+
+  ntpq/ntpq-opts.texi@1.122 +2 -2
+    NTP_4_2_7P121
+
+  ntpq/ntpq.1@1.122 +2 -2
+    NTP_4_2_7P121
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.122 +2 -2
+    NTP_4_2_7P121
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.122 +3 -3
+    NTP_4_2_7P121
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.122 +2 -2
+    NTP_4_2_7P121
+
+  ntpsnmpd/ntpsnmpd.1@1.122 +2 -2
+    NTP_4_2_7P121
+
+  packageinfo.sh@1.123 +1 -1
+    NTP_4_2_7P121
+
+  sntp/sntp-opts.c@1.122 +2 -2
+    NTP_4_2_7P121
+
+  sntp/sntp-opts.h@1.122 +3 -3
+    NTP_4_2_7P121
+
+  sntp/sntp-opts.texi@1.122 +2 -2
+    NTP_4_2_7P121
+
+  sntp/sntp.1@1.122 +2 -2
+    NTP_4_2_7P121
+
+  sntp/sntp.html@1.122 +1 -1
+    NTP_4_2_7P121
+
+  util/ntp-keygen-opts.c@1.120 +2 -2
+    NTP_4_2_7P121
+
+  util/ntp-keygen-opts.h@1.120 +3 -3
+    NTP_4_2_7P121
+
+  util/ntp-keygen-opts.texi@1.123 +2 -2
+    NTP_4_2_7P121
+
+  util/ntp-keygen.1@1.123 +2 -2
+    NTP_4_2_7P121
+
+ChangeSet@1.2459, 2011-01-21 01:36:18-05:00, stenn@deacon.udel.edu
+  [Bug 1786] Remove extra semicolon from ntp_proto.c
+
+  ChangeLog@1.784 +1 -0
+    [Bug 1786] Remove extra semicolon from ntp_proto.c
+
+  ntpd/ntp_proto.c@1.317 +1 -1
+    [Bug 1786] Remove extra semicolon from ntp_proto.c
+
 ChangeSet@1.2458, 2011-01-20 11:33:32+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P120
   TAG: NTP_4_2_7P120
