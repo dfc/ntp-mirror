@@ -1,3 +1,112 @@
+ChangeSet@1.2463, 2011-01-22 11:28:33+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P122
+  TAG: NTP_4_2_7P122
+
+  ChangeLog@1.788 +1 -0
+    NTP_4_2_7P122
+
+  clockstuff/clktest-opts.c@1.46 +2 -2
+    NTP_4_2_7P122
+
+  clockstuff/clktest-opts.h@1.46 +3 -3
+    NTP_4_2_7P122
+
+  ntpd/ntpd-opts.c@1.126 +2 -2
+    NTP_4_2_7P122
+
+  ntpd/ntpd-opts.h@1.126 +3 -3
+    NTP_4_2_7P122
+
+  ntpd/ntpd-opts.texi@1.124 +2 -2
+    NTP_4_2_7P122
+
+  ntpd/ntpd.1@1.124 +2 -2
+    NTP_4_2_7P122
+
+  ntpdc/ntpdc-opts.c@1.123 +2 -2
+    NTP_4_2_7P122
+
+  ntpdc/ntpdc-opts.h@1.123 +3 -3
+    NTP_4_2_7P122
+
+  ntpdc/ntpdc-opts.texi@1.123 +2 -2
+    NTP_4_2_7P122
+
+  ntpdc/ntpdc.1@1.123 +2 -2
+    NTP_4_2_7P122
+
+  ntpq/ntpq-opts.c@1.123 +2 -2
+    NTP_4_2_7P122
+
+  ntpq/ntpq-opts.h@1.123 +3 -3
+    NTP_4_2_7P122
+
+  ntpq/ntpq-opts.texi@1.123 +2 -2
+    NTP_4_2_7P122
+
+  ntpq/ntpq.1@1.123 +2 -2
+    NTP_4_2_7P122
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.123 +2 -2
+    NTP_4_2_7P122
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.123 +3 -3
+    NTP_4_2_7P122
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.123 +2 -2
+    NTP_4_2_7P122
+
+  ntpsnmpd/ntpsnmpd.1@1.123 +2 -2
+    NTP_4_2_7P122
+
+  packageinfo.sh@1.124 +1 -1
+    NTP_4_2_7P122
+
+  sntp/sntp-opts.c@1.123 +2 -2
+    NTP_4_2_7P122
+
+  sntp/sntp-opts.h@1.123 +3 -3
+    NTP_4_2_7P122
+
+  sntp/sntp-opts.texi@1.123 +2 -2
+    NTP_4_2_7P122
+
+  sntp/sntp.1@1.123 +2 -2
+    NTP_4_2_7P122
+
+  sntp/sntp.html@1.123 +1 -1
+    NTP_4_2_7P122
+
+  util/ntp-keygen-opts.c@1.121 +2 -2
+    NTP_4_2_7P122
+
+  util/ntp-keygen-opts.h@1.121 +3 -3
+    NTP_4_2_7P122
+
+  util/ntp-keygen-opts.texi@1.124 +2 -2
+    NTP_4_2_7P122
+
+  util/ntp-keygen.1@1.124 +2 -2
+    NTP_4_2_7P122
+
+ChangeSet@1.2462, 2011-01-22 01:22:35-05:00, stenn@deacon.udel.edu
+  ACTS refclock cleanup from Dave Mills
+
+  ChangeLog@1.787 +1 -0
+    ACTS refclock cleanup from Dave Mills
+
+  ntpd/refclock_acts.c@1.46 +8 -17
+    ACTS refclock cleanup from Dave Mills
+
+ChangeSet@1.2461, 2011-01-22 01:16:02-05:00, stenn@deacon.udel.edu
+  Avoid shadowing the "group" global variable
+
+  ChangeLog@1.786 +1 -0
+    Avoid shadowing the "group" global variable
+
+  ntpd/ntp_proto.c@1.318 +8 -8
+    Avoid shadowing the "group" global variable
+
 ChangeSet@1.2460, 2011-01-21 11:15:05+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P121
   TAG: NTP_4_2_7P121
