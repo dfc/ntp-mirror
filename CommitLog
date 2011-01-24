@@ -1,3 +1,121 @@
+ChangeSet@1.2465, 2011-01-24 11:19:17+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P123
+  TAG: NTP_4_2_7P123
+
+  ChangeLog@1.790 +1 -0
+    NTP_4_2_7P123
+
+  clockstuff/clktest-opts.c@1.47 +2 -2
+    NTP_4_2_7P123
+
+  clockstuff/clktest-opts.h@1.47 +3 -3
+    NTP_4_2_7P123
+
+  ntpd/ntpd-opts.c@1.127 +2 -2
+    NTP_4_2_7P123
+
+  ntpd/ntpd-opts.h@1.127 +3 -3
+    NTP_4_2_7P123
+
+  ntpd/ntpd-opts.texi@1.125 +2 -2
+    NTP_4_2_7P123
+
+  ntpd/ntpd.1@1.125 +2 -2
+    NTP_4_2_7P123
+
+  ntpdc/ntpdc-opts.c@1.124 +2 -2
+    NTP_4_2_7P123
+
+  ntpdc/ntpdc-opts.h@1.124 +3 -3
+    NTP_4_2_7P123
+
+  ntpdc/ntpdc-opts.texi@1.124 +2 -2
+    NTP_4_2_7P123
+
+  ntpdc/ntpdc.1@1.124 +2 -2
+    NTP_4_2_7P123
+
+  ntpq/ntpq-opts.c@1.124 +2 -2
+    NTP_4_2_7P123
+
+  ntpq/ntpq-opts.h@1.124 +3 -3
+    NTP_4_2_7P123
+
+  ntpq/ntpq-opts.texi@1.124 +2 -2
+    NTP_4_2_7P123
+
+  ntpq/ntpq.1@1.124 +2 -2
+    NTP_4_2_7P123
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.124 +2 -2
+    NTP_4_2_7P123
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.124 +3 -3
+    NTP_4_2_7P123
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.124 +2 -2
+    NTP_4_2_7P123
+
+  ntpsnmpd/ntpsnmpd.1@1.124 +2 -2
+    NTP_4_2_7P123
+
+  packageinfo.sh@1.125 +1 -1
+    NTP_4_2_7P123
+
+  sntp/sntp-opts.c@1.124 +2 -2
+    NTP_4_2_7P123
+
+  sntp/sntp-opts.h@1.124 +3 -3
+    NTP_4_2_7P123
+
+  sntp/sntp-opts.texi@1.124 +2 -2
+    NTP_4_2_7P123
+
+  sntp/sntp.1@1.124 +2 -2
+    NTP_4_2_7P123
+
+  sntp/sntp.html@1.124 +1 -1
+    NTP_4_2_7P123
+
+  util/ntp-keygen-opts.c@1.122 +2 -2
+    NTP_4_2_7P123
+
+  util/ntp-keygen-opts.h@1.122 +3 -3
+    NTP_4_2_7P123
+
+  util/ntp-keygen-opts.texi@1.125 +2 -2
+    NTP_4_2_7P123
+
+  util/ntp-keygen.1@1.125 +2 -2
+    NTP_4_2_7P123
+
+ChangeSet@1.2464, 2011-01-23 12:08:42+01:00, jnperlin@hydra.localnet
+  [Bug 1788] tables in libntp/tvtots.c imprecise
+
+  ChangeLog@1.789 +1 -0
+    [Bug 1788] tables in libntp/tvtots.c imprecise; tables used long/u_long values instead of 'const u_int32'
+
+  clockstuff/chutest.c@1.5 +0 -12
+    removed unused declarations of conversion timestamp conversion tables
+
+  clockstuff/clktest.c@1.6 +0 -4
+    removed unused declarations of conversion timestamp conversion tables
+
+  include/ntp_unixtime.h@1.8 +8 -8
+    timestamp conversion tables type changed to 'const u_int32' arrays
+
+  libntp/msutotsf.c@1.4 +2 -2
+    table type changed to 'const u_int32' arrays
+
+  libntp/tstotv.c@1.4 +3 -3
+    table type changed to 'const u_int32' arrays
+
+  libntp/tvtots.c@1.4 +75 -75
+    values recalculated and table type changed to 'const u_int32' arrays
+
+  libparse/parse.c@1.14 +0 -4
+    removed unused declarations of conversion timestamp conversion tables
+
 ChangeSet@1.2463, 2011-01-22 11:28:33+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P122
   TAG: NTP_4_2_7P122
