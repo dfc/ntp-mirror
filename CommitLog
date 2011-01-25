@@ -1,3 +1,109 @@
+ChangeSet@1.2468, 2011-01-25 11:16:51+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P124
+  TAG: NTP_4_2_7P124
+
+  ChangeLog@1.792 +1 -0
+    NTP_4_2_7P124
+
+  clockstuff/clktest-opts.c@1.48 +2 -2
+    NTP_4_2_7P124
+
+  clockstuff/clktest-opts.h@1.48 +3 -3
+    NTP_4_2_7P124
+
+  ntpd/ntpd-opts.c@1.128 +2 -2
+    NTP_4_2_7P124
+
+  ntpd/ntpd-opts.h@1.128 +3 -3
+    NTP_4_2_7P124
+
+  ntpd/ntpd-opts.texi@1.126 +2 -2
+    NTP_4_2_7P124
+
+  ntpd/ntpd.1@1.126 +2 -2
+    NTP_4_2_7P124
+
+  ntpdc/ntpdc-opts.c@1.125 +2 -2
+    NTP_4_2_7P124
+
+  ntpdc/ntpdc-opts.h@1.125 +3 -3
+    NTP_4_2_7P124
+
+  ntpdc/ntpdc-opts.texi@1.125 +2 -2
+    NTP_4_2_7P124
+
+  ntpdc/ntpdc.1@1.125 +2 -2
+    NTP_4_2_7P124
+
+  ntpq/ntpq-opts.c@1.125 +2 -2
+    NTP_4_2_7P124
+
+  ntpq/ntpq-opts.h@1.125 +3 -3
+    NTP_4_2_7P124
+
+  ntpq/ntpq-opts.texi@1.125 +2 -2
+    NTP_4_2_7P124
+
+  ntpq/ntpq.1@1.125 +2 -2
+    NTP_4_2_7P124
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.125 +2 -2
+    NTP_4_2_7P124
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.125 +3 -3
+    NTP_4_2_7P124
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.125 +2 -2
+    NTP_4_2_7P124
+
+  ntpsnmpd/ntpsnmpd.1@1.125 +2 -2
+    NTP_4_2_7P124
+
+  packageinfo.sh@1.126 +1 -1
+    NTP_4_2_7P124
+
+  sntp/sntp-opts.c@1.125 +2 -2
+    NTP_4_2_7P124
+
+  sntp/sntp-opts.h@1.125 +3 -3
+    NTP_4_2_7P124
+
+  sntp/sntp-opts.texi@1.125 +2 -2
+    NTP_4_2_7P124
+
+  sntp/sntp.1@1.125 +2 -2
+    NTP_4_2_7P124
+
+  sntp/sntp.html@1.125 +1 -1
+    NTP_4_2_7P124
+
+  util/ntp-keygen-opts.c@1.123 +2 -2
+    NTP_4_2_7P124
+
+  util/ntp-keygen-opts.h@1.123 +3 -3
+    NTP_4_2_7P124
+
+  util/ntp-keygen-opts.texi@1.126 +2 -2
+    NTP_4_2_7P124
+
+  util/ntp-keygen.1@1.126 +2 -2
+    NTP_4_2_7P124
+
+ChangeSet@1.2467, 2011-01-24 22:35:18-05:00, stenn@deacon.udel.edu
+  On second thought...
+
+  sntp/Makefile.am@1.55 +1 -1
+    On second thought...
+
+ChangeSet@1.2466, 2011-01-24 22:05:31-05:00, stenn@deacon.udel.edu
+  sntp/Makefile.am needs any passed-in CFLAGS.
+
+  ChangeLog@1.791 +1 -0
+    sntp/Makefile.am needs any passed-in CFLAGS.
+
+  sntp/Makefile.am@1.54 +1 -1
+    sntp/Makefile.am needs any passed-in CFLAGS.
+
 ChangeSet@1.2465, 2011-01-24 11:19:17+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P123
   TAG: NTP_4_2_7P123
