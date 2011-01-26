@@ -60,6 +60,7 @@ mkinstalldirs = $(install_sh) -d
 CONFIG_HEADER = $(top_builddir)/config.h
 CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
+am__objects_1 =
 am_tests_OBJECTS = tests_main.$(OBJEXT) libntptest.$(OBJEXT) \
 	a_md5encrypt.$(OBJEXT) atoint.$(OBJEXT) atouint.$(OBJEXT) \
 	authkeys.$(OBJEXT) buftvtots.$(OBJEXT) calendar.$(OBJEXT) \
@@ -71,9 +72,10 @@ am_tests_OBJECTS = tests_main.$(OBJEXT) libntptest.$(OBJEXT) \
 	octtoint.$(OBJEXT) prettydate.$(OBJEXT) recvbuff.$(OBJEXT) \
 	refnumtoa.$(OBJEXT) sfptostr.$(OBJEXT) socktoa.$(OBJEXT) \
 	ssl_init.$(OBJEXT) statestr.$(OBJEXT) strtolfp.$(OBJEXT) \
-	tspecops.$(OBJEXT) tvalops.$(OBJEXT) tsftomsu.$(OBJEXT) \
-	tstotv.$(OBJEXT) tvtots.$(OBJEXT) uglydate.$(OBJEXT) \
-	uinttoa.$(OBJEXT) ymd2yd.$(OBJEXT)
+	timestructs.$(OBJEXT) tspecops.$(OBJEXT) tvalops.$(OBJEXT) \
+	tsftomsu.$(OBJEXT) tstotv.$(OBJEXT) tvtots.$(OBJEXT) \
+	uglydate.$(OBJEXT) uinttoa.$(OBJEXT) ymd2yd.$(OBJEXT) \
+	$(am__objects_1)
 tests_OBJECTS = $(am_tests_OBJECTS)
 tests_LDADD = $(LDADD)
 am__DEPENDENCIES_1 =
@@ -321,6 +323,7 @@ tests_SOURCES = $(top_srcdir)/sntp/tests_main.cpp	\
 		ssl_init.cpp		\
 		statestr.cpp		\
 		strtolfp.cpp		\
+		timestructs.cpp		\
 		tspecops.cpp		\
 		tvalops.cpp		\
 		tsftomsu.cpp		\
@@ -328,11 +331,14 @@ tests_SOURCES = $(top_srcdir)/sntp/tests_main.cpp	\
 		tvtots.cpp		\
 		uglydate.cpp		\
 		uinttoa.cpp		\
-		ymd2yd.cpp
+		ymd2yd.cpp		\
+		$(NULL)
 
 noinst_HEADERS = lfptest.h	\
 			libntptest.h	\
-			sockaddrtest.h
+			sockaddrtest.h	\
+			timestructs.h	\
+			$(NULL)
 
 INCLUDES = -I$(top_srcdir)/include -I$(top_srcdir)/lib/isc/include \
 	-I$(top_srcdir)/lib/isc/nothreads/include \
@@ -422,6 +428,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/statestr.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/strtolfp.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tests_main.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/timestructs.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tsftomsu.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tspecops.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tstotv.Po@am__quote@

@@ -89,12 +89,12 @@ am__objects_2 = a_md5encrypt.$(OBJEXT) adjtime.$(OBJEXT) \
 	snprintf.$(OBJEXT) socket.$(OBJEXT) socktoa.$(OBJEXT) \
 	socktohost.$(OBJEXT) ssl_init.$(OBJEXT) statestr.$(OBJEXT) \
 	strdup.$(OBJEXT) syssignal.$(OBJEXT) timespecops.$(OBJEXT) \
-	timevalops.$(OBJEXT) tsftomsu.$(OBJEXT) tstotv.$(OBJEXT) \
-	tvtots.$(OBJEXT) uglydate.$(OBJEXT) uinttoa.$(OBJEXT) \
-	ymd2yd.$(OBJEXT) assertions.$(OBJEXT) buffer.$(OBJEXT) \
-	condition.$(OBJEXT) dir.$(OBJEXT) error.$(OBJEXT) \
-	errno2result.$(OBJEXT) event.$(OBJEXT) file.$(OBJEXT) \
-	inet_ntop.$(OBJEXT) inet_pton.$(OBJEXT) \
+	timetoa.$(OBJEXT) timevalops.$(OBJEXT) tsftomsu.$(OBJEXT) \
+	tstotv.$(OBJEXT) tvtots.$(OBJEXT) uglydate.$(OBJEXT) \
+	uinttoa.$(OBJEXT) ymd2yd.$(OBJEXT) assertions.$(OBJEXT) \
+	buffer.$(OBJEXT) condition.$(OBJEXT) dir.$(OBJEXT) \
+	error.$(OBJEXT) errno2result.$(OBJEXT) event.$(OBJEXT) \
+	file.$(OBJEXT) inet_ntop.$(OBJEXT) inet_pton.$(OBJEXT) \
 	interfaceiter.$(OBJEXT) lib.$(OBJEXT) log.$(OBJEXT) \
 	md5.$(OBJEXT) msgcat.$(OBJEXT) net.$(OBJEXT) netaddr.$(OBJEXT) \
 	netscope.$(OBJEXT) ondestroy.$(OBJEXT) random.$(OBJEXT) \
@@ -368,6 +368,7 @@ libntp_a_SRCS = \
 	strdup.c					\
 	syssignal.c					\
 	timespecops.c					\
+	timetoa.c					\
 	timevalops.c					\
 	tsftomsu.c					\
 	tstotv.c					\
@@ -559,6 +560,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/thread.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/time.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/timespecops.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/timetoa.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/timevalops.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tsftomsu.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tstotv.Po@am__quote@

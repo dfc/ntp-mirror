@@ -1,3 +1,199 @@
+ChangeSet@1.2471, 2011-01-26 10:31:57+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P125
+  TAG: NTP_4_2_7P125
+
+  ChangeLog@1.794 +1 -0
+    NTP_4_2_7P125
+
+  clockstuff/clktest-opts.c@1.49 +2 -2
+    NTP_4_2_7P125
+
+  clockstuff/clktest-opts.h@1.49 +3 -3
+    NTP_4_2_7P125
+
+  ntpd/ntpd-opts.c@1.129 +2 -2
+    NTP_4_2_7P125
+
+  ntpd/ntpd-opts.h@1.129 +3 -3
+    NTP_4_2_7P125
+
+  ntpd/ntpd-opts.texi@1.127 +2 -2
+    NTP_4_2_7P125
+
+  ntpd/ntpd.1@1.127 +2 -2
+    NTP_4_2_7P125
+
+  ntpdc/ntpdc-opts.c@1.126 +2 -2
+    NTP_4_2_7P125
+
+  ntpdc/ntpdc-opts.h@1.126 +3 -3
+    NTP_4_2_7P125
+
+  ntpdc/ntpdc-opts.texi@1.126 +2 -2
+    NTP_4_2_7P125
+
+  ntpdc/ntpdc.1@1.126 +2 -2
+    NTP_4_2_7P125
+
+  ntpq/ntpq-opts.c@1.126 +2 -2
+    NTP_4_2_7P125
+
+  ntpq/ntpq-opts.h@1.126 +3 -3
+    NTP_4_2_7P125
+
+  ntpq/ntpq-opts.texi@1.126 +2 -2
+    NTP_4_2_7P125
+
+  ntpq/ntpq.1@1.126 +2 -2
+    NTP_4_2_7P125
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.126 +2 -2
+    NTP_4_2_7P125
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.126 +3 -3
+    NTP_4_2_7P125
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.126 +2 -2
+    NTP_4_2_7P125
+
+  ntpsnmpd/ntpsnmpd.1@1.126 +2 -2
+    NTP_4_2_7P125
+
+  packageinfo.sh@1.127 +1 -1
+    NTP_4_2_7P125
+
+  sntp/sntp-opts.c@1.126 +2 -2
+    NTP_4_2_7P125
+
+  sntp/sntp-opts.h@1.126 +3 -3
+    NTP_4_2_7P125
+
+  sntp/sntp-opts.texi@1.126 +2 -2
+    NTP_4_2_7P125
+
+  sntp/sntp.1@1.126 +2 -2
+    NTP_4_2_7P125
+
+  sntp/sntp.html@1.126 +1 -1
+    NTP_4_2_7P125
+
+  util/ntp-keygen-opts.c@1.124 +2 -2
+    NTP_4_2_7P125
+
+  util/ntp-keygen-opts.h@1.124 +3 -3
+    NTP_4_2_7P125
+
+  util/ntp-keygen-opts.texi@1.127 +2 -2
+    NTP_4_2_7P125
+
+  util/ntp-keygen.1@1.127 +2 -2
+    NTP_4_2_7P125
+
+ChangeSet@1.2468.1.3, 2011-01-26 03:07:53+00:00, davehart@shiny.ad.hartbrothers.com
+  Add new files to Windows build.
+  Fix make distcheck by distributing include/timetoa.h and
+    tests/libntp/timestructs.h
+
+  include/Makefile.am@1.45 +1 -0
+    distribute include/timetoa.h
+
+  include/timetoa.h@1.2 +0 -1
+    config.h should be included only once, first, by each .c file
+
+  libntp/timetoa.c@1.2 +21 -18
+    nonfunctional style cleanup
+
+  ports/winnt/vc6/libntp.dsp@1.60 +4 -0
+    add libntp/timetoa.c reference
+
+  ports/winnt/vs2003/libntp.vcproj@1.18 +5 -2
+    add libntp/timetoa.c reference
+
+  ports/winnt/vs2005/libntp.vcproj@1.16 +4 -0
+    add libntp/timetoa.c reference
+
+  ports/winnt/vs2008/libntp/libntp.vcproj@1.37 +10 -2
+    add libntp/timetoa.c, include/timetoa.h references
+
+  tests/libntp/Makefile.am@1.32 +5 -2
+    distribute tests/libntp/timestructs.h
+
+ChangeSet@1.2468.1.2, 2011-01-25 22:04:11+01:00, jnperlin@hydra.localnet
+  fixed cut&paste error in tests/libntp/tvalops.cpp
+
+  tests/libntp/tvalops.cpp@1.4 +1 -1
+    fixed cut&paste error
+
+ChangeSet@1.2464.1.1, 2011-01-25 21:08:29+01:00, jnperlin@hydra.localnet
+  Refactoring of struct timeval string conversion, extended regression tests for struct timeval processing
+
+  include/timespecops.h@1.4 +1 -1
+    cleaner expression for normality test (leave optimisation to the optimiser)
+
+  include/timetoa.h@1.1 +85 -0
+    new module for string conversion of time_t related values
+
+  include/timetoa.h@1.0 +0 -0
+
+  include/timevalops.h@1.3 +1 -1
+    cleaner expression for normality test (leave optimisation to the optimiser)
+
+  libntp/Makefile.am@1.59 +1 -0
+    new module for string conversion of time_t related values
+
+  libntp/timetoa.c@1.1 +112 -0
+    new module for string conversion of time_t related values
+
+  libntp/timetoa.c@1.0 +0 -0
+
+  libntp/timevalops.c@1.6 +4 -58
+    moved string formatting stuff to 'timetoa.c'
+
+  tests/libntp/Makefile.am@1.31 +1 -0
+    timestruct.cpp added
+
+  tests/libntp/timestructs.cpp@1.1 +127 -0
+    new module for adapting / testing time-related structures (l_fp, struct timeval, struct timespec)
+
+  tests/libntp/timestructs.cpp@1.0 +0 -0
+
+  tests/libntp/timestructs.h@1.1 +159 -0
+    new module for adapting / testing time-related structures (l_fp, struct timeval, struct timespec)
+
+  tests/libntp/timestructs.h@1.0 +0 -0
+
+  tests/libntp/tvalops.cpp@1.3 +162 -141
+    moved useful code to timestructs.{h,cpp};
+    closeness of l_fp and timeval values tested by special predicate objects;
+    added some roundtrip tests;
+    
+
+ChangeSet@1.2469, 2011-01-25 19:25:52+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 1794] ntpq -c rv missing clk_wander information.
+  [Bug 1795] ntpq readvar does not display last variable.
+  bk rm libntp/tvtoa.c libntp/utvtoa.c
+    Thanks to Pearly for noticing these dead, nondistributed files in
+    the version control system.
+
+  BitKeeper/deleted/4a/tvtoa.c~3aed0663@1.5 +0 -0
+    Delete: libntp/tvtoa.c
+
+  BitKeeper/deleted/ee/utvtoa.c~3aed0663@1.5 +0 -0
+    Delete: libntp/utvtoa.c
+
+  ChangeLog@1.793 +2 -0
+    [Bug 1794] ntpq -c rv missing clk_wander information.
+    [Bug 1795] ntpq readvar does not display last variable.
+    
+
+  ntpq/ntpq-subs.c@1.83 +12 -11
+    nonfunctional cleanup
+
+  ntpq/ntpq.c@1.131 +7 -6
+    [Bug 1794] ntpq -c rv missing clk_wander information.
+    [Bug 1795] ntpq readvar does not display last variable.
+    
+
 ChangeSet@1.2468, 2011-01-25 11:16:51+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P124
   TAG: NTP_4_2_7P124
