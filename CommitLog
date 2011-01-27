@@ -1,3 +1,154 @@
+ChangeSet@1.2474, 2011-01-27 10:28:37+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P126
+  TAG: NTP_4_2_7P126
+
+  ChangeLog@1.796 +1 -0
+    NTP_4_2_7P126
+
+  clockstuff/clktest-opts.c@1.50 +2 -2
+    NTP_4_2_7P126
+
+  clockstuff/clktest-opts.h@1.50 +3 -3
+    NTP_4_2_7P126
+
+  ntpd/ntpd-opts.c@1.130 +2 -2
+    NTP_4_2_7P126
+
+  ntpd/ntpd-opts.h@1.130 +3 -3
+    NTP_4_2_7P126
+
+  ntpd/ntpd-opts.texi@1.128 +2 -2
+    NTP_4_2_7P126
+
+  ntpd/ntpd.1@1.128 +2 -2
+    NTP_4_2_7P126
+
+  ntpdc/ntpdc-opts.c@1.127 +2 -2
+    NTP_4_2_7P126
+
+  ntpdc/ntpdc-opts.h@1.127 +3 -3
+    NTP_4_2_7P126
+
+  ntpdc/ntpdc-opts.texi@1.127 +2 -2
+    NTP_4_2_7P126
+
+  ntpdc/ntpdc.1@1.127 +2 -2
+    NTP_4_2_7P126
+
+  ntpq/ntpq-opts.c@1.127 +2 -2
+    NTP_4_2_7P126
+
+  ntpq/ntpq-opts.h@1.127 +3 -3
+    NTP_4_2_7P126
+
+  ntpq/ntpq-opts.texi@1.127 +2 -2
+    NTP_4_2_7P126
+
+  ntpq/ntpq.1@1.127 +2 -2
+    NTP_4_2_7P126
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.127 +2 -2
+    NTP_4_2_7P126
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.127 +3 -3
+    NTP_4_2_7P126
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.127 +2 -2
+    NTP_4_2_7P126
+
+  ntpsnmpd/ntpsnmpd.1@1.127 +2 -2
+    NTP_4_2_7P126
+
+  packageinfo.sh@1.128 +1 -1
+    NTP_4_2_7P126
+
+  sntp/sntp-opts.c@1.127 +2 -2
+    NTP_4_2_7P126
+
+  sntp/sntp-opts.h@1.127 +3 -3
+    NTP_4_2_7P126
+
+  sntp/sntp-opts.texi@1.127 +2 -2
+    NTP_4_2_7P126
+
+  sntp/sntp.1@1.127 +2 -2
+    NTP_4_2_7P126
+
+  sntp/sntp.html@1.127 +1 -1
+    NTP_4_2_7P126
+
+  util/ntp-keygen-opts.c@1.125 +2 -2
+    NTP_4_2_7P126
+
+  util/ntp-keygen-opts.h@1.125 +3 -3
+    NTP_4_2_7P126
+
+  util/ntp-keygen-opts.texi@1.128 +2 -2
+    NTP_4_2_7P126
+
+  util/ntp-keygen.1@1.128 +2 -2
+    NTP_4_2_7P126
+
+ChangeSet@1.2473, 2011-01-27 01:38:59-05:00, stenn@deacon.udel.edu
+  Add entries for updates from Dave Hart
+
+  ChangeLog@1.795 +2 -0
+    Add entries for updates from Dave Hart
+
+ChangeSet@1.2470.1.3, 2011-01-26 19:39:27+00:00, davehart@shiny.ad.hartbrothers.com
+  silence signed overflow warning
+  mark isc_assertioncallback_t __attribute((__noreturn__))
+
+  include/ntp_stdlib.h@1.58 +9 -6
+    add __attribute((__noreturn__)) to __attribute__ compat header snippet.
+
+  lib/isc/assertions.c@1.5 +2 -1
+    mark default_callback() __attribute__ ((__noreturn__))
+
+  lib/isc/include/isc/assertions.h@1.5 +21 -1
+    Mark isc_assertioncallback_t __attribute((__noreturn__))
+
+  libntp/timetoa.c@1.4 +18 -16
+    silence warning from recent gcc:
+    libntp/timetoa.c:53:1: warning: assuming signed overflow does not occur when simplifying conditional to constant
+
+  ntpd/ntpd.c@1.122 +2 -1
+    mark assertion_failed() __attribute__ ((__noreturn__))
+
+ChangeSet@1.2470.1.2, 2011-01-26 17:03:48+00:00, davehart@shiny.ad.hartbrothers.com
+  Rename tests/libntp/t{val|spec}ops.cpp to time{val|spec}ops.cpp so
+    base filename matches tested source file, as with others.
+
+  tests/libntp/Makefile.am@1.33 +2 -2
+    Rename tests/libntp/t{val|spec}ops.cpp to time{val|spec}ops.cpp so
+      base filename matches tested source file, as with others.
+
+  tests/libntp/timespecops.cpp@1.6 +0 -0
+    Rename: tests/libntp/tspecops.cpp -> tests/libntp/timespecops.cpp
+
+  tests/libntp/timevalops.cpp@1.6 +0 -0
+    Rename: tests/libntp/tvalops.cpp -> tests/libntp/timevalops.cpp
+
+ChangeSet@1.2470.1.1, 2011-01-26 16:50:03+00:00, davehart@shiny.ad.hartbrothers.com
+  Fix off-by-one bug in format_time_fraction() introduced by hart@ntp.org.
+  Remove abs(prec) <= 9 requirement from format_time_fraction().
+  Add more time{spec|val}_tostr() tests.
+
+  include/timetoa.h@1.3 +3 -5
+    remove abs(prec) <= 9 limitation from format_time_fraction()
+
+  libntp/timetoa.c@1.3 +18 -26
+    remove abs(prec) <= 9 limitation from format_time_fraction().
+    calculate fraclimit from prec rather than use powers of ten lookup table.
+    fixes off-by-one bug introduced by hart@ntp.org (COUNTOF(limit) should have
+      been COUNTOF(limit) - 1).
+
+  tests/libntp/tspecops.cpp@1.5 +3 -1
+    add more timespec_tostr() tests
+
+  tests/libntp/tvalops.cpp@1.5 +3 -1
+    add more timeval_tostr() tests
+
 ChangeSet@1.2471, 2011-01-26 10:31:57+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P125
   TAG: NTP_4_2_7P125
