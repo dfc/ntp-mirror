@@ -1,3 +1,103 @@
+ChangeSet@1.2476, 2011-01-28 06:31:33+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P127
+  TAG: NTP_4_2_7P127
+
+  ChangeLog@1.798 +1 -0
+    NTP_4_2_7P127
+
+  clockstuff/clktest-opts.c@1.51 +2 -2
+    NTP_4_2_7P127
+
+  clockstuff/clktest-opts.h@1.51 +3 -3
+    NTP_4_2_7P127
+
+  ntpd/ntpd-opts.c@1.131 +2 -2
+    NTP_4_2_7P127
+
+  ntpd/ntpd-opts.h@1.131 +3 -3
+    NTP_4_2_7P127
+
+  ntpd/ntpd-opts.texi@1.129 +2 -2
+    NTP_4_2_7P127
+
+  ntpd/ntpd.1@1.129 +2 -2
+    NTP_4_2_7P127
+
+  ntpdc/ntpdc-opts.c@1.128 +2 -2
+    NTP_4_2_7P127
+
+  ntpdc/ntpdc-opts.h@1.128 +3 -3
+    NTP_4_2_7P127
+
+  ntpdc/ntpdc-opts.texi@1.128 +2 -2
+    NTP_4_2_7P127
+
+  ntpdc/ntpdc.1@1.128 +2 -2
+    NTP_4_2_7P127
+
+  ntpq/ntpq-opts.c@1.128 +2 -2
+    NTP_4_2_7P127
+
+  ntpq/ntpq-opts.h@1.128 +3 -3
+    NTP_4_2_7P127
+
+  ntpq/ntpq-opts.texi@1.128 +2 -2
+    NTP_4_2_7P127
+
+  ntpq/ntpq.1@1.128 +2 -2
+    NTP_4_2_7P127
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.128 +2 -2
+    NTP_4_2_7P127
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.128 +3 -3
+    NTP_4_2_7P127
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.128 +2 -2
+    NTP_4_2_7P127
+
+  ntpsnmpd/ntpsnmpd.1@1.128 +2 -2
+    NTP_4_2_7P127
+
+  packageinfo.sh@1.129 +1 -1
+    NTP_4_2_7P127
+
+  sntp/sntp-opts.c@1.128 +2 -2
+    NTP_4_2_7P127
+
+  sntp/sntp-opts.h@1.128 +3 -3
+    NTP_4_2_7P127
+
+  sntp/sntp-opts.texi@1.128 +2 -2
+    NTP_4_2_7P127
+
+  sntp/sntp.1@1.128 +2 -2
+    NTP_4_2_7P127
+
+  sntp/sntp.html@1.128 +1 -1
+    NTP_4_2_7P127
+
+  util/ntp-keygen-opts.c@1.126 +2 -2
+    NTP_4_2_7P127
+
+  util/ntp-keygen-opts.h@1.126 +3 -3
+    NTP_4_2_7P127
+
+  util/ntp-keygen-opts.texi@1.129 +2 -2
+    NTP_4_2_7P127
+
+  util/ntp-keygen.1@1.129 +2 -2
+    NTP_4_2_7P127
+
+ChangeSet@1.2475, 2011-01-28 01:07:13-05:00, stenn@deacon.udel.edu
+  [Bug 1797] Restore stale timestamp check from the RANGEGATE cleanup
+
+  ChangeLog@1.797 +1 -0
+    [Bug 1797] Restore stale timestamp check from the RANGEGATE cleanup
+
+  ntpd/ntp_refclock.c@1.103 +3 -0
+    [Bug 1797] Restore stale timestamp check from the RANGEGATE cleanup
+
 ChangeSet@1.2474, 2011-01-27 10:28:37+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P126
   TAG: NTP_4_2_7P126
