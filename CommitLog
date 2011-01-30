@@ -1,3 +1,107 @@
+ChangeSet@1.2478, 2011-01-30 11:40:47+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P128
+  TAG: NTP_4_2_7P128
+
+  ChangeLog@1.800 +1 -0
+    NTP_4_2_7P128
+
+  clockstuff/clktest-opts.c@1.52 +2 -2
+    NTP_4_2_7P128
+
+  clockstuff/clktest-opts.h@1.52 +3 -3
+    NTP_4_2_7P128
+
+  ntpd/ntpd-opts.c@1.132 +2 -2
+    NTP_4_2_7P128
+
+  ntpd/ntpd-opts.h@1.132 +3 -3
+    NTP_4_2_7P128
+
+  ntpd/ntpd-opts.texi@1.130 +2 -2
+    NTP_4_2_7P128
+
+  ntpd/ntpd.1@1.130 +2 -2
+    NTP_4_2_7P128
+
+  ntpdc/ntpdc-opts.c@1.129 +2 -2
+    NTP_4_2_7P128
+
+  ntpdc/ntpdc-opts.h@1.129 +3 -3
+    NTP_4_2_7P128
+
+  ntpdc/ntpdc-opts.texi@1.129 +2 -2
+    NTP_4_2_7P128
+
+  ntpdc/ntpdc.1@1.129 +2 -2
+    NTP_4_2_7P128
+
+  ntpq/ntpq-opts.c@1.129 +2 -2
+    NTP_4_2_7P128
+
+  ntpq/ntpq-opts.h@1.129 +3 -3
+    NTP_4_2_7P128
+
+  ntpq/ntpq-opts.texi@1.129 +2 -2
+    NTP_4_2_7P128
+
+  ntpq/ntpq.1@1.129 +2 -2
+    NTP_4_2_7P128
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.129 +2 -2
+    NTP_4_2_7P128
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.129 +3 -3
+    NTP_4_2_7P128
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.129 +2 -2
+    NTP_4_2_7P128
+
+  ntpsnmpd/ntpsnmpd.1@1.129 +2 -2
+    NTP_4_2_7P128
+
+  packageinfo.sh@1.130 +1 -1
+    NTP_4_2_7P128
+
+  sntp/sntp-opts.c@1.129 +2 -2
+    NTP_4_2_7P128
+
+  sntp/sntp-opts.h@1.129 +3 -3
+    NTP_4_2_7P128
+
+  sntp/sntp-opts.texi@1.129 +2 -2
+    NTP_4_2_7P128
+
+  sntp/sntp.1@1.129 +2 -2
+    NTP_4_2_7P128
+
+  sntp/sntp.html@1.129 +1 -1
+    NTP_4_2_7P128
+
+  util/ntp-keygen-opts.c@1.127 +2 -2
+    NTP_4_2_7P128
+
+  util/ntp-keygen-opts.h@1.127 +3 -3
+    NTP_4_2_7P128
+
+  util/ntp-keygen-opts.texi@1.130 +2 -2
+    NTP_4_2_7P128
+
+  util/ntp-keygen.1@1.130 +2 -2
+    NTP_4_2_7P128
+
+ChangeSet@1.2477, 2011-01-29 23:06:16+00:00, davehart@shiny.ad.hartbrothers.com
+  * [Bug 1799] ntpq mrv crash.
+  * [Bug 1801] ntpq mreadvar requires prior association caching.
+
+  ChangeLog@1.799 +3 -1
+    * [Bug 1799] ntpq mrv crash.
+    * [Bug 1801] ntpq mreadvar requires prior association caching.
+    Correct p126 ChangeLog entry to refer to format_time_fraction().
+
+  ntpq/ntpq-subs.c@1.84 +26 -19
+    * [Bug 1799] ntpq mrv crash.
+    * [Bug 1801] ntpq mreadvar requires prior association caching.
+
 ChangeSet@1.2476, 2011-01-28 06:31:33+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P127
   TAG: NTP_4_2_7P127
