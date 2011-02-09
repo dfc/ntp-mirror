@@ -1,3 +1,122 @@
+ChangeSet@1.2480, 2011-02-09 08:55:18+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P129
+  TAG: NTP_4_2_7P129
+
+  ChangeLog@1.802 +1 -0
+    NTP_4_2_7P129
+
+  clockstuff/clktest-opts.c@1.53 +2 -2
+    NTP_4_2_7P129
+
+  clockstuff/clktest-opts.h@1.53 +3 -3
+    NTP_4_2_7P129
+
+  ntpd/ntpd-opts.c@1.133 +2 -2
+    NTP_4_2_7P129
+
+  ntpd/ntpd-opts.h@1.133 +3 -3
+    NTP_4_2_7P129
+
+  ntpd/ntpd-opts.texi@1.131 +2 -2
+    NTP_4_2_7P129
+
+  ntpd/ntpd.1@1.131 +2 -2
+    NTP_4_2_7P129
+
+  ntpdc/ntpdc-opts.c@1.130 +2 -2
+    NTP_4_2_7P129
+
+  ntpdc/ntpdc-opts.h@1.130 +3 -3
+    NTP_4_2_7P129
+
+  ntpdc/ntpdc-opts.texi@1.130 +2 -2
+    NTP_4_2_7P129
+
+  ntpdc/ntpdc.1@1.130 +2 -2
+    NTP_4_2_7P129
+
+  ntpq/ntpq-opts.c@1.130 +2 -2
+    NTP_4_2_7P129
+
+  ntpq/ntpq-opts.h@1.130 +3 -3
+    NTP_4_2_7P129
+
+  ntpq/ntpq-opts.texi@1.130 +2 -2
+    NTP_4_2_7P129
+
+  ntpq/ntpq.1@1.130 +2 -2
+    NTP_4_2_7P129
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.130 +2 -2
+    NTP_4_2_7P129
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.130 +3 -3
+    NTP_4_2_7P129
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.130 +2 -2
+    NTP_4_2_7P129
+
+  ntpsnmpd/ntpsnmpd.1@1.130 +2 -2
+    NTP_4_2_7P129
+
+  packageinfo.sh@1.131 +1 -1
+    NTP_4_2_7P129
+
+  sntp/sntp-opts.c@1.130 +2 -2
+    NTP_4_2_7P129
+
+  sntp/sntp-opts.h@1.130 +3 -3
+    NTP_4_2_7P129
+
+  sntp/sntp-opts.texi@1.130 +2 -2
+    NTP_4_2_7P129
+
+  sntp/sntp.1@1.130 +2 -2
+    NTP_4_2_7P129
+
+  sntp/sntp.html@1.130 +1 -1
+    NTP_4_2_7P129
+
+  util/ntp-keygen-opts.c@1.128 +2 -2
+    NTP_4_2_7P129
+
+  util/ntp-keygen-opts.h@1.128 +3 -3
+    NTP_4_2_7P129
+
+  util/ntp-keygen-opts.texi@1.131 +2 -2
+    NTP_4_2_7P129
+
+  util/ntp-keygen.1@1.131 +2 -2
+    NTP_4_2_7P129
+
+ChangeSet@1.2479, 2011-02-09 07:14:49+00:00, davehart@shiny.ad.hartbrothers.com
+  Add missing "break;" to ntp_control.c ctl_putsys() for caliberrs, used
+    by ntpq -c kerninfo introduced in 4.2.7p104.
+  Fix leak in ntp_control.c read_mru_list().
+
+  ChangeLog@1.801 +3 -0
+    Add missing "break;" to ntp_control.c ctl_putsys() for caliberrs, used
+      by ntpq -c kerninfo introduced in 4.2.7p104.
+    Fix leak in ntp_control.c read_mru_list().
+
+  include/ntp_assert.h@1.5 +7 -1
+    Attempt allowing Coverity to analyze our actual assertion paths.
+
+  include/ntp_lists.h@1.9 +4 -19
+    Correct bug in LINK_SORT_SLIST() with an empty list.
+
+  ntpd/ntp_control.c@1.162 +5 -2
+    Fix leak in ntp_control.c read_mru_list().
+    Add missing "break;" to ntp_control.c ctl_putsys() for caliberrs, used
+      by ntpq -c kerninfo introduced in 4.2.7p104.
+    
+
+  ntpd/ntp_io.c@1.347 +5 -0
+    Do not attempt setsockopt() for unopened -1 descriptors.
+
+  ntpd/ntp_monitor.c@1.38 +4 -2
+    Add debug-only assertion of non-NULL argument to mon_reclaim_entry().
+
 ChangeSet@1.2478, 2011-01-30 11:40:47+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P128
   TAG: NTP_4_2_7P128
