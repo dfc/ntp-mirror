@@ -1,8 +1,1151 @@
-ChangeSet@1.2482, 2011-02-12 11:07:51+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2470, 2011-02-21 09:21:02+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P131
+  TAG: NTP_4_2_7P131
+
+  ChangeLog@1.791 +1 -0
+    NTP_4_2_7P131
+
+  clockstuff/clktest-opts.c@1.55 +2 -2
+    NTP_4_2_7P131
+
+  clockstuff/clktest-opts.h@1.55 +3 -3
+    NTP_4_2_7P131
+
+  ntpd/ntpd-opts.c@1.135 +2 -2
+    NTP_4_2_7P131
+
+  ntpd/ntpd-opts.h@1.135 +3 -3
+    NTP_4_2_7P131
+
+  ntpd/ntpd-opts.texi@1.133 +2 -2
+    NTP_4_2_7P131
+
+  ntpd/ntpd.1@1.133 +2 -2
+    NTP_4_2_7P131
+
+  ntpdc/ntpdc-opts.c@1.132 +2 -2
+    NTP_4_2_7P131
+
+  ntpdc/ntpdc-opts.h@1.132 +3 -3
+    NTP_4_2_7P131
+
+  ntpdc/ntpdc-opts.texi@1.132 +2 -2
+    NTP_4_2_7P131
+
+  ntpdc/ntpdc.1@1.132 +2 -2
+    NTP_4_2_7P131
+
+  ntpq/ntpq-opts.c@1.132 +2 -2
+    NTP_4_2_7P131
+
+  ntpq/ntpq-opts.h@1.132 +3 -3
+    NTP_4_2_7P131
+
+  ntpq/ntpq-opts.texi@1.132 +2 -2
+    NTP_4_2_7P131
+
+  ntpq/ntpq.1@1.132 +2 -2
+    NTP_4_2_7P131
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.132 +2 -2
+    NTP_4_2_7P131
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.132 +3 -3
+    NTP_4_2_7P131
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.132 +2 -2
+    NTP_4_2_7P131
+
+  ntpsnmpd/ntpsnmpd.1@1.132 +2 -2
+    NTP_4_2_7P131
+
+  packageinfo.sh@1.133 +1 -1
+    NTP_4_2_7P131
+
+  sntp/sntp-opts.c@1.126 +13 -29
+    NTP_4_2_7P131
+
+  sntp/sntp-opts.h@1.126 +4 -4
+    NTP_4_2_7P131
+
+  sntp/sntp-opts.texi@1.126 +7 -8
+    NTP_4_2_7P131
+
+  sntp/sntp.1@1.126 +2 -2
+    NTP_4_2_7P131
+
+  sntp/sntp.html@1.126 +56 -84
+    NTP_4_2_7P131
+
+  util/ntp-keygen-opts.c@1.130 +2 -2
+    NTP_4_2_7P131
+
+  util/ntp-keygen-opts.h@1.130 +3 -3
+    NTP_4_2_7P131
+
+  util/ntp-keygen-opts.texi@1.133 +2 -2
+    NTP_4_2_7P131
+
+  util/ntp-keygen.1@1.133 +2 -2
+    NTP_4_2_7P131
+
+ChangeSet@1.2469, 2011-02-21 03:59:49-05:00, stenn@deacon.udel.edu
+  The fixes for bugs 1087 and 1088 are in the udated SNTP code
+
+  ChangeLog@1.790 +2 -0
+    The fixes for bugs 1087 and 1088 are in the udated SNTP code
+
+ChangeSet@1.2468, 2011-02-21 00:26:17-08:00, harlan@hms-mbp.local
+  older autoconf sometimes dislikes [].
+
+  ChangeLog@1.789 +1 -0
+    older autoconf sometimes dislikes [].
+
+  sntp/m4/ntp_libntp.m4@1.5 +4 -6
+    older autoconf sometimes dislikes [].
+
+ChangeSet@1.2422.1.61, 2011-02-20 23:11:05-05:00, stenn@deacon.udel.edu
+  refclock_acts.c cleanup from Dave Mills
+
+  ChangeLog@1.784.1.21 +1 -0
+    refclock_acts.c cleanup from Dave Mills
+
+  ntpd/refclock_acts.c@1.46.1.1 +4 -3
+    refclock_acts.c cleanup from Dave Mills
+
+ChangeSet@1.2466, 2011-02-20 21:20:21+00:00, davehart@shiny.ad.hartbrothers.com
+  Cleanup for prior merge cset
+
+  include/ntp_machine.h@1.33 +5 -1
+    Cleanup for prior merge cset
+
+  include/ntp_unixtime.h@1.10 +1 -6
+    Cleanup for prior merge cset
+
+  libntp/systime.c@1.53 +2 -2
+    Cleanup for prior merge cset
+
+  ports/winnt/libntp/SetSystemTime.c@1.10 +2 -0
+    Cleanup for prior merge cset
+
+  ports/winnt/libntp/getclock.c@1.3 +2 -0
+    Cleanup for prior merge cset
+
+  ports/winnt/libntp/util_clockstuff.c@1.5 +1 -0
+    Cleanup for prior merge cset
+
+  util/ntp-keygen.c@1.78 +2 -2
+    Cleanup for prior merge cset
+
+ChangeSet@1.2464, 2011-02-20 20:23:00+00:00, davehart@shiny.ad.hartbrothers.com
+  Attempt typical subpackage approach for libevent
+  sntp test cleanup
+  IPv6 hackery
+  Split up ntp_lib.m4 into smaller, more specific subsets
+  Use {step,adj}_systime from libntp.  Use EX_* codes for exit status.
+  libevent cleanup
+  libevent upgrade
+  Move blocking worker and intres from ntpd to libntp.
+  Move AC_FUNC_FORK and AC_FUNC_ALLOCA to ntp_libntp.m4 along with move
+    of intres/blocking worker to libntp.
+  Use %m instead of strerror().
+  make -lz depend on zlib.h
+  hp-ux portability fix
+  portability
+  Allow libevent's regress to be skipped in make check.
+  Switch sntp from evdns to blocking worker intres.
+  Quiet "signal_no_reset: signal 18 had flags 20000" on OpenSolaris,
+    adding SA_NOCLDSTOP to IGNORED_SA_FLAGS.
+  Be consistent about how blocking children go away:
+    1.  Parent requests them to go by closing pipe or CHILD_EXIT_REQ.
+    2.  Child goes away quietly.
+    3.  Parent sees them gone via broken resp pipe or CHILD_GONE_RESP.
+    4.  Parent clears blocking_children entry for reuse.
+  Make delay between queries to addresses resolved from same hostname
+    per-family in sntp, as ntpd won't consider our v4 and v6 source
+    addresses to be one remote rate-limit target.
+  use freeaddrinfo() in ntpq's getnetnum().
+  valgrind warned of branch dependent on uninitialized value,
+    irig_decode()'s local syncdig.
+  Free OpenSSL dynamic allocations atexit.
+  Enable pthreads build
+  libntp autoconf macro cleanup
+  Move "can't write KoD file" warning from sntp shutdown to startup.
+  Use libevent log callback to redirect messages from stderr to msyslog()
+  enable libevent debug mode if sntp debug > 0
+  Issue a single read event for each socket, rather than one per query.
+  Do not attempt to read in socket callback for EV_TIMEOUT.
+  ipv6 fixes for sntp
+  Crib some pthread m4 from BIND for libisc.
+  Fix step/slew logic in sntp.
+  sntp --headspace option (default 10ms) spaces queries.
+  Provide less-broken gettimeofday_cached().
+  Add support for --(no-)wait and -uctimeout
+  Remove duplicate clock_gettime/clock_settime logic from sntp/configure.ac,
+    it's now in sntp/m4/ntp_libntp.m4.
+  Bump config.cache version stamps to account for cache-incompatible change
+    to librt detection.
+  Omit unused code with recent gcc and gnu ld.
+  AC_LANG update for openldap autoconf macros
+  Clean up AC_DEFINE and AC_DEFINE_UNQUOTED arg quoting in openldap*.m4
+  add a timeout for test-eof.c as it may hang under HP-UX 10.20
+  Use pthreads for blocking worker rather than fork, if possible.
+  Quiet alignment warning due to casting sockaddr * to sockaddr_u *
+  Quiet ntp_control.c and ntp_request.c warnings about casting char *
+    to u_int32 * using unions.
+  Use void * rather than char * for variant pointers to help with
+    pointer cast increases required alignment warnings.
+  Fix many warnings enabled with -Wcast-align, when casting
+    a pointer to a more-strictly-aligned underlying type.
+  preset ol_with_yielding_select=${ol_with_yielding_select-auto}
+  Also change tests to use x prefix as insurance against other issues.
+  We always need the PTHREADS AM_CONDITIONAL.  Use the OL check.
+  Use NTP_LIBEVENT m4sh macro to decide between installed and tearoff
+    libevent.
+  Add readonly arg to kod_init_kod_db() for tests -- prevents editing
+    test baseline input KoD files during make check, regression limited
+    to sntp/libevent branch.
+  Switch libevent-2.0.10-stable from ACX_PTHREADS to OL_THREAD_CHECK
+  Use socketpair() instead of pipe() when available, as avoiding
+    EV_FEATURE_FDS allows libevent to use a faster backend on
+    systems like Linux without an O(1) backend that handles pipes.
+  Remove contentious libevent-cfg sentinel files, modify libevent's
+    confgure args via $ac_configure_args.
+  Strip unneeded checks from ntp_ipv6.m4:
+    for struct sockaddr_storage member ss_family
+    for struct sockaddr_storage member ss_len
+    for struct sockaddr_storage member __ss_len
+  Move things used by libntp from top-level configure.ac to NTP_LIBNTP and NTP_IPV6
+  Change "forked worker child (pid 0)" from msyslog() to DPRINTF().
+  Change initial socket boundary message from DEBUG-only msyslog() to DPRINTF().
+
+  BitKeeper/deleted/2b/regress.gen.c~aa03b6be21193937@1.2 +0 -0
+    Rename: sntp/libevent/test/regress.gen.c -> BitKeeper/deleted/2b/regress.gen.c~aa03b6be21193937
+
+  BitKeeper/deleted/31/Makefile.am~a4dc04c7982322c0@1.2 +0 -0
+    Rename: sntp/build-libevent/Makefile.am -> BitKeeper/deleted/31/Makefile.am~a4dc04c7982322c0
+
+  BitKeeper/deleted/5f/acx_pthread.m4~2200dd7a1a4e6b33@1.2 +0 -0
+    Rename: sntp/libevent/m4/acx_pthread.m4 -> BitKeeper/deleted/5f/acx_pthread.m4~2200dd7a1a4e6b33
+
+  BitKeeper/deleted/67/regress.gen.h~23d0c5b9df595958@1.2 +0 -0
+    Rename: sntp/libevent/test/regress.gen.h -> BitKeeper/deleted/67/regress.gen.h~23d0c5b9df595958
+
+  BitKeeper/etc/ignore@1.78 +2 -0
+    added regress.gen.c regress.gen.h
+
+  ChangeLog@1.786 +19 -1
+    Convert sntp to libevent event-driven socket programming.  Instead of
+      blocking name resolution and querying one NTP server at a time,
+      resolve server names and send NTP queries without blocking.  Add
+      sntp command-line options to adjust timing and optionally wait for all
+      servers to respond instead of exiting after the first.
+    Move "can't write KoD file" warning from sntp shutdown to startup.
+    Import libevent 2.0.10-stable plus local patches as a tearoff, used
+      only if the target system lacks an installed libevent 2.0.9 or later.
+    Move blocking worker and resolver to libntp from ntpd.
+    Use threads rather than forked child processes for blocking worker
+      when possible.  Override with configure --disable-thread-support.
+    Move init_logging(), change_logfile(), and setup_logfile() from ntpd
+      to libntp, use them in sntp.
+    Test --without-sntp in flock-build script's -no-refclocks variety.
+    Avoid invoking config.status twice in a row in build script.
+    Move more m4sh tests needed by libntp to shared .m4 files.
+    Split up ntp_libntp.m4 into smaller, more specific subsets.
+    Enable gcc -Wcast-align, fix many instances of warnings when casting
+      a pointer to a more-strictly-aligned underlying type.
+    
+
+  Makefile.am@1.105 +2 -23
+    SUBDIRS and DIST_SUBDIRS were identical, remove definition of DIST_SUBDIRS
+      and allow Automake to default it to SUBDIRS.
+    Add -I sntp/libevent/m4 to ACLOCAL_AMFLAGS to find openldap*.m4.
+
+  adjtimed/Makefile.am@1.10 +2 -2
+    enable pthreads build.
+
+  build@1.43 +5 -4
+    build: Do not invoke config.status unless Makefile is out of date.
+    Avoids re-running config.status right after configure ran it, which
+      triggers spurious am--remake because Makefile is newer than config.h
+
+  clockstuff/Makefile.am@1.17 +2 -2
+    enable pthreads build.
+
+  configure.ac@1.515 +41 -806
+    Split up ntp_lib.m4 into smaller, more specific subsets
+    Move AC_FUNC_FORK and AC_FUNC_ALLOCA to ntp_libntp.m4 along with move
+      of intres/blocking worker to libntp.
+    Move droproot configure test to libntp with intres.
+    Bump config.cache version stamps to account for cache-incompatible change
+      to librt detection.
+    Move more m4 code needed by libntp to sntp/m4/*.m4 from top-level configure.ac
+
+  deps-ver@1.5 +1 -1
+    bump deps-ver to avoid build breaks from moved source files.
+
+  flock-build@1.49 +2 -2
+    test --without-sntp in one of the flock-build variants
+
+  include/Makefile.am@1.44.1.1 +1 -0
+    rename former ntp_intres.h to intreswork.h, move intres public
+      interface declarations from ntpd.h to new ntp_intres.h.
+
+  include/intreswork.h@1.5 +11 -5
+    Move blocking worker and intres from ntpd to libntp.
+    rename former ntp_intres.h to intreswork.h, move intres public
+      interface declarations from ntpd.h to new ntp_intres.h.
+
+  include/intreswork.h@1.4 +0 -0
+    Rename: include/ntp_intres.h -> include/intreswork.h
+
+  include/libntp.h@1.2 +3 -1
+    use getdtablesize() if available and _SC_OPEN_MAX is not.
+
+  include/ntp_calendar.h@1.9 +2 -0
+    include time.h in ntp_calendar.h which uses struct tm.
+
+  include/ntp_control.h@1.57 +7 -2
+    Quiet ntp_control.c and ntp_request.c -Wcast-align warnings.
+
+  include/ntp_debug.h@1.4 +2 -1
+    Allow %m in DPRINTF
+
+  include/ntp_intres.h@1.1 +45 -0
+    Former ntp_intres.h renamed to intreswork.h.
+    New public interface header for intres, contents moved from ntpd.h.
+
+  include/ntp_intres.h@1.0 +0 -0
+
+  include/ntp_io.h@1.21 +4 -5
+    Move blocking worker and intres from ntpd to libntp.
+    Move close_all_beyond() and close_all_except() to libntp.
+
+  include/ntp_lists.h@1.8.1.1 +3 -3
+    Do not invoke (beforecur) test in LINK_SORT_SLIST with a previously-empty list.
+
+  include/ntp_machine.h@1.32 +1 -11
+    Nothing sets TIME_WITH_SYS_TIME, remove it.
+
+  include/ntp_refclock.h@1.29 +2 -17
+    Use void * for variant clock/unit pointers.
+    Remove duplicate LDISC_* definitions.
+
+  include/ntp_request.h@1.42 +26 -17
+    Quiet ntp_control.c and ntp_request.c -Wcast-align warnings.
+
+  include/ntp_rfc2553.h@1.38 +9 -0
+    Add copy_addrinfo() to copy a single addrinfo and pointed-to
+      constituents.
+
+  include/ntp_stdlib.h@1.57.1.1 +14 -3
+    Add more m*printf() varieties.
+    Move init_logging(), change_logfile(), and setup_logfile() from ntpd
+      to libntp.
+
+  include/ntp_tty.h@1.5 +10 -10
+    Whitespace, imply maximum LDISC_ flag value with leading 0s.
+
+  include/ntp_unixtime.h@1.7.1.1 +6 -5
+    Several files comment that ntp_unixtime.h includes sys/time.h and
+      time.h, make it so.
+    Provide GETTIMEOFDAY() macro on systems with getclock() for sntp.
+    
+
+  include/ntp_worker.h@1.2 +120 -10
+    Move blocking worker and intres from ntpd to libntp.
+    Be consistent about how blocking children go away:
+      1.  Parent requests them to go by closing pipe or CHILD_EXIT_REQ.
+      2.  Child goes away quietly.
+      3.  Parent sees them gone via broken resp pipe or CHILD_GONE_RESP.
+      4.  Parent clears blocking_children entry for reuse.
+    Use pthreads for blocking worker rather than fork, if possible.
+    Use socketpair() instead of pipe() when available, as avoiding
+      EV_FEATURE_FDS allows libevent to use a faster backend on
+      systems like Linux without an O(1) backend that handles pipes.
+
+  include/ntp_workimpl.h@1.2 +6 -1
+    Move blocking worker and intres from ntpd to libntp.
+    Use pthreads for blocking worker rather than fork, if possible.
+
+  include/ntpd.h@1.159 +4 -61
+    Move blocking worker and intres from ntpd to libntp.
+    Rename former ntp_intres.h to intreswork.h, move intres public
+      interface declarations from ntpd.h to new ntp_intres.h.
+    Move close_all_beyond() and close_all_except() to libntp.
+
+  include/recvbuff.h@1.23 +1 -1
+    include ntp_net.h for sockaddr_u declaration
+
+  lib/isc/pthreads/mutex.c@1.2 +9 -0
+    Work with very first draft posix M:N threads on HP-UX 10.20
+
+  lib/isc/unix/ifiter_ioctl.c@1.30 +2 -2
+    lib/isc/unix/ifiter_ioctl.c:456: warning: cast increases required alignment of target type
+    lib/isc/unix/ifiter_ioctl.c:669: warning: cast increases required alignment of target type
+    
+
+  lib/isc/unix/interfaceiter.c@1.20 +2 -2
+    lib/isc/unix/interfaceiter.c:83: warning: cast increases required alignment of target type
+    lib/isc/unix/interfaceiter.c:87: warning: cast increases required alignment of target type
+
+  libntp/Makefile.am@1.58.1.1 +43 -29
+    Move blocking worker and intres from ntpd to libntp.
+    Enable pthreads build.
+
+  libntp/a_md5encrypt.c@1.30 +1 -1
+    Use sizeof() rather than hard-coding in addr2refid().
+
+  libntp/caljulian.c@1.14 +5 -4
+    style only
+
+  libntp/humandate.c@1.10 +2 -1
+    whitespace
+
+  libntp/lib_strbuf.c@1.8 +2 -0
+    Make sure init_lib() is called before ssl_init() returns.
+
+  libntp/machines.c@1.23 +14 -32
+    use %m instead of strerror()
+
+  libntp/msyslog.c@1.35 +281 -0
+    Add more m*printf() varieties.
+    Move init_logging(), change_logfile(), and setup_logfile() from ntpd
+      to libntp.
+    strip .exe from program name in init_logging().
+    Log new logfile name to syslog on switching, as we do when switching
+      from one logfile to another.
+
+  libntp/ntp_intres.c@1.93 +322 -122
+    Move blocking worker and intres from ntpd to libntp.
+    Rename former ntp_intres.h to intreswork.h, move intres public
+      interface declarations from ntpd.h to new ntp_intres.h.
+    Use freeaddrinfo() in blocking_getaddrinfo().
+    Use pthreads for blocking worker rather than fork, if possible.
+
+  libntp/ntp_intres.c@1.92 +0 -0
+    Rename: ntpd/ntp_intres.c -> libntp/ntp_intres.c
+
+  libntp/ntp_libopts.c@1.4 +18 -12
+    Quiet -Wcast-align warnings in ntpOptionProcess const-silliness workaround.
+
+  libntp/ntp_lineedit.c@1.11 +1 -2
+    use %m instead of strerror()
+
+  libntp/ntp_random.c@1.8 +20 -7
+    #ifdef away unused code that triggers alignment warnings.
+
+  libntp/ntp_rfc2553.c@1.45 +40 -1
+    Add copy_addrinfo() to copy a single addrinfo and pointed-to
+      constituents.
+
+  libntp/ntp_worker.c@1.4 +221 -36
+    Move blocking worker and intres from ntpd to libntp.
+    Rename former ntp_intres.h to intreswork.h, move intres public
+      interface declarations from ntpd.h to new ntp_intres.h.
+    Quiet worker process startup/shutdown.
+    Be consistent about how blocking children go away:
+      1.  Parent requests them to go by closing pipe or CHILD_EXIT_REQ.
+      2.  Child goes away quietly.
+      3.  Parent sees them gone via broken resp pipe or CHILD_GONE_RESP.
+      4.  Parent clears blocking_children entry for reuse.
+    Use pthreads for blocking worker rather than fork, if possible.
+    Use socketpair() instead of pipe() when available, as avoiding
+      EV_FEATURE_FDS allows libevent to use a faster backend on
+      systems like Linux without an O(1) backend that handles pipes.
+
+  libntp/ntp_worker.c@1.3 +0 -0
+    Rename: ntpd/ntp_worker.c -> libntp/ntp_worker.c
+
+  libntp/socket.c@1.5 +6 -8
+    Change initial socket boundary message from DEBUG-only msyslog() to DPRINTF().
+
+  libntp/socktohost.c@1.13 +15 -2
+    Quiet -Wcast-align warning due to casting sockaddr * to sockaddr_u *
+
+  libntp/ssl_init.c@1.14 +17 -1
+    Free OpenSSL dynamic allocations atexit.
+    Make sure init_lib() is called before ssl_init() returns.
+
+  libntp/syssignal.c@1.12 +24 -9
+    quiet "signal_no_reset: signal 18 had flags 20000" on OpenSolaris,
+      adding SA_NOCLDSTOP to IGNORED_SA_FLAGS.
+    Enable pthreads build.
+
+  libntp/work_fork.c@1.7 +211 -148
+    Move blocking worker and intres from ntpd to libntp.
+    Move init_logging(), change_logfile(), and setup_logfile() from ntpd
+      to libntp.
+    Do not complain of short read 0 of 24 on normal forked worker exit.
+    Be consistent about how blocking children go away:
+      1.  Parent requests them to go by closing pipe or CHILD_EXIT_REQ.
+      2.  Child goes away quietly.
+      3.  Parent sees them gone via broken resp pipe or CHILD_GONE_RESP.
+      4.  Parent clears blocking_children entry for reuse.
+    Use pthreads for blocking worker rather than fork, if possible.
+    Use socketpair() instead of pipe() when available, as avoiding
+      EV_FEATURE_FDS allows libevent to use a faster backend on
+      systems like Linux without an O(1) backend that handles pipes.
+    Change "forked worker child (pid 0)" from msyslog() to DPRINTF().
+
+  libntp/work_fork.c@1.6 +0 -0
+    Rename: ntpd/work_fork.c -> libntp/work_fork.c
+
+  libntp/work_thread.c@1.5 +479 -179
+    Move blocking worker and intres from ntpd to libntp.
+    Be consistent about how blocking children go away:
+      1.  Parent requests them to go by closing pipe or CHILD_EXIT_REQ.
+      2.  Child goes away quietly.
+      3.  Parent sees them gone via broken resp pipe or CHILD_GONE_RESP.
+      4.  Parent clears blocking_children entry for reuse.
+    Use pthreads for blocking worker rather than fork, if possible.
+    Use socketpair() instead of pipe() when available, as avoiding
+      EV_FEATURE_FDS allows libevent to use a faster backend on
+      systems like Linux without an O(1) backend that handles pipes.
+    Work around cast discards volatile qualifier realloc'ing request and
+      response arrays.
+
+  libntp/work_thread.c@1.4 +0 -0
+    Rename: ntpd/work_thread.c -> libntp/work_thread.c
+
+  libparse/Makefile.am@1.24 +1 -1
+    Enable pthreads build.
+
+  libparse/parsesolaris.c@1.10 +6 -5
+    Silence cast increases required alignment warnings.
+
+  ntpd/Makefile.am@1.99 +11 -12
+    Move blocking worker and intres from ntpd to libntp.
+    Enable pthreads build.
+
+  ntpd/cmd_args.c@1.59 +4 -1
+    Make user and group string pointers distinct allocations.
+
+  ntpd/ntp_config.c@1.284 +17 -20
+    Use %m instead of strerror().
+    Rename former ntp_intres.h to intreswork.h, move intres public
+      interface declarations from ntpd.h to new ntp_intres.h.
+    Avoid "gai_error" shadowing warning using "gai_err" instead.
+
+  ntpd/ntp_control.c@1.161.1.1 +8 -8
+    Quiet ntp_control.c and ntp_request.c -Wcast-align warnings.
+
+  ntpd/ntp_io.c@1.348 +54 -221
+    Move blocking worker and intres from ntpd to libntp.
+    Move close_all_beyond() and close_all_except() to libntp.
+    Use pthreads for blocking worker rather than fork, if possible.
+    Avoid -Wcast-align warnings in routing message handling.
+    Use socketpair() instead of pipe() when available, as avoiding
+      EV_FEATURE_FDS allows libevent to use a faster backend on
+      systems like Linux without an O(1) backend that handles pipes.
+
+  ntpd/ntp_request.c@1.103 +305 -358
+    Quiet ntp_control.c and ntp_request.c -Wcast-align warnings.
+    struct interface -> endpt.
+
+  ntpd/ntp_timer.c@1.63 +22 -9
+    Move blocking worker and intres from ntpd to libntp.
+    Generalize intres_timeout_req(), provide ntpd and sntp implementations.
+
+  ntpd/ntpd.c@1.121.1.1 +32 -226
+    move init_logging(), change_logfile(), and setup_logfile() from ntpd
+      to libntp.
+    free(user) before replacement estrdup().
+    Call INIT_SSL() early with other init_*() routines.
+
+  ntpd/refclock_acts.c@1.45.1.1 +12 -13
+    nonfunctional:
+    Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
+    pp->unitptr is now void *, no cast needed.
+
+  ntpd/refclock_arbiter.c@1.19 +7 -8
+    nonfunctional:
+    Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
+    pp->unitptr is now void *, no cast needed.
+
+  ntpd/refclock_arc.c@1.24 +9 -10
+    nonfunctional:
+    Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
+    pp->unitptr is now void *, no cast needed.
+
+  ntpd/refclock_as2201.c@1.14 +6 -7
+    nonfunctional:
+    Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
+    pp->unitptr is now void *, no cast needed.
+
+  ntpd/refclock_atom.c@1.62 +3 -3
+    nonfunctional:
+    Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
+    pp->unitptr is now void *, no cast needed.
+
+  ntpd/refclock_bancomm.c@1.14 +5 -6
+    nonfunctional:
+    Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
+    pp->unitptr is now void *, no cast needed.
+
+  ntpd/refclock_chronolog.c@1.12 +7 -8
+    nonfunctional:
+    Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
+    pp->unitptr is now void *, no cast needed.
+
+  ntpd/refclock_chu.c@1.51 +20 -21
+    nonfunctional:
+    Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
+    pp->unitptr is now void *, no cast needed.
+
+  ntpd/refclock_datum.c@1.16 +32 -127
+    Get rid of units array, follow common idioms.
+
+  ntpd/refclock_dumbclock.c@1.18 +7 -8
+    nonfunctional:
+    Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
+    pp->unitptr is now void *, no cast needed.
+
+  ntpd/refclock_fg.c@1.13 +5 -5
+    nonfunctional:
+    Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
+    pp->unitptr is now void *, no cast needed.
+
+  ntpd/refclock_gpsvme.c@1.9 +2 -2
+    nonfunctional:
+    Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
+    pp->unitptr is now void *, no cast needed.
+
+  ntpd/refclock_heath.c@1.17 +2 -2
+    nonfunctional:
+    Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
+    pp->unitptr is now void *, no cast needed.
+
+  ntpd/refclock_hopfpci.c@1.12 +3 -4
+    nonfunctional:
+    Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
+    pp->unitptr is now void *, no cast needed.
+
+  ntpd/refclock_hopfser.c@1.15 +7 -8
+    nonfunctional:
+    Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
+    pp->unitptr is now void *, no cast needed.
+
+  ntpd/refclock_hpgps.c@1.13 +7 -8
+    nonfunctional:
+    Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
+    pp->unitptr is now void *, no cast needed.
+
+  ntpd/refclock_irig.c@1.35 +13 -13
+    valgrind warned of branch dependent on uninitialized value,
+      irig_decode()'s local syncdig.
+    Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
+    pp->unitptr is now void *, no cast needed.
+
+  ntpd/refclock_jjy.c@1.22 +16 -16
+    nonfunctional:
+    Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
+    pp->unitptr is now void *, no cast needed.
+
+  ntpd/refclock_jupiter.c@1.27 +28 -40
+    Use %m instead of strerror().
+    Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
+    pp->unitptr is now void *, no cast needed.
+
+  ntpd/refclock_leitch.c@1.13 +2 -2
+    silence increased alignment requirement from pointer cast.
+
+  ntpd/refclock_msfees.c@1.15 +2 -2
+    nonfunctional:
+    Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
+    pp->unitptr is now void *, no cast needed.
+
+  ntpd/refclock_mx4200.c@1.29 +18 -32
+    Use %m instead of strerror().
+    Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
+    pp->unitptr is now void *, no cast needed.
+
+  ntpd/refclock_neoclock4x.c@1.20 +8 -8
+    Use %m instead of strerror().
+    Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
+    pp->unitptr is now void *, no cast needed.
+
+  ntpd/refclock_nmea.c@1.59 +40 -28
+    nonfunctional:
+    Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
+    pp->unitptr is now void *, no cast needed.
+
+  ntpd/refclock_oncore.c@1.92 +6 -6
+    nonfunctional:
+    Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
+    pp->unitptr is now void *, no cast needed.
+
+  ntpd/refclock_palisade.c@1.38 +20 -17
+    Use %m instead of strerror().
+    Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
+    pp->unitptr is now void *, no cast needed.
+
+  ntpd/refclock_parse.c@1.57 +9 -9
+    silence cast increases required alignment warning.
+
+  ntpd/refclock_pcf.c@1.12 +2 -2
+    nonfunctional:
+    Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
+    pp->unitptr is now void *, no cast needed.
+
+  ntpd/refclock_pst.c@1.12 +7 -8
+    nonfunctional:
+    Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
+    pp->unitptr is now void *, no cast needed.
+
+  ntpd/refclock_ripencc.c@1.16 +9 -10
+    nonfunctional:
+    Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
+    pp->unitptr is now void *, no cast needed.
+
+  ntpd/refclock_shm.c@1.22 +9 -9
+    Use %m instead of strerror().
+    nonfunctional:
+    Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
+    pp->unitptr is now void *, no cast needed.
+
+  ntpd/refclock_tpro.c@1.12 +5 -6
+    nonfunctional:
+    Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
+    pp->unitptr is now void *, no cast needed.
+
+  ntpd/refclock_trak.c@1.11 +7 -8
+    nonfunctional:
+    Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
+    pp->unitptr is now void *, no cast needed.
+
+  ntpd/refclock_true.c@1.17 +9 -10
+    nonfunctional:
+    Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
+    pp->unitptr is now void *, no cast needed.
+
+  ntpd/refclock_ulink.c@1.16 +5 -5
+    nonfunctional:
+    Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
+    pp->unitptr is now void *, no cast needed.
+
+  ntpd/refclock_wwv.c@1.74 +23 -27
+    nonfunctional:
+    Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
+    pp->unitptr is now void *, no cast needed.
+
+  ntpd/refclock_wwvb.c@1.27 +9 -10
+    nonfunctional:
+    Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
+    pp->unitptr is now void *, no cast needed.
+
+  ntpd/refclock_zyfer.c@1.8 +6 -6
+    nonfunctional:
+    Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
+    pp->unitptr is now void *, no cast needed.
+
+  ntpdate/Makefile.am@1.27 +4 -3
+    Enable pthreads build.
+
+  ntpdate/ntpdate.c@1.83 +19 -11
+    Avoid alignment warnings from casting sockaddr * to sockaddr_u *.
+
+  ntpdc/Makefile.am@1.57 +5 -4
+    Enable pthreads build.
+    Make $(PROGRAMS) depend solely on version.o, whose dependencies should
+      take care of the rest.
+
+  ntpdc/layout.std@1.11 +10 -2
+    Adjust to less-trivial ntp_request.h.
+
+  ntpdc/nl.pl.in@1.9 +8 -2
+    Adjust to less-trivial ntp_request.h.
+
+  ntpdc/ntpdc.c@1.94 +33 -40
+    Quiet -Wcast-align warnings.
+    JAN_1970 definition now provided by ntp_unixtime.h
+
+  ntpdc/ntpdc_ops.c@1.76 +55 -52
+    Avoid increased required alignment warnings casting pointers.
+
+  ntpq/Makefile.am@1.53 +5 -5
+    Enable pthreads build.
+    Make $(PROGRAMS) depend on version.o alone, its dependencies should
+      handle the rest.
+
+  ntpq/ntpq.c@1.130.1.1 +35 -26
+    Use %m instead of strerror().
+    Use freeaddrinfo() in ntpq's getnetnum().
+    Quiet -Wcast-align warnings. 
+
+  ntpsnmpd/Makefile.am@1.25 +5 -4
+    Enable pthreads build.
+
+  parseutil/Makefile.am@1.14 +5 -3
+    Enable pthreads build.
+    pick up -lresolv, needed by dcfd, via LDADD_LIBNTP.
+
+  ports/winnt/include/ntp_iocompletionport.h@1.19 +3 -3
+    Move blocking worker and intres from ntpd to libntp.
+    Get rid of accessor for WaitableExitEventHandle.
+
+  ports/winnt/include/ntp_timer.h@1.7 +0 -4
+    Move blocking worker and intres from ntpd to libntp.
+
+  ports/winnt/libntp/win32_io.c@1.2 +3 -2
+    Use %m instead of strerror().
+
+  ports/winnt/ntpd/ntp_iocompletionport.c@1.57 +92 -53
+    Move blocking worker and intres from ntpd to libntp.
+    Get rid of accessor for WaitableExitEventHandle.
+    Use pthreads for blocking worker rather than fork, if possible.
+
+  ports/winnt/ntpd/ntservice.c@1.27 +11 -13
+    Get rid of accessor for WaitableExitEventHandle.
+
+  ports/winnt/vc6/libntp.dsp@1.59.1.1 +24 -0
+    Move blocking worker and intres from ntpd to libntp.
+    rename former ntp_intres.h to intreswork.h, move intres public
+      interface declarations from ntpd.h to new ntp_intres.h.
+
+  ports/winnt/vc6/ntpd.dsp@1.53 +0 -20
+    Move blocking worker and intres from ntpd to libntp.
+
+  ports/winnt/vs2003/libntp.vcproj@1.17.1.1 +18 -90
+    Move blocking worker and intres from ntpd to libntp.
+    rename former ntp_intres.h to intreswork.h, move intres public
+      interface declarations from ntpd.h to new ntp_intres.h.
+
+  ports/winnt/vs2003/ntpd.vcproj@1.14 +0 -32
+    Move blocking worker and intres from ntpd to libntp.
+
+  ports/winnt/vs2005/libntp.vcproj@1.15.1.1 +24 -1404
+    Move blocking worker and intres from ntpd to libntp.
+    rename former ntp_intres.h to intreswork.h, move intres public
+      interface declarations from ntpd.h to new ntp_intres.h.
+
+  ports/winnt/vs2005/ntpd.vcproj@1.14 +0 -34
+    Move blocking worker and intres from ntpd to libntp.
+
+  ports/winnt/vs2008/libntp/libntp.vcproj@1.36.1.1 +30 -2
+    Move blocking worker and intres from ntpd to libntp.
+    Rename former ntp_intres.h to intreswork.h, move intres public
+      interface declarations from ntpd.h to new ntp_intres.h.
+    Add lib/isc/win32/include/isc/mutex.h reference.
+
+  ports/winnt/vs2008/ntpd/ntpd.vcproj@1.38 +4 -1031
+    Move blocking worker and intres from ntpd to libntp.
+    Add refclock_wwv.c reference.
+
+  sntp/Makefile.am@1.53 +50 -16
+    Enable pthreads build.
+    Link against the smaller libevent_core.la which suits us since sntp
+      no longer uses evdns.
+    Use NTP_LIBEVENT m4sh macro to decide between installed and tearoff
+      libevent.
+
+  sntp/configure.ac@1.57 +12 -96
+    Split up ntp_lib.m4 into smaller, more specific subsets
+    Remove duplicate clock_gettime/clock_settime logic now in ntp_libntp.m4.
+    Bump config.cache version stamps to account for cache-incompatible change
+      to librt detection.
+    Use NTP_LIBEVENT m4sh macro to decide between installed and tearoff
+      libevent.
+    Move more m4 code needed by libntp to sntp/m4/*.m4 from top-level configure.ac
+
+  sntp/deps-ver@1.3 +1 -1
+    bump deps-ver to avoid build breaks from moved source files.
+
+  sntp/kod_management.c@1.26 +29 -15
+    Do not write_kod_db() work atexit in forked children.
+    Move "can't write KoD file" warning from sntp shutdown to startup.
+    Use pthreads for blocking worker rather than fork, if possible.
+    Add readonly arg to kod_init_kod_db() for tests
+
+  sntp/kod_management.h@1.10 +3 -2
+    Move "can't write KoD file" warning from sntp shutdown to startup.
+    Add readonly arg to kod_init_kod_db() for tests.
+
+  sntp/libevent/Makefile.am@1.2 +14 -6
+    make -lz depend on zlib.h
+    We always need the PTHREADS AM_CONDITIONAL.  Use the OL check.
+
+  sntp/libevent/WIN32-Code/event2/event-config.h@1.2 +2 -2
+    libevent upgrade
+
+  sntp/libevent/arc4random.c@1.2 +5 -1
+    update from upstream
+
+  sntp/libevent/configure.in@1.2 +137 -33
+    Attempt typical subpackage approach for libevent
+    IPv6 hackery
+    Update from upstream.
+    make -lz depend on zlib.h
+    Allow libevent's regress to be skipped in make check.
+    Detect gcc (ld) support for --gc-sections and use it if available along
+      with --fdata-sections and -ffunction-sections to omit unused code and
+      data.
+    Add openldap thread check, remove ACX_PTHREAD
+    upstream patch to quiet autoreconf warnings
+      http://levent.git.sourceforge.net/git/gitweb.cgi?p=levent/libevent;a=commit;h=f663112fa238a3f5a1bdfddfd26c17e625e182df
+    We always need the PTHREADS AM_CONDITIONAL.  Use the OL check.
+
+  sntp/libevent/evdns.c@1.2 +4 -0
+    libevent upgrade
+
+  sntp/libevent/evport.c@1.2 +6 -0
+    libevent upgrade
+
+  sntp/libevent/evthread_pthread.c@1.2 +13 -1
+    Work with very first draft posix M:N threads on HP-UX 10.20
+
+  sntp/libevent/evutil.c@1.2 +44 -3
+    IPv6 hackery.
+    libevent upgrade.
+
+  sntp/libevent/http.c@1.2 +47 -6
+    libevent upgrade.
+
+  sntp/libevent/ipv6-internal.h@1.2 +9 -0
+    libevent upgrade
+
+  sntp/libevent/m4/LICENSE-OPENLDAP@1.1 +47 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent-subpkg/sntp/m4/LICENSE-OPENLDAP
+
+  sntp/libevent/m4/LICENSE-OPENLDAP@1.0 +0 -0
+
+  sntp/libevent/m4/openldap-thread-check.m4@1.1 +681 -0
+    AC_LANG update for openldap autoconf macros
+    Clean up AC_DEFINE and AC_DEFINE_UNQUOTED arg quoting.
+    preset ol_with_yielding_select=${ol_with_yielding_select-auto}
+    Also change tests to use x prefix as insurance against other issues.
+    Move PTHREAD_LIBS AC_SUBST to ntp_libntp.m4
+
+  sntp/libevent/m4/openldap-thread-check.m4@1.0 +0 -0
+
+  sntp/libevent/m4/openldap.m4@1.1 +1131 -0
+    AC_LANG_SOURCE: unknown language: _AC_LANG on 588
+    Clean up AC_DEFINE and AC_DEFINE_UNQUOTED arg quoting.
+
+  sntp/libevent/m4/openldap.m4@1.0 +0 -0
+
+  sntp/libevent/sample/Makefile.am@1.2 +1 -1
+    Detect gcc (ld) support for --gc-sections and use it if available along
+      with --fdata-sections and -ffunction-sections to omit unused code and
+      data.
+
+  sntp/libevent/sample/dns-example.c@1.2 +2 -0
+    libevent upgrade
+
+  sntp/libevent/sample/hello-world.c@1.2 +3 -0
+    hp-ux portability fix.
+
+  sntp/libevent/sample/http-server.c@1.2 +7 -0
+    libevent upgrade
+    portability
+
+  sntp/libevent/select.c@1.2 +27 -9
+    libevent upgrade
+
+  sntp/libevent/test/Makefile.am@1.2 +13 -8
+    Allow libevent's regress to be skipped in make check.
+    Detect gcc (ld) support for --gc-sections and use it if available along
+      with --fdata-sections and -ffunction-sections to omit unused code and
+      data.
+
+  sntp/libevent/test/bench_httpclient.c@1.2 +3 -0
+    portability
+
+  sntp/libevent/test/regress_dns.c@1.2 +2 -0
+    cleanup
+
+  sntp/libevent/test/regress_http.c@1.2 +5 -21
+    libevent upgrade
+
+  sntp/libevent/test/regress_listener.c@1.2 +3 -0
+    cleanup
+
+  sntp/libevent/test/regress_testutils.c@1.2 +2 -0
+    libevent upgrade
+    
+
+  sntp/libevent/test/test-eof.c@1.2 +9 -3
+    Add a timeout for test-eof.c as it may hang under HP-UX 10.20.
+    
+
+  sntp/libevent/test/test-ratelim.c@1.2 +5 -0
+    cleanup
+
+  sntp/libevent/test/test.sh@1.2 +10 -4
+    Allow libevent's regress to be skipped in make check.
+
+  sntp/libevent/util-internal.h@1.2 +23 -2
+    update
+    ---
+    libevent upgrade
+
+  sntp/log.c@1.20 +6 -10
+    Rename init_logging() to sntp_init_logging() to avoid libntp conflict.
+    Use msyslog common code relocated from ntpd.
+
+  sntp/log.h@1.11 +3 -1
+    Rename init_logging() to sntp_init_logging() to avoid libntp conflict.
+    Use msyslog common code relocated from ntpd.
+    Declare extern char *progname.
+
+  sntp/m4/ntp_bindir.m4@1.1 +31 -0
+    Split up ntp_lib.m4 into smaller, more specific subsets.
+
+  sntp/m4/ntp_bindir.m4@1.0 +0 -0
+
+  sntp/m4/ntp_cacheversion.m4@1.12 +11 -9
+    Attempt to make better use of header comment space.
+
+  sntp/m4/ntp_compiler.m4@1.1 +124 -0
+    Split up ntp_lib.m4 into smaller, more specific subsets.
+    Omit unused code with gcc and gnu LD of recent vintage.
+    Ask autoconf for c89 only, AC_PROG_CC_STDC now means c99.
+
+  sntp/m4/ntp_compiler.m4@1.0 +0 -0
+
+  sntp/m4/ntp_crosscompile.m4@1.1 +8 -0
+    Split up ntp_lib.m4 into smaller, more specific subsets.
+
+  sntp/m4/ntp_crosscompile.m4@1.0 +0 -0
+
+  sntp/m4/ntp_debug.m4@1.1 +22 -0
+    Split up ntp_lib.m4 into smaller, more specific subsets.
+
+  sntp/m4/ntp_debug.m4@1.0 +0 -0
+
+  sntp/m4/ntp_ipv6.m4@1.2 +127 -112
+    Strip unneeded checks from ntp_ipv6.m4:
+      for struct sockaddr_storage member ss_family
+      for struct sockaddr_storage member ss_len
+      for struct sockaddr_storage member __ss_len
+    Move things used by libntp from top-level configure.ac to NTP_IPV6
+
+  sntp/m4/ntp_libevent.m4@1.3 +82 -35
+    Use NTP_LIBEVENT m4sh macro to decide between installed and tearoff
+      libevent.
+    Remove contentious libevent-cfg sentinel files, modify libevent's
+      confgure args via $ac_configure_args.
+
+  sntp/m4/ntp_libntp.m4@1.4 +753 -156
+    Split up ntp_lib.m4 into smaller, more specific subsets.
+    Move AC_FUNC_FORK and AC_FUNC_ALLOCA to ntp_libntp.m4 along with move
+      of intres/blocking worker to libntp.
+    Move droproot configure test to libntp with intres.
+    Enable pthreads build.
+    crib some pthread m4 from BIND for libisc
+    move clock_gettime/clock_settime earlier within NTP_LIBNTP
+    check for socketpair()
+    Move more m4 code needed by libntp to sntp/m4/*.m4 from top-level configure.ac
+
+  sntp/m4/ntp_sntp.m4@1.1 +29 -0
+    Split up ntp_lib.m4 into smaller, more specific subsets.
+
+  sntp/m4/ntp_sntp.m4@1.0 +0 -0
+
+  sntp/main.c@1.68 +820 -313
+    Use {step,adj}_systime from libntp.  Use EX_* codes for exit status.
+    Switch sntp from evdns to blocking worker intres.
+    Make delay between queries to addresses resolved from same hostname
+      per-family in sntp, as ntpd won't consider our v4 and v6 source
+      addresses to be one remote rate-limit target.
+    use ntpOptionProcess() to get verbose --version output.
+    Use libevent log callback to redirect messages from stderr to msyslog()
+    enable libevent debug mode if sntp debug > 0
+    Issue a single read event for each socket, rather than one per query.
+    Do not attempt to read in socket callback for EV_TIMEOUT.
+    Be conservative in KoD response claim
+    Fix step/slew logic in sntp
+    sntp --headroom option (default 10ms) spaces queries.
+    Provide less-broken gettimeofday_cached()
+    Add support for --(no-)wait and -uctimeout
+    remove duplicate progname declaration (log.c has it).
+    add readonly arg to kod_init_kod_db() for tests
+    Use socketpair() instead of pipe() when available, as avoiding
+      EV_FEATURE_FDS allows libevent to use a faster backend on
+      systems like Linux without an O(1) backend that handles pipes.
+
+  sntp/main.h@1.6 +18 -16
+    Switch sntp from evdns to blocking worker intres.
+    More -Wcast-align warnings workarounds.
+
+  sntp/networking.c@1.57 +36 -51
+    Authentication and debug cleanup.
+    remove recvpkt(), its two parts now done separately in sock_cb()
+    Quiet -Wcast-align warnings.
+
+  sntp/networking.h@1.25 +7 -8
+    Quiet -Wcast-align warnings.
+
+  sntp/sntp-opts.c@1.124 +499 -145
+    generated file updates from sntp def file changes
+
+  sntp/sntp-opts.def@1.25 +51 -11
+    generated file updates from sntp def file changes
+
+  sntp/sntp-opts.h@1.124 +135 -68
+    generated file updates from sntp def file changes
+
+  sntp/sntp-opts.texi@1.124 +168 -88
+    generated file updates from sntp def file changes
+
+  sntp/sntp.1@1.124 +135 -60
+    generated file updates from sntp def file changes
+
+  sntp/sntp.html@1.124 +95 -30
+    generated file updates from sntp def file changes
+
+  sntp/tests/Makefile.am@1.20 +54 -45
+    Enable pthreads build.
+    Link against the smaller libevent_core.la which suits us since sntp
+      no longer uses evdns.
+    Use NTP_LIBEVENT m4sh macro to decide between installed and tearoff
+      libevent.
+    Pick up -lresolv from @LDADD_LIBNTP@,
+
+  sntp/tests/kodDatabase.cpp@1.3 +1 -1
+    Add readonly arg to kod_init_kod_db() for tests.
+
+  sntp/tests/kodFile.cpp@1.8 +3 -11
+    Add readonly arg to kod_init_kod_db() for tests -- prevents editing
+      test baseline input KoD files during make check.
+
+  sntp/tests/nameresolution.cpp@1.1 +171 -0
+    Move name resolution unit test code to nameresolution.cpp.
+
+  sntp/tests/nameresolution.cpp@1.0 +0 -0
+
+  sntp/tests/networking.cpp@1.8 +0 -166
+    Move name resolution unit test code to nameresolution.cpp.
+
+  sntp/tests/packetHandling.cpp@1.7 +58 -46
+    Change handle_pkt() args to include hostname.
+    Add readonly arg to kod_init_kod_db() for tests.
+
+  sntp/utilities.c@1.16 +5 -5
+    const-ify addrinfo_to_str()
+
+  sntp/utilities.h@1.10 +1 -1
+    const-ify addrinfo_to_str()
+
+  tests/libntp/Makefile.am@1.30.1.1 +8 -6
+    Enable pthreads build.
+
+  tests/libntp/clocktime.cpp@1.4 +19 -7
+    Reduce runtime of AlwaysInLimit by an order of magnitude.
+
+  util/Makefile.am@1.56 +9 -7
+    Enable pthreads build.
+    correct cut-n-paste reference to ntpq_OBJECTS, make $(PROGRAMS) depend
+      on version.o.
+
+  util/ntp-keygen.c@1.77 +0 -1
+    JAN_1970 definition provided by ntp_unixtime.h now
+
+ChangeSet@1.2422.1.60, 2011-02-12 11:07:51+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P130
   TAG: NTP_4_2_7P130
 
-  ChangeLog@1.804 +1 -0
+  ChangeLog@1.784.1.20 +1 -0
     NTP_4_2_7P130
 
   clockstuff/clktest-opts.c@1.54 +2 -2
@@ -62,19 +1205,19 @@ ChangeSet@1.2482, 2011-02-12 11:07:51+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.132 +1 -1
     NTP_4_2_7P130
 
-  sntp/sntp-opts.c@1.131 +2 -2
+  sntp/sntp-opts.c@1.115.1.16 +2 -2
     NTP_4_2_7P130
 
-  sntp/sntp-opts.h@1.131 +3 -3
+  sntp/sntp-opts.h@1.115.1.16 +3 -3
     NTP_4_2_7P130
 
-  sntp/sntp-opts.texi@1.131 +2 -2
+  sntp/sntp-opts.texi@1.115.1.16 +2 -2
     NTP_4_2_7P130
 
-  sntp/sntp.1@1.131 +2 -2
+  sntp/sntp.1@1.115.1.16 +2 -2
     NTP_4_2_7P130
 
-  sntp/sntp.html@1.131 +1 -1
+  sntp/sntp.html@1.115.1.16 +1 -1
     NTP_4_2_7P130
 
   util/ntp-keygen-opts.c@1.129 +2 -2
@@ -89,20 +1232,20 @@ ChangeSet@1.2482, 2011-02-12 11:07:51+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.132 +2 -2
     NTP_4_2_7P130
 
-ChangeSet@1.2481, 2011-02-11 07:26:12-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2422.1.59, 2011-02-11 07:26:12-05:00, stenn@deacon.udel.edu
   [Bug 1811] Update the download location in WHERE-TO-START
 
-  ChangeLog@1.803 +1 -0
+  ChangeLog@1.784.1.19 +1 -0
     [Bug 1811] Update the download location in WHERE-TO-START
 
   WHERE-TO-START@1.9 +2 -1
     [Bug 1811] Update the download location in WHERE-TO-START
 
-ChangeSet@1.2480, 2011-02-09 08:55:18+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2422.1.58, 2011-02-09 08:55:18+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P129
   TAG: NTP_4_2_7P129
 
-  ChangeLog@1.802 +1 -0
+  ChangeLog@1.784.1.18 +1 -0
     NTP_4_2_7P129
 
   clockstuff/clktest-opts.c@1.53 +2 -2
@@ -162,19 +1305,19 @@ ChangeSet@1.2480, 2011-02-09 08:55:18+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.131 +1 -1
     NTP_4_2_7P129
 
-  sntp/sntp-opts.c@1.130 +2 -2
+  sntp/sntp-opts.c@1.115.1.15 +2 -2
     NTP_4_2_7P129
 
-  sntp/sntp-opts.h@1.130 +3 -3
+  sntp/sntp-opts.h@1.115.1.15 +3 -3
     NTP_4_2_7P129
 
-  sntp/sntp-opts.texi@1.130 +2 -2
+  sntp/sntp-opts.texi@1.115.1.15 +2 -2
     NTP_4_2_7P129
 
-  sntp/sntp.1@1.130 +2 -2
+  sntp/sntp.1@1.115.1.15 +2 -2
     NTP_4_2_7P129
 
-  sntp/sntp.html@1.130 +1 -1
+  sntp/sntp.html@1.115.1.15 +1 -1
     NTP_4_2_7P129
 
   util/ntp-keygen-opts.c@1.128 +2 -2
@@ -189,12 +1332,12 @@ ChangeSet@1.2480, 2011-02-09 08:55:18+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.131 +2 -2
     NTP_4_2_7P129
 
-ChangeSet@1.2479, 2011-02-09 07:14:49+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2422.1.57, 2011-02-09 07:14:49+00:00, davehart@shiny.ad.hartbrothers.com
   Add missing "break;" to ntp_control.c ctl_putsys() for caliberrs, used
     by ntpq -c kerninfo introduced in 4.2.7p104.
   Fix leak in ntp_control.c read_mru_list().
 
-  ChangeLog@1.801 +3 -0
+  ChangeLog@1.784.1.17 +3 -0
     Add missing "break;" to ntp_control.c ctl_putsys() for caliberrs, used
       by ntpq -c kerninfo introduced in 4.2.7p104.
     Fix leak in ntp_control.c read_mru_list().
@@ -211,17 +1354,17 @@ ChangeSet@1.2479, 2011-02-09 07:14:49+00:00, davehart@shiny.ad.hartbrothers.com
       by ntpq -c kerninfo introduced in 4.2.7p104.
     
 
-  ntpd/ntp_io.c@1.347 +5 -0
+  ntpd/ntp_io.c@1.346.1.1 +5 -0
     Do not attempt setsockopt() for unopened -1 descriptors.
 
   ntpd/ntp_monitor.c@1.38 +4 -2
     Add debug-only assertion of non-NULL argument to mon_reclaim_entry().
 
-ChangeSet@1.2478, 2011-01-30 11:40:47+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2422.1.56, 2011-01-30 11:40:47+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P128
   TAG: NTP_4_2_7P128
 
-  ChangeLog@1.800 +1 -0
+  ChangeLog@1.784.1.16 +1 -0
     NTP_4_2_7P128
 
   clockstuff/clktest-opts.c@1.52 +2 -2
@@ -281,19 +1424,19 @@ ChangeSet@1.2478, 2011-01-30 11:40:47+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.130 +1 -1
     NTP_4_2_7P128
 
-  sntp/sntp-opts.c@1.129 +2 -2
+  sntp/sntp-opts.c@1.115.1.14 +2 -2
     NTP_4_2_7P128
 
-  sntp/sntp-opts.h@1.129 +3 -3
+  sntp/sntp-opts.h@1.115.1.14 +3 -3
     NTP_4_2_7P128
 
-  sntp/sntp-opts.texi@1.129 +2 -2
+  sntp/sntp-opts.texi@1.115.1.14 +2 -2
     NTP_4_2_7P128
 
-  sntp/sntp.1@1.129 +2 -2
+  sntp/sntp.1@1.115.1.14 +2 -2
     NTP_4_2_7P128
 
-  sntp/sntp.html@1.129 +1 -1
+  sntp/sntp.html@1.115.1.14 +1 -1
     NTP_4_2_7P128
 
   util/ntp-keygen-opts.c@1.127 +2 -2
@@ -308,11 +1451,11 @@ ChangeSet@1.2478, 2011-01-30 11:40:47+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.130 +2 -2
     NTP_4_2_7P128
 
-ChangeSet@1.2477, 2011-01-29 23:06:16+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2422.1.55, 2011-01-29 23:06:16+00:00, davehart@shiny.ad.hartbrothers.com
   * [Bug 1799] ntpq mrv crash.
   * [Bug 1801] ntpq mreadvar requires prior association caching.
 
-  ChangeLog@1.799 +3 -1
+  ChangeLog@1.784.1.15 +3 -1
     * [Bug 1799] ntpq mrv crash.
     * [Bug 1801] ntpq mreadvar requires prior association caching.
     Correct p126 ChangeLog entry to refer to format_time_fraction().
@@ -321,11 +1464,11 @@ ChangeSet@1.2477, 2011-01-29 23:06:16+00:00, davehart@shiny.ad.hartbrothers.com
     * [Bug 1799] ntpq mrv crash.
     * [Bug 1801] ntpq mreadvar requires prior association caching.
 
-ChangeSet@1.2476, 2011-01-28 06:31:33+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2422.1.54, 2011-01-28 06:31:33+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P127
   TAG: NTP_4_2_7P127
 
-  ChangeLog@1.798 +1 -0
+  ChangeLog@1.784.1.14 +1 -0
     NTP_4_2_7P127
 
   clockstuff/clktest-opts.c@1.51 +2 -2
@@ -385,19 +1528,19 @@ ChangeSet@1.2476, 2011-01-28 06:31:33+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.129 +1 -1
     NTP_4_2_7P127
 
-  sntp/sntp-opts.c@1.128 +2 -2
+  sntp/sntp-opts.c@1.115.1.13 +2 -2
     NTP_4_2_7P127
 
-  sntp/sntp-opts.h@1.128 +3 -3
+  sntp/sntp-opts.h@1.115.1.13 +3 -3
     NTP_4_2_7P127
 
-  sntp/sntp-opts.texi@1.128 +2 -2
+  sntp/sntp-opts.texi@1.115.1.13 +2 -2
     NTP_4_2_7P127
 
-  sntp/sntp.1@1.128 +2 -2
+  sntp/sntp.1@1.115.1.13 +2 -2
     NTP_4_2_7P127
 
-  sntp/sntp.html@1.128 +1 -1
+  sntp/sntp.html@1.115.1.13 +1 -1
     NTP_4_2_7P127
 
   util/ntp-keygen-opts.c@1.126 +2 -2
@@ -412,20 +1555,20 @@ ChangeSet@1.2476, 2011-01-28 06:31:33+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.129 +2 -2
     NTP_4_2_7P127
 
-ChangeSet@1.2475, 2011-01-28 01:07:13-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2422.1.53, 2011-01-28 01:07:13-05:00, stenn@deacon.udel.edu
   [Bug 1797] Restore stale timestamp check from the RANGEGATE cleanup
 
-  ChangeLog@1.797 +1 -0
+  ChangeLog@1.784.1.13 +1 -0
     [Bug 1797] Restore stale timestamp check from the RANGEGATE cleanup
 
   ntpd/ntp_refclock.c@1.103 +3 -0
     [Bug 1797] Restore stale timestamp check from the RANGEGATE cleanup
 
-ChangeSet@1.2474, 2011-01-27 10:28:37+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2422.1.52, 2011-01-27 10:28:37+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P126
   TAG: NTP_4_2_7P126
 
-  ChangeLog@1.796 +1 -0
+  ChangeLog@1.784.1.12 +1 -0
     NTP_4_2_7P126
 
   clockstuff/clktest-opts.c@1.50 +2 -2
@@ -485,19 +1628,19 @@ ChangeSet@1.2474, 2011-01-27 10:28:37+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.128 +1 -1
     NTP_4_2_7P126
 
-  sntp/sntp-opts.c@1.127 +2 -2
+  sntp/sntp-opts.c@1.115.1.12 +2 -2
     NTP_4_2_7P126
 
-  sntp/sntp-opts.h@1.127 +3 -3
+  sntp/sntp-opts.h@1.115.1.12 +3 -3
     NTP_4_2_7P126
 
-  sntp/sntp-opts.texi@1.127 +2 -2
+  sntp/sntp-opts.texi@1.115.1.12 +2 -2
     NTP_4_2_7P126
 
-  sntp/sntp.1@1.127 +2 -2
+  sntp/sntp.1@1.115.1.12 +2 -2
     NTP_4_2_7P126
 
-  sntp/sntp.html@1.127 +1 -1
+  sntp/sntp.html@1.115.1.12 +1 -1
     NTP_4_2_7P126
 
   util/ntp-keygen-opts.c@1.125 +2 -2
@@ -512,13 +1655,13 @@ ChangeSet@1.2474, 2011-01-27 10:28:37+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.128 +2 -2
     NTP_4_2_7P126
 
-ChangeSet@1.2473, 2011-01-27 01:38:59-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2422.1.51, 2011-01-27 01:38:59-05:00, stenn@deacon.udel.edu
   Add entries for updates from Dave Hart
 
-  ChangeLog@1.795 +2 -0
+  ChangeLog@1.784.1.11 +2 -0
     Add entries for updates from Dave Hart
 
-ChangeSet@1.2470.1.3, 2011-01-26 19:39:27+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2422.9.3, 2011-01-26 19:39:27+00:00, davehart@shiny.ad.hartbrothers.com
   silence signed overflow warning
   mark isc_assertioncallback_t __attribute((__noreturn__))
 
@@ -538,7 +1681,7 @@ ChangeSet@1.2470.1.3, 2011-01-26 19:39:27+00:00, davehart@shiny.ad.hartbrothers.
   ntpd/ntpd.c@1.122 +2 -1
     mark assertion_failed() __attribute__ ((__noreturn__))
 
-ChangeSet@1.2470.1.2, 2011-01-26 17:03:48+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2422.9.2, 2011-01-26 17:03:48+00:00, davehart@shiny.ad.hartbrothers.com
   Rename tests/libntp/t{val|spec}ops.cpp to time{val|spec}ops.cpp so
     base filename matches tested source file, as with others.
 
@@ -552,7 +1695,7 @@ ChangeSet@1.2470.1.2, 2011-01-26 17:03:48+00:00, davehart@shiny.ad.hartbrothers.
   tests/libntp/timevalops.cpp@1.6 +0 -0
     Rename: tests/libntp/tvalops.cpp -> tests/libntp/timevalops.cpp
 
-ChangeSet@1.2470.1.1, 2011-01-26 16:50:03+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2422.9.1, 2011-01-26 16:50:03+00:00, davehart@shiny.ad.hartbrothers.com
   Fix off-by-one bug in format_time_fraction() introduced by hart@ntp.org.
   Remove abs(prec) <= 9 requirement from format_time_fraction().
   Add more time{spec|val}_tostr() tests.
@@ -572,11 +1715,11 @@ ChangeSet@1.2470.1.1, 2011-01-26 16:50:03+00:00, davehart@shiny.ad.hartbrothers.
   tests/libntp/tvalops.cpp@1.5 +3 -1
     add more timeval_tostr() tests
 
-ChangeSet@1.2471, 2011-01-26 10:31:57+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2422.1.49, 2011-01-26 10:31:57+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P125
   TAG: NTP_4_2_7P125
 
-  ChangeLog@1.794 +1 -0
+  ChangeLog@1.784.1.10 +1 -0
     NTP_4_2_7P125
 
   clockstuff/clktest-opts.c@1.49 +2 -2
@@ -636,19 +1779,19 @@ ChangeSet@1.2471, 2011-01-26 10:31:57+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.127 +1 -1
     NTP_4_2_7P125
 
-  sntp/sntp-opts.c@1.126 +2 -2
+  sntp/sntp-opts.c@1.115.1.11 +2 -2
     NTP_4_2_7P125
 
-  sntp/sntp-opts.h@1.126 +3 -3
+  sntp/sntp-opts.h@1.115.1.11 +3 -3
     NTP_4_2_7P125
 
-  sntp/sntp-opts.texi@1.126 +2 -2
+  sntp/sntp-opts.texi@1.115.1.11 +2 -2
     NTP_4_2_7P125
 
-  sntp/sntp.1@1.126 +2 -2
+  sntp/sntp.1@1.115.1.11 +2 -2
     NTP_4_2_7P125
 
-  sntp/sntp.html@1.126 +1 -1
+  sntp/sntp.html@1.115.1.11 +1 -1
     NTP_4_2_7P125
 
   util/ntp-keygen-opts.c@1.124 +2 -2
@@ -663,7 +1806,7 @@ ChangeSet@1.2471, 2011-01-26 10:31:57+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.127 +2 -2
     NTP_4_2_7P125
 
-ChangeSet@1.2468.1.3, 2011-01-26 03:07:53+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2422.8.3, 2011-01-26 03:07:53+00:00, davehart@shiny.ad.hartbrothers.com
   Add new files to Windows build.
   Fix make distcheck by distributing include/timetoa.h and
     tests/libntp/timestructs.h
@@ -692,13 +1835,13 @@ ChangeSet@1.2468.1.3, 2011-01-26 03:07:53+00:00, davehart@shiny.ad.hartbrothers.
   tests/libntp/Makefile.am@1.32 +5 -2
     distribute tests/libntp/timestructs.h
 
-ChangeSet@1.2468.1.2, 2011-01-25 22:04:11+01:00, jnperlin@hydra.localnet
+ChangeSet@1.2422.8.2, 2011-01-25 22:04:11+01:00, jnperlin@hydra.localnet
   fixed cut&paste error in tests/libntp/tvalops.cpp
 
   tests/libntp/tvalops.cpp@1.4 +1 -1
     fixed cut&paste error
 
-ChangeSet@1.2464.1.1, 2011-01-25 21:08:29+01:00, jnperlin@hydra.localnet
+ChangeSet@1.2422.7.1, 2011-01-25 21:08:29+01:00, jnperlin@hydra.localnet
   Refactoring of struct timeval string conversion, extended regression tests for struct timeval processing
 
   include/timespecops.h@1.4 +1 -1
@@ -742,7 +1885,7 @@ ChangeSet@1.2464.1.1, 2011-01-25 21:08:29+01:00, jnperlin@hydra.localnet
     added some roundtrip tests;
     
 
-ChangeSet@1.2469, 2011-01-25 19:25:52+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2422.1.47, 2011-01-25 19:25:52+00:00, davehart@shiny.ad.hartbrothers.com
   [Bug 1794] ntpq -c rv missing clk_wander information.
   [Bug 1795] ntpq readvar does not display last variable.
   bk rm libntp/tvtoa.c libntp/utvtoa.c
@@ -755,7 +1898,7 @@ ChangeSet@1.2469, 2011-01-25 19:25:52+00:00, davehart@shiny.ad.hartbrothers.com
   BitKeeper/deleted/ee/utvtoa.c~3aed0663@1.5 +0 -0
     Delete: libntp/utvtoa.c
 
-  ChangeLog@1.793 +2 -0
+  ChangeLog@1.784.1.9 +2 -0
     [Bug 1794] ntpq -c rv missing clk_wander information.
     [Bug 1795] ntpq readvar does not display last variable.
     
@@ -768,11 +1911,11 @@ ChangeSet@1.2469, 2011-01-25 19:25:52+00:00, davehart@shiny.ad.hartbrothers.com
     [Bug 1795] ntpq readvar does not display last variable.
     
 
-ChangeSet@1.2468, 2011-01-25 11:16:51+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2422.1.46, 2011-01-25 11:16:51+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P124
   TAG: NTP_4_2_7P124
 
-  ChangeLog@1.792 +1 -0
+  ChangeLog@1.784.1.8 +1 -0
     NTP_4_2_7P124
 
   clockstuff/clktest-opts.c@1.48 +2 -2
@@ -832,19 +1975,19 @@ ChangeSet@1.2468, 2011-01-25 11:16:51+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.126 +1 -1
     NTP_4_2_7P124
 
-  sntp/sntp-opts.c@1.125 +2 -2
+  sntp/sntp-opts.c@1.115.1.10 +2 -2
     NTP_4_2_7P124
 
-  sntp/sntp-opts.h@1.125 +3 -3
+  sntp/sntp-opts.h@1.115.1.10 +3 -3
     NTP_4_2_7P124
 
-  sntp/sntp-opts.texi@1.125 +2 -2
+  sntp/sntp-opts.texi@1.115.1.10 +2 -2
     NTP_4_2_7P124
 
-  sntp/sntp.1@1.125 +2 -2
+  sntp/sntp.1@1.115.1.10 +2 -2
     NTP_4_2_7P124
 
-  sntp/sntp.html@1.125 +1 -1
+  sntp/sntp.html@1.115.1.10 +1 -1
     NTP_4_2_7P124
 
   util/ntp-keygen-opts.c@1.123 +2 -2
@@ -859,26 +2002,26 @@ ChangeSet@1.2468, 2011-01-25 11:16:51+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.126 +2 -2
     NTP_4_2_7P124
 
-ChangeSet@1.2467, 2011-01-24 22:35:18-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2422.1.45, 2011-01-24 22:35:18-05:00, stenn@deacon.udel.edu
   On second thought...
 
-  sntp/Makefile.am@1.55 +1 -1
+  sntp/Makefile.am@1.47.1.8 +1 -1
     On second thought...
 
-ChangeSet@1.2466, 2011-01-24 22:05:31-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2422.1.44, 2011-01-24 22:05:31-05:00, stenn@deacon.udel.edu
   sntp/Makefile.am needs any passed-in CFLAGS.
 
-  ChangeLog@1.791 +1 -0
+  ChangeLog@1.784.1.7 +1 -0
     sntp/Makefile.am needs any passed-in CFLAGS.
 
-  sntp/Makefile.am@1.54 +1 -1
+  sntp/Makefile.am@1.47.1.7 +1 -1
     sntp/Makefile.am needs any passed-in CFLAGS.
 
-ChangeSet@1.2465, 2011-01-24 11:19:17+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2422.1.43, 2011-01-24 11:19:17+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P123
   TAG: NTP_4_2_7P123
 
-  ChangeLog@1.790 +1 -0
+  ChangeLog@1.784.1.6 +1 -0
     NTP_4_2_7P123
 
   clockstuff/clktest-opts.c@1.47 +2 -2
@@ -938,19 +2081,19 @@ ChangeSet@1.2465, 2011-01-24 11:19:17+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.125 +1 -1
     NTP_4_2_7P123
 
-  sntp/sntp-opts.c@1.124 +2 -2
+  sntp/sntp-opts.c@1.115.1.9 +2 -2
     NTP_4_2_7P123
 
-  sntp/sntp-opts.h@1.124 +3 -3
+  sntp/sntp-opts.h@1.115.1.9 +3 -3
     NTP_4_2_7P123
 
-  sntp/sntp-opts.texi@1.124 +2 -2
+  sntp/sntp-opts.texi@1.115.1.9 +2 -2
     NTP_4_2_7P123
 
-  sntp/sntp.1@1.124 +2 -2
+  sntp/sntp.1@1.115.1.9 +2 -2
     NTP_4_2_7P123
 
-  sntp/sntp.html@1.124 +1 -1
+  sntp/sntp.html@1.115.1.9 +1 -1
     NTP_4_2_7P123
 
   util/ntp-keygen-opts.c@1.122 +2 -2
@@ -965,10 +2108,10 @@ ChangeSet@1.2465, 2011-01-24 11:19:17+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.125 +2 -2
     NTP_4_2_7P123
 
-ChangeSet@1.2464, 2011-01-23 12:08:42+01:00, jnperlin@hydra.localnet
+ChangeSet@1.2422.1.42, 2011-01-23 12:08:42+01:00, jnperlin@hydra.localnet
   [Bug 1788] tables in libntp/tvtots.c imprecise
 
-  ChangeLog@1.789 +1 -0
+  ChangeLog@1.784.1.5 +1 -0
     [Bug 1788] tables in libntp/tvtots.c imprecise; tables used long/u_long values instead of 'const u_int32'
 
   clockstuff/chutest.c@1.5 +0 -12
@@ -992,11 +2135,11 @@ ChangeSet@1.2464, 2011-01-23 12:08:42+01:00, jnperlin@hydra.localnet
   libparse/parse.c@1.14 +0 -4
     removed unused declarations of conversion timestamp conversion tables
 
-ChangeSet@1.2463, 2011-01-22 11:28:33+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2422.1.41, 2011-01-22 11:28:33+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P122
   TAG: NTP_4_2_7P122
 
-  ChangeLog@1.788 +1 -0
+  ChangeLog@1.784.1.4 +1 -0
     NTP_4_2_7P122
 
   clockstuff/clktest-opts.c@1.46 +2 -2
@@ -1056,19 +2199,19 @@ ChangeSet@1.2463, 2011-01-22 11:28:33+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.124 +1 -1
     NTP_4_2_7P122
 
-  sntp/sntp-opts.c@1.123 +2 -2
+  sntp/sntp-opts.c@1.115.1.8 +2 -2
     NTP_4_2_7P122
 
-  sntp/sntp-opts.h@1.123 +3 -3
+  sntp/sntp-opts.h@1.115.1.8 +3 -3
     NTP_4_2_7P122
 
-  sntp/sntp-opts.texi@1.123 +2 -2
+  sntp/sntp-opts.texi@1.115.1.8 +2 -2
     NTP_4_2_7P122
 
-  sntp/sntp.1@1.123 +2 -2
+  sntp/sntp.1@1.115.1.8 +2 -2
     NTP_4_2_7P122
 
-  sntp/sntp.html@1.123 +1 -1
+  sntp/sntp.html@1.115.1.8 +1 -1
     NTP_4_2_7P122
 
   util/ntp-keygen-opts.c@1.121 +2 -2
@@ -1083,29 +2226,29 @@ ChangeSet@1.2463, 2011-01-22 11:28:33+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.124 +2 -2
     NTP_4_2_7P122
 
-ChangeSet@1.2462, 2011-01-22 01:22:35-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2422.1.40, 2011-01-22 01:22:35-05:00, stenn@deacon.udel.edu
   ACTS refclock cleanup from Dave Mills
 
-  ChangeLog@1.787 +1 -0
+  ChangeLog@1.784.1.3 +1 -0
     ACTS refclock cleanup from Dave Mills
 
   ntpd/refclock_acts.c@1.46 +8 -17
     ACTS refclock cleanup from Dave Mills
 
-ChangeSet@1.2461, 2011-01-22 01:16:02-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2422.1.39, 2011-01-22 01:16:02-05:00, stenn@deacon.udel.edu
   Avoid shadowing the "group" global variable
 
-  ChangeLog@1.786 +1 -0
+  ChangeLog@1.784.1.2 +1 -0
     Avoid shadowing the "group" global variable
 
   ntpd/ntp_proto.c@1.318 +8 -8
     Avoid shadowing the "group" global variable
 
-ChangeSet@1.2460, 2011-01-21 11:15:05+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2422.1.38, 2011-01-21 11:15:05+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P121
   TAG: NTP_4_2_7P121
 
-  ChangeLog@1.785 +1 -0
+  ChangeLog@1.784.1.1 +1 -0
     NTP_4_2_7P121
 
   clockstuff/clktest-opts.c@1.45 +2 -2
@@ -1165,19 +2308,19 @@ ChangeSet@1.2460, 2011-01-21 11:15:05+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.123 +1 -1
     NTP_4_2_7P121
 
-  sntp/sntp-opts.c@1.122 +2 -2
+  sntp/sntp-opts.c@1.115.1.7 +2 -2
     NTP_4_2_7P121
 
-  sntp/sntp-opts.h@1.122 +3 -3
+  sntp/sntp-opts.h@1.115.1.7 +3 -3
     NTP_4_2_7P121
 
-  sntp/sntp-opts.texi@1.122 +2 -2
+  sntp/sntp-opts.texi@1.115.1.7 +2 -2
     NTP_4_2_7P121
 
-  sntp/sntp.1@1.122 +2 -2
+  sntp/sntp.1@1.115.1.7 +2 -2
     NTP_4_2_7P121
 
-  sntp/sntp.html@1.122 +1 -1
+  sntp/sntp.html@1.115.1.7 +1 -1
     NTP_4_2_7P121
 
   util/ntp-keygen-opts.c@1.120 +2 -2
@@ -1192,7 +2335,7 @@ ChangeSet@1.2460, 2011-01-21 11:15:05+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.123 +2 -2
     NTP_4_2_7P121
 
-ChangeSet@1.2459, 2011-01-21 01:36:18-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2422.1.37, 2011-01-21 01:36:18-05:00, stenn@deacon.udel.edu
   [Bug 1786] Remove extra semicolon from ntp_proto.c
 
   ChangeLog@1.784 +1 -0
@@ -1201,7 +2344,7 @@ ChangeSet@1.2459, 2011-01-21 01:36:18-05:00, stenn@deacon.udel.edu
   ntpd/ntp_proto.c@1.317 +1 -1
     [Bug 1786] Remove extra semicolon from ntp_proto.c
 
-ChangeSet@1.2458, 2011-01-20 11:33:32+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2422.1.36, 2011-01-20 11:33:32+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P120
   TAG: NTP_4_2_7P120
 
@@ -1265,19 +2408,19 @@ ChangeSet@1.2458, 2011-01-20 11:33:32+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.122 +1 -1
     NTP_4_2_7P120
 
-  sntp/sntp-opts.c@1.121 +2 -2
+  sntp/sntp-opts.c@1.115.1.6 +2 -2
     NTP_4_2_7P120
 
-  sntp/sntp-opts.h@1.121 +3 -3
+  sntp/sntp-opts.h@1.115.1.6 +3 -3
     NTP_4_2_7P120
 
-  sntp/sntp-opts.texi@1.121 +2 -2
+  sntp/sntp-opts.texi@1.115.1.6 +2 -2
     NTP_4_2_7P120
 
-  sntp/sntp.1@1.121 +2 -2
+  sntp/sntp.1@1.115.1.6 +2 -2
     NTP_4_2_7P120
 
-  sntp/sntp.html@1.121 +1 -1
+  sntp/sntp.html@1.115.1.6 +1 -1
     NTP_4_2_7P120
 
   util/ntp-keygen-opts.c@1.119 +2 -2
@@ -1292,7 +2435,7 @@ ChangeSet@1.2458, 2011-01-20 11:33:32+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.122 +2 -2
     NTP_4_2_7P120
 
-ChangeSet@1.2457, 2011-01-20 08:27:32+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2422.1.35, 2011-01-20 08:27:32+00:00, davehart@shiny.ad.hartbrothers.com
   Change new timeval and timespec to string routines to use snprintf()
     rather than hand-crafted conversion, avoid signed int overflow there.
   Add configure support for SIZEOF_LONG_LONG to enable portable use of
@@ -1304,7 +2447,7 @@ ChangeSet@1.2457, 2011-01-20 08:27:32+00:00, davehart@shiny.ad.hartbrothers.com
     Add configure support for SIZEOF_LONG_LONG to enable portable use of
       snprintf() with time_t.
 
-  configure.ac@1.513 +0 -44
+  configure.ac@1.512.1.1 +0 -44
     move more m4 code to ntp_libntp.m4
 
   libntp/timespecops.c@1.5 +2 -2
@@ -1318,15 +2461,762 @@ ChangeSet@1.2457, 2011-01-20 08:27:32+00:00, davehart@shiny.ad.hartbrothers.com
   ports/winnt/include/config.h@1.93 +3 -1
     SIZEOF_LONG, SIZEOF_LONG_LONG definitions for Win32
 
-  sntp/configure.ac@1.55 +0 -42
+  sntp/configure.ac@1.50.1.5 +0 -42
     move more m4 code to ntp_libntp.m4
 
-  sntp/m4/ntp_libntp.m4@1.2 +53 -0
+  sntp/m4/ntp_libntp.m4@1.1.1.1 +53 -0
     Add configure support for SIZEOF_LONG_LONG to enable portable use of
       snprintf() with time_t.
     
 
-ChangeSet@1.2456, 2011-01-19 20:43:27+01:00, jnperlin@hydra.localnet
+ChangeSet@1.2462, 2011-01-20 03:07:50-05:00, stenn@psp-deb1.ntp.org
+  Import libevent
+
+  ChangeLog@1.780.1.1 +1 -0
+    Import libevent
+
+ChangeSet@1.2461, 2011-01-20 03:07:20-05:00, stenn@psp-deb1.ntp.org
+  Import libevent
+
+  BitKeeper/etc/ignore@1.77 +7 -7
+
+  sntp/libevent/ChangeLog@1.1 +951 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/ChangeLog
+
+  sntp/libevent/ChangeLog@1.0 +0 -0
+
+  sntp/libevent/Doxyfile@1.1 +244 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/Doxyfile
+
+  sntp/libevent/Doxyfile@1.0 +0 -0
+
+  sntp/libevent/LICENSE@1.1 +74 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/LICENSE
+
+  sntp/libevent/LICENSE@1.0 +0 -0
+
+  sntp/libevent/Makefile.am@1.1 +223 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/Makefile.am
+
+  sntp/libevent/Makefile.am@1.0 +0 -0
+
+  sntp/libevent/Makefile.nmake@1.1 +47 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/Makefile.nmake
+
+  sntp/libevent/Makefile.nmake@1.0 +0 -0
+
+  sntp/libevent/README@1.1 +152 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/README
+
+  sntp/libevent/README@1.0 +0 -0
+
+  sntp/libevent/WIN32-Code/event2/event-config.h@1.1 +360 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/WIN32-Code/event2/event-config.h
+
+  sntp/libevent/WIN32-Code/event2/event-config.h@1.0 +0 -0
+
+  sntp/libevent/WIN32-Code/tree.h@1.1 +1354 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/WIN32-Code/tree.h
+
+  sntp/libevent/WIN32-Code/tree.h@1.0 +0 -0
+
+  sntp/libevent/arc4random.c@1.1 +534 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/arc4random.c
+
+  sntp/libevent/arc4random.c@1.0 +0 -0
+
+  sntp/libevent/autogen.sh@1.1 +15 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/autogen.sh
+
+  sntp/libevent/autogen.sh@1.0 +0 -0
+
+  sntp/libevent/buffer.c@1.1 +2985 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/buffer.c
+
+  sntp/libevent/buffer.c@1.0 +0 -0
+
+  sntp/libevent/buffer_iocp.c@1.1 +320 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/buffer_iocp.c
+
+  sntp/libevent/buffer_iocp.c@1.0 +0 -0
+
+  sntp/libevent/bufferevent-internal.h@1.1 +392 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/bufferevent-internal.h
+
+  sntp/libevent/bufferevent-internal.h@1.0 +0 -0
+
+  sntp/libevent/bufferevent.c@1.1 +842 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/bufferevent.c
+
+  sntp/libevent/bufferevent.c@1.0 +0 -0
+
+  sntp/libevent/bufferevent_async.c@1.1 +655 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/bufferevent_async.c
+
+  sntp/libevent/bufferevent_async.c@1.0 +0 -0
+
+  sntp/libevent/bufferevent_filter.c@1.1 +509 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/bufferevent_filter.c
+
+  sntp/libevent/bufferevent_filter.c@1.0 +0 -0
+
+  sntp/libevent/bufferevent_openssl.c@1.1 +1345 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/bufferevent_openssl.c
+
+  sntp/libevent/bufferevent_openssl.c@1.0 +0 -0
+
+  sntp/libevent/bufferevent_pair.c@1.1 +333 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/bufferevent_pair.c
+
+  sntp/libevent/bufferevent_pair.c@1.0 +0 -0
+
+  sntp/libevent/bufferevent_ratelim.c@1.1 +980 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/bufferevent_ratelim.c
+
+  sntp/libevent/bufferevent_ratelim.c@1.0 +0 -0
+
+  sntp/libevent/bufferevent_sock.c@1.1 +689 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/bufferevent_sock.c
+
+  sntp/libevent/bufferevent_sock.c@1.0 +0 -0
+
+  sntp/libevent/changelist-internal.h@1.1 +101 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/changelist-internal.h
+
+  sntp/libevent/changelist-internal.h@1.0 +0 -0
+
+  sntp/libevent/compat/sys/queue.h@1.1 +488 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/compat/sys/queue.h
+
+  sntp/libevent/compat/sys/queue.h@1.0 +0 -0
+
+  sntp/libevent/configure.in@1.1 +603 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/configure.in
+
+  sntp/libevent/configure.in@1.0 +0 -0
+
+  sntp/libevent/defer-internal.h@1.1 +100 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/defer-internal.h
+
+  sntp/libevent/defer-internal.h@1.0 +0 -0
+
+  sntp/libevent/devpoll.c@1.1 +306 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/devpoll.c
+
+  sntp/libevent/devpoll.c@1.0 +0 -0
+
+  sntp/libevent/epoll.c@1.1 +470 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/epoll.c
+
+  sntp/libevent/epoll.c@1.0 +0 -0
+
+  sntp/libevent/epoll_sub.c@1.1 +52 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/epoll_sub.c
+
+  sntp/libevent/epoll_sub.c@1.0 +0 -0
+
+  sntp/libevent/evbuffer-internal.h@1.1 +277 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/evbuffer-internal.h
+
+  sntp/libevent/evbuffer-internal.h@1.0 +0 -0
+
+  sntp/libevent/evdns.c@1.1 +4544 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/evdns.c
+
+  sntp/libevent/evdns.c@1.0 +0 -0
+
+  sntp/libevent/evdns.h@1.1 +35 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/evdns.h
+
+  sntp/libevent/evdns.h@1.0 +0 -0
+
+  sntp/libevent/event-internal.h@1.1 +339 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/event-internal.h
+
+  sntp/libevent/event-internal.h@1.0 +0 -0
+
+  sntp/libevent/event.c@1.1 +2794 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/event.c
+
+  sntp/libevent/event.c@1.0 +0 -0
+
+  sntp/libevent/event.h@1.1 +206 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/event.h
+
+  sntp/libevent/event.h@1.0 +0 -0
+
+  sntp/libevent/event_iocp.c@1.1 +286 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/event_iocp.c
+
+  sntp/libevent/event_iocp.c@1.0 +0 -0
+
+  sntp/libevent/event_rpcgen.py@1.1 +1716 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/event_rpcgen.py
+
+  sntp/libevent/event_rpcgen.py@1.0 +0 -0
+
+  sntp/libevent/event_tagging.c@1.1 +590 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/event_tagging.c
+
+  sntp/libevent/event_tagging.c@1.0 +0 -0
+
+  sntp/libevent/evhttp.h@1.1 +35 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/evhttp.h
+
+  sntp/libevent/evhttp.h@1.0 +0 -0
+
+  sntp/libevent/evmap-internal.h@1.1 +90 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/evmap-internal.h
+
+  sntp/libevent/evmap-internal.h@1.0 +0 -0
+
+  sntp/libevent/evmap.c@1.1 +724 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/evmap.c
+
+  sntp/libevent/evmap.c@1.0 +0 -0
+
+  sntp/libevent/evport.c@1.1 +460 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/evport.c
+
+  sntp/libevent/evport.c@1.0 +0 -0
+
+  sntp/libevent/evrpc-internal.h@1.1 +204 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/evrpc-internal.h
+
+  sntp/libevent/evrpc-internal.h@1.0 +0 -0
+
+  sntp/libevent/evrpc.c@1.1 +1163 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/evrpc.c
+
+  sntp/libevent/evrpc.c@1.0 +0 -0
+
+  sntp/libevent/evrpc.h@1.1 +35 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/evrpc.h
+
+  sntp/libevent/evrpc.h@1.0 +0 -0
+
+  sntp/libevent/evsignal-internal.h@1.1 +64 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/evsignal-internal.h
+
+  sntp/libevent/evsignal-internal.h@1.0 +0 -0
+
+  sntp/libevent/evthread-internal.h@1.1 +354 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/evthread-internal.h
+
+  sntp/libevent/evthread-internal.h@1.0 +0 -0
+
+  sntp/libevent/evthread.c@1.1 +341 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/evthread.c
+
+  sntp/libevent/evthread.c@1.0 +0 -0
+
+  sntp/libevent/evthread_pthread.c@1.1 +189 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/evthread_pthread.c
+
+  sntp/libevent/evthread_pthread.c@1.0 +0 -0
+
+  sntp/libevent/evthread_win32.c@1.1 +335 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/evthread_win32.c
+
+  sntp/libevent/evthread_win32.c@1.0 +0 -0
+
+  sntp/libevent/evutil.c@1.1 +2095 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/evutil.c
+
+  sntp/libevent/evutil.c@1.0 +0 -0
+
+  sntp/libevent/evutil.h@1.1 +31 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/evutil.h
+
+  sntp/libevent/evutil.h@1.0 +0 -0
+
+  sntp/libevent/evutil_rand.c@1.1 +126 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/evutil_rand.c
+
+  sntp/libevent/evutil_rand.c@1.0 +0 -0
+
+  sntp/libevent/ht-internal.h@1.1 +486 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/ht-internal.h
+
+  sntp/libevent/ht-internal.h@1.0 +0 -0
+
+  sntp/libevent/http-internal.h@1.1 +195 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/http-internal.h
+
+  sntp/libevent/http-internal.h@1.0 +0 -0
+
+  sntp/libevent/http.c@1.1 +4315 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/http.c
+
+  sntp/libevent/http.c@1.0 +0 -0
+
+  sntp/libevent/include/Makefile.am@1.1 +34 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/include/Makefile.am
+
+  sntp/libevent/include/Makefile.am@1.0 +0 -0
+
+  sntp/libevent/include/event2/buffer.h@1.1 +736 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/include/event2/buffer.h
+
+  sntp/libevent/include/event2/buffer.h@1.0 +0 -0
+
+  sntp/libevent/include/event2/buffer_compat.h@1.1 +110 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/include/event2/buffer_compat.h
+
+  sntp/libevent/include/event2/buffer_compat.h@1.0 +0 -0
+
+  sntp/libevent/include/event2/bufferevent.h@1.1 +759 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/include/event2/bufferevent.h
+
+  sntp/libevent/include/event2/bufferevent.h@1.0 +0 -0
+
+  sntp/libevent/include/event2/bufferevent_compat.h@1.1 +96 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/include/event2/bufferevent_compat.h
+
+  sntp/libevent/include/event2/bufferevent_compat.h@1.0 +0 -0
+
+  sntp/libevent/include/event2/bufferevent_ssl.h@1.1 +78 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/include/event2/bufferevent_ssl.h
+
+  sntp/libevent/include/event2/bufferevent_ssl.h@1.0 +0 -0
+
+  sntp/libevent/include/event2/bufferevent_struct.h@1.1 +113 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/include/event2/bufferevent_struct.h
+
+  sntp/libevent/include/event2/bufferevent_struct.h@1.0 +0 -0
+
+  sntp/libevent/include/event2/dns.h@1.1 +639 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/include/event2/dns.h
+
+  sntp/libevent/include/event2/dns.h@1.0 +0 -0
+
+  sntp/libevent/include/event2/dns_compat.h@1.1 +335 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/include/event2/dns_compat.h
+
+  sntp/libevent/include/event2/dns_compat.h@1.0 +0 -0
+
+  sntp/libevent/include/event2/dns_struct.h@1.1 +80 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/include/event2/dns_struct.h
+
+  sntp/libevent/include/event2/dns_struct.h@1.0 +0 -0
+
+  sntp/libevent/include/event2/event.h@1.1 +785 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/include/event2/event.h
+
+  sntp/libevent/include/event2/event.h@1.0 +0 -0
+
+  sntp/libevent/include/event2/event_compat.h@1.1 +324 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/include/event2/event_compat.h
+
+  sntp/libevent/include/event2/event_compat.h@1.0 +0 -0
+
+  sntp/libevent/include/event2/event_struct.h@1.1 +139 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/include/event2/event_struct.h
+
+  sntp/libevent/include/event2/event_struct.h@1.0 +0 -0
+
+  sntp/libevent/include/event2/http.h@1.1 +828 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/include/event2/http.h
+
+  sntp/libevent/include/event2/http.h@1.0 +0 -0
+
+  sntp/libevent/include/event2/http_compat.h@1.1 +90 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/include/event2/http_compat.h
+
+  sntp/libevent/include/event2/http_compat.h@1.0 +0 -0
+
+  sntp/libevent/include/event2/http_struct.h@1.1 +130 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/include/event2/http_struct.h
+
+  sntp/libevent/include/event2/http_struct.h@1.0 +0 -0
+
+  sntp/libevent/include/event2/keyvalq_struct.h@1.1 +80 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/include/event2/keyvalq_struct.h
+
+  sntp/libevent/include/event2/keyvalq_struct.h@1.0 +0 -0
+
+  sntp/libevent/include/event2/listener.h@1.1 +143 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/include/event2/listener.h
+
+  sntp/libevent/include/event2/listener.h@1.0 +0 -0
+
+  sntp/libevent/include/event2/rpc.h@1.1 +596 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/include/event2/rpc.h
+
+  sntp/libevent/include/event2/rpc.h@1.0 +0 -0
+
+  sntp/libevent/include/event2/rpc_compat.h@1.1 +61 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/include/event2/rpc_compat.h
+
+  sntp/libevent/include/event2/rpc_compat.h@1.0 +0 -0
+
+  sntp/libevent/include/event2/rpc_struct.h@1.1 +100 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/include/event2/rpc_struct.h
+
+  sntp/libevent/include/event2/rpc_struct.h@1.0 +0 -0
+
+  sntp/libevent/include/event2/tag.h@1.1 +124 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/include/event2/tag.h
+
+  sntp/libevent/include/event2/tag.h@1.0 +0 -0
+
+  sntp/libevent/include/event2/tag_compat.h@1.1 +39 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/include/event2/tag_compat.h
+
+  sntp/libevent/include/event2/tag_compat.h@1.0 +0 -0
+
+  sntp/libevent/include/event2/thread.h@1.1 +225 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/include/event2/thread.h
+
+  sntp/libevent/include/event2/thread.h@1.0 +0 -0
+
+  sntp/libevent/include/event2/util.h@1.1 +593 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/include/event2/util.h
+
+  sntp/libevent/include/event2/util.h@1.0 +0 -0
+
+  sntp/libevent/iocp-internal.h@1.1 +201 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/iocp-internal.h
+
+  sntp/libevent/iocp-internal.h@1.0 +0 -0
+
+  sntp/libevent/ipv6-internal.h@1.1 +72 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/ipv6-internal.h
+
+  sntp/libevent/ipv6-internal.h@1.0 +0 -0
+
+  sntp/libevent/kqueue.c@1.1 +415 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/kqueue.c
+
+  sntp/libevent/kqueue.c@1.0 +0 -0
+
+  sntp/libevent/libevent.pc.in@1.1 +16 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/libevent.pc.in
+
+  sntp/libevent/libevent.pc.in@1.0 +0 -0
+
+  sntp/libevent/libevent_openssl.pc.in@1.1 +16 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/libevent_openssl.pc.in
+
+  sntp/libevent/libevent_openssl.pc.in@1.0 +0 -0
+
+  sntp/libevent/libevent_pthreads.pc.in@1.1 +16 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/libevent_pthreads.pc.in
+
+  sntp/libevent/libevent_pthreads.pc.in@1.0 +0 -0
+
+  sntp/libevent/listener.c@1.1 +865 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/listener.c
+
+  sntp/libevent/listener.c@1.0 +0 -0
+
+  sntp/libevent/log-internal.h@1.1 +59 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/log-internal.h
+
+  sntp/libevent/log-internal.h@1.0 +0 -0
+
+  sntp/libevent/log.c@1.1 +224 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/log.c
+
+  sntp/libevent/log.c@1.0 +0 -0
+
+  sntp/libevent/m4/acx_pthread.m4@1.1 +279 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/m4/acx_pthread.m4
+
+  sntp/libevent/m4/acx_pthread.m4@1.0 +0 -0
+
+  sntp/libevent/minheap-internal.h@1.1 +160 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/minheap-internal.h
+
+  sntp/libevent/minheap-internal.h@1.0 +0 -0
+
+  sntp/libevent/mm-internal.h@1.1 +61 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/mm-internal.h
+
+  sntp/libevent/mm-internal.h@1.0 +0 -0
+
+  sntp/libevent/poll.c@1.1 +333 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/poll.c
+
+  sntp/libevent/poll.c@1.0 +0 -0
+
+  sntp/libevent/ratelim-internal.h@1.1 +105 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/ratelim-internal.h
+
+  sntp/libevent/ratelim-internal.h@1.0 +0 -0
+
+  sntp/libevent/sample/Makefile.am@1.1 +23 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/sample/Makefile.am
+
+  sntp/libevent/sample/Makefile.am@1.0 +0 -0
+
+  sntp/libevent/sample/dns-example.c@1.1 +221 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/sample/dns-example.c
+
+  sntp/libevent/sample/dns-example.c@1.0 +0 -0
+
+  sntp/libevent/sample/event-test.c@1.1 +143 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/sample/event-test.c
+
+  sntp/libevent/sample/event-test.c@1.0 +0 -0
+
+  sntp/libevent/sample/hello-world.c@1.1 +138 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/sample/hello-world.c
+
+  sntp/libevent/sample/hello-world.c@1.0 +0 -0
+
+  sntp/libevent/sample/http-server.c@1.1 +392 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/sample/http-server.c
+
+  sntp/libevent/sample/http-server.c@1.0 +0 -0
+
+  sntp/libevent/sample/le-proxy.c@1.1 +278 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/sample/le-proxy.c
+
+  sntp/libevent/sample/le-proxy.c@1.0 +0 -0
+
+  sntp/libevent/sample/signal-test.c@1.1 +77 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/sample/signal-test.c
+
+  sntp/libevent/sample/signal-test.c@1.0 +0 -0
+
+  sntp/libevent/sample/time-test.c@1.1 +108 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/sample/time-test.c
+
+  sntp/libevent/sample/time-test.c@1.0 +0 -0
+
+  sntp/libevent/select.c@1.1 +311 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/select.c
+
+  sntp/libevent/select.c@1.0 +0 -0
+
+  sntp/libevent/signal.c@1.1 +438 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/signal.c
+
+  sntp/libevent/signal.c@1.0 +0 -0
+
+  sntp/libevent/strlcpy-internal.h@1.1 +21 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/strlcpy-internal.h
+
+  sntp/libevent/strlcpy-internal.h@1.0 +0 -0
+
+  sntp/libevent/strlcpy.c@1.1 +74 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/strlcpy.c
+
+  sntp/libevent/strlcpy.c@1.0 +0 -0
+
+  sntp/libevent/test/Makefile.am@1.1 +74 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/Makefile.am
+
+  sntp/libevent/test/Makefile.am@1.0 +0 -0
+
+  sntp/libevent/test/Makefile.nmake@1.1 +56 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/Makefile.nmake
+
+  sntp/libevent/test/Makefile.nmake@1.0 +0 -0
+
+  sntp/libevent/test/bench.c@1.1 +191 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/bench.c
+
+  sntp/libevent/test/bench.c@1.0 +0 -0
+
+  sntp/libevent/test/bench_cascade.c@1.1 +169 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/bench_cascade.c
+
+  sntp/libevent/test/bench_cascade.c@1.0 +0 -0
+
+  sntp/libevent/test/bench_http.c@1.1 +178 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/bench_http.c
+
+  sntp/libevent/test/bench_http.c@1.0 +0 -0
+
+  sntp/libevent/test/bench_httpclient.c@1.1 +216 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/bench_httpclient.c
+
+  sntp/libevent/test/bench_httpclient.c@1.0 +0 -0
+
+  sntp/libevent/test/regress.c@1.1 +2339 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/regress.c
+
+  sntp/libevent/test/regress.c@1.0 +0 -0
+
+  sntp/libevent/test/regress.gen.c@1.1 +1225 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/regress.gen.c
+
+  sntp/libevent/test/regress.gen.c@1.0 +0 -0
+
+  sntp/libevent/test/regress.gen.h@1.1 +207 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/regress.gen.h
+
+  sntp/libevent/test/regress.gen.h@1.0 +0 -0
+
+  sntp/libevent/test/regress.h@1.1 +125 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/regress.h
+
+  sntp/libevent/test/regress.h@1.0 +0 -0
+
+  sntp/libevent/test/regress.rpc@1.1 +25 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/regress.rpc
+
+  sntp/libevent/test/regress.rpc@1.0 +0 -0
+
+  sntp/libevent/test/regress_buffer.c@1.1 +1567 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/regress_buffer.c
+
+  sntp/libevent/test/regress_buffer.c@1.0 +0 -0
+
+  sntp/libevent/test/regress_bufferevent.c@1.1 +835 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/regress_bufferevent.c
+
+  sntp/libevent/test/regress_bufferevent.c@1.0 +0 -0
+
+  sntp/libevent/test/regress_dns.c@1.1 +1706 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/regress_dns.c
+
+  sntp/libevent/test/regress_dns.c@1.0 +0 -0
+
+  sntp/libevent/test/regress_et.c@1.1 +197 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/regress_et.c
+
+  sntp/libevent/test/regress_et.c@1.0 +0 -0
+
+  sntp/libevent/test/regress_http.c@1.1 +3542 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/regress_http.c
+
+  sntp/libevent/test/regress_http.c@1.0 +0 -0
+
+  sntp/libevent/test/regress_iocp.c@1.1 +352 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/regress_iocp.c
+
+  sntp/libevent/test/regress_iocp.c@1.0 +0 -0
+
+  sntp/libevent/test/regress_listener.c@1.1 +211 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/regress_listener.c
+
+  sntp/libevent/test/regress_listener.c@1.0 +0 -0
+
+  sntp/libevent/test/regress_main.c@1.1 +392 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/regress_main.c
+
+  sntp/libevent/test/regress_main.c@1.0 +0 -0
+
+  sntp/libevent/test/regress_minheap.c@1.1 +98 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/regress_minheap.c
+
+  sntp/libevent/test/regress_minheap.c@1.0 +0 -0
+
+  sntp/libevent/test/regress_rpc.c@1.1 +884 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/regress_rpc.c
+
+  sntp/libevent/test/regress_rpc.c@1.0 +0 -0
+
+  sntp/libevent/test/regress_ssl.c@1.1 +448 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/regress_ssl.c
+
+  sntp/libevent/test/regress_ssl.c@1.0 +0 -0
+
+  sntp/libevent/test/regress_testutils.c@1.1 +196 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/regress_testutils.c
+
+  sntp/libevent/test/regress_testutils.c@1.0 +0 -0
+
+  sntp/libevent/test/regress_testutils.h@1.1 +66 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/regress_testutils.h
+
+  sntp/libevent/test/regress_testutils.h@1.0 +0 -0
+
+  sntp/libevent/test/regress_thread.c@1.1 +511 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/regress_thread.c
+
+  sntp/libevent/test/regress_thread.c@1.0 +0 -0
+
+  sntp/libevent/test/regress_util.c@1.1 +1076 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/regress_util.c
+
+  sntp/libevent/test/regress_util.c@1.0 +0 -0
+
+  sntp/libevent/test/regress_zlib.c@1.1 +322 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/regress_zlib.c
+
+  sntp/libevent/test/regress_zlib.c@1.0 +0 -0
+
+  sntp/libevent/test/test-changelist.c@1.1 +198 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/test-changelist.c
+
+  sntp/libevent/test/test-changelist.c@1.0 +0 -0
+
+  sntp/libevent/test/test-eof.c@1.1 +96 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/test-eof.c
+
+  sntp/libevent/test/test-eof.c@1.0 +0 -0
+
+  sntp/libevent/test/test-init.c@1.1 +44 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/test-init.c
+
+  sntp/libevent/test/test-init.c@1.0 +0 -0
+
+  sntp/libevent/test/test-ratelim.c@1.1 +456 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/test-ratelim.c
+
+  sntp/libevent/test/test-ratelim.c@1.0 +0 -0
+
+  sntp/libevent/test/test-time.c@1.1 +92 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/test-time.c
+
+  sntp/libevent/test/test-time.c@1.0 +0 -0
+
+  sntp/libevent/test/test-weof.c@1.1 +96 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/test-weof.c
+
+  sntp/libevent/test/test-weof.c@1.0 +0 -0
+
+  sntp/libevent/test/test.sh@1.1 +156 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/test.sh
+
+  sntp/libevent/test/test.sh@1.0 +0 -0
+
+  sntp/libevent/test/tinytest.c@1.1 +383 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/tinytest.c
+
+  sntp/libevent/test/tinytest.c@1.0 +0 -0
+
+  sntp/libevent/test/tinytest.h@1.1 +87 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/tinytest.h
+
+  sntp/libevent/test/tinytest.h@1.0 +0 -0
+
+  sntp/libevent/test/tinytest_local.h@1.1 +9 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/tinytest_local.h
+
+  sntp/libevent/test/tinytest_local.h@1.0 +0 -0
+
+  sntp/libevent/test/tinytest_macros.h@1.1 +184 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/test/tinytest_macros.h
+
+  sntp/libevent/test/tinytest_macros.h@1.0 +0 -0
+
+  sntp/libevent/util-internal.h@1.1 +256 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/util-internal.h
+
+  sntp/libevent/util-internal.h@1.0 +0 -0
+
+  sntp/libevent/whatsnew-2.0.txt@1.1 +609 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/whatsnew-2.0.txt
+
+  sntp/libevent/whatsnew-2.0.txt@1.0 +0 -0
+
+  sntp/libevent/win32select.c@1.1 +376 -0
+    BitKeeper file /home/stenn/ntp-dev-libevent/sntp/libevent/win32select.c
+
+  sntp/libevent/win32select.c@1.0 +0 -0
+
+ChangeSet@1.2460, 2011-01-20 02:57:31-05:00, stenn@psp-deb1.ntp.org
+  Add #ifdef DEBUG lines to sntp/main.c
+
+  sntp/main.c@1.67 +16 -0
+    Add #ifdef DEBUG lines to sntp/main.c
+
+ChangeSet@1.2422.1.34, 2011-01-19 20:43:27+01:00, jnperlin@hydra.localnet
   changed timeval / timespec string conversion (snprintf() format strings for time_t vs. int / long / long long; avoid signed integer overflow)
 
   ChangeLog@1.781 +3 -0
@@ -1338,7 +3228,7 @@ ChangeSet@1.2456, 2011-01-19 20:43:27+01:00, jnperlin@hydra.localnet
   libntp/timevalops.c@1.4 +82 -56
     changed struct timeval string conversion (snprintf() format for time_t)
 
-ChangeSet@1.2455, 2011-01-19 12:26:17+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2422.1.33, 2011-01-19 12:26:17+00:00, davehart@shiny.ad.hartbrothers.com
   Grow ntpd/work_thread.c arrays as needed.
   Add DEBUG_* variants of ntp_assert.h macros which compile away using
     ./configure --disable-debugging.
@@ -1425,7 +3315,7 @@ ChangeSet@1.2455, 2011-01-19 12:26:17+00:00, davehart@shiny.ad.hartbrothers.com
   util/ntp-keygen.c@1.76 +1 -1
     silence time_t -> u_int truncation warning.
 
-ChangeSet@1.2454, 2011-01-19 02:07:09-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2422.1.32, 2011-01-19 02:07:09-05:00, stenn@deacon.udel.edu
   crypo group changes from Dave Mills
 
   ChangeLog@1.779 +1 -0
@@ -1437,7 +3327,7 @@ ChangeSet@1.2454, 2011-01-19 02:07:09-05:00, stenn@deacon.udel.edu
   ntpd/ntp_proto.c@1.316 +119 -9
     crypo group changes from Dave Mills
 
-ChangeSet@1.2453, 2011-01-19 02:03:53-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2422.1.31, 2011-01-19 02:03:53-05:00, stenn@deacon.udel.edu
   Lose the RANGEGATE check in PPS, from Dave Mills
 
   ChangeLog@1.778 +1 -0
@@ -1449,7 +3339,7 @@ ChangeSet@1.2453, 2011-01-19 02:03:53-05:00, stenn@deacon.udel.edu
   ntpd/ntp_refclock.c@1.102 +0 -10
     Lose the RANGEGATE check in PPS, from Dave Mills
 
-ChangeSet@1.2452, 2011-01-19 02:01:33-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2422.1.30, 2011-01-19 02:01:33-05:00, stenn@deacon.udel.edu
   ACTS refclock cleanup from Dave Mills
 
   ChangeLog@1.777 +1 -0
@@ -1458,7 +3348,7 @@ ChangeSet@1.2452, 2011-01-19 02:01:33-05:00, stenn@deacon.udel.edu
   ntpd/refclock_acts.c@1.45 +2 -28
     ACTS refclock cleanup from Dave Mills
 
-ChangeSet@1.2451, 2011-01-19 01:58:52-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2422.1.29, 2011-01-19 01:58:52-05:00, stenn@deacon.udel.edu
   Documentation updates from Dave Mills
 
   ChangeLog@1.776 +1 -0
@@ -1485,7 +3375,25 @@ ChangeSet@1.2451, 2011-01-19 01:58:52-05:00, stenn@deacon.udel.edu
   html/select.html@1.2 +2 -2
     Documentation updates from Dave Mills
 
-ChangeSet@1.2448.1.2, 2011-01-18 19:35:18+01:00, jnperlin@hydra.localnet
+ChangeSet@1.2458, 2011-01-19 06:06:52+00:00, stenn@psp-fb1.ntp.org
+  Move DEBUG-enablement checks to ntp_libntp.m4
+
+  configure.ac@1.513 +0 -16
+    Move DEBUG-enablement checks to ntp_libntp.m4
+
+  sntp/m4/ntp_libntp.m4@1.2 +17 -1
+    Move DEBUG-enablement checks to ntp_libntp.m4
+
+ChangeSet@1.2457, 2011-01-19 06:05:57+00:00, stenn@psp-fb1.ntp.org
+  DEBUG cleanup
+
+  sntp/header.h@1.7 +0 -4
+    DEBUG cleanup
+
+  sntp/main.h@1.5 +0 -1
+    DEBUG cleanup
+
+ChangeSet@1.2422.6.2, 2011-01-18 19:35:18+01:00, jnperlin@hydra.localnet
   added tests for timevalops.c, enhancements for timespecops.c tests
 
   tests/libntp/Makefile.am@1.30 +1 -0
@@ -1499,7 +3407,7 @@ ChangeSet@1.2448.1.2, 2011-01-18 19:35:18+01:00, jnperlin@hydra.localnet
 
   tests/libntp/tvalops.cpp@1.0 +0 -0
 
-ChangeSet@1.2445.2.1, 2011-01-18 18:09:37+01:00, jnperlin@hydra.localnet
+ChangeSet@1.2422.5.1, 2011-01-18 18:09:37+01:00, jnperlin@hydra.localnet
   Improvements on timeval / timespec ops
 
   include/lib_strbuf.h@1.10 +3 -2
@@ -1517,7 +3425,16 @@ ChangeSet@1.2445.2.1, 2011-01-18 18:09:37+01:00, jnperlin@hydra.localnet
   tests/libntp/tspecops.cpp@1.2 +22 -0
     added string conversion tests
 
-ChangeSet@1.2449, 2011-01-18 11:32:32+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2456, 2011-01-18 12:35:26+00:00, stenn@psp-fb1.ntp.org
+  autogen and debug cleanup
+
+  sntp/main.c@1.66 +4 -13
+    autogen and debug cleanup
+
+  sntp/main.h@1.4 +1 -0
+    autogen and debug cleanup
+
+ChangeSet@1.2422.1.27, 2011-01-18 11:32:32+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P119
   TAG: NTP_4_2_7P119
 
@@ -1581,19 +3498,19 @@ ChangeSet@1.2449, 2011-01-18 11:32:32+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.121 +1 -1
     NTP_4_2_7P119
 
-  sntp/sntp-opts.c@1.120 +2 -2
+  sntp/sntp-opts.c@1.115.1.5 +2 -2
     NTP_4_2_7P119
 
-  sntp/sntp-opts.h@1.120 +3 -3
+  sntp/sntp-opts.h@1.115.1.5 +3 -3
     NTP_4_2_7P119
 
-  sntp/sntp-opts.texi@1.120 +2 -2
+  sntp/sntp-opts.texi@1.115.1.5 +2 -2
     NTP_4_2_7P119
 
-  sntp/sntp.1@1.120 +2 -2
+  sntp/sntp.1@1.115.1.5 +2 -2
     NTP_4_2_7P119
 
-  sntp/sntp.html@1.120 +1 -1
+  sntp/sntp.html@1.115.1.5 +1 -1
     NTP_4_2_7P119
 
   util/ntp-keygen-opts.c@1.118 +2 -2
@@ -1608,13 +3525,13 @@ ChangeSet@1.2449, 2011-01-18 11:32:32+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.121 +2 -2
     NTP_4_2_7P119
 
-ChangeSet@1.2445.1.6, 2011-01-18 07:14:14+00:00, stenn@psp-fb1.ntp.org
+ChangeSet@1.2422.4.6, 2011-01-18 07:14:14+00:00, stenn@psp-fb1.ntp.org
   Distribute timespecops.h and timevalops.h
 
   include/Makefile.am@1.44 +2 -0
     Distribute timespecops.h and timevalops.h
 
-ChangeSet@1.2445.1.5, 2011-01-16 14:56:08+01:00, jnperlin@hydra.localnet
+ChangeSet@1.2422.4.5, 2011-01-16 14:56:08+01:00, jnperlin@hydra.localnet
   added timespecops and timevalops for operations on struct timespec and struct timeval
 
   ChangeLog@1.771.1.4 +2 -0
@@ -1651,7 +3568,43 @@ ChangeSet@1.2445.1.5, 2011-01-16 14:56:08+01:00, jnperlin@hydra.localnet
 
   tests/libntp/tspecops.cpp@1.0 +0 -0
 
-ChangeSet@1.2445.1.4, 2011-01-15 10:47:08+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2455, 2011-01-16 10:49:33+00:00, stenn@psp-fb1.ntp.org
+  sntp option cleanup
+
+  sntp/main.c@1.65 +49 -24
+    sntp option cleanup
+
+  sntp/sntp-opts.c@1.121 +267 -184
+    sntp option cleanup
+
+  sntp/sntp-opts.def@1.24 +93 -94
+    sntp option cleanup
+
+  sntp/sntp-opts.h@1.121 +73 -71
+    sntp option cleanup
+
+  sntp/sntp-opts.texi@1.121 +55 -104
+    sntp option cleanup
+
+  sntp/sntp.1@1.121 +75 -66
+    sntp option cleanup
+
+  sntp/sntp.html@1.121 +94 -133
+    sntp option cleanup
+
+  sntp/sntp.texi@1.7 +6 -2
+    sntp option cleanup
+
+ChangeSet@1.2454, 2011-01-16 10:48:00+00:00, stenn@psp-fb1.ntp.org
+  libevent cleanup
+
+  sntp/Makefile.am@1.52 +1 -10
+    libevent cleanup
+
+  sntp/m4/ntp_libevent.m4@1.2, stenn@psp-deb1.ntp.org +0 -0
+    Rename: m4/ntp_libevent.m4 -> sntp/m4/ntp_libevent.m4
+
+ChangeSet@1.2422.4.4, 2011-01-15 10:47:08+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P118
   TAG: NTP_4_2_7P118
 
@@ -1715,19 +3668,19 @@ ChangeSet@1.2445.1.4, 2011-01-15 10:47:08+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.120 +1 -1
     NTP_4_2_7P118
 
-  sntp/sntp-opts.c@1.119 +2 -2
+  sntp/sntp-opts.c@1.115.1.4 +2 -2
     NTP_4_2_7P118
 
-  sntp/sntp-opts.h@1.119 +3 -3
+  sntp/sntp-opts.h@1.115.1.4 +3 -3
     NTP_4_2_7P118
 
-  sntp/sntp-opts.texi@1.119 +2 -2
+  sntp/sntp-opts.texi@1.115.1.4 +2 -2
     NTP_4_2_7P118
 
-  sntp/sntp.1@1.119 +2 -2
+  sntp/sntp.1@1.115.1.4 +2 -2
     NTP_4_2_7P118
 
-  sntp/sntp.html@1.119 +1 -1
+  sntp/sntp.html@1.115.1.4 +1 -1
     NTP_4_2_7P118
 
   util/ntp-keygen-opts.c@1.117 +2 -2
@@ -1742,29 +3695,29 @@ ChangeSet@1.2445.1.4, 2011-01-15 10:47:08+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.120 +2 -2
     NTP_4_2_7P118
 
-ChangeSet@1.2445.1.3, 2011-01-15 02:04:43-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2422.4.3, 2011-01-15 02:04:43-05:00, stenn@deacon.udel.edu
   Use a do-nothing rule to avoid an SCCS "get"
 
-  sntp/Makefile.am@1.53 +1 -0
+  sntp/Makefile.am@1.47.1.6 +1 -0
     Use a do-nothing rule to avoid an SCCS "get"
 
-ChangeSet@1.2445.1.2, 2011-01-15 00:16:55-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2422.4.2, 2011-01-15 00:16:55-05:00, stenn@deacon.udel.edu
   Simplify the built-sources stuff in sntp/
 
   ChangeLog@1.771.1.2 +1 -0
     Simplify the built-sources stuff in sntp/
 
-  sntp/Makefile.am@1.52 +0 -1
+  sntp/Makefile.am@1.47.1.5 +0 -1
     Simplify the built-sources stuff in sntp/
 
-ChangeSet@1.2445.1.1, 2011-01-14 23:06:12-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2422.4.1, 2011-01-14 23:06:12-05:00, stenn@deacon.udel.edu
   Fix check for -lipv6 on HP-UX 11
 
   ChangeLog@1.771.1.1 +1 -0
 
   configure.ac@1.512 +4 -8
 
-ChangeSet@1.2446, 2011-01-14 07:50:28+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2422.1.24, 2011-01-14 07:50:28+00:00, davehart@shiny.ad.hartbrothers.com
   Correct msyslog.c build break on Solaris 2.9 from #ifdef/#if mixup.
 
   ChangeLog@1.772 +1 -0
@@ -1773,7 +3726,7 @@ ChangeSet@1.2446, 2011-01-14 07:50:28+00:00, davehart@shiny.ad.hartbrothers.com
   libntp/msyslog.c@1.34 +12 -3
     Correct msyslog.c build break on Solaris 2.9 from #ifdef/#if mixup.
 
-ChangeSet@1.2445, 2011-01-13 07:32:20+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2422.1.23, 2011-01-13 07:32:20+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P117
   TAG: NTP_4_2_7P117
 
@@ -1837,19 +3790,19 @@ ChangeSet@1.2445, 2011-01-13 07:32:20+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.119 +1 -1
     NTP_4_2_7P117
 
-  sntp/sntp-opts.c@1.118 +3 -3
+  sntp/sntp-opts.c@1.115.1.3 +3 -3
     NTP_4_2_7P117
 
-  sntp/sntp-opts.h@1.118 +3 -3
+  sntp/sntp-opts.h@1.115.1.3 +3 -3
     NTP_4_2_7P117
 
-  sntp/sntp-opts.texi@1.118 +2 -2
+  sntp/sntp-opts.texi@1.115.1.3 +2 -2
     NTP_4_2_7P117
 
-  sntp/sntp.1@1.118 +2 -2
+  sntp/sntp.1@1.115.1.3 +2 -2
     NTP_4_2_7P117
 
-  sntp/sntp.html@1.118 +1 -1
+  sntp/sntp.html@1.115.1.3 +1 -1
     NTP_4_2_7P117
 
   util/ntp-keygen-opts.c@1.116 +4 -4
@@ -1864,19 +3817,19 @@ ChangeSet@1.2445, 2011-01-13 07:32:20+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.119 +2 -2
     NTP_4_2_7P117
 
-ChangeSet@1.2444, 2011-01-13 01:53:03-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2422.1.22, 2011-01-13 01:53:03-05:00, stenn@deacon.udel.edu
   Make sure the built-sources-only target is writable
 
-  sntp/Makefile.am@1.51 +1 -1
+  sntp/Makefile.am@1.47.1.4 +1 -1
     Make sure the built-sources-only target is writable
 
-ChangeSet@1.2443, 2011-01-12 18:57:28-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2422.1.21, 2011-01-12 18:57:28-05:00, stenn@deacon.udel.edu
   Some systems do not have strerror_r
 
   libntp/msyslog.c@1.33 +3 -12
     Some systems do not have strerror_r
 
-ChangeSet@1.2442, 2011-01-12 16:11:01-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2422.1.20, 2011-01-12 16:11:01-05:00, stenn@deacon.udel.edu
   Improve libntp.a dependency checking
 
   adjtimed/Makefile.am@1.9 +6 -1
@@ -1903,22 +3856,22 @@ ChangeSet@1.2442, 2011-01-12 16:11:01-05:00, stenn@deacon.udel.edu
   ntpsnmpd/Makefile.am@1.24 +9 -1
     Improve libntp.a dependency checking
 
-  sntp/Makefile.am@1.50 +5 -1
+  sntp/Makefile.am@1.47.1.3 +5 -1
     Improve libntp.a dependency checking
 
   util/Makefile.am@1.55 +6 -1
     Improve libntp.a dependency checking
 
-ChangeSet@1.2441, 2011-01-12 15:59:20-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2422.1.19, 2011-01-12 15:59:20-05:00, stenn@deacon.udel.edu
   Keep AC_PROG_LIBTOOL, instead of changing to LT_INIT
 
   configure.ac@1.511 +1 -1
     Keep AC_PROG_LIBTOOL, instead of changing to LT_INIT
 
-  sntp/configure.ac@1.54 +1 -1
+  sntp/configure.ac@1.50.1.4 +1 -1
     Keep AC_PROG_LIBTOOL, instead of changing to LT_INIT
 
-ChangeSet@1.2440, 2011-01-12 05:23:49+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2422.1.18, 2011-01-12 05:23:49+00:00, davehart@shiny.ad.hartbrothers.com
   Add configure --without-sntp option to disable building sntp and
     sntp/tests.  withsntp=no in the environment changes the default.
   Build infrastructure cleanup:
@@ -2029,13 +3982,13 @@ ChangeSet@1.2440, 2011-01-12 05:23:49+00:00, davehart@shiny.ad.hartbrothers.com
     move m4 subdir to sntp/m4
     use sntp/version.* files directly in top-level
 
-  sntp/Makefile.am@1.49 +63 -75
+  sntp/Makefile.am@1.47.1.2 +63 -75
     move m4 subdir to sntp/m4
     use sntp/version.* files directly in top-level
     add --without-sntp configure option
     remove FRC from libntp.a rule, it trips up BSD make
 
-  sntp/configure.ac@1.53 +11 -751
+  sntp/configure.ac@1.50.1.3 +11 -751
     move m4 subdir to sntp/m4
     use sntp/version.* files directly in top-level
     move hunks of common m4sh code to ntp_libntp.m4 and ntp_ipv6.m4
@@ -2116,7 +4069,142 @@ ChangeSet@1.2440, 2011-01-12 05:23:49+00:00, davehart@shiny.ad.hartbrothers.com
     move autogen included .def files to sntp/include
     keep hands off CFLAGS, CPPFLAGS so end-user can override at make time.
 
-ChangeSet@1.2439, 2011-01-10 11:38:28+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2452, 2011-01-11 11:18:09+00:00, stenn@psp-fb1.ntp.org
+  Implement -u for sntp
+
+  sntp/main.c@1.64 +1 -1
+    Implement -u for sntp
+
+ChangeSet@1.2451, 2011-01-11 11:01:26+00:00, stenn@psp-fb1.ntp.org
+  cleanup
+
+  sntp/networking.h@1.24 +0 -11
+    cleanup
+
+ChangeSet@1.2450, 2011-01-11 08:38:31+00:00, stenn@psp-fb1.ntp.org
+  cleanup
+
+  sntp/networking.c@1.56 +25 -317
+    cleanup
+
+  sntp/sntp-opts.c@1.119 +23 -2
+    cleanup
+
+  sntp/sntp-opts.def@1.23 +8 -0
+    cleanup
+
+  sntp/sntp-opts.h@1.119 +14 -7
+    cleanup
+
+  sntp/sntp-opts.texi@1.119 +9 -1
+    cleanup
+
+  sntp/sntp.1@1.119 +6 -1
+    cleanup
+
+  sntp/sntp.html@1.119 +17 -0
+    cleanup
+
+ChangeSet@1.2449, 2011-01-11 07:49:54+00:00, stenn@psp-fb1.ntp.org
+  cleanup
+
+  sntp/main.c@1.63 +5 -0
+    cleanup
+
+ChangeSet@1.2448, 2011-01-11 06:43:59+00:00, stenn@psp-fb1.ntp.org
+  cleanup
+
+  sntp/main.c@1.62 +2 -1
+    cleanup
+
+ChangeSet@1.2447, 2011-01-11 05:39:51+00:00, stenn@psp-fb1.ntp.org
+  cleanup
+
+  sntp/main.c@1.61 +1 -1
+    cleanup
+
+ChangeSet@1.2446, 2011-01-11 05:34:29+00:00, stenn@psp-fb1.ntp.org
+  cleanup
+
+  sntp/kod_management.c@1.25 +2 -2
+    cleanup
+
+  sntp/main.c@1.60 +4 -4
+    cleanup
+
+  sntp/networking.c@1.55 +2 -2
+    cleanup
+
+ChangeSet@1.2445, 2011-01-11 05:17:39+00:00, stenn@psp-fb1.ntp.org
+  cleanup
+
+  sntp/main.c@1.59 +205 -101
+    cleanup
+
+ChangeSet@1.2444, 2011-01-11 01:41:18+00:00, stenn@psp-fb1.ntp.org
+  cleanup
+
+  sntp/main.c@1.58 +2 -2
+    cleanup
+
+ChangeSet@1.2443, 2011-01-11 01:32:44+00:00, stenn@psp-fb1.ntp.org
+  cleanup
+
+  sntp/main.c@1.57 +71 -111
+    cleanup
+
+  sntp/sntp-opts.c@1.118 +6 -5
+    cleanup
+
+  sntp/sntp-opts.def@1.22 +3 -0
+    cleanup
+
+  sntp/sntp-opts.h@1.118 +1 -1
+    cleanup
+
+  sntp/sntp-opts.texi@1.118 +9 -1
+    cleanup
+
+  sntp/sntp.1@1.118 +6 -2
+    cleanup
+
+  sntp/sntp.html@1.118 +9 -2
+    cleanup
+
+ChangeSet@1.2442, 2011-01-10 23:45:26+00:00, stenn@psp-fb1.ntp.org
+  debug level cleanup
+
+  sntp/main.c@1.56 +3 -5
+    debug level cleanup
+
+  sntp/networking.c@1.54 +1 -4
+    debug level cleanup
+
+ChangeSet@1.2441, 2011-01-10 23:29:43+00:00, stenn@psp-fb1.ntp.org
+  autogen cleanup, debug level cleanup, add --concurrent support
+
+  sntp/main.c@1.55 +16 -4
+    autogen cleanup, debug level cleanup, add --concurrent support
+
+  sntp/sntp-opts.c@1.117 +134 -29
+    autogen cleanup, debug level cleanup, add --concurrent support
+
+  sntp/sntp-opts.def@1.21 +48 -16
+    autogen cleanup, debug level cleanup, add --concurrent support
+
+  sntp/sntp-opts.h@1.117 +29 -13
+    autogen cleanup, debug level cleanup, add --concurrent support
+
+  sntp/sntp-opts.texi@1.117 +57 -9
+    autogen cleanup, debug level cleanup, add --concurrent support
+
+  sntp/sntp.1@1.117 +28 -6
+    autogen cleanup, debug level cleanup, add --concurrent support
+
+  sntp/sntp.html@1.117 +89 -27
+    autogen cleanup, debug level cleanup, add --concurrent support
+
+ChangeSet@1.2422.1.17, 2011-01-10 11:38:28+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P116
   TAG: NTP_4_2_7P116
 
@@ -2180,19 +4268,19 @@ ChangeSet@1.2439, 2011-01-10 11:38:28+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.118 +1 -1
     NTP_4_2_7P116
 
-  sntp/sntp-opts.c@1.117 +2 -2
+  sntp/sntp-opts.c@1.115.1.2 +2 -2
     NTP_4_2_7P116
 
-  sntp/sntp-opts.h@1.117 +3 -3
+  sntp/sntp-opts.h@1.115.1.2 +3 -3
     NTP_4_2_7P116
 
-  sntp/sntp-opts.texi@1.117 +2 -2
+  sntp/sntp-opts.texi@1.115.1.2 +2 -2
     NTP_4_2_7P116
 
-  sntp/sntp.1@1.117 +2 -2
+  sntp/sntp.1@1.115.1.2 +2 -2
     NTP_4_2_7P116
 
-  sntp/sntp.html@1.117 +2 -2
+  sntp/sntp.html@1.115.1.2 +2 -2
     NTP_4_2_7P116
 
   util/ntp-keygen-opts.c@1.115 +2 -2
@@ -2207,7 +4295,7 @@ ChangeSet@1.2439, 2011-01-10 11:38:28+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.118 +2 -2
     NTP_4_2_7P116
 
-ChangeSet@1.2438, 2011-01-10 00:22:04+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2422.1.16, 2011-01-10 00:22:04+00:00, davehart@shiny.ad.hartbrothers.com
   refclock_nmea.c refactoring by Juergen Perlinger.
 
   ChangeLog@1.768 +1 -0
@@ -2229,7 +4317,7 @@ ChangeSet@1.2254.1.3, 2011-01-09 20:19:31+00:00, davehart@shiny.ad.hartbrothers.
   ntpd/refclock_nmea.c@1.57 +142 -91
     minor style cleanup of Juergen's refactored NMEA driver
 
-ChangeSet@1.2436, 2011-01-09 12:55:33+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2422.1.14, 2011-01-09 12:55:33+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P115
   TAG: NTP_4_2_7P115
 
@@ -2293,19 +4381,19 @@ ChangeSet@1.2436, 2011-01-09 12:55:33+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.117 +1 -1
     NTP_4_2_7P115
 
-  sntp/sntp-opts.c@1.116 +2 -2
+  sntp/sntp-opts.c@1.115.1.1 +2 -2
     NTP_4_2_7P115
 
-  sntp/sntp-opts.h@1.116 +3 -3
+  sntp/sntp-opts.h@1.115.1.1 +3 -3
     NTP_4_2_7P115
 
-  sntp/sntp-opts.texi@1.116 +2 -2
+  sntp/sntp-opts.texi@1.115.1.1 +2 -2
     NTP_4_2_7P115
 
-  sntp/sntp.1@1.116 +2 -2
+  sntp/sntp.1@1.115.1.1 +2 -2
     NTP_4_2_7P115
 
-  sntp/sntp.html@1.116 +2 -2
+  sntp/sntp.html@1.115.1.1 +2 -2
     NTP_4_2_7P115
 
   util/ntp-keygen-opts.c@1.114 +2 -2
@@ -2320,13 +4408,117 @@ ChangeSet@1.2436, 2011-01-09 12:55:33+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.117 +2 -2
     NTP_4_2_7P115
 
-ChangeSet@1.2435, 2011-01-09 02:46:20+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2440, 2011-01-09 12:14:54+00:00, stenn@psp-fb1.ntp.org
+  cleanup
+
+  sntp/kod_management.c@1.24 +6 -12
+    cleanup
+
+  sntp/main.c@1.54 +81 -104
+    cleanup
+
+  sntp/networking.c@1.53 +7 -5
+    cleanup
+
+ChangeSet@1.2439, 2011-01-09 10:34:59+00:00, stenn@psp-fb1.ntp.org
+  cleanup
+
+  sntp/main.c@1.53 +6 -1
+    cleanup
+
+ChangeSet@1.2438, 2011-01-09 10:23:51+00:00, stenn@psp-fb1.ntp.org
+  progress and cleanup
+
+  sntp/main.c@1.52 +15 -77
+    progress and cleanup
+
+  sntp/networking.c@1.52 +38 -63
+    progress and cleanup
+
+ChangeSet@1.2437, 2011-01-09 08:32:33+00:00, stenn@psp-fb1.ntp.org
+  debug cleanup. Use our stock Version string stuff
+
+  sntp/Makefile.am@1.50 +18 -1
+    debug cleanup. Use our stock Version string stuff
+
+  sntp/networking.c@1.51 +13 -8
+    debug cleanup. Use our stock Version string stuff
+
+ChangeSet@1.2436, 2011-01-09 06:52:29+00:00, stenn@psp-fb1.ntp.org
+  Use the same "debug" mechanism that the rest of NTP uses
+
+  sntp/configure.ac@1.54 +16 -0
+    Use the same "debug" mechanism that the rest of NTP uses
+
+  sntp/crypto.c@1.16 +2 -2
+    Use the same "debug" mechanism that the rest of NTP uses
+
+  sntp/kod_management.c@1.23 +1 -1
+    Use the same "debug" mechanism that the rest of NTP uses
+
+  sntp/main.c@1.51 +15 -9
+    Use the same "debug" mechanism that the rest of NTP uses
+
+  sntp/main.h@1.3 +1 -0
+    Use the same "debug" mechanism that the rest of NTP uses
+
+  sntp/networking.c@1.50 +24 -24
+    Use the same "debug" mechanism that the rest of NTP uses
+
+  sntp/sntp-opts.c@1.116 +107 -49
+    Use the same "debug" mechanism that the rest of NTP uses
+
+  sntp/sntp-opts.def@1.20 +1 -12
+    Use the same "debug" mechanism that the rest of NTP uses
+
+  sntp/sntp-opts.h@1.116 +34 -27
+    Use the same "debug" mechanism that the rest of NTP uses
+
+  sntp/sntp-opts.texi@1.116 +35 -12
+    Use the same "debug" mechanism that the rest of NTP uses
+
+  sntp/sntp.1@1.116 +15 -10
+    Use the same "debug" mechanism that the rest of NTP uses
+
+  sntp/sntp.html@1.116 +107 -58
+    Use the same "debug" mechanism that the rest of NTP uses
+
+ChangeSet@1.2435, 2011-01-09 05:00:18+00:00, davehart@shiny.ad.hartbrothers.com
+  ntp_io.c minor cleanup
+  sntp/main.c use sockaddr_u in new code
+
+  ntpd/ntp_io.c@1.347 +2 -2
+    INADDR_ANY is in network order, match IPv6 code
+
+  sntp/main.c@1.50 +31 -33
+    use sockaddr_u, ntp_net.h macros
+    memset() -> ZERO()
+
+ChangeSet@1.2434, 2011-01-09 04:28:36+00:00, stenn@psp-fb1.ntp.org
+  Use sptoa() in various places, so we can see the port #
+
+  sntp/networking.c@1.49 +7 -9
+    Use sptoa() in various places, so we can see the port #
+
+ChangeSet@1.2433, 2011-01-09 03:44:33+00:00, stenn@psp-fb1.ntp.org
+  cleanup
+
+  sntp/main.c@1.49 +54 -25
+    cleanup
+
+ChangeSet@1.2422.1.13, 2011-01-09 02:46:20+00:00, davehart@shiny.ad.hartbrothers.com
   correct ntpq nextvar() warning cleanp
 
   ntpq/ntpq.c@1.130 +2 -2
     min()/max() mixup
 
-ChangeSet@1.2434, 2011-01-08 20:34:39+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2431, 2011-01-09 01:21:24+00:00, stenn@psp-fb1.ntp.org
+  cleanup, and start in on the NTP packet callback
+
+  sntp/main.c@1.47 +63 -34
+    cleanup, and start in on the NTP packet callback
+
+ChangeSet@1.2422.1.12, 2011-01-08 20:34:39+00:00, davehart@shiny.ad.hartbrothers.com
   [Bug 1781] longlong undefined in sntp handle_pkt() on Debian amd64.
   Bump deps-ver and sntp/deps-ver to force each directory to be cleaned once,
     to work around build breaks triggered by changing erealloc() and
@@ -2346,7 +4538,7 @@ ChangeSet@1.2434, 2011-01-08 20:34:39+00:00, davehart@shiny.ad.hartbrothers.com
   ntpq/ntpq.c@1.129 +23 -22
     more gcc 4.5.2 warning hunting
 
-  sntp/Makefile.am@1.48 +1 -1
+  sntp/Makefile.am@1.47.1.1 +1 -1
     let libntp Makefile decide if libntp.a is up to date, fixes
       building in sntp subdir before top level.
 
@@ -2355,13 +4547,13 @@ ChangeSet@1.2434, 2011-01-08 20:34:39+00:00, davehart@shiny.ad.hartbrothers.com
       breaks triggered by changing erealloc() and estrdup() from
       functions to macros.
 
-  sntp/main.c@1.43 +1 -1
+  sntp/main.c@1.41.1.2 +1 -1
     [Bug 1781] longlong undefined in sntp handle_pkt() on Debian amd64.
 
   tests/libntp/Makefile.am@1.27 +1 -1
     @LCRYPTO@ after libntp.a in LDADD
 
-ChangeSet@1.2433, 2011-01-08 10:54:12+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2422.1.11, 2011-01-08 10:54:12+00:00, davehart@shiny.ad.hartbrothers.com
   [Bug 1780] Windows ntpd 4.2.7p114 crashes in ioctl().
 
   ChangeLog@1.765 +1 -0
@@ -2373,7 +4565,7 @@ ChangeSet@1.2433, 2011-01-08 10:54:12+00:00, davehart@shiny.ad.hartbrothers.com
   ntpd/ntp_io.c@1.346 +1 -69
     [Bug 1780] Windows ntpd 4.2.7p114 crashes in ioctl().
 
-ChangeSet@1.2432, 2011-01-08 09:53:03+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2422.1.10, 2011-01-08 09:53:03+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P114
   TAG: NTP_4_2_7P114
 
@@ -2464,7 +4656,7 @@ ChangeSet@1.2432, 2011-01-08 09:53:03+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.116 +2 -2
     NTP_4_2_7P114
 
-ChangeSet@1.2431, 2011-01-08 08:45:17+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2422.1.9, 2011-01-08 08:45:17+00:00, davehart@shiny.ad.hartbrothers.com
   Fix for openssl pkg-config detection eval failure.
     (applies to prior cset)
   Add erealloc_zero(), refactor estrdup(), emalloc(), emalloc_zero() to
@@ -2635,19 +4827,19 @@ ChangeSet@1.2431, 2011-01-08 08:45:17+00:00, davehart@shiny.ad.hartbrothers.com
   ports/winnt/ntpd/ntservice.c@1.26 +1 -1
     memset() -> ZERO()
 
-  sntp/configure.ac@1.52 +3 -42
+  sntp/configure.ac@1.50.1.2 +3 -42
     Move google test detection to m4\ntp_googletest.m4
 
   sntp/tests/Makefile.am@1.18 +4 -4
     put @GTEST_LDFLAGS@ @GTEST_LIBS@ after @LCRYPTO@ in LDADD
 
-ChangeSet@1.2428.1.2, 2011-01-07 17:46:18+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2422.3.2, 2011-01-07 17:46:18+00:00, davehart@shiny.ad.hartbrothers.com
   use tr to deal with trailing newline from pkg-config in ntp_openssl.m4
 
   m4/ntp_openssl.m4@1.13 +4 -6
     use tr to deal with trailing newline from pkg-config in ntp_openssl.m4
 
-ChangeSet@1.2428.1.1, 2011-01-07 15:31:38+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2422.3.1, 2011-01-07 15:31:38+00:00, davehart@shiny.ad.hartbrothers.com
   add libntp/socket.c references to Windows libntp projects.
 
   ports/winnt/vc6/libntp.dsp@1.58 +4 -0
@@ -2662,7 +4854,13 @@ ChangeSet@1.2428.1.1, 2011-01-07 15:31:38+00:00, davehart@shiny.ad.hartbrothers.
   ports/winnt/vs2008/libntp/libntp.vcproj@1.35 +6 -16
     add libntp/socket.c references to Windows libntp projects.
 
-ChangeSet@1.2429, 2011-01-07 11:16:32+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2429, 2011-01-07 11:34:06+00:00, stenn@psp-fb1.ntp.org
+  first cut at key auth and the initial packet send for SNTP
+
+  sntp/main.c@1.46 +83 -1
+    first cut at key auth and the initial packet send
+
+ChangeSet@1.2422.1.7, 2011-01-07 11:16:32+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P113
   TAG: NTP_4_2_7P113
 
@@ -2753,19 +4951,25 @@ ChangeSet@1.2429, 2011-01-07 11:16:32+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.115 +2 -2
     NTP_4_2_7P113
 
-ChangeSet@1.2428, 2011-01-07 04:16:46-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2428, 2011-01-07 09:30:07+00:00, stenn@psp-fb1.ntp.org
+  Handle initial socket creation for sntp
+
+  sntp/main.c@1.45 +27 -5
+    progress
+
+ChangeSet@1.2422.1.6, 2011-01-07 04:16:46-05:00, stenn@deacon.udel.edu
   portability adjustment
 
   include/ntp_io.h@1.20 +2 -1
     portability adjustment
 
-ChangeSet@1.2427, 2011-01-07 04:03:07-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2422.1.5, 2011-01-07 04:03:07-05:00, stenn@deacon.udel.edu
   typo
 
   libntp/socket.c@1.2 +1 -1
     typo
 
-ChangeSet@1.2426, 2011-01-07 03:38:35-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2422.1.4, 2011-01-07 03:38:35-05:00, stenn@deacon.udel.edu
   Begin moving some of the low-level socket stuff to libntp
 
   ChangeLog@1.761 +1 -0
@@ -2793,13 +4997,13 @@ ChangeSet@1.2426, 2011-01-07 03:38:35-05:00, stenn@deacon.udel.edu
   ntpd/ntp_io.c@1.344 +8 -11
     Begin moving some of the low-level socket stuff to libntp
 
-ChangeSet@1.2423.1.1, 2011-01-06 23:06:38-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2422.2.1, 2011-01-06 23:06:38-05:00, stenn@deacon.udel.edu
   If the subject-name begins with @, prefix it with the certname
 
   util/ntp-keygen.c@1.73.1.1 +10 -2
     If the subject-name begins with @, prefix it with the certname
 
-ChangeSet@1.2424, 2011-01-06 20:56:23+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2422.1.2, 2011-01-06 20:56:23+00:00, davehart@shiny.ad.hartbrothers.com
   [Bug 1776] sntp mishandles -t/--timeout and -a/--authentication.
   Default to silent make rules, override with make V=1 or ./configure
     --disable-silent-rules.
@@ -2859,14 +5063,14 @@ ChangeSet@1.2424, 2011-01-06 20:56:23+00:00, davehart@shiny.ad.hartbrothers.com
   ntpq/ntpq.c@1.127 +12 -16
     correct printf format mismatch warnings.
 
-  sntp/configure.ac@1.51 +2 -2
+  sntp/configure.ac@1.50.1.1 +2 -2
     default to silent make rules
 
-  sntp/main.c@1.42 +22 -9
+  sntp/main.c@1.41.1.1 +22 -9
     [Bug 1776] sntp mishandles -t/--timeout and -a/--authentication.
     tighten resolve_hosts 1st arg constness to quiet gcc 4.5.1 warning.
 
-  sntp/networking.c@1.47 +10 -8
+  sntp/networking.c@1.46.1.1 +10 -8
     [Bug 1776] sntp mishandles -t/--timeout and -a/--authentication.
     tighten resolve_hosts 1st arg constness to quiet gcc 4.5.1 warning.
 
@@ -2876,7 +5080,13 @@ ChangeSet@1.2424, 2011-01-06 20:56:23+00:00, davehart@shiny.ad.hartbrothers.com
   util/ntp-keygen.c@1.74 +1 -1
     quiet warning when building without AUTOKEY
 
-ChangeSet@1.2423, 2011-01-06 08:55:50+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2424, 2011-01-06 10:04:48+00:00, stenn@psp-fb1.ntp.org
+  libevent
+
+  sntp/main.c@1.43 +93 -73
+    libevent
+
+ChangeSet@1.2422.1.1, 2011-01-06 08:55:50+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P112
   TAG: NTP_4_2_7P112
 
@@ -2966,6 +5176,31 @@ ChangeSet@1.2423, 2011-01-06 08:55:50+00:00, stenn@deacon.udel.edu
 
   util/ntp-keygen.1@1.114 +2 -2
     NTP_4_2_7P112
+
+ChangeSet@1.2393.1.1, 2011-01-06 07:58:30+00:00, stenn@psp-fb1.ntp.org
+  libevent changes
+
+  m4/ntp_libevent.m4@1.1 +80 -0
+    BitKeeper file /a/etc/amd.stage/thump2-g3/export/ntp/home/stenn/ntp-dev-libevent/m4/ntp_libevent.m4
+
+  m4/ntp_libevent.m4@1.0 +0 -0
+
+  sntp/Makefile.am@1.48 +14 -7
+    libevent changes
+
+  sntp/build-libevent/Makefile.am@1.1 +61 -0
+    BitKeeper file /a/etc/amd.stage/thump2-g3/export/ntp/home/stenn/ntp-dev-libevent/sntp/build-libevent/Makefile.am
+
+  sntp/build-libevent/Makefile.am@1.0 +0 -0
+
+  sntp/configure.ac@1.49.1.1 +8 -0
+    libevent changes
+
+  sntp/main.c@1.42 +252 -53
+    libevent changes
+
+  sntp/networking.c@1.47 +86 -42
+    libevent changes
 
 ChangeSet@1.2422, 2011-01-06 04:43:56+00:00, davehart@shiny.ad.hartbrothers.com
   ./build makes unit tests with V=0 before make check

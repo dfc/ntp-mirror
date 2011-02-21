@@ -54,9 +54,16 @@ DIST_COMMON = README $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
 	$(top_srcdir)/bincheck.mf $(top_srcdir)/depsver.mf
 subdir = util
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
+am__aclocal_m4_deps =  \
+	$(top_srcdir)/sntp/libevent/m4/openldap-thread-check.m4 \
+	$(top_srcdir)/sntp/libevent/m4/openldap.m4 \
+	$(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/m4/define_dir.m4 \
+	$(top_srcdir)/sntp/m4/ntp_bindir.m4 \
 	$(top_srcdir)/sntp/m4/ntp_cacheversion.m4 \
+	$(top_srcdir)/sntp/m4/ntp_compiler.m4 \
+	$(top_srcdir)/sntp/m4/ntp_crosscompile.m4 \
+	$(top_srcdir)/sntp/m4/ntp_debug.m4 \
 	$(top_srcdir)/sntp/m4/ntp_dir_sep.m4 \
 	$(top_srcdir)/sntp/m4/ntp_googletest.m4 \
 	$(top_srcdir)/sntp/m4/ntp_ipv6.m4 \
@@ -64,6 +71,7 @@ am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/m4/ntp_libntp.m4 \
 	$(top_srcdir)/sntp/m4/ntp_lineeditlibs.m4 \
 	$(top_srcdir)/sntp/m4/ntp_openssl.m4 \
+	$(top_srcdir)/sntp/m4/ntp_sntp.m4 \
 	$(top_srcdir)/sntp/m4/ntp_vpathhack.m4 \
 	$(top_srcdir)/sntp/m4/os_cflags.m4 \
 	$(top_srcdir)/sntp/m4/version.m4 $(top_srcdir)/configure.ac
@@ -253,7 +261,9 @@ INSTALL_PROGRAM = @INSTALL_PROGRAM@
 INSTALL_SCRIPT = @INSTALL_SCRIPT@
 INSTALL_STRIP_PROGRAM = @INSTALL_STRIP_PROGRAM@
 LCRYPTO = @LCRYPTO@
+LDADD_LIBNTP = @LDADD_LIBNTP@
 LDFLAGS = @LDFLAGS@
+LIBISC_PTHREADS_NOTHREADS = @LIBISC_PTHREADS_NOTHREADS@
 LIBM = @LIBM@
 LIBOBJS = @LIBOBJS@
 LIBOPTS_CFLAGS = @LIBOPTS_CFLAGS@
@@ -298,6 +308,7 @@ PATH_SH = @PATH_SH@
 PATH_TEST = @PATH_TEST@
 PKG_CONFIG = @PKG_CONFIG@
 PROPDELAY = @PROPDELAY@
+PTHREAD_LIBS = @PTHREAD_LIBS@
 RANLIB = @RANLIB@
 SET_MAKE = @SET_MAKE@
 SHELL = @SHELL@
@@ -366,16 +377,17 @@ top_srcdir = @top_srcdir@
 NULL = 
 AUTOMAKE_OPTIONS = 
 INCLUDES = -I$(top_srcdir)/include -I$(top_srcdir)/lib/isc/include \
-	-I$(top_srcdir)/lib/isc/nothreads/include \
+	-I$(top_srcdir)/lib/isc/@LIBISC_PTHREADS_NOTHREADS@/include \
 	-I$(top_srcdir)/lib/isc/unix/include $(LIBOPTS_CFLAGS)
 AM_CFLAGS = @CFLAGS_NTP@
 AM_CPPFLAGS = @CPPFLAGS_NTP@
 
 # LDADD might need RESLIB and ADJLIB
-LDADD = ../libntp/libntp.a
+LDADD = ../libntp/libntp.a @LDADD_LIBNTP@ @PTHREAD_LIBS@
 tg2_LDADD = $(LIBM)
+ntp_keygen_LDADD = version.o $(LIBOPTS_LDADD) ../libntp/libntp.a \
+	@LDADD_LIBNTP@ @PTHREAD_LIBS@ @LCRYPTO@ $(am__empty)
 ntp_keygen_SOURCES = ntp-keygen.c ntp-keygen-opts.c ntp-keygen-opts.h
-ntp_keygen_LDADD = version.o $(LIBOPTS_LDADD) ../libntp/libntp.a @LCRYPTO@
 ETAGS_ARGS = Makefile.am
 #EXTRA_DIST=	README TAGS
 EXTRA_DIST = ntp-keygen-opts.def ntp-keygen.1 ntp-keygen-opts.texi ntp-keygen-opts.menu
@@ -412,9 +424,9 @@ $(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/bincheck.mf $(top_sr
 	      exit 1;; \
 	  esac; \
 	done; \
-	echo ' cd $(top_srcdir) && $(AUTOMAKE) --foreign util/Makefile'; \
+	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu util/Makefile'; \
 	$(am__cd) $(top_srcdir) && \
-	  $(AUTOMAKE) --foreign util/Makefile
+	  $(AUTOMAKE) --gnu util/Makefile
 .PRECIOUS: Makefile
 Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
 	@case '$?' in \
@@ -902,10 +914,9 @@ $(srcdir)/ntp-keygen-opts.texi: $(srcdir)/ntp-keygen-opts.def $(std_def_list)
 	$(run_ag) -Taginfo.tpl -DLEVEL=section ntp-keygen-opts.def
 	$(top_srcdir)/scripts/check--help $@
 
-check-libntp: FRC
-	cd ../libntp && $(MAKE)
-
 FRC:
+
+check-libntp: FRC ../libntp/libntp.a
 
 ../libntp/libntp.a:
 	cd ../libntp && $(MAKE)
@@ -916,7 +927,9 @@ kern.o: kern.c
 $(top_srcdir)/sntp/version:
 	cd $(top_srcdir)/sntp && $(MAKE) version
 
-version.o: $(ntpq_OBJECTS) ../libntp/libntp.a Makefile $(top_srcdir)/sntp/version
+$(PROGRAMS): version.o
+
+version.o: $(ntp_keygen_OBJECTS) ../libntp/libntp.a Makefile $(top_srcdir)/sntp/version
 	env CSET=`cat $(top_srcdir)/sntp/version` $(top_builddir)/scripts/mkver ntp-keygen
 	$(COMPILE) -c version.c
 

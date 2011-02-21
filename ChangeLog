@@ -1,3 +1,27 @@
+(4.2.7p131) 2011/02/21 Released by Harlan Stenn <stenn@ntp.org>
+* [Bug 1087] -v/--normalverbose conflicts with -v/--version in sntp.
+* [Bug 1088] sntp should (only) report the time difference without -s/-a.
+* older autoconf sometimes dislikes [].
+* Move "can't write KoD file" warning from sntp shutdown to startup.
+* refclock_acts.c cleanup from Dave Mills.
+* Convert sntp to libevent event-driven socket programming.  Instead of
+  blocking name resolution and querying one NTP server at a time,
+  resolve server names and send NTP queries without blocking.  Add
+  sntp command-line options to adjust timing and optionally wait for all
+  servers to respond instead of exiting after the first.
+* Import libevent 2.0.10-stable plus local patches as a tearoff, used
+  only if the target system lacks an installed libevent 2.0.9 or later.
+* Move blocking worker and resolver to libntp from ntpd.
+* Use threads rather than forked child processes for blocking worker
+  when possible.  Override with configure --disable-thread-support.
+* Move init_logging(), change_logfile(), and setup_logfile() from ntpd
+  to libntp, use them in sntp.
+* Test --without-sntp in flock-build script's -no-refclocks variety.
+* Avoid invoking config.status twice in a row in build script.
+* Move more m4sh tests needed by libntp to shared .m4 files.
+* Split up ntp_libntp.m4 into smaller, more specific subsets.
+* Enable gcc -Wcast-align, fix many instances of warnings when casting
+  a pointer to a more-strictly-aligned underlying type.
 (4.2.7p130) 2011/02/12 Released by Harlan Stenn <stenn@ntp.org>
 * [Bug 1811] Update the download location in WHERE-TO-START.
 (4.2.7p129) 2011/02/09 Released by Harlan Stenn <stenn@ntp.org>

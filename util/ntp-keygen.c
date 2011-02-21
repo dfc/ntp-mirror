@@ -88,12 +88,12 @@
 #include <sys/stat.h>
 #include <sys/time.h>
 #include <sys/types.h>
-#include "ntp_types.h"
+
 #include "ntp_random.h"
 #include "ntp_stdlib.h"
 #include "ntp_assert.h"
-
 #include "ntp_libopts.h"
+#include "ntp_unixtime.h"
 #include "ntp-keygen-opts.h"
 
 #ifdef OPENSSL
@@ -112,7 +112,6 @@
  */
 #define	MD5KEYS		10	/* number of keys generated of each type */
 #define	MD5SIZE		20	/* maximum key size */
-#define	JAN_1970	2208988800UL /* NTP seconds */
 #define DAY		((long)60*60*24) /* one day in seconds */
 #define	YEAR		((long)365) /* one year in days */
 #define MAXFILENAME	256	/* max file name length */

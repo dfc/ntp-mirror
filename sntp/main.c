@@ -1,73 +1,183 @@
 #include <config.h>
 
+#include <event2/util.h>
+#include <event2/event.h>
+
 #include "main.h"
+#include "ntp_libopts.h"
 #include "kod_management.h"
 #include "networking.h"
 #include "utilities.h"
 #include "log.h"
+#include "libntp.h"
 
+
+int shutting_down;
+int time_derived;
+int time_adjusted;
+int n_pending_dns = 0;
+int n_pending_ntp = 0;
 int ai_fam_pref = AF_UNSPEC;
+int ntpver = 4;
+double steplimit = -1;
+SOCKET sock4 = -1;		/* Socket for IPv4 */
+SOCKET sock6 = -1;		/* Socket for IPv6 */
+/*
+** BCAST *must* listen on port 123 (by default), so we can only
+** use the UCST sockets (above) if they too are using port 123
+*/
+SOCKET bsock4 = -1;		/* Broadcast Socket for IPv4 */
+SOCKET bsock6 = -1;		/* Broadcast Socket for IPv6 */
+struct event_base *base;
+struct event *ev_sock4;
+struct event *ev_sock6;
+struct event *ev_worker_timeout;
+struct event *ev_xmt_timer;
 
-struct key *keys = NULL;
+struct dns_ctx {
+	const char *	name;
+	int		flags;
+#define CTX_BCST	0x0001
+#define CTX_UCST	0x0002
+#define CTX_CONC	0x0004
+#define CTX_unused	0xfffd
+	int		key_id;
+	struct timeval	timeout;
+	struct key *	key;
+};
 
-void set_li_vn_mode (struct pkt *spkt, char leap, char version, char mode); 
-int sntp_main (int argc, char **argv);
-int on_wire (struct addrinfo *host, struct addrinfo *bcastaddr);
-int set_time (double offset);
+typedef struct sent_pkt_tag sent_pkt;
+struct sent_pkt_tag {
+	sent_pkt *		link;
+	struct dns_ctx *	dctx;
+	sockaddr_u		addr;
+	time_t			stime;
+	int			done;
+	struct pkt		x_pkt;
+};
 
-#define NORMALIZE_TIMEVAL(tv)				\
-do {							\
-	while ((tv).tv_usec < 0) {			\
-		(tv).tv_usec += 1000000;		\
-		(tv).tv_sec--;				\
-	}						\
-	while ((tv).tv_usec > 999999) {			\
-		(tv).tv_usec -= 1000000;		\
-		(tv).tv_sec++;				\
-	}						\
-} while (0)
+typedef struct xmt_ctx_tag xmt_ctx;
+struct xmt_ctx_tag {
+	xmt_ctx *		link;
+	SOCKET			sock;
+	time_t			sched;
+	sent_pkt *		spkt;
+};
+
+struct timeval	headspace;
+xmt_ctx *	xmt_q;
+struct key *	keys = NULL;
+struct timeval	bcst_timeout_tv;
+int		ucst_timeout;
+/* check the timeout at least once per second */
+struct timeval	ucst_wakeup_tv = { 0, 888888 };
+
+sent_pkt *	fam_listheads[2];
+#define v4_pkts_list	(fam_listheads[0])
+#define v6_pkts_list	(fam_listheads[1])
+
+static union {
+	struct pkt pkt;
+	char   buf[1500];
+} rbuf;
+
+#define r_pkt  rbuf.pkt
+
+#ifdef HAVE_DROPROOT
+int droproot;			/* intres imports these */
+int root_dropped;
+#endif
+
+void open_sockets(void);
+void handle_lookup(const char *name, int flags);
+void sntp_addremove_fd(int fd, int is_pipe, int remove_it);
+void worker_timeout(evutil_socket_t, short, void *);
+void worker_resp_cb(evutil_socket_t, short, void *);
+void sntp_name_resolved(int, int, void *, const char *, const char *,
+			const struct addrinfo *,
+			const struct addrinfo *);
+void queue_xmt(SOCKET sock, struct dns_ctx *dctx, sent_pkt *spkt,
+	       u_int xmt_delay);
+void xmt_timer_cb(evutil_socket_t, short, void *ptr);
+void xmt(xmt_ctx *xctx);
+int  check_kod(const struct addrinfo *ai);
+void timeout_query(sent_pkt *);
+void timeout_queries(void);
+void sock_cb(evutil_socket_t, short, void *);
+void check_exit_conditions(void);
+void sntp_libevent_log_cb(int, const char *);
+void set_li_vn_mode(struct pkt *spkt, char leap, char version, char mode);
+int  sntp_main(int argc, char **argv);
+int  set_time(double offset);
+int  libevent_version_ok(void);
+int  gettimeofday_cached(struct event_base *b, struct timeval *tv);
 
 
 /*
  * The actual main function.
  */
-int  
+int
 sntp_main (
-	int argc, 
+	int argc,
 	char **argv
-	) 
+	)
 {
-	register int c;
-	struct kod_entry *reason = NULL;
-	int optct;
-	/* boolean, u_int quiets gcc4 signed overflow warning */
-	u_int sync_data_suc;
-	struct addrinfo **bcastaddr = NULL;
-	struct addrinfo **resh = NULL;
-	struct addrinfo *ai;
-	int resc;
-	int kodc;
-	int ow_ret;
-	int bcast = 0;
-	char *hostname;
+	int			i;
+	int			exitcode;
+	int			optct;
+	struct event_config *	evcfg;
 
-	optct = optionProcess(&sntpOptions, argc, argv);
+	/* Initialize logging system - sets up progname */
+	sntp_init_logging(argv[0]);
+
+	if (!libevent_version_ok())
+		exit(EX_SOFTWARE);
+
+	init_lib();
+	DPRINTF(2, ("init_lib() done, %s%s\n",
+		(ipv4_works)
+		    ? "ipv4_works "
+		    : "",
+		(ipv6_works)
+		    ? "ipv6_works "
+		    : ""));
+
+	optct = ntpOptionProcess(&sntpOptions, argc, argv);
 	argc -= optct;
-	argv += optct; 
+	argv += optct;
 
-	/* Initialize logging system */
-	init_logging();
+	debug = DESC(DEBUG_LEVEL).optOccCt;
+	DPRINTF(1, ("%s\n", Version));
+
+	ntpver = OPT_VALUE_NTPVERSION;
+	steplimit = OPT_VALUE_STEPLIMIT / 1e3;
+	headspace.tv_usec = max(0, OPT_VALUE_HEADSPACE * 1000);
+	headspace.tv_usec = min(headspace.tv_usec, 999999);
+
 	if (HAVE_OPT(FILELOG))
 		open_logfile(OPT_ARG(FILELOG));
 
-	msyslog(LOG_NOTICE, "Started sntp");
+	if (0 == argc && !HAVE_OPT(BROADCAST) && !HAVE_OPT(CONCURRENT)) {
+		printf("%s: Must supply at least one of -b hostname, -c hostname, or hostname.\n",
+		       progname);
+		exit(EX_USAGE);
+	}
+
+
+	/*
+	** Eventually, we probably want:
+	** - separate bcst and ucst timeouts
+	** - multiple --timeout values in the commandline
+	*/
+	bcst_timeout_tv.tv_sec = OPT_VALUE_BCTIMEOUT;
+	bcst_timeout_tv.tv_usec = 0;
+
+	ucst_timeout = OPT_VALUE_UCTIMEOUT;
 
 	/* IPv6 available? */
 	if (isc_net_probeipv6() != ISC_R_SUCCESS) {
 		ai_fam_pref = AF_INET;
-#ifdef DEBUG
-		printf("No ipv6 support available, forcing ipv4\n");
-#endif
+		DPRINTF(1, ("No ipv6 support available, forcing ipv4\n"));
 	} else {
 		/* Check for options -4 and -6 */
 		if (HAVE_OPT(IPV4))
@@ -76,92 +186,846 @@ sntp_main (
 			ai_fam_pref = AF_INET6;
 	}
 
-	/* Parse config file if declared TODO */
+	/* TODO: Parse config file if declared */
 
-	/* 
-	 * If there's a specified KOD file init KOD system.  If not use
-	 * default file.  For embedded systems with no writable
-	 * filesystem, -K /dev/null can be used to disable KoD storage.
-	 */
-	if (HAVE_OPT(KOD))
-		kod_init_kod_db(OPT_ARG(KOD));
-	else
-		kod_init_kod_db("/var/db/ntp-kod");
+	/*
+	** Init the KOD system.
+	** For embedded systems with no writable filesystem,
+	** -K /dev/null can be used to disable KoD storage.
+	*/
+	kod_init_kod_db(OPT_ARG(KOD), FALSE);
 
+	// HMS: Should we use arg-defalt for this too?
 	if (HAVE_OPT(KEYFILE))
 		auth_init(OPT_ARG(KEYFILE), &keys);
 
-#ifdef EXERCISE_KOD_DB
-	add_entry("192.168.169.170", "DENY");
-	add_entry("192.168.169.171", "DENY");
-	add_entry("192.168.169.172", "DENY");
-	add_entry("192.168.169.173", "DENY");
-	add_entry("192.168.169.174", "DENY");
-	delete_entry("192.168.169.174", "DENY");
-	delete_entry("192.168.169.172", "DENY");
-	delete_entry("192.168.169.170", "DENY");
-	if ((kodc = search_entry("192.168.169.173", &reason)) == 0)
-		printf("entry for 192.168.169.173 not found but should have been!\n");
-	else
-		free(reason);
-#endif
-
-	/* Considering employing a variable that prevents functions of doing anything until 
-	 * everything is initialized properly 
-	 */
-	resc = resolve_hosts((const char * const *)argv, argc, &resh,
-			     ai_fam_pref);
-	if (resc < 1) {
-		printf("Unable to resolve hostname(s)\n");
+	/*
+	** Considering employing a variable that prevents functions of doing
+	** anything until everything is initialized properly
+	**
+	** HMS: What exactly does the above mean?
+	*/
+	event_set_log_callback(&sntp_libevent_log_cb);
+	if (debug > 0)
+		event_enable_debug_mode();
+	evcfg = event_config_new();
+	if (NULL == evcfg) {
+		printf("%s: event_config_new() failed!\n", progname);
 		return -1;
 	}
-	bcast = ENABLED_OPT(BROADCAST);
-	if (bcast) {
-		const char * myargv[2];
-
-		myargv[0] = OPT_ARG(BROADCAST);
-		myargv[1] = NULL;
-		bcast = resolve_hosts(myargv, 1, &bcastaddr,
-				      ai_fam_pref);
+#ifndef HAVE_SOCKETPAIR
+	event_config_require_features(evcfg, EV_FEATURE_FDS);
+#endif
+	base = event_base_new_with_config(evcfg);
+	event_config_free(evcfg);
+	if (NULL == base) {
+		printf("%s: event_base_new() failed!\n", progname);
+		return -1;
 	}
 
-	/* Select a certain ntp server according to simple criteria? For now
-	 * let's just pay attention to previous KoDs.
-	 */
-	sync_data_suc = FALSE;
-	for (c = 0; c < resc && !sync_data_suc; c++) {
-		ai = resh[c];
-		do {
-			hostname = addrinfo_to_str(ai);
-			if ((kodc = search_entry(hostname, &reason)) == 0) {
-				if (is_reachable(ai)) {
-					ow_ret = on_wire(ai, bcast ? bcastaddr[0] : NULL);
-					if (0 == ow_ret)
-						sync_data_suc = TRUE;
-				}
-			} else {
-				printf("%d prior KoD%s for %s, skipping.\n", 
-					kodc, (kodc > 1) ? "s" : "", hostname);
-				free(reason);
+	/* wire into intres resolver */
+	worker_per_query = TRUE;
+	addremove_io_fd = &sntp_addremove_fd;
+
+	open_sockets();
+
+	if (HAVE_OPT(BROADCAST)) {
+		int		cn = STACKCT_OPT(  BROADCAST );
+		const char **	cp = STACKLST_OPT( BROADCAST );
+
+		while (cn-- > 0) {
+			handle_lookup(*cp, CTX_BCST);
+			cp++;
+		}
+	}
+
+	if (HAVE_OPT(CONCURRENT)) {
+		int		cn = STACKCT_OPT( CONCURRENT );
+		const char **	cp = STACKLST_OPT( CONCURRENT );
+
+		while (cn-- > 0) {
+			handle_lookup(*cp, CTX_UCST | CTX_CONC);
+			cp++;
+		}
+	}
+
+	for (i = 0; i < argc; ++i)
+		handle_lookup(argv[i], CTX_UCST);
+
+	event_base_dispatch(base);
+	event_base_free(base);
+
+	if (!time_adjusted &&
+	    (ENABLED_OPT(STEP) || ENABLED_OPT(SLEW)))
+		exitcode = 1;
+	else
+		exitcode = 0;
+
+	return exitcode;
+}
+
+
+/*
+** open sockets and make them non-blocking
+*/
+void
+open_sockets(
+	void
+	)
+{
+	sockaddr_u	name;
+	int		one_fam_works;
+
+	one_fam_works = FALSE;
+	if (-1 == sock4) {
+		sock4 = socket(PF_INET, SOCK_DGRAM, 0);
+		if (-1 == sock4) {
+			/* error getting a socket */
+			msyslog(LOG_ERR, "open_sockets: socket(PF_INET) failed: %m");
+			exit(1);
+		}
+		/* Make it non-blocking */
+		make_socket_nonblocking(sock4);
+
+		/* Let's try using a wildcard... */
+		ZERO(name);
+		AF(&name) = AF_INET;
+		SET_ADDR4N(&name, INADDR_ANY);
+		SET_PORT(&name, (HAVE_OPT(USERESERVEDPORT) ? 123 : 0));
+
+		if (-1 == bind(sock4, &name.sa,
+			       SOCKLEN(&name))) {
+			msyslog(LOG_ERR, "open_sockets: bind(sock4) failed: %m");
+			exit(1);
+		}
+
+		/* Register an NTP callback for recv/timeout */
+		ev_sock4 = event_new(base, sock4,
+				     EV_TIMEOUT | EV_READ | EV_PERSIST,
+				     &sock_cb, NULL);
+		if (NULL == ev_sock4) {
+			msyslog(LOG_ERR,
+				"open_sockets: event_new(base, sock4) failed!");
+		} else {
+			one_fam_works = TRUE;
+			event_add(ev_sock4, &ucst_wakeup_tv);
+		}
+	}
+
+	/* We may not always have IPv6... */
+	if (-1 == sock6 && ipv6_works) {
+		sock6 = socket(PF_INET6, SOCK_DGRAM, 0);
+		if (-1 == sock6 && ipv6_works) {
+			/* error getting a socket */
+			msyslog(LOG_ERR, "open_sockets: socket(PF_INET6) failed: %m");
+			exit(1);
+		}
+		/* Make it non-blocking */
+		make_socket_nonblocking(sock6);
+
+		/* Let's try using a wildcard... */
+		ZERO(name);
+		AF(&name) = AF_INET6;
+		SET_ADDR6N(&name, in6addr_any);
+		SET_PORT(&name, (HAVE_OPT(USERESERVEDPORT) ? 123 : 0));
+
+		if (-1 == bind(sock6, &name.sa,
+			       SOCKLEN(&name))) {
+			msyslog(LOG_ERR, "open_sockets: bind(sock6) failed: %m");
+			exit(1);
+		}
+		/* Register an NTP callback for recv/timeout */
+		ev_sock6 = event_new(base, sock6,
+				     EV_TIMEOUT | EV_READ | EV_PERSIST,
+		 		     &sock_cb, NULL);
+		if (NULL == ev_sock6) {
+			msyslog(LOG_ERR,
+				"open_sockets: event_new(base, sock6) failed!");
+		} else {
+			one_fam_works = TRUE;
+			event_add(ev_sock6, &ucst_wakeup_tv);
+		}
+	}
+	
+	return;
+}
+
+
+/*
+** handle_lookup
+*/
+void
+handle_lookup(
+	const char *name,
+	int flags
+	)
+{
+	struct addrinfo	hints;	/* Local copy is OK */
+	struct dns_ctx *ctx;
+	long		l;
+	char *		name_copy;
+	size_t		name_sz;
+	size_t		octets;
+
+	DPRINTF(1, ("handle_lookup(%s,%#x)\n", name, flags));
+
+	ZERO(hints);
+	hints.ai_family = ai_fam_pref;
+	hints.ai_flags = AI_CANONNAME | Z_AI_NUMERICSERV;
+	/*
+	** Unless we specify a socktype, we'll get at least two
+	** entries for each address: one for TCP and one for
+	** UDP. That's not what we want.
+	*/
+	hints.ai_socktype = SOCK_DGRAM;
+	hints.ai_protocol = IPPROTO_UDP;
+
+	name_sz = 1 + strlen(name);
+	octets = sizeof(*ctx) + name_sz;
+	ctx = emalloc_zero(octets);
+	name_copy = (char *)(ctx + 1);
+	memcpy(name_copy, name, name_sz);
+	ctx->name = name_copy;
+	ctx->flags = flags;
+	ctx->timeout = (CTX_BCST & flags)
+			   ? bcst_timeout_tv
+			   : ucst_wakeup_tv;
+
+	/* The following should arguably be passed in... */
+	if (ENABLED_OPT(AUTHENTICATION) &&
+	    atoint(OPT_ARG(AUTHENTICATION), &l)) {
+		ctx->key_id = l;
+		get_key(ctx->key_id, &ctx->key);
+	} else {
+		ctx->key_id = -1;
+		ctx->key = NULL;
+	}
+
+	++n_pending_dns;
+	getaddrinfo_sometime(name, "123", &hints, 0,
+			     &sntp_name_resolved, ctx);
+}
+
+
+/*
+** DNS Callback:
+** - For each IP:
+** - - open a socket
+** - - increment n_pending_ntp
+** - - send a request if this is a Unicast callback
+** - - queue wait for response
+** - decrement n_pending_dns
+*/
+void
+sntp_name_resolved(
+	int			rescode,
+	int			gai_errno,
+	void *			context,
+	const char *		name,
+	const char *		service,
+	const struct addrinfo *	hints,
+	const struct addrinfo *	addr
+	)
+{
+	struct dns_ctx *	dctx;
+	sent_pkt *		spkt;
+	const struct addrinfo *	ai;
+	SOCKET			sock;
+	u_int			xmt_delay_v4;
+	u_int			xmt_delay_v6;
+	u_int			xmt_delay;
+	size_t			octets;
+
+	xmt_delay_v4 = 0;
+	xmt_delay_v6 = 0;
+	dctx = context;
+	if (rescode) {
+#ifdef EAI_SYSTEM
+		if (EAI_SYSTEM == rescode) {
+			errno = gai_errno;
+			mfprintf(stderr, "%s lookup error %m\n",
+				 dctx->name);
+		} else
+#endif
+			fprintf(stderr, "%s lookup error %s\n",
+				dctx->name, gai_strerror(rescode));
+	} else {
+		DPRINTF(3, ("%s [%s]\n", dctx->name,
+			(addr->ai_canonname != NULL)
+			    ? addr->ai_canonname
+			    : ""));
+
+		for (ai = addr; ai != NULL; ai = ai->ai_next) {
+
+			if (check_kod(ai))
+				continue;
+
+			switch (ai->ai_family) {
+
+			case AF_INET:
+				sock = sock4;
+				xmt_delay = xmt_delay_v4;
+				xmt_delay_v4++;
+				break;
+
+			case AF_INET6:
+				if (!ipv6_works)
+					continue;
+
+				sock = sock6;
+				xmt_delay = xmt_delay_v6;
+				xmt_delay_v6++;
+				break;
+
+			default:
+				msyslog(LOG_ERR, "sntp_name_resolved: unexpected ai_family: %d",
+					ai->ai_family);
+				exit(1);
+				break;
 			}
-			free(hostname);
-			ai = ai->ai_next;
-		} while (NULL != ai);
-		freeaddrinfo(resh[c]);
-	}
-	free(resh);
 
-	if (!sync_data_suc)
+			spkt = emalloc_zero(sizeof(*spkt));
+			spkt->dctx = dctx;
+			octets = min(ai->ai_addrlen, sizeof(spkt->addr));
+			memcpy(&spkt->addr, ai->ai_addr, octets);
+
+			/*
+			** We're waiting for a response for either unicast
+			** or broadcast, so...
+			*/
+			++n_pending_ntp;
+
+			/* If this is for a unicast IP, queue a request */
+			if (dctx->flags & CTX_UCST)
+				queue_xmt(sock, dctx, spkt, xmt_delay);
+		}
+	}
+	/* n_pending_dns really should be >0 here... */
+	--n_pending_dns;
+	check_exit_conditions();
+}
+
+
+/*
+** queue_xmt
+*/
+void
+queue_xmt(
+	SOCKET			sock,
+	struct dns_ctx *	dctx,
+	sent_pkt *		spkt,
+	u_int			xmt_delay
+	)
+{
+	sockaddr_u *	dest;
+	sent_pkt **	pkt_listp;
+	xmt_ctx *	xctx;
+	struct timeval	start_cb;
+	struct timeval	delay;
+
+	dest = &spkt->addr;
+	if (IS_IPV6(dest))
+		pkt_listp = &v6_pkts_list;
+	else
+		pkt_listp = &v4_pkts_list;
+
+	LINK_SLIST(*pkt_listp, spkt, link);	
+
+	xctx = emalloc_zero(sizeof(*xctx));
+	xctx->sock = sock;
+	xctx->spkt = spkt;
+	gettimeofday_cached(base, &start_cb);
+	xctx->sched = start_cb.tv_sec + (2 * xmt_delay);
+
+	LINK_SORT_SLIST(xmt_q, xctx, (xctx->sched < L_S_S_CUR()->sched),
+			link, xmt_ctx);
+	if (xmt_q == xctx) {
+		/*
+		 * The new entry is the first scheduled.  The timer is
+		 * either not active or is set for the second xmt
+		 * context in xmt_q.
+		 */
+		if (NULL == ev_xmt_timer)
+			ev_xmt_timer = event_new(base, INVALID_SOCKET,
+						 EV_TIMEOUT,
+						 &xmt_timer_cb, NULL);
+		if (NULL == ev_xmt_timer) {
+			msyslog(LOG_ERR,
+				"queue_xmt: event_new(base, -1, EV_TIMEOUT) failed!");
+			exit(1);
+		}
+		ZERO(delay);
+		if (xctx->sched > start_cb.tv_sec)
+			delay.tv_sec = xctx->sched - start_cb.tv_sec;
+		event_add(ev_xmt_timer, &delay);
+		DPRINTF(2, ("queue_xmt: xmt timer for %u usec\n",
+			(u_int)delay.tv_usec));
+	}
+}
+
+
+/*
+** xmt_timer_cb
+*/
+void
+xmt_timer_cb(
+	evutil_socket_t	fd,
+	short		what,
+	void *		ctx
+	)
+{
+	struct timeval	start_cb;
+	struct timeval	delay;
+	xmt_ctx *	x;
+
+	UNUSED_ARG(fd);
+	UNUSED_ARG(ctx);
+	DEBUG_INSIST(EV_TIMEOUT == what);
+
+	if (NULL == xmt_q || shutting_down)
+		return;
+	gettimeofday_cached(base, &start_cb);
+	if (xmt_q->sched <= start_cb.tv_sec) {
+		UNLINK_HEAD_SLIST(x, xmt_q, link);
+		DPRINTF(2, ("xmt_timer_cb: at .%6.6u -> %s",
+			(u_int)start_cb.tv_usec, stoa(&x->spkt->addr)));
+		xmt(x);
+		free(x);
+		if (NULL == xmt_q)
+			return;
+	}
+	if (xmt_q->sched <= start_cb.tv_sec) {
+		event_add(ev_xmt_timer, &headspace);
+		DPRINTF(2, ("xmt_timer_cb: at .%6.6u headspace %6.6u\n",
+			(u_int)start_cb.tv_usec,
+			(u_int)headspace.tv_usec));
+	} else {
+		delay.tv_sec = xmt_q->sched - start_cb.tv_sec;
+		delay.tv_usec = 0;
+		event_add(ev_xmt_timer, &delay);
+		DPRINTF(2, ("xmt_timer_cb: at .%6.6u next %ld seconds\n",
+			(u_int)start_cb.tv_usec,
+			(long)delay.tv_sec));
+	}
+}
+
+
+/*
+** xmt()
+*/
+void
+xmt(
+	xmt_ctx *	xctx
+	)
+{
+	SOCKET		sock = xctx->sock;
+	struct dns_ctx *dctx = xctx->spkt->dctx;
+	sent_pkt *	spkt = xctx->spkt;
+	sockaddr_u *	dst = &spkt->addr;
+	struct timeval	tv_xmt;
+	struct pkt	x_pkt;
+	int		pkt_len;
+
+	if (0 != GETTIMEOFDAY(&tv_xmt, NULL)) {
+		msyslog(LOG_ERR,
+			"xmt: gettimeofday() failed: %m");
+		exit(1);
+	}
+	tv_xmt.tv_sec += JAN_1970;
+
+	pkt_len = generate_pkt(&x_pkt, &tv_xmt, dctx->key_id,
+			       dctx->key);
+
+	/* The current sendpkt does not return status */
+	sendpkt(sock, dst, &x_pkt, pkt_len);
+	/* Save the packet we sent... */
+	memcpy(&spkt->x_pkt, &x_pkt, min(sizeof(spkt->x_pkt), pkt_len));
+	spkt->stime = tv_xmt.tv_sec - JAN_1970;
+
+	DPRINTF(2, ("xmt: %lu.%6.6u %s %s\n", (u_long)tv_xmt.tv_sec,
+		(u_int)tv_xmt.tv_usec, dctx->name, stoa(dst)));
+
+	/*
+	** If the send fails:
+	** - decrement n_pending_ntp
+	** - restart the loop
+	*/
+
+	return;
+}
+
+
+/*
+ * timeout_queries()  -- give up on unrequited NTP queries
+ */
+void
+timeout_queries(void)
+{
+	struct timeval	start_cb;
+	u_int		idx;
+	sent_pkt *	head;
+	sent_pkt *	spkt;
+	sent_pkt *	spkt_next;
+	long		age;
+
+	gettimeofday_cached(base, &start_cb);
+	for (idx = 0; idx < COUNTOF(fam_listheads); idx++) {
+		head = fam_listheads[idx];
+		for (spkt = head; spkt != NULL; spkt = spkt_next) {
+			spkt_next = spkt->link;
+			if (0 == spkt->stime || spkt->done)
+				continue;
+			age = start_cb.tv_sec - spkt->stime;
+			DPRINTF(3, ("%s %s age %ld\n", stoa(&spkt->addr),
+				spkt->dctx->name, age));
+			if (age > ucst_timeout)
+				timeout_query(spkt);
+		}
+	}
+}
+
+
+void timeout_query(
+	sent_pkt *	spkt
+	)
+{
+	sockaddr_u *	server;
+
+	spkt->done = TRUE;
+	server = &spkt->addr;
+	msyslog(LOG_NOTICE, "%s %s no response after %d seconds",
+		spkt->dctx->name, stoa(server), ucst_timeout);
+	if (n_pending_ntp > 0) {
+		--n_pending_ntp;
+		check_exit_conditions();
+	} else {
+		INSIST(0 == n_pending_ntp);
+		DPRINTF(1, ("n_pending_ntp reached zero before dec for %s %s\n",
+			spkt->dctx->name, stoa(server)));
+	}
+}
+
+
+/*
+** check_kod
+*/
+int
+check_kod(
+	const struct addrinfo *	ai
+	)
+{
+	char *hostname;
+	struct kod_entry *reason;
+
+	/* Is there a KoD on file for this address? */
+	hostname = addrinfo_to_str(ai);
+	DPRINTF(2, ("check_kod: checking <%s>\n", hostname));
+	if (search_entry(hostname, &reason)) {
+		printf("prior KoD for %s, skipping.\n",
+			hostname);
+		free(reason);
+		free(hostname);
+
 		return 1;
+	}
+	free(hostname);
+
 	return 0;
 }
 
-static union {
-	struct pkt pkt;
-	char   buf[1500];
-} rbuf;
 
-#define r_pkt  rbuf.pkt
+/*
+** Socket readable/timeout Callback:
+** Read in the packet
+** Unicast:
+** - close socket
+** - decrement n_pending_ntp
+** - If packet is good, set the time and "exit"
+** Broadcast:
+** - If packet is good, set the time and "exit"
+*/
+void
+sock_cb(
+	evutil_socket_t fd,
+	short what,
+	void *ptr
+	)
+{
+	sockaddr_u	sender;
+	sockaddr_u *	psau;
+	sent_pkt *	pktlist;
+	sent_pkt *	spkt;
+	int		rpktl;
+	int		rc;
+
+	INSIST(sock4 == fd || sock6 == fd);
+	DPRINTF(3, ("sock_cb: event on sock%s:%s%s%s%s [UCST]\n",
+		(fd == sock6)
+		    ? "6"
+		    : "4",
+		(what & EV_TIMEOUT) ? " timeout" : "",
+		(what & EV_READ)    ? " read" : "",
+		(what & EV_WRITE)   ? " write" : "",
+		(what & EV_SIGNAL)  ? " signal" : ""));
+
+	if (!(EV_READ & what)) {
+		if (EV_TIMEOUT & what)
+			timeout_queries();
+
+		return;
+	}
+
+	/* Read in the packet */
+	rpktl = recvdata(fd, &sender, &r_pkt, sizeof(rbuf));
+	if (rpktl < 0) {
+		msyslog(LOG_DEBUG, "recvfrom error %m");
+		return;
+	}
+
+	if (sock6 == fd)
+		pktlist = v6_pkts_list;
+	else
+		pktlist = v4_pkts_list;
+
+	for (spkt = pktlist; spkt != NULL; spkt = spkt->link) {
+		psau = &spkt->addr;
+		if (SOCK_EQ(&sender, psau))
+			break;
+	}
+	if (NULL == spkt) {
+		msyslog(LOG_WARNING,
+			"Packet from unexpected source %s dropped",
+			sptoa(&sender));
+		return;
+	}
+
+	DPRINTF(1, ("sock_cb: %s %s\n", spkt->dctx->name,
+		sptoa(&sender)));
+
+	rpktl = process_pkt(&r_pkt, &sender, rpktl, MODE_SERVER,
+			    &spkt->x_pkt, "sock_cb");
+
+	DPRINTF(2, ("sock_cb: process_pkt returned %d\n", rpktl));
+
+	/* If this is a Unicast packet, one down ... */
+	if (!spkt->done && CTX_UCST & spkt->dctx->flags) {
+		if (n_pending_ntp > 0) {
+			--n_pending_ntp;
+		} else {
+			INSIST(0 == n_pending_ntp);
+			DPRINTF(1, ("n_pending_ntp reached zero before dec for %s %s\n",
+				spkt->dctx->name, stoa(&sender)));
+		}
+		spkt->done = TRUE;
+	}
+
+
+	/* If the packet is good, set the time and we're all done */
+	rc = handle_pkt(rpktl, &r_pkt, &spkt->addr, spkt->dctx->name);
+	if (0 != rc)
+		DPRINTF(1, ("sock_cb: handle_pkt() returned %d\n", rc));
+	check_exit_conditions();
+}
+
+
+/*
+ * check_exit_conditions()
+ *
+ * If sntp has a reply, ask the event loop to stop after this round of
+ * callbacks, unless --wait was used.
+ */
+void
+check_exit_conditions(void)
+{
+	if ((0 == n_pending_ntp && 0 == n_pending_dns) ||
+	    (time_derived && !HAVE_OPT(WAIT))) {
+		event_base_loopexit(base, NULL);
+		shutting_down = TRUE;
+	} else {
+		DPRINTF(2, ("%d NTP and %d name queries pending\n",
+			    n_pending_ntp, n_pending_dns));
+	}
+}
+
+
+/*
+ * sntp_addremove_fd() is invoked by the intres blocking worker code
+ * to read from a pipe, or to stop same.
+ */
+void sntp_addremove_fd(
+	int	fd,
+	int	is_pipe,
+	int	remove_it
+	)
+{
+	u_int		idx;
+	blocking_child *c;
+	struct event *	ev;
+
+#ifdef HAVE_SOCKETPAIR
+	if (is_pipe) {
+		/* sntp only asks for EV_FEATURE_FDS without HAVE_SOCKETPAIR */
+		msyslog(LOG_ERR, "fatal: pipes not supported on systems with socketpair()");
+		exit(1);
+	}
+#endif
+
+	c = NULL;
+	for (idx = 0; idx < blocking_children_alloc; idx++) {
+		c = blocking_children[idx];
+		if (NULL == c)
+			continue;
+		if (fd == c->resp_read_pipe)
+			break;
+	}
+	if (idx == blocking_children_alloc)
+		return;
+
+	if (remove_it) {
+		ev = c->resp_read_ctx;
+		c->resp_read_ctx = NULL;
+		event_del(ev);
+		event_free(ev);
+
+		return;
+	}
+
+	ev = event_new(base, fd, EV_READ | EV_PERSIST,
+		       &worker_resp_cb, c);
+	if (NULL == ev) {
+		msyslog(LOG_ERR,
+			"sntp_addremove_fd: event_new(base, fd) failed!");
+		return;
+	}
+	c->resp_read_ctx = ev;
+	event_add(ev, NULL);
+}
+
+
+/* called by forked intres child to close open descriptors */
+#ifdef WORK_FORK
+void
+kill_asyncio(
+	int	startfd
+	)
+{
+	if (INVALID_SOCKET != sock4) {
+		closesocket(sock4);
+		sock4 = INVALID_SOCKET;
+	}
+	if (INVALID_SOCKET != sock6) {
+		closesocket(sock6);
+		sock6 = INVALID_SOCKET;
+	}
+	if (INVALID_SOCKET != bsock4) {
+		closesocket(sock4);
+		sock4 = INVALID_SOCKET;
+	}
+	if (INVALID_SOCKET != bsock6) {
+		closesocket(sock6);
+		sock6 = INVALID_SOCKET;
+	}
+}
+#endif
+
+
+/*
+ * worker_resp_cb() is invoked when resp_read_pipe is readable.
+ */
+void
+worker_resp_cb(
+	evutil_socket_t	fd,
+	short		what,
+	void *		ctx	/* blocking_child * */
+	)
+{
+	blocking_child *	c;
+
+	DEBUG_INSIST(EV_READ & what);
+	c = ctx;
+	DEBUG_INSIST(fd == c->resp_read_pipe);
+	process_blocking_resp(c);
+}
+
+
+/*
+ * intres_timeout_req(s) is invoked in the parent to schedule an idle
+ * timeout to fire in s seconds, if not reset earlier by a call to
+ * intres_timeout_req(0), which clears any pending timeout.  When the
+ * timeout expires, worker_idle_timer_fired() is invoked (again, in the
+ * parent).
+ *
+ * sntp and ntpd each provide implementations adapted to their timers.
+ */
+void
+intres_timeout_req(
+	u_int	seconds		/* 0 cancels */
+	)
+{
+	struct timeval	tv_to;
+
+	if (NULL == ev_worker_timeout) {
+		ev_worker_timeout = event_new(base, -1,
+					      EV_TIMEOUT | EV_PERSIST,
+					      &worker_timeout, NULL);
+		DEBUG_INSIST(NULL != ev_worker_timeout);
+	} else {
+		event_del(ev_worker_timeout);
+	}
+	if (0 == seconds)
+		return;
+	tv_to.tv_sec = seconds;
+	tv_to.tv_usec = 0;
+	event_add(ev_worker_timeout, &tv_to);
+}
+
+
+void
+worker_timeout(
+	evutil_socket_t	fd,
+	short		what,
+	void *		ctx
+	)
+{
+	UNUSED_ARG(fd);
+	UNUSED_ARG(ctx);
+
+	DEBUG_REQUIRE(EV_TIMEOUT & what);
+	worker_idle_timer_fired();
+}
+
+
+void
+sntp_libevent_log_cb(
+	int		severity,
+	const char *	msg
+	)
+{
+	int		level;
+
+	switch (severity) {
+
+	default:
+	case _EVENT_LOG_DEBUG:
+		level = LOG_DEBUG;
+		break;
+
+	case _EVENT_LOG_MSG:
+		level = LOG_NOTICE;
+		break;
+
+	case _EVENT_LOG_WARN:
+		level = LOG_WARNING;
+		break;
+
+	case _EVENT_LOG_ERR:
+		level = LOG_ERR;
+		break;
+	}
+
+	msyslog(level, "%s", msg);
+}
+
 
 int
 generate_pkt (
@@ -171,88 +1035,97 @@ generate_pkt (
 	struct key *pkt_key
 	)
 {
-	l_fp xmt;
-	int pkt_len = LEN_PKT_NOMAC;
-	memset(x_pkt, 0, sizeof(struct pkt));
-	TVTOTS(tv_xmt, &xmt);
-	HTONL_FP(&xmt, &(x_pkt->xmt));
+	l_fp	xmt_fp;
+	int	pkt_len;
+	int	mac_size;
+
+	pkt_len = LEN_PKT_NOMAC;
+	ZERO(*x_pkt);
+	TVTOTS(tv_xmt, &xmt_fp);
+	HTONL_FP(&xmt_fp, &x_pkt->xmt);
 	x_pkt->stratum = STRATUM_TO_PKT(STRATUM_UNSPEC);
 	x_pkt->ppoll = 8;
 	/* FIXME! Modus broadcast + adr. check -> bdr. pkt */
-	set_li_vn_mode(x_pkt, LEAP_NOTINSYNC, 4, 3);
+	set_li_vn_mode(x_pkt, LEAP_NOTINSYNC, ntpver, 3);
 	if (pkt_key != NULL) {
-		int mac_size = 20; /* max room for MAC */
 		x_pkt->exten[0] = htonl(key_id);
-		mac_size = make_mac((char *)x_pkt, pkt_len, mac_size, pkt_key, (char *)&x_pkt->exten[1]);
-		if (mac_size)
+		mac_size = 20; /* max room for MAC */
+		mac_size = make_mac((char *)x_pkt, pkt_len, mac_size,
+				    pkt_key, (char *)&x_pkt->exten[1]);
+		if (mac_size > 0)
 			pkt_len += mac_size + 4;
 	}
 	return pkt_len;
 }
 
+
 int
-handle_pkt (
-	int rpktl,
-	struct pkt *rpkt,
-	struct addrinfo *host
+handle_pkt(
+	int		rpktl,
+	struct pkt *	rpkt,
+	sockaddr_u *	host,
+	const char *	hostname
 	)
 {
-	struct timeval tv_dst;
-	int sw_case, digits;
-	char *hostname = NULL, *ref, *ts_str = NULL;
-	double offset, precision, root_dispersion;
-	char addr_buf[INET6_ADDRSTRLEN];
-	char *p_SNTP_PRETEND_TIME;
-	time_t pretend_time;
+	const char *	addrtxt;
+	struct timeval	tv_dst;
+	int		sw_case;
+	int		digits;
+	char *		ref;
+	char *		ts_str;
+	double		offset;
+	double		precision;
+	double		root_dispersion;
+	char *		p_SNTP_PRETEND_TIME;
+	time_t		pretend_time;
 #if SIZEOF_TIME_T == 8
-	long long ll;
+	long long	ll;
 #else
-	long l;
+	long		l;
 #endif
 
-	if(rpktl > 0)
+	ts_str = NULL;
+
+	if (rpktl > 0)
 		sw_case = 1;
 	else
 		sw_case = rpktl;
 
-	switch(sw_case) {
+	switch (sw_case) {
+
 	case SERVER_UNUSEABLE:
 		return -1;
 		break;
 
 	case PACKET_UNUSEABLE:
 		break;
- 
+
 	case SERVER_AUTH_FAIL:
 		break;
 
 	case KOD_DEMOBILIZE:
 		/* Received a DENY or RESTR KOD packet */
-		hostname = addrinfo_to_str(host);
+		addrtxt = stoa(host);
 		ref = (char *)&rpkt->refid;
-		add_entry(hostname, ref);
-
-		if (ENABLED_OPT(NORMALVERBOSE))
-			printf("sntp handle_pkt: Received KOD packet with code: %c%c%c%c from %s, demobilizing all connections\n",
-				   ref[0], ref[1], ref[2], ref[3],
-				   hostname);
-
-		msyslog(LOG_WARNING, "Received a KOD packet with code %c%c%c%c from %s, demobilizing all connections",
-			ref[0], ref[1], ref[2], ref[3], hostname);
+		add_entry(addrtxt, ref);
+		msyslog(LOG_WARNING, "KOD code %c%c%c%c from %s %s",
+			ref[0], ref[1], ref[2], ref[3], addrtxt, hostname);
 		break;
 
 	case KOD_RATE:
-		/* Hmm... probably we should sleep a bit here */
+		/*
+		** Hmm...
+		** We should probably call add_entry() with an
+		** expiration timestamp of several seconds in the future,
+		** and back-off even more if we get more RATE responses.
+		*/
 		break;
 
 	case 1:
-		if (ENABLED_OPT(NORMALVERBOSE)) {
-			getnameinfo(host->ai_addr, host->ai_addrlen, addr_buf, 
-				sizeof(addr_buf), NULL, 0, NI_NUMERICHOST);
-			printf("sntp handle_pkt: Received %i bytes from %s\n", rpktl, addr_buf);
-		}
+		DPRINTF(3, ("handle_pkt: %d bytes from %s %s\n",
+			       rpktl, stoa(host), hostname));
 
-		GETTIMEOFDAY(&tv_dst, (struct timezone *)NULL);
+		gettimeofday_cached(base, &tv_dst);
 
 		p_SNTP_PRETEND_TIME = getenv("SNTP_PRETEND_TIME");
 		if (p_SNTP_PRETEND_TIME) {
@@ -272,6 +1145,7 @@ handle_pkt (
 
 		offset_calculation(rpkt, rpktl, &tv_dst, &offset,
 				   &precision, &root_dispersion);
+		time_derived = TRUE;
 
 		for (digits = 0; (precision *= 10.) < 1.; ++digits)
 			/* empty */ ;
@@ -279,26 +1153,28 @@ handle_pkt (
 			digits = 6;
 
 		ts_str = tv_to_str(&tv_dst);
-		printf("%s ", ts_str);
-		if (offset > 0)
-			printf("+");
-		printf("%.*f", digits, offset);
+		printf("%s %+.*f", ts_str, digits, offset);
 		if (root_dispersion > 0.)
-			printf(" +/- %f secs", root_dispersion);
-		printf("\n");
+			printf(" +/- %f ", root_dispersion);
+		printf(" %s %s%s\n", hostname, stoa(host),
+		       (time_adjusted) 
+			   ? " [excess]"
+			   : "");
 		free(ts_str);
 
 		if (p_SNTP_PRETEND_TIME)
 			return 0;
 
-		if (ENABLED_OPT(SETTOD) || ENABLED_OPT(ADJTIME))
-			return set_time(offset); 
+		if (!time_adjusted &&
+		    (ENABLED_OPT(STEP) || ENABLED_OPT(SLEW)))
+			return set_time(offset);
 
-		return 0;
+		return EX_OK;
 	}
 
 	return 1;
 }
+
 
 void
 offset_calculation (
@@ -323,30 +1199,30 @@ offset_calculation (
 	NTOHL_FP(&rpkt->xmt, &p_xmt);
 
 	*precision = LOGTOD(rpkt->precision);
-#ifdef DEBUG
-	printf("sntp precision: %f\n", *precision);
-#endif /* DEBUG */
+	DPRINTF(3, ("offset_calculation: precision: %f", *precision));
 
 	*root_dispersion = FPTOD(p_rdsp);
 
 #ifdef DEBUG
-	printf("sntp rootdelay: %f\n", FPTOD(p_rdly));
-	printf("sntp rootdisp: %f\n", *root_dispersion);
+	if (debug > 2) {
+		printf("sntp rootdelay: %f\n", FPTOD(p_rdly));
+		printf("sntp rootdisp: %f\n", *root_dispersion);
 
-	pkt_output(rpkt, rpktl, stdout);
+		pkt_output(rpkt, rpktl, stdout);
 
-	printf("sntp offset_calculation: rpkt->reftime:\n");
-	l_fp_output(&(rpkt->reftime), stdout);
-	printf("sntp offset_calculation: rpkt->org:\n");
-	l_fp_output(&(rpkt->org), stdout);
-	printf("sntp offset_calculation: rpkt->rec:\n");
-	l_fp_output(&(rpkt->rec), stdout);
-	printf("sntp offset_calculation: rpkt->rec:\n");
-	l_fp_output_bin(&(rpkt->rec), stdout);
-	printf("sntp offset_calculation: rpkt->rec:\n");
-	l_fp_output_dec(&(rpkt->rec), stdout);
-	printf("sntp offset_calculation: rpkt->xmt:\n");
-	l_fp_output(&(rpkt->xmt), stdout);
+		printf("sntp offset_calculation: rpkt->reftime:\n");
+		l_fp_output(&(rpkt->reftime), stdout);
+		printf("sntp offset_calculation: rpkt->org:\n");
+		l_fp_output(&(rpkt->org), stdout);
+		printf("sntp offset_calculation: rpkt->rec:\n");
+		l_fp_output(&(rpkt->rec), stdout);
+		printf("sntp offset_calculation: rpkt->rec:\n");
+		l_fp_output_bin(&(rpkt->rec), stdout);
+		printf("sntp offset_calculation: rpkt->rec:\n");
+		l_fp_output_dec(&(rpkt->rec), stdout);
+		printf("sntp offset_calculation: rpkt->xmt:\n");
+		l_fp_output(&(rpkt->xmt), stdout);
+	}
 #endif
 
 	/* Compute offset etc. */
@@ -361,68 +1237,10 @@ offset_calculation (
 	*offset = (t21 + t34) / 2.;
 	delta = t21 - t34;
 
-	if (ENABLED_OPT(NORMALVERBOSE))
-		printf("sntp offset_calculation:\tt21: %.6f\t\t t34: %.6f\n\t\tdelta: %.6f\t offset: %.6f\n", 
-			   t21, t34, delta, *offset);
+	DPRINTF(3, ("sntp offset_calculation:\tt21: %.6f\t\t t34: %.6f\n\t\tdelta: %.6f\t offset: %.6f\n", t21, t34, delta, *offset));
 }
 
-/* The heart of (S)NTP, exchange NTP packets and compute values to correct the local clock */
-int
-on_wire (
-	struct addrinfo *host,
-	struct addrinfo *bcast
-	)
-{
-	char addr_buf[INET6_ADDRSTRLEN];
-	register int try;
-	SOCKET sock;
-	struct key *pkt_key = NULL;
-	long l;
-	int key_id = 0;
-	struct timeval tv_xmt;
-	struct pkt x_pkt;
-	int error, rpktl, handle_pkt_res;
 
-
-	if (ENABLED_OPT(AUTHENTICATION) &&
-	    atoint(OPT_ARG(AUTHENTICATION), &l)) {
-		key_id = l;
-		get_key(key_id, &pkt_key);
-	}
-	for (try = 0; try < 5; try++) {
-		memset(&r_pkt, 0, sizeof rbuf);
-		
-		error = GETTIMEOFDAY(&tv_xmt, NULL);
-		tv_xmt.tv_sec += JAN_1970;
-
-#ifdef DEBUG
-		printf("sntp on_wire: Current time sec: %i msec: %i\n", (unsigned int) tv_xmt.tv_sec, 
-				(unsigned int) tv_xmt.tv_usec);
-#endif
-
-		if (bcast) {
-			create_socket(&sock, (sockaddr_u *)bcast->ai_addr);
-			rpktl = recv_bcst_pkt(sock, &r_pkt, sizeof rbuf, (sockaddr_u *)bcast->ai_addr);
-			closesocket(sock);
-		} else {
-			int pkt_len = generate_pkt(&x_pkt, &tv_xmt, key_id, pkt_key);
-
-			create_socket(&sock, (sockaddr_u *)host->ai_addr);
-			sendpkt(sock, (sockaddr_u *)host->ai_addr, &x_pkt, pkt_len);
-			rpktl = recvpkt(sock, &r_pkt, sizeof rbuf, &x_pkt);
-			closesocket(sock);
-		}
-
-		handle_pkt_res = handle_pkt(rpktl, &r_pkt, host);
-		if (handle_pkt_res < 1)
-			return handle_pkt_res;
-	}
-
-	getnameinfo(host->ai_addr, host->ai_addrlen, addr_buf, sizeof(addr_buf), NULL, 0, NI_NUMERICHOST);
-	msyslog(LOG_DEBUG, "Received no useable packet from %s!", addr_buf);
-
-	return -1;
-}
 
 /* Compute the 8 bits for li_vn_mode */
 void
@@ -431,11 +1249,16 @@ set_li_vn_mode (
 	char leap,
 	char version,
 	char mode
-	) 
+	)
 {
 	if (leap > 3) {
-		msyslog(LOG_DEBUG, "set_li_vn_mode: leap > 3 using max. 3");
+		msyslog(LOG_DEBUG, "set_li_vn_mode: leap > 3, using max. 3");
 		leap = 3;
+	}
+
+	if (version < 0 || version > 7) {
+		msyslog(LOG_DEBUG, "set_li_vn_mode: version < 0 or > 7, using 4");
+		version = 4;
 	}
 
 	if (mode > 7) {
@@ -448,37 +1271,136 @@ set_li_vn_mode (
 	spkt->li_vn_mode |= mode;
 }
 
-/* set_time corrects the local clock by offset with either settimeofday() or by default 
- * with adjtime()/adjusttimeofday().
- */
+
+/*
+** set_time applies 'offset' to the local clock.
+*/
 int
 set_time(
 	double offset
 	)
 {
-	struct timeval tp;
+	int rc;
 
-	if (ENABLED_OPT(SETTOD)) {
-		GETTIMEOFDAY(&tp, NULL);
+	if (time_adjusted)
+		return EX_OK;
 
-		tp.tv_sec += (long)offset;
-		tp.tv_usec += 1e6 * (offset - (long)offset);
-		NORMALIZE_TIMEVAL(tp);
+	/*
+	** If we can step but we cannot slew, then step.
+	** If we can step or slew and and |offset| > steplimit, then step.
+	*/
+	if (ENABLED_OPT(STEP) &&
+	    (   !ENABLED_OPT(SLEW)
+	     || (ENABLED_OPT(SLEW) && (fabs(offset) > steplimit))
+	    )) {
+		rc = step_systime(offset);
 
-		if (SETTIMEOFDAY(&tp, NULL) < 0) {
-			msyslog(LOG_ERR, "Time not set: settimeofday(): %m");
-			return -1;
-		}
+		/* If there was a problem, can we rely on errno? */
+		if (1 == rc)
+			time_adjusted = TRUE;
+		return (time_adjusted)
+			   ? EX_OK 
+			   : 1;
+		/*
+		** In case of error, what should we use?
+		** EX_UNAVAILABLE?
+		** EX_OSERR?
+		** EX_NOPERM?
+		*/
+	}
+
+	if (ENABLED_OPT(SLEW)) {
+		rc = adj_systime(offset);
+
+		/* If there was a problem, can we rely on errno? */
+		if (1 == rc)
+			time_adjusted = TRUE;
+		return (time_adjusted)
+			   ? EX_OK 
+			   : 1;
+		/*
+		** In case of error, what should we use?
+		** EX_UNAVAILABLE?
+		** EX_OSERR?
+		** EX_NOPERM?
+		*/
+	}
+
+	return EX_SOFTWARE;
+}
+
+
+int
+libevent_version_ok(void)
+{
+	ev_uint32_t v_compile_maj;
+	ev_uint32_t v_run_maj;
+
+	v_compile_maj = LIBEVENT_VERSION_NUMBER & 0xffff0000;
+	v_run_maj = event_get_version_number() & 0xffff0000;
+	if (v_compile_maj != v_run_maj) {
+		fprintf(stderr,
+			"Incompatible libevent versions: have %s, built with %s\n",
+			event_get_version(),
+			LIBEVENT_VERSION);
 		return 0;
 	}
-
-	tp.tv_sec = (long)offset;
-	tp.tv_usec = 1e6 * (offset - (long)offset);
-	NORMALIZE_TIMEVAL(tp);
-
-	if (ADJTIMEOFDAY(&tp, NULL) < 0) {
-		msyslog(LOG_ERR, "Time not set: adjtime(): %m");
-		return -1;
-	}
-	return 0;
+	return 1;
 }
+
+
+int
+gettimeofday_cached(
+	struct event_base *	b,
+	struct timeval *	caller_tv
+	)
+{
+#if defined(_EVENT_HAVE_CLOCK_GETTIME) && defined(CLOCK_MONOTONIC)
+	static struct event_base *	cached_b;
+	static struct timeval		cached;
+	static struct timeval		adj_cached;
+	static struct timeval		offset;
+	static int			offset_ready;
+	struct timeval			latest;
+	struct timeval			systemt;
+	struct timespec			ts;
+	struct timeval			mono;
+	struct timeval			diff;
+	int				rc;
+
+	event_base_gettimeofday_cached(b, &latest);
+	if (b == cached_b &&
+	    !memcmp(&latest, &cached, sizeof(latest))) {
+		*caller_tv = adj_cached;
+		return 0;
+	}
+	cached = latest;
+	cached_b = b;
+	if (!offset_ready) {
+		rc = clock_gettime(CLOCK_MONOTONIC, &ts);
+		if (0 == rc) {
+			rc = evutil_gettimeofday(&systemt, NULL);
+			if (0 != rc) {
+				msyslog(LOG_ERR,
+					"%s: gettimeofday() error %m",
+					progname);
+				exit(1);
+			}
+			mono.tv_sec = ts.tv_sec;
+			mono.tv_usec = ts.tv_nsec / 1000;
+			evutil_timersub(&systemt, &mono, &diff);
+			if (labs((long)diff.tv_sec) > 3600) {
+				offset = diff;
+			}
+		}
+		offset_ready = TRUE;
+	}
+	evutil_timeradd(&cached, &offset, &adj_cached);
+	*caller_tv = adj_cached;
+
+	return 0;
+#else
+	return event_base_gettimeofday_cached(b, caller_tv);
+#endif
+}
+

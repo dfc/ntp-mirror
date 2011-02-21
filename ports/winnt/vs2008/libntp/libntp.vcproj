@@ -416,6 +416,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\..\..\..\libntp\ntp_intres.c"
+				>
+			</File>
+			<File
 				RelativePath="..\..\..\..\libntp\ntp_libopts.c"
 				>
 			</File>
@@ -429,6 +433,10 @@
 			</File>
 			<File
 				RelativePath="..\..\..\..\libntp\ntp_rfc2553.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\..\..\libntp\ntp_worker.c"
 				>
 			</File>
 			<File
@@ -584,6 +592,14 @@
 				>
 			</File>
 			<File
+				RelativePath="..\..\..\..\libntp\work_fork.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\..\..\libntp\work_thread.c"
+				>
+			</File>
+			<File
 				RelativePath="..\..\..\..\libntp\ymd2yd.c"
 				>
 			</File>
@@ -645,6 +661,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\..\..\..\include\intreswork.h"
+				>
+			</File>
+			<File
 				RelativePath="..\..\include\sys\ioctl.h"
 				>
 			</File>
@@ -674,6 +694,10 @@
 			</File>
 			<File
 				RelativePath="..\..\..\..\include\isc\mem.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\..\..\lib\isc\win32\include\isc\mutex.h"
 				>
 			</File>
 			<File
@@ -718,6 +742,10 @@
 			</File>
 			<File
 				RelativePath="..\..\..\..\include\ntp_if.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\..\..\include\ntp_intres.h"
 				>
 			</File>
 			<File

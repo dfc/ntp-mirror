@@ -38,12 +38,21 @@ subdir = include
 DIST_COMMON = $(noinst_HEADERS) $(srcdir)/Makefile.am \
 	$(srcdir)/Makefile.in
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/libopts/m4/libopts.m4 \
+am__aclocal_m4_deps =  \
+	$(top_srcdir)/libevent/m4/openldap-thread-check.m4 \
+	$(top_srcdir)/libevent/m4/openldap.m4 \
+	$(top_srcdir)/libopts/m4/libopts.m4 \
+	$(top_srcdir)/m4/ntp_bindir.m4 \
 	$(top_srcdir)/m4/ntp_cacheversion.m4 \
-	$(top_srcdir)/m4/ntp_dir_sep.m4 \
+	$(top_srcdir)/m4/ntp_compiler.m4 \
+	$(top_srcdir)/m4/ntp_crosscompile.m4 \
+	$(top_srcdir)/m4/ntp_debug.m4 $(top_srcdir)/m4/ntp_dir_sep.m4 \
 	$(top_srcdir)/m4/ntp_googletest.m4 \
 	$(top_srcdir)/m4/ntp_ipv6.m4 $(top_srcdir)/m4/ntp_lib_m.m4 \
-	$(top_srcdir)/m4/ntp_libntp.m4 $(top_srcdir)/m4/ntp_openssl.m4 \
+	$(top_srcdir)/m4/ntp_libevent.m4 \
+	$(top_srcdir)/m4/ntp_libntp.m4 \
+	$(top_srcdir)/m4/ntp_lineeditlibs.m4 \
+	$(top_srcdir)/m4/ntp_openssl.m4 $(top_srcdir)/m4/ntp_sntp.m4 \
 	$(top_srcdir)/m4/os_cflags.m4 $(top_srcdir)/m4/version.m4 \
 	$(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
@@ -63,6 +72,7 @@ DIST_SOURCES =
 HEADERS = $(noinst_HEADERS)
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 ACLOCAL = @ACLOCAL@
+ALLOCA = @ALLOCA@
 AMTAR = @AMTAR@
 AM_DEFAULT_VERBOSITY = @AM_DEFAULT_VERBOSITY@
 AR = @AR@
@@ -77,6 +87,7 @@ CFLAGS = @CFLAGS@
 CFLAGS_NTP = @CFLAGS_NTP@
 CPP = @CPP@
 CPPFLAGS = @CPPFLAGS@
+CPPFLAGS_LIBEVENT = @CPPFLAGS_LIBEVENT@
 CPPFLAGS_NTP = @CPPFLAGS_NTP@
 CXX = @CXX@
 CXXCPP = @CXXCPP@
@@ -89,6 +100,7 @@ ECHO = @ECHO@
 ECHO_C = @ECHO_C@
 ECHO_N = @ECHO_N@
 ECHO_T = @ECHO_T@
+EDITLINE_LIBS = @EDITLINE_LIBS@
 EGREP = @EGREP@
 EXEEXT = @EXEEXT@
 F77 = @F77@
@@ -106,7 +118,10 @@ INSTALL_PROGRAM = @INSTALL_PROGRAM@
 INSTALL_SCRIPT = @INSTALL_SCRIPT@
 INSTALL_STRIP_PROGRAM = @INSTALL_STRIP_PROGRAM@
 LCRYPTO = @LCRYPTO@
+LDADD_LIBEVENT = @LDADD_LIBEVENT@
+LDADD_LIBNTP = @LDADD_LIBNTP@
 LDFLAGS = @LDFLAGS@
+LIBISC_PTHREADS_NOTHREADS = @LIBISC_PTHREADS_NOTHREADS@
 LIBM = @LIBM@
 LIBOBJS = @LIBOBJS@
 LIBOPTS_CFLAGS = @LIBOPTS_CFLAGS@
@@ -119,6 +134,7 @@ LN_S = @LN_S@
 LTLIBOBJS = @LTLIBOBJS@
 MAKEINFO = @MAKEINFO@
 MKDIR_P = @MKDIR_P@
+NTP_FORCE_LIBEVENT_DIST = @NTP_FORCE_LIBEVENT_DIST@
 OBJEXT = @OBJEXT@
 OPENSSL = @OPENSSL@
 OPENSSL_INC = @OPENSSL_INC@
@@ -132,6 +148,7 @@ PACKAGE_URL = @PACKAGE_URL@
 PACKAGE_VERSION = @PACKAGE_VERSION@
 PATH_SEPARATOR = @PATH_SEPARATOR@
 PKG_CONFIG = @PKG_CONFIG@
+PTHREAD_LIBS = @PTHREAD_LIBS@
 RANLIB = @RANLIB@
 SET_MAKE = @SET_MAKE@
 SHELL = @SHELL@
@@ -185,6 +202,7 @@ psdir = @psdir@
 sbindir = @sbindir@
 sharedstatedir = @sharedstatedir@
 srcdir = @srcdir@
+subdirs = @subdirs@
 sysconfdir = @sysconfdir@
 target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
@@ -213,9 +231,9 @@ $(srcdir)/Makefile.in:  $(srcdir)/Makefile.am  $(am__configure_deps)
 	      exit 1;; \
 	  esac; \
 	done; \
-	echo ' cd $(top_srcdir) && $(AUTOMAKE) --foreign include/Makefile'; \
+	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu include/Makefile'; \
 	$(am__cd) $(top_srcdir) && \
-	  $(AUTOMAKE) --foreign include/Makefile
+	  $(AUTOMAKE) --gnu include/Makefile
 .PRECIOUS: Makefile
 Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
 	@case '$?' in \

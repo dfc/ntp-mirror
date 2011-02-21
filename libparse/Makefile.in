@@ -40,9 +40,16 @@ DIST_COMMON = README $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
 	$(top_srcdir)/depsver.mf
 subdir = libparse
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
+am__aclocal_m4_deps =  \
+	$(top_srcdir)/sntp/libevent/m4/openldap-thread-check.m4 \
+	$(top_srcdir)/sntp/libevent/m4/openldap.m4 \
+	$(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/m4/define_dir.m4 \
+	$(top_srcdir)/sntp/m4/ntp_bindir.m4 \
 	$(top_srcdir)/sntp/m4/ntp_cacheversion.m4 \
+	$(top_srcdir)/sntp/m4/ntp_compiler.m4 \
+	$(top_srcdir)/sntp/m4/ntp_crosscompile.m4 \
+	$(top_srcdir)/sntp/m4/ntp_debug.m4 \
 	$(top_srcdir)/sntp/m4/ntp_dir_sep.m4 \
 	$(top_srcdir)/sntp/m4/ntp_googletest.m4 \
 	$(top_srcdir)/sntp/m4/ntp_ipv6.m4 \
@@ -50,6 +57,7 @@ am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/m4/ntp_libntp.m4 \
 	$(top_srcdir)/sntp/m4/ntp_lineeditlibs.m4 \
 	$(top_srcdir)/sntp/m4/ntp_openssl.m4 \
+	$(top_srcdir)/sntp/m4/ntp_sntp.m4 \
 	$(top_srcdir)/sntp/m4/ntp_vpathhack.m4 \
 	$(top_srcdir)/sntp/m4/os_cflags.m4 \
 	$(top_srcdir)/sntp/m4/version.m4 $(top_srcdir)/configure.ac
@@ -182,7 +190,9 @@ INSTALL_PROGRAM = @INSTALL_PROGRAM@
 INSTALL_SCRIPT = @INSTALL_SCRIPT@
 INSTALL_STRIP_PROGRAM = @INSTALL_STRIP_PROGRAM@
 LCRYPTO = @LCRYPTO@
+LDADD_LIBNTP = @LDADD_LIBNTP@
 LDFLAGS = @LDFLAGS@
+LIBISC_PTHREADS_NOTHREADS = @LIBISC_PTHREADS_NOTHREADS@
 LIBM = @LIBM@
 LIBOBJS = @LIBOBJS@
 LIBOPTS_CFLAGS = @LIBOPTS_CFLAGS@
@@ -227,6 +237,7 @@ PATH_SH = @PATH_SH@
 PATH_TEST = @PATH_TEST@
 PKG_CONFIG = @PKG_CONFIG@
 PROPDELAY = @PROPDELAY@
+PTHREAD_LIBS = @PTHREAD_LIBS@
 RANLIB = @RANLIB@
 SET_MAKE = @SET_MAKE@
 SHELL = @SHELL@
@@ -348,7 +359,7 @@ libparse_kernel_a_LIBADD = \
 	$(NULL)
 
 INCLUDES = -I$(top_srcdir)/include -I$(top_srcdir)/lib/isc/include \
-	-I$(top_srcdir)/lib/isc/nothreads/include \
+	-I$(top_srcdir)/lib/isc/@LIBISC_PTHREADS_NOTHREADS@/include \
 	-I$(top_srcdir)/lib/isc/unix/include -I$(top_srcdir)/kernel
 AM_CFLAGS = @CFLAGS_NTP@
 AM_CPPFLAGS = @CPPFLAGS_NTP@
@@ -368,9 +379,9 @@ $(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/depsver.mf $(am__con
 	      exit 1;; \
 	  esac; \
 	done; \
-	echo ' cd $(top_srcdir) && $(AUTOMAKE) --foreign libparse/Makefile'; \
+	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu libparse/Makefile'; \
 	$(am__cd) $(top_srcdir) && \
-	  $(AUTOMAKE) --foreign libparse/Makefile
+	  $(AUTOMAKE) --gnu libparse/Makefile
 .PRECIOUS: Makefile
 Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
 	@case '$?' in \

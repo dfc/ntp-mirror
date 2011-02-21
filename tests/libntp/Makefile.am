@@ -4,6 +4,8 @@ check_PROGRAMS = tests
 
 LDADD =					\
 	@top_builddir@/libntp/libntp.a	\
+	@LDADD_LIBNTP@			\
+	@PTHREAD_LIBS@			\
 	@LCRYPTO@			\
 	@GTEST_LDFLAGS@			\
 	@GTEST_LIBS@			\
@@ -12,6 +14,12 @@ LDADD =					\
 AM_CFLAGS   = @CFLAGS_NTP@
 AM_CXXFLAGS = @GTEST_CXXFLAGS@
 AM_CPPFLAGS = @GTEST_CPPFLAGS@ @CPPFLAGS_NTP@
+
+INCLUDES  = -I$(top_srcdir)/include
+INCLUDES += -I$(top_srcdir)/lib/isc/include
+INCLUDES += -I$(top_srcdir)/lib/isc/@LIBISC_PTHREADS_NOTHREADS@/include
+INCLUDES += -I$(top_srcdir)/lib/isc/unix/include
+INCLUDES += -I$(top_srcdir)/sntp
 
 tests_SOURCES = $(top_srcdir)/sntp/tests_main.cpp	\
 		libntptest.cpp		\
@@ -61,12 +69,6 @@ noinst_HEADERS =	lfptest.h	\
 			sockaddrtest.h	\
 			timestructs.h	\
 			$(NULL)
-
-INCLUDES  = -I$(top_srcdir)/include
-INCLUDES += -I$(top_srcdir)/lib/isc/include
-INCLUDES += -I$(top_srcdir)/lib/isc/nothreads/include
-INCLUDES += -I$(top_srcdir)/lib/isc/unix/include
-INCLUDES += -I$(top_srcdir)/sntp
 
 TESTS =
 

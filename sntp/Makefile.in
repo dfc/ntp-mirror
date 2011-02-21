@@ -15,8 +15,6 @@
 
 @SET_MAKE@
 
-# Makefile.am for JMK's SNTP, by Harlan Stenn
-
 # we traditionally installed software in bindir, while it should have gone
 # in sbindir.  Now that we offer a choice, look in the "other" installation
 # subdir to warn folks if there is another version there.
@@ -42,8 +40,10 @@ POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
 EXTRA_PROGRAMS = sntp$(EXEEXT)
-@NEED_LIBOPTS_TRUE@am__append_1 = libopts
-@GTEST_AVAILABLE_TRUE@am__append_2 = tests
+@BUILD_LIBEVENT_TRUE@@BUILD_SNTP_TRUE@am__append_1 = libevent
+@BUILD_LIBEVENT_TRUE@@BUILD_SNTP_TRUE@am__append_2 = libevent
+@NEED_LIBOPTS_TRUE@am__append_3 = libopts
+@GTEST_AVAILABLE_TRUE@am__append_4 = tests
 DIST_COMMON = $(am__configure_deps) $(srcdir)/Makefile.am \
 	$(srcdir)/Makefile.in $(srcdir)/config.h.in \
 	$(top_srcdir)/bincheck.mf $(top_srcdir)/configure \
@@ -54,12 +54,21 @@ DIST_COMMON = $(am__configure_deps) $(srcdir)/Makefile.am \
 	install-sh ltmain.sh missing
 subdir = .
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/libopts/m4/libopts.m4 \
+am__aclocal_m4_deps =  \
+	$(top_srcdir)/libevent/m4/openldap-thread-check.m4 \
+	$(top_srcdir)/libevent/m4/openldap.m4 \
+	$(top_srcdir)/libopts/m4/libopts.m4 \
+	$(top_srcdir)/m4/ntp_bindir.m4 \
 	$(top_srcdir)/m4/ntp_cacheversion.m4 \
-	$(top_srcdir)/m4/ntp_dir_sep.m4 \
+	$(top_srcdir)/m4/ntp_compiler.m4 \
+	$(top_srcdir)/m4/ntp_crosscompile.m4 \
+	$(top_srcdir)/m4/ntp_debug.m4 $(top_srcdir)/m4/ntp_dir_sep.m4 \
 	$(top_srcdir)/m4/ntp_googletest.m4 \
 	$(top_srcdir)/m4/ntp_ipv6.m4 $(top_srcdir)/m4/ntp_lib_m.m4 \
-	$(top_srcdir)/m4/ntp_libntp.m4 $(top_srcdir)/m4/ntp_openssl.m4 \
+	$(top_srcdir)/m4/ntp_libevent.m4 \
+	$(top_srcdir)/m4/ntp_libntp.m4 \
+	$(top_srcdir)/m4/ntp_lineeditlibs.m4 \
+	$(top_srcdir)/m4/ntp_openssl.m4 $(top_srcdir)/m4/ntp_sntp.m4 \
 	$(top_srcdir)/m4/os_cflags.m4 $(top_srcdir)/m4/version.m4 \
 	$(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
@@ -81,8 +90,8 @@ am_sntp_OBJECTS = crypto.$(OBJEXT) kod_management.$(OBJEXT) \
 sntp_OBJECTS = $(am_sntp_OBJECTS)
 sntp_LDADD = $(LDADD)
 am__DEPENDENCIES_1 =
-sntp_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	../libntp/libntp.a
+sntp_DEPENDENCIES = version.o $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1) ../libntp/libntp.a
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
 am__v_lt_0 = --silent
@@ -153,7 +162,6 @@ AM_RECURSIVE_TARGETS = $(RECURSIVE_TARGETS:-recursive=) \
 	distdir dist dist-all distcheck
 ETAGS = etags
 CTAGS = ctags
-DIST_SUBDIRS = include libopts tests
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 distdir = $(PACKAGE)-$(VERSION)
 top_distdir = $(distdir)
@@ -191,6 +199,7 @@ GZIP_ENV = --best
 distuninstallcheck_listfiles = find . -type f -print
 distcleancheck_listfiles = find . -type f -print
 ACLOCAL = @ACLOCAL@
+ALLOCA = @ALLOCA@
 AMTAR = @AMTAR@
 AM_DEFAULT_VERBOSITY = @AM_DEFAULT_VERBOSITY@
 AR = @AR@
@@ -205,6 +214,7 @@ CFLAGS = @CFLAGS@
 CFLAGS_NTP = @CFLAGS_NTP@
 CPP = @CPP@
 CPPFLAGS = @CPPFLAGS@
+CPPFLAGS_LIBEVENT = @CPPFLAGS_LIBEVENT@
 CPPFLAGS_NTP = @CPPFLAGS_NTP@
 CXX = @CXX@
 CXXCPP = @CXXCPP@
@@ -217,6 +227,7 @@ ECHO = @ECHO@
 ECHO_C = @ECHO_C@
 ECHO_N = @ECHO_N@
 ECHO_T = @ECHO_T@
+EDITLINE_LIBS = @EDITLINE_LIBS@
 EGREP = @EGREP@
 EXEEXT = @EXEEXT@
 F77 = @F77@
@@ -234,7 +245,10 @@ INSTALL_PROGRAM = @INSTALL_PROGRAM@
 INSTALL_SCRIPT = @INSTALL_SCRIPT@
 INSTALL_STRIP_PROGRAM = @INSTALL_STRIP_PROGRAM@
 LCRYPTO = @LCRYPTO@
+LDADD_LIBEVENT = @LDADD_LIBEVENT@
+LDADD_LIBNTP = @LDADD_LIBNTP@
 LDFLAGS = @LDFLAGS@
+LIBISC_PTHREADS_NOTHREADS = @LIBISC_PTHREADS_NOTHREADS@
 LIBM = @LIBM@
 LIBOBJS = @LIBOBJS@
 LIBOPTS_CFLAGS = @LIBOPTS_CFLAGS@
@@ -247,6 +261,7 @@ LN_S = @LN_S@
 LTLIBOBJS = @LTLIBOBJS@
 MAKEINFO = @MAKEINFO@
 MKDIR_P = @MKDIR_P@
+NTP_FORCE_LIBEVENT_DIST = @NTP_FORCE_LIBEVENT_DIST@
 OBJEXT = @OBJEXT@
 OPENSSL = @OPENSSL@
 OPENSSL_INC = @OPENSSL_INC@
@@ -260,6 +275,7 @@ PACKAGE_URL = @PACKAGE_URL@
 PACKAGE_VERSION = @PACKAGE_VERSION@
 PATH_SEPARATOR = @PATH_SEPARATOR@
 PKG_CONFIG = @PKG_CONFIG@
+PTHREAD_LIBS = @PTHREAD_LIBS@
 RANLIB = @RANLIB@
 SET_MAKE = @SET_MAKE@
 SHELL = @SHELL@
@@ -313,6 +329,7 @@ psdir = @psdir@
 sbindir = @sbindir@
 sharedstatedir = @sharedstatedir@
 srcdir = @srcdir@
+subdirs = @subdirs@
 sysconfdir = @sysconfdir@
 target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
@@ -320,20 +337,22 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 NULL = 
 AUTOMAKE_OPTIONS = foreign 1.10
-ACLOCAL_AMFLAGS = -I m4 -I libopts/m4
+ACLOCAL_AMFLAGS = -I m4 -I libopts/m4 -I libevent/m4
 AM_CFLAGS = @CFLAGS_NTP@
-AM_CPPFLAGS = @CPPFLAGS_NTP@
-INCLUDES = $(LIBOPTS_CFLAGS) -I$(top_srcdir)/../include \
+AM_CPPFLAGS = @CPPFLAGS_LIBEVENT@ @CPPFLAGS_NTP@
+INCLUDES = -I$(top_srcdir)/../include \
 	-I$(top_srcdir)/../lib/isc/include \
-	-I$(top_srcdir)/../lib/isc/nothreads/include \
-	-I$(top_srcdir)/../lib/isc/unix/include
-LDADD = $(LIBOPTS_LDADD) $(LIBM) ../libntp/libntp.a @LCRYPTO@
+	-I$(top_srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/include \
+	-I$(top_srcdir)/../lib/isc/unix/include $(LIBOPTS_CFLAGS)
+LDADD = version.o $(LIBOPTS_LDADD) @LDADD_LIBEVENT@ $(LIBM) \
+	../libntp/libntp.a @LDADD_LIBNTP@ @PTHREAD_LIBS@ @LCRYPTO@
 run_ag = cd $(srcdir) &&	env PATH="$(abs_builddir):$(PATH)"	\
 		autogen -L include --writable
 
 @NTP_BINSUBDIR_IS_BIN_TRUE@bin_PROGRAMS = @SNTP@
 @NTP_BINSUBDIR_IS_BIN_FALSE@sbin_PROGRAMS = @SNTP@
-SUBDIRS = include $(am__append_1) $(am__append_2)
+SUBDIRS = include $(am__append_1) $(am__append_3) $(am__append_4)
+DIST_SUBDIRS = include $(am__append_2) libopts tests
 sntp_SOURCES = \
 	crypto.c	\
 	crypto.h	\
@@ -354,11 +373,17 @@ sntp_SOURCES = \
 	utilities.h	\
 	$(NULL)
 
+DISTCLEANFILES = \
+	.version			\
+	version.c			\
+	$(NULL)
+
 EXTRA_DIST = \
 	bincheck.mf			\
 	$(srcdir)/COPYRIGHT		\
 	deps-ver			\
 	depsver.mf			\
+	@NTP_FORCE_LIBEVENT_DIST@	\
 	sntp-opts.def			\
 	sntp-opts.menu			\
 	sntp-opts.texi			\
@@ -377,10 +402,6 @@ BUILT_SOURCES = check-libntp $(srcdir)/COPYRIGHT libtool \
 CLEANFILES = built-sources-only check-COPYRIGHT-submake $(NULL) \
 	.deps-ver
 man_MANS = $(srcdir)/sntp.1
-
-# HMS: Real Soon Now...
-#info_TEXINFOS=	sntp.texi
-#sntp_TEXINFOS=	sntp-opts.texi
 noinst_DATA = \
 	$(srcdir)/sntp.html		\
 	$(srcdir)/sntp-opts.texi	\
@@ -827,6 +848,9 @@ distdir: $(DISTFILES)
 	      || exit 1; \
 	  fi; \
 	done
+	$(MAKE) $(AM_MAKEFLAGS) \
+	  top_distdir="$(top_distdir)" distdir="$(distdir)" \
+	  dist-hook
 	-test -n "$(am__skip_mode_fix)" \
 	|| find "$(distdir)" -type d ! -perm -755 \
 		-exec chmod u+rwx,go+rx {} \; -o \
@@ -974,6 +998,7 @@ clean-generic:
 distclean-generic:
 	-test -z "$(CONFIG_CLEAN_FILES)" || rm -f $(CONFIG_CLEAN_FILES)
 	-test . = "$(srcdir)" || test -z "$(CONFIG_CLEAN_VPATH_FILES)" || rm -f $(CONFIG_CLEAN_VPATH_FILES)
+	-test -z "$(DISTCLEANFILES)" || rm -f $(DISTCLEANFILES)
 
 maintainer-clean-generic:
 	@echo "This command is intended for maintainers to use"
@@ -1064,9 +1089,9 @@ uninstall-man: uninstall-man1
 .PHONY: $(RECURSIVE_CLEAN_TARGETS) $(RECURSIVE_TARGETS) CTAGS GTAGS \
 	all all-am am--refresh check check-am clean clean-binPROGRAMS \
 	clean-generic clean-libtool clean-sbinPROGRAMS ctags \
-	ctags-recursive dist dist-all dist-bzip2 dist-gzip dist-lzma \
-	dist-shar dist-tarZ dist-xz dist-zip distcheck distclean \
-	distclean-compile distclean-generic distclean-hdr \
+	ctags-recursive dist dist-all dist-bzip2 dist-gzip dist-hook \
+	dist-lzma dist-shar dist-tarZ dist-xz dist-zip distcheck \
+	distclean distclean-compile distclean-generic distclean-hdr \
 	distclean-libtool distclean-tags distcleancheck distdir \
 	distuninstallcheck dvi dvi-am html html-am info info-am \
 	install install-am install-binPROGRAMS install-data \
@@ -1089,6 +1114,24 @@ FRC FRC.version:
 	@: always out-of-date causing targets which depend on it to
 	@: similarly always be outdated causing their rules to fire
 	@: each time they or a dependent is built.
+
+$(PROGRAMS): version.o
+
+version.o: $(sntp_OBJECTS) ../libntp/libntp.a Makefile $(top_srcdir)/version
+	env CSET=`cat $(top_srcdir)/version` ../$(top_builddir)/scripts/mkver sntp
+	$(COMPILE) -c version.c
+
+check-autogen-version.def: FRC
+	@cd $(srcdir)							\
+	&& test -r ../include/autogen-version.def			\
+	&& ( if cmp -s ../include/autogen-version.def autogen-version.def; \
+	   then : ;							\
+	   else cp ../include/autogen-version.def autogen-version.def;	 \
+		echo "Installing new sntp/autogen-version.def file";	\
+	   fi )
+
+$(srcdir)/autogen-version.def:
+	$(MAKE) check-autogen-version.def
 
 built-sources-only: $(BUILT_SOURCES)
 	@: do-nothing action to avoid default SCCS get
@@ -1162,6 +1205,12 @@ check-libntp: FRC
 
 libtool: $(LIBTOOL_DEPS)
 	./config.status --recheck
+
+libevent-dist-hook:
+	if test -n "@NTP_FORCE_LIBEVENT_DIST@" ; then rm -rf $(distdir)/libevent/autom4te.cache $(distdir)/libevent/config.h.in~ ; find $(distdir)/libevent -type d -name SCCS -print | xargs rm -rf ; fi
+
+dist-hook: libevent-dist-hook
+	@: do-nothing action to avoid default SCCS get
 
 install-exec-hook:
 	@case ${BINSUBDIR} in						\

@@ -41,12 +41,21 @@ subdir = tests
 DIST_COMMON = $(dist_check_SCRIPTS) $(noinst_HEADERS) \
 	$(srcdir)/Makefile.am $(srcdir)/Makefile.in
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/libopts/m4/libopts.m4 \
+am__aclocal_m4_deps =  \
+	$(top_srcdir)/libevent/m4/openldap-thread-check.m4 \
+	$(top_srcdir)/libevent/m4/openldap.m4 \
+	$(top_srcdir)/libopts/m4/libopts.m4 \
+	$(top_srcdir)/m4/ntp_bindir.m4 \
 	$(top_srcdir)/m4/ntp_cacheversion.m4 \
-	$(top_srcdir)/m4/ntp_dir_sep.m4 \
+	$(top_srcdir)/m4/ntp_compiler.m4 \
+	$(top_srcdir)/m4/ntp_crosscompile.m4 \
+	$(top_srcdir)/m4/ntp_debug.m4 $(top_srcdir)/m4/ntp_dir_sep.m4 \
 	$(top_srcdir)/m4/ntp_googletest.m4 \
 	$(top_srcdir)/m4/ntp_ipv6.m4 $(top_srcdir)/m4/ntp_lib_m.m4 \
-	$(top_srcdir)/m4/ntp_libntp.m4 $(top_srcdir)/m4/ntp_openssl.m4 \
+	$(top_srcdir)/m4/ntp_libevent.m4 \
+	$(top_srcdir)/m4/ntp_libntp.m4 \
+	$(top_srcdir)/m4/ntp_lineeditlibs.m4 \
+	$(top_srcdir)/m4/ntp_openssl.m4 $(top_srcdir)/m4/ntp_sntp.m4 \
 	$(top_srcdir)/m4/os_cflags.m4 $(top_srcdir)/m4/version.m4 \
 	$(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
@@ -70,7 +79,7 @@ am__DEPENDENCIES_2 = $(sntp_objs)/crypto.o \
 	$(sntp_objs)/kod_management.o $(sntp_objs)/log.o \
 	$(sntp_objs)/main.o $(sntp_objs)/networking.o \
 	$(sntp_objs)/sntp-opts.o $(sntp_objs)/utilities.o \
-	$(am__DEPENDENCIES_1)
+	$(sntp_objs)/version.o $(am__DEPENDENCIES_1)
 tests_DEPENDENCIES = $(am__DEPENDENCIES_1) \
 	@top_builddir@/../libntp/libntp.a $(am__DEPENDENCIES_2) \
 	$(am__DEPENDENCIES_1)
@@ -112,6 +121,7 @@ am__tty_colors = \
 red=; grn=; lgn=; blu=; std=
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 ACLOCAL = @ACLOCAL@
+ALLOCA = @ALLOCA@
 AMTAR = @AMTAR@
 AM_DEFAULT_VERBOSITY = @AM_DEFAULT_VERBOSITY@
 AR = @AR@
@@ -126,6 +136,7 @@ CFLAGS = @CFLAGS@
 CFLAGS_NTP = @CFLAGS_NTP@
 CPP = @CPP@
 CPPFLAGS = @CPPFLAGS@
+CPPFLAGS_LIBEVENT = @CPPFLAGS_LIBEVENT@
 CPPFLAGS_NTP = @CPPFLAGS_NTP@
 CXX = @CXX@
 CXXCPP = @CXXCPP@
@@ -138,6 +149,7 @@ ECHO = @ECHO@
 ECHO_C = @ECHO_C@
 ECHO_N = @ECHO_N@
 ECHO_T = @ECHO_T@
+EDITLINE_LIBS = @EDITLINE_LIBS@
 EGREP = @EGREP@
 EXEEXT = @EXEEXT@
 F77 = @F77@
@@ -155,7 +167,10 @@ INSTALL_PROGRAM = @INSTALL_PROGRAM@
 INSTALL_SCRIPT = @INSTALL_SCRIPT@
 INSTALL_STRIP_PROGRAM = @INSTALL_STRIP_PROGRAM@
 LCRYPTO = @LCRYPTO@
+LDADD_LIBEVENT = @LDADD_LIBEVENT@
+LDADD_LIBNTP = @LDADD_LIBNTP@
 LDFLAGS = @LDFLAGS@
+LIBISC_PTHREADS_NOTHREADS = @LIBISC_PTHREADS_NOTHREADS@
 LIBM = @LIBM@
 LIBOBJS = @LIBOBJS@
 LIBOPTS_CFLAGS = @LIBOPTS_CFLAGS@
@@ -168,6 +183,7 @@ LN_S = @LN_S@
 LTLIBOBJS = @LTLIBOBJS@
 MAKEINFO = @MAKEINFO@
 MKDIR_P = @MKDIR_P@
+NTP_FORCE_LIBEVENT_DIST = @NTP_FORCE_LIBEVENT_DIST@
 OBJEXT = @OBJEXT@
 OPENSSL = @OPENSSL@
 OPENSSL_INC = @OPENSSL_INC@
@@ -181,6 +197,7 @@ PACKAGE_URL = @PACKAGE_URL@
 PACKAGE_VERSION = @PACKAGE_VERSION@
 PATH_SEPARATOR = @PATH_SEPARATOR@
 PKG_CONFIG = @PKG_CONFIG@
+PTHREAD_LIBS = @PTHREAD_LIBS@
 RANLIB = @RANLIB@
 SET_MAKE = @SET_MAKE@
 SHELL = @SHELL@
@@ -234,6 +251,7 @@ psdir = @psdir@
 sbindir = @sbindir@
 sharedstatedir = @sharedstatedir@
 srcdir = @srcdir@
+subdirs = @subdirs@
 sysconfdir = @sysconfdir@
 target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
@@ -241,59 +259,68 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 NULL = 
 sntp_objs = ..
-sntp_SOURCES_USED = $(sntp_objs)/crypto.o		\
-			$(sntp_objs)/kod_management.o	\
-			$(sntp_objs)/log.o		\
-			$(sntp_objs)/main.o		\
-			$(sntp_objs)/networking.o	\
-			$(sntp_objs)/sntp-opts.o	\
-			$(sntp_objs)/utilities.o	\
-			$(NULL)
+sntp_SOURCES_USED = \
+	$(sntp_objs)/crypto.o		\
+	$(sntp_objs)/kod_management.o	\
+	$(sntp_objs)/log.o		\
+	$(sntp_objs)/main.o		\
+	$(sntp_objs)/networking.o	\
+	$(sntp_objs)/sntp-opts.o	\
+	$(sntp_objs)/utilities.o	\
+	$(sntp_objs)/version.o		\
+	$(NULL)
 
-base_SOURCES = $(srcdir)/../tests_main.cpp	\
-			sntptest.cpp			\
-			$(NULL)
+base_SOURCES = \
+	$(srcdir)/../tests_main.cpp	\
+	sntptest.cpp			\
+	$(NULL)
 
-tests_SOURCES = $(base_SOURCES)		\
-		crypto.cpp		\
-		keyFile.cpp		\
-		kodDatabase.cpp		\
-		kodFile.cpp		\
-		networking.cpp		\
-		packetHandling.cpp	\
-		packetProcessing.cpp	\
-		utilities.cpp		\
-		$(NULL)
+tests_SOURCES = \
+	$(base_SOURCES)		\
+	crypto.cpp		\
+	keyFile.cpp		\
+	kodDatabase.cpp		\
+	kodFile.cpp		\
+	networking.cpp		\
+	packetHandling.cpp	\
+	packetProcessing.cpp	\
+	utilities.cpp		\
+	$(NULL)
 
-noinst_HEADERS = sntptest.h		\
-			fileHandlingTest.h	\
-			$(NULL)
+noinst_HEADERS = \
+	sntptest.h		\
+	fileHandlingTest.h	\
+	$(NULL)
 
 dist_check_SCRIPTS = test-driver
 EXTRA_DIST = data
-CLEANFILES = data/kod-output-multiple	\
-		data/kod-output-single		\
-		data/debug-output-pkt		\
-		data/debug-output-lfp-dec	\
-		data/kod-output-blank		\
-		data/debug-output-lfp-bin	\
-		data/debug-output-lfp-hex	\
-		$(NULL)
+CLEANFILES = \
+	data/kod-output-multiple	\
+	data/kod-output-single		\
+	data/debug-output-pkt		\
+	data/debug-output-lfp-dec	\
+	data/kod-output-blank		\
+	data/debug-output-lfp-bin	\
+	data/debug-output-lfp-hex	\
+	$(NULL)
 
-LDADD = $(LIBOPTS_LDADD)			\
-		@top_builddir@/../libntp/libntp.a	\
-		@LCRYPTO@				\
-		@GTEST_LDFLAGS@				\
-		@GTEST_LIBS@				\
-		$(sntp_SOURCES_USED)			\
-		$(NULL)
+LDADD = \
+	$(LIBOPTS_LDADD)			\
+	@LDADD_LIBEVENT@			\
+	@top_builddir@/../libntp/libntp.a	\
+	@LDADD_LIBNTP@				\
+	@LCRYPTO@				\
+	@GTEST_LDFLAGS@				\
+	@GTEST_LIBS@				\
+	$(sntp_SOURCES_USED)			\
+	$(NULL)
 
 AM_CFLAGS = @CFLAGS_NTP@
 AM_CXXFLAGS = @GTEST_CXXFLAGS@
-AM_CPPFLAGS = @GTEST_CPPFLAGS@ @CPPFLAGS_NTP@
+AM_CPPFLAGS = @CPPFLAGS_LIBEVENT@ @GTEST_CPPFLAGS@ @CPPFLAGS_NTP@
 INCLUDES = $(LIBOPTS_CFLAGS) -I$(top_srcdir)/../include \
 	-I$(top_srcdir)/../lib/isc/include \
-	-I$(top_srcdir)/../lib/isc/nothreads/include \
+	-I$(top_srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/include \
 	-I$(top_srcdir)/../lib/isc/unix/include \
 	-I$(top_srcdir)/../tests -I$(top_srcdir)
 TESTS = $(am__append_2)
@@ -313,9 +340,9 @@ $(srcdir)/Makefile.in:  $(srcdir)/Makefile.am  $(am__configure_deps)
 	      exit 1;; \
 	  esac; \
 	done; \
-	echo ' cd $(top_srcdir) && $(AUTOMAKE) --foreign tests/Makefile'; \
+	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu tests/Makefile'; \
 	$(am__cd) $(top_srcdir) && \
-	  $(AUTOMAKE) --foreign tests/Makefile
+	  $(AUTOMAKE) --gnu tests/Makefile
 .PRECIOUS: Makefile
 Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
 	@case '$?' in \
