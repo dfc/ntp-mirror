@@ -36,10 +36,9 @@ host_triplet = @host@
 subdir = kernel
 DIST_COMMON = README $(srcdir)/Makefile.am $(srcdir)/Makefile.in
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps =  \
+am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/libevent/m4/openldap-thread-check.m4 \
 	$(top_srcdir)/sntp/libevent/m4/openldap.m4 \
-	$(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/m4/define_dir.m4 \
 	$(top_srcdir)/sntp/m4/ntp_bindir.m4 \
 	$(top_srcdir)/sntp/m4/ntp_cacheversion.m4 \
@@ -144,8 +143,6 @@ ECHO_C = @ECHO_C@
 ECHO_N = @ECHO_N@
 ECHO_T = @ECHO_T@
 EDITLINE_LIBS = @EDITLINE_LIBS@
-EF_LIBS = @EF_LIBS@
-EF_PROGS = @EF_PROGS@
 EGREP = @EGREP@
 EXEEXT = @EXEEXT@
 F77 = @F77@
@@ -276,9 +273,7 @@ target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-AUTOMAKE_OPTIONS = 
 SUBDIRS = sys
-ETAGS_ARGS = Makefile.am
 EXTRA_DIST = chuinit.c clkinit.c tty_chu.c tty_chu_STREAMS.c tty_clk.c tty_clk_STREAMS.c
 all: all-recursive
 
@@ -292,9 +287,9 @@ $(srcdir)/Makefile.in:  $(srcdir)/Makefile.am  $(am__configure_deps)
 	      exit 1;; \
 	  esac; \
 	done; \
-	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu kernel/Makefile'; \
+	echo ' cd $(top_srcdir) && $(AUTOMAKE) --foreign kernel/Makefile'; \
 	$(am__cd) $(top_srcdir) && \
-	  $(AUTOMAKE) --gnu kernel/Makefile
+	  $(AUTOMAKE) --foreign kernel/Makefile
 .PRECIOUS: Makefile
 Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
 	@case '$?' in \

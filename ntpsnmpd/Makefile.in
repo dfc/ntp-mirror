@@ -41,13 +41,13 @@ build_triplet = @build@
 host_triplet = @host@
 EXTRA_PROGRAMS = ntpsnmpd$(EXEEXT)
 DIST_COMMON = README $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
-	$(top_srcdir)/bincheck.mf $(top_srcdir)/depsver.mf
+	$(top_srcdir)/bincheck.mf $(top_srcdir)/depsver.mf \
+	$(top_srcdir)/includes.mf
 subdir = ntpsnmpd
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps =  \
+am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/libevent/m4/openldap-thread-check.m4 \
 	$(top_srcdir)/sntp/libevent/m4/openldap.m4 \
-	$(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/m4/define_dir.m4 \
 	$(top_srcdir)/sntp/m4/ntp_bindir.m4 \
 	$(top_srcdir)/sntp/m4/ntp_cacheversion.m4 \
@@ -80,6 +80,8 @@ ntpsnmpd_OBJECTS = $(am_ntpsnmpd_OBJECTS)
 ntpsnmpd_LDADD = $(LDADD)
 am__DEPENDENCIES_1 =
 ntpsnmpd_DEPENDENCIES = ../ntpq/libntpq.a ../libntp/libntp.a \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1)
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
@@ -172,8 +174,6 @@ ECHO_C = @ECHO_C@
 ECHO_N = @ECHO_N@
 ECHO_T = @ECHO_T@
 EDITLINE_LIBS = @EDITLINE_LIBS@
-EF_LIBS = @EF_LIBS@
-EF_PROGS = @EF_PROGS@
 EGREP = @EGREP@
 EXEEXT = @EXEEXT@
 F77 = @F77@
@@ -305,7 +305,6 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 NULL = 
-AUTOMAKE_OPTIONS = 
 @NTP_BINSUBDIR_IS_BIN_TRUE@bin_PROGRAMS = @MAKE_NTPSNMPD@
 @NTP_BINSUBDIR_IS_BIN_FALSE@sbin_PROGRAMS = @MAKE_NTPSNMPD@
 ntpsnmpd_SOURCES = netsnmp_daemonize.c ntpsnmpd.c ntpSnmpSubagentObject.c \
@@ -313,15 +312,11 @@ ntpsnmpd_SOURCES = netsnmp_daemonize.c ntpsnmpd.c ntpSnmpSubagentObject.c \
 		ntp_snmp.h
 
 # HMS: we probably want a version.o file here, too.
-LDADD = ../ntpq/libntpq.a ../libntp/libntp.a @LDADD_LIBNTP@ \
-	@PTHREAD_LIBS@ @LCRYPTO@ @SNMP_LIBS@ $(LIBOPTS_LDADD)
-INCLUDES = -I$(top_srcdir)/ntpq -I$(top_srcdir)/include \
-	-I$(top_srcdir)/lib/isc/include \
-	-I$(top_srcdir)/lib/isc/@LIBISC_PTHREADS_NOTHREADS@/include \
-	-I$(top_srcdir)/lib/isc/unix/include $(LIBOPTS_CFLAGS) \
-	@SNMP_CPPFLAGS@ $(am__empty)
-AM_CFLAGS = @SNMP_CFLAGS@ @CFLAGS_NTP@
-AM_CPPFLAGS = @CPPFLAGS_NTP@
+LDADD = ../ntpq/libntpq.a ../libntp/libntp.a $(LDADD_LIBNTP) \
+	$(PTHREAD_LIBS) $(LCRYPTO) $(SNMP_LIBS) $(LIBOPTS_LDADD)
+AM_CFLAGS = $(SNMP_CFLAGS) $(CFLAGS_NTP)
+AM_CPPFLAGS = -I$(top_srcdir)/ntpq $(NTP_INCS) $(LIBOPTS_CFLAGS) \
+	$(SNMP_CPPFLAGS) $(CPPFLAGS_NTP)
 EXTRA_DIST = ntpsnmpd-opts.def ntpsnmpd.1 ntpsnmpd-opts.texi	\
 		ntpsnmpd-opts.menu ntpv4-mib.mib
 
@@ -340,12 +335,15 @@ std_def_list = \
 	$(top_srcdir)/sntp/include/version.def			\
 	$(NULL)
 
+NTP_INCS = -I$(top_srcdir)/include -I$(top_srcdir)/lib/isc/include \
+	-I$(top_srcdir)/lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/include \
+	-I$(top_srcdir)/lib/isc/unix/include
 all: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) all-am
 
 .SUFFIXES:
 .SUFFIXES: .c .lo .o .obj
-$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/bincheck.mf $(top_srcdir)/depsver.mf $(am__configure_deps)
+$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/bincheck.mf $(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf $(am__configure_deps)
 	@for dep in $?; do \
 	  case '$(am__configure_deps)' in \
 	    *$$dep*) \
@@ -354,9 +352,9 @@ $(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/bincheck.mf $(top_sr
 	      exit 1;; \
 	  esac; \
 	done; \
-	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu ntpsnmpd/Makefile'; \
+	echo ' cd $(top_srcdir) && $(AUTOMAKE) --foreign ntpsnmpd/Makefile'; \
 	$(am__cd) $(top_srcdir) && \
-	  $(AUTOMAKE) --gnu ntpsnmpd/Makefile
+	  $(AUTOMAKE) --foreign ntpsnmpd/Makefile
 .PRECIOUS: Makefile
 Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
 	@case '$?' in \

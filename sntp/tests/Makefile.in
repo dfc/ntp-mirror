@@ -37,14 +37,14 @@ host_triplet = @host@
 check_PROGRAMS = $(am__EXEEXT_1)
 @BUILD_SNTP_TRUE@am__append_1 = tests
 @NTP_CROSSCOMPILE_FALSE@am__append_2 = $(check_PROGRAMS)
-subdir = tests
 DIST_COMMON = $(dist_check_SCRIPTS) $(noinst_HEADERS) \
-	$(srcdir)/Makefile.am $(srcdir)/Makefile.in
+	$(srcdir)/Makefile.am $(srcdir)/Makefile.in \
+	$(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf
+subdir = tests
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps =  \
+am__aclocal_m4_deps = $(top_srcdir)/libopts/m4/libopts.m4 \
 	$(top_srcdir)/libevent/m4/openldap-thread-check.m4 \
 	$(top_srcdir)/libevent/m4/openldap.m4 \
-	$(top_srcdir)/libopts/m4/libopts.m4 \
 	$(top_srcdir)/m4/ntp_bindir.m4 \
 	$(top_srcdir)/m4/ntp_cacheversion.m4 \
 	$(top_srcdir)/m4/ntp_compiler.m4 \
@@ -80,8 +80,10 @@ am__DEPENDENCIES_2 = $(sntp_objs)/crypto.o \
 	$(sntp_objs)/main.o $(sntp_objs)/networking.o \
 	$(sntp_objs)/sntp-opts.o $(sntp_objs)/utilities.o \
 	$(sntp_objs)/version.o $(am__DEPENDENCIES_1)
-tests_DEPENDENCIES = $(am__DEPENDENCIES_1) \
-	@top_builddir@/../libntp/libntp.a $(am__DEPENDENCIES_2) \
+tests_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+	$(top_builddir)/../libntp/libntp.a $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_2) \
 	$(am__DEPENDENCIES_1)
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
@@ -258,6 +260,7 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 NULL = 
+BUILT_SOURCES = .deps-ver
 sntp_objs = ..
 sntp_SOURCES_USED = \
 	$(sntp_objs)/crypto.o		\
@@ -294,44 +297,40 @@ noinst_HEADERS = \
 
 dist_check_SCRIPTS = test-driver
 EXTRA_DIST = data
-CLEANFILES = \
-	data/kod-output-multiple	\
-	data/kod-output-single		\
-	data/debug-output-pkt		\
-	data/debug-output-lfp-dec	\
-	data/kod-output-blank		\
-	data/debug-output-lfp-bin	\
-	data/debug-output-lfp-hex	\
-	$(NULL)
-
+CLEANFILES = data/kod-output-multiple data/kod-output-single \
+	data/debug-output-pkt data/debug-output-lfp-dec \
+	data/kod-output-blank data/debug-output-lfp-bin \
+	data/debug-output-lfp-hex $(NULL) .deps-ver
 LDADD = \
 	$(LIBOPTS_LDADD)			\
-	@LDADD_LIBEVENT@			\
-	@top_builddir@/../libntp/libntp.a	\
-	@LDADD_LIBNTP@				\
-	@LCRYPTO@				\
-	@GTEST_LDFLAGS@				\
-	@GTEST_LIBS@				\
+	$(LDADD_LIBEVENT)			\
+	$(top_builddir)/../libntp/libntp.a	\
+	$(LDADD_LIBNTP)				\
+	$(LCRYPTO)				\
+	$(GTEST_LDFLAGS)			\
+	$(GTEST_LIBS)				\
 	$(sntp_SOURCES_USED)			\
 	$(NULL)
 
-AM_CFLAGS = @CFLAGS_NTP@
-AM_CXXFLAGS = @GTEST_CXXFLAGS@
-AM_CPPFLAGS = @CPPFLAGS_LIBEVENT@ @GTEST_CPPFLAGS@ @CPPFLAGS_NTP@
-INCLUDES = $(LIBOPTS_CFLAGS) -I$(top_srcdir)/../include \
-	-I$(top_srcdir)/../lib/isc/include \
-	-I$(top_srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/include \
-	-I$(top_srcdir)/../lib/isc/unix/include \
-	-I$(top_srcdir)/../tests -I$(top_srcdir)
+AM_CFLAGS = $(CFLAGS_NTP)
+AM_CXXFLAGS = $(GTEST_CXXFLAGS)
+AM_CPPFLAGS = $(SNTP_INCS) -I$(srcdir)/.. -I$(top_srcdir)/../tests \
+	$(LIBOPTS_CFLAGS) $(CPPFLAGS_LIBEVENT) $(GTEST_CPPFLAGS) \
+	$(CPPFLAGS_NTP)
 TESTS = $(am__append_2)
 TEST_INPUT_DIR = $(abs_srcdir)/data
 TEST_OUTPUT_DIR = $(abs_builddir)/data
 TESTS_ENVIRONMENT = $(top_srcdir)/tests/test-driver $(TEST_INPUT_DIR) $(TEST_OUTPUT_DIR)
-all: all-am
+SNTP_INCS = -I$(top_srcdir)/../include \
+	-I$(top_srcdir)/../lib/isc/include \
+	-I$(top_srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/include \
+	-I$(top_srcdir)/../lib/isc/unix/include
+all: $(BUILT_SOURCES)
+	$(MAKE) $(AM_MAKEFLAGS) all-am
 
 .SUFFIXES:
 .SUFFIXES: .cpp .lo .o .obj
-$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am  $(am__configure_deps)
+$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf $(am__configure_deps)
 	@for dep in $?; do \
 	  case '$(am__configure_deps)' in \
 	    *$$dep*) \
@@ -340,9 +339,9 @@ $(srcdir)/Makefile.in:  $(srcdir)/Makefile.am  $(am__configure_deps)
 	      exit 1;; \
 	  esac; \
 	done; \
-	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu tests/Makefile'; \
+	echo ' cd $(top_srcdir) && $(AUTOMAKE) --foreign tests/Makefile'; \
 	$(am__cd) $(top_srcdir) && \
-	  $(AUTOMAKE) --gnu tests/Makefile
+	  $(AUTOMAKE) --foreign tests/Makefile
 .PRECIOUS: Makefile
 Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
 	@case '$?' in \
@@ -615,10 +614,12 @@ check-am: all-am
 	$(MAKE) $(AM_MAKEFLAGS) $(check_PROGRAMS) \
 	  $(dist_check_SCRIPTS)
 	$(MAKE) $(AM_MAKEFLAGS) check-TESTS
-check: check-am
+check: $(BUILT_SOURCES)
+	$(MAKE) $(AM_MAKEFLAGS) check-am
 all-am: Makefile $(HEADERS)
 installdirs:
-install: install-am
+install: $(BUILT_SOURCES)
+	$(MAKE) $(AM_MAKEFLAGS) install-am
 install-exec: install-exec-am
 install-data: install-data-am
 uninstall: uninstall-am
@@ -644,6 +645,7 @@ distclean-generic:
 maintainer-clean-generic:
 	@echo "This command is intended for maintainers to use"
 	@echo "it deletes files that may require special tools to rebuild."
+	-test -z "$(BUILT_SOURCES)" || rm -f $(BUILT_SOURCES)
 clean: clean-am
 
 clean-am: clean-checkPROGRAMS clean-generic clean-libtool \
@@ -715,7 +717,7 @@ ps-am:
 
 uninstall-am:
 
-.MAKE: check-am install-am install-strip
+.MAKE: all check check-am install install-am install-strip
 
 .PHONY: CTAGS GTAGS all all-am check check-TESTS check-am clean \
 	clean-checkPROGRAMS clean-generic clean-libtool ctags \
@@ -731,6 +733,70 @@ uninstall-am:
 	mostlyclean-generic mostlyclean-libtool pdf pdf-am ps ps-am \
 	tags uninstall uninstall-am
 
+$(DEPDIR)/deps-ver: $(top_srcdir)/deps-ver
+	@[ -f $@ ] ||							\
+		cp $(top_srcdir)/deps-ver $@
+	@[ -w $@ ] ||							\
+		chmod ug+w $@
+	@cmp $(top_srcdir)/deps-ver $@ > /dev/null || (			\
+		$(MAKE) clean &&					\
+		echo -n "Prior $(subdir)/$(DEPDIR) version " &&		\
+		cat $@ &&						\
+		rm -rf $(DEPDIR) &&					\
+		mkdir $(DEPDIR) && 					\
+		case "$(top_builddir)" in				\
+		 .)							\
+		    ./config.status Makefile depfiles			\
+		    ;;							\
+		 ..)							\
+			cd .. &&					\
+			./config.status $(subdir)/Makefile depfiles &&	\
+			cd $(subdir)					\
+		    ;;							\
+		 *)							\
+		    echo 'Fatal: depsver.mf Automake fragment limited'	\
+			 'to immediate subdirectories.'	&&		\
+		    echo "top_builddir:	$(top_builddir)" &&		\
+		    echo "subdir:	$(subdir)" &&			\
+		    exit 1						\
+		    ;;							\
+		esac &&							\
+		echo -n "Cleaned $(subdir)/$(DEPDIR) version " &&	\
+		cat $(top_srcdir)/deps-ver				\
+	)
+	cp $(top_srcdir)/deps-ver $@
+
+.deps-ver: $(top_srcdir)/deps-ver
+	@[ ! -d $(DEPDIR) ] || $(MAKE) $(DEPDIR)/deps-ver
+	@touch $@
+
+#
+# depsver.mf	included in Makefile.am for directories with .deps
+#
+# When building in the same directory with sources that change over
+# time, such as when tracking using bk, the .deps files can become
+# stale with respect to moved, deleted, or superceded headers.  Most
+# commonly, this would exhibit as make reporting a failure to make a
+# header file which is no longer in the location given.  To address
+# this issue, we use a deps-ver file which is updated with each change
+# that breaks old .deps files.  A copy of deps-ver is made into
+# $(DEPDIR) if not already present.  If $(DEPDIR)/deps-ver is present
+# with different contents than deps-ver, we make clean to ensure all
+# .o files built before the incompatible change are rebuilt along with
+# their updated .deps files, then remove $(DEPDIR) and recreate it as
+# empty stubs.
+#
+# It is normal when configured with --disable-dependency-tracking for
+# the DEPDIR to not have been created.  For this reason, we use the
+# intermediate target .deps-ver, which invokes make recursively if
+# DEPDIR exists.
+#
+# If you modify depsver.mf, please make the changes to the master
+# copy, the one in sntp is copied by the bootstrap script from it.
+#
+# This comment block follows rather than leads the related code so that
+# it stays with it in the generated Makefile.in and Makefile.
+#
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

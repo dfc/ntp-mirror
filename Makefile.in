@@ -43,10 +43,9 @@ DIST_COMMON = README $(am__configure_deps) $(srcdir)/Makefile.am \
 	sntp/build-aux/install-sh sntp/build-aux/ltmain.sh \
 	sntp/build-aux/missing sntp/build-aux/ylwrap ylwrap
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps =  \
+am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/libevent/m4/openldap-thread-check.m4 \
 	$(top_srcdir)/sntp/libevent/m4/openldap.m4 \
-	$(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/m4/define_dir.m4 \
 	$(top_srcdir)/sntp/m4/ntp_bindir.m4 \
 	$(top_srcdir)/sntp/m4/ntp_cacheversion.m4 \
@@ -163,8 +162,6 @@ ECHO_C = @ECHO_C@
 ECHO_N = @ECHO_N@
 ECHO_T = @ECHO_T@
 EDITLINE_LIBS = @EDITLINE_LIBS@
-EF_LIBS = @EF_LIBS@
-EF_PROGS = @EF_PROGS@
 EGREP = @EGREP@
 EXEEXT = @EXEEXT@
 F77 = @F77@
@@ -295,13 +292,11 @@ target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-AUTOMAKE_OPTIONS = foreign 1.10
-ACLOCAL_AMFLAGS = -I sntp/m4 -I sntp/libopts/m4 -I sntp/libevent/m4
+ACLOCAL_AMFLAGS = -I sntp/m4 -I sntp/libevent/m4 -I sntp/libopts/m4
 NULL = 
 SUBDIRS = \
 	scripts 	\
 	include 	\
-	ElectricFence	\
 	libntp		\
 	sntp		\
 	libparse	\

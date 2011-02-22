@@ -1,3 +1,544 @@
+ChangeSet@1.2478, 2011-02-22 08:28:31+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P132
+  TAG: NTP_4_2_7P132
+
+  ChangeLog@1.796 +1 -0
+    NTP_4_2_7P132
+
+  clockstuff/clktest-opts.c@1.58 +2 -2
+    NTP_4_2_7P132
+
+  clockstuff/clktest-opts.h@1.58 +3 -3
+    NTP_4_2_7P132
+
+  ntpd/ntpd-opts.c@1.137 +2 -2
+    NTP_4_2_7P132
+
+  ntpd/ntpd-opts.h@1.137 +3 -3
+    NTP_4_2_7P132
+
+  ntpd/ntpd-opts.texi@1.135 +4 -4
+    NTP_4_2_7P132
+
+  ntpd/ntpd.1@1.135 +2 -2
+    NTP_4_2_7P132
+
+  ntpdc/ntpdc-opts.c@1.134 +2 -2
+    NTP_4_2_7P132
+
+  ntpdc/ntpdc-opts.h@1.134 +3 -3
+    NTP_4_2_7P132
+
+  ntpdc/ntpdc-opts.texi@1.134 +4 -4
+    NTP_4_2_7P132
+
+  ntpdc/ntpdc.1@1.134 +2 -2
+    NTP_4_2_7P132
+
+  ntpq/ntpq-opts.c@1.134 +2 -2
+    NTP_4_2_7P132
+
+  ntpq/ntpq-opts.h@1.134 +3 -3
+    NTP_4_2_7P132
+
+  ntpq/ntpq-opts.texi@1.134 +4 -4
+    NTP_4_2_7P132
+
+  ntpq/ntpq.1@1.134 +2 -2
+    NTP_4_2_7P132
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.134 +2 -2
+    NTP_4_2_7P132
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.134 +3 -3
+    NTP_4_2_7P132
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.134 +4 -4
+    NTP_4_2_7P132
+
+  ntpsnmpd/ntpsnmpd.1@1.134 +2 -2
+    NTP_4_2_7P132
+
+  packageinfo.sh@1.134 +1 -1
+    NTP_4_2_7P132
+
+  sntp/sntp-opts.c@1.128 +2 -2
+    NTP_4_2_7P132
+
+  sntp/sntp-opts.h@1.128 +3 -3
+    NTP_4_2_7P132
+
+  sntp/sntp-opts.texi@1.128 +4 -4
+    NTP_4_2_7P132
+
+  sntp/sntp.1@1.128 +2 -2
+    NTP_4_2_7P132
+
+  sntp/sntp.html@1.128 +3 -3
+    NTP_4_2_7P132
+
+  util/ntp-keygen-opts.c@1.132 +2 -2
+    NTP_4_2_7P132
+
+  util/ntp-keygen-opts.h@1.132 +3 -3
+    NTP_4_2_7P132
+
+  util/ntp-keygen-opts.texi@1.135 +4 -4
+    NTP_4_2_7P132
+
+  util/ntp-keygen.1@1.135 +2 -2
+    NTP_4_2_7P132
+
+ChangeSet@1.2477, 2011-02-22 08:01:28+00:00, davehart@shiny.ad.hartbrothers.com
+  Avoid relying on remake rules for routine build/flock-build for
+    libevent as for the top-level and sntp subproject.
+
+  ChangeLog@1.795 +3 -1
+    Avoid relying on remake rules for routine build/flock-build for
+      libevent as for the top-level and sntp subproject.
+
+  build@1.44 +8 -1
+    Avoid relying on remake rules for routine build/flock-build for
+      libevent as for the top-level and sntp subproject.
+
+ChangeSet@1.2476, 2011-02-22 02:51:42-05:00, stenn@deacon.udel.edu
+  ElectricFence was suffering bitrot - remove it.  valgrind seems better.
+
+  BitKeeper/deleted/04/COPYING~52231e38@1.3 +0 -0
+    Delete: ElectricFence/COPYING
+
+  BitKeeper/deleted/26/Makefile-~52231e38@1.3 +0 -0
+    Delete: ElectricFence/Makefile-
+
+  BitKeeper/deleted/28/efence.h~52231e38@1.3 +0 -0
+    Delete: ElectricFence/efence.h
+
+  BitKeeper/deleted/49/Makefile.am~52231e38@1.8 +0 -0
+    Delete: ElectricFence/Makefile.am
+
+  BitKeeper/deleted/4b/README~52231e38@1.3 +0 -0
+    Delete: ElectricFence/README
+
+  BitKeeper/deleted/54/efence.c~52231e38@1.3 +0 -0
+    Delete: ElectricFence/efence.c
+
+  BitKeeper/deleted/59/print.c~52231e38@1.3 +0 -0
+    Delete: ElectricFence/print.c
+
+  BitKeeper/deleted/8b/page.c~52231e38@1.6 +0 -0
+    Delete: ElectricFence/page.c
+
+  BitKeeper/deleted/a8/eftest.c~52231e38@1.3 +0 -0
+    Delete: ElectricFence/eftest.c
+
+  BitKeeper/deleted/de/CHANGES~52231e38@1.3 +0 -0
+    Delete: ElectricFence/CHANGES
+
+  BitKeeper/deleted/e4/libefence.3~52231e38@1.3 +0 -0
+    Delete: ElectricFence/libefence.3
+
+  BitKeeper/deleted/e8/tstheap.c~52231e38@1.3 +0 -0
+    Delete: ElectricFence/tstheap.c
+
+  ChangeLog@1.794 +1 -0
+    ElectricFence was suffering bitrot - remove it.  valgrind seems better.
+
+  Makefile.am@1.107 +0 -1
+    ElectricFence was suffering bitrot - remove it.  valgrind seems better.
+
+  configure.ac@1.517 +0 -24
+    ElectricFence was suffering bitrot - remove it.  valgrind seems better.
+
+ChangeSet@1.2471.1.2, 2011-02-22 01:35:03-05:00, stenn@deacon.udel.edu
+  Updated to AutoGen-5.11.6
+
+  clockstuff/clktest-opts.c@1.57 +27 -11
+    Updated to AutoGen-5.11.6
+
+  clockstuff/clktest-opts.h@1.57 +2 -2
+    Updated to AutoGen-5.11.6
+
+  ntpd/ntpd-opts.c@1.136 +24 -8
+    Updated to AutoGen-5.11.6
+
+  ntpd/ntpd-opts.h@1.136 +2 -2
+    Updated to AutoGen-5.11.6
+
+  ntpd/ntpd-opts.texi@1.134 +3 -3
+    Updated to AutoGen-5.11.6
+
+  ntpd/ntpd.1@1.134 +2 -2
+    Updated to AutoGen-5.11.6
+
+  ntpdc/ntpdc-opts.c@1.133 +34 -25
+    Updated to AutoGen-5.11.6
+
+  ntpdc/ntpdc-opts.h@1.133 +2 -2
+    Updated to AutoGen-5.11.6
+
+  ntpdc/ntpdc-opts.texi@1.133 +11 -18
+    Updated to AutoGen-5.11.6
+
+  ntpdc/ntpdc.1@1.133 +2 -2
+    Updated to AutoGen-5.11.6
+
+  ntpq/ntpq-opts.c@1.133 +32 -18
+    Updated to AutoGen-5.11.6
+
+  ntpq/ntpq-opts.h@1.133 +2 -2
+    Updated to AutoGen-5.11.6
+
+  ntpq/ntpq-opts.texi@1.133 +9 -11
+    Updated to AutoGen-5.11.6
+
+  ntpq/ntpq.1@1.133 +2 -2
+    Updated to AutoGen-5.11.6
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.133 +24 -8
+    Updated to AutoGen-5.11.6
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.133 +2 -2
+    Updated to AutoGen-5.11.6
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.133 +3 -3
+    Updated to AutoGen-5.11.6
+
+  ntpsnmpd/ntpsnmpd.1@1.133 +2 -2
+    Updated to AutoGen-5.11.6
+
+  sntp/sntp-opts.c@1.127 +28 -12
+    Updated to AutoGen-5.11.6
+
+  sntp/sntp-opts.h@1.127 +2 -2
+    Updated to AutoGen-5.11.6
+
+  sntp/sntp-opts.texi@1.127 +6 -6
+    Updated to AutoGen-5.11.6
+
+  sntp/sntp.1@1.127 +2 -2
+    Updated to AutoGen-5.11.6
+
+  sntp/sntp.html@1.127 +5 -5
+    Updated to AutoGen-5.11.6
+
+  util/ntp-keygen-opts.c@1.131 +28 -12
+    Updated to AutoGen-5.11.6
+
+  util/ntp-keygen-opts.h@1.131 +2 -2
+    Updated to AutoGen-5.11.6
+
+  util/ntp-keygen-opts.texi@1.134 +5 -5
+    Updated to AutoGen-5.11.6
+
+  util/ntp-keygen.1@1.134 +2 -2
+    Updated to AutoGen-5.11.6
+
+ChangeSet@1.2473, 2011-02-22 06:06:28+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 1832] ntpdate doesn't allow timeout > 2s.
+  [Bug 1833] The checking sem_timedwait() fails without -pthread.
+  Enable all relevant automake warnings.
+  Correct Solaris 2.1x PTHREAD_ONCE_INIT extra braces test to avoid
+    triggering warnings due to excess braces.
+  Remove libevent-cfg from sntp/Makefile.am.
+  Provide bug report and URL options to Autoconf.
+
+  ChangeLog@1.793 +7 -1
+    [Bug 1832] ntpdate doesn't allow timeout > 2s.
+    [Bug 1833] The checking sem_timedwait() fails without -pthread.
+    Enable all relevant automake warnings.
+    Correct Solaris 2.1x PTHREAD_ONCE_INIT extra braces test to avoid
+      triggering warnings due to excess braces.
+    Remove libevent-cfg from sntp/Makefile.am.
+    Provide bug report and URL options to Autoconf.
+
+  Makefile.am@1.106 +1 -3
+    Enable all relevant automake warnings.
+    
+
+  adjtimed/Makefile.am@1.11 +7 -10
+    automake deprecates INCLUDES, use AM_CPPFLAGS instead
+
+  clockstuff/Makefile.am@1.18 +7 -9
+    automake deprecates INCLUDES, use AM_CPPFLAGS instead
+
+  configure.ac@1.516 +11 -4
+    Pass automake options via AM_INIT_AUTOMAKE so they apply to all Makefile.am
+      without requiring duplicative AUTOMAKE_OPTIONS = lines.
+    Enable all relevant automake warnings.
+
+  includes.mf@1.1 +6 -0
+    BitKeeper file C:/ntp/ntp-dev-m4quote/includes.mf
+
+  includes.mf@1.0 +0 -0
+
+  kernel/Makefile.am@1.5 +0 -2
+    automake deprecates INCLUDES, use AM_CPPFLAGS instead
+
+  kernel/sys/Makefile.am@1.6 +0 -5
+    automake deprecates INCLUDES, use AM_CPPFLAGS instead
+
+  libntp/Makefile.am@1.61 +7 -11
+    automake deprecates INCLUDES, use AM_CPPFLAGS instead
+
+  libparse/Makefile.am@1.25 +5 -10
+    automake deprecates INCLUDES, use AM_CPPFLAGS instead
+
+  ntpd/Makefile.am@1.100 +6 -8
+    automake deprecates INCLUDES, use AM_CPPFLAGS instead
+
+  ntpd/refclock_true.c@1.18 +3 -3
+    include system and C runtime headers before NTP's
+
+  ntpdate/Makefile.am@1.28 +6 -10
+    automake deprecates INCLUDES, use AM_CPPFLAGS instead
+
+  ntpdate/ntpdate.c@1.84 +1 -12
+    [Bug 1832] ntpdate doesn't allow timeout > 2s.
+
+  ntpdate/ntpdate.h@1.13 +6 -3
+    [Bug 1832] ntpdate doesn't allow timeout > 2s.
+
+  ntpdc/Makefile.am@1.58 +8 -10
+    automake deprecates INCLUDES, use AM_CPPFLAGS instead
+
+  ntpq/Makefile.am@1.54 +8 -10
+    automake deprecates INCLUDES, use AM_CPPFLAGS instead
+
+  ntpsnmpd/Makefile.am@1.26 +10 -12
+    automake deprecates INCLUDES, use AM_CPPFLAGS instead
+
+  parseutil/Makefile.am@1.15 +7 -9
+    automake deprecates INCLUDES, use AM_CPPFLAGS instead
+
+  sntp/Makefile.am@1.56 +15 -17
+    Enable all relevant automake warnings.
+    
+
+  sntp/configure.ac@1.58 +10 -4
+    Pass automake options via AM_INIT_AUTOMAKE so they apply to all Makefile.am
+      without requiring duplicative AUTOMAKE_OPTIONS = lines.
+    Enable all relevant automake warnings.
+
+  sntp/includes.mf@1.1 +6 -0
+    BitKeeper file C:/ntp/ntp-dev-m4quote/sntp/includes.mf
+
+  sntp/includes.mf@1.0 +0 -0
+
+  sntp/m4/ntp_libevent.m4@1.4 +3 -3
+    $ac_configure_args is maintained with a leading space, particularly important
+    with Autoconf 2.61, not so much with 2.68.
+
+  sntp/m4/ntp_libntp.m4@1.7 +27 -10
+    [Bug 1833] The checking sem_timedwait() fails without -pthread.
+
+  sntp/tests/Makefile.am@1.21 +20 -17
+    automake deprecates INCLUDES, use AM_CPPFLAGS instead
+
+  tests/libntp/Makefile.am@1.35 +18 -15
+    automake deprecates INCLUDES, use AM_CPPFLAGS instead
+
+  util/Makefile.am@1.57 +8 -13
+    automake deprecates INCLUDES, use AM_CPPFLAGS instead
+
+ChangeSet@1.2082.4.204, 2011-02-22 00:38:53-05:00, stenn@deacon.udel.edu
+  upgrade to libopts-34.0.9
+
+  clockstuff/clktest-opts.c@1.12.1.1 +100 -76
+    upgrade to libopts-34.0.9
+
+  clockstuff/clktest-opts.h@1.12.1.1 +32 -25
+    upgrade to libopts-34.0.9
+
+  ntpd/ntpd-opts.c@1.248.34.1 +24 -8
+    upgrade to libopts-34.0.9
+
+  ntpd/ntpd-opts.h@1.248.34.1 +2 -2
+    upgrade to libopts-34.0.9
+
+  ntpd/ntpdsim-opts.c@1.18 +202 -171
+    upgrade to libopts-34.0.9
+
+  ntpd/ntpdsim-opts.h@1.18 +32 -28
+    upgrade to libopts-34.0.9
+
+  ntpdc/ntpdc-opts.c@1.244.34.1 +34 -25
+    upgrade to libopts-34.0.9
+
+  ntpdc/ntpdc-opts.h@1.244.34.1 +2 -2
+    upgrade to libopts-34.0.9
+
+  ntpq/ntpq-opts.c@1.245.34.1 +32 -18
+    upgrade to libopts-34.0.9
+
+  ntpq/ntpq-opts.h@1.245.34.1 +2 -2
+    upgrade to libopts-34.0.9
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.123.35.1 +24 -8
+    upgrade to libopts-34.0.9
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.123.35.1 +2 -2
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/COPYING.gplv3@1.4 +1 -1
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/COPYING.lgplv3@1.4 +1 -1
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/Makefile.am@1.9 +3 -3
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/README@1.6 +63 -34
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/ag-char-map.h@1.12 +3 -3
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/autoopts.c@1.9 +23 -19
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/autoopts.h@1.8 +1 -1
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/autoopts/options.h@1.11 +11 -10
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/autoopts/usage-txt.h@1.11 +4 -4
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/boolean.c@1.7 +1 -1
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/compat/compat.h@1.7 +1 -1
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/compat/windows-config.h@1.7 +1 -1
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/configfile.c@1.10 +174 -51
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/cook.c@1.7 +1 -1
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/enumeration.c@1.7 +1 -1
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/environment.c@1.9 +1 -1
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/file.c@1.7 +1 -1
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/genshell.c@1.12 +29 -13
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/genshell.h@1.12 +3 -3
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/load.c@1.9 +1 -1
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/m4/libopts.m4@1.15 +10 -21
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/m4/liboptschk.m4@1.8 +1 -1
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/makeshell.c@1.8 +1 -1
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/nested.c@1.7 +1 -1
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/numeric.c@1.7 +1 -1
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/parse-duration.c@1.4 +1 -1
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/parse-duration.h@1.4 +1 -1
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/pgusage.c@1.7 +1 -1
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/proto.h@1.12 +1 -1
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/putshell.c@1.7 +1 -1
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/reset.c@1.7 +1 -1
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/restore.c@1.7 +1 -1
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/save.c@1.8 +1 -1
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/sort.c@1.7 +1 -1
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/stack.c@1.7 +1 -1
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/streqvcmp.c@1.7 +1 -1
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/text_mmap.c@1.7 +1 -1
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/time.c@1.7 +1 -1
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/tokenize.c@1.5 +1 -1
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/usage.c@1.8 +11 -7
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/value-type.h@1.12 +1 -1
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/version.c@1.7 +9 -12
+    upgrade to libopts-34.0.9
+
+  sntp/libopts/xat-attribute.h@1.12 +1 -1
+    upgrade to libopts-34.0.9
+
+  sntp/sntp-opts.c@1.117.32.1 +27 -11
+    upgrade to libopts-34.0.9
+
+  sntp/sntp-opts.h@1.117.32.1 +2 -2
+    upgrade to libopts-34.0.9
+
+  util/ntp-keygen-opts.c@1.247.34.1 +28 -12
+    upgrade to libopts-34.0.9
+
+  util/ntp-keygen-opts.h@1.247.34.1 +2 -2
+    upgrade to libopts-34.0.9
+
+ChangeSet@1.2467.1.1, 2011-02-21 20:50:01+00:00, davehart@shiny.ad.hartbrothers.com
+  Autoconf 2.61 workarounds
+
+  sntp/m4/ntp_cacheversion.m4@1.13 +8 -1
+    Autoconf 2.61 workaround: do not use AS_UNSET with a variable variable name.
+
+  sntp/m4/ntp_libntp.m4@1.4.1.1 +12 -13
+    Autoconf 2.61 workarounds: do not use [] for action-if-not-found with
+      AC_CHECK_LIB and AC_CHECK_FUNC
+
+ChangeSet@1.2471, 2011-02-21 06:04:08-05:00, stenn@deacon.udel.edu
+  Remove libevent-cfg from sntp/Makefile.am
+
+  ChangeLog@1.792 +1 -0
+    Remove libevent-cfg from sntp/Makefile.am
+
+  sntp/Makefile.am@1.55 +0 -1
+    Remove libevent-cfg from sntp/Makefile.am
+
 ChangeSet@1.2470, 2011-02-21 09:21:02+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P131
   TAG: NTP_4_2_7P131

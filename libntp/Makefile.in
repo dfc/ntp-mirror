@@ -36,13 +36,12 @@ build_triplet = @build@
 host_triplet = @host@
 @PTHREADS_TRUE@am__append_1 = $(srcdir)/../lib/isc/pthreads/mutex.c
 DIST_COMMON = README $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
-	$(top_srcdir)/depsver.mf
+	$(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf
 subdir = libntp
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps =  \
+am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/libevent/m4/openldap-thread-check.m4 \
 	$(top_srcdir)/sntp/libevent/m4/openldap.m4 \
-	$(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/m4/define_dir.m4 \
 	$(top_srcdir)/sntp/m4/ntp_bindir.m4 \
 	$(top_srcdir)/sntp/m4/ntp_cacheversion.m4 \
@@ -92,7 +91,7 @@ am__libntp_a_SOURCES_DIST = systime.c a_md5encrypt.c adjtime.c \
 	tstotv.c tvtots.c uglydate.c uinttoa.c work_fork.c \
 	work_thread.c ymd2yd.c $(srcdir)/../lib/isc/assertions.c \
 	$(srcdir)/../lib/isc/buffer.c \
-	$(srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/condition.c \
+	$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/condition.c \
 	$(srcdir)/../lib/isc/unix/dir.c $(srcdir)/../lib/isc/error.c \
 	$(srcdir)/../lib/isc/unix/errno2result.c \
 	$(srcdir)/../lib/isc/event.c $(srcdir)/../lib/isc/unix/file.c \
@@ -109,7 +108,7 @@ am__libntp_a_SOURCES_DIST = systime.c a_md5encrypt.c adjtime.c \
 	$(srcdir)/../lib/isc/unix/stdtime.c \
 	$(srcdir)/../lib/isc/unix/strerror.c \
 	$(srcdir)/../lib/isc/task.c \
-	$(srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/thread.c \
+	$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/thread.c \
 	$(srcdir)/../lib/isc/unix/time.c \
 	$(srcdir)/../lib/isc/sockaddr.c \
 	$(srcdir)/../lib/isc/pthreads/mutex.c
@@ -172,7 +171,7 @@ am__libntpsim_a_SOURCES_DIST = systime_s.c a_md5encrypt.c adjtime.c \
 	tstotv.c tvtots.c uglydate.c uinttoa.c work_fork.c \
 	work_thread.c ymd2yd.c $(srcdir)/../lib/isc/assertions.c \
 	$(srcdir)/../lib/isc/buffer.c \
-	$(srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/condition.c \
+	$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/condition.c \
 	$(srcdir)/../lib/isc/unix/dir.c $(srcdir)/../lib/isc/error.c \
 	$(srcdir)/../lib/isc/unix/errno2result.c \
 	$(srcdir)/../lib/isc/event.c $(srcdir)/../lib/isc/unix/file.c \
@@ -189,7 +188,7 @@ am__libntpsim_a_SOURCES_DIST = systime_s.c a_md5encrypt.c adjtime.c \
 	$(srcdir)/../lib/isc/unix/stdtime.c \
 	$(srcdir)/../lib/isc/unix/strerror.c \
 	$(srcdir)/../lib/isc/task.c \
-	$(srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/thread.c \
+	$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/thread.c \
 	$(srcdir)/../lib/isc/unix/time.c \
 	$(srcdir)/../lib/isc/sockaddr.c \
 	$(srcdir)/../lib/isc/pthreads/mutex.c
@@ -260,8 +259,6 @@ ECHO_C = @ECHO_C@
 ECHO_N = @ECHO_N@
 ECHO_T = @ECHO_T@
 EDITLINE_LIBS = @EDITLINE_LIBS@
-EF_LIBS = @EF_LIBS@
-EF_PROGS = @EF_PROGS@
 EGREP = @EGREP@
 EXEEXT = @EXEEXT@
 F77 = @F77@
@@ -393,14 +390,13 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 NULL = 
-AUTOMAKE_OPTIONS = 
 BUILT_SOURCES = .deps-ver
 CLEANFILES = .deps-ver
 noinst_LIBRARIES = libntp.a @MAKE_LIBNTPSIM@
 EXTRA_LIBRARIES = libntpsim.a
 libisc_SRCS = $(srcdir)/../lib/isc/assertions.c \
 	$(srcdir)/../lib/isc/buffer.c \
-	$(srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/condition.c \
+	$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/condition.c \
 	$(srcdir)/../lib/isc/unix/dir.c $(srcdir)/../lib/isc/error.c \
 	$(srcdir)/../lib/isc/unix/errno2result.c \
 	$(srcdir)/../lib/isc/event.c $(srcdir)/../lib/isc/unix/file.c \
@@ -417,7 +413,7 @@ libisc_SRCS = $(srcdir)/../lib/isc/assertions.c \
 	$(srcdir)/../lib/isc/unix/stdtime.c \
 	$(srcdir)/../lib/isc/unix/strerror.c \
 	$(srcdir)/../lib/isc/task.c \
-	$(srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/thread.c \
+	$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/thread.c \
 	$(srcdir)/../lib/isc/unix/time.c \
 	$(srcdir)/../lib/isc/sockaddr.c $(NULL) $(am__append_1)
 libntp_a_SRCS = \
@@ -499,19 +495,18 @@ libntp_a_SRCS = \
 libntp_a_SOURCES = systime.c $(libntp_a_SRCS)
 libntpsim_a_SOURCES = systime_s.c $(libntp_a_SRCS)
 EXTRA_libntp_a_SOURCES = adjtimex.c
-ETAGS_ARGS = Makefile.am
-INCLUDES = -I$(top_srcdir)/include -I$(top_srcdir)/lib/isc/include \
-	-I$(top_srcdir)/lib/isc/@LIBISC_PTHREADS_NOTHREADS@/include \
-	-I$(top_srcdir)/lib/isc/unix/include $(LIBOPTS_CFLAGS)
-AM_CFLAGS = @CFLAGS_NTP@
-AM_CPPFLAGS = @CPPFLAGS_NTP@
+AM_CFLAGS = $(CFLAGS_NTP)
+AM_CPPFLAGS = $(NTP_INCS) $(LIBOPTS_CFLAGS) $(CPPFLAGS_NTP)
 EXTRA_DIST = README
+NTP_INCS = -I$(top_srcdir)/include -I$(top_srcdir)/lib/isc/include \
+	-I$(top_srcdir)/lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/include \
+	-I$(top_srcdir)/lib/isc/unix/include
 all: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) all-am
 
 .SUFFIXES:
 .SUFFIXES: .c .lo .o .obj
-$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/depsver.mf $(am__configure_deps)
+$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf $(am__configure_deps)
 	@for dep in $?; do \
 	  case '$(am__configure_deps)' in \
 	    *$$dep*) \
@@ -520,9 +515,9 @@ $(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/depsver.mf $(am__con
 	      exit 1;; \
 	  esac; \
 	done; \
-	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu libntp/Makefile'; \
+	echo ' cd $(top_srcdir) && $(AUTOMAKE) --foreign libntp/Makefile'; \
 	$(am__cd) $(top_srcdir) && \
-	  $(AUTOMAKE) --gnu libntp/Makefile
+	  $(AUTOMAKE) --foreign libntp/Makefile
 .PRECIOUS: Makefile
 Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
 	@case '$?' in \
@@ -720,21 +715,21 @@ buffer.obj: $(srcdir)/../lib/isc/buffer.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o buffer.obj `if test -f '$(srcdir)/../lib/isc/buffer.c'; then $(CYGPATH_W) '$(srcdir)/../lib/isc/buffer.c'; else $(CYGPATH_W) '$(srcdir)/$(srcdir)/../lib/isc/buffer.c'; fi`
 
-condition.o: $(srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/condition.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT condition.o -MD -MP -MF $(DEPDIR)/condition.Tpo -c -o condition.o `test -f '$(srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/condition.c' || echo '$(srcdir)/'`$(srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/condition.c
+condition.o: $(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/condition.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT condition.o -MD -MP -MF $(DEPDIR)/condition.Tpo -c -o condition.o `test -f '$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/condition.c' || echo '$(srcdir)/'`$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/condition.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/condition.Tpo $(DEPDIR)/condition.Po
 @am__fastdepCC_FALSE@	$(AM_V_CC) @AM_BACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='$(srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/condition.c' object='condition.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/condition.c' object='condition.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o condition.o `test -f '$(srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/condition.c' || echo '$(srcdir)/'`$(srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/condition.c
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o condition.o `test -f '$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/condition.c' || echo '$(srcdir)/'`$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/condition.c
 
-condition.obj: $(srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/condition.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT condition.obj -MD -MP -MF $(DEPDIR)/condition.Tpo -c -o condition.obj `if test -f '$(srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/condition.c'; then $(CYGPATH_W) '$(srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/condition.c'; else $(CYGPATH_W) '$(srcdir)/$(srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/condition.c'; fi`
+condition.obj: $(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/condition.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT condition.obj -MD -MP -MF $(DEPDIR)/condition.Tpo -c -o condition.obj `if test -f '$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/condition.c'; then $(CYGPATH_W) '$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/condition.c'; else $(CYGPATH_W) '$(srcdir)/$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/condition.c'; fi`
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/condition.Tpo $(DEPDIR)/condition.Po
 @am__fastdepCC_FALSE@	$(AM_V_CC) @AM_BACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='$(srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/condition.c' object='condition.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/condition.c' object='condition.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o condition.obj `if test -f '$(srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/condition.c'; then $(CYGPATH_W) '$(srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/condition.c'; else $(CYGPATH_W) '$(srcdir)/$(srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/condition.c'; fi`
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o condition.obj `if test -f '$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/condition.c'; then $(CYGPATH_W) '$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/condition.c'; else $(CYGPATH_W) '$(srcdir)/$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/condition.c'; fi`
 
 dir.o: $(srcdir)/../lib/isc/unix/dir.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT dir.o -MD -MP -MF $(DEPDIR)/dir.Tpo -c -o dir.o `test -f '$(srcdir)/../lib/isc/unix/dir.c' || echo '$(srcdir)/'`$(srcdir)/../lib/isc/unix/dir.c
@@ -1088,21 +1083,21 @@ task.obj: $(srcdir)/../lib/isc/task.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o task.obj `if test -f '$(srcdir)/../lib/isc/task.c'; then $(CYGPATH_W) '$(srcdir)/../lib/isc/task.c'; else $(CYGPATH_W) '$(srcdir)/$(srcdir)/../lib/isc/task.c'; fi`
 
-thread.o: $(srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/thread.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT thread.o -MD -MP -MF $(DEPDIR)/thread.Tpo -c -o thread.o `test -f '$(srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/thread.c' || echo '$(srcdir)/'`$(srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/thread.c
+thread.o: $(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/thread.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT thread.o -MD -MP -MF $(DEPDIR)/thread.Tpo -c -o thread.o `test -f '$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/thread.c' || echo '$(srcdir)/'`$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/thread.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/thread.Tpo $(DEPDIR)/thread.Po
 @am__fastdepCC_FALSE@	$(AM_V_CC) @AM_BACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='$(srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/thread.c' object='thread.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/thread.c' object='thread.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o thread.o `test -f '$(srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/thread.c' || echo '$(srcdir)/'`$(srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/thread.c
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o thread.o `test -f '$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/thread.c' || echo '$(srcdir)/'`$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/thread.c
 
-thread.obj: $(srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/thread.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT thread.obj -MD -MP -MF $(DEPDIR)/thread.Tpo -c -o thread.obj `if test -f '$(srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/thread.c'; then $(CYGPATH_W) '$(srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/thread.c'; else $(CYGPATH_W) '$(srcdir)/$(srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/thread.c'; fi`
+thread.obj: $(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/thread.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT thread.obj -MD -MP -MF $(DEPDIR)/thread.Tpo -c -o thread.obj `if test -f '$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/thread.c'; then $(CYGPATH_W) '$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/thread.c'; else $(CYGPATH_W) '$(srcdir)/$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/thread.c'; fi`
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/thread.Tpo $(DEPDIR)/thread.Po
 @am__fastdepCC_FALSE@	$(AM_V_CC) @AM_BACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='$(srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/thread.c' object='thread.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/thread.c' object='thread.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o thread.obj `if test -f '$(srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/thread.c'; then $(CYGPATH_W) '$(srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/thread.c'; else $(CYGPATH_W) '$(srcdir)/$(srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/thread.c'; fi`
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o thread.obj `if test -f '$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/thread.c'; then $(CYGPATH_W) '$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/thread.c'; else $(CYGPATH_W) '$(srcdir)/$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/thread.c'; fi`
 
 time.o: $(srcdir)/../lib/isc/unix/time.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT time.o -MD -MP -MF $(DEPDIR)/time.Tpo -c -o time.o `test -f '$(srcdir)/../lib/isc/unix/time.c' || echo '$(srcdir)/'`$(srcdir)/../lib/isc/unix/time.c

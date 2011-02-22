@@ -47,13 +47,12 @@ EXTRA_PROGRAMS = check_y2k$(EXEEXT) ntpdsim$(EXEEXT) \
 	keyword-gen$(EXEEXT)
 DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
 	$(top_srcdir)/bincheck.mf $(top_srcdir)/depsver.mf \
-	ntp_parser.c ntp_parser.h
+	$(top_srcdir)/includes.mf ntp_parser.c ntp_parser.h
 subdir = ntpd
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps =  \
+am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/libevent/m4/openldap-thread-check.m4 \
 	$(top_srcdir)/sntp/libevent/m4/openldap.m4 \
-	$(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/m4/define_dir.m4 \
 	$(top_srcdir)/sntp/m4/ntp_bindir.m4 \
 	$(top_srcdir)/sntp/m4/ntp_cacheversion.m4 \
@@ -120,8 +119,9 @@ am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(sbindir)" \
 PROGRAMS = $(bin_PROGRAMS) $(sbin_PROGRAMS)
 check_y2k_SOURCES = check_y2k.c
 check_y2k_OBJECTS = check_y2k.$(OBJEXT)
-am__DEPENDENCIES_1 = version.o libntpd.a
-check_y2k_DEPENDENCIES = $(am__DEPENDENCIES_1) ../libntp/libntp.a
+am__DEPENDENCIES_1 =
+am__DEPENDENCIES_2 = version.o libntpd.a $(am__DEPENDENCIES_1)
+check_y2k_DEPENDENCIES = $(am__DEPENDENCIES_2) ../libntp/libntp.a
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
 am__v_lt_0 = --silent
@@ -132,9 +132,8 @@ am_ntpd_OBJECTS = ntp_config.$(OBJEXT) ntp_io.$(OBJEXT) \
 	ntp_parser.$(OBJEXT) ntp_scanner.$(OBJEXT) ntpd.$(OBJEXT) \
 	ntpd-opts.$(OBJEXT) $(am__objects_1)
 ntpd_OBJECTS = $(am_ntpd_OBJECTS)
-am__DEPENDENCIES_2 =
-am__DEPENDENCIES_3 = $(am__DEPENDENCIES_2) $(am__DEPENDENCIES_2)
-ntpd_DEPENDENCIES = $(am__DEPENDENCIES_1) ../libntp/libntp.a \
+am__DEPENDENCIES_3 = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
+ntpd_DEPENDENCIES = $(am__DEPENDENCIES_2) ../libntp/libntp.a \
 	$(am__DEPENDENCIES_3)
 am__objects_2 = ntpdsim-ntp_config.$(OBJEXT) ntpdsim-ntp_io.$(OBJEXT) \
 	ntpdsim-ntp_parser.$(OBJEXT) ntpdsim-ntp_scanner.$(OBJEXT) \
@@ -143,7 +142,7 @@ am__objects_2 = ntpdsim-ntp_config.$(OBJEXT) ntpdsim-ntp_io.$(OBJEXT) \
 am_ntpdsim_OBJECTS = $(am__objects_2) ntpdsim-ntp_prio_q.$(OBJEXT) \
 	ntpdsim-ntpsim.$(OBJEXT) $(am__objects_1)
 ntpdsim_OBJECTS = $(am_ntpdsim_OBJECTS)
-ntpdsim_DEPENDENCIES = $(am__DEPENDENCIES_1) ../libntp/libntpsim.a \
+ntpdsim_DEPENDENCIES = $(am__DEPENDENCIES_2) ../libntp/libntpsim.a \
 	$(am__DEPENDENCIES_3)
 DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/sntp/build-aux/depcomp
@@ -239,8 +238,6 @@ ECHO_C = @ECHO_C@
 ECHO_N = @ECHO_N@
 ECHO_T = @ECHO_T@
 EDITLINE_LIBS = @EDITLINE_LIBS@
-EF_LIBS = @EF_LIBS@
-EF_PROGS = @EF_PROGS@
 EGREP = @EGREP@
 EXEEXT = @EXEEXT@
 F77 = @F77@
@@ -374,14 +371,11 @@ top_srcdir = @top_srcdir@
 NULL = 
 AUTOMAKE_OPTIONS = 
 noinst_LIBRARIES = libntpd.a
-INCLUDES = -I$(top_srcdir)/include -I$(top_srcdir)/lib/isc/include \
-	-I$(top_srcdir)/lib/isc/@LIBISC_PTHREADS_NOTHREADS@/include \
-	-I$(top_srcdir)/lib/isc/unix/include $(LIBOPTS_CFLAGS)
-AM_CFLAGS = @CFLAGS_NTP@
-AM_CPPFLAGS = @CPPFLAGS_NTP@
+AM_CFLAGS = $(CFLAGS_NTP)
+AM_CPPFLAGS = $(NTP_INCS) $(LIBOPTS_CFLAGS) $(CPPFLAGS_NTP)
 
 # LDADD might need RESLIB and ADJLIB.
-LDADD = version.o libntpd.a @LIBPARSE@
+LDADD = version.o libntpd.a $(LIBPARSE)
 AM_YFLAGS = -d -t -r all
 @NTP_CROSSCOMPILE_FALSE@@SAVECONFIG_ENABLED_TRUE@CHECK_SAVECONFIG = check-saveconfig
 @NTP_CROSSCOMPILE_TRUE@@SAVECONFIG_ENABLED_TRUE@CHECK_SAVECONFIG = 
@@ -537,12 +531,15 @@ libntpd_a_SOURCES = \
 	refclock_zyfer.c	\
 	$(NULL)
 
+NTP_INCS = -I$(top_srcdir)/include -I$(top_srcdir)/lib/isc/include \
+	-I$(top_srcdir)/lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/include \
+	-I$(top_srcdir)/lib/isc/unix/include
 all: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) all-am
 
 .SUFFIXES:
 .SUFFIXES: .c .lo .o .obj .y
-$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/bincheck.mf $(top_srcdir)/depsver.mf $(am__configure_deps)
+$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/bincheck.mf $(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf $(am__configure_deps)
 	@for dep in $?; do \
 	  case '$(am__configure_deps)' in \
 	    *$$dep*) \
@@ -551,9 +548,9 @@ $(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/bincheck.mf $(top_sr
 	      exit 1;; \
 	  esac; \
 	done; \
-	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu ntpd/Makefile'; \
+	echo ' cd $(top_srcdir) && $(AUTOMAKE) --foreign ntpd/Makefile'; \
 	$(am__cd) $(top_srcdir) && \
-	  $(AUTOMAKE) --gnu ntpd/Makefile
+	  $(AUTOMAKE) --foreign ntpd/Makefile
 .PRECIOUS: Makefile
 Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
 	@case '$?' in \

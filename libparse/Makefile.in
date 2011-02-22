@@ -37,13 +37,12 @@ build_triplet = @build@
 host_triplet = @host@
 EXTRA_PROGRAMS = parsestreams$(EXEEXT) parsesolaris$(EXEEXT)
 DIST_COMMON = README $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
-	$(top_srcdir)/depsver.mf
+	$(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf
 subdir = libparse
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps =  \
+am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/libevent/m4/openldap-thread-check.m4 \
 	$(top_srcdir)/sntp/libevent/m4/openldap.m4 \
-	$(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/m4/define_dir.m4 \
 	$(top_srcdir)/sntp/m4/ntp_bindir.m4 \
 	$(top_srcdir)/sntp/m4/ntp_cacheversion.m4 \
@@ -171,8 +170,6 @@ ECHO_C = @ECHO_C@
 ECHO_N = @ECHO_N@
 ECHO_T = @ECHO_T@
 EDITLINE_LIBS = @EDITLINE_LIBS@
-EF_LIBS = @EF_LIBS@
-EF_PROGS = @EF_PROGS@
 EGREP = @EGREP@
 EXEEXT = @EXEEXT@
 F77 = @F77@
@@ -304,7 +301,6 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 NULL = 
-AUTOMAKE_OPTIONS = 
 BUILT_SOURCES = check-libntp .deps-ver
 noinst_LIBRARIES = @MAKE_LIBPARSE@ @MAKE_LIBPARSE_KERNEL@
 EXTRA_LIBRARIES = libparse.a libparse_kernel.a
@@ -358,19 +354,18 @@ libparse_kernel_a_LIBADD = \
 	kgpstolfp.o		\
 	$(NULL)
 
-INCLUDES = -I$(top_srcdir)/include -I$(top_srcdir)/lib/isc/include \
-	-I$(top_srcdir)/lib/isc/@LIBISC_PTHREADS_NOTHREADS@/include \
-	-I$(top_srcdir)/lib/isc/unix/include -I$(top_srcdir)/kernel
-AM_CFLAGS = @CFLAGS_NTP@
-AM_CPPFLAGS = @CPPFLAGS_NTP@
-ETAGS_ARGS = Makefile.am
+AM_CFLAGS = $(CFLAGS_NTP)
+AM_CPPFLAGS = $(NTP_INCS) -I$(top_srcdir)/kernel $(CPPFLAGS_NTP)
 EXTRA_DIST = parsesolaris.c parsestreams.c mkinfo_scmd.sed mkinfo_rcmd.sed info_trimble.c
+NTP_INCS = -I$(top_srcdir)/include -I$(top_srcdir)/lib/isc/include \
+	-I$(top_srcdir)/lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/include \
+	-I$(top_srcdir)/lib/isc/unix/include
 all: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) all-am
 
 .SUFFIXES:
 .SUFFIXES: .c .lo .o .obj
-$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/depsver.mf $(am__configure_deps)
+$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf $(am__configure_deps)
 	@for dep in $?; do \
 	  case '$(am__configure_deps)' in \
 	    *$$dep*) \
@@ -379,9 +374,9 @@ $(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/depsver.mf $(am__con
 	      exit 1;; \
 	  esac; \
 	done; \
-	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu libparse/Makefile'; \
+	echo ' cd $(top_srcdir) && $(AUTOMAKE) --foreign libparse/Makefile'; \
 	$(am__cd) $(top_srcdir) && \
-	  $(AUTOMAKE) --gnu libparse/Makefile
+	  $(AUTOMAKE) --foreign libparse/Makefile
 .PRECIOUS: Makefile
 Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
 	@case '$?' in \

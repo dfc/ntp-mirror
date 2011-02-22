@@ -295,29 +295,44 @@ AC_FUNC_STRERROR_R
 
 # check if we can compile with pthreads
 AC_CHECK_HEADERS([semaphore.h])
-AC_CHECK_FUNCS([sem_timedwait socketpair])
+AC_CHECK_FUNCS([socketpair])
 AC_ARG_ENABLE(
     [thread-support],
     [AS_HELP_STRING([--disable-thread-support, do not use threads])],
-    , 
+    [],
     [enable_thread_support=yes]
     )
 have_pthreads=no
-case "$enable_thread_support:$ac_cv_func_sem_timedwait" in
- yes:yes)
-    OL_THREAD_CHECK(
-	[
-	    have_pthreads=yes
+case "$enable_thread_support" in
+ yes)
+    ol_found_pthreads=no
+    OL_THREAD_CHECK([ol_found_pthreads=yes])
+    case "$ol_found_pthreads" in
+     yes)
+	saved_LIBS="$LIBS"
+	LIBS="$LTHREAD_LIBS $LIBS"
+	saved_CFLAGS="$CFLAGS"
+	CFLAGS="$PTHREAD_CFLAGS $CFLAGS"
+	AC_CHECK_FUNCS([sem_timedwait])
+	LIBS="$saved_LIBS"
+	AS_UNSET([saved_LIBS])
+	CFLAGS="$saved_CFLAGS"
+	AS_UNSET([saved_CFLAGS])
+	case "$ac_cv_func_sem_timedwait" in
+	 yes)
 	    PTHREAD_LIBS="$LTHREAD_LIBS"
-	]
-    )
+	    have_pthreads=yes
+	esac
+    esac
 esac
 AC_SUBST([PTHREAD_LIBS])
 case "$have_pthreads" in
  yes)
     CFLAGS_NTP="$CFLAGS_NTP $PTHREAD_CFLAGS"
+    saved_LIBS="$LIBS"
+    LIBS="$LTHREAD_LIBS $LIBS"
     saved_CFLAGS="$CFLAGS"
-    CFLAGS="$CFLAGS $PTHREAD_CFLAGS"
+    CFLAGS="$PTHREAD_CFLAGS $CFLAGS"
     AC_CHECK_SIZEOF(
 	[pthread_t],
 	,
@@ -384,11 +399,12 @@ case "$have_pthreads" in
 	;;
      *-solaris*)
 	AC_DEFINE([_POSIX_PTHREAD_SEMANTICS], [1])
-	AC_CHECK_FUNC(
-	    [pthread_setconcurrency],
-	    [AC_DEFINE([CALL_PTHREAD_SETCONCURRENCY], [1],
-		       [why not HAVE_P_S?])]
-	)
+	AC_CHECK_FUNCS([pthread_setconcurrency])
+	case "$ac_cv_func_pthread_setconcurrency" in
+	 yes)
+	    AC_DEFINE([CALL_PTHREAD_SETCONCURRENCY], [1],
+		      [why not HAVE_P_S?])
+	esac
 	;;
      *-sco-sysv*uw*|*-*-sysv*UnixWare*|*-*-sysv*OpenUNIX*)
 	AC_DEFINE([HAVE_UNIXWARE_SIGWAIT], [1], [deviant sigwait?])
@@ -405,7 +421,7 @@ case "$have_pthreads" in
      *-solaris2.1[[0-9]])
 	AC_CACHE_CHECK(
 	    [if extra braces are needed for PTHREAD_ONCE_INIT],
-	    [ntp_cv_brace_pthread_once_init],
+	    [ntp_cv_braces_around_pthread_once_init],
 	    [AC_COMPILE_IFELSE(
 		[AC_LANG_PROGRAM(
 		    [[
@@ -413,14 +429,14 @@ case "$have_pthreads" in
 		    ]],
 		    [[
 		        static pthread_once_t once_test =
-						  { PTHREAD_ONCE_INIT };
+						PTHREAD_ONCE_INIT;
 		    ]]
 		)],
-		[ntp_cv_brace_pthread_once_init=yes],
-		[ntp_cv_brace_pthread_once_init=no]
+		[ntp_cv_braces_around_pthread_once_init=no],
+		[ntp_cv_braces_around_pthread_once_init=yes]
 	    )]
 	)
-	case "$ntp_cv_brace_pthread_once_init" in
+	case "$ntp_cv_braces_around_pthread_once_init" in
 	 yes)
 	    hack_shutup_pthreadonceinit=yes
 	esac
@@ -431,6 +447,8 @@ case "$have_pthreads" in
 	AC_DEFINE([ISC_PLATFORM_BRACEPTHREADONCEINIT], [1],
 		  [Enclose PTHREAD_ONCE_INIT in extra braces?])
     esac
+    LIBS="$saved_LIBS"
+    AS_UNSET([saved_LIBS])
     CFLAGS="$saved_CFLAGS"
     AS_UNSET([saved_CFLAGS])
     ;;

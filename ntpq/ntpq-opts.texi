@@ -6,7 +6,7 @@
 # 
 # EDIT THIS FILE WITH CAUTION  (ntpq-opts.texi)
 # 
-# It has been AutoGen-ed  February 21, 2011 at 09:20:20 AM by AutoGen 5.11.6pre7
+# It has been AutoGen-ed  February 22, 2011 at 08:27:51 AM by AutoGen 5.11.6
 # From the definitions    ntpq-opts.def
 # and the template file   aginfo.tpl
 @end ignore
@@ -47,7 +47,7 @@ This is the automatically generated usage text for ntpq:
 
 @exampleindent 0
 @example
-ntpq - standard NTP query program - Ver. 4.2.7p131
+ntpq - standard NTP query program - Ver. 4.2.7p132
 USAGE:  ntpq [ -<flag> [<val>] | --<name>[@{=| @}<val>] ]... [ host ...]
   Flg Arg Option-Name    Description
    -4 no  ipv4           Force IPv4 DNS name resolution
@@ -87,14 +87,12 @@ The following option preset mechanisms are supported:
  - reading file ./.ntprc
  - examining environment variables named NTPQ_*
 
-The
-[= prog-name =]
-utility program is used to query NTP servers which
-implement the standard NTP mode 6 control message formats defined
-in Appendix B of the NTPv3 specification RFC1305, requesting
-information about current state and/or changes in that state.
-The same formats are used in NTPv4, although some of the
-variables have changed and new ones added.
+The [= prog-name =] utility program is used to query NTP servers which
+implement the standard NTP mode 6 control message formats defined in
+Appendix B of the NTPv3 specification RFC1305, requesting information
+about current state and/or changes in that state.  The same formats are
+used in NTPv4, although some of the variables have changed and new ones
+added.
 
 please send bug reports to:  http://bugs.ntp.org, bugs@@ntp.org
 @end example

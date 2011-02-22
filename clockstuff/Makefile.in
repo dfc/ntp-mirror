@@ -36,13 +36,12 @@ build_triplet = @build@
 host_triplet = @host@
 EXTRA_PROGRAMS = propdelay$(EXEEXT) chutest$(EXEEXT) clktest$(EXEEXT)
 DIST_COMMON = README $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
-	$(top_srcdir)/depsver.mf
+	$(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf
 subdir = clockstuff
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps =  \
+am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/libevent/m4/openldap-thread-check.m4 \
 	$(top_srcdir)/sntp/libevent/m4/openldap.m4 \
-	$(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/m4/define_dir.m4 \
 	$(top_srcdir)/sntp/m4/ntp_bindir.m4 \
 	$(top_srcdir)/sntp/m4/ntp_cacheversion.m4 \
@@ -70,18 +69,21 @@ PROGRAMS = $(noinst_PROGRAMS)
 chutest_SOURCES = chutest.c
 chutest_OBJECTS = chutest.$(OBJEXT)
 chutest_LDADD = $(LDADD)
-chutest_DEPENDENCIES = ../libntp/libntp.a
+am__DEPENDENCIES_1 =
+chutest_DEPENDENCIES = ../libntp/libntp.a $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1)
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
 am__v_lt_0 = --silent
 am_clktest_OBJECTS = clktest.$(OBJEXT) clktest-opts.$(OBJEXT)
 clktest_OBJECTS = $(am_clktest_OBJECTS)
 clktest_LDADD = $(LDADD)
-clktest_DEPENDENCIES = ../libntp/libntp.a
+clktest_DEPENDENCIES = ../libntp/libntp.a $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1)
 propdelay_SOURCES = propdelay.c
 propdelay_OBJECTS = propdelay.$(OBJEXT)
-am__DEPENDENCIES_1 =
-am__DEPENDENCIES_2 = ../libntp/libntp.a
+am__DEPENDENCIES_2 = ../libntp/libntp.a $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1)
 propdelay_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_2)
 DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/sntp/build-aux/depcomp
@@ -146,8 +148,6 @@ ECHO_C = @ECHO_C@
 ECHO_N = @ECHO_N@
 ECHO_T = @ECHO_T@
 EDITLINE_LIBS = @EDITLINE_LIBS@
-EF_LIBS = @EF_LIBS@
-EF_PROGS = @EF_PROGS@
 EGREP = @EGREP@
 EXEEXT = @EXEEXT@
 F77 = @F77@
@@ -278,17 +278,13 @@ target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-AUTOMAKE_OPTIONS = 
 noinst_PROGRAMS = @PROPDELAY@ @CHUTEST@ @CLKTEST@
 BUILT_SOURCES = check-libntp clktest-opts.c clktest-opts.h .deps-ver
 EXTRA_DIST = clktest-opts.def
 clktest_SOURCES = clktest.c clktest-opts.c clktest-opts.h
-INCLUDES = -I$(top_srcdir)/include -I$(top_srcdir)/lib/isc/include \
-	-I$(top_srcdir)/lib/isc/@LIBISC_PTHREADS_NOTHREADS@/include \
-	-I$(top_srcdir)/lib/isc/unix/include $(LIBOPTS_CFLAGS)
-AM_CFLAGS = @CFLAGS_NTP@
-AM_CPPFLAGS = @CPPFLAGS_NTP@
-LDADD = ../libntp/libntp.a @LDADD_LIBNTP@ @PTHREAD_LIBS@
+AM_CFLAGS = $(CFLAGS_NTP)
+AM_CPPFLAGS = $(NTP_INCS) $(LIBOPTS_CFLAGS) $(CPPFLAGS_NTP)
+LDADD = ../libntp/libntp.a $(LDADD_LIBNTP) $(PTHREAD_LIBS)
 propdelay_LDADD = $(LIBM) $(LDADD)
 run_ag = cd $(srcdir) &&	env PATH="$(abs_builddir):$(PATH)"	\
 		autogen -L ../sntp/include --writable
@@ -302,12 +298,15 @@ std_def_list = \
 	$(NULL)
 
 CLEANFILES = .deps-ver
+NTP_INCS = -I$(top_srcdir)/include -I$(top_srcdir)/lib/isc/include \
+	-I$(top_srcdir)/lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/include \
+	-I$(top_srcdir)/lib/isc/unix/include
 all: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) all-am
 
 .SUFFIXES:
 .SUFFIXES: .c .lo .o .obj
-$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/depsver.mf $(am__configure_deps)
+$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf $(am__configure_deps)
 	@for dep in $?; do \
 	  case '$(am__configure_deps)' in \
 	    *$$dep*) \
@@ -316,9 +315,9 @@ $(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/depsver.mf $(am__con
 	      exit 1;; \
 	  esac; \
 	done; \
-	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu clockstuff/Makefile'; \
+	echo ' cd $(top_srcdir) && $(AUTOMAKE) --foreign clockstuff/Makefile'; \
 	$(am__cd) $(top_srcdir) && \
-	  $(AUTOMAKE) --gnu clockstuff/Makefile
+	  $(AUTOMAKE) --foreign clockstuff/Makefile
 .PRECIOUS: Makefile
 Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
 	@case '$?' in \

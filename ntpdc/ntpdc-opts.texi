@@ -6,7 +6,7 @@
 # 
 # EDIT THIS FILE WITH CAUTION  (ntpdc-opts.texi)
 # 
-# It has been AutoGen-ed  February 21, 2011 at 09:20:08 AM by AutoGen 5.11.6pre7
+# It has been AutoGen-ed  February 22, 2011 at 08:27:39 AM by AutoGen 5.11.6
 # From the definitions    ntpdc-opts.def
 # and the template file   aginfo.tpl
 @end ignore
@@ -58,7 +58,7 @@ This is the automatically generated usage text for ntpdc:
 
 @exampleindent 0
 @example
-ntpdc - vendor-specific NTP query program - Ver. 4.2.7p131
+ntpdc - vendor-specific NTP query program - Ver. 4.2.7p132
 USAGE:  ntpdc [ -<flag> [<val>] | --<name>[@{=| @}<val>] ]... [ host ...]
   Flg Arg Option-Name    Description
    -4 no  ipv4           Force IPv4 DNS name resolution
@@ -105,22 +105,15 @@ The following option preset mechanisms are supported:
  - reading file ./.ntprc
  - examining environment variables named NTPDC_*
 
-The
-[= prog-name =]
-utility program is used to query an NTP daemon about its
-current state and to request changes in that state.
-It uses NTP mode 7 control message formats described in the source code.
-The program may
+The [= prog-name =] utility program is used to query an NTP daemon about
+its current state and to request changes in that state.  It uses NTP mode
+7 control message formats described in the source code.  The program may
 be run either in interactive mode or controlled using command line
-arguments.
-Extensive state and statistics information is available
-through the
-[= prog-name =]
-interface.
-In addition, nearly all the
-configuration options which can be specified at startup using
-ntpd's configuration file may also be specified at run time using
-[= prog-name =] .
+arguments.  Extensive state and statistics information is available
+through the [= prog-name =] interface.  In addition, nearly all the
+configuration options which can be specified at startup using ntpd's
+configuration file may also be specified at run time using [= prog-name =]
+.
 
 please send bug reports to:  http://bugs.ntp.org, bugs@@ntp.org
 @end example

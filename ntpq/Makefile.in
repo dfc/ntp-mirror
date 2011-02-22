@@ -45,13 +45,12 @@ host_triplet = @host@
 @NTP_BINSUBDIR_IS_BIN_FALSE@sbin_PROGRAMS = ntpq$(EXEEXT)
 DIST_COMMON = README $(noinst_HEADERS) $(srcdir)/Makefile.am \
 	$(srcdir)/Makefile.in $(top_srcdir)/bincheck.mf \
-	$(top_srcdir)/depsver.mf
+	$(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf
 subdir = ntpq
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps =  \
+am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/libevent/m4/openldap-thread-check.m4 \
 	$(top_srcdir)/sntp/libevent/m4/openldap.m4 \
-	$(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/m4/define_dir.m4 \
 	$(top_srcdir)/sntp/m4/ntp_bindir.m4 \
 	$(top_srcdir)/sntp/m4/ntp_cacheversion.m4 \
@@ -96,7 +95,9 @@ am_ntpq_OBJECTS = ntpq.$(OBJEXT) ntpq-subs.$(OBJEXT) \
 ntpq_OBJECTS = $(am_ntpq_OBJECTS)
 am__DEPENDENCIES_1 =
 ntpq_DEPENDENCIES = version.o $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) ../libntp/libntp.a
+	$(am__DEPENDENCIES_1) ../libntp/libntp.a $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1)
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
 am__v_lt_0 = --silent
@@ -186,8 +187,6 @@ ECHO_C = @ECHO_C@
 ECHO_N = @ECHO_N@
 ECHO_T = @ECHO_T@
 EDITLINE_LIBS = @EDITLINE_LIBS@
-EF_LIBS = @EF_LIBS@
-EF_PROGS = @EF_PROGS@
 EGREP = @EGREP@
 EXEEXT = @EXEEXT@
 F77 = @F77@
@@ -319,17 +318,12 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 NULL = 
-AUTOMAKE_OPTIONS = 
-INCLUDES = -I$(top_srcdir)/include -I$(top_srcdir)/lib/isc/include \
-	-I$(top_srcdir)/lib/isc/@LIBISC_PTHREADS_NOTHREADS@/include \
-	-I$(top_srcdir)/lib/isc/unix/include $(LIBOPTS_CFLAGS)
-AM_CFLAGS = @CFLAGS_NTP@
-AM_CPPFLAGS = @CPPFLAGS_NTP@
+AM_CFLAGS = $(CFLAGS_NTP)
+AM_CPPFLAGS = $(NTP_INCS) $(LIBOPTS_CFLAGS) $(CPPFLAGS_NTP)
 
 # LDADD might need RESLIB and ADJLIB
 ntpq_LDADD = version.o $(LIBOPTS_LDADD) $(LIBM) ../libntp/libntp.a \
-	@LDADD_LIBNTP@ @PTHREAD_LIBS@ @EDITLINE_LIBS@ @LCRYPTO@ \
-	$(am__empty)
+	$(LDADD_LIBNTP) $(PTHREAD_LIBS) $(EDITLINE_LIBS) $(LCRYPTO)
 noinst_HEADERS = ntpq.h
 noinst_LIBRARIES = libntpq.a
 libntpq_a_CFLAGS = -DNO_MAIN_ALLOWED -DBUILD_AS_LIB
@@ -353,12 +347,15 @@ std_def_list = \
 
 ntpq_SOURCES = ntpq.c ntpq-subs.c ntpq-opts.c ntpq-opts.h
 libntpq_a_SOURCES = libntpq.c libntpq.h libntpq_subs.c 
+NTP_INCS = -I$(top_srcdir)/include -I$(top_srcdir)/lib/isc/include \
+	-I$(top_srcdir)/lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/include \
+	-I$(top_srcdir)/lib/isc/unix/include
 all: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) all-am
 
 .SUFFIXES:
 .SUFFIXES: .c .lo .o .obj
-$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/bincheck.mf $(top_srcdir)/depsver.mf $(am__configure_deps)
+$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/bincheck.mf $(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf $(am__configure_deps)
 	@for dep in $?; do \
 	  case '$(am__configure_deps)' in \
 	    *$$dep*) \
@@ -367,9 +364,9 @@ $(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/bincheck.mf $(top_sr
 	      exit 1;; \
 	  esac; \
 	done; \
-	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu ntpq/Makefile'; \
+	echo ' cd $(top_srcdir) && $(AUTOMAKE) --foreign ntpq/Makefile'; \
 	$(am__cd) $(top_srcdir) && \
-	  $(AUTOMAKE) --gnu ntpq/Makefile
+	  $(AUTOMAKE) --foreign ntpq/Makefile
 .PRECIOUS: Makefile
 Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
 	@case '$?' in \

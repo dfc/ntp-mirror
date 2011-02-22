@@ -36,13 +36,12 @@ build_triplet = @build@
 host_triplet = @host@
 EXTRA_PROGRAMS = testdcf$(EXEEXT) dcfd$(EXEEXT)
 DIST_COMMON = README $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
-	$(top_srcdir)/depsver.mf
+	$(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf
 subdir = parseutil
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps =  \
+am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/libevent/m4/openldap-thread-check.m4 \
 	$(top_srcdir)/sntp/libevent/m4/openldap.m4 \
-	$(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/m4/define_dir.m4 \
 	$(top_srcdir)/sntp/m4/ntp_bindir.m4 \
 	$(top_srcdir)/sntp/m4/ntp_cacheversion.m4 \
@@ -70,14 +69,15 @@ PROGRAMS = $(noinst_PROGRAMS)
 dcfd_SOURCES = dcfd.c
 dcfd_OBJECTS = dcfd.$(OBJEXT)
 dcfd_LDADD = $(LDADD)
-dcfd_DEPENDENCIES =
+am__DEPENDENCIES_1 =
+dcfd_DEPENDENCIES = $(am__DEPENDENCIES_1)
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
 am__v_lt_0 = --silent
 testdcf_SOURCES = testdcf.c
 testdcf_OBJECTS = testdcf.$(OBJEXT)
 testdcf_LDADD = $(LDADD)
-testdcf_DEPENDENCIES =
+testdcf_DEPENDENCIES = $(am__DEPENDENCIES_1)
 DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/sntp/build-aux/depcomp
 am__depfiles_maybe = depfiles
@@ -141,8 +141,6 @@ ECHO_C = @ECHO_C@
 ECHO_N = @ECHO_N@
 ECHO_T = @ECHO_T@
 EDITLINE_LIBS = @EDITLINE_LIBS@
-EF_LIBS = @EF_LIBS@
-EF_PROGS = @EF_PROGS@
 EGREP = @EGREP@
 EXEEXT = @EXEEXT@
 F77 = @F77@
@@ -274,24 +272,23 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 NULL = 
-AUTOMAKE_OPTIONS = 
 BUILT_SOURCES = .deps-ver
 CLEANFILES = .deps-ver
 noinst_PROGRAMS = @TESTDCF@ @DCFD@
-INCLUDES = -I$(top_srcdir)/include -I$(top_srcdir)/lib/isc/include \
-	-I$(top_srcdir)/lib/isc/@LIBISC_PTHREADS_NOTHREADS@/include \
-	-I$(top_srcdir)/lib/isc/unix/include
-AM_CFLAGS = @CFLAGS_NTP@
-AM_CPPFLAGS = @CPPFLAGS_NTP@
-LDADD = @LDADD_LIBNTP@
+AM_CFLAGS = $(CFLAGS_NTP)
+AM_CPPFLAGS = $(NTP_INCS) $(CPPFLAGS_NTP)
+LDADD = $(LDADD_LIBNTP)
 ETAGS_ARGS = Makefile.am
 DISTCLEANFILES = $(EXTRA_PROGRAMS)
+NTP_INCS = -I$(top_srcdir)/include -I$(top_srcdir)/lib/isc/include \
+	-I$(top_srcdir)/lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/include \
+	-I$(top_srcdir)/lib/isc/unix/include
 all: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) all-am
 
 .SUFFIXES:
 .SUFFIXES: .c .lo .o .obj
-$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/depsver.mf $(am__configure_deps)
+$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf $(am__configure_deps)
 	@for dep in $?; do \
 	  case '$(am__configure_deps)' in \
 	    *$$dep*) \
@@ -300,9 +297,9 @@ $(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/depsver.mf $(am__con
 	      exit 1;; \
 	  esac; \
 	done; \
-	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu parseutil/Makefile'; \
+	echo ' cd $(top_srcdir) && $(AUTOMAKE) --foreign parseutil/Makefile'; \
 	$(am__cd) $(top_srcdir) && \
-	  $(AUTOMAKE) --gnu parseutil/Makefile
+	  $(AUTOMAKE) --foreign parseutil/Makefile
 .PRECIOUS: Makefile
 Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
 	@case '$?' in \

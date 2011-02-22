@@ -47,17 +47,16 @@ EXTRA_PROGRAMS = sntp$(EXEEXT)
 DIST_COMMON = $(am__configure_deps) $(srcdir)/Makefile.am \
 	$(srcdir)/Makefile.in $(srcdir)/config.h.in \
 	$(top_srcdir)/bincheck.mf $(top_srcdir)/configure \
-	$(top_srcdir)/depsver.mf build-aux/compile \
-	build-aux/config.guess build-aux/config.sub build-aux/depcomp \
-	build-aux/install-sh build-aux/ltmain.sh build-aux/missing \
-	build-aux/ylwrap compile config.guess config.sub depcomp \
-	install-sh ltmain.sh missing
+	$(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf \
+	build-aux/compile build-aux/config.guess build-aux/config.sub \
+	build-aux/depcomp build-aux/install-sh build-aux/ltmain.sh \
+	build-aux/missing build-aux/ylwrap compile config.guess \
+	config.sub depcomp install-sh ltmain.sh missing
 subdir = .
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps =  \
+am__aclocal_m4_deps = $(top_srcdir)/libopts/m4/libopts.m4 \
 	$(top_srcdir)/libevent/m4/openldap-thread-check.m4 \
 	$(top_srcdir)/libevent/m4/openldap.m4 \
-	$(top_srcdir)/libopts/m4/libopts.m4 \
 	$(top_srcdir)/m4/ntp_bindir.m4 \
 	$(top_srcdir)/m4/ntp_cacheversion.m4 \
 	$(top_srcdir)/m4/ntp_compiler.m4 \
@@ -91,7 +90,9 @@ sntp_OBJECTS = $(am_sntp_OBJECTS)
 sntp_LDADD = $(LDADD)
 am__DEPENDENCIES_1 =
 sntp_DEPENDENCIES = version.o $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) ../libntp/libntp.a
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) ../libntp/libntp.a \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1)
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
 am__v_lt_0 = --silent
@@ -335,17 +336,13 @@ target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
+ACLOCAL_AMFLAGS = -I m4 -I libevent/m4 -I libopts/m4
 NULL = 
-AUTOMAKE_OPTIONS = foreign 1.10
-ACLOCAL_AMFLAGS = -I m4 -I libopts/m4 -I libevent/m4
-AM_CFLAGS = @CFLAGS_NTP@
-AM_CPPFLAGS = @CPPFLAGS_LIBEVENT@ @CPPFLAGS_NTP@
-INCLUDES = -I$(top_srcdir)/../include \
-	-I$(top_srcdir)/../lib/isc/include \
-	-I$(top_srcdir)/../lib/isc/@LIBISC_PTHREADS_NOTHREADS@/include \
-	-I$(top_srcdir)/../lib/isc/unix/include $(LIBOPTS_CFLAGS)
-LDADD = version.o $(LIBOPTS_LDADD) @LDADD_LIBEVENT@ $(LIBM) \
-	../libntp/libntp.a @LDADD_LIBNTP@ @PTHREAD_LIBS@ @LCRYPTO@
+AM_CFLAGS = $(CFLAGS_NTP)
+AM_CPPFLAGS = $(SNTP_INCS) $(LIBOPTS_CFLAGS) $(CPPFLAGS_LIBEVENT) \
+	$(CPPFLAGS_NTP)
+LDADD = version.o $(LIBOPTS_LDADD) $(LDADD_LIBEVENT) $(LIBM) \
+	../libntp/libntp.a $(LDADD_LIBNTP) $(PTHREAD_LIBS) $(LCRYPTO)
 run_ag = cd $(srcdir) &&	env PATH="$(abs_builddir):$(PATH)"	\
 		autogen -L include --writable
 
@@ -408,6 +405,10 @@ noinst_DATA = \
 	$(srcdir)/sntp-opts.menu	\
 	$(NULL)
 
+SNTP_INCS = -I$(top_srcdir)/../include \
+	-I$(top_srcdir)/../lib/isc/include \
+	-I$(top_srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/include \
+	-I$(top_srcdir)/../lib/isc/unix/include
 all: $(BUILT_SOURCES) config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
 
@@ -415,7 +416,7 @@ all: $(BUILT_SOURCES) config.h
 .SUFFIXES: .c .lo .o .obj
 am--refresh:
 	@:
-$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/bincheck.mf $(top_srcdir)/depsver.mf $(am__configure_deps)
+$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/bincheck.mf $(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf $(am__configure_deps)
 	@for dep in $?; do \
 	  case '$(am__configure_deps)' in \
 	    *$$dep*) \
@@ -1207,7 +1208,7 @@ libtool: $(LIBTOOL_DEPS)
 	./config.status --recheck
 
 libevent-dist-hook:
-	if test -n "@NTP_FORCE_LIBEVENT_DIST@" ; then rm -rf $(distdir)/libevent/autom4te.cache $(distdir)/libevent/config.h.in~ ; find $(distdir)/libevent -type d -name SCCS -print | xargs rm -rf ; fi
+	if test -n "$(NTP_FORCE_LIBEVENT_DIST)" ; then rm -rf $(distdir)/libevent/autom4te.cache $(distdir)/libevent/config.h.in~ ; find $(distdir)/libevent -type d -name SCCS -print | xargs rm -rf ; fi
 
 dist-hook: libevent-dist-hook
 	@: do-nothing action to avoid default SCCS get
