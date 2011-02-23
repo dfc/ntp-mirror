@@ -59,6 +59,7 @@ am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/m4/ntp_libntp.m4 \
 	$(top_srcdir)/sntp/m4/ntp_lineeditlibs.m4 \
 	$(top_srcdir)/sntp/m4/ntp_openssl.m4 \
+	$(top_srcdir)/sntp/m4/ntp_pkg_config.m4 \
 	$(top_srcdir)/sntp/m4/ntp_sntp.m4 \
 	$(top_srcdir)/sntp/m4/ntp_vpathhack.m4 \
 	$(top_srcdir)/sntp/m4/os_cflags.m4 \
@@ -146,6 +147,7 @@ CFLAGS = @CFLAGS@
 CFLAGS_NTP = @CFLAGS_NTP@
 CHUTEST = @CHUTEST@
 CLKTEST = @CLKTEST@
+CONFIG_SHELL = @CONFIG_SHELL@
 CPP = @CPP@
 CPPFLAGS = @CPPFLAGS@
 CPPFLAGS_NTP = @CPPFLAGS_NTP@
@@ -222,7 +224,6 @@ PACKAGE_VERSION = @PACKAGE_VERSION@
 PATH_NET_SNMP_CONFIG = @PATH_NET_SNMP_CONFIG@
 PATH_PERL = @PATH_PERL@
 PATH_SEPARATOR = @PATH_SEPARATOR@
-PATH_SH = @PATH_SH@
 PATH_TEST = @PATH_TEST@
 PKG_CONFIG = @PKG_CONFIG@
 PROPDELAY = @PROPDELAY@
@@ -298,7 +299,6 @@ SUBDIRS = \
 	scripts 	\
 	include 	\
 	libntp		\
-	sntp		\
 	libparse	\
 	ntpd		\
 	ntpdate		\
@@ -310,6 +310,7 @@ SUBDIRS = \
 	clockstuff	\
 	kernel		\
 	util		\
+	sntp		\
 	tests		\
 	$(NULL)
 
@@ -342,15 +343,12 @@ EXTRA_DIST = \
 	lib/isc			\
 	ports			\
 	\
-	bincheck.mf		\
-	depsver.mf		\
 	deps-ver		\
 	\
 	$(NULL)
 
 CLEANFILES = 
 DISTCLEANFILES = .gcc-warning
-ETAGS_ARGS = Makefile.am configure.ac
 
 # HMS: Keep .gcc-warning first, as that way it gets printed first.
 BUILT_SOURCES = \

@@ -37,7 +37,8 @@ build_triplet = @build@
 host_triplet = @host@
 EXTRA_PROGRAMS = parsestreams$(EXEEXT) parsesolaris$(EXEEXT)
 DIST_COMMON = README $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
-	$(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf
+	$(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf \
+	$(top_srcdir)/sntp/check-libntp.mf
 subdir = libparse
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
@@ -56,6 +57,7 @@ am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/m4/ntp_libntp.m4 \
 	$(top_srcdir)/sntp/m4/ntp_lineeditlibs.m4 \
 	$(top_srcdir)/sntp/m4/ntp_openssl.m4 \
+	$(top_srcdir)/sntp/m4/ntp_pkg_config.m4 \
 	$(top_srcdir)/sntp/m4/ntp_sntp.m4 \
 	$(top_srcdir)/sntp/m4/ntp_vpathhack.m4 \
 	$(top_srcdir)/sntp/m4/os_cflags.m4 \
@@ -154,6 +156,7 @@ CFLAGS = @CFLAGS@
 CFLAGS_NTP = @CFLAGS_NTP@
 CHUTEST = @CHUTEST@
 CLKTEST = @CLKTEST@
+CONFIG_SHELL = @CONFIG_SHELL@
 CPP = @CPP@
 CPPFLAGS = @CPPFLAGS@
 CPPFLAGS_NTP = @CPPFLAGS_NTP@
@@ -230,7 +233,6 @@ PACKAGE_VERSION = @PACKAGE_VERSION@
 PATH_NET_SNMP_CONFIG = @PATH_NET_SNMP_CONFIG@
 PATH_PERL = @PATH_PERL@
 PATH_SEPARATOR = @PATH_SEPARATOR@
-PATH_SH = @PATH_SH@
 PATH_TEST = @PATH_TEST@
 PKG_CONFIG = @PKG_CONFIG@
 PROPDELAY = @PROPDELAY@
@@ -302,10 +304,10 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 NULL = 
 BUILT_SOURCES = check-libntp .deps-ver
+CLEANFILES = check-libntp .deps-ver
 noinst_LIBRARIES = @MAKE_LIBPARSE@ @MAKE_LIBPARSE_KERNEL@
 EXTRA_LIBRARIES = libparse.a libparse_kernel.a
 noinst_PROGRAMS = @MAKE_PARSEKMODULE@
-CLEANFILES = .deps-ver
 K_CFLAGS = -DPARSESTREAM -DNTP_NEED_BOPS
 
 # info_trimble.c was mistakenly created in the build directory
@@ -365,7 +367,7 @@ all: $(BUILT_SOURCES)
 
 .SUFFIXES:
 .SUFFIXES: .c .lo .o .obj
-$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf $(am__configure_deps)
+$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/sntp/check-libntp.mf $(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf $(am__configure_deps)
 	@for dep in $?; do \
 	  case '$(am__configure_deps)' in \
 	    *$$dep*) \
@@ -746,19 +748,20 @@ parsestreams.loadable_module.o: $(parsestreams_OBJECTS) libparse_kernel.a ../lib
 parse: $(parsesolaris_OBJECTS) libparse_kernel.a ../libntp/libntp.a
 	$(LD) -r -o $@ $(parsesolaris_OBJECTS) libparse_kernel.a ../libntp/libntp.a
 
-check-libntp: FRC
-	cd ../libntp && $(MAKE)
-
-FRC:
-
-../libntp/libntp.a:
-	cd ../libntp && $(MAKE)
-
 parsesolaris.o: sys/systm.h
 
 sys/systm.h:
 	-mkdir sys
 	sed -e '/ffs(.*)/d' < /usr/include/sys/systm.h > sys/systm.h
+
+check-libparse: $(noinst_LIBRARIES)
+	@: do-nothing action to avoid default SCCS get
+
+check-libntp: ../libntp/libntp.a
+	@echo stamp > $@
+
+../libntp/libntp.a:
+	cd ../libntp && $(MAKE) libntp.a
 $(DEPDIR)/deps-ver: $(top_srcdir)/deps-ver
 	@[ -f $@ ] ||							\
 		cp $(top_srcdir)/deps-ver $@

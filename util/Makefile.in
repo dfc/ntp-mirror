@@ -51,8 +51,9 @@ EXTRA_PROGRAMS = audio-pcm$(EXEEXT) byteorder$(EXEEXT) hist$(EXEEXT) \
 	sht$(EXEEXT) testrs6000$(EXEEXT) tg$(EXEEXT) tg2$(EXEEXT) \
 	tickadj$(EXEEXT) timetrim$(EXEEXT)
 DIST_COMMON = README $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
-	$(top_srcdir)/bincheck.mf $(top_srcdir)/depsver.mf \
-	$(top_srcdir)/includes.mf
+	$(top_srcdir)/bincheck.mf $(top_srcdir)/check-libopts.mf \
+	$(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf \
+	$(top_srcdir)/sntp/check-libntp.mf
 subdir = util
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
@@ -71,6 +72,7 @@ am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/m4/ntp_libntp.m4 \
 	$(top_srcdir)/sntp/m4/ntp_lineeditlibs.m4 \
 	$(top_srcdir)/sntp/m4/ntp_openssl.m4 \
+	$(top_srcdir)/sntp/m4/ntp_pkg_config.m4 \
 	$(top_srcdir)/sntp/m4/ntp_sntp.m4 \
 	$(top_srcdir)/sntp/m4/ntp_vpathhack.m4 \
 	$(top_srcdir)/sntp/m4/os_cflags.m4 \
@@ -240,6 +242,7 @@ CFLAGS = @CFLAGS@
 CFLAGS_NTP = @CFLAGS_NTP@
 CHUTEST = @CHUTEST@
 CLKTEST = @CLKTEST@
+CONFIG_SHELL = @CONFIG_SHELL@
 CPP = @CPP@
 CPPFLAGS = @CPPFLAGS@
 CPPFLAGS_NTP = @CPPFLAGS_NTP@
@@ -316,7 +319,6 @@ PACKAGE_VERSION = @PACKAGE_VERSION@
 PATH_NET_SNMP_CONFIG = @PATH_NET_SNMP_CONFIG@
 PATH_PERL = @PATH_PERL@
 PATH_SEPARATOR = @PATH_SEPARATOR@
-PATH_SH = @PATH_SH@
 PATH_TEST = @PATH_TEST@
 PKG_CONFIG = @PKG_CONFIG@
 PROPDELAY = @PROPDELAY@
@@ -397,9 +399,9 @@ ntp_keygen_LDADD = version.o $(LIBOPTS_LDADD) ../libntp/libntp.a \
 	$(LDADD_LIBNTP) $(PTHREAD_LIBS) $(LCRYPTO)
 ntp_keygen_SOURCES = ntp-keygen.c ntp-keygen-opts.c ntp-keygen-opts.h
 EXTRA_DIST = ntp-keygen-opts.def ntp-keygen.1 ntp-keygen-opts.texi ntp-keygen-opts.menu
-BUILT_SOURCES = check-libntp ntp-keygen-opts.c ntp-keygen-opts.h \
-	.deps-ver
-CLEANFILES = .deps-ver
+BUILT_SOURCES = ntp-keygen-opts.c ntp-keygen-opts.h check-libntp \
+	check-libopts .deps-ver
+CLEANFILES = check-libntp check-libopts .deps-ver
 DISTCLEANFILES = .version version.c
 noinst_DATA = $(srcdir)/ntp-keygen-opts.texi $(srcdir)/ntp-keygen-opts.menu
 man_MANS = $(srcdir)/ntp-keygen.1
@@ -424,7 +426,7 @@ all: $(BUILT_SOURCES)
 
 .SUFFIXES:
 .SUFFIXES: .c .lo .o .obj
-$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/bincheck.mf $(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf $(am__configure_deps)
+$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/bincheck.mf $(top_srcdir)/sntp/check-libntp.mf $(top_srcdir)/check-libopts.mf $(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf $(am__configure_deps)
 	@for dep in $?; do \
 	  case '$(am__configure_deps)' in \
 	    *$$dep*) \
@@ -923,13 +925,6 @@ $(srcdir)/ntp-keygen-opts.texi: $(srcdir)/ntp-keygen-opts.def $(std_def_list)
 	$(run_ag) -Taginfo.tpl -DLEVEL=section ntp-keygen-opts.def
 	$(top_srcdir)/scripts/check--help $@
 
-FRC:
-
-check-libntp: FRC ../libntp/libntp.a
-
-../libntp/libntp.a:
-	cd ../libntp && $(MAKE)
-
 kern.o: kern.c
 	$(COMPILE) -DHAVE_TIMEX_H -c kern.c
 
@@ -953,6 +948,18 @@ install-exec-hook:
 	done
 
 #
+
+check-libntp: ../libntp/libntp.a
+	@echo stamp > $@
+
+../libntp/libntp.a:
+	cd ../libntp && $(MAKE) libntp.a
+
+check-libopts: ../sntp/libopts/libopts.la
+	@echo stamp > $@
+
+../sntp/libopts/libopts.la:
+	-cd ../sntp/libopts && $(MAKE) libopts.la
 $(DEPDIR)/deps-ver: $(top_srcdir)/deps-ver
 	@[ -f $@ ] ||							\
 		cp $(top_srcdir)/deps-ver $@

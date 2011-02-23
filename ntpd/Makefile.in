@@ -46,8 +46,9 @@ host_triplet = @host@
 EXTRA_PROGRAMS = check_y2k$(EXEEXT) ntpdsim$(EXEEXT) \
 	keyword-gen$(EXEEXT)
 DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
-	$(top_srcdir)/bincheck.mf $(top_srcdir)/depsver.mf \
-	$(top_srcdir)/includes.mf ntp_parser.c ntp_parser.h
+	$(top_srcdir)/bincheck.mf $(top_srcdir)/check-libopts.mf \
+	$(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf \
+	$(top_srcdir)/sntp/check-libntp.mf ntp_parser.c ntp_parser.h
 subdir = ntpd
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
@@ -66,6 +67,7 @@ am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/m4/ntp_libntp.m4 \
 	$(top_srcdir)/sntp/m4/ntp_lineeditlibs.m4 \
 	$(top_srcdir)/sntp/m4/ntp_openssl.m4 \
+	$(top_srcdir)/sntp/m4/ntp_pkg_config.m4 \
 	$(top_srcdir)/sntp/m4/ntp_sntp.m4 \
 	$(top_srcdir)/sntp/m4/ntp_vpathhack.m4 \
 	$(top_srcdir)/sntp/m4/os_cflags.m4 \
@@ -121,18 +123,22 @@ check_y2k_SOURCES = check_y2k.c
 check_y2k_OBJECTS = check_y2k.$(OBJEXT)
 am__DEPENDENCIES_1 =
 am__DEPENDENCIES_2 = version.o libntpd.a $(am__DEPENDENCIES_1)
-check_y2k_DEPENDENCIES = $(am__DEPENDENCIES_2) ../libntp/libntp.a
+check_y2k_DEPENDENCIES = $(am__DEPENDENCIES_2) ../libntp/libntp.a \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
 am__v_lt_0 = --silent
 keyword_gen_SOURCES = keyword-gen.c
 keyword_gen_OBJECTS = keyword-gen.$(OBJEXT)
-keyword_gen_DEPENDENCIES = ../libntp/libntp.a
+keyword_gen_DEPENDENCIES = ../libntp/libntp.a $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1)
 am_ntpd_OBJECTS = ntp_config.$(OBJEXT) ntp_io.$(OBJEXT) \
 	ntp_parser.$(OBJEXT) ntp_scanner.$(OBJEXT) ntpd.$(OBJEXT) \
 	ntpd-opts.$(OBJEXT) $(am__objects_1)
 ntpd_OBJECTS = $(am_ntpd_OBJECTS)
-am__DEPENDENCIES_3 = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
+am__DEPENDENCIES_3 = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1)
 ntpd_DEPENDENCIES = $(am__DEPENDENCIES_2) ../libntp/libntp.a \
 	$(am__DEPENDENCIES_3)
 am__objects_2 = ntpdsim-ntp_config.$(OBJEXT) ntpdsim-ntp_io.$(OBJEXT) \
@@ -222,6 +228,7 @@ CFLAGS = @CFLAGS@
 CFLAGS_NTP = @CFLAGS_NTP@
 CHUTEST = @CHUTEST@
 CLKTEST = @CLKTEST@
+CONFIG_SHELL = @CONFIG_SHELL@
 CPP = @CPP@
 CPPFLAGS = @CPPFLAGS@
 CPPFLAGS_NTP = @CPPFLAGS_NTP@
@@ -298,7 +305,6 @@ PACKAGE_VERSION = @PACKAGE_VERSION@
 PATH_NET_SNMP_CONFIG = @PATH_NET_SNMP_CONFIG@
 PATH_PERL = @PATH_PERL@
 PATH_SEPARATOR = @PATH_SEPARATOR@
-PATH_SH = @PATH_SH@
 PATH_TEST = @PATH_TEST@
 PKG_CONFIG = @PKG_CONFIG@
 PROPDELAY = @PROPDELAY@
@@ -369,7 +375,6 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 NULL = 
-AUTOMAKE_OPTIONS = 
 noinst_LIBRARIES = libntpd.a
 AM_CFLAGS = $(CFLAGS_NTP)
 AM_CPPFLAGS = $(NTP_INCS) $(LIBOPTS_CFLAGS) $(CPPFLAGS_NTP)
@@ -402,20 +407,21 @@ B_S_DIST = \
 	$(srcdir)/ntpd-opts.h 	\
 	$(NULL)
 
-BUILT_SOURCES = $(VPHACK) check-libntp ntp_parser.c ntp_parser.h \
-	$(VPHACK_AFTER) $(B_S_DIST) $(NULL) .deps-ver
+BUILT_SOURCES = $(VPHACK) $(LIBPARSE) ntp_parser.c ntp_parser.h \
+	$(VPHACK_AFTER) $(B_S_DIST) $(NULL) check-libopts check-libntp \
+	.deps-ver
 man_MANS = $(srcdir)/ntpd.1
 
 # ntpdsim.1 is a remnant along with all the ntpdsim-opts.* files, the
 # simulator currently uses ntpd-opts.[ch].  This also means there is no
 # longer a reason to have ntpdbase-opts.def split off of ntpd-opts.def.
-LDADD_NTPD_COMMON = @LDADD_LIBNTP@ $(LIBOPTS_LDADD) @PTHREAD_LIBS@ \
-	$(LIBM) @LCRYPTO@ @LSCF@
+LDADD_NTPD_COMMON = @LDADD_LIBNTP@ $(LIBOPTS_LDADD) $(PTHREAD_LIBS) \
+	$(LIBM) $(LCRYPTO) $(LSCF)
 ntpd_LDADD = $(LDADD) ../libntp/libntp.a $(LDADD_NTPD_COMMON)
 ntpdsim_LDADD = $(LDADD) ../libntp/libntpsim.a $(LDADD_NTPD_COMMON)
 ntpdsim_CPPFLAGS = $(AM_CPPFLAGS) -DSIM
-check_y2k_LDADD = $(LDADD) ../libntp/libntp.a @LDADD_LIBNTP@ @PTHREAD_LIBS@
-keyword_gen_LDADD = ../libntp/libntp.a @LDADD_LIBNTP@ @PTHREAD_LIBS@
+check_y2k_LDADD = $(LDADD) ../libntp/libntp.a $(LDADD_LIBNTP) $(PTHREAD_LIBS)
+keyword_gen_LDADD = ../libntp/libntp.a $(LDADD_LIBNTP) $(PTHREAD_LIBS)
 DISTCLEANFILES = \
 	keyword-gen		\
 	.version		\
@@ -423,7 +429,7 @@ DISTCLEANFILES = \
 	$(NULL)
 
 CLEANFILES = check-saveconfig compsave.conf k-g-u-submake $(NULL) \
-	.deps-ver
+	check-libopts check-libntp .deps-ver
 EXTRA_DIST = \
 	complete.conf		\
 	keyword-gen-utd		\
@@ -437,7 +443,7 @@ EXTRA_DIST = \
 	$(B_S_DIST)		\
 	$(NULL)
 
-ETAGS_ARGS = Makefile.am
+
 ###							Y2Kfixes
 check_PROGRAMS = @MAKE_CHECK_Y2K@
 noinst_DATA = $(srcdir)/ntpd-opts.texi $(srcdir)/ntpd-opts.menu
@@ -539,7 +545,7 @@ all: $(BUILT_SOURCES)
 
 .SUFFIXES:
 .SUFFIXES: .c .lo .o .obj .y
-$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/bincheck.mf $(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf $(am__configure_deps)
+$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/bincheck.mf $(top_srcdir)/check-libopts.mf $(top_srcdir)/sntp/check-libntp.mf $(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf $(am__configure_deps)
 	@for dep in $?; do \
 	  case '$(am__configure_deps)' in \
 	    *$$dep*) \
@@ -1214,8 +1220,8 @@ vphack_after:
 		ln -s $(srcdir)/ntp_parser.h . \
 		)
 
-check-local: @MAKE_CHECK_Y2K@ $(CHECK_SAVECONFIG)
-	test -z "@MAKE_CHECK_Y2K@" || ./@MAKE_CHECK_Y2K@
+check-local: $(MAKE_CHECK_Y2K) $(CHECK_SAVECONFIG)
+	test -z "$(MAKE_CHECK_Y2K)" || ./$(MAKE_CHECK_Y2K)
 
 k-g-u-submake: keyword-gen
 	./keyword-gen $(srcdir)/ntp_parser.h > k-g.out
@@ -1263,19 +1269,11 @@ check-saveconfig: $(srcdir)/complete.conf compsave.conf
 	-diff $(srcdir)/complete.conf compsave.conf
 	cmp $(srcdir)/complete.conf compsave.conf && echo stamp > $@
 
-../libopts/libopts.la:
-	cd ../libopts && $(MAKE) libopts.la
-
-check-libntp: FRC
-	cd ../libntp && $(MAKE)
-
-FRC:
-
-../libntp/libntp.a:
-	cd ../libntp && $(MAKE)
+../libntp/libntpsim.a:
+	cd ../libntp && $(MAKE) libntpsim.a
 
 ../libparse/libparse.a:
-	cd ../libparse && $(MAKE) libparse.a
+	cd ../libparse && $(MAKE) check-libparse
 
 $(top_srcdir)/sntp/version:
 	cd $(top_srcdir)/sntp && $(MAKE) version
@@ -1295,6 +1293,18 @@ install-exec-hook:
 	done
 
 #
+
+check-libopts: ../sntp/libopts/libopts.la
+	@echo stamp > $@
+
+../sntp/libopts/libopts.la:
+	-cd ../sntp/libopts && $(MAKE) libopts.la
+
+check-libntp: ../libntp/libntp.a
+	@echo stamp > $@
+
+../libntp/libntp.a:
+	cd ../libntp && $(MAKE) libntp.a
 $(DEPDIR)/deps-ver: $(top_srcdir)/deps-ver
 	@[ -f $@ ] ||							\
 		cp $(top_srcdir)/deps-ver $@

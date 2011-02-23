@@ -41,8 +41,9 @@ build_triplet = @build@
 host_triplet = @host@
 EXTRA_PROGRAMS = ntpsnmpd$(EXEEXT)
 DIST_COMMON = README $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
-	$(top_srcdir)/bincheck.mf $(top_srcdir)/depsver.mf \
-	$(top_srcdir)/includes.mf
+	$(top_srcdir)/bincheck.mf $(top_srcdir)/check-libopts.mf \
+	$(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf \
+	$(top_srcdir)/sntp/check-libntp.mf
 subdir = ntpsnmpd
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
@@ -61,6 +62,7 @@ am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/m4/ntp_libntp.m4 \
 	$(top_srcdir)/sntp/m4/ntp_lineeditlibs.m4 \
 	$(top_srcdir)/sntp/m4/ntp_openssl.m4 \
+	$(top_srcdir)/sntp/m4/ntp_pkg_config.m4 \
 	$(top_srcdir)/sntp/m4/ntp_sntp.m4 \
 	$(top_srcdir)/sntp/m4/ntp_vpathhack.m4 \
 	$(top_srcdir)/sntp/m4/os_cflags.m4 \
@@ -158,6 +160,7 @@ CFLAGS = @CFLAGS@
 CFLAGS_NTP = @CFLAGS_NTP@
 CHUTEST = @CHUTEST@
 CLKTEST = @CLKTEST@
+CONFIG_SHELL = @CONFIG_SHELL@
 CPP = @CPP@
 CPPFLAGS = @CPPFLAGS@
 CPPFLAGS_NTP = @CPPFLAGS_NTP@
@@ -234,7 +237,6 @@ PACKAGE_VERSION = @PACKAGE_VERSION@
 PATH_NET_SNMP_CONFIG = @PATH_NET_SNMP_CONFIG@
 PATH_PERL = @PATH_PERL@
 PATH_SEPARATOR = @PATH_SEPARATOR@
-PATH_SH = @PATH_SH@
 PATH_TEST = @PATH_TEST@
 PKG_CONFIG = @PKG_CONFIG@
 PROPDELAY = @PROPDELAY@
@@ -320,8 +322,9 @@ AM_CPPFLAGS = -I$(top_srcdir)/ntpq $(NTP_INCS) $(LIBOPTS_CFLAGS) \
 EXTRA_DIST = ntpsnmpd-opts.def ntpsnmpd.1 ntpsnmpd-opts.texi	\
 		ntpsnmpd-opts.menu ntpv4-mib.mib
 
-BUILT_SOURCES = check-libntp ntpsnmpd-opts.c ntpsnmpd-opts.h .deps-ver
-CLEANFILES = .deps-ver
+BUILT_SOURCES = ntpsnmpd-opts.c ntpsnmpd-opts.h check-libntp \
+	check-libopts .deps-ver
+CLEANFILES = check-libntp check-libopts .deps-ver
 noinst_DATA = $(srcdir)/ntpsnmpd-opts.texi $(srcdir)/ntpsnmpd-opts.menu
 man_MANS = $(srcdir)/ntpsnmpd.1
 run_ag = cd $(srcdir) &&	env PATH="$(abs_builddir):$(PATH)"	\
@@ -343,7 +346,7 @@ all: $(BUILT_SOURCES)
 
 .SUFFIXES:
 .SUFFIXES: .c .lo .o .obj
-$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/bincheck.mf $(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf $(am__configure_deps)
+$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/bincheck.mf $(top_srcdir)/sntp/check-libntp.mf $(top_srcdir)/check-libopts.mf $(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf $(am__configure_deps)
 	@for dep in $?; do \
 	  case '$(am__configure_deps)' in \
 	    *$$dep*) \
@@ -783,14 +786,6 @@ $(srcdir)/ntpsnmpd-opts.texi: $(srcdir)/ntpsnmpd-opts.def $(std_def_list)
 	$(run_ag) -Taginfo.tpl -DLEVEL=section ntpsnmpd-opts.def
 	$(top_srcdir)/scripts/check--help $@
 
-check-libntp: FRC
-	cd ../libntp && $(MAKE)
-
-FRC:
-
-../libntp/libntp.a:
-	cd ../libntp && $(MAKE)
-
 install-exec-hook:
 	@case ${BINSUBDIR} in						\
 	 bin) ODIR=${sbindir} ;;					\
@@ -802,6 +797,18 @@ install-exec-hook:
 	done
 
 #
+
+check-libntp: ../libntp/libntp.a
+	@echo stamp > $@
+
+../libntp/libntp.a:
+	cd ../libntp && $(MAKE) libntp.a
+
+check-libopts: ../sntp/libopts/libopts.la
+	@echo stamp > $@
+
+../sntp/libopts/libopts.la:
+	-cd ../sntp/libopts && $(MAKE) libopts.la
 $(DEPDIR)/deps-ver: $(top_srcdir)/deps-ver
 	@[ -f $@ ] ||							\
 		cp $(top_srcdir)/deps-ver $@

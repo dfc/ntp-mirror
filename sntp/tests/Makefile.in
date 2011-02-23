@@ -55,9 +55,10 @@ am__aclocal_m4_deps = $(top_srcdir)/libopts/m4/libopts.m4 \
 	$(top_srcdir)/m4/ntp_libevent.m4 \
 	$(top_srcdir)/m4/ntp_libntp.m4 \
 	$(top_srcdir)/m4/ntp_lineeditlibs.m4 \
-	$(top_srcdir)/m4/ntp_openssl.m4 $(top_srcdir)/m4/ntp_sntp.m4 \
-	$(top_srcdir)/m4/os_cflags.m4 $(top_srcdir)/m4/version.m4 \
-	$(top_srcdir)/configure.ac
+	$(top_srcdir)/m4/ntp_openssl.m4 \
+	$(top_srcdir)/m4/ntp_pkg_config.m4 \
+	$(top_srcdir)/m4/ntp_sntp.m4 $(top_srcdir)/m4/os_cflags.m4 \
+	$(top_srcdir)/m4/version.m4 $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 mkinstalldirs = $(install_sh) -d
@@ -260,7 +261,7 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 NULL = 
-BUILT_SOURCES = .deps-ver
+BUILT_SOURCES = check-libntp .deps-ver
 sntp_objs = ..
 sntp_SOURCES_USED = \
 	$(sntp_objs)/crypto.o		\
@@ -300,7 +301,7 @@ EXTRA_DIST = data
 CLEANFILES = data/kod-output-multiple data/kod-output-single \
 	data/debug-output-pkt data/debug-output-lfp-dec \
 	data/kod-output-blank data/debug-output-lfp-bin \
-	data/debug-output-lfp-hex $(NULL) .deps-ver
+	data/debug-output-lfp-hex $(NULL) check-libntp .deps-ver
 LDADD = \
 	$(LIBOPTS_LDADD)			\
 	$(LDADD_LIBEVENT)			\
@@ -733,6 +734,12 @@ uninstall-am:
 	mostlyclean-generic mostlyclean-libtool pdf pdf-am ps ps-am \
 	tags uninstall uninstall-am
 
+
+check-libntp: ../../libntp/libntp.a
+	@echo stamp > $@
+
+../../libntp/libntp.a:
+	cd ../../libntp && $(MAKE) libntp.a
 $(DEPDIR)/deps-ver: $(top_srcdir)/deps-ver
 	@[ -f $@ ] ||							\
 		cp $(top_srcdir)/deps-ver $@

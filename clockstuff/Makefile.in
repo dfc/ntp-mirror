@@ -36,7 +36,8 @@ build_triplet = @build@
 host_triplet = @host@
 EXTRA_PROGRAMS = propdelay$(EXEEXT) chutest$(EXEEXT) clktest$(EXEEXT)
 DIST_COMMON = README $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
-	$(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf
+	$(top_srcdir)/check-libopts.mf $(top_srcdir)/depsver.mf \
+	$(top_srcdir)/includes.mf $(top_srcdir)/sntp/check-libntp.mf
 subdir = clockstuff
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
@@ -55,6 +56,7 @@ am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/m4/ntp_libntp.m4 \
 	$(top_srcdir)/sntp/m4/ntp_lineeditlibs.m4 \
 	$(top_srcdir)/sntp/m4/ntp_openssl.m4 \
+	$(top_srcdir)/sntp/m4/ntp_pkg_config.m4 \
 	$(top_srcdir)/sntp/m4/ntp_sntp.m4 \
 	$(top_srcdir)/sntp/m4/ntp_vpathhack.m4 \
 	$(top_srcdir)/sntp/m4/os_cflags.m4 \
@@ -132,6 +134,7 @@ CFLAGS = @CFLAGS@
 CFLAGS_NTP = @CFLAGS_NTP@
 CHUTEST = @CHUTEST@
 CLKTEST = @CLKTEST@
+CONFIG_SHELL = @CONFIG_SHELL@
 CPP = @CPP@
 CPPFLAGS = @CPPFLAGS@
 CPPFLAGS_NTP = @CPPFLAGS_NTP@
@@ -208,7 +211,6 @@ PACKAGE_VERSION = @PACKAGE_VERSION@
 PATH_NET_SNMP_CONFIG = @PATH_NET_SNMP_CONFIG@
 PATH_PERL = @PATH_PERL@
 PATH_SEPARATOR = @PATH_SEPARATOR@
-PATH_SH = @PATH_SH@
 PATH_TEST = @PATH_TEST@
 PKG_CONFIG = @PKG_CONFIG@
 PROPDELAY = @PROPDELAY@
@@ -279,7 +281,8 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 noinst_PROGRAMS = @PROPDELAY@ @CHUTEST@ @CLKTEST@
-BUILT_SOURCES = check-libntp clktest-opts.c clktest-opts.h .deps-ver
+BUILT_SOURCES = clktest-opts.c clktest-opts.h check-libntp \
+	check-libopts .deps-ver
 EXTRA_DIST = clktest-opts.def
 clktest_SOURCES = clktest.c clktest-opts.c clktest-opts.h
 AM_CFLAGS = $(CFLAGS_NTP)
@@ -297,7 +300,7 @@ std_def_list = \
 	$(top_srcdir)/sntp/include/version.def			\
 	$(NULL)
 
-CLEANFILES = .deps-ver
+CLEANFILES = check-libntp check-libopts .deps-ver
 NTP_INCS = -I$(top_srcdir)/include -I$(top_srcdir)/lib/isc/include \
 	-I$(top_srcdir)/lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/include \
 	-I$(top_srcdir)/lib/isc/unix/include
@@ -306,7 +309,7 @@ all: $(BUILT_SOURCES)
 
 .SUFFIXES:
 .SUFFIXES: .c .lo .o .obj
-$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf $(am__configure_deps)
+$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/sntp/check-libntp.mf $(top_srcdir)/check-libopts.mf $(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf $(am__configure_deps)
 	@for dep in $?; do \
 	  case '$(am__configure_deps)' in \
 	    *$$dep*) \
@@ -604,13 +607,17 @@ $(srcdir)/clktest-opts.h: $(srcdir)/clktest-opts.c
 $(srcdir)/clktest-opts.c: $(srcdir)/clktest-opts.def $(std_def_list)
 	$(run_ag) clktest-opts.def
 
-check-libntp: FRC
-	cd ../libntp && $(MAKE)
-
-FRC:
+check-libntp: ../libntp/libntp.a
+	@echo stamp > $@
 
 ../libntp/libntp.a:
-	cd ../libntp && $(MAKE)
+	cd ../libntp && $(MAKE) libntp.a
+
+check-libopts: ../sntp/libopts/libopts.la
+	@echo stamp > $@
+
+../sntp/libopts/libopts.la:
+	-cd ../sntp/libopts && $(MAKE) libopts.la
 $(DEPDIR)/deps-ver: $(top_srcdir)/deps-ver
 	@[ -f $@ ] ||							\
 		cp $(top_srcdir)/deps-ver $@

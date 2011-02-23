@@ -46,7 +46,8 @@ EXTRA_PROGRAMS = sntp$(EXEEXT)
 @GTEST_AVAILABLE_TRUE@am__append_4 = tests
 DIST_COMMON = $(am__configure_deps) $(srcdir)/Makefile.am \
 	$(srcdir)/Makefile.in $(srcdir)/config.h.in \
-	$(top_srcdir)/bincheck.mf $(top_srcdir)/configure \
+	$(top_srcdir)/bincheck.mf $(top_srcdir)/check-libntp.mf \
+	$(top_srcdir)/check-libopts.mf $(top_srcdir)/configure \
 	$(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf \
 	build-aux/compile build-aux/config.guess build-aux/config.sub \
 	build-aux/depcomp build-aux/install-sh build-aux/ltmain.sh \
@@ -67,9 +68,10 @@ am__aclocal_m4_deps = $(top_srcdir)/libopts/m4/libopts.m4 \
 	$(top_srcdir)/m4/ntp_libevent.m4 \
 	$(top_srcdir)/m4/ntp_libntp.m4 \
 	$(top_srcdir)/m4/ntp_lineeditlibs.m4 \
-	$(top_srcdir)/m4/ntp_openssl.m4 $(top_srcdir)/m4/ntp_sntp.m4 \
-	$(top_srcdir)/m4/os_cflags.m4 $(top_srcdir)/m4/version.m4 \
-	$(top_srcdir)/configure.ac
+	$(top_srcdir)/m4/ntp_openssl.m4 \
+	$(top_srcdir)/m4/ntp_pkg_config.m4 \
+	$(top_srcdir)/m4/ntp_sntp.m4 $(top_srcdir)/m4/os_cflags.m4 \
+	$(top_srcdir)/m4/version.m4 $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 am__CONFIG_DISTCLEAN_FILES = config.status config.cache config.log \
@@ -376,10 +378,8 @@ DISTCLEANFILES = \
 	$(NULL)
 
 EXTRA_DIST = \
-	bincheck.mf			\
 	$(srcdir)/COPYRIGHT		\
 	deps-ver			\
-	depsver.mf			\
 	@NTP_FORCE_LIBEVENT_DIST@	\
 	sntp-opts.def			\
 	sntp-opts.menu			\
@@ -392,12 +392,13 @@ EXTRA_DIST = \
 	$(srcdir)/m4/version.m4		\
 	$(NULL)
 
-BUILT_SOURCES = check-libntp $(srcdir)/COPYRIGHT libtool \
-	$(srcdir)/sntp-opts.c $(srcdir)/sntp-opts.h $(srcdir)/version \
+BUILT_SOURCES = $(srcdir)/COPYRIGHT libtool $(srcdir)/sntp-opts.c \
+	$(srcdir)/sntp-opts.h check-version \
 	$(srcdir)/include/version.def $(srcdir)/m4/version.m4 \
-	$(srcdir)/include/version.texi $(NULL) .deps-ver
+	$(srcdir)/include/version.texi $(NULL) check-libntp \
+	check-libopts .deps-ver
 CLEANFILES = built-sources-only check-COPYRIGHT-submake $(NULL) \
-	.deps-ver
+	check-libntp check-libopts .deps-ver
 man_MANS = $(srcdir)/sntp.1
 noinst_DATA = \
 	$(srcdir)/sntp.html		\
@@ -416,7 +417,7 @@ all: $(BUILT_SOURCES) config.h
 .SUFFIXES: .c .lo .o .obj
 am--refresh:
 	@:
-$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/bincheck.mf $(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf $(am__configure_deps)
+$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/bincheck.mf $(top_srcdir)/check-libntp.mf $(top_srcdir)/check-libopts.mf $(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf $(am__configure_deps)
 	@for dep in $?; do \
 	  case '$(am__configure_deps)' in \
 	    *$$dep*) \
@@ -1109,7 +1110,7 @@ uninstall-man: uninstall-man1
 	uninstall-sbinPROGRAMS
 
 
-FRC FRC.version:
+FRC:
 	@: do-nothing action to prevent default SCCS get
 	@: FRC "force" depends on nothing and is not a file, so is
 	@: always out-of-date causing targets which depend on it to
@@ -1118,8 +1119,8 @@ FRC FRC.version:
 
 $(PROGRAMS): version.o
 
-version.o: $(sntp_OBJECTS) ../libntp/libntp.a Makefile $(top_srcdir)/version
-	env CSET=`cat $(top_srcdir)/version` ../$(top_builddir)/scripts/mkver sntp
+version.o: $(sntp_OBJECTS) ../libntp/libntp.a $(srcdir)/version
+	env CSET=`cat $(srcdir)/version` $(top_builddir)/../scripts/mkver sntp
 	$(COMPILE) -c version.c
 
 check-autogen-version.def: FRC
@@ -1137,13 +1138,8 @@ $(srcdir)/autogen-version.def:
 built-sources-only: $(BUILT_SOURCES)
 	@: do-nothing action to avoid default SCCS get
 
-# HMS: The next bit is still suboptimal.  If bk is present but this NTP
-# repo is not a bk repo, we'll get an error message from the prs command.
-# Unfortunately, I haven't found the necessary magic to redirect this error
-# output to /dev/null under ancient/unique shells like the one Ultrix uses.
-# We'll also get an error if srcdir or version is unwritable.
-$(srcdir)/version: FRC.version
-	-test -r $(srcdir)/../SCCS/s.ChangeSet &&				\
+check-version:
+	-test -r $(srcdir)/../SCCS/s.ChangeSet &&		\
 	    (bk version) >/dev/null 2>&1 &&			\
 	    cd $(srcdir)/.. &&					\
 	    x=`bk -R prs -hr+ -nd:I: ChangeSet` &&		\
@@ -1198,12 +1194,6 @@ $(srcdir)/sntp-opts.texi: $(srcdir)/sntp-opts.def $(srcdir)/include/version.def 
 $(srcdir)/sntp.html: $(srcdir)/sntp-opts.menu $(srcdir)/sntp-opts.texi $(srcdir)/sntp.texi $(srcdir)/include/version.texi
 	cd $(srcdir) && ( makeinfo --force --html --no-split -o sntp.html sntp.texi || true )
 
-check-libntp: FRC
-	cd ../libntp && $(MAKE)
-
-../libntp/libntp.a:
-	cd ../libntp && $(MAKE)
-
 libtool: $(LIBTOOL_DEPS)
 	./config.status --recheck
 
@@ -1224,6 +1214,18 @@ install-exec-hook:
 	done
 
 #
+
+check-libntp: ../libntp/libntp.a
+	@echo stamp > $@
+
+../libntp/libntp.a:
+	cd ../libntp && $(MAKE) libntp.a
+
+check-libopts: libopts/libopts.la
+	@echo stamp > $@
+
+libopts/libopts.la:
+	-cd libopts && $(MAKE) libopts.la
 $(DEPDIR)/deps-ver: $(top_srcdir)/deps-ver
 	@[ -f $@ ] ||							\
 		cp $(top_srcdir)/deps-ver $@
