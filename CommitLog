@@ -1,3 +1,180 @@
+ChangeSet@1.2484, 2011-02-24 10:50:23+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P134
+  TAG: NTP_4_2_7P134
+
+  ChangeLog@1.801 +1 -0
+    NTP_4_2_7P134
+
+  clockstuff/clktest-opts.c@1.60 +2 -2
+    NTP_4_2_7P134
+
+  clockstuff/clktest-opts.h@1.60 +3 -3
+    NTP_4_2_7P134
+
+  ntpd/ntpd-opts.c@1.139 +2 -2
+    NTP_4_2_7P134
+
+  ntpd/ntpd-opts.h@1.139 +3 -3
+    NTP_4_2_7P134
+
+  ntpd/ntpd-opts.texi@1.137 +2 -2
+    NTP_4_2_7P134
+
+  ntpd/ntpd.1@1.137 +2 -2
+    NTP_4_2_7P134
+
+  ntpdc/ntpdc-opts.c@1.136 +2 -2
+    NTP_4_2_7P134
+
+  ntpdc/ntpdc-opts.h@1.136 +3 -3
+    NTP_4_2_7P134
+
+  ntpdc/ntpdc-opts.texi@1.136 +2 -2
+    NTP_4_2_7P134
+
+  ntpdc/ntpdc.1@1.136 +2 -2
+    NTP_4_2_7P134
+
+  ntpq/ntpq-opts.c@1.136 +2 -2
+    NTP_4_2_7P134
+
+  ntpq/ntpq-opts.h@1.136 +3 -3
+    NTP_4_2_7P134
+
+  ntpq/ntpq-opts.texi@1.136 +2 -2
+    NTP_4_2_7P134
+
+  ntpq/ntpq.1@1.136 +2 -2
+    NTP_4_2_7P134
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.136 +2 -2
+    NTP_4_2_7P134
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.136 +3 -3
+    NTP_4_2_7P134
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.136 +2 -2
+    NTP_4_2_7P134
+
+  ntpsnmpd/ntpsnmpd.1@1.136 +2 -2
+    NTP_4_2_7P134
+
+  packageinfo.sh@1.136 +1 -1
+    NTP_4_2_7P134
+
+  sntp/sntp-opts.c@1.130 +2 -2
+    NTP_4_2_7P134
+
+  sntp/sntp-opts.h@1.130 +3 -3
+    NTP_4_2_7P134
+
+  sntp/sntp-opts.texi@1.130 +2 -2
+    NTP_4_2_7P134
+
+  sntp/sntp.1@1.130 +2 -2
+    NTP_4_2_7P134
+
+  sntp/sntp.html@1.130 +1 -1
+    NTP_4_2_7P134
+
+  util/ntp-keygen-opts.c@1.134 +2 -2
+    NTP_4_2_7P134
+
+  util/ntp-keygen-opts.h@1.134 +3 -3
+    NTP_4_2_7P134
+
+  util/ntp-keygen-opts.texi@1.137 +2 -2
+    NTP_4_2_7P134
+
+  util/ntp-keygen.1@1.137 +2 -2
+    NTP_4_2_7P134
+
+ChangeSet@1.2479.1.4, 2011-02-24 04:21:34+00:00, davehart@shiny.ad.hartbrothers.com
+  Another ac_cv_path* variable needs clearing to prevent caching the
+    full path to pkg-config.
+
+  sntp/m4/ntp_pkg_config.m4@1.2 +1 -0
+    Another ac_cv_path* variable needs clearing to prevent caching the
+      full path to pkg-config.
+
+ChangeSet@1.2482, 2011-02-23 16:58:30-05:00, stenn@deacon.udel.edu
+  merge cleanup
+
+  ChangeLog@1.800 +7 -7
+    merge cleanup
+
+ChangeSet@1.2479.1.3, 2011-02-23 20:34:51+00:00, davehart@shiny.ad.hartbrothers.com
+  Fix make distcheck failure seen on psp-deb1 by distributing
+    sntp/tests/data files individually by name rather than
+    listing "data".
+
+  sntp/tests/Makefile.am@1.23 +16 -1
+    Fix make distcheck failure seen on psp-deb1 by distributing
+      sntp/tests/data files individually by name rather than
+      listing "data".
+
+ChangeSet@1.2479.1.1, 2011-02-23 18:57:00+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 1837] Build fails on Win7 due to regedit requiring privilege.
+  Provide fallback definitions for GetAdaptersAddresses() for Windows
+    build environments lacking iphlpapi.h.
+  Rename file containing 1.xxxx ChangeSet revision from version to
+    scm-rev to avoid invoking GNU make implicit rules attempting to
+    compile version.c into version.  Problem was with sntp/version.o
+    during make distcheck after fix for spurious sntp rebuilds.
+
+  ChangeLog@1.797.1.1 +7 -0
+    [Bug 1837] Build fails on Win7 due to regedit requiring privilege.
+    Provide fallback definitions for GetAdaptersAddresses() for Windows
+      build environments lacking iphlpapi.h.
+    Rename file containing 1.xxxx ChangeSet revision from version to
+      scm-rev to avoid invoking GNU make implicit rules attempting to
+      compile version.c into version.  Problem was with sntp/version.o
+      during make distcheck after fix for spurious sntp rebuilds.
+
+  lib/isc/win32/interfaceiter.c@1.21 +4 -4
+    Provide fallback definitions for GetAdaptersAddresses() for Windows
+      build environments lacking iphlpapi.h.
+
+  ntpd/Makefile.am@1.102 +7 -5
+    Rename cset file from sntp/version to sntp/scm-rev.
+
+  ntpdate/Makefile.am@1.30 +7 -5
+    Rename cset file from sntp/version to sntp/scm-rev.
+
+  ntpdc/Makefile.am@1.60 +7 -5
+    Rename cset file from sntp/version to sntp/scm-rev.
+
+  ntpq/Makefile.am@1.56 +8 -6
+    Rename cset file from sntp/version to sntp/scm-rev.
+
+  ports/winnt/include/gaa_compat.h@1.1 +771 -0
+    BitKeeper file C:/ntp/ntp-dev-1837/ports/winnt/include/gaa_compat.h
+
+  ports/winnt/include/gaa_compat.h@1.0 +0 -0
+
+  ports/winnt/scripts/mkver.bat@1.14 +11 -7
+    [Bug 1837] Build fails on Win7 due to regedit requiring privilege.
+    Rename file containing 1.xxxx ChangeSet revision from version to
+      scm-rev to avoid invoking GNU make implicit rules attempting to
+      compile version.c into version.  Problem was with sntp/version.o
+      during make distcheck after fix for spurious sntp rebuilds.
+    
+
+  ports/winnt/vs2008/libntp/libntp.vcproj@1.39 +6 -2
+    add gaa_compat.h reference
+
+  sntp/Makefile.am@1.58 +14 -9
+    Rename cset file from sntp/version to sntp/scm-rev.
+    Fixes psp-deb1 make distcheck failure on sntp/version.o, which was
+      using an implicit rule to build presumed-executable "version" from
+      ../../sntp/../../sntp/version.c.
+
+  sntp/libevent/test/Makefile.am@1.3 +1 -1
+    http://sourceforge.net/tracker/?func=detail&aid=3189896&group_id=50884&atid=461324
+
+  util/Makefile.am@1.59 +8 -6
+    Rename cset file from sntp/version to sntp/scm-rev.
+
 ChangeSet@1.2480, 2011-02-23 11:06:18+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P133
   TAG: NTP_4_2_7P133
@@ -849,10 +1026,10 @@ ChangeSet@1.2468, 2011-02-21 00:26:17-08:00, harlan@hms-mbp.local
   sntp/m4/ntp_libntp.m4@1.5 +4 -6
     older autoconf sometimes dislikes [].
 
-ChangeSet@1.2422.1.61, 2011-02-20 23:11:05-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2422.10.1, 2011-02-20 23:11:05-05:00, stenn@deacon.udel.edu
   refclock_acts.c cleanup from Dave Mills
 
-  ChangeLog@1.784.1.21 +1 -0
+  ChangeLog@1.784.2.1 +1 -0
     refclock_acts.c cleanup from Dave Mills
 
   ntpd/refclock_acts.c@1.46.1.1 +4 -3
@@ -1313,7 +1490,7 @@ ChangeSet@1.2464, 2011-02-20 20:23:00+00:00, davehart@shiny.ad.hartbrothers.com
     Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
     pp->unitptr is now void *, no cast needed.
 
-  ntpd/refclock_as2201.c@1.14 +6 -7
+  ntpd/refclock_as2201.c@1.13.1.1 +6 -7
     nonfunctional:
     Use rbufp->recv_peer instead of casting rbufp->recv_srcclock.
     pp->unitptr is now void *, no cast needed.
@@ -1885,6 +2062,28 @@ ChangeSet@1.2464, 2011-02-20 20:23:00+00:00, davehart@shiny.ad.hartbrothers.com
 
   util/ntp-keygen.c@1.77 +0 -1
     JAN_1970 definition provided by ntp_unixtime.h now
+
+ChangeSet@1.2422.1.61, 2011-02-19 03:29:55+00:00, davehart@shiny.ad.hartbrothers.com
+  Add INC_ALIGNED_PTR() macro to align pointers like malloc().
+
+  ChangeLog@1.784.1.21 +1 -0
+    Add INC_ALIGNED_PTR() macro to align pointers like malloc().
+
+  include/ntp_types.h@1.23 +26 -0
+    Add INC_ALIGNED_PTR() macro to align pointers like malloc().
+
+  ntpd/ntp_crypto.c@1.154 +16 -9
+    strdup() -> estrdup()
+
+  ntpd/ntp_proto.c@1.319 +11 -10
+    Add INC_ALIGNED_PTR() macro to align pointers like malloc().
+
+  ntpd/refclock_as2201.c@1.14 +2 -2
+    Use memcpy() after bounds check instead of strcpy().
+    Correct a different bounds check that was off by one.
+
+  sntp/tests_main.h@1.7 +3 -2
+    #include config.h before all others, system before lib/app.
 
 ChangeSet@1.2422.1.60, 2011-02-12 11:07:51+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P130

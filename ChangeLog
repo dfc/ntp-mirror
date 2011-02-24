@@ -1,3 +1,12 @@
+(4.2.7p134) 2011/02/24 Released by Harlan Stenn <stenn@ntp.org>
+* [Bug 1837] Build fails on Win7 due to regedit requiring privilege.
+* Provide fallback definitions for GetAdaptersAddresses() for Windows
+  build environments lacking iphlpapi.h.
+* Rename file containing 1.xxxx ChangeSet revision from version to
+  scm-rev to avoid invoking GNU make implicit rules attempting to
+  compile version.c into version.  Problem was with sntp/version.o
+  during make distcheck after fix for spurious sntp rebuilds.
+* Add INC_ALIGNED_PTR() macro to align pointers like malloc().
 (4.2.7p133) 2011/02/23 Released by Harlan Stenn <stenn@ntp.org>
 * [Bug 1834] ntpdate 4.2.7p131 aborts with assertion failure.
 * Move sntp last in top-level Makefile.am SUBDIRS so that the libevent
