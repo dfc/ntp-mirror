@@ -1,3 +1,103 @@
+ChangeSet@1.2490, 2011-03-02 07:25:19+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P136
+  TAG: NTP_4_2_7P136
+
+  ChangeLog@1.807 +1 -0
+    NTP_4_2_7P136
+
+  clockstuff/clktest-opts.c@1.62 +2 -2
+    NTP_4_2_7P136
+
+  clockstuff/clktest-opts.h@1.62 +3 -3
+    NTP_4_2_7P136
+
+  ntpd/ntpd-opts.c@1.141 +2 -2
+    NTP_4_2_7P136
+
+  ntpd/ntpd-opts.h@1.141 +3 -3
+    NTP_4_2_7P136
+
+  ntpd/ntpd-opts.texi@1.139 +2 -2
+    NTP_4_2_7P136
+
+  ntpd/ntpd.1@1.139 +2 -2
+    NTP_4_2_7P136
+
+  ntpdc/ntpdc-opts.c@1.138 +2 -2
+    NTP_4_2_7P136
+
+  ntpdc/ntpdc-opts.h@1.138 +3 -3
+    NTP_4_2_7P136
+
+  ntpdc/ntpdc-opts.texi@1.138 +2 -2
+    NTP_4_2_7P136
+
+  ntpdc/ntpdc.1@1.138 +2 -2
+    NTP_4_2_7P136
+
+  ntpq/ntpq-opts.c@1.138 +2 -2
+    NTP_4_2_7P136
+
+  ntpq/ntpq-opts.h@1.138 +3 -3
+    NTP_4_2_7P136
+
+  ntpq/ntpq-opts.texi@1.138 +2 -2
+    NTP_4_2_7P136
+
+  ntpq/ntpq.1@1.138 +2 -2
+    NTP_4_2_7P136
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.138 +2 -2
+    NTP_4_2_7P136
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.138 +3 -3
+    NTP_4_2_7P136
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.138 +2 -2
+    NTP_4_2_7P136
+
+  ntpsnmpd/ntpsnmpd.1@1.138 +2 -2
+    NTP_4_2_7P136
+
+  packageinfo.sh@1.138 +1 -1
+    NTP_4_2_7P136
+
+  sntp/sntp-opts.c@1.132 +2 -2
+    NTP_4_2_7P136
+
+  sntp/sntp-opts.h@1.132 +3 -3
+    NTP_4_2_7P136
+
+  sntp/sntp-opts.texi@1.132 +2 -2
+    NTP_4_2_7P136
+
+  sntp/sntp.1@1.132 +2 -2
+    NTP_4_2_7P136
+
+  sntp/sntp.html@1.132 +1 -1
+    NTP_4_2_7P136
+
+  util/ntp-keygen-opts.c@1.136 +2 -2
+    NTP_4_2_7P136
+
+  util/ntp-keygen-opts.h@1.136 +3 -3
+    NTP_4_2_7P136
+
+  util/ntp-keygen-opts.texi@1.139 +2 -2
+    NTP_4_2_7P136
+
+  util/ntp-keygen.1@1.139 +2 -2
+    NTP_4_2_7P136
+
+ChangeSet@1.2489, 2011-03-02 06:13:26+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 1839] 4.2.7p135 still installs libevent ev*.h headers.
+
+  ChangeLog@1.806 +1 -0
+    [Bug 1839] 4.2.7p135 still installs libevent ev*.h headers.
+
+  sntp/libevent/Makefile.am@1.3 +8 -2
+    [Bug 1839] 4.2.7p135 still installs libevent ev*.h headers.
+
 ChangeSet@1.2488, 2011-03-02 00:29:27+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P135
   TAG: NTP_4_2_7P135

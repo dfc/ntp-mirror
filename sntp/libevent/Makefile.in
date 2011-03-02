@@ -48,6 +48,7 @@ host_triplet = @host@
 @EPOLL_BACKEND_TRUE@am__append_9 = epoll.c
 @EVPORT_BACKEND_TRUE@am__append_10 = evport.c
 @SIGNAL_SUPPORT_TRUE@am__append_11 = signal.c
+@INSTALL_LIBEVENT_FALSE@am__append_12 = $(EVENT1_HDRS)
 subdir = .
 DIST_COMMON = README $(am__configure_deps) $(dist_bin_SCRIPTS) \
 	$(include_HEADERS) $(noinst_HEADERS) $(srcdir)/../config.guess \
@@ -527,15 +528,13 @@ noinst_HEADERS = util-internal.h mm-internal.h ipv6-internal.h \
 	evrpc-internal.h strlcpy-internal.h evbuffer-internal.h \
 	bufferevent-internal.h http-internal.h event-internal.h \
 	evthread-internal.h ht-internal.h defer-internal.h \
-	minheap-internal.h log-internal.h evsignal-internal.h evmap-internal.h \
-	changelist-internal.h iocp-internal.h \
-	ratelim-internal.h \
-	WIN32-Code/event2/event-config.h \
-	WIN32-Code/tree.h \
-	compat/sys/queue.h
-
-include_HEADERS = event.h evhttp.h evdns.h evrpc.h evutil.h
-INCLUDES = -I$(srcdir)/compat -I$(srcdir)/include -I./include $(SYS_INCLUDES)
+	minheap-internal.h log-internal.h evsignal-internal.h \
+	evmap-internal.h changelist-internal.h iocp-internal.h \
+	ratelim-internal.h WIN32-Code/event2/event-config.h \
+	WIN32-Code/tree.h compat/sys/queue.h $(am__append_12)
+EVENT1_HDRs = event.h evhttp.h evdns.h evrpc.h evutil.h
+@INSTALL_LIBEVENT_TRUE@include_HEADERS = $(EVENT1_HDRS)
+AM_CPPFLAGS = -I$(srcdir)/compat -I$(srcdir)/include -I./include $(SYS_INCLUDES)
 DISTCLEANFILES = *~ libevent.pc ./include/event2/event-config.h
 all: $(BUILT_SOURCES) config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
