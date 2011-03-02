@@ -55,6 +55,9 @@ dns_example_SOURCES = dns-example.c
 dns_example_OBJECTS = dns-example.$(OBJEXT)
 dns_example_LDADD = $(LDADD)
 dns_example_DEPENDENCIES = ../libevent.la
+AM_V_lt = $(am__v_lt_$(V))
+am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
+am__v_lt_0 = --silent
 event_test_SOURCES = event-test.c
 event_test_OBJECTS = event-test.$(OBJEXT)
 event_test_LDADD = $(LDADD)
@@ -85,13 +88,26 @@ depcomp =
 am__depfiles_maybe =
 COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
-LTCOMPILE = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
-	--mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
-	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+LTCOMPILE = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
+	$(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) \
+	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+	$(AM_CFLAGS) $(CFLAGS)
+AM_V_CC = $(am__v_CC_$(V))
+am__v_CC_ = $(am__v_CC_$(AM_DEFAULT_VERBOSITY))
+am__v_CC_0 = @echo "  CC    " $@;
+AM_V_at = $(am__v_at_$(V))
+am__v_at_ = $(am__v_at_$(AM_DEFAULT_VERBOSITY))
+am__v_at_0 = @
 CCLD = $(CC)
-LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
-	--mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
-	$(LDFLAGS) -o $@
+LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
+	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+AM_V_CCLD = $(am__v_CCLD_$(V))
+am__v_CCLD_ = $(am__v_CCLD_$(AM_DEFAULT_VERBOSITY))
+am__v_CCLD_0 = @echo "  CCLD  " $@;
+AM_V_GEN = $(am__v_GEN_$(V))
+am__v_GEN_ = $(am__v_GEN_$(AM_DEFAULT_VERBOSITY))
+am__v_GEN_0 = @echo "  GEN   " $@;
 SOURCES = dns-example.c event-test.c hello-world.c http-server.c \
 	le-proxy.c signal-test.c time-test.c
 DIST_SOURCES = dns-example.c event-test.c hello-world.c http-server.c \
@@ -101,6 +117,7 @@ CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 ACLOCAL = @ACLOCAL@
 AMTAR = @AMTAR@
+AM_DEFAULT_VERBOSITY = @AM_DEFAULT_VERBOSITY@
 AR = @AR@
 AUTOCONF = @AUTOCONF@
 AUTOHEADER = @AUTOHEADER@
@@ -270,25 +287,25 @@ clean-noinstPROGRAMS:
 	rm -f $$list
 dns-example$(EXEEXT): $(dns_example_OBJECTS) $(dns_example_DEPENDENCIES) 
 	@rm -f dns-example$(EXEEXT)
-	$(LINK) $(dns_example_OBJECTS) $(dns_example_LDADD) $(LIBS)
+	$(AM_V_CCLD)$(LINK) $(dns_example_OBJECTS) $(dns_example_LDADD) $(LIBS)
 event-test$(EXEEXT): $(event_test_OBJECTS) $(event_test_DEPENDENCIES) 
 	@rm -f event-test$(EXEEXT)
-	$(LINK) $(event_test_OBJECTS) $(event_test_LDADD) $(LIBS)
+	$(AM_V_CCLD)$(LINK) $(event_test_OBJECTS) $(event_test_LDADD) $(LIBS)
 hello-world$(EXEEXT): $(hello_world_OBJECTS) $(hello_world_DEPENDENCIES) 
 	@rm -f hello-world$(EXEEXT)
-	$(LINK) $(hello_world_OBJECTS) $(hello_world_LDADD) $(LIBS)
+	$(AM_V_CCLD)$(LINK) $(hello_world_OBJECTS) $(hello_world_LDADD) $(LIBS)
 http-server$(EXEEXT): $(http_server_OBJECTS) $(http_server_DEPENDENCIES) 
 	@rm -f http-server$(EXEEXT)
-	$(LINK) $(http_server_OBJECTS) $(http_server_LDADD) $(LIBS)
+	$(AM_V_CCLD)$(LINK) $(http_server_OBJECTS) $(http_server_LDADD) $(LIBS)
 le-proxy$(EXEEXT): $(le_proxy_OBJECTS) $(le_proxy_DEPENDENCIES) 
 	@rm -f le-proxy$(EXEEXT)
-	$(LINK) $(le_proxy_OBJECTS) $(le_proxy_LDADD) $(LIBS)
+	$(AM_V_CCLD)$(LINK) $(le_proxy_OBJECTS) $(le_proxy_LDADD) $(LIBS)
 signal-test$(EXEEXT): $(signal_test_OBJECTS) $(signal_test_DEPENDENCIES) 
 	@rm -f signal-test$(EXEEXT)
-	$(LINK) $(signal_test_OBJECTS) $(signal_test_LDADD) $(LIBS)
+	$(AM_V_CCLD)$(LINK) $(signal_test_OBJECTS) $(signal_test_LDADD) $(LIBS)
 time-test$(EXEEXT): $(time_test_OBJECTS) $(time_test_DEPENDENCIES) 
 	@rm -f time-test$(EXEEXT)
-	$(LINK) $(time_test_OBJECTS) $(time_test_LDADD) $(LIBS)
+	$(AM_V_CCLD)$(LINK) $(time_test_OBJECTS) $(time_test_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -297,12 +314,15 @@ distclean-compile:
 	-rm -f *.tab.c
 
 .c.o:
+	$(AM_V_CC) @AM_BACKSLASH@
 	$(COMPILE) -c $<
 
 .c.obj:
+	$(AM_V_CC) @AM_BACKSLASH@
 	$(COMPILE) -c `$(CYGPATH_W) '$<'`
 
 .c.lo:
+	$(AM_V_CC) @AM_BACKSLASH@
 	$(LTCOMPILE) -c -o $@ $<
 
 mostlyclean-libtool:
