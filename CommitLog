@@ -1,3 +1,292 @@
+ChangeSet@1.2493, 2011-03-07 10:06:50+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P137
+  TAG: NTP_4_2_7P137
+
+  ChangeLog@1.810 +1 -0
+    NTP_4_2_7P137
+
+  clockstuff/clktest-opts.c@1.63 +2 -2
+    NTP_4_2_7P137
+
+  clockstuff/clktest-opts.h@1.63 +3 -3
+    NTP_4_2_7P137
+
+  ntpd/ntpd-opts.c@1.142 +2 -2
+    NTP_4_2_7P137
+
+  ntpd/ntpd-opts.h@1.142 +3 -3
+    NTP_4_2_7P137
+
+  ntpd/ntpd-opts.texi@1.140 +2 -2
+    NTP_4_2_7P137
+
+  ntpd/ntpd.1@1.140 +2 -2
+    NTP_4_2_7P137
+
+  ntpdc/ntpdc-opts.c@1.139 +2 -2
+    NTP_4_2_7P137
+
+  ntpdc/ntpdc-opts.h@1.139 +3 -3
+    NTP_4_2_7P137
+
+  ntpdc/ntpdc-opts.texi@1.139 +2 -2
+    NTP_4_2_7P137
+
+  ntpdc/ntpdc.1@1.139 +2 -2
+    NTP_4_2_7P137
+
+  ntpq/ntpq-opts.c@1.139 +2 -2
+    NTP_4_2_7P137
+
+  ntpq/ntpq-opts.h@1.139 +3 -3
+    NTP_4_2_7P137
+
+  ntpq/ntpq-opts.texi@1.139 +2 -2
+    NTP_4_2_7P137
+
+  ntpq/ntpq.1@1.139 +2 -2
+    NTP_4_2_7P137
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.139 +2 -2
+    NTP_4_2_7P137
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.139 +3 -3
+    NTP_4_2_7P137
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.139 +2 -2
+    NTP_4_2_7P137
+
+  ntpsnmpd/ntpsnmpd.1@1.139 +2 -2
+    NTP_4_2_7P137
+
+  packageinfo.sh@1.139 +1 -1
+    NTP_4_2_7P137
+
+  sntp/sntp-opts.c@1.133 +2 -2
+    NTP_4_2_7P137
+
+  sntp/sntp-opts.h@1.133 +3 -3
+    NTP_4_2_7P137
+
+  sntp/sntp-opts.texi@1.133 +2 -2
+    NTP_4_2_7P137
+
+  sntp/sntp.1@1.133 +2 -2
+    NTP_4_2_7P137
+
+  sntp/sntp.html@1.133 +1 -1
+    NTP_4_2_7P137
+
+  util/ntp-keygen-opts.c@1.137 +2 -2
+    NTP_4_2_7P137
+
+  util/ntp-keygen-opts.h@1.137 +3 -3
+    NTP_4_2_7P137
+
+  util/ntp-keygen-opts.texi@1.140 +2 -2
+    NTP_4_2_7P137
+
+  util/ntp-keygen.1@1.140 +2 -2
+    NTP_4_2_7P137
+
+ChangeSet@1.2492, 2011-03-06 01:24:22+00:00, davehart@shiny.ad.hartbrothers.com
+  Add overlooked ChangeLog entry for last cset.
+
+  ChangeLog@1.809 +2 -0
+    Add overlooked ChangeLog entry for last cset.
+
+  include/declcond.h@1.2 +4 -0
+    Use multiple-inclusion guard.
+
+  ntpd/declcond.h@1.2 +4 -0
+    Use multiple-inclusion guard.
+
+ChangeSet@1.2491, 2011-03-05 22:35:37+00:00, davehart@shiny.ad.hartbrothers.com
+  Use TRACE() instead of DPRINTF() for libntp and utilities, which
+    use the "debug" variable regardless of #ifdef DEBUG.
+  Declare debug in libntp instead of each program.  Expose extern declaration
+    to utilities, libntp, and DEBUG ntpd.
+
+  BitKeeper/deleted/16/sntptest.cpp~b166a62f6f744adb@1.4 +0 -0
+    Rename: sntp/tests/sntptest.cpp -> BitKeeper/deleted/16/sntptest.cpp~b166a62f6f744adb
+
+  BitKeeper/deleted/a3/dnslookup.c~96398d4d3428670@1.10 +0 -0
+    Rename: ports/winnt/libntp/dnslookup.c -> BitKeeper/deleted/a3/dnslookup.c~96398d4d3428670
+
+  BitKeeper/deleted/c4/mexit.c~13b0216e@1.5 +0 -0
+    Rename: ports/winnt/libntp/mexit.c -> BitKeeper/deleted/c4/mexit.c~13b0216e
+
+  ChangeLog@1.808 +2 -0
+    Use TRACE() instead of DPRINTF() for libntp and utilities, which
+      use the "debug" variable regardless of #ifdef DEBUG.
+
+  clockstuff/chutest.c@1.6 +0 -1
+    Use TRACE() instead of DPRINTF() for libntp and utilities, which
+      use the "debug" variable regardless of #ifdef DEBUG.
+
+  clockstuff/propdelay.c@1.6 +0 -1
+    Use TRACE() instead of DPRINTF() for libntp and utilities, which
+      use the "debug" variable regardless of #ifdef DEBUG.
+
+  include/Makefile.am@1.48 +1 -0
+    Declare debug in libntp instead of each program.  Expose extern declaration
+      to utilities, libntp, and DEBUG ntpd.
+
+  include/declcond.h@1.1 +17 -0
+    BitKeeper file C:/ntp/ntp-dev-trace/include/declcond.h
+
+  include/declcond.h@1.0 +0 -0
+
+  include/ntp_debug.h@1.5 +12 -16
+    Use TRACE() instead of DPRINTF() for libntp and utilities, which
+      use the "debug" variable regardless of #ifdef DEBUG.
+
+  include/ntp_stdlib.h@1.60 +3 -6
+    Use TRACE() instead of DPRINTF() for libntp and utilities, which
+      use the "debug" variable regardless of #ifdef DEBUG.
+
+  include/ntpd.h@1.160 +23 -1
+    Use TRACE() instead of DPRINTF() for libntp and utilities, which
+      use the "debug" variable regardless of #ifdef DEBUG.
+
+  libntp/lib_strbuf.c@1.9 +6 -5
+    Declare debug in libntp instead of each program.  Expose extern declaration
+      to utilities, libntp, and DEBUG ntpd.
+
+  libntp/machines.c@1.24 +6 -6
+    Use TRACE() instead of DPRINTF() for libntp and utilities, which
+      use the "debug" variable regardless of #ifdef DEBUG.
+
+  libntp/msyslog.c@1.36 +1 -1
+    Use TRACE() instead of DPRINTF() for libntp and utilities, which
+      use the "debug" variable regardless of #ifdef DEBUG.
+
+  libntp/ntp_intres.c@1.94 +46 -50
+    Use TRACE() instead of DPRINTF() for libntp and utilities, which
+      use the "debug" variable regardless of #ifdef DEBUG.
+
+  libntp/socket.c@1.7 +26 -26
+    Use TRACE() instead of DPRINTF() for libntp and utilities, which
+      use the "debug" variable regardless of #ifdef DEBUG.
+
+  libntp/socktohost.c@1.14 +3 -2
+    Use TRACE() instead of DPRINTF() for libntp and utilities, which
+      use the "debug" variable regardless of #ifdef DEBUG.
+
+  libntp/work_fork.c@1.9 +16 -16
+    Use TRACE() instead of DPRINTF() for libntp and utilities, which
+      use the "debug" variable regardless of #ifdef DEBUG.
+
+  libntp/work_thread.c@1.6 +2 -2
+    Use TRACE() instead of DPRINTF() for libntp and utilities, which
+      use the "debug" variable regardless of #ifdef DEBUG.
+
+  ntpd/Makefile.am@1.103 +1 -0
+    Declare debug in libntp instead of each program.  Expose extern declaration
+      to utilities, libntp, and DEBUG ntpd.
+
+  ntpd/check_y2k.c@1.8 +0 -1
+    Use TRACE() instead of DPRINTF() for libntp and utilities, which
+      use the "debug" variable regardless of #ifdef DEBUG.
+
+  ntpd/declcond.h@1.1 +17 -0
+    BitKeeper file C:/ntp/ntp-dev-trace/ntpd/declcond.h
+
+  ntpd/declcond.h@1.0 +0 -0
+
+  ntpd/keyword-gen.c@1.18 +2 -1
+    Use TRACE() instead of DPRINTF() for libntp and utilities, which
+      use the "debug" variable regardless of #ifdef DEBUG.
+
+  ntpd/ntp_scanner.c@1.41 +1 -1
+    Use TRACE() instead of DPRINTF() for libntp and utilities, which
+      use the "debug" variable regardless of #ifdef DEBUG.
+
+  ntpd/ntpd.c@1.124 +0 -7
+    Declare debug in libntp instead of each program.  Expose extern declaration
+      to utilities, libntp, and DEBUG ntpd.
+
+  ntpd/refclock_bancomm.c@1.15 +0 -5
+    Use TRACE() instead of DPRINTF() for libntp and utilities, which
+      use the "debug" variable regardless of #ifdef DEBUG.
+
+  ntpdate/ntpdate.c@1.86 +2 -7
+    Declare debug in libntp instead of each program.  Expose extern declaration
+      to utilities, libntp, and DEBUG ntpd.
+
+  ntpdate/ntptimeset.c@1.14 +0 -5
+    Declare debug in libntp instead of each program.  Expose extern declaration
+      to utilities, libntp, and DEBUG ntpd.
+
+  ntpdc/ntpdc.c@1.95 +0 -1
+    Declare debug in libntp instead of each program.  Expose extern declaration
+      to utilities, libntp, and DEBUG ntpd.
+
+  ntpq/ntpq.c@1.133 +29 -48
+    Declare debug in libntp instead of each program.  Expose extern declaration
+      to utilities, libntp, and DEBUG ntpd.
+
+  ports/winnt/include/gaa_compat.h@1.2 +1 -1
+    mismatched #pragma warning(pop) #ifdef _W64
+
+  ports/winnt/libntp/setpriority.c@1.5 +2 -3
+    Use TRACE() instead of DPRINTF() for libntp and utilities, which
+      use the "debug" variable regardless of #ifdef DEBUG.
+
+  ports/winnt/libntp/termios.c@1.27 +9 -13
+    Use TRACE() instead of DPRINTF() for libntp and utilities, which
+      use the "debug" variable regardless of #ifdef DEBUG.
+
+  ports/winnt/ntpd/ntservice.c@1.28 +0 -1
+    Declare debug in libntp instead of each program.  Expose extern declaration
+      to utilities, libntp, and DEBUG ntpd.
+
+  ports/winnt/vs2008/libntp/libntp.vcproj@1.40 +6 -2
+    add include/declcond.h reference
+
+  ports/winnt/vs2008/ntpd/ntpd.vcproj@1.39 +4 -0
+    add ntpd/declcond.h reference
+
+  sntp/kod_management.c@1.27 +7 -7
+    Use TRACE() instead of DPRINTF() for libntp and utilities, which
+      use the "debug" variable regardless of #ifdef DEBUG.
+
+  sntp/main.c@1.70 +51 -51
+    Use TRACE() instead of DPRINTF() for libntp and utilities, which
+      use the "debug" variable regardless of #ifdef DEBUG.
+
+  sntp/networking.c@1.59 +7 -7
+    Use TRACE() instead of DPRINTF() for libntp and utilities, which
+      use the "debug" variable regardless of #ifdef DEBUG.
+
+  sntp/sntp.c@1.3 +2 -4
+    Declare debug in libntp instead of each program.  Expose extern declaration
+      to utilities, libntp, and DEBUG ntpd.
+
+  sntp/tests/Makefile.am@1.25 +0 -1
+    Declare debug in libntp instead of each program.  Expose extern declaration
+      to utilities, libntp, and DEBUG ntpd.
+
+  tests/libntp/libntptest.cpp@1.3 +0 -1
+    Declare debug in libntp instead of each program.  Expose extern declaration
+      to utilities, libntp, and DEBUG ntpd.
+
+  util/jitter.c@1.10 +0 -1
+    Declare debug in libntp instead of each program.  Expose extern declaration
+      to utilities, libntp, and DEBUG ntpd.
+
+  util/ntp-keygen.c@1.79 +0 -1
+    Declare debug in libntp instead of each program.  Expose extern declaration
+      to utilities, libntp, and DEBUG ntpd.
+
+  util/ntptime.c@1.22 +0 -1
+    Declare debug in libntp instead of each program.  Expose extern declaration
+      to utilities, libntp, and DEBUG ntpd.
+
+  util/tickadj.c@1.10 +0 -1
+    Declare debug in libntp instead of each program.  Expose extern declaration
+      to utilities, libntp, and DEBUG ntpd.
+
 ChangeSet@1.2490, 2011-03-02 07:25:19+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P136
   TAG: NTP_4_2_7P136

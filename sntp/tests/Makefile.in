@@ -67,8 +67,7 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 @BUILD_SNTP_TRUE@am__EXEEXT_1 = tests$(EXEEXT)
 am__objects_1 =
-am__objects_2 = tests_main.$(OBJEXT) sntptest.$(OBJEXT) \
-	$(am__objects_1)
+am__objects_2 = tests_main.$(OBJEXT) $(am__objects_1)
 am_tests_OBJECTS = $(am__objects_2) crypto.$(OBJEXT) keyFile.$(OBJEXT) \
 	kodDatabase.$(OBJEXT) kodFile.$(OBJEXT) networking.$(OBJEXT) \
 	packetHandling.$(OBJEXT) packetProcessing.$(OBJEXT) \
@@ -276,7 +275,6 @@ sntp_SOURCES_USED = \
 
 base_SOURCES = \
 	$(srcdir)/../tests_main.cpp	\
-	sntptest.cpp			\
 	$(NULL)
 
 tests_SOURCES = \
@@ -402,7 +400,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/networking.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/packetHandling.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/packetProcessing.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sntptest.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tests_main.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/utilities.Po@am__quote@
 

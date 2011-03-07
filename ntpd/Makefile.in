@@ -21,6 +21,7 @@
 
 
 
+
 VPATH = @srcdir@
 pkgdatadir = $(datadir)/@PACKAGE@
 pkgincludedir = $(includedir)/@PACKAGE@
@@ -45,10 +46,11 @@ host_triplet = @host@
 @NTP_BINSUBDIR_IS_BIN_FALSE@	@MAKE_NTPDSIM@ $(am__empty)
 EXTRA_PROGRAMS = check_y2k$(EXEEXT) ntpdsim$(EXEEXT) \
 	keyword-gen$(EXEEXT)
-DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
-	$(top_srcdir)/bincheck.mf $(top_srcdir)/check-libopts.mf \
-	$(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf \
-	$(top_srcdir)/sntp/check-libntp.mf ntp_parser.c ntp_parser.h
+DIST_COMMON = $(noinst_HEADERS) $(srcdir)/Makefile.am \
+	$(srcdir)/Makefile.in $(top_srcdir)/bincheck.mf \
+	$(top_srcdir)/check-libopts.mf $(top_srcdir)/depsver.mf \
+	$(top_srcdir)/includes.mf $(top_srcdir)/sntp/check-libntp.mf \
+	ntp_parser.c ntp_parser.h
 subdir = ntpd
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
@@ -209,6 +211,7 @@ man1dir = $(mandir)/man1
 NROFF = nroff
 MANS = $(man_MANS)
 DATA = $(noinst_DATA)
+HEADERS = $(noinst_HEADERS)
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
@@ -447,6 +450,7 @@ EXTRA_DIST = \
 ###							Y2Kfixes
 check_PROGRAMS = @MAKE_CHECK_Y2K@
 noinst_DATA = $(srcdir)/ntpd-opts.texi $(srcdir)/ntpd-opts.menu
+noinst_HEADERS = declcond.h
 run_ag = cd $(srcdir) &&	env PATH="$(abs_builddir):$(PATH)"	\
 		autogen -L ../sntp/include --writable
 
@@ -1070,7 +1074,7 @@ check-am: all-am
 	$(MAKE) $(AM_MAKEFLAGS) check-local
 check: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) check-am
-all-am: Makefile $(LIBRARIES) $(PROGRAMS) $(MANS) $(DATA)
+all-am: Makefile $(LIBRARIES) $(PROGRAMS) $(MANS) $(DATA) $(HEADERS)
 installdirs:
 	for dir in "$(DESTDIR)$(bindir)" "$(DESTDIR)$(sbindir)" "$(DESTDIR)$(man1dir)"; do \
 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
