@@ -1,3 +1,124 @@
+ChangeSet@1.2497, 2011-03-08 11:17:41+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P138
+  TAG: NTP_4_2_7P138
+
+  ChangeLog@1.813 +1 -0
+    NTP_4_2_7P138
+
+  clockstuff/clktest-opts.c@1.64 +2 -2
+    NTP_4_2_7P138
+
+  clockstuff/clktest-opts.h@1.64 +3 -3
+    NTP_4_2_7P138
+
+  ntpd/ntpd-opts.c@1.143 +2 -2
+    NTP_4_2_7P138
+
+  ntpd/ntpd-opts.h@1.143 +3 -3
+    NTP_4_2_7P138
+
+  ntpd/ntpd-opts.texi@1.141 +2 -2
+    NTP_4_2_7P138
+
+  ntpd/ntpd.1@1.141 +2 -2
+    NTP_4_2_7P138
+
+  ntpdc/ntpdc-opts.c@1.140 +2 -2
+    NTP_4_2_7P138
+
+  ntpdc/ntpdc-opts.h@1.140 +3 -3
+    NTP_4_2_7P138
+
+  ntpdc/ntpdc-opts.texi@1.140 +2 -2
+    NTP_4_2_7P138
+
+  ntpdc/ntpdc.1@1.140 +2 -2
+    NTP_4_2_7P138
+
+  ntpq/ntpq-opts.c@1.140 +2 -2
+    NTP_4_2_7P138
+
+  ntpq/ntpq-opts.h@1.140 +3 -3
+    NTP_4_2_7P138
+
+  ntpq/ntpq-opts.texi@1.140 +2 -2
+    NTP_4_2_7P138
+
+  ntpq/ntpq.1@1.140 +2 -2
+    NTP_4_2_7P138
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.140 +2 -2
+    NTP_4_2_7P138
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.140 +3 -3
+    NTP_4_2_7P138
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.140 +2 -2
+    NTP_4_2_7P138
+
+  ntpsnmpd/ntpsnmpd.1@1.140 +2 -2
+    NTP_4_2_7P138
+
+  packageinfo.sh@1.140 +1 -1
+    NTP_4_2_7P138
+
+  sntp/sntp-opts.c@1.134 +2 -2
+    NTP_4_2_7P138
+
+  sntp/sntp-opts.h@1.134 +3 -3
+    NTP_4_2_7P138
+
+  sntp/sntp-opts.texi@1.134 +2 -2
+    NTP_4_2_7P138
+
+  sntp/sntp.1@1.134 +2 -2
+    NTP_4_2_7P138
+
+  sntp/sntp.html@1.134 +1 -1
+    NTP_4_2_7P138
+
+  util/ntp-keygen-opts.c@1.138 +2 -2
+    NTP_4_2_7P138
+
+  util/ntp-keygen-opts.h@1.138 +3 -3
+    NTP_4_2_7P138
+
+  util/ntp-keygen-opts.texi@1.141 +2 -2
+    NTP_4_2_7P138
+
+  util/ntp-keygen.1@1.141 +2 -2
+    NTP_4_2_7P138
+
+ChangeSet@1.2496, 2011-03-08 01:10:53-05:00, stenn@deacon.udel.edu
+  [Bug 1846] MacOSX: debug symbol not found by propdelay or tickadj
+
+  ChangeLog@1.812 +1 -0
+    [Bug 1846] MacOSX: debug symbol not found by propdelay or tickadj
+
+ChangeSet@1.2495, 2011-03-07 12:12:49-08:00, harlan@hms-mbp.local
+  Call init_lib() in propdelay and tickadj just to get the debug symbol from libntp
+
+  clockstuff/propdelay.c@1.7 +2 -0
+    Call init_lib() just to get the debug symbol from libntp
+
+  util/tickadj.c@1.11 +2 -0
+    Call init_lib() just to get the debug symbol from libntp
+
+ChangeSet@1.2492.1.1, 2011-03-07 10:19:45+00:00, davehart@shiny.ad.hartbrothers.com
+  Lock under-construction task, taskmgr objects to satisfy Coverity's
+    mostly-correct assumptions about which variables are protected by
+    which locks.
+
+  ChangeLog@1.809.1.1 +3 -0
+    Lock under-construction task, taskmgr objects to satisfy Coverity's
+      mostly-correct assumptions about which variables are protected by
+      which locks.
+
+  lib/isc/task.c@1.2 +8 -4
+    Lock under-construction task, taskmgr objects to satisfy Coverity's
+      mostly-correct assumptions about which variables are protected by
+      which locks.
+
 ChangeSet@1.2493, 2011-03-07 10:06:50+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P137
   TAG: NTP_4_2_7P137
