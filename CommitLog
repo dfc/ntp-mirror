@@ -1,3 +1,124 @@
+ChangeSet@1.2500, 2011-03-16 11:35:50+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P139
+  TAG: NTP_4_2_7P139
+
+  ChangeLog@1.816 +1 -0
+    NTP_4_2_7P139
+
+  clockstuff/clktest-opts.c@1.65 +2 -2
+    NTP_4_2_7P139
+
+  clockstuff/clktest-opts.h@1.65 +3 -3
+    NTP_4_2_7P139
+
+  ntpd/ntpd-opts.c@1.144 +2 -2
+    NTP_4_2_7P139
+
+  ntpd/ntpd-opts.h@1.144 +3 -3
+    NTP_4_2_7P139
+
+  ntpd/ntpd-opts.texi@1.142 +2 -2
+    NTP_4_2_7P139
+
+  ntpd/ntpd.1@1.142 +2 -2
+    NTP_4_2_7P139
+
+  ntpdc/ntpdc-opts.c@1.141 +2 -2
+    NTP_4_2_7P139
+
+  ntpdc/ntpdc-opts.h@1.141 +3 -3
+    NTP_4_2_7P139
+
+  ntpdc/ntpdc-opts.texi@1.141 +2 -2
+    NTP_4_2_7P139
+
+  ntpdc/ntpdc.1@1.141 +2 -2
+    NTP_4_2_7P139
+
+  ntpq/ntpq-opts.c@1.141 +2 -2
+    NTP_4_2_7P139
+
+  ntpq/ntpq-opts.h@1.141 +3 -3
+    NTP_4_2_7P139
+
+  ntpq/ntpq-opts.texi@1.141 +2 -2
+    NTP_4_2_7P139
+
+  ntpq/ntpq.1@1.141 +2 -2
+    NTP_4_2_7P139
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.141 +2 -2
+    NTP_4_2_7P139
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.141 +3 -3
+    NTP_4_2_7P139
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.141 +2 -2
+    NTP_4_2_7P139
+
+  ntpsnmpd/ntpsnmpd.1@1.141 +2 -2
+    NTP_4_2_7P139
+
+  packageinfo.sh@1.141 +1 -1
+    NTP_4_2_7P139
+
+  sntp/sntp-opts.c@1.135 +2 -2
+    NTP_4_2_7P139
+
+  sntp/sntp-opts.h@1.135 +3 -3
+    NTP_4_2_7P139
+
+  sntp/sntp-opts.texi@1.135 +2 -2
+    NTP_4_2_7P139
+
+  sntp/sntp.1@1.135 +2 -2
+    NTP_4_2_7P139
+
+  sntp/sntp.html@1.135 +1 -1
+    NTP_4_2_7P139
+
+  util/ntp-keygen-opts.c@1.139 +2 -2
+    NTP_4_2_7P139
+
+  util/ntp-keygen-opts.h@1.139 +3 -3
+    NTP_4_2_7P139
+
+  util/ntp-keygen-opts.texi@1.142 +2 -2
+    NTP_4_2_7P139
+
+  util/ntp-keygen.1@1.142 +2 -2
+    NTP_4_2_7P139
+
+ChangeSet@1.2499, 2011-03-16 04:58:25-04:00, stenn@deacon.udel.edu
+  typo
+
+  ChangeLog@1.815 +1 -1
+    typo
+
+ChangeSet@1.2498, 2011-03-16 02:09:56+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 1848] make check ntpd --saveconfigquit clutters syslog.
+
+  ChangeLog@1.814 +2 -1
+    [Bug 1848] make check ntpd --saveconfigquit clutters syslog.
+
+  include/ntp_stdlib.h@1.61 +3 -4
+    Move version string logging out of common logging routines where
+      it was increasingly unwieldy.
+
+  libntp/msyslog.c@1.37 +5 -12
+    Move version string logging out of common logging routines where
+      it was increasingly unwieldy.
+
+  ntpd/ntp_config.c@1.285 +1 -1
+    Move version string logging out of common logging routines where
+      it was increasingly unwieldy.
+
+  ntpd/ntpd.c@1.125 +41 -40
+    [Bug 1848] make check ntpd --saveconfigquit clutters syslog.
+
+  sntp/log.c@1.21 +3 -2
+    [Bug 1848] make check ntpd --saveconfigquit clutters syslog.
+
 ChangeSet@1.2497, 2011-03-08 11:17:41+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P138
   TAG: NTP_4_2_7P138
