@@ -1,3 +1,122 @@
+ChangeSet@1.2505, 2011-03-20 11:16:10+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P141
+  TAG: NTP_4_2_7P141
+
+  ChangeLog@1.821 +1 -0
+    NTP_4_2_7P141
+
+  clockstuff/clktest-opts.c@1.67 +2 -2
+    NTP_4_2_7P141
+
+  clockstuff/clktest-opts.h@1.67 +3 -3
+    NTP_4_2_7P141
+
+  ntpd/ntpd-opts.c@1.146 +2 -2
+    NTP_4_2_7P141
+
+  ntpd/ntpd-opts.h@1.146 +3 -3
+    NTP_4_2_7P141
+
+  ntpd/ntpd-opts.texi@1.144 +2 -2
+    NTP_4_2_7P141
+
+  ntpd/ntpd.1@1.144 +2 -2
+    NTP_4_2_7P141
+
+  ntpdc/ntpdc-opts.c@1.143 +2 -2
+    NTP_4_2_7P141
+
+  ntpdc/ntpdc-opts.h@1.143 +3 -3
+    NTP_4_2_7P141
+
+  ntpdc/ntpdc-opts.texi@1.143 +2 -2
+    NTP_4_2_7P141
+
+  ntpdc/ntpdc.1@1.143 +2 -2
+    NTP_4_2_7P141
+
+  ntpq/ntpq-opts.c@1.143 +2 -2
+    NTP_4_2_7P141
+
+  ntpq/ntpq-opts.h@1.143 +3 -3
+    NTP_4_2_7P141
+
+  ntpq/ntpq-opts.texi@1.143 +2 -2
+    NTP_4_2_7P141
+
+  ntpq/ntpq.1@1.143 +2 -2
+    NTP_4_2_7P141
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.143 +2 -2
+    NTP_4_2_7P141
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.143 +3 -3
+    NTP_4_2_7P141
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.143 +2 -2
+    NTP_4_2_7P141
+
+  ntpsnmpd/ntpsnmpd.1@1.143 +2 -2
+    NTP_4_2_7P141
+
+  packageinfo.sh@1.143 +1 -1
+    NTP_4_2_7P141
+
+  sntp/sntp-opts.c@1.137 +2 -2
+    NTP_4_2_7P141
+
+  sntp/sntp-opts.h@1.137 +3 -3
+    NTP_4_2_7P141
+
+  sntp/sntp-opts.texi@1.137 +2 -2
+    NTP_4_2_7P141
+
+  sntp/sntp.1@1.137 +2 -2
+    NTP_4_2_7P141
+
+  sntp/sntp.html@1.137 +1 -1
+    NTP_4_2_7P141
+
+  util/ntp-keygen-opts.c@1.141 +2 -2
+    NTP_4_2_7P141
+
+  util/ntp-keygen-opts.h@1.141 +3 -3
+    NTP_4_2_7P141
+
+  util/ntp-keygen-opts.texi@1.144 +2 -2
+    NTP_4_2_7P141
+
+  util/ntp-keygen.1@1.144 +2 -2
+    NTP_4_2_7P141
+
+ChangeSet@1.2504, 2011-03-19 20:14:05+00:00, davehart@shiny.ad.hartbrothers.com
+  Add overlooked ChangeLog entry for refclock_pps() (was in commit comment
+    but not ChangeLog text).
+
+  ChangeLog@1.820 +1 -0
+    Add overlooked ChangeLog entry for refclock_pps() (was in commit comment
+      but not ChangeLog text).
+
+ChangeSet@1.2503, 2011-03-19 16:38:10+00:00, davehart@shiny.ad.hartbrothers.com
+  Add "ntpq -c iostats" similar to "ntpdc -c iostats".
+  Compare entire timestamp to reject duplicates in refclock_pps().
+
+  ChangeLog@1.819 +1 -0
+    Add "ntpq -c iostats" similar to "ntpdc -c iostats".
+    Compare entire timestamp to reject duplicates in refclock_pps().
+
+  ntpd/ntp_control.c@1.164 +74 -1
+    Add "ntpq -c iostats" similar to "ntpdc -c iostats".
+
+  ntpd/ntp_refclock.c@1.104 +1 -1
+    Compare entire timestamp to reject duplicates in refclock_pps().
+
+  ntpq/ntpq-subs.c@1.85 +34 -1
+    Add "ntpq -c iostats" similar to "ntpdc -c iostats".
+
+  ports/winnt/ntpd/ntp_iocompletionport.c@1.58 +7 -3
+    Add "ntpq -c iostats" similar to "ntpdc -c iostats".
+
 ChangeSet@1.2502, 2011-03-17 11:20:23+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P140
   TAG: NTP_4_2_7P140
