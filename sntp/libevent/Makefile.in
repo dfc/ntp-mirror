@@ -50,13 +50,14 @@ host_triplet = @host@
 @SIGNAL_SUPPORT_TRUE@am__append_11 = signal.c
 @INSTALL_LIBEVENT_FALSE@am__append_12 = $(EVENT1_HDRS)
 subdir = .
-DIST_COMMON = README $(am__configure_deps) $(dist_bin_SCRIPTS) \
-	$(include_HEADERS) $(noinst_HEADERS) $(srcdir)/../config.guess \
-	$(srcdir)/../config.sub $(srcdir)/../depcomp \
-	$(srcdir)/../install-sh $(srcdir)/../ltmain.sh \
-	$(srcdir)/../missing $(srcdir)/Makefile.am \
-	$(srcdir)/Makefile.in $(srcdir)/config.h.in \
-	$(srcdir)/libevent.pc.in $(srcdir)/libevent_openssl.pc.in \
+DIST_COMMON = README $(am__configure_deps) $(am__include_HEADERS_DIST) \
+	$(am__noinst_HEADERS_DIST) $(dist_bin_SCRIPTS) \
+	$(srcdir)/../config.guess $(srcdir)/../config.sub \
+	$(srcdir)/../depcomp $(srcdir)/../install-sh \
+	$(srcdir)/../ltmain.sh $(srcdir)/../missing \
+	$(srcdir)/Makefile.am $(srcdir)/Makefile.in \
+	$(srcdir)/config.h.in $(srcdir)/libevent.pc.in \
+	$(srcdir)/libevent_openssl.pc.in \
 	$(srcdir)/libevent_pthreads.pc.in $(top_srcdir)/configure \
 	ChangeLog epoll_sub.c
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
@@ -229,6 +230,16 @@ RECURSIVE_TARGETS = all-recursive check-recursive dvi-recursive \
 	installcheck-recursive installdirs-recursive pdf-recursive \
 	ps-recursive uninstall-recursive
 DATA = $(pkgconfig_DATA)
+am__include_HEADERS_DIST = event.h evhttp.h evdns.h evrpc.h evutil.h
+am__noinst_HEADERS_DIST = util-internal.h mm-internal.h \
+	ipv6-internal.h evrpc-internal.h strlcpy-internal.h \
+	evbuffer-internal.h bufferevent-internal.h http-internal.h \
+	event-internal.h evthread-internal.h ht-internal.h \
+	defer-internal.h minheap-internal.h log-internal.h \
+	evsignal-internal.h evmap-internal.h changelist-internal.h \
+	iocp-internal.h ratelim-internal.h \
+	WIN32-Code/event2/event-config.h WIN32-Code/tree.h \
+	compat/sys/queue.h event.h evhttp.h evdns.h evrpc.h evutil.h
 HEADERS = $(include_HEADERS) $(noinst_HEADERS)
 RECURSIVE_CLEAN_TARGETS = mostlyclean-recursive clean-recursive	\
   distclean-recursive maintainer-clean-recursive
@@ -532,7 +543,7 @@ noinst_HEADERS = util-internal.h mm-internal.h ipv6-internal.h \
 	evmap-internal.h changelist-internal.h iocp-internal.h \
 	ratelim-internal.h WIN32-Code/event2/event-config.h \
 	WIN32-Code/tree.h compat/sys/queue.h $(am__append_12)
-EVENT1_HDRs = event.h evhttp.h evdns.h evrpc.h evutil.h
+EVENT1_HDRS = event.h evhttp.h evdns.h evrpc.h evutil.h
 @INSTALL_LIBEVENT_TRUE@include_HEADERS = $(EVENT1_HDRS)
 AM_CPPFLAGS = -I$(srcdir)/compat -I$(srcdir)/include -I./include $(SYS_INCLUDES)
 DISTCLEANFILES = *~ libevent.pc ./include/event2/event-config.h

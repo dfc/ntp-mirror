@@ -1,3 +1,110 @@
+ChangeSet@1.2507, 2011-03-21 07:57:54+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P142
+  TAG: NTP_4_2_7P142
+
+  ChangeLog@1.823 +1 -0
+    NTP_4_2_7P142
+
+  clockstuff/clktest-opts.c@1.68 +2 -2
+    NTP_4_2_7P142
+
+  clockstuff/clktest-opts.h@1.68 +3 -3
+    NTP_4_2_7P142
+
+  ntpd/ntpd-opts.c@1.147 +2 -2
+    NTP_4_2_7P142
+
+  ntpd/ntpd-opts.h@1.147 +3 -3
+    NTP_4_2_7P142
+
+  ntpd/ntpd-opts.texi@1.145 +2 -2
+    NTP_4_2_7P142
+
+  ntpd/ntpd.1@1.145 +2 -2
+    NTP_4_2_7P142
+
+  ntpdc/ntpdc-opts.c@1.144 +2 -2
+    NTP_4_2_7P142
+
+  ntpdc/ntpdc-opts.h@1.144 +3 -3
+    NTP_4_2_7P142
+
+  ntpdc/ntpdc-opts.texi@1.144 +2 -2
+    NTP_4_2_7P142
+
+  ntpdc/ntpdc.1@1.144 +2 -2
+    NTP_4_2_7P142
+
+  ntpq/ntpq-opts.c@1.144 +2 -2
+    NTP_4_2_7P142
+
+  ntpq/ntpq-opts.h@1.144 +3 -3
+    NTP_4_2_7P142
+
+  ntpq/ntpq-opts.texi@1.144 +2 -2
+    NTP_4_2_7P142
+
+  ntpq/ntpq.1@1.144 +2 -2
+    NTP_4_2_7P142
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.144 +2 -2
+    NTP_4_2_7P142
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.144 +3 -3
+    NTP_4_2_7P142
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.144 +2 -2
+    NTP_4_2_7P142
+
+  ntpsnmpd/ntpsnmpd.1@1.144 +2 -2
+    NTP_4_2_7P142
+
+  packageinfo.sh@1.144 +1 -1
+    NTP_4_2_7P142
+
+  sntp/sntp-opts.c@1.138 +2 -2
+    NTP_4_2_7P142
+
+  sntp/sntp-opts.h@1.138 +3 -3
+    NTP_4_2_7P142
+
+  sntp/sntp-opts.texi@1.138 +2 -2
+    NTP_4_2_7P142
+
+  sntp/sntp.1@1.138 +2 -2
+    NTP_4_2_7P142
+
+  sntp/sntp.html@1.138 +1 -1
+    NTP_4_2_7P142
+
+  util/ntp-keygen-opts.c@1.142 +2 -2
+    NTP_4_2_7P142
+
+  util/ntp-keygen-opts.h@1.142 +3 -3
+    NTP_4_2_7P142
+
+  util/ntp-keygen-opts.texi@1.145 +2 -2
+    NTP_4_2_7P142
+
+  util/ntp-keygen.1@1.145 +2 -2
+    NTP_4_2_7P142
+
+ChangeSet@1.2506, 2011-03-21 06:28:29+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 1844] ntpd 4.2.7p131 NetBSD, ld --gc-sections links bad executable.
+
+  ChangeLog@1.822 +2 -0
+    [Bug 1844] ntpd 4.2.7p131 NetBSD, ld --gc-sections links bad executable.
+    Fix "make distcheck" break in libevent/sample caused by typo.
+
+  sntp/libevent/Makefile.am@1.4 +1 -1
+    Fix "make distcheck" break in libevent/sample caused by typo.
+
+  sntp/libevent/configure.in@1.4 +45 -7
+    [Bug 1844] ntpd 4.2.7p131 NetBSD, ld --gc-sections links bad executable.
+
+  sntp/m4/ntp_compiler.m4@1.2 +45 -7
+    [Bug 1844] ntpd 4.2.7p131 NetBSD, ld --gc-sections links bad executable.
+
 ChangeSet@1.2505, 2011-03-20 11:16:10+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P141
   TAG: NTP_4_2_7P141

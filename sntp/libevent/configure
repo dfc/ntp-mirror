@@ -27279,18 +27279,43 @@ LIBEVENT_GC_SECTIONS=
 if test "$GCC" = yes ; then
     { $as_echo "$as_me:${as_lineno-$LINENO}: checking if linker supports omitting unused code and data" >&5
 $as_echo_n "checking if linker supports omitting unused code and data... " >&6; }
-if ${libevent_cv_gc_sections_works+:} false; then :
+if ${libevent_cv_gc_sections_runs+:} false; then :
   $as_echo_n "(cached) " >&6
 else
 
-	    origCFLAGS="$CFLAGS"
+	    	    	    	    	    	    	    	    	    	    	    origCFLAGS="$CFLAGS"
 	    CFLAGS="$CFLAGS -Wl,--gc-sections"
 	    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 /* end confdefs.h.  */
 
+			#include <stdlib.h>
+			#include <stdio.h>
+
 int
 main ()
 {
+
+			FILE *	fpC;
+			char	buf[32];
+			size_t	cch;
+			int	read_success_once;
+
+			fpC = fopen("conftest.c", "r");
+			if (NULL == fpC)
+				exit(1);
+			do {
+				cch = fread(buf, sizeof(buf), 1, fpC);
+				read_success_once |= (0 != cch);
+			} while (0 != cch);
+			if (!read_success_once)
+				exit(2);
+			if (!feof(fpC))
+				exit(3);
+			if (0 != fclose(fpC))
+				exit(4);
+
+			exit(EXIT_SUCCESS);
+
 
   ;
   return 0;
@@ -27298,14 +27323,15 @@ main ()
 _ACEOF
 if ac_fn_c_try_link "$LINENO"; then :
 
-		    if grep gc-sections conftest.err ; then
-			libevent_cv_gc_sections_works=no
+		    if test "X$cross_compiling" = "Xyes" || grep gc-sections conftest.err ; then
+			libevent_cv_gc_sections_runs=no
 		    else
-			libevent_cv_gc_sections_works=yes
+			libevent_cv_gc_sections_runs=no
+			./conftest >/dev/null 2>&1 && libevent_cv_gc_sections_runs=yes
 		    fi
 
 else
-  libevent_cv_gc_sections_works=no
+  libevent_cv_gc_sections_runs=no
 
 fi
 rm -f core conftest.err conftest.$ac_objext \
@@ -27315,9 +27341,9 @@ rm -f core conftest.err conftest.$ac_objext \
 
 
 fi
-{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $libevent_cv_gc_sections_works" >&5
-$as_echo "$libevent_cv_gc_sections_works" >&6; }
-    case "$libevent_cv_gc_sections_works" in
+{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $libevent_cv_gc_sections_runs" >&5
+$as_echo "$libevent_cv_gc_sections_runs" >&6; }
+    case "$libevent_cv_gc_sections_runs" in
      yes)
 	CFLAGS="-ffunction-sections -fdata-sections $CFLAGS"
 	LIBEVENT_GC_SECTIONS="-Wl,--gc-sections"
