@@ -1,14 +1,174 @@
-ChangeSet@1.2507, 2011-03-21 07:57:54+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2514, 2011-03-31 18:16:47+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P143
+  TAG: NTP_4_2_7P143
+
+  ChangeLog@1.828 +1 -0
+    NTP_4_2_7P143
+
+  ntpd/ntpd-opts.c@1.148 +2 -2
+    NTP_4_2_7P143
+
+  ntpd/ntpd-opts.h@1.148 +3 -3
+    NTP_4_2_7P143
+
+  ntpd/ntpd-opts.texi@1.146 +4 -4
+    NTP_4_2_7P143
+
+  ntpd/ntpd.1@1.146 +2 -2
+    NTP_4_2_7P143
+
+  ntpdc/ntpdc-opts.c@1.145 +2 -2
+    NTP_4_2_7P143
+
+  ntpdc/ntpdc-opts.h@1.145 +3 -3
+    NTP_4_2_7P143
+
+  ntpdc/ntpdc-opts.texi@1.145 +4 -4
+    NTP_4_2_7P143
+
+  ntpdc/ntpdc.1@1.145 +2 -2
+    NTP_4_2_7P143
+
+  ntpq/ntpq-opts.c@1.145 +2 -2
+    NTP_4_2_7P143
+
+  ntpq/ntpq-opts.h@1.145 +3 -3
+    NTP_4_2_7P143
+
+  ntpq/ntpq-opts.texi@1.145 +4 -4
+    NTP_4_2_7P143
+
+  ntpq/ntpq.1@1.145 +2 -2
+    NTP_4_2_7P143
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.145 +2 -2
+    NTP_4_2_7P143
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.145 +3 -3
+    NTP_4_2_7P143
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.145 +4 -4
+    NTP_4_2_7P143
+
+  ntpsnmpd/ntpsnmpd.1@1.145 +2 -2
+    NTP_4_2_7P143
+
+  packageinfo.sh@1.145 +1 -1
+    NTP_4_2_7P143
+
+  sntp/sntp-opts.c@1.139 +2 -2
+    NTP_4_2_7P143
+
+  sntp/sntp-opts.h@1.139 +3 -3
+    NTP_4_2_7P143
+
+  sntp/sntp-opts.texi@1.139 +4 -4
+    NTP_4_2_7P143
+
+  sntp/sntp.1@1.139 +2 -2
+    NTP_4_2_7P143
+
+  sntp/sntp.html@1.139 +3 -3
+    NTP_4_2_7P143
+
+  util/ntp-keygen-opts.c@1.143 +2 -2
+    NTP_4_2_7P143
+
+  util/ntp-keygen-opts.h@1.143 +3 -3
+    NTP_4_2_7P143
+
+  util/ntp-keygen-opts.texi@1.146 +4 -4
+    NTP_4_2_7P143
+
+  util/ntp-keygen.1@1.146 +2 -2
+    NTP_4_2_7P143
+
+ChangeSet@1.2513, 2011-03-31 13:11:38-04:00, stenn@deacon.udel.edu
+  Temporarily restore legacy ppsclock global fdpps for trak, zyfer refclocks
+
+  ntpd/ntp_refclock.c@1.106 +6 -1
+    Temporarily restore legacy ppsclock global fdpps for trak, zyfer refclocks
+
+ChangeSet@1.2512, 2011-03-30 04:53:34+00:00, davehart@shiny.ad.hartbrothers.com
+  Follow Ralf Wildenhues' advice for avoiding dead-code elimination
+    in configure test for in6addr_any.
+
+  sntp/m4/ntp_ipv6.m4@1.4 +23 -19
+    Follow Ralf Wildenhues' advice for avoiding dead-code elimination
+      in configure test for in6addr_any.
+
+ChangeSet@1.2511, 2011-03-29 13:35:13+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 1862] in6addr_any test in configure fooled by arm gcc 4.1.3 -O2.
+
+  ChangeLog@1.827 +1 -0
+    [Bug 1862] in6addr_any test in configure fooled by arm gcc 4.1.3 -O2.
+
+  ntpd/ntp_crypto.c@1.155 +0 -1
+    Remove dead code (excess call to X509_get_ext()).
+
+  sntp/m4/ntp_ipv6.m4@1.3 +2 -2
+    [Bug 1862] in6addr_any test in configure fooled by arm gcc 4.1.3 -O2.
+
+ChangeSet@1.2508.1.1, 2011-03-28 02:29:10+00:00, davehart@shiny.ad.hartbrothers.com
+  Remove "signal_no_reset: signal 17 had flags 4000000" logging, as it
+    indicates no problem and is interpreted as an error.  Previously some
+    bits had been ignored one-by-one, but Linux SA_RESTORER definition is
+    unavailable to user headers.
+
+  ChangeLog@1.824.1.1 +4 -0
+    Remove "signal_no_reset: signal 17 had flags 4000000" logging, as it
+      indicates no problem and is interpreted as an error.  Previously some
+      bits had been ignored one-by-one, but Linux SA_RESTORER definition is
+      unavailable to user headers.
+
+  libntp/syssignal.c@1.13 +1 -29
+    Remove "signal_no_reset: signal 17 had flags 4000000" logging, as it
+      indicates no problem and is interpreted as an error.  Previously some
+      bits had been ignored one-by-one, but Linux SA_RESTORER definition is
+      unavailable to user headers.
+    Zero struct sigaction to silence warning about uninit vec.sa_restorer.
+
+  sntp/m4/ntp_libntp.m4@1.8 +0 -12
+    Remove unneeded dead code.
+
+ChangeSet@1.2509, 2011-03-26 02:03:35+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 1861] tickadj build failure using uClibc.
+
+  ChangeLog@1.825 +1 -0
+    [Bug 1861] tickadj build failure using uClibc.
+
+  configure.ac@1.521 +62 -37
+    [Bug 1861] tickadj build failure using uClibc.
+
+  include/ntp_machine.h@1.34 +0 -11
+    moved to configure.ac
+
+  include/ntp_syscall.h@1.10 +24 -28
+    [Bug 1861] tickadj build failure using uClibc.
+
+  util/tickadj.c@1.12 +12 -9
+    [Bug 1861] tickadj build failure using uClibc.
+
+ChangeSet@1.2508, 2011-03-23 07:14:48+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 1732] ntpd ties up CPU on disconnected USB refclock.
+
+  ChangeLog@1.824 +1 -0
+    [Bug 1732] ntpd ties up CPU on disconnected USB refclock.
+
+  ntpd/ntp_io.c@1.350 +39 -12
+    [Bug 1732] ntpd ties up CPU on disconnected USB refclock.
+
+ChangeSet@1.2505.1.2, 2011-03-21 07:57:54+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P142
   TAG: NTP_4_2_7P142
 
-  ChangeLog@1.823 +1 -0
+  ChangeLog@1.821.1.2 +1 -0
     NTP_4_2_7P142
 
-  clockstuff/clktest-opts.c@1.68 +2 -2
+  clockstuff/clktest-opts.c@1.67.1.1 +2 -2
     NTP_4_2_7P142
 
-  clockstuff/clktest-opts.h@1.68 +3 -3
+  clockstuff/clktest-opts.h@1.67.1.1 +3 -3
     NTP_4_2_7P142
 
   ntpd/ntpd-opts.c@1.147 +2 -2
@@ -89,10 +249,10 @@ ChangeSet@1.2507, 2011-03-21 07:57:54+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.145 +2 -2
     NTP_4_2_7P142
 
-ChangeSet@1.2506, 2011-03-21 06:28:29+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2505.1.1, 2011-03-21 06:28:29+00:00, davehart@shiny.ad.hartbrothers.com
   [Bug 1844] ntpd 4.2.7p131 NetBSD, ld --gc-sections links bad executable.
 
-  ChangeLog@1.822 +2 -0
+  ChangeLog@1.821.1.1 +2 -0
     [Bug 1844] ntpd 4.2.7p131 NetBSD, ld --gc-sections links bad executable.
     Fix "make distcheck" break in libevent/sample caused by typo.
 
@@ -104,6 +264,115 @@ ChangeSet@1.2506, 2011-03-21 06:28:29+00:00, davehart@shiny.ad.hartbrothers.com
 
   sntp/m4/ntp_compiler.m4@1.2 +45 -7
     [Bug 1844] ntpd 4.2.7p131 NetBSD, ld --gc-sections links bad executable.
+
+ChangeSet@1.2504.1.1, 2011-03-20 20:39:43+00:00, davehart@shiny.ad.hartbrothers.com
+  Remove kernel line discipline driver code for clk and chu, deprecate
+    related LDISC_ flags, and remove associated ntpd code to decode the
+    timestamps, remove clktest line discipline test program.
+
+  .point-changed-filelist@1.9 +0 -2
+    Remove kernel line discipline driver code for clk and chu, deprecate
+      related LDISC_ flags, and remove associated ntpd code to decode the
+      timestamps, remove clktest line discipline test program.
+
+  BitKeeper/deleted/42/clktest-opts.c~28d4c334dbca58a1@1.66.1.1 +0 -0
+    Rename: clockstuff/clktest-opts.c -> BitKeeper/deleted/42/clktest-opts.c~28d4c334dbca58a1
+
+  BitKeeper/deleted/46/tty_chu.c~3e480692@1.3 +0 -0
+    Rename: kernel/tty_chu.c -> BitKeeper/deleted/46/tty_chu.c~3e480692
+
+  BitKeeper/deleted/69/clkinit.c~3e480692@1.4 +0 -0
+    Rename: kernel/clkinit.c -> BitKeeper/deleted/69/clkinit.c~3e480692
+
+  BitKeeper/deleted/7d/clktest.c~3e480692@1.7 +0 -0
+    Rename: clockstuff/clktest.c -> BitKeeper/deleted/7d/clktest.c~3e480692
+
+  BitKeeper/deleted/96/tty_clk_STREAMS.c~3e480692@1.3 +0 -0
+    Rename: kernel/tty_clk_STREAMS.c -> BitKeeper/deleted/96/tty_clk_STREAMS.c~3e480692
+
+  BitKeeper/deleted/99/tty_clk.c~3e480692@1.3 +0 -0
+    Rename: kernel/tty_clk.c -> BitKeeper/deleted/99/tty_clk.c~3e480692
+
+  BitKeeper/deleted/ab/chuinit.c~3e480692@1.4 +0 -0
+    Rename: kernel/chuinit.c -> BitKeeper/deleted/ab/chuinit.c~3e480692
+
+  BitKeeper/deleted/bf/chudefs.h~3e480692@1.3 +0 -0
+    Rename: kernel/sys/chudefs.h -> BitKeeper/deleted/bf/chudefs.h~3e480692
+
+  BitKeeper/deleted/d6/clkdefs.h~3e480692@1.3 +0 -0
+    Rename: kernel/sys/clkdefs.h -> BitKeeper/deleted/d6/clkdefs.h~3e480692
+
+  BitKeeper/deleted/d7/README~3e480692@1.3 +0 -0
+    Rename: kernel/README -> BitKeeper/deleted/d7/README~3e480692
+
+  BitKeeper/deleted/e1/clktest-opts.def~10c559de4ec2c50e@1.9 +0 -0
+    Rename: clockstuff/clktest-opts.def -> BitKeeper/deleted/e1/clktest-opts.def~10c559de4ec2c50e
+
+  BitKeeper/deleted/e5/clktest-opts.h~d3cf51ce6544d610@1.66.1.1 +0 -0
+    Rename: clockstuff/clktest-opts.h -> BitKeeper/deleted/e5/clktest-opts.h~d3cf51ce6544d610
+
+  BitKeeper/deleted/ed/tty_chu_STREAMS.c~3e480692@1.3 +0 -0
+    Rename: kernel/tty_chu_STREAMS.c -> BitKeeper/deleted/ed/tty_chu_STREAMS.c~3e480692
+
+  ChangeLog@1.820.1.1 +3 -0
+    Remove kernel line discipline driver code for clk and chu, deprecate
+      related LDISC_ flags, and remove associated ntpd code to decode the
+      timestamps, remove clktest line discipline test program.
+
+  clockstuff/Makefile.am@1.20 +3 -25
+    Remove kernel line discipline driver code for clk and chu, deprecate
+      related LDISC_ flags, and remove associated ntpd code to decode the
+      timestamps, remove clktest line discipline test program.
+
+  clockstuff/README@1.4 +4 -14
+    Remove kernel line discipline driver code for clk and chu, deprecate
+      related LDISC_ flags, and remove associated ntpd code to decode the
+      timestamps, remove clktest line discipline test program.
+
+  configure.ac@1.520 +1 -61
+    Remove kernel line discipline driver code for clk and chu, deprecate
+      related LDISC_ flags, and remove associated ntpd code to decode the
+      timestamps, remove clktest line discipline test program.
+
+  include/ntp_tty.h@1.6 +9 -7
+    Remove kernel line discipline driver code for clk and chu, deprecate
+      related LDISC_ flags, and remove associated ntpd code to decode the
+      timestamps, remove clktest line discipline test program.
+
+  include/ntpd.h@1.161 +0 -7
+    Remove kernel line discipline driver code for clk and chu, deprecate
+      related LDISC_ flags, and remove associated ntpd code to decode the
+      timestamps, remove clktest line discipline test program.
+
+  kernel/Makefile.am@1.6 +0 -1
+    Remove kernel line discipline driver code for clk and chu, deprecate
+      related LDISC_ flags, and remove associated ntpd code to decode the
+      timestamps, remove clktest line discipline test program.
+
+  kernel/sys/Makefile.am@1.7 +1 -1
+    Remove kernel line discipline driver code for clk and chu, deprecate
+      related LDISC_ flags, and remove associated ntpd code to decode the
+      timestamps, remove clktest line discipline test program.
+
+  ntpd/ntp_refclock.c@1.105 +9 -106
+    Remove kernel line discipline driver code for clk and chu, deprecate
+      related LDISC_ flags, and remove associated ntpd code to decode the
+      timestamps, remove clktest line discipline test program.
+
+  ntpd/refclock_datum.c@1.17 +0 -3
+    Remove kernel line discipline driver code for clk and chu, deprecate
+      related LDISC_ flags, and remove associated ntpd code to decode the
+      timestamps, remove clktest line discipline test program.
+
+  ntpd/refclock_leitch.c@1.14 +5 -43
+    Remove kernel line discipline driver code for clk and chu, deprecate
+      related LDISC_ flags, and remove associated ntpd code to decode the
+      timestamps, remove clktest line discipline test program.
+
+  ntpd/refclock_oncore.c@1.93 +0 -4
+    Remove kernel line discipline driver code for clk and chu, deprecate
+      related LDISC_ flags, and remove associated ntpd code to decode the
+      timestamps, remove clktest line discipline test program.
 
 ChangeSet@1.2505, 2011-03-20 11:16:10+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P141

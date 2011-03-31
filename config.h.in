@@ -302,6 +302,9 @@
 /* Do we have a routing socket (rt_msghdr or rtattr)? */
 #undef HAS_ROUTING_SOCKET
 
+/* via __adjtimex */
+#undef HAVE_ADJTIMEX
+
 /* Define to 1 if you have `alloca', as a function or macro. */
 #undef HAVE_ALLOCA
 
@@ -581,10 +584,10 @@
 /* Define to 1 if you have the <nlist.h> header file. */
 #undef HAVE_NLIST_H
 
-/* Define to 1 if you have the `ntp_adjtime' function. */
+/* via __adjtimex */
 #undef HAVE_NTP_ADJTIME
 
-/* Define to 1 if you have the `ntp_gettime' function. */
+/* via __ntp_gettime */
 #undef HAVE_NTP_GETTIME
 
 /* Do we want support for Samba's signing daemon? */
@@ -839,12 +842,6 @@
 /* Define to 1 if you have the <sys/capability.h> header file. */
 #undef HAVE_SYS_CAPABILITY_H
 
-/* Define to 1 if you have the <sys/chudefs.h> header file. */
-#undef HAVE_SYS_CHUDEFS_H
-
-/* Define to 1 if you have the <sys/clkdefs.h> header file. */
-#undef HAVE_SYS_CLKDEFS_H
-
 /* Define to 1 if you have the <sys/clockctl.h> header file. */
 #undef HAVE_SYS_CLOCKCTL_H
 
@@ -918,9 +915,6 @@
 
 /* Define to 1 if you have the <sys/signal.h> header file. */
 #undef HAVE_SYS_SIGNAL_H
-
-/* Define to 1 if you have the <sys/sio.h> header file. */
-#undef HAVE_SYS_SIO_H
 
 /* Define to 1 if you have the <sys/socket.h> header file. */
 #undef HAVE_SYS_SOCKET_H
@@ -1326,9 +1320,6 @@
 /* Define to the version of this package. */
 #undef PACKAGE_VERSION
 
-/* Do we have the ppsclock streams module? */
-#undef PPS
-
 /* PARSE kernel PLL PPS support */
 #undef PPS_SYNC
 
@@ -1439,9 +1430,6 @@
 /* Define to 1 if your <sys/time.h> declares `struct tm'. */
 #undef TM_IN_SYS_TIME
 
-/* Do we have the tty_clk line discipline/streams module? */
-#undef TTYCLK
-
 /* Provide a typedef for uintptr_t? */
 #ifndef HAVE_UINTPTR_T
 typedef unsigned int	uintptr_t;
@@ -1536,6 +1524,9 @@ typedef unsigned int	uintptr_t;
 #endif
 
 
+/* deviant */
+#undef adjtimex
+
 /* Define to `int' if <sys/types.h> doesn't define. */
 #undef gid_t
 
@@ -1544,6 +1535,12 @@ typedef unsigned int	uintptr_t;
 #ifndef __cplusplus
 #undef inline
 #endif
+
+/* deviant */
+#undef ntp_adjtime
+
+/* deviant */
+#undef ntp_gettime
 
 /* Define to `long int' if <sys/types.h> does not define. */
 #undef off_t

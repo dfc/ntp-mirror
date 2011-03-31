@@ -92,7 +92,6 @@ CCDEPMODE = @CCDEPMODE@
 CFLAGS = @CFLAGS@
 CFLAGS_NTP = @CFLAGS_NTP@
 CHUTEST = @CHUTEST@
-CLKTEST = @CLKTEST@
 CONFIG_SHELL = @CONFIG_SHELL@
 CPP = @CPP@
 CPPFLAGS = @CPPFLAGS@
@@ -239,7 +238,7 @@ target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-noinst_HEADERS = bsd_audioirig.h chudefs.h clkdefs.h i8253.h parsestreams.h \
+noinst_HEADERS = bsd_audioirig.h i8253.h parsestreams.h \
  pcl720.h ppsclock.h timex.h tpro.h tt560_api.h
 
 all: all-am

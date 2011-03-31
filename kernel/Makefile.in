@@ -34,7 +34,7 @@ POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
 subdir = kernel
-DIST_COMMON = README $(srcdir)/Makefile.am $(srcdir)/Makefile.in
+DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/libevent/m4/openldap-thread-check.m4 \
@@ -127,7 +127,6 @@ CCDEPMODE = @CCDEPMODE@
 CFLAGS = @CFLAGS@
 CFLAGS_NTP = @CFLAGS_NTP@
 CHUTEST = @CHUTEST@
-CLKTEST = @CLKTEST@
 CONFIG_SHELL = @CONFIG_SHELL@
 CPP = @CPP@
 CPPFLAGS = @CPPFLAGS@
@@ -275,7 +274,6 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 SUBDIRS = sys
-EXTRA_DIST = chuinit.c clkinit.c tty_chu.c tty_chu_STREAMS.c tty_clk.c tty_clk_STREAMS.c
 all: all-recursive
 
 .SUFFIXES:

@@ -34,10 +34,10 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
-EXTRA_PROGRAMS = propdelay$(EXEEXT) chutest$(EXEEXT) clktest$(EXEEXT)
+EXTRA_PROGRAMS = propdelay$(EXEEXT) chutest$(EXEEXT)
 DIST_COMMON = README $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
-	$(top_srcdir)/check-libopts.mf $(top_srcdir)/depsver.mf \
-	$(top_srcdir)/includes.mf $(top_srcdir)/sntp/check-libntp.mf
+	$(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf \
+	$(top_srcdir)/sntp/check-libntp.mf
 subdir = clockstuff
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
@@ -77,11 +77,6 @@ chutest_DEPENDENCIES = ../libntp/libntp.a $(am__DEPENDENCIES_1) \
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
 am__v_lt_0 = --silent
-am_clktest_OBJECTS = clktest.$(OBJEXT) clktest-opts.$(OBJEXT)
-clktest_OBJECTS = $(am_clktest_OBJECTS)
-clktest_LDADD = $(LDADD)
-clktest_DEPENDENCIES = ../libntp/libntp.a $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
 propdelay_SOURCES = propdelay.c
 propdelay_OBJECTS = propdelay.$(OBJEXT)
 am__DEPENDENCIES_2 = ../libntp/libntp.a $(am__DEPENDENCIES_1) \
@@ -113,8 +108,8 @@ am__v_CCLD_0 = @echo "  CCLD  " $@;
 AM_V_GEN = $(am__v_GEN_$(V))
 am__v_GEN_ = $(am__v_GEN_$(AM_DEFAULT_VERBOSITY))
 am__v_GEN_0 = @echo "  GEN   " $@;
-SOURCES = chutest.c $(clktest_SOURCES) propdelay.c
-DIST_SOURCES = chutest.c $(clktest_SOURCES) propdelay.c
+SOURCES = chutest.c propdelay.c
+DIST_SOURCES = chutest.c propdelay.c
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
@@ -133,7 +128,6 @@ CCDEPMODE = @CCDEPMODE@
 CFLAGS = @CFLAGS@
 CFLAGS_NTP = @CFLAGS_NTP@
 CHUTEST = @CHUTEST@
-CLKTEST = @CLKTEST@
 CONFIG_SHELL = @CONFIG_SHELL@
 CPP = @CPP@
 CPPFLAGS = @CPPFLAGS@
@@ -280,27 +274,13 @@ target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-noinst_PROGRAMS = @PROPDELAY@ @CHUTEST@ @CLKTEST@
-BUILT_SOURCES = clktest-opts.c clktest-opts.h check-libntp \
-	check-libopts .deps-ver
-EXTRA_DIST = clktest-opts.def
-clktest_SOURCES = clktest.c clktest-opts.c clktest-opts.h
+noinst_PROGRAMS = @PROPDELAY@ @CHUTEST@
 AM_CFLAGS = $(CFLAGS_NTP)
-AM_CPPFLAGS = $(NTP_INCS) $(LIBOPTS_CFLAGS) $(CPPFLAGS_NTP)
+AM_CPPFLAGS = $(NTP_INCS) $(CPPFLAGS_NTP)
 LDADD = ../libntp/libntp.a $(LDADD_LIBNTP) $(PTHREAD_LIBS)
 propdelay_LDADD = $(LIBM) $(LDADD)
-run_ag = cd $(srcdir) &&	env PATH="$(abs_builddir):$(PATH)"	\
-		autogen -L ../sntp/include --writable
-
-std_def_list = \
-	$(top_srcdir)/sntp/include/debug-opt.def		\
-	$(top_srcdir)/sntp/include/autogen-version.def 		\
-	$(top_srcdir)/sntp/include/copyright.def 		\
-	$(top_srcdir)/sntp/include/homerc.def 			\
-	$(top_srcdir)/sntp/include/version.def			\
-	$(NULL)
-
-CLEANFILES = check-libntp check-libopts .deps-ver
+BUILT_SOURCES = check-libntp .deps-ver
+CLEANFILES = check-libntp .deps-ver
 NTP_INCS = -I$(top_srcdir)/include -I$(top_srcdir)/lib/isc/include \
 	-I$(top_srcdir)/lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/include \
 	-I$(top_srcdir)/lib/isc/unix/include
@@ -309,7 +289,7 @@ all: $(BUILT_SOURCES)
 
 .SUFFIXES:
 .SUFFIXES: .c .lo .o .obj
-$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/sntp/check-libntp.mf $(top_srcdir)/check-libopts.mf $(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf $(am__configure_deps)
+$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(top_srcdir)/sntp/check-libntp.mf $(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf $(am__configure_deps)
 	@for dep in $?; do \
 	  case '$(am__configure_deps)' in \
 	    *$$dep*) \
@@ -351,9 +331,6 @@ clean-noinstPROGRAMS:
 chutest$(EXEEXT): $(chutest_OBJECTS) $(chutest_DEPENDENCIES) 
 	@rm -f chutest$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(chutest_OBJECTS) $(chutest_LDADD) $(LIBS)
-clktest$(EXEEXT): $(clktest_OBJECTS) $(clktest_DEPENDENCIES) 
-	@rm -f clktest$(EXEEXT)
-	$(AM_V_CCLD)$(LINK) $(clktest_OBJECTS) $(clktest_LDADD) $(LIBS)
 propdelay$(EXEEXT): $(propdelay_OBJECTS) $(propdelay_DEPENDENCIES) 
 	@rm -f propdelay$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(propdelay_OBJECTS) $(propdelay_LDADD) $(LIBS)
@@ -365,8 +342,6 @@ distclean-compile:
 	-rm -f *.tab.c
 
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/chutest.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/clktest-opts.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/clktest.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/propdelay.Po@am__quote@
 
 .c.o:
@@ -601,23 +576,11 @@ uninstall-am:
 	pdf pdf-am ps ps-am tags uninstall uninstall-am
 
 
-$(srcdir)/clktest-opts.h: $(srcdir)/clktest-opts.c
-	@: do-nothing action to avoid default SCCS get, .h built with .c
-
-$(srcdir)/clktest-opts.c: $(srcdir)/clktest-opts.def $(std_def_list)
-	$(run_ag) clktest-opts.def
-
 check-libntp: ../libntp/libntp.a
 	@echo stamp > $@
 
 ../libntp/libntp.a:
 	cd ../libntp && $(MAKE) libntp.a
-
-check-libopts: ../sntp/libopts/libopts.la
-	@echo stamp > $@
-
-../sntp/libopts/libopts.la:
-	-cd ../sntp/libopts && $(MAKE) libopts.la
 $(DEPDIR)/deps-ver: $(top_srcdir)/deps-ver
 	@[ -f $@ ] ||							\
 		cp $(top_srcdir)/deps-ver $@
