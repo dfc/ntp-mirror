@@ -1,3 +1,129 @@
+ChangeSet@1.2519, 2011-04-04 11:43:59+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P145
+  TAG: NTP_4_2_7P145
+
+  ChangeLog@1.832 +1 -0
+    NTP_4_2_7P145
+
+  ntpd/ntpd-opts.c@1.150 +2 -2
+    NTP_4_2_7P145
+
+  ntpd/ntpd-opts.h@1.150 +3 -3
+    NTP_4_2_7P145
+
+  ntpd/ntpd-opts.texi@1.148 +2 -2
+    NTP_4_2_7P145
+
+  ntpd/ntpd.1@1.148 +2 -2
+    NTP_4_2_7P145
+
+  ntpdc/ntpdc-opts.c@1.147 +2 -2
+    NTP_4_2_7P145
+
+  ntpdc/ntpdc-opts.h@1.147 +3 -3
+    NTP_4_2_7P145
+
+  ntpdc/ntpdc-opts.texi@1.147 +2 -2
+    NTP_4_2_7P145
+
+  ntpdc/ntpdc.1@1.147 +2 -2
+    NTP_4_2_7P145
+
+  ntpq/ntpq-opts.c@1.147 +2 -2
+    NTP_4_2_7P145
+
+  ntpq/ntpq-opts.h@1.147 +3 -3
+    NTP_4_2_7P145
+
+  ntpq/ntpq-opts.texi@1.147 +2 -2
+    NTP_4_2_7P145
+
+  ntpq/ntpq.1@1.147 +2 -2
+    NTP_4_2_7P145
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.147 +2 -2
+    NTP_4_2_7P145
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.147 +3 -3
+    NTP_4_2_7P145
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.147 +2 -2
+    NTP_4_2_7P145
+
+  ntpsnmpd/ntpsnmpd.1@1.147 +2 -2
+    NTP_4_2_7P145
+
+  packageinfo.sh@1.147 +1 -1
+    NTP_4_2_7P145
+
+  sntp/sntp-opts.c@1.141 +2 -2
+    NTP_4_2_7P145
+
+  sntp/sntp-opts.h@1.141 +3 -3
+    NTP_4_2_7P145
+
+  sntp/sntp-opts.texi@1.141 +2 -2
+    NTP_4_2_7P145
+
+  sntp/sntp.1@1.141 +2 -2
+    NTP_4_2_7P145
+
+  sntp/sntp.html@1.141 +1 -1
+    NTP_4_2_7P145
+
+  util/ntp-keygen-opts.c@1.145 +2 -2
+    NTP_4_2_7P145
+
+  util/ntp-keygen-opts.h@1.145 +3 -3
+    NTP_4_2_7P145
+
+  util/ntp-keygen-opts.texi@1.148 +2 -2
+    NTP_4_2_7P145
+
+  util/ntp-keygen.1@1.148 +2 -2
+    NTP_4_2_7P145
+
+ChangeSet@1.2518, 2011-04-03 19:25:33+00:00, davehart@shiny.ad.hartbrothers.com
+  Cleanup a few Coverity static analysis warnings.
+
+  include/ntp_config.h@1.71 +3 -2
+    Add prototype for check_gen_fifo_consistency() overlooked in prior cet.
+
+  lib/isc/task.c@1.4 +1 -1
+    shuffle lock destruction until after protected field update to quiet
+      Coverity's lock analysis.
+
+  libntp/audio.c@1.29 +4 -4
+    Use width with sscanf(str, "%s", ...) to avoid overrun of destination.
+
+  libntp/work_thread.c@1.7 +3 -3
+    Change several DEBUG_REQUIRE to REQUIRE so needed safety checks are
+      included in -nodebug builds.
+
+  ntpd/ntp_config.c@1.287 +2 -2
+    match check_gen_fifo_consistency parameter naame with ntp_config.h
+
+  ntpd/refclock_nmea.c@1.60 +8 -6
+    leave room for terminating NUL by calling readlink with sizeof(...) - 1.
+
+ChangeSet@1.2517, 2011-04-03 17:35:33+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 1840] ntp_lists.h FIFO macros buggy.
+
+  ChangeLog@1.831 +1 -0
+    [Bug 1840] ntp_lists.h FIFO macros buggy.
+
+  include/ntp_lists.h@1.11 +40 -28
+    Maintain pptail correctly in UNLINK_FIFO(), CONCAT_FIFO().
+    Add more checks to CHECK_FIFO_CONSISTENCY, use it more.
+    Re-enable NTP_DEBUG_LISTS_H on DEBUG builds.
+
+  libntp/mktime.c@1.10 +2 -2
+    whitespace only (leading blanks -> tab)
+
+  ntpd/ntp_config.c@1.286 +31 -0
+    Move CHECK_FIFO_CONSISTENCY guts from macro to function so debuggers
+      can highlight the failing check rather than entire macro invocation.
+
 ChangeSet@1.2516, 2011-04-03 06:35:28+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P144
   TAG: NTP_4_2_7P144
