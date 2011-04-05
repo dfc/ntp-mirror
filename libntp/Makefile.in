@@ -88,8 +88,8 @@ am__libntp_a_SOURCES_DIST = systime.c a_md5encrypt.c adjtime.c \
 	ntp_rfc2553.c ntp_worker.c numtoa.c numtohost.c octtoint.c \
 	prettydate.c ntp_random.c recvbuff.c refnumtoa.c snprintf.c \
 	socket.c socktoa.c socktohost.c ssl_init.c statestr.c strdup.c \
-	syssignal.c timespecops.c timetoa.c timevalops.c tsftomsu.c \
-	tstotv.c tvtots.c uglydate.c uinttoa.c work_fork.c \
+	strl_obsd.c syssignal.c timespecops.c timetoa.c timevalops.c \
+	tsftomsu.c tstotv.c tvtots.c uglydate.c uinttoa.c work_fork.c \
 	work_thread.c ymd2yd.c $(srcdir)/../lib/isc/assertions.c \
 	$(srcdir)/../lib/isc/buffer.c \
 	$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/condition.c \
@@ -147,11 +147,12 @@ am__objects_4 = a_md5encrypt.$(OBJEXT) adjtime.$(OBJEXT) \
 	ntp_random.$(OBJEXT) recvbuff.$(OBJEXT) refnumtoa.$(OBJEXT) \
 	snprintf.$(OBJEXT) socket.$(OBJEXT) socktoa.$(OBJEXT) \
 	socktohost.$(OBJEXT) ssl_init.$(OBJEXT) statestr.$(OBJEXT) \
-	strdup.$(OBJEXT) syssignal.$(OBJEXT) timespecops.$(OBJEXT) \
-	timetoa.$(OBJEXT) timevalops.$(OBJEXT) tsftomsu.$(OBJEXT) \
-	tstotv.$(OBJEXT) tvtots.$(OBJEXT) uglydate.$(OBJEXT) \
-	uinttoa.$(OBJEXT) work_fork.$(OBJEXT) work_thread.$(OBJEXT) \
-	ymd2yd.$(OBJEXT) $(am__objects_3) $(am__objects_1)
+	strdup.$(OBJEXT) strl_obsd.$(OBJEXT) syssignal.$(OBJEXT) \
+	timespecops.$(OBJEXT) timetoa.$(OBJEXT) timevalops.$(OBJEXT) \
+	tsftomsu.$(OBJEXT) tstotv.$(OBJEXT) tvtots.$(OBJEXT) \
+	uglydate.$(OBJEXT) uinttoa.$(OBJEXT) work_fork.$(OBJEXT) \
+	work_thread.$(OBJEXT) ymd2yd.$(OBJEXT) $(am__objects_3) \
+	$(am__objects_1)
 am_libntp_a_OBJECTS = systime.$(OBJEXT) $(am__objects_4)
 libntp_a_OBJECTS = $(am_libntp_a_OBJECTS)
 libntpsim_a_AR = $(AR) $(ARFLAGS)
@@ -168,8 +169,8 @@ am__libntpsim_a_SOURCES_DIST = systime_s.c a_md5encrypt.c adjtime.c \
 	ntp_rfc2553.c ntp_worker.c numtoa.c numtohost.c octtoint.c \
 	prettydate.c ntp_random.c recvbuff.c refnumtoa.c snprintf.c \
 	socket.c socktoa.c socktohost.c ssl_init.c statestr.c strdup.c \
-	syssignal.c timespecops.c timetoa.c timevalops.c tsftomsu.c \
-	tstotv.c tvtots.c uglydate.c uinttoa.c work_fork.c \
+	strl_obsd.c syssignal.c timespecops.c timetoa.c timevalops.c \
+	tsftomsu.c tstotv.c tvtots.c uglydate.c uinttoa.c work_fork.c \
 	work_thread.c ymd2yd.c $(srcdir)/../lib/isc/assertions.c \
 	$(srcdir)/../lib/isc/buffer.c \
 	$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/condition.c \
@@ -477,6 +478,7 @@ libntp_a_SRCS = \
 	ssl_init.c					\
 	statestr.c					\
 	strdup.c					\
+	strl_obsd.c					\
 	syssignal.c					\
 	timespecops.c					\
 	timetoa.c					\
@@ -641,6 +643,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/stdtime.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/strdup.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/strerror.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/strl_obsd.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/syssignal.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/systime.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/systime_s.Po@am__quote@

@@ -1,3 +1,294 @@
+ChangeSet@1.2522, 2011-04-05 07:50:37+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P146
+  TAG: NTP_4_2_7P146
+
+  ChangeLog@1.834 +1 -0
+    NTP_4_2_7P146
+
+  ntpd/ntpd-opts.c@1.151 +2 -2
+    NTP_4_2_7P146
+
+  ntpd/ntpd-opts.h@1.151 +3 -3
+    NTP_4_2_7P146
+
+  ntpd/ntpd-opts.texi@1.149 +2 -2
+    NTP_4_2_7P146
+
+  ntpd/ntpd.1@1.149 +2 -2
+    NTP_4_2_7P146
+
+  ntpdc/ntpdc-opts.c@1.148 +2 -2
+    NTP_4_2_7P146
+
+  ntpdc/ntpdc-opts.h@1.148 +3 -3
+    NTP_4_2_7P146
+
+  ntpdc/ntpdc-opts.texi@1.148 +2 -2
+    NTP_4_2_7P146
+
+  ntpdc/ntpdc.1@1.148 +2 -2
+    NTP_4_2_7P146
+
+  ntpq/ntpq-opts.c@1.148 +2 -2
+    NTP_4_2_7P146
+
+  ntpq/ntpq-opts.h@1.148 +3 -3
+    NTP_4_2_7P146
+
+  ntpq/ntpq-opts.texi@1.148 +2 -2
+    NTP_4_2_7P146
+
+  ntpq/ntpq.1@1.148 +2 -2
+    NTP_4_2_7P146
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.148 +2 -2
+    NTP_4_2_7P146
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.148 +3 -3
+    NTP_4_2_7P146
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.148 +2 -2
+    NTP_4_2_7P146
+
+  ntpsnmpd/ntpsnmpd.1@1.148 +2 -2
+    NTP_4_2_7P146
+
+  packageinfo.sh@1.148 +1 -1
+    NTP_4_2_7P146
+
+  sntp/sntp-opts.c@1.142 +2 -2
+    NTP_4_2_7P146
+
+  sntp/sntp-opts.h@1.142 +3 -3
+    NTP_4_2_7P146
+
+  sntp/sntp-opts.texi@1.142 +2 -2
+    NTP_4_2_7P146
+
+  sntp/sntp.1@1.142 +2 -2
+    NTP_4_2_7P146
+
+  sntp/sntp.html@1.142 +1 -1
+    NTP_4_2_7P146
+
+  util/ntp-keygen-opts.c@1.146 +2 -2
+    NTP_4_2_7P146
+
+  util/ntp-keygen-opts.h@1.146 +3 -3
+    NTP_4_2_7P146
+
+  util/ntp-keygen-opts.texi@1.149 +2 -2
+    NTP_4_2_7P146
+
+  util/ntp-keygen.1@1.149 +2 -2
+    NTP_4_2_7P146
+
+ChangeSet@1.2521, 2011-04-05 07:30:59+00:00, davehart@shiny.ad.hartbrothers.com
+  ChangeLog entry for prior cset.
+  String buffer safety cleanup, converting to strlcpy() and strlcat().
+  Use utmpname() before pututline() so repeated steps do not
+    accidentally record into wtmp where utmp was intended.
+  Use setutent() before each pututline() including first.
+
+  ChangeLog@1.833 +4 -0
+    ChangeLog entry for prior cset.
+    String buffer safety cleanup, converting to strlcpy() and strlcat().
+    Use utmpname() before pututline() so repeated steps do not
+      accidentally record into wtmp where utmp was intended.
+    Use setutent() before each pututline() including first.
+
+ChangeSet@1.2520, 2011-04-05 07:05:55+00:00, davehart@shiny.ad.hartbrothers.com
+  String buffer safety cleanup, converting to strlcpy() and strlcat().
+  Use utmpname() before pututline() so repeated steps do not accidentally
+    record into wtmp where utmp was intended.
+  Use setutent() before each pututline() including first.
+
+  BitKeeper/deleted/e7/ntp_resolver.c~47dd06e9@1.19 +0 -0
+    Rename: ntpd/ntp_resolver.c -> BitKeeper/deleted/e7/ntp_resolver.c~47dd06e9
+
+  include/ntp_stdlib.h@1.62 +21 -0
+    Conditional declarations for strlcpy(), strlcat() for systems which
+      do not provide them.
+
+  libntp/Makefile.am@1.62 +1 -0
+    add strl_obsd.c containing fallback strlcpy() and strlcat() picked up
+      from OpenBSD.
+
+  libntp/audio.c@1.30 +4 -4
+    strncpy() -> strlcpy()
+
+  libntp/authkeys.c@1.22 +2 -2
+    strncpy() -> strlcpy()
+
+  libntp/decodenetnum.c@1.14 +1 -1
+    strncpy() -> strlcpy()
+
+  libntp/findconfig.c@1.5 +2 -2
+    strncpy() -> strlcpy()
+
+  libntp/msyslog.c@1.39 +1 -1
+    strncpy() -> strlcpy()
+
+  libntp/ntp_rfc2553.c@1.46 +1 -10
+    strncpy() -> strlcpy()
+
+  libntp/numtoa.c@1.7 +1 -1
+    strncpy() -> memcpy()
+
+  libntp/numtohost.c@1.6 +2 -3
+    strncpy() -> strlcpy()
+
+  libntp/socktoa.c@1.16 +1 -1
+    strncpy() -> strlcpy()
+
+  libntp/ssl_init.c@1.15 +1 -1
+    strncpy() -> strlcpy()
+
+  libntp/strl_obsd.c@1.1 +123 -0
+    BitKeeper file C:/ntp/ntp-dev-strlcpy/libntp/strl_obsd.c
+
+  libntp/strl_obsd.c@1.0 +0 -0
+
+  libntp/systime.c@1.54 +22 -11
+    Use utmpname() before pututline() so repeated steps do not accidentally
+      record into wtmp where utmp was intended.
+    Use setutent() before each pututline() including first.
+    strncpy() -> strlcpy()
+
+  libparse/data_mbg.c@1.11 +3 -3
+    strncpy() -> strlcpy()
+
+  libparse/parsesolaris.c@1.11 +1 -1
+    strncpy() -> strlcpy()
+
+  ntpd/ntp_config.c@1.288 +2 -4
+    strncpy() -> strlcpy()
+    Remove leftover redundant CHECK_FIFO_CONSISTENCY() calls added to
+      get correct line numbers from failures.  CONCAT_FIFO() has same.
+
+  ntpd/ntp_control.c@1.166 +12 -10
+    strncpy() -> strlcpy()
+
+  ntpd/ntp_filegen.c@1.23 +8 -9
+    strncpy() -> strlcpy()
+
+  ntpd/ntp_io.c@1.351 +11 -11
+    strncpy() -> strlcpy()
+
+  ntpd/ntp_request.c@1.104 +1 -1
+    strncpy() -> strlcpy()
+
+  ntpd/ntp_scanner.c@1.42 +1 -1
+    strncpy() -> strlcpy()
+
+  ntpd/ntp_signd.c@1.4 +1 -1
+    strncpy() -> strlcpy()
+
+  ntpd/ntp_util.c@1.93 +7 -7
+    strncpy() -> strlcpy()
+
+  ntpd/refclock_acts.c@1.49 +2 -2
+    strncpy() -> strlcpy()
+
+  ntpd/refclock_arbiter.c@1.20 +11 -11
+    strcat() -> strlcat()
+    strncpy() -> strlcpy()
+
+  ntpd/refclock_chu.c@1.52 +1 -1
+    strncpy() -> strlcpy()
+
+  ntpd/refclock_hpgps.c@1.14 +1 -1
+    strncpy() -> strlcpy()
+
+  ntpd/refclock_jjy.c@1.23 +8 -11
+    strncat() -> strlcat() (was nearly the only correct use of strncat() in NTP)
+    strncpy() -> strlcpy()
+
+  ntpd/refclock_neoclock4x.c@1.21 +10 -10
+    strncpy() -> strlcpy()
+
+  ntpd/refclock_oncore.c@1.94 +17 -18
+    strncat() -> strlcat()
+    strncpy() -> strlcpy()
+
+  ntpd/refclock_parse.c@1.58 +110 -106
+    strncat() -> strlcat()
+    strncpy() -> strlcpy()
+
+  ntpd/refclock_true.c@1.19 +105 -97
+    strncpy() -> strlcpy()
+    indent cleanup
+
+  ntpd/refclock_wwv.c@1.75 +18 -13
+    sprintf() -> snprintf()
+    strcat() -> strlcat()
+
+  ntpdate/ntpdate.c@1.87 +2 -2
+    strncpy() -> strlcpy()
+
+  ntpdate/ntptime_config.c@1.6 +2 -4
+    emalloc() + strcpy() -> estrdup()
+
+  ntpdc/ntpdc.c@1.96 +5 -6
+    strncpy() -> strlcpy()
+
+  ntpdc/ntpdc_ops.c@1.77 +19 -15
+    strcat() -> strlcat()
+    strncpy() -> strlcpy()
+
+  ntpq/ntpq-subs.c@1.86 +7 -6
+    strncpy() -> strlcpy()
+    strncpy() -> memcpy()
+
+  ntpq/ntpq.c@1.135 +5 -6
+    strncat() -> strlcat()
+    strncpy() -> strlcpy()
+
+  ntpsnmpd/ntpSnmpSubagentObject.c@1.8 +1 -1
+    strncpy() -> strlcpy()
+
+  ports/winnt/libntp/syslog.c@1.9 +1 -2
+    strncpy() -> strlcpy()
+
+  ports/winnt/vc6/libntp.dsp@1.62 +4 -0
+    add strl_obsd.c containing fallback strlcpy() and strlcat() picked up
+      from OpenBSD.
+
+  ports/winnt/vs2003/libntp.vcproj@1.20 +3 -18
+    add strl_obsd.c containing fallback strlcpy() and strlcat() picked up
+      from OpenBSD.
+
+  ports/winnt/vs2005/libntp.vcproj@1.18 +4 -0
+    add strl_obsd.c containing fallback strlcpy() and strlcat() picked up
+      from OpenBSD.
+
+  ports/winnt/vs2008/libntp/libntp.vcproj@1.41 +6 -2
+    add strl_obsd.c containing fallback strlcpy() and strlcat() picked up
+      from OpenBSD.
+
+  sntp/kod_management.c@1.28 +1 -3
+    strncpy() -> strlcpy()
+
+  sntp/m4/ntp_libntp.m4@1.9 +1 -1
+    Check for strlcpy(), strlcat()
+
+  sntp/utilities.c@1.18 +2 -7
+    emalloc() + strncpy() -> estrdup()
+
+  util/ntp-keygen.c@1.80 +45 -19
+    Handle readlink() which doesn't NUL-terminate.
+    strdup() -> estrdup()
+    strcpy() -> strlcpy()
+    strcat() -> strlcat()
+    sprintf() -> snprintf()
+
+  util/tg.c@1.4 +2 -2
+    strcpy() -> strlcpy()
+
+  util/tg2.c@1.4 +15 -18
+    strcpy() -> strlcpy()
+    strncat() -> strlcat()
+
 ChangeSet@1.2519, 2011-04-04 11:43:59+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P145
   TAG: NTP_4_2_7P145
