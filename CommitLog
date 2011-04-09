@@ -1,3 +1,173 @@
+ChangeSet@1.2527, 2011-04-09 07:09:13+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P148
+  TAG: NTP_4_2_7P148
+
+  ChangeLog@1.839 +1 -0
+    NTP_4_2_7P148
+
+  ntpd/ntpd-opts.c@1.153 +2 -2
+    NTP_4_2_7P148
+
+  ntpd/ntpd-opts.h@1.153 +3 -3
+    NTP_4_2_7P148
+
+  ntpd/ntpd-opts.texi@1.151 +2 -2
+    NTP_4_2_7P148
+
+  ntpd/ntpd.1@1.151 +2 -2
+    NTP_4_2_7P148
+
+  ntpdc/ntpdc-opts.c@1.150 +2 -2
+    NTP_4_2_7P148
+
+  ntpdc/ntpdc-opts.h@1.150 +3 -3
+    NTP_4_2_7P148
+
+  ntpdc/ntpdc-opts.texi@1.150 +2 -2
+    NTP_4_2_7P148
+
+  ntpdc/ntpdc.1@1.150 +2 -2
+    NTP_4_2_7P148
+
+  ntpq/ntpq-opts.c@1.150 +2 -2
+    NTP_4_2_7P148
+
+  ntpq/ntpq-opts.h@1.150 +3 -3
+    NTP_4_2_7P148
+
+  ntpq/ntpq-opts.texi@1.150 +2 -2
+    NTP_4_2_7P148
+
+  ntpq/ntpq.1@1.150 +2 -2
+    NTP_4_2_7P148
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.150 +2 -2
+    NTP_4_2_7P148
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.150 +3 -3
+    NTP_4_2_7P148
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.150 +2 -2
+    NTP_4_2_7P148
+
+  ntpsnmpd/ntpsnmpd.1@1.150 +2 -2
+    NTP_4_2_7P148
+
+  packageinfo.sh@1.150 +1 -1
+    NTP_4_2_7P148
+
+  sntp/sntp-opts.c@1.144 +2 -2
+    NTP_4_2_7P148
+
+  sntp/sntp-opts.h@1.144 +3 -3
+    NTP_4_2_7P148
+
+  sntp/sntp-opts.texi@1.144 +2 -2
+    NTP_4_2_7P148
+
+  sntp/sntp.1@1.144 +2 -2
+    NTP_4_2_7P148
+
+  sntp/sntp.html@1.144 +1 -1
+    NTP_4_2_7P148
+
+  util/ntp-keygen-opts.c@1.148 +2 -2
+    NTP_4_2_7P148
+
+  util/ntp-keygen-opts.h@1.148 +3 -3
+    NTP_4_2_7P148
+
+  util/ntp-keygen-opts.texi@1.151 +2 -2
+    NTP_4_2_7P148
+
+  util/ntp-keygen.1@1.151 +2 -2
+    NTP_4_2_7P148
+
+ChangeSet@1.2526, 2011-04-09 06:20:32+00:00, davehart@shiny.ad.hartbrothers.com
+  Buffer safety and sign extension fixes (thanks Coverity Scan).
+
+  ChangeLog@1.838 +1 -0
+    Buffer safety and sign extension fixes (thanks Coverity Scan).
+
+  libntp/icom.c@1.15 +18 -3
+    Check for failure of tcgetattr() and tcsetattr() in icom_init().
+
+  libparse/binio.c@1.8 +2 -2
+    Avoid sign-extension on 64-bit platforms.
+
+  libparse/ieee754io.c@1.10 +5 -5
+    Avoid sign-extension on 64-bit platforms.
+
+  ntpd/refclock_fg.c@1.14 +86 -91
+    Whitespace cleanup of refclock_fg.c.
+    Replace literal ctrl-P with '\x10'.
+    sprintf() -> snprintf().
+
+  ntpd/refclock_ulink.c@1.17 +1 -1
+    sprintf() -> snprintf().
+
+  ntpd/refclock_wwv.c@1.76 +8 -6
+    sprintf() -> snprintf().
+
+  ntpd/refclock_zyfer.c@1.9 +1 -1
+    sprintf() -> snprintf().
+
+  ntpq/ntpq.c@1.136 +2 -2
+    printf signed/unsigned format mismatch.
+
+  parseutil/dcfd.c@1.23 +10 -5
+    printf signed/unsigned format mismatch.
+    sprintf() -> snprintf().
+
+  util/ntptime.c@1.23 +120 -93
+    sprintf() -> snprintf().
+    Protect against buffer overrun in sprintb().
+
+ChangeSet@1.2519.1.4, 2011-04-08 02:02:48+00:00, davehart@shiny.ad.hartbrothers.com
+  Use _mkgmtime() as timegm() in the Windows port, rather than
+    libntp/mktime.c's timegm().  Fixed [Bug 1875] on Windows using the old
+    asn2ntp() code from before 4.2.7p147.
+  ntp_crypto.c string buffer safety.
+  Remove use of MAXFILENAME in mode 7 (ntpdc) on-wire structs.
+  Change ntpd MAXFILENAME from 128 to 256 to match ntp-keygen.
+
+  ChangeLog@1.834.1.1 +6 -0
+    Use _mkgmtime() as timegm() in the Windows port, rather than
+      libntp/mktime.c's timegm().  Fixed [Bug 1875] on Windows using the old
+      asn2ntp() code from before 4.2.7p147.
+    ntp_crypto.c string buffer safety.
+    Remove use of MAXFILENAME in mode 7 (ntpdc) on-wire structs.
+    Change ntpd MAXFILENAME from 128 to 256 to match ntp-keygen.
+
+  include/ntp.h@1.193 +1 -1
+    Change ntpd's MAXFILENAME to 256 to match what ntp-keygen uses.
+
+  include/ntp_request.h@1.43 +6 -5
+    Remove use of MAXFILENAME in mode 7 (ntpdc) on-wire structs.
+
+  ntpd/ntp_control.c@1.167 +2 -2
+    use sizeof(buffer) rather than inside knowledge of buffer size.
+
+  ntpd/ntp_crypto.c@1.155.1.1 +46 -51
+    emalloc() + strcpy() -> estrdup().
+    fstostr() + strcpy() + fstostr() + strcpy() + snprintf() + report_event()
+      -> fstostr() + mprintf_event().
+    Use sizeof(buffer) rather than hardcoded knowledge of buffer size.
+
+  ntpd/ntp_util.c@1.94 +2 -5
+    fstostr() can now safely return strings longer than 19 characters.
+
+  ports/winnt/include/config.h@1.94 +2 -0
+    Use _mkgmtime() as timegm() in the Windows port, rather than
+      libntp/mktime.c's timegm().  Fixes [Bug 1875] on Windows, however that
+      bug is still present on systems without timegm().
+
+  sntp/tests/keyFile.cpp@1.4 +7 -6
+    strncpy() -> strlcpy()
+
+  util/ntp-keygen.c@1.81 +26 -21
+    Remove duplicate BN_CTX_new() call from gen_gqkey(), flagged by Coverity.
+
 ChangeSet@1.2524, 2011-04-07 11:30:15+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P147
   TAG: NTP_4_2_7P147
