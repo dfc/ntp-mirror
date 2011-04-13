@@ -1,3 +1,286 @@
+ChangeSet@1.2536, 2011-04-13 04:57:19+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P150
+  TAG: NTP_4_2_7P150
+
+  ChangeLog@1.845 +1 -0
+    NTP_4_2_7P150
+
+  ntpd/ntpd-opts.c@1.155 +2 -2
+    NTP_4_2_7P150
+
+  ntpd/ntpd-opts.h@1.155 +3 -3
+    NTP_4_2_7P150
+
+  ntpd/ntpd-opts.texi@1.153 +2 -2
+    NTP_4_2_7P150
+
+  ntpd/ntpd.1@1.153 +2 -2
+    NTP_4_2_7P150
+
+  ntpdc/ntpdc-opts.c@1.152 +2 -2
+    NTP_4_2_7P150
+
+  ntpdc/ntpdc-opts.h@1.152 +3 -3
+    NTP_4_2_7P150
+
+  ntpdc/ntpdc-opts.texi@1.152 +2 -2
+    NTP_4_2_7P150
+
+  ntpdc/ntpdc.1@1.152 +2 -2
+    NTP_4_2_7P150
+
+  ntpq/ntpq-opts.c@1.152 +2 -2
+    NTP_4_2_7P150
+
+  ntpq/ntpq-opts.h@1.152 +3 -3
+    NTP_4_2_7P150
+
+  ntpq/ntpq-opts.texi@1.152 +2 -2
+    NTP_4_2_7P150
+
+  ntpq/ntpq.1@1.152 +2 -2
+    NTP_4_2_7P150
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.152 +2 -2
+    NTP_4_2_7P150
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.152 +3 -3
+    NTP_4_2_7P150
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.152 +2 -2
+    NTP_4_2_7P150
+
+  ntpsnmpd/ntpsnmpd.1@1.152 +2 -2
+    NTP_4_2_7P150
+
+  packageinfo.sh@1.152 +1 -1
+    NTP_4_2_7P150
+
+  sntp/sntp-opts.c@1.146 +2 -2
+    NTP_4_2_7P150
+
+  sntp/sntp-opts.h@1.146 +3 -3
+    NTP_4_2_7P150
+
+  sntp/sntp-opts.texi@1.146 +2 -2
+    NTP_4_2_7P150
+
+  sntp/sntp.1@1.146 +2 -2
+    NTP_4_2_7P150
+
+  sntp/sntp.html@1.146 +1 -1
+    NTP_4_2_7P150
+
+  util/ntp-keygen-opts.c@1.150 +2 -2
+    NTP_4_2_7P150
+
+  util/ntp-keygen-opts.h@1.150 +3 -3
+    NTP_4_2_7P150
+
+  util/ntp-keygen-opts.texi@1.153 +2 -2
+    NTP_4_2_7P150
+
+  util/ntp-keygen.1@1.153 +2 -2
+    NTP_4_2_7P150
+
+ChangeSet@1.2535, 2011-04-13 02:22:24+00:00, davehart@shiny.ad.hartbrothers.com
+  ntp_proto.c sprintf() -> snprintf()
+
+  ChangeLog@1.844 +1 -1
+    ntp_proto.c sprintf() -> snprintf()
+
+  ntpd/ntp_proto.c@1.320 +3 -2
+    ntp_proto.c sprintf() -> snprintf()
+
+ChangeSet@1.2534, 2011-04-13 01:02:31+00:00, davehart@shiny.ad.hartbrothers.com
+  Move rpl_vsnprintf() declaration and #define vsnprintf to config.h
+
+  include/l_stdlib.h@1.20 +0 -10
+    Move rpl_vsnprintf() declaration and #define vsnprintf to config.h
+
+  lib/isc/inet_ntop.c@1.10 +2 -3
+    leftover SNPRINTF() -> snprintf() overlooked in prior cset.
+
+  libntp/msyslog.c@1.40 +19 -2
+    Work around strerror_r return type misdetection.
+
+  ports/winnt/include/config.h@1.97 +5 -0
+    Move rpl_vsnprintf() declaration and #define vsnprintf to config.h
+
+  ports/winnt/libntp/syslog.c@1.11 +2 -0
+    include ntp_stdlib.h for strlcpy() declaration
+
+  sntp/m4/ntp_libntp.m4@1.13 +45 -19
+    Move rpl_vsnprintf() declaration and #define vsnprintf to config.h
+
+  sntp/m4/snprintf.m4@1.2 +1 -6
+    Update comment.
+
+  tests/libntp/msyslog.cpp@1.2 +1 -0
+    strerror() prototyped by string.h
+
+ChangeSet@1.2533, 2011-04-12 06:01:57+00:00, davehart@shiny.ad.hartbrothers.com
+  Remove remaining sprintf() calls except refclock_ripencc.c (which is
+    kept out of --enable-all-clocks as a result), upstream libs which use
+    sprintf() ony after careful buffer sizing, and ntp_proto.c.
+
+  BitKeeper/deleted/14/ntp_sprintf.h~a4bd6474a120d477@1.2 +0 -0
+    Delete: include/ntp_sprintf.h
+
+  BitKeeper/deleted/53/refclock_trimbledc.c~29080509@1.5 +0 -0
+    Delete: ports/winnt/ntpd/refclock_trimbledc.c
+
+  BitKeeper/deleted/ab/refclock_trimbledc.h~29080509@1.4 +0 -0
+    Delete: ports/winnt/ntpd/refclock_trimbledc.h
+
+  ChangeLog@1.843 +3 -0
+    Remove remaining sprintf() calls except refclock_ripencc.c (which is
+      kept out of --enable-all-clocks as a result), upstream libs which use
+      sprintf() ony after careful buffer sizing, and ntp_proto.c.
+
+  configure.ac@1.525 +0 -6
+    SPRINTF_CHAR check is not needed, ANSI C mandates int return type.
+
+  include/Makefile.am@1.49 +0 -1
+    Remove ntp_sprintf.h workaround for pre-ANSI C sprintf().
+
+  lib/isc/inet_ntop.c@1.9 +1 -3
+    Remove ntp_sprintf.h workaround for pre-ANSI C sprintf().
+
+  libntp/bsd_strerror.c@1.6 +4 -3
+    sprintf() -> snprintf().
+
+  libntp/snprintf.c@1.10 +4 -4
+    clarify HAVE_* macros in non-Autoconf use.
+
+  libparse/ieee754io.c@1.11 +19 -15
+    sprintf() -> snprintf().
+
+  ntpd/refclock_mx4200.c@1.30 +0 -2
+    Remove ntp_sprintf.h workaround for pre-ANSI C sprintf().
+
+  ntpd/refclock_tpro.c@1.13 +1 -1
+    comment only.
+
+  ntpd/refclock_tt560.c@1.3 +6 -6
+    sprintf() -> snprintf().
+
+  ntpd/refclock_wwv.c@1.77 +2 -2
+    sprintf() -> snprintf().
+
+  ntpdate/ntptimeset.c@1.15 +4 -29
+    sprintf() -> msyslog().
+    Remove replacement vsprintf(), ANSI C mandates it.
+
+  ports/winnt/include/config.h@1.96 +4 -2
+    Comment out #define vsnprintf _vsnprintf as l_stdlib.h #defines them now.
+
+  ports/winnt/libntp/syslog.c@1.10 +1 -1
+    vsprintf() -> vsnprintf().
+
+  ports/winnt/ntpd/hopf_PCI_io.c@1.9 +2 -0
+    include ntp_stdlib.h for snprintf define.
+
+  ports/winnt/vs2003/libntp.vcproj@1.22 +0 -3
+    Remove ntp_sprintf.h workaround for pre-ANSI C sprintf().
+
+  ports/winnt/vs2005/libntp.vcproj@1.20 +0 -4
+    Remove ntp_sprintf.h workaround for pre-ANSI C sprintf().
+
+  ports/winnt/vs2008/libntp/libntp.vcproj@1.43 +0 -4
+    Remove ntp_sprintf.h workaround for pre-ANSI C sprintf().
+
+  ports/winnt/vs2008/ntpd/ntpd.vcproj@1.40 +4 -0
+    add refclock_tt560.c
+
+  util/audio-pcm.c@1.2 +2 -2
+    sprintf() -> snprintf().
+
+  util/sht.c@1.4 +1 -1
+    sprintf() -> snprintf().
+
+  util/tg.c@1.5 +8 -7
+    sprintf() -> snprintf().
+
+  util/tg2.c@1.5 +28 -19
+    sprintf() -> snprintf().
+
+ChangeSet@1.2527.1.1, 2011-04-11 21:24:15+00:00, davehart@shiny.ad.hartbrothers.com
+  Remove never-used, incomplete ports/winnt/ntpd/refclock_trimbledc.[ch]
+  On systems without C99-compliant (v)snprintf(), use C99-snprintf
+    replacements.  (http://www.jhweiss.de/software/snprintf.html)
+
+  ChangeLog@1.839.1.1 +3 -0
+    Remove never-used, incomplete ports/winnt/ntpd/refclock_trimbledc.[ch]
+    On systems without C99-compliant (v)snprintf(), use C99-snprintf
+      replacements.  (http://www.jhweiss.de/software/snprintf.html)
+
+  configure.ac@1.521.1.1 +2 -2
+    On systems without C99-compliant (v)snprintf(), use C99-snprintf
+      replacements.  (http://www.jhweiss.de/software/snprintf.html)
+
+  include/l_stdlib.h@1.19 +6 -6
+    On systems without C99-compliant (v)snprintf(), use C99-snprintf
+      replacements.  (http://www.jhweiss.de/software/snprintf.html)
+
+  include/ntp_machine.h@1.35 +0 -1
+    Remove unused MAXHOSTNAMELEN.
+
+  libntp/ntp_intres.c@1.95 +1 -1
+    Remove unused MAXHOSTNAMELEN.
+
+  libntp/snprintf.c@1.9 +2115 -44
+    On systems without C99-compliant (v)snprintf(), use C99-snprintf
+      replacements.  (http://www.jhweiss.de/software/snprintf.html)
+
+  ntpd/ntp_io.c@1.352 +3 -1
+    Add #ifdef REFCLOCK to quiet input_handler() unused locals warning.
+
+  ntpdate/ntpdate.c@1.88 +0 -51
+    vsprintf() is required by ANSI C, remove fallback implementation.
+    Remove #if 0'd signal_no_reset() replacement.
+
+  ntpq/ntpq.c@1.137 +2 -2
+    Correct printf() format mismatch on 64-bit systems.
+
+  parseutil/Makefile.am@1.16 +1 -1
+    dcfd needs libntp.a when using rpl_snprintf().
+
+  ports/winnt/include/config.h@1.95 +23 -24
+    On systems without C99-compliant (v)snprintf(), use C99-snprintf
+      replacements.  (http://www.jhweiss.de/software/snprintf.html)
+    Remove unused MAXHOSTNAMELEN.
+
+  ports/winnt/ntpd/hopf_PCI_io.c@1.8 +6 -0
+    #ifdef away unused code.
+
+  ports/winnt/vc6/libntp.dsp@1.63 +4 -0
+    add libntp/snprintf.c reference.
+
+  ports/winnt/vs2003/libntp.vcproj@1.21 +4 -344
+    add libntp/snprintf.c reference.
+
+  ports/winnt/vs2005/libntp.vcproj@1.19 +4 -0
+    add libntp/snprintf.c reference.
+
+  ports/winnt/vs2008/libntp/libntp.vcproj@1.42 +6 -2
+    add libntp/snprintf.c reference.
+
+  sntp/configure.ac@1.58.1.1 +1 -1
+    On systems without C99-compliant (v)snprintf(), use C99-snprintf
+      replacements.  (http://www.jhweiss.de/software/snprintf.html)
+
+  sntp/m4/ntp_libntp.m4@1.9.1.1 +27 -1
+    On systems without C99-compliant (v)snprintf(), use C99-snprintf
+      replacements.  (http://www.jhweiss.de/software/snprintf.html)
+
+  sntp/m4/snprintf.m4@1.1 +293 -0
+    BitKeeper file C:/ntp/ntp-dev-C99-snprintf/sntp/m4/snprintf.m4
+    ---
+    Adapt snprintf.m4 for integration in NTP.
+
+  sntp/m4/snprintf.m4@1.0 +0 -0
+
 ChangeSet@1.2531, 2011-04-11 07:20:42+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P149
   TAG: NTP_4_2_7P149

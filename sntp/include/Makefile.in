@@ -54,8 +54,8 @@ am__aclocal_m4_deps = $(top_srcdir)/libopts/m4/libopts.m4 \
 	$(top_srcdir)/m4/ntp_openssl.m4 \
 	$(top_srcdir)/m4/ntp_pkg_config.m4 \
 	$(top_srcdir)/m4/ntp_prog_cc.m4 $(top_srcdir)/m4/ntp_sntp.m4 \
-	$(top_srcdir)/m4/os_cflags.m4 $(top_srcdir)/m4/version.m4 \
-	$(top_srcdir)/configure.ac
+	$(top_srcdir)/m4/os_cflags.m4 $(top_srcdir)/m4/snprintf.m4 \
+	$(top_srcdir)/m4/version.m4 $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 mkinstalldirs = $(install_sh) -d

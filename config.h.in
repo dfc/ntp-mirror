@@ -1,5 +1,11 @@
 /* config.h.in.  Generated from configure.ac by autoheader.  */
 
+
+	#if !defined(_KERNEL) && !defined(PARSESTREAM)
+	# include <stdio.h>	/* before #define vsnprintf rpl_... */
+	#endif
+	
+
 /* Define if building universal (internal helper macro) */
 #undef AC_APPLE_UNIVERSAL_BUILD
 
@@ -431,6 +437,9 @@
 /* Define to 1 if the system has the type `int8_t'. */
 #undef HAVE_INT8_T
 
+/* Define to 1 if the system has the type `intmax_t'. */
+#undef HAVE_INTMAX_T
+
 /* Define to 1 if the system has the type `intptr_t'. */
 #undef HAVE_INTPTR_T
 
@@ -488,8 +497,20 @@
 /* if you have LinuxThreads */
 #undef HAVE_LINUX_THREADS
 
+/* Define to 1 if you have the `localeconv' function. */
+#undef HAVE_LOCALECONV
+
+/* Define to 1 if you have the <locale.h> header file. */
+#undef HAVE_LOCALE_H
+
+/* Define to 1 if the system has the type `long double'. */
+#undef HAVE_LONG_DOUBLE
+
 /* Define to 1 if the system has the type `long long'. */
 #undef HAVE_LONG_LONG
+
+/* Define to 1 if the system has the type `long long int'. */
+#undef HAVE_LONG_LONG_INT
 
 /* if you have SunOS LWP package */
 #undef HAVE_LWP
@@ -653,6 +674,9 @@
 /* Define to 1 if you have the <pth.h> header file. */
 #undef HAVE_PTH_H
 
+/* Define to 1 if the system has the type `ptrdiff_t'. */
+#undef HAVE_PTRDIFF_T
+
 /* Define to 1 if you have the `pututline' function. */
 #undef HAVE_PUTUTLINE
 
@@ -758,7 +782,7 @@
 /* Define to 1 if the system has the type `size_t'. */
 #undef HAVE_SIZE_T
 
-/* Define to 1 if you have the `snprintf' function. */
+/* Define if C99-compliant `snprintf' is available. */
 #undef HAVE_SNPRINTF
 
 /* Define to 1 if you have the `socketpair' function. */
@@ -769,6 +793,9 @@
 
 /* Define to 1 if you have the <stdarg.h> header file. */
 #undef HAVE_STDARG_H
+
+/* Define to 1 if you have the <stddef.h> header file. */
+#undef HAVE_STDDEF_H
 
 /* Define to 1 if you have the <stdint.h> header file. */
 #undef HAVE_STDINT_H
@@ -811,6 +838,12 @@
 
 /* Define to 1 if you have the `strsignal' function. */
 #undef HAVE_STRSIGNAL
+
+/* Define to 1 if `decimal_point' is a member of `struct lconv'. */
+#undef HAVE_STRUCT_LCONV_DECIMAL_POINT
+
+/* Define to 1 if `thousands_sep' is a member of `struct lconv'. */
+#undef HAVE_STRUCT_LCONV_THOUSANDS_SEP
 
 /* Do we have struct ntptimeval? */
 #undef HAVE_STRUCT_NTPTIMEVAL
@@ -1039,6 +1072,9 @@
 /* Define to 1 if the system has the type `uint8_t'. */
 #undef HAVE_UINT8_T
 
+/* Define to 1 if the system has the type `uintmax_t'. */
+#undef HAVE_UINTMAX_T
+
 /* Define to 1 if the system has the type `uintptr_t'. */
 #undef HAVE_UINTPTR_T
 
@@ -1056,6 +1092,9 @@
 
 /* deviant sigwait? */
 #undef HAVE_UNIXWARE_SIGWAIT
+
+/* Define to 1 if the system has the type `unsigned long long int'. */
+#undef HAVE_UNSIGNED_LONG_LONG_INT
 
 /* Define to 1 if you have the `updwtmp' function. */
 #undef HAVE_UPDWTMP
@@ -1093,11 +1132,8 @@
 /* Define to 1 if you have the `vprintf' function. */
 #undef HAVE_VPRINTF
 
-/* Define to 1 if you have the `vsnprintf' function. */
+/* Define if C99-compliant `vsnprintf' is available. */
 #undef HAVE_VSNPRINTF
-
-/* Define to 1 if you have the `vsprintf' function. */
-#undef HAVE_VSPRINTF
 
 /* Define to 1 if you have the <wchar.h> header file. */
 #undef HAVE_WCHAR_H
@@ -1145,6 +1181,12 @@
 	    #endif /* HAVE___SS_FAMILY_IN_SS */
 	
     
+
+/* Define to provide `rpl_snprintf' function. */
+#undef HW_WANT_RPL_SNPRINTF
+
+/* Define to provide `rpl_vsnprintf' function. */
+#undef HW_WANT_RPL_VSNPRINTF
 
 /* Retry queries on _any_ DNS error? */
 #undef IGNORE_DNS_ERRORS
@@ -1389,9 +1431,6 @@
 /* Slew always? */
 #undef SLEWALWAYS
 
-/* *s*printf() functions are char* */
-#undef SPRINTF_CHAR
-
 /* If using the C implementation of alloca, define if you know the
    direction of stack growth for your system; otherwise it will be
    automatically deduced at runtime.
@@ -1533,6 +1572,9 @@ typedef unsigned int	uintptr_t;
 /* deviant */
 #undef adjtimex
 
+/* Define to empty if `const' does not conform to ANSI C. */
+#undef const
+
 /* Define to `int' if <sys/types.h> doesn't define. */
 #undef gid_t
 
@@ -1541,6 +1583,10 @@ typedef unsigned int	uintptr_t;
 #ifndef __cplusplus
 #undef inline
 #endif
+
+/* Define to the widest signed integer type if <stdint.h> and <inttypes.h> do
+   not define. */
+#undef intmax_t
 
 /* deviant */
 #undef ntp_adjtime
@@ -1557,8 +1603,19 @@ typedef unsigned int	uintptr_t;
 /* Define to `unsigned int' if <sys/types.h> does not define. */
 #undef size_t
 
+/* Define to rpl_snprintf if the replacement function should be used. */
+#undef snprintf
+
 /* Define to `int' if <sys/types.h> doesn't define. */
 #undef uid_t
+
+/* Define to the widest unsigned integer type if <stdint.h> and <inttypes.h>
+   do not define. */
+#undef uintmax_t
+
+/* Define to the type of an unsigned integer type wide enough to hold a
+   pointer, if such a type exists, and if the system does not define it. */
+#undef uintptr_t
 
 /* Define as `fork' if `vfork' does not work. */
 #undef vfork
@@ -1566,6 +1623,9 @@ typedef unsigned int	uintptr_t;
 /* Define to empty if the keyword `volatile' does not work. Warning: valid
    code using `volatile' can become incorrect without. Disable with care. */
 #undef volatile
+
+/* Define to rpl_vsnprintf if the replacement function should be used. */
+#undef vsnprintf
 
 
 #ifndef MPINFOU_PREDECLARED
@@ -1576,3 +1636,27 @@ typedef union mpinfou {
 } mpinfou_t;
 #endif
 
+
+
+	#if !defined(_KERNEL) && !defined(PARSESTREAM)
+	# if defined(HW_WANT_RPL_VSNPRINTF)
+	#  if defined(__cplusplus)
+	extern "C" {
+	# endif
+	# include <stdarg.h>
+	int rpl_vsnprintf(char *, size_t, const char *, va_list);
+	# if defined(__cplusplus)
+	}
+	#  endif
+	# endif
+	# if defined(HW_WANT_RPL_SNPRINTF)
+	#  if defined(__cplusplus)
+	extern "C" {
+	#  endif
+	int rpl_snprintf(char *, size_t, const char *, ...);
+	#  if defined(__cplusplus)
+	}
+	#  endif
+	# endif
+	#endif	/* !defined(_KERNEL) && !defined(PARSESTREAM) */
+	

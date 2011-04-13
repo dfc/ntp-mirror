@@ -31,8 +31,6 @@ static char rcsid[] =
 #include <isc/net.h>
 #include <isc/print.h>
 
-#include "ntp_sprintf.h"	/* NTP local change, helps SunOS 4 */
-
 #define NS_INT16SZ	 2
 #define NS_IN6ADDRSZ	16
 
@@ -92,9 +90,8 @@ inet_ntop4(const unsigned char *src, char *dst, size_t size)
 	static const char *fmt = "%u.%u.%u.%u";
 	char tmp[sizeof("255.255.255.255")];
 
-	/* NTP local change to use SNPRINTF() macro for SunOS4 compat */
-	if (SNPRINTF((tmp, sizeof(tmp), fmt, src[0], src[1], src[2],
-		      src[3])) >= size)
+	if (snprintf(tmp, sizeof(tmp), fmt, src[0], src[1], src[2],
+		     src[3]) >= size)
 	{
 		errno = ENOSPC;
 		return (NULL);
@@ -181,7 +178,7 @@ inet_ntop6(const unsigned char *src, char *dst, size_t size)
 			tp += strlen(tp);
 			break;
 		}
-		tp += SPRINTF((tp, "%x", words[i]));	/* NTP local change */
+		tp += sprintf(tp, "%x", words[i]);
 	}
 	/* Was it a trailing run of 0x00's? */
 	if (best.base != -1 && (best.base + best.len) ==
