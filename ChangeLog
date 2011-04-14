@@ -1,3 +1,11 @@
+(4.2.7p151) 2011/04/14 Released by Harlan Stenn <stenn@ntp.org>
+* Detect vsnprintf() support for "%m" and disable our "%m" expansion.
+* Add --enable-c99-sprintf to configure args for -noopenssl variety of
+  flock-build to avoid regressions in (v)snprintf() replacement.
+* More msnprintf() unit tests.
+* Coverity Scan error checking fixes.
+* Log failure to fetch time from HOPF_P hardware.
+* Check HOPF_S sscanf() conversion count before converted values.
 (4.2.7p150) 2011/04/13 Released by Harlan Stenn <stenn@ntp.org>
 * Remove never-used, incomplete ports/winnt/ntpd/refclock_trimbledc.[ch]
 * On systems without C99-compliant (v)snprintf(), use C99-snprintf

@@ -785,6 +785,9 @@ typedef unsigned int	uintptr_t;
 /* Version number of package */
 #undef VERSION
 
+/* vsnprintf expands "%m" to strerror(errno) */
+#undef VSNPRINTF_PERCENT_M
+
 /* configure --enable-ipv6 */
 #undef WANT_IPV6
 

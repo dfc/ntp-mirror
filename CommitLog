@@ -1,3 +1,158 @@
+ChangeSet@1.2539, 2011-04-14 08:03:48+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P151
+  TAG: NTP_4_2_7P151
+
+  ChangeLog@1.848 +1 -0
+    NTP_4_2_7P151
+
+  ntpd/ntpd-opts.c@1.156 +2 -2
+    NTP_4_2_7P151
+
+  ntpd/ntpd-opts.h@1.156 +3 -3
+    NTP_4_2_7P151
+
+  ntpd/ntpd-opts.texi@1.154 +2 -2
+    NTP_4_2_7P151
+
+  ntpd/ntpd.1@1.154 +2 -2
+    NTP_4_2_7P151
+
+  ntpdc/ntpdc-opts.c@1.153 +2 -2
+    NTP_4_2_7P151
+
+  ntpdc/ntpdc-opts.h@1.153 +3 -3
+    NTP_4_2_7P151
+
+  ntpdc/ntpdc-opts.texi@1.153 +2 -2
+    NTP_4_2_7P151
+
+  ntpdc/ntpdc.1@1.153 +2 -2
+    NTP_4_2_7P151
+
+  ntpq/ntpq-opts.c@1.153 +2 -2
+    NTP_4_2_7P151
+
+  ntpq/ntpq-opts.h@1.153 +3 -3
+    NTP_4_2_7P151
+
+  ntpq/ntpq-opts.texi@1.153 +2 -2
+    NTP_4_2_7P151
+
+  ntpq/ntpq.1@1.153 +2 -2
+    NTP_4_2_7P151
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.153 +2 -2
+    NTP_4_2_7P151
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.153 +3 -3
+    NTP_4_2_7P151
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.153 +2 -2
+    NTP_4_2_7P151
+
+  ntpsnmpd/ntpsnmpd.1@1.153 +2 -2
+    NTP_4_2_7P151
+
+  packageinfo.sh@1.153 +1 -1
+    NTP_4_2_7P151
+
+  sntp/sntp-opts.c@1.147 +2 -2
+    NTP_4_2_7P151
+
+  sntp/sntp-opts.h@1.147 +3 -3
+    NTP_4_2_7P151
+
+  sntp/sntp-opts.texi@1.147 +2 -2
+    NTP_4_2_7P151
+
+  sntp/sntp.1@1.147 +2 -2
+    NTP_4_2_7P151
+
+  sntp/sntp.html@1.147 +1 -1
+    NTP_4_2_7P151
+
+  util/ntp-keygen-opts.c@1.151 +2 -2
+    NTP_4_2_7P151
+
+  util/ntp-keygen-opts.h@1.151 +3 -3
+    NTP_4_2_7P151
+
+  util/ntp-keygen-opts.texi@1.154 +2 -2
+    NTP_4_2_7P151
+
+  util/ntp-keygen.1@1.154 +2 -2
+    NTP_4_2_7P151
+
+ChangeSet@1.2538, 2011-04-14 05:30:10+00:00, davehart@shiny.ad.hartbrothers.com
+  Log failure to fetch time from HOPF_P hardware.
+  Check HOPF_S sscanf() conversion count before converted values.
+  Correct mvsnprintf() and mvfprintf() for vsnprintf() that handles %m.
+
+  ChangeLog@1.847 +2 -0
+    Log failure to fetch time from HOPF_P hardware.
+    Check HOPF_S sscanf() conversion count before converted values.
+
+  libntp/msyslog.c@1.42 +59 -54
+    Correct mvsnprintf() and mvfprintf() for vsnprintf() that handles %m.
+
+  ntpd/refclock_hopfpci.c@1.13 +3 -1
+    Log failure to fetch time from HOPF_P hardware.
+
+  ntpd/refclock_hopfser.c@1.16 +11 -10
+    Check HOPF_S sscanf() conversion count before converted values.
+
+  sntp/crypto.c@1.17 +2 -1
+    Minor leak fix.
+
+  sntp/main.c@1.71 +7 -7
+    nonfunctional, makes static analysis happy.
+
+ChangeSet@1.2537, 2011-04-14 02:00:02+00:00, davehart@shiny.ad.hartbrothers.com
+  Detect vsnprintf() support for "%m" and disable our "%m" expansion.
+  Add --enable-c99-sprintf to configure args for -noopenssl variety of
+    flock-build to avoid regressions in (v)snprintf() replacement.
+  More msnprintf() unit tests.
+  Coverity Scan error checking fixes.
+
+  ChangeLog@1.846 +5 -0
+    Detect vsnprintf() support for "%m" and disable our "%m" expansion.
+    Add --enable-c99-sprintf to configure args for -noopenssl variety of
+      flock-build to avoid regressions in (v)snprintf() replacement.
+    More msnprintf() unit tests.
+    Coverity Scan error checking fixes.
+
+  flock-build@1.51 +2 -2
+    Add --enable-c99-sprintf to configure args for -noopenssl variety of
+      flock-build to avoid regressions in (v)snprintf() replacement.
+
+  libntp/audio.c@1.31 +8 -8
+    check sscanf() return values
+
+  libntp/msyslog.c@1.41 +71 -66
+    Detect vsnprintf() support for "%m" and disable our "%m" expansion.
+    Remove pre-C99-snprintf() workaround.
+
+  libntp/snprintf.c@1.11 +1 -0
+    Add /* FALLTHROUGH */ comment to %F handling.
+
+  ntpd/refclock_arc.c@1.25 +30 -27
+    use msyslog instead of printf for failure to open clock.
+
+  ntpq/ntpq-subs.c@1.87 +10 -3
+    Check decodenetnum() return value.
+
+  ntpq/ntpq.c@1.138 +3 -3
+    printf format mismatch on 64-bit.
+
+  parseutil/dcfd.c@1.24 +2 -2
+    printf format mismatch on 64-bit.
+
+  sntp/m4/ntp_libntp.m4@1.14 +62 -0
+    Detect vsnprintf() support for "%m" and disable our "%m" expansion.
+
+  tests/libntp/msyslog.cpp@1.3 +74 -22
+    More msnprintf() unit tests.
+
 ChangeSet@1.2536, 2011-04-13 04:57:19+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P150
   TAG: NTP_4_2_7P150
