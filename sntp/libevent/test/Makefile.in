@@ -55,25 +55,28 @@ am__aclocal_m4_deps = $(top_srcdir)/m4/openldap-thread-check.m4 \
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 mkinstalldirs = $(install_sh) -d
-CONFIG_HEADER = $(top_builddir)/config.h
+CONFIG_HEADER = $(top_builddir)/config.h \
+	$(top_builddir)/evconfig-private.h
 CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 PROGRAMS = $(noinst_PROGRAMS)
 am_bench_OBJECTS = bench.$(OBJEXT)
 bench_OBJECTS = $(am_bench_OBJECTS)
-bench_DEPENDENCIES = ../libevent.la
+am__DEPENDENCIES_1 =
+bench_DEPENDENCIES = $(am__DEPENDENCIES_1) ../libevent.la
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
 am__v_lt_0 = --silent
 am_bench_cascade_OBJECTS = bench_cascade.$(OBJEXT)
 bench_cascade_OBJECTS = $(am_bench_cascade_OBJECTS)
-bench_cascade_DEPENDENCIES = ../libevent.la
+bench_cascade_DEPENDENCIES = $(am__DEPENDENCIES_1) ../libevent.la
 am_bench_http_OBJECTS = bench_http.$(OBJEXT)
 bench_http_OBJECTS = $(am_bench_http_OBJECTS)
-bench_http_DEPENDENCIES = ../libevent.la
+bench_http_DEPENDENCIES = $(am__DEPENDENCIES_1) ../libevent.la
 am_bench_httpclient_OBJECTS = bench_httpclient.$(OBJEXT)
 bench_httpclient_OBJECTS = $(am_bench_httpclient_OBJECTS)
-bench_httpclient_DEPENDENCIES = ../libevent_core.la
+bench_httpclient_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+	../libevent_core.la
 am__regress_SOURCES_DIST = regress.c regress_buffer.c regress_http.c \
 	regress_dns.c regress_testutils.c regress_testutils.h \
 	regress_rpc.c regress.gen.c regress.gen.h regress_et.c \
@@ -98,11 +101,11 @@ am_regress_OBJECTS = regress-regress.$(OBJEXT) \
 	regress-regress_minheap.$(OBJEXT) $(am__objects_1) \
 	$(am__objects_2) $(am__objects_3) $(am__objects_4)
 regress_OBJECTS = $(am_regress_OBJECTS)
-am__DEPENDENCIES_1 = $(am__append_2)
-am__DEPENDENCIES_2 =
+am__DEPENDENCIES_2 = $(am__append_2)
 @OPENSSL_TRUE@am__DEPENDENCIES_3 = ../libevent_openssl.la
-regress_DEPENDENCIES = ../libevent.la $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_2) $(am__DEPENDENCIES_3)
+regress_DEPENDENCIES = $(am__DEPENDENCIES_1) ../libevent.la \
+	$(am__DEPENDENCIES_2) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_3)
 regress_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
 	$(regress_LDFLAGS) $(LDFLAGS) -o $@
@@ -311,20 +314,20 @@ regress_SOURCES = regress.c regress_buffer.c regress_http.c \
 @BUILD_WIN32_TRUE@regress_thread_SOURCES = regress_thread.c
 @PTHREADS_TRUE@regress_thread_SOURCES = regress_thread.c
 @ZLIB_REGRESS_TRUE@regress_zlib_SOURCES = regress_zlib.c
-regress_LDADD = @LIBEVENT_GC_SECTIONS@ ../libevent.la $(PTHREAD_LIBS) \
+regress_LDADD = $(LIBEVENT_GC_SECTIONS) ../libevent.la $(PTHREAD_LIBS) \
 	$(ZLIB_LIBS) $(am__append_5)
 regress_CPPFLAGS = -I$(top_srcdir) -I$(top_srcdir)/compat \
 	-I$(top_srcdir)/include -I../include $(PTHREAD_CFLAGS) $(ZLIB_CFLAGS)
 
 regress_LDFLAGS = $(PTHREAD_CFLAGS)
 bench_SOURCES = bench.c
-bench_LDADD = @LIBEVENT_GC_SECTIONS@ ../libevent.la
+bench_LDADD = $(LIBEVENT_GC_SECTIONS) ../libevent.la
 bench_cascade_SOURCES = bench_cascade.c
-bench_cascade_LDADD = @LIBEVENT_GC_SECTIONS@ ../libevent.la
+bench_cascade_LDADD = $(LIBEVENT_GC_SECTIONS) ../libevent.la
 bench_http_SOURCES = bench_http.c
-bench_http_LDADD = @LIBEVENT_GC_SECTIONS@ ../libevent.la
+bench_http_LDADD = $(LIBEVENT_GC_SECTIONS) ../libevent.la
 bench_httpclient_SOURCES = bench_httpclient.c
-bench_httpclient_LDADD = @LIBEVENT_GC_SECTIONS@ ../libevent_core.la
+bench_httpclient_LDADD = $(LIBEVENT_GC_SECTIONS) ../libevent_core.la
 DISTCLEANFILES = *~
 all: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) all-am

@@ -1,3 +1,329 @@
+ChangeSet@1.2543, 2011-04-15 08:46:52+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P152
+  TAG: NTP_4_2_7P152
+
+  ChangeLog@1.850 +1 -0
+    NTP_4_2_7P152
+
+  ntpd/ntpd-opts.c@1.157 +2 -2
+    NTP_4_2_7P152
+
+  ntpd/ntpd-opts.h@1.157 +3 -3
+    NTP_4_2_7P152
+
+  ntpd/ntpd-opts.texi@1.155 +2 -2
+    NTP_4_2_7P152
+
+  ntpd/ntpd.1@1.155 +2 -2
+    NTP_4_2_7P152
+
+  ntpdc/ntpdc-opts.c@1.154 +2 -2
+    NTP_4_2_7P152
+
+  ntpdc/ntpdc-opts.h@1.154 +3 -3
+    NTP_4_2_7P152
+
+  ntpdc/ntpdc-opts.texi@1.154 +2 -2
+    NTP_4_2_7P152
+
+  ntpdc/ntpdc.1@1.154 +2 -2
+    NTP_4_2_7P152
+
+  ntpq/ntpq-opts.c@1.154 +2 -2
+    NTP_4_2_7P152
+
+  ntpq/ntpq-opts.h@1.154 +3 -3
+    NTP_4_2_7P152
+
+  ntpq/ntpq-opts.texi@1.154 +2 -2
+    NTP_4_2_7P152
+
+  ntpq/ntpq.1@1.154 +2 -2
+    NTP_4_2_7P152
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.154 +2 -2
+    NTP_4_2_7P152
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.154 +3 -3
+    NTP_4_2_7P152
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.154 +2 -2
+    NTP_4_2_7P152
+
+  ntpsnmpd/ntpsnmpd.1@1.154 +2 -2
+    NTP_4_2_7P152
+
+  packageinfo.sh@1.154 +1 -1
+    NTP_4_2_7P152
+
+  sntp/sntp-opts.c@1.148 +2 -2
+    NTP_4_2_7P152
+
+  sntp/sntp-opts.h@1.148 +3 -3
+    NTP_4_2_7P152
+
+  sntp/sntp-opts.texi@1.148 +2 -2
+    NTP_4_2_7P152
+
+  sntp/sntp.1@1.148 +2 -2
+    NTP_4_2_7P152
+
+  sntp/sntp.html@1.148 +1 -1
+    NTP_4_2_7P152
+
+  util/ntp-keygen-opts.c@1.152 +2 -2
+    NTP_4_2_7P152
+
+  util/ntp-keygen-opts.h@1.152 +3 -3
+    NTP_4_2_7P152
+
+  util/ntp-keygen-opts.texi@1.155 +2 -2
+    NTP_4_2_7P152
+
+  util/ntp-keygen.1@1.155 +2 -2
+    NTP_4_2_7P152
+
+ChangeSet@1.2542, 2011-04-15 00:12:03+00:00, davehart@shiny.ad.hartbrothers.com
+  Automerge cleanup
+
+  ChangeLog@1.849 +1 -0
+    Update embedded libevent to current 2.1 git HEAD.
+
+  sntp/libevent/event.c@1.4 +2 -70
+    Automerge cleanup
+
+ChangeSet@1.2461.1.2, 2011-04-14 23:28:43+00:00, davehart@shiny.ad.hartbrothers.com
+  overlooked file
+
+  sntp/libevent/evconfig-private.h.in@1.1 +43 -0
+    BitKeeper file C:/ntp/ntp-dev-libevent-upstream/sntp/libevent/evconfig-private.h.in
+
+  sntp/libevent/evconfig-private.h.in@1.0 +0 -0
+
+ChangeSet@1.2461.1.1, 2011-04-14 19:55:12+00:00, davehart@shiny.ad.hartbrothers.com
+  libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/CommitLog@1.1 +18272 -0
+      libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/CommitLog@1.0 +0 -0
+
+  sntp/libevent/Makefile.am@1.1.1.1 +27 -24
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/WIN32-Code/evconfig-private.h@1.1 +6 -0
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/WIN32-Code/evconfig-private.h@1.0 +0 -0
+
+  sntp/libevent/WIN32-Code/event2/event-config.h@1.1.1.1 +2 -2
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/arc4random.c@1.1.1.1 +6 -1
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/buffer.c@1.2 +283 -266
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/buffer_iocp.c@1.2 +2 -1
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/bufferevent-internal.h@1.2 +16 -0
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/bufferevent.c@1.2 +21 -2
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/bufferevent_async.c@1.2 +1 -0
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/bufferevent_filter.c@1.2 +2 -0
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/bufferevent_openssl.c@1.2 +3 -2
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/bufferevent_pair.c@1.2 +2 -2
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/bufferevent_ratelim.c@1.2 +1 -0
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/bufferevent_sock.c@1.2 +3 -2
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/configure.in@1.1.1.1 +162 -17
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/defer-internal.h@1.2 +2 -0
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/devpoll.c@1.2 +1 -0
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/epoll.c@1.2 +251 -140
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/epoll_sub.c@1.2 +1 -0
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/evbuffer-internal.h@1.2 +45 -12
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/evdns.c@1.1.1.1 +7 -1
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/event-internal.h@1.1.1.1 +13 -1
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/event.c@1.1.1.1 +29 -7
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/event_iocp.c@1.2 +1 -0
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/event_tagging.c@1.2 +1 -0
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/evmap.c@1.2 +8 -12
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/evport.c@1.1.1.1 +15 -4
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/evrpc.c@1.2 +8 -7
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/evthread-internal.h@1.2 +3 -1
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/evthread.c@1.1.1.1 +13 -1
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/evthread_pthread.c@1.1.1.1 +4 -2
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/evthread_win32.c@1.2 +1 -0
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/evutil.c@1.1.1.1 +94 -22
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/evutil_rand.c@1.2 +1 -0
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/http-internal.h@1.2 +2 -2
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/http.c@1.1.1.1 +212 -47
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/include/event2/buffer.h@1.2 +102 -1
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/include/event2/event.h@1.1.1.1 +13 -3
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/include/event2/http.h@1.2 +45 -3
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/ipv6-internal.h@1.1.1.1 +12 -1
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/kqueue.c@1.2 +1 -2
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/listener.c@1.2 +3 -2
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/log.c@1.2 +1 -0
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/minheap-internal.h@1.2 +1 -0
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/poll.c@1.2 +1 -0
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/sample/Makefile.am@1.1.1.1 +1 -1
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/sample/dns-example.c@1.1.1.1 +3 -0
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/sample/hello-world.c@1.1.1.1 +3 -0
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/sample/http-server.c@1.1.1.1 +6 -0
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/select.c@1.1.1.1 +28 -9
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/signal.c@1.2 +1 -0
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/strlcpy-internal.h@1.2 +1 -0
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/strlcpy.c@1.2 +3 -2
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/test/Makefile.am@1.1.1.1 +14 -9
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/test/bench_httpclient.c@1.1.1.1 +3 -0
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/test/regress.h@1.2 +1 -1
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/test/regress_buffer.c@1.2 +219 -46
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/test/regress_dns.c@1.1.1.1 +2 -0
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/test/regress_http.c@1.1.1.1 +62 -53
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/test/regress_listener.c@1.1.1.1 +3 -0
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/test/regress_main.c@1.2 +5 -2
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/test/regress_testutils.c@1.1.1.1 +2 -0
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/test/test-eof.c@1.1.1.1 +9 -3
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/test/test-ratelim.c@1.1.1.1 +5 -0
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/test/test-ratelim.sh@1.1 +77 -0
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/test/test-ratelim.sh@1.0 +0 -0
+
+  sntp/libevent/test/test.sh@1.1.1.1 +12 -5
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/test/tinytest_demo.c@1.1 +215 -0
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/test/tinytest_demo.c@1.0 +0 -0
+
+  sntp/libevent/util-internal.h@1.1.1.1 +25 -2
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/whatsnew-2.0.txt@1.2 +1 -1
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
+  sntp/libevent/win32select.c@1.2 +2 -1
+    libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
+
 ChangeSet@1.2539, 2011-04-14 08:03:48+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P151
   TAG: NTP_4_2_7P151

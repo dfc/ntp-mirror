@@ -56,8 +56,8 @@ DIST_COMMON = README $(am__configure_deps) $(am__include_HEADERS_DIST) \
 	$(srcdir)/../depcomp $(srcdir)/../install-sh \
 	$(srcdir)/../ltmain.sh $(srcdir)/../missing \
 	$(srcdir)/Makefile.am $(srcdir)/Makefile.in \
-	$(srcdir)/config.h.in $(srcdir)/libevent.pc.in \
-	$(srcdir)/libevent_openssl.pc.in \
+	$(srcdir)/config.h.in $(srcdir)/evconfig-private.h.in \
+	$(srcdir)/libevent.pc.in $(srcdir)/libevent_openssl.pc.in \
 	$(srcdir)/libevent_pthreads.pc.in $(top_srcdir)/configure \
 	ChangeLog epoll_sub.c
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
@@ -68,7 +68,7 @@ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 am__CONFIG_DISTCLEAN_FILES = config.status config.cache config.log \
  configure.lineno config.status.lineno
 mkinstalldirs = $(install_sh) -d
-CONFIG_HEADER = config.h
+CONFIG_HEADER = config.h evconfig-private.h
 CONFIG_CLEAN_FILES = libevent.pc libevent_openssl.pc \
 	libevent_pthreads.pc
 CONFIG_CLEAN_VPATH_FILES =
@@ -237,9 +237,10 @@ am__noinst_HEADERS_DIST = util-internal.h mm-internal.h \
 	event-internal.h evthread-internal.h ht-internal.h \
 	defer-internal.h minheap-internal.h log-internal.h \
 	evsignal-internal.h evmap-internal.h changelist-internal.h \
-	iocp-internal.h ratelim-internal.h \
-	WIN32-Code/event2/event-config.h WIN32-Code/tree.h \
-	compat/sys/queue.h event.h evhttp.h evdns.h evrpc.h evutil.h
+	iocp-internal.h ratelim-internal.h evconfig-private.h \
+	WIN32-Code/event2/event-config.h WIN32-Code/evconfig-private.h \
+	WIN32-Code/tree.h compat/sys/queue.h event.h evhttp.h evdns.h \
+	evrpc.h evutil.h
 HEADERS = $(include_HEADERS) $(noinst_HEADERS)
 RECURSIVE_CLEAN_TARGETS = mostlyclean-recursive clean-recursive	\
   distclean-recursive maintainer-clean-recursive
@@ -414,7 +415,7 @@ ACLOCAL_AMFLAGS = -I m4
 # will increment for each series until we revise our interfaces enough
 # that we can seriously expect ABI compatibility between series.
 #
-RELEASE = -release 2.0
+RELEASE = -release 2.1
 
 # This is the version info for the libevent binary API.  It has three
 # numbers:
@@ -434,22 +435,9 @@ RELEASE = -release 2.0
 #
 # Once an RC is out, DO NOT MAKE ANY ABI-BREAKING CHANGES IN THAT SERIES
 # UNLESS YOU REALLY REALLY HAVE TO.
-VERSION_INFO = 5:1:0
+VERSION_INFO = 1:0:0
 
 # History:          RELEASE    VERSION_INFO
-#  2.0.1-alpha --     2.0        1:0:0
-#  2.0.2-alpha --                2:0:0
-#  2.0.3-alpha --                2:0:0  (should have incremented; didn't.)
-#  2.0.4-alpha --                3:0:0
-#  2.0.5-beta  --                4:0:0
-#  2.0.6-rc    --     2.0        2:0:0
-#  2.0.7-rc    --     2.0        3:0:1
-#  2.0.8-rc    --     2.0        4:0:2
-#  2.0.9-rc    --     2.0        5:0:0 (ABI changed slightly)
-# Planned:
-#  2.0.10-stable--    2.0        5:1:0 (No ABI change)
-#
-# For Libevent 2.1:
 #  2.1.1-alpha --     2.1        1:0:0
 
 # ABI version history for this package effectively restarts every time
@@ -541,13 +529,14 @@ noinst_HEADERS = util-internal.h mm-internal.h ipv6-internal.h \
 	evthread-internal.h ht-internal.h defer-internal.h \
 	minheap-internal.h log-internal.h evsignal-internal.h \
 	evmap-internal.h changelist-internal.h iocp-internal.h \
-	ratelim-internal.h WIN32-Code/event2/event-config.h \
+	ratelim-internal.h evconfig-private.h \
+	WIN32-Code/event2/event-config.h WIN32-Code/evconfig-private.h \
 	WIN32-Code/tree.h compat/sys/queue.h $(am__append_12)
 EVENT1_HDRS = event.h evhttp.h evdns.h evrpc.h evutil.h
 @INSTALL_LIBEVENT_TRUE@include_HEADERS = $(EVENT1_HDRS)
 AM_CPPFLAGS = -I$(srcdir)/compat -I$(srcdir)/include -I./include $(SYS_INCLUDES)
 DISTCLEANFILES = *~ libevent.pc ./include/event2/event-config.h
-all: $(BUILT_SOURCES) config.h
+all: $(BUILT_SOURCES) config.h evconfig-private.h
 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
 
 .SUFFIXES:
@@ -601,8 +590,18 @@ $(srcdir)/config.h.in:  $(am__configure_deps)
 	rm -f stamp-h1
 	touch $@
 
+evconfig-private.h: stamp-h2
+	@if test ! -f $@; then \
+	  rm -f stamp-h2; \
+	  $(MAKE) $(AM_MAKEFLAGS) stamp-h2; \
+	else :; fi
+
+stamp-h2: $(srcdir)/evconfig-private.h.in $(top_builddir)/config.status
+	@rm -f stamp-h2
+	cd $(top_builddir) && $(SHELL) ./config.status evconfig-private.h
+
 distclean-hdr:
-	-rm -f config.h stamp-h1
+	-rm -f config.h stamp-h1 evconfig-private.h stamp-h2
 libevent.pc: $(top_builddir)/config.status $(srcdir)/libevent.pc.in
 	cd $(top_builddir) && $(SHELL) ./config.status $@
 libevent_openssl.pc: $(top_builddir)/config.status $(srcdir)/libevent_openssl.pc.in
@@ -887,7 +886,7 @@ ID: $(HEADERS) $(SOURCES) $(LISP) $(TAGS_FILES)
 	mkid -fID $$unique
 tags: TAGS
 
-TAGS: tags-recursive $(HEADERS) $(SOURCES) config.h.in $(TAGS_DEPENDENCIES) \
+TAGS: tags-recursive $(HEADERS) $(SOURCES) config.h.in evconfig-private.h.in $(TAGS_DEPENDENCIES) \
 		$(TAGS_FILES) $(LISP)
 	set x; \
 	here=`pwd`; \
@@ -904,7 +903,7 @@ TAGS: tags-recursive $(HEADERS) $(SOURCES) config.h.in $(TAGS_DEPENDENCIES) \
 	      set "$$@" "$$include_option=$$here/$$subdir/TAGS"; \
 	  fi; \
 	done; \
-	list='$(SOURCES) $(HEADERS) config.h.in $(LISP) $(TAGS_FILES)'; \
+	list='$(SOURCES) $(HEADERS) config.h.in evconfig-private.h.in $(LISP) $(TAGS_FILES)'; \
 	unique=`for i in $$list; do \
 	    if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
 	  done | \
@@ -922,9 +921,9 @@ TAGS: tags-recursive $(HEADERS) $(SOURCES) config.h.in $(TAGS_DEPENDENCIES) \
 	  fi; \
 	fi
 ctags: CTAGS
-CTAGS: ctags-recursive $(HEADERS) $(SOURCES) config.h.in $(TAGS_DEPENDENCIES) \
+CTAGS: ctags-recursive $(HEADERS) $(SOURCES) config.h.in evconfig-private.h.in $(TAGS_DEPENDENCIES) \
 		$(TAGS_FILES) $(LISP)
-	list='$(SOURCES) $(HEADERS) config.h.in $(LISP) $(TAGS_FILES)'; \
+	list='$(SOURCES) $(HEADERS) config.h.in evconfig-private.h.in $(LISP) $(TAGS_FILES)'; \
 	unique=`for i in $$list; do \
 	    if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
 	  done | \
@@ -1120,7 +1119,8 @@ distcleancheck: distclean
 check-am: all-am
 check: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) check-recursive
-all-am: Makefile $(LTLIBRARIES) $(SCRIPTS) $(DATA) $(HEADERS) config.h
+all-am: Makefile $(LTLIBRARIES) $(SCRIPTS) $(DATA) $(HEADERS) config.h \
+		evconfig-private.h
 installdirs: installdirs-recursive
 installdirs-am:
 	for dir in "$(DESTDIR)$(libdir)" "$(DESTDIR)$(bindir)" "$(DESTDIR)$(pkgconfigdir)" "$(DESTDIR)$(includedir)"; do \
@@ -1256,7 +1256,7 @@ uninstall-am: uninstall-dist_binSCRIPTS uninstall-includeHEADERS \
 
 
 ./include/event2/event-config.h: config.h
-	@MKDIR_P@ ./include/event2
+	$(MKDIR_P) ./include/event2 || true
 	echo '/* event2/event-config.h' > $@
 	echo ' *' >> $@
 	echo ' * This file was generated by autoconf when libevent was built, and post-' >> $@
@@ -1271,6 +1271,7 @@ uninstall-am: uninstall-dist_binSCRIPTS uninstall-includeHEADERS \
 
 	sed -e 's/#define /#define _EVENT_/' \
 	    -e 's/#undef /#undef _EVENT_/' \
+	    -e 's/# define /# define _EVENT_/' \
 	    -e 's/#ifndef /#ifndef _EVENT_/' < config.h >> $@
 	echo "#endif" >> $@
 
