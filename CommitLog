@@ -1,3 +1,97 @@
+ChangeSet@1.2548, 2011-04-17 11:32:14+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P154
+  TAG: NTP_4_2_7P154
+
+  ChangeLog@1.854 +1 -0
+    NTP_4_2_7P154
+
+  ntpd/ntpd-opts.c@1.159 +2 -2
+    NTP_4_2_7P154
+
+  ntpd/ntpd-opts.h@1.159 +3 -3
+    NTP_4_2_7P154
+
+  ntpd/ntpd-opts.texi@1.157 +2 -2
+    NTP_4_2_7P154
+
+  ntpd/ntpd.1@1.157 +2 -2
+    NTP_4_2_7P154
+
+  ntpdc/ntpdc-opts.c@1.156 +2 -2
+    NTP_4_2_7P154
+
+  ntpdc/ntpdc-opts.h@1.156 +3 -3
+    NTP_4_2_7P154
+
+  ntpdc/ntpdc-opts.texi@1.156 +2 -2
+    NTP_4_2_7P154
+
+  ntpdc/ntpdc.1@1.156 +2 -2
+    NTP_4_2_7P154
+
+  ntpq/ntpq-opts.c@1.156 +2 -2
+    NTP_4_2_7P154
+
+  ntpq/ntpq-opts.h@1.156 +3 -3
+    NTP_4_2_7P154
+
+  ntpq/ntpq-opts.texi@1.156 +2 -2
+    NTP_4_2_7P154
+
+  ntpq/ntpq.1@1.156 +2 -2
+    NTP_4_2_7P154
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.156 +2 -2
+    NTP_4_2_7P154
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.156 +3 -3
+    NTP_4_2_7P154
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.156 +2 -2
+    NTP_4_2_7P154
+
+  ntpsnmpd/ntpsnmpd.1@1.156 +2 -2
+    NTP_4_2_7P154
+
+  packageinfo.sh@1.156 +1 -1
+    NTP_4_2_7P154
+
+  sntp/sntp-opts.c@1.150 +2 -2
+    NTP_4_2_7P154
+
+  sntp/sntp-opts.h@1.150 +3 -3
+    NTP_4_2_7P154
+
+  sntp/sntp-opts.texi@1.150 +2 -2
+    NTP_4_2_7P154
+
+  sntp/sntp.1@1.150 +2 -2
+    NTP_4_2_7P154
+
+  sntp/sntp.html@1.150 +1 -1
+    NTP_4_2_7P154
+
+  util/ntp-keygen-opts.c@1.154 +2 -2
+    NTP_4_2_7P154
+
+  util/ntp-keygen-opts.h@1.154 +3 -3
+    NTP_4_2_7P154
+
+  util/ntp-keygen-opts.texi@1.157 +2 -2
+    NTP_4_2_7P154
+
+  util/ntp-keygen.1@1.157 +2 -2
+    NTP_4_2_7P154
+
+ChangeSet@1.2547, 2011-04-16 18:14:13+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 1887] DNS fails on 4.2.7p153 using threads.
+
+  ChangeLog@1.853 +1 -0
+    [Bug 1887] DNS fails on 4.2.7p153 using threads.
+
+  libntp/work_thread.c@1.9 +4 -3
+    [Bug 1887] DNS fails on 4.2.7p153 using threads.
+
 ChangeSet@1.2546, 2011-04-16 07:31:48+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P153
   TAG: NTP_4_2_7P153
