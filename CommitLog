@@ -1,8 +1,99 @@
-ChangeSet@1.2548, 2011-04-17 11:32:14+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2552, 2011-04-18 04:58:45+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P155
+  TAG: NTP_4_2_7P155
+
+  ChangeLog@1.857 +1 -0
+    NTP_4_2_7P155
+
+  ntpd/ntpd-opts.c@1.160 +2 -2
+    NTP_4_2_7P155
+
+  ntpd/ntpd-opts.h@1.160 +3 -3
+    NTP_4_2_7P155
+
+  ntpd/ntpd-opts.texi@1.158 +2 -2
+    NTP_4_2_7P155
+
+  ntpd/ntpd.1@1.158 +2 -2
+    NTP_4_2_7P155
+
+  ntpdc/ntpdc-opts.c@1.157 +2 -2
+    NTP_4_2_7P155
+
+  ntpdc/ntpdc-opts.h@1.157 +3 -3
+    NTP_4_2_7P155
+
+  ntpdc/ntpdc-opts.texi@1.157 +2 -2
+    NTP_4_2_7P155
+
+  ntpdc/ntpdc.1@1.157 +2 -2
+    NTP_4_2_7P155
+
+  ntpq/ntpq-opts.c@1.157 +2 -2
+    NTP_4_2_7P155
+
+  ntpq/ntpq-opts.h@1.157 +3 -3
+    NTP_4_2_7P155
+
+  ntpq/ntpq-opts.texi@1.157 +2 -2
+    NTP_4_2_7P155
+
+  ntpq/ntpq.1@1.157 +2 -2
+    NTP_4_2_7P155
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.157 +2 -2
+    NTP_4_2_7P155
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.157 +3 -3
+    NTP_4_2_7P155
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.157 +2 -2
+    NTP_4_2_7P155
+
+  ntpsnmpd/ntpsnmpd.1@1.157 +2 -2
+    NTP_4_2_7P155
+
+  packageinfo.sh@1.157 +1 -1
+    NTP_4_2_7P155
+
+  sntp/sntp-opts.c@1.151 +2 -2
+    NTP_4_2_7P155
+
+  sntp/sntp-opts.h@1.151 +3 -3
+    NTP_4_2_7P155
+
+  sntp/sntp-opts.texi@1.151 +2 -2
+    NTP_4_2_7P155
+
+  sntp/sntp.1@1.151 +2 -2
+    NTP_4_2_7P155
+
+  sntp/sntp.html@1.151 +1 -1
+    NTP_4_2_7P155
+
+  util/ntp-keygen-opts.c@1.155 +2 -2
+    NTP_4_2_7P155
+
+  util/ntp-keygen-opts.h@1.155 +3 -3
+    NTP_4_2_7P155
+
+  util/ntp-keygen-opts.texi@1.158 +2 -2
+    NTP_4_2_7P155
+
+  util/ntp-keygen.1@1.158 +2 -2
+    NTP_4_2_7P155
+
+ChangeSet@1.2551, 2011-04-17 20:08:44+00:00, davehart@shiny.ad.hartbrothers.com
+  Automerge of ChangeLog got it wrong.
+
+  ChangeLog@1.856 +1 -1
+    Automerge of ChangeLog got it wrong.
+
+ChangeSet@1.2547.1.1, 2011-04-17 11:32:14+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P154
   TAG: NTP_4_2_7P154
 
-  ChangeLog@1.854 +1 -0
+  ChangeLog@1.853.1.1 +1 -0
     NTP_4_2_7P154
 
   ntpd/ntpd-opts.c@1.159 +2 -2
@@ -82,6 +173,30 @@ ChangeSet@1.2548, 2011-04-17 11:32:14+00:00, stenn@deacon.udel.edu
 
   util/ntp-keygen.1@1.157 +2 -2
     NTP_4_2_7P154
+
+ChangeSet@1.2549, 2011-04-17 08:22:57+00:00, davehart@shiny.ad.hartbrothers.com
+  Correct includes in lib/isc for strlcpy(), strlcat() prototypes.
+
+  lib/isc/log.c@1.5 +1 -1
+    Correct includes in lib/isc for strlcpy(), strlcat() prototypes.
+
+  lib/isc/netaddr.c@1.11 +1 -1
+    Correct includes in lib/isc for strlcpy(), strlcat() prototypes.
+
+  lib/isc/unix/dir.c@1.3 +1 -1
+    Correct includes in lib/isc for strlcpy(), strlcat() prototypes.
+
+  lib/isc/unix/file.c@1.3 +1 -1
+    Correct includes in lib/isc for strlcpy(), strlcat() prototypes.
+
+ChangeSet@1.2548, 2011-04-17 08:10:39+00:00, davehart@shiny.ad.hartbrothers.com
+  Fix leak in refclock_datum.c start failure path.
+
+  ChangeLog@1.854 +1 -0
+    Fix leak in refclock_datum.c start failure path.
+
+  ntpd/refclock_datum.c@1.19 +1 -0
+    Fix leak in refclock_datum.c start failure path.
 
 ChangeSet@1.2547, 2011-04-16 18:14:13+00:00, davehart@shiny.ad.hartbrothers.com
   [Bug 1887] DNS fails on 4.2.7p153 using threads.
