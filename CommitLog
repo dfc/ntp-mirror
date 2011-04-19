@@ -1,3 +1,97 @@
+ChangeSet@1.2554, 2011-04-19 06:55:02+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P156
+  TAG: NTP_4_2_7P156
+
+  ChangeLog@1.859 +1 -0
+    NTP_4_2_7P156
+
+  ntpd/ntpd-opts.c@1.161 +2 -2
+    NTP_4_2_7P156
+
+  ntpd/ntpd-opts.h@1.161 +3 -3
+    NTP_4_2_7P156
+
+  ntpd/ntpd-opts.texi@1.159 +2 -2
+    NTP_4_2_7P156
+
+  ntpd/ntpd.1@1.159 +2 -2
+    NTP_4_2_7P156
+
+  ntpdc/ntpdc-opts.c@1.158 +2 -2
+    NTP_4_2_7P156
+
+  ntpdc/ntpdc-opts.h@1.158 +3 -3
+    NTP_4_2_7P156
+
+  ntpdc/ntpdc-opts.texi@1.158 +2 -2
+    NTP_4_2_7P156
+
+  ntpdc/ntpdc.1@1.158 +2 -2
+    NTP_4_2_7P156
+
+  ntpq/ntpq-opts.c@1.158 +2 -2
+    NTP_4_2_7P156
+
+  ntpq/ntpq-opts.h@1.158 +3 -3
+    NTP_4_2_7P156
+
+  ntpq/ntpq-opts.texi@1.158 +2 -2
+    NTP_4_2_7P156
+
+  ntpq/ntpq.1@1.158 +2 -2
+    NTP_4_2_7P156
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.158 +2 -2
+    NTP_4_2_7P156
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.158 +3 -3
+    NTP_4_2_7P156
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.158 +2 -2
+    NTP_4_2_7P156
+
+  ntpsnmpd/ntpsnmpd.1@1.158 +2 -2
+    NTP_4_2_7P156
+
+  packageinfo.sh@1.158 +1 -1
+    NTP_4_2_7P156
+
+  sntp/sntp-opts.c@1.152 +2 -2
+    NTP_4_2_7P156
+
+  sntp/sntp-opts.h@1.152 +3 -3
+    NTP_4_2_7P156
+
+  sntp/sntp-opts.texi@1.152 +2 -2
+    NTP_4_2_7P156
+
+  sntp/sntp.1@1.152 +2 -2
+    NTP_4_2_7P156
+
+  sntp/sntp.html@1.152 +1 -1
+    NTP_4_2_7P156
+
+  util/ntp-keygen-opts.c@1.156 +2 -2
+    NTP_4_2_7P156
+
+  util/ntp-keygen-opts.h@1.156 +3 -3
+    NTP_4_2_7P156
+
+  util/ntp-keygen-opts.texi@1.159 +2 -2
+    NTP_4_2_7P156
+
+  util/ntp-keygen.1@1.159 +2 -2
+    NTP_4_2_7P156
+
+ChangeSet@1.2553, 2011-04-18 22:32:32+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 1851] freeaddrinfo() called after getaddrinfo() fails.
+
+  ChangeLog@1.858 +1 -0
+    [Bug 1851] freeaddrinfo() called after getaddrinfo() fails.
+
+  libntp/ntp_intres.c@1.96 +8 -7
+    [Bug 1851] freeaddrinfo() called after getaddrinfo() fails.
+
 ChangeSet@1.2552, 2011-04-18 04:58:45+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P155
   TAG: NTP_4_2_7P155
