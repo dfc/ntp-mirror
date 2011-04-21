@@ -1,3 +1,97 @@
+ChangeSet@1.2556, 2011-04-21 06:16:26+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P157
+  TAG: NTP_4_2_7P157
+
+  ChangeLog@1.861 +1 -0
+    NTP_4_2_7P157
+
+  ntpd/ntpd-opts.c@1.162 +2 -2
+    NTP_4_2_7P157
+
+  ntpd/ntpd-opts.h@1.162 +3 -3
+    NTP_4_2_7P157
+
+  ntpd/ntpd-opts.texi@1.160 +2 -2
+    NTP_4_2_7P157
+
+  ntpd/ntpd.1@1.160 +2 -2
+    NTP_4_2_7P157
+
+  ntpdc/ntpdc-opts.c@1.159 +2 -2
+    NTP_4_2_7P157
+
+  ntpdc/ntpdc-opts.h@1.159 +3 -3
+    NTP_4_2_7P157
+
+  ntpdc/ntpdc-opts.texi@1.159 +2 -2
+    NTP_4_2_7P157
+
+  ntpdc/ntpdc.1@1.159 +2 -2
+    NTP_4_2_7P157
+
+  ntpq/ntpq-opts.c@1.159 +2 -2
+    NTP_4_2_7P157
+
+  ntpq/ntpq-opts.h@1.159 +3 -3
+    NTP_4_2_7P157
+
+  ntpq/ntpq-opts.texi@1.159 +2 -2
+    NTP_4_2_7P157
+
+  ntpq/ntpq.1@1.159 +2 -2
+    NTP_4_2_7P157
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.159 +2 -2
+    NTP_4_2_7P157
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.159 +3 -3
+    NTP_4_2_7P157
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.159 +2 -2
+    NTP_4_2_7P157
+
+  ntpsnmpd/ntpsnmpd.1@1.159 +2 -2
+    NTP_4_2_7P157
+
+  packageinfo.sh@1.159 +1 -1
+    NTP_4_2_7P157
+
+  sntp/sntp-opts.c@1.153 +2 -2
+    NTP_4_2_7P157
+
+  sntp/sntp-opts.h@1.153 +3 -3
+    NTP_4_2_7P157
+
+  sntp/sntp-opts.texi@1.153 +2 -2
+    NTP_4_2_7P157
+
+  sntp/sntp.1@1.153 +2 -2
+    NTP_4_2_7P157
+
+  sntp/sntp.html@1.153 +1 -1
+    NTP_4_2_7P157
+
+  util/ntp-keygen-opts.c@1.157 +2 -2
+    NTP_4_2_7P157
+
+  util/ntp-keygen-opts.h@1.157 +3 -3
+    NTP_4_2_7P157
+
+  util/ntp-keygen-opts.texi@1.160 +2 -2
+    NTP_4_2_7P157
+
+  util/ntp-keygen.1@1.160 +2 -2
+    NTP_4_2_7P157
+
+ChangeSet@1.2555, 2011-04-19 09:38:26+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 1890] 4.2.7p156 segfault in duplicate freeaddrinfo().
+
+  ChangeLog@1.860 +1 -0
+    [Bug 1890] 4.2.7p156 segfault in duplicate freeaddrinfo().
+
+  libntp/ntp_intres.c@1.97 +0 -1
+    [Bug 1890] 4.2.7p156 segfault in duplicate freeaddrinfo().
+
 ChangeSet@1.2554, 2011-04-19 06:55:02+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P156
   TAG: NTP_4_2_7P156
