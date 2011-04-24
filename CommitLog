@@ -1,3 +1,104 @@
+ChangeSet@1.2558, 2011-04-24 07:38:50+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P158
+  TAG: NTP_4_2_7P158
+
+  ChangeLog@1.863 +1 -0
+    NTP_4_2_7P158
+
+  ntpd/ntpd-opts.c@1.163 +2 -2
+    NTP_4_2_7P158
+
+  ntpd/ntpd-opts.h@1.163 +3 -3
+    NTP_4_2_7P158
+
+  ntpd/ntpd-opts.texi@1.161 +2 -2
+    NTP_4_2_7P158
+
+  ntpd/ntpd.1@1.161 +2 -2
+    NTP_4_2_7P158
+
+  ntpdc/ntpdc-opts.c@1.160 +2 -2
+    NTP_4_2_7P158
+
+  ntpdc/ntpdc-opts.h@1.160 +3 -3
+    NTP_4_2_7P158
+
+  ntpdc/ntpdc-opts.texi@1.160 +2 -2
+    NTP_4_2_7P158
+
+  ntpdc/ntpdc.1@1.160 +2 -2
+    NTP_4_2_7P158
+
+  ntpq/ntpq-opts.c@1.160 +2 -2
+    NTP_4_2_7P158
+
+  ntpq/ntpq-opts.h@1.160 +3 -3
+    NTP_4_2_7P158
+
+  ntpq/ntpq-opts.texi@1.160 +2 -2
+    NTP_4_2_7P158
+
+  ntpq/ntpq.1@1.160 +2 -2
+    NTP_4_2_7P158
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.160 +2 -2
+    NTP_4_2_7P158
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.160 +3 -3
+    NTP_4_2_7P158
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.160 +2 -2
+    NTP_4_2_7P158
+
+  ntpsnmpd/ntpsnmpd.1@1.160 +2 -2
+    NTP_4_2_7P158
+
+  packageinfo.sh@1.160 +1 -1
+    NTP_4_2_7P158
+
+  sntp/sntp-opts.c@1.154 +2 -2
+    NTP_4_2_7P158
+
+  sntp/sntp-opts.h@1.154 +3 -3
+    NTP_4_2_7P158
+
+  sntp/sntp-opts.texi@1.154 +2 -2
+    NTP_4_2_7P158
+
+  sntp/sntp.1@1.154 +2 -2
+    NTP_4_2_7P158
+
+  sntp/sntp.html@1.154 +1 -1
+    NTP_4_2_7P158
+
+  util/ntp-keygen-opts.c@1.158 +2 -2
+    NTP_4_2_7P158
+
+  util/ntp-keygen-opts.h@1.158 +3 -3
+    NTP_4_2_7P158
+
+  util/ntp-keygen-opts.texi@1.161 +2 -2
+    NTP_4_2_7P158
+
+  util/ntp-keygen.1@1.161 +2 -2
+    NTP_4_2_7P158
+
+ChangeSet@1.2557, 2011-04-23 16:50:09+00:00, davehart@shiny.ad.hartbrothers.com
+  Update libevent --disable-libevent-regress handling to work when
+    building libevent using mingw.
+
+  ChangeLog@1.862 +2 -0
+    Update libevent --disable-libevent-regress handling to work when
+      building libevent using mingw.
+
+  sntp/libevent/configure.in@1.6 +0 -6
+    Update libevent --disable-libevent-regress handling to work when
+      building libevent using mingw.
+
+  sntp/libevent/test/Makefile.am@1.5 +4 -1
+    Update libevent --disable-libevent-regress handling to work when
+      building libevent using mingw.
+
 ChangeSet@1.2556, 2011-04-21 06:16:26+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P157
   TAG: NTP_4_2_7P157
