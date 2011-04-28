@@ -1,8 +1,110 @@
-ChangeSet@1.2558, 2011-04-24 07:38:50+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2560, 2011-04-28 06:47:56+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P159
+  TAG: NTP_4_2_7P159
+
+  ChangeLog@1.865 +1 -0
+    NTP_4_2_7P159
+
+  ntpd/ntpd-opts.c@1.164 +2 -2
+    NTP_4_2_7P159
+
+  ntpd/ntpd-opts.h@1.164 +3 -3
+    NTP_4_2_7P159
+
+  ntpd/ntpd-opts.texi@1.162 +2 -2
+    NTP_4_2_7P159
+
+  ntpd/ntpd.1@1.162 +2 -2
+    NTP_4_2_7P159
+
+  ntpdc/ntpdc-opts.c@1.161 +2 -2
+    NTP_4_2_7P159
+
+  ntpdc/ntpdc-opts.h@1.161 +3 -3
+    NTP_4_2_7P159
+
+  ntpdc/ntpdc-opts.texi@1.161 +2 -2
+    NTP_4_2_7P159
+
+  ntpdc/ntpdc.1@1.161 +2 -2
+    NTP_4_2_7P159
+
+  ntpq/ntpq-opts.c@1.161 +2 -2
+    NTP_4_2_7P159
+
+  ntpq/ntpq-opts.h@1.161 +3 -3
+    NTP_4_2_7P159
+
+  ntpq/ntpq-opts.texi@1.161 +2 -2
+    NTP_4_2_7P159
+
+  ntpq/ntpq.1@1.161 +2 -2
+    NTP_4_2_7P159
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.161 +2 -2
+    NTP_4_2_7P159
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.161 +3 -3
+    NTP_4_2_7P159
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.161 +2 -2
+    NTP_4_2_7P159
+
+  ntpsnmpd/ntpsnmpd.1@1.161 +2 -2
+    NTP_4_2_7P159
+
+  packageinfo.sh@1.161 +1 -1
+    NTP_4_2_7P159
+
+  sntp/sntp-opts.c@1.155 +2 -2
+    NTP_4_2_7P159
+
+  sntp/sntp-opts.h@1.155 +3 -3
+    NTP_4_2_7P159
+
+  sntp/sntp-opts.texi@1.155 +2 -2
+    NTP_4_2_7P159
+
+  sntp/sntp.1@1.155 +2 -2
+    NTP_4_2_7P159
+
+  sntp/sntp.html@1.155 +1 -1
+    NTP_4_2_7P159
+
+  util/ntp-keygen-opts.c@1.159 +2 -2
+    NTP_4_2_7P159
+
+  util/ntp-keygen-opts.h@1.159 +3 -3
+    NTP_4_2_7P159
+
+  util/ntp-keygen-opts.texi@1.162 +2 -2
+    NTP_4_2_7P159
+
+  util/ntp-keygen.1@1.162 +2 -2
+    NTP_4_2_7P159
+
+ChangeSet@1.2556.1.3, 2011-04-28 00:05:49-04:00, murray@pogo.udel.edu
+  ntp_io.c:
+    Fix unused variable warning (no IPv6)
+  ntp_control.c:
+    Fix unused variable warning (no REFCLOCKs)
+  ChangeLog:
+    Fix unused variable warnings.
+
+  ChangeLog@1.861.1.3 +1 -0
+    Fix unused variable warnings.
+
+  ntpd/ntp_control.c@1.168 +2 -0
+    Fix unused variable warning (no REFCLOCKs)
+
+  ntpd/ntp_io.c@1.353 +4 -1
+    Fix unused variable warning (no IPv6)
+
+ChangeSet@1.2556.1.2, 2011-04-24 07:38:50+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P158
   TAG: NTP_4_2_7P158
 
-  ChangeLog@1.863 +1 -0
+  ChangeLog@1.861.1.2 +1 -0
     NTP_4_2_7P158
 
   ntpd/ntpd-opts.c@1.163 +2 -2
@@ -83,11 +185,11 @@ ChangeSet@1.2558, 2011-04-24 07:38:50+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.161 +2 -2
     NTP_4_2_7P158
 
-ChangeSet@1.2557, 2011-04-23 16:50:09+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2556.1.1, 2011-04-23 16:50:09+00:00, davehart@shiny.ad.hartbrothers.com
   Update libevent --disable-libevent-regress handling to work when
     building libevent using mingw.
 
-  ChangeLog@1.862 +2 -0
+  ChangeLog@1.861.1.1 +2 -0
     Update libevent --disable-libevent-regress handling to work when
       building libevent using mingw.
 
@@ -98,6 +200,18 @@ ChangeSet@1.2557, 2011-04-23 16:50:09+00:00, davehart@shiny.ad.hartbrothers.com
   sntp/libevent/test/Makefile.am@1.5 +4 -1
     Update libevent --disable-libevent-regress handling to work when
       building libevent using mingw.
+
+ChangeSet@1.2557, 2011-04-23 11:38:29+02:00, jnperlin@hydra.localnet
+  minor cleanup in timespecops/timevalops
+
+  ChangeLog@1.862 +1 -0
+    minor cleanup in timespecops/timevalops
+
+  libntp/timespecops.c@1.6 +12 -69
+    unified with tvalops, use string formatting in libntp, fixed misleading comments
+
+  libntp/timevalops.c@1.7 +9 -4
+    fixed misleading comments
 
 ChangeSet@1.2556, 2011-04-21 06:16:26+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P157
