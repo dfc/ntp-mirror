@@ -1,4 +1,196 @@
-ChangeSet@1.2560, 2011-04-28 06:47:56+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2489, 2011-05-01 08:30:32+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P160
+  TAG: NTP_4_2_7P160
+
+  ChangeLog@1.868 +1 -0
+    NTP_4_2_7P160
+
+  ntpd/ntpd-opts.c@1.165 +41 -46
+    NTP_4_2_7P160
+
+  ntpd/ntpd-opts.h@1.165 +12 -12
+    NTP_4_2_7P160
+
+  ntpd/ntpd-opts.texi@1.163 +2 -2
+    NTP_4_2_7P160
+
+  ntpd/ntpd.1@1.163 +3 -2
+    NTP_4_2_7P160
+
+  ntpdc/ntpdc-opts.c@1.162 +41 -46
+    NTP_4_2_7P160
+
+  ntpdc/ntpdc-opts.h@1.162 +12 -12
+    NTP_4_2_7P160
+
+  ntpdc/ntpdc-opts.texi@1.162 +2 -2
+    NTP_4_2_7P160
+
+  ntpdc/ntpdc.1@1.162 +3 -2
+    NTP_4_2_7P160
+
+  ntpq/ntpq-opts.c@1.162 +41 -46
+    NTP_4_2_7P160
+
+  ntpq/ntpq-opts.h@1.162 +12 -12
+    NTP_4_2_7P160
+
+  ntpq/ntpq-opts.texi@1.162 +2 -2
+    NTP_4_2_7P160
+
+  ntpq/ntpq.1@1.162 +3 -2
+    NTP_4_2_7P160
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.162 +41 -46
+    NTP_4_2_7P160
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.162 +12 -12
+    NTP_4_2_7P160
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.162 +2 -2
+    NTP_4_2_7P160
+
+  ntpsnmpd/ntpsnmpd.1@1.162 +3 -2
+    NTP_4_2_7P160
+
+  packageinfo.sh@1.162 +1 -1
+    NTP_4_2_7P160
+
+  sntp/sntp-opts.c@1.156 +57 -97
+    NTP_4_2_7P160
+
+  sntp/sntp-opts.h@1.156 +12 -12
+    NTP_4_2_7P160
+
+  sntp/sntp-opts.texi@1.156 +6 -4
+    NTP_4_2_7P160
+
+  sntp/sntp.1@1.156 +69 -90
+    NTP_4_2_7P160
+
+  sntp/sntp.html@1.156 +5 -3
+    NTP_4_2_7P160
+
+  util/ntp-keygen-opts.c@1.160 +50 -73
+    NTP_4_2_7P160
+
+  util/ntp-keygen-opts.h@1.160 +12 -12
+    NTP_4_2_7P160
+
+  util/ntp-keygen-opts.texi@1.163 +4 -3
+    NTP_4_2_7P160
+
+  util/ntp-keygen.1@1.163 +3 -2
+    NTP_4_2_7P160
+
+ChangeSet@1.2082.4.206, 2011-05-01 02:47:38-04:00, stenn@deacon.udel.edu
+  hack around a possible regression in the new autogen
+
+  include/copyright.def@1.13.1.1 +4 -1
+    hack around a possible regression in the new autogen
+
+ChangeSet@1.2082.4.205, 2011-05-01 02:41:53-04:00, stenn@deacon.udel.edu
+  Upgrade to libopts 35.0.10 from AutoGen 5.11.9pre8
+
+  ChangeLog@1.496.26.143 +4 -0
+    Upgrade to libopts 35.0.10 from AutoGen 5.11.9pre8
+
+  sntp/libopts/Makefile.am@1.10 +16 -16
+    Updated to libopts-35.0.10
+
+  sntp/libopts/ag-char-map.h@1.13 +6 -6
+    Updated to libopts-35.0.10
+
+  sntp/libopts/autoopts.c@1.10 +2 -12
+    Updated to libopts-35.0.10
+
+  sntp/libopts/autoopts.h@1.9 +3 -37
+    Updated to libopts-35.0.10
+
+  sntp/libopts/autoopts/options.h@1.12 +21 -23
+    Updated to libopts-35.0.10
+
+  sntp/libopts/autoopts/project.h@1.1 +50 -0
+    BitKeeper file /deacon/backroom/ntp-stable/sntp/libopts/autoopts/project.h
+
+  sntp/libopts/autoopts/project.h@1.0 +0 -0
+
+  sntp/libopts/autoopts/usage-txt.h@1.12 +100 -95
+    Updated to libopts-35.0.10
+
+  sntp/libopts/configfile.c@1.11 +9 -9
+    Updated to libopts-35.0.10
+
+  sntp/libopts/cook.c@1.8 +85 -67
+    Updated to libopts-35.0.10
+
+  sntp/libopts/enumeration.c@1.8 +15 -10
+    Updated to libopts-35.0.10
+
+  sntp/libopts/environment.c@1.10 +22 -13
+    Updated to libopts-35.0.10
+
+  sntp/libopts/genshell.c@1.13 +58 -56
+    Updated to libopts-35.0.10
+
+  sntp/libopts/genshell.h@1.13 +46 -46
+    Updated to libopts-35.0.10
+
+  sntp/libopts/libopts.c@1.3 +5 -2
+    Updated to libopts-35.0.10
+
+  sntp/libopts/m4/libopts.m4@1.16 +22 -3
+    Updated to libopts-35.0.10
+
+  sntp/libopts/makeshell.c@1.9 +84 -58
+    Updated to libopts-35.0.10
+
+  sntp/libopts/numeric.c@1.8 +39 -47
+    Updated to libopts-35.0.10
+
+  sntp/libopts/parse-duration.c@1.5 +73 -54
+    Updated to libopts-35.0.10
+
+  sntp/libopts/parse-duration.h@1.5 +14 -14
+    Updated to libopts-35.0.10
+
+  sntp/libopts/pgusage.c@1.8 +1 -3
+    Updated to libopts-35.0.10
+
+  sntp/libopts/proto.h@1.13 +1 -4
+    Updated to libopts-35.0.10
+
+  sntp/libopts/save.c@1.9 +34 -41
+    Updated to libopts-35.0.10
+
+  sntp/libopts/time.c@1.8 +77 -29
+    Updated to libopts-35.0.10
+
+  sntp/libopts/value-type.h@1.13 +1 -1
+    Updated to libopts-35.0.10
+
+  sntp/libopts/version.c@1.8 +82 -51
+    Updated to libopts-35.0.10
+
+  sntp/libopts/xat-attribute.h@1.13 +1 -1
+    Updated to libopts-35.0.10
+
+ChangeSet@1.2487, 2011-04-30 03:15:11-04:00, stenn@psp-deb1.ntp.org
+  [Bug 1901] Simulator does not set progname.
+
+  ChangeLog@1.866 +1 -0
+    [Bug 1901] Simulator does not set progname.
+
+  ntpd/ntpd.c@1.126 +1 -0
+    [Bug 1901] Simulator does not set progname.
+
+ChangeSet@1.2479.1.82, 2011-04-28 21:42:13-04:00, stenn@deacon.udel.edu
+  cleanup the bk ignore file - add sntp/scm-rev, remove old version stuff
+
+  BitKeeper/etc/ignore@1.79 +12 -11
+    cleanup the bk ignore file - add sntp/scm-rev, remove old version stuff
+
+ChangeSet@1.2479.1.81, 2011-04-28 06:47:56+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P159
   TAG: NTP_4_2_7P159
 
@@ -83,7 +275,7 @@ ChangeSet@1.2560, 2011-04-28 06:47:56+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.162 +2 -2
     NTP_4_2_7P159
 
-ChangeSet@1.2556.1.3, 2011-04-28 00:05:49-04:00, murray@pogo.udel.edu
+ChangeSet@1.2479.12.3, 2011-04-28 00:05:49-04:00, murray@pogo.udel.edu
   ntp_io.c:
     Fix unused variable warning (no IPv6)
   ntp_control.c:
@@ -100,7 +292,7 @@ ChangeSet@1.2556.1.3, 2011-04-28 00:05:49-04:00, murray@pogo.udel.edu
   ntpd/ntp_io.c@1.353 +4 -1
     Fix unused variable warning (no IPv6)
 
-ChangeSet@1.2556.1.2, 2011-04-24 07:38:50+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2479.12.2, 2011-04-24 07:38:50+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P158
   TAG: NTP_4_2_7P158
 
@@ -185,7 +377,7 @@ ChangeSet@1.2556.1.2, 2011-04-24 07:38:50+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.161 +2 -2
     NTP_4_2_7P158
 
-ChangeSet@1.2556.1.1, 2011-04-23 16:50:09+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.12.1, 2011-04-23 16:50:09+00:00, davehart@shiny.ad.hartbrothers.com
   Update libevent --disable-libevent-regress handling to work when
     building libevent using mingw.
 
@@ -201,7 +393,7 @@ ChangeSet@1.2556.1.1, 2011-04-23 16:50:09+00:00, davehart@shiny.ad.hartbrothers.
     Update libevent --disable-libevent-regress handling to work when
       building libevent using mingw.
 
-ChangeSet@1.2557, 2011-04-23 11:38:29+02:00, jnperlin@hydra.localnet
+ChangeSet@1.2479.1.78, 2011-04-23 11:38:29+02:00, jnperlin@hydra.localnet
   minor cleanup in timespecops/timevalops
 
   ChangeLog@1.862 +1 -0
@@ -213,7 +405,7 @@ ChangeSet@1.2557, 2011-04-23 11:38:29+02:00, jnperlin@hydra.localnet
   libntp/timevalops.c@1.7 +9 -4
     fixed misleading comments
 
-ChangeSet@1.2556, 2011-04-21 06:16:26+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2479.1.77, 2011-04-21 06:16:26+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P157
   TAG: NTP_4_2_7P157
 
@@ -298,7 +490,7 @@ ChangeSet@1.2556, 2011-04-21 06:16:26+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.160 +2 -2
     NTP_4_2_7P157
 
-ChangeSet@1.2555, 2011-04-19 09:38:26+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.1.76, 2011-04-19 09:38:26+00:00, davehart@shiny.ad.hartbrothers.com
   [Bug 1890] 4.2.7p156 segfault in duplicate freeaddrinfo().
 
   ChangeLog@1.860 +1 -0
@@ -307,7 +499,7 @@ ChangeSet@1.2555, 2011-04-19 09:38:26+00:00, davehart@shiny.ad.hartbrothers.com
   libntp/ntp_intres.c@1.97 +0 -1
     [Bug 1890] 4.2.7p156 segfault in duplicate freeaddrinfo().
 
-ChangeSet@1.2554, 2011-04-19 06:55:02+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2479.1.75, 2011-04-19 06:55:02+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P156
   TAG: NTP_4_2_7P156
 
@@ -392,7 +584,7 @@ ChangeSet@1.2554, 2011-04-19 06:55:02+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.159 +2 -2
     NTP_4_2_7P156
 
-ChangeSet@1.2553, 2011-04-18 22:32:32+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.1.74, 2011-04-18 22:32:32+00:00, davehart@shiny.ad.hartbrothers.com
   [Bug 1851] freeaddrinfo() called after getaddrinfo() fails.
 
   ChangeLog@1.858 +1 -0
@@ -401,7 +593,7 @@ ChangeSet@1.2553, 2011-04-18 22:32:32+00:00, davehart@shiny.ad.hartbrothers.com
   libntp/ntp_intres.c@1.96 +8 -7
     [Bug 1851] freeaddrinfo() called after getaddrinfo() fails.
 
-ChangeSet@1.2552, 2011-04-18 04:58:45+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2479.1.73, 2011-04-18 04:58:45+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P155
   TAG: NTP_4_2_7P155
 
@@ -486,13 +678,13 @@ ChangeSet@1.2552, 2011-04-18 04:58:45+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.158 +2 -2
     NTP_4_2_7P155
 
-ChangeSet@1.2551, 2011-04-17 20:08:44+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.1.72, 2011-04-17 20:08:44+00:00, davehart@shiny.ad.hartbrothers.com
   Automerge of ChangeLog got it wrong.
 
   ChangeLog@1.856 +1 -1
     Automerge of ChangeLog got it wrong.
 
-ChangeSet@1.2547.1.1, 2011-04-17 11:32:14+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2479.11.1, 2011-04-17 11:32:14+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P154
   TAG: NTP_4_2_7P154
 
@@ -577,7 +769,7 @@ ChangeSet@1.2547.1.1, 2011-04-17 11:32:14+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.157 +2 -2
     NTP_4_2_7P154
 
-ChangeSet@1.2549, 2011-04-17 08:22:57+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.1.70, 2011-04-17 08:22:57+00:00, davehart@shiny.ad.hartbrothers.com
   Correct includes in lib/isc for strlcpy(), strlcat() prototypes.
 
   lib/isc/log.c@1.5 +1 -1
@@ -592,7 +784,7 @@ ChangeSet@1.2549, 2011-04-17 08:22:57+00:00, davehart@shiny.ad.hartbrothers.com
   lib/isc/unix/file.c@1.3 +1 -1
     Correct includes in lib/isc for strlcpy(), strlcat() prototypes.
 
-ChangeSet@1.2548, 2011-04-17 08:10:39+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.1.69, 2011-04-17 08:10:39+00:00, davehart@shiny.ad.hartbrothers.com
   Fix leak in refclock_datum.c start failure path.
 
   ChangeLog@1.854 +1 -0
@@ -601,7 +793,7 @@ ChangeSet@1.2548, 2011-04-17 08:10:39+00:00, davehart@shiny.ad.hartbrothers.com
   ntpd/refclock_datum.c@1.19 +1 -0
     Fix leak in refclock_datum.c start failure path.
 
-ChangeSet@1.2547, 2011-04-16 18:14:13+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.1.68, 2011-04-16 18:14:13+00:00, davehart@shiny.ad.hartbrothers.com
   [Bug 1887] DNS fails on 4.2.7p153 using threads.
 
   ChangeLog@1.853 +1 -0
@@ -610,7 +802,7 @@ ChangeSet@1.2547, 2011-04-16 18:14:13+00:00, davehart@shiny.ad.hartbrothers.com
   libntp/work_thread.c@1.9 +4 -3
     [Bug 1887] DNS fails on 4.2.7p153 using threads.
 
-ChangeSet@1.2546, 2011-04-16 07:31:48+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2479.1.67, 2011-04-16 07:31:48+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P153
   TAG: NTP_4_2_7P153
 
@@ -695,7 +887,7 @@ ChangeSet@1.2546, 2011-04-16 07:31:48+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.156 +2 -2
     NTP_4_2_7P153
 
-ChangeSet@1.2545, 2011-04-15 19:53:04+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.1.66, 2011-04-15 19:53:04+00:00, davehart@shiny.ad.hartbrothers.com
   A few more Coverity Scan cleanups.
 
   ChangeLog@1.851 +1 -0
@@ -744,7 +936,7 @@ ChangeSet@1.2461.1.3, 2011-04-15 11:33:32+00:00, davehart@shiny.ad.hartbrothers.
   sntp/libevent/sample/http-server.c@1.1.1.2 +5 -4
     libevent HEAD 20110415 11:33 UTC d28fc52815023113840fb9e108ada0126964a799
 
-ChangeSet@1.2543, 2011-04-15 08:46:52+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2479.1.64, 2011-04-15 08:46:52+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P152
   TAG: NTP_4_2_7P152
 
@@ -829,7 +1021,7 @@ ChangeSet@1.2543, 2011-04-15 08:46:52+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.155 +2 -2
     NTP_4_2_7P152
 
-ChangeSet@1.2542, 2011-04-15 00:12:03+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.1.63, 2011-04-15 00:12:03+00:00, davehart@shiny.ad.hartbrothers.com
   Automerge cleanup
 
   ChangeLog@1.849 +1 -0
@@ -1070,7 +1262,7 @@ ChangeSet@1.2461.1.1, 2011-04-14 19:55:12+00:00, davehart@shiny.ad.hartbrothers.
   sntp/libevent/win32select.c@1.2 +2 -1
     libevent 2.1 (prerelease git head bfdda26534ea66b847760720260a4b4d8fcefe58)
 
-ChangeSet@1.2539, 2011-04-14 08:03:48+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2479.1.60, 2011-04-14 08:03:48+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P151
   TAG: NTP_4_2_7P151
 
@@ -1155,7 +1347,7 @@ ChangeSet@1.2539, 2011-04-14 08:03:48+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.154 +2 -2
     NTP_4_2_7P151
 
-ChangeSet@1.2538, 2011-04-14 05:30:10+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.1.59, 2011-04-14 05:30:10+00:00, davehart@shiny.ad.hartbrothers.com
   Log failure to fetch time from HOPF_P hardware.
   Check HOPF_S sscanf() conversion count before converted values.
   Correct mvsnprintf() and mvfprintf() for vsnprintf() that handles %m.
@@ -1179,7 +1371,7 @@ ChangeSet@1.2538, 2011-04-14 05:30:10+00:00, davehart@shiny.ad.hartbrothers.com
   sntp/main.c@1.71 +7 -7
     nonfunctional, makes static analysis happy.
 
-ChangeSet@1.2537, 2011-04-14 02:00:02+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.1.58, 2011-04-14 02:00:02+00:00, davehart@shiny.ad.hartbrothers.com
   Detect vsnprintf() support for "%m" and disable our "%m" expansion.
   Add --enable-c99-sprintf to configure args for -noopenssl variety of
     flock-build to avoid regressions in (v)snprintf() replacement.
@@ -1225,7 +1417,7 @@ ChangeSet@1.2537, 2011-04-14 02:00:02+00:00, davehart@shiny.ad.hartbrothers.com
   tests/libntp/msyslog.cpp@1.3 +74 -22
     More msnprintf() unit tests.
 
-ChangeSet@1.2536, 2011-04-13 04:57:19+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2479.1.57, 2011-04-13 04:57:19+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P150
   TAG: NTP_4_2_7P150
 
@@ -1310,7 +1502,7 @@ ChangeSet@1.2536, 2011-04-13 04:57:19+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.153 +2 -2
     NTP_4_2_7P150
 
-ChangeSet@1.2535, 2011-04-13 02:22:24+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.1.56, 2011-04-13 02:22:24+00:00, davehart@shiny.ad.hartbrothers.com
   ntp_proto.c sprintf() -> snprintf()
 
   ChangeLog@1.844 +1 -1
@@ -1319,7 +1511,7 @@ ChangeSet@1.2535, 2011-04-13 02:22:24+00:00, davehart@shiny.ad.hartbrothers.com
   ntpd/ntp_proto.c@1.320 +3 -2
     ntp_proto.c sprintf() -> snprintf()
 
-ChangeSet@1.2534, 2011-04-13 01:02:31+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.1.55, 2011-04-13 01:02:31+00:00, davehart@shiny.ad.hartbrothers.com
   Move rpl_vsnprintf() declaration and #define vsnprintf to config.h
 
   include/l_stdlib.h@1.20 +0 -10
@@ -1346,7 +1538,7 @@ ChangeSet@1.2534, 2011-04-13 01:02:31+00:00, davehart@shiny.ad.hartbrothers.com
   tests/libntp/msyslog.cpp@1.2 +1 -0
     strerror() prototyped by string.h
 
-ChangeSet@1.2533, 2011-04-12 06:01:57+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.1.54, 2011-04-12 06:01:57+00:00, davehart@shiny.ad.hartbrothers.com
   Remove remaining sprintf() calls except refclock_ripencc.c (which is
     kept out of --enable-all-clocks as a result), upstream libs which use
     sprintf() ony after careful buffer sizing, and ntp_proto.c.
@@ -1432,7 +1624,7 @@ ChangeSet@1.2533, 2011-04-12 06:01:57+00:00, davehart@shiny.ad.hartbrothers.com
   util/tg2.c@1.5 +28 -19
     sprintf() -> snprintf().
 
-ChangeSet@1.2527.1.1, 2011-04-11 21:24:15+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.9.1, 2011-04-11 21:24:15+00:00, davehart@shiny.ad.hartbrothers.com
   Remove never-used, incomplete ports/winnt/ntpd/refclock_trimbledc.[ch]
   On systems without C99-compliant (v)snprintf(), use C99-snprintf
     replacements.  (http://www.jhweiss.de/software/snprintf.html)
@@ -1508,7 +1700,7 @@ ChangeSet@1.2527.1.1, 2011-04-11 21:24:15+00:00, davehart@shiny.ad.hartbrothers.
 
   sntp/m4/snprintf.m4@1.0 +0 -0
 
-ChangeSet@1.2531, 2011-04-11 07:20:42+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2479.1.52, 2011-04-11 07:20:42+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P149
   TAG: NTP_4_2_7P149
 
@@ -1593,7 +1785,7 @@ ChangeSet@1.2531, 2011-04-11 07:20:42+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.152 +2 -2
     NTP_4_2_7P149
 
-ChangeSet@1.2530, 2011-04-10 22:39:36-07:00, harlan@hms-mbp.local
+ChangeSet@1.2479.1.51, 2011-04-10 22:39:36-07:00, harlan@hms-mbp.local
   Cleanup autoconf macro ordering/dependencies
 
   configure.ac@1.523 +1 -0
@@ -1610,13 +1802,13 @@ ChangeSet@1.2530, 2011-04-10 22:39:36-07:00, harlan@hms-mbp.local
 
   sntp/m4/ntp_prog_cc.m4@1.0 +0 -0
 
-ChangeSet@1.2529, 2011-04-10 18:45:38-07:00, harlan@hms-mbp.local
+ChangeSet@1.2479.1.50, 2011-04-10 18:45:38-07:00, harlan@hms-mbp.local
   [Bug 1881] describe the {+,-,s} characters in configure --help output
 
   ChangeLog@1.840 +1 -0
     [Bug 1881] describe the {+,-,s} characters in configure --help output
 
-ChangeSet@1.2526.1.1, 2011-04-10 18:39:40-07:00, harlan@hms-mbp.local
+ChangeSet@1.2479.8.1, 2011-04-10 18:39:40-07:00, harlan@hms-mbp.local
   Bug 1881: describe the {+,-,s} characters in configure --help output
 
   configure.ac@1.522 +5 -2
@@ -1628,7 +1820,7 @@ ChangeSet@1.2526.1.1, 2011-04-10 18:39:40-07:00, harlan@hms-mbp.local
   sntp/m4/ntp_libntp.m4@1.10 +10 -2
     Bug 1881: describe the {+,-,s} characters in configure --help output
 
-ChangeSet@1.2527, 2011-04-09 07:09:13+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2479.1.48, 2011-04-09 07:09:13+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P148
   TAG: NTP_4_2_7P148
 
@@ -1713,7 +1905,7 @@ ChangeSet@1.2527, 2011-04-09 07:09:13+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.151 +2 -2
     NTP_4_2_7P148
 
-ChangeSet@1.2526, 2011-04-09 06:20:32+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.1.47, 2011-04-09 06:20:32+00:00, davehart@shiny.ad.hartbrothers.com
   Buffer safety and sign extension fixes (thanks Coverity Scan).
 
   ChangeLog@1.838 +1 -0
@@ -1753,7 +1945,7 @@ ChangeSet@1.2526, 2011-04-09 06:20:32+00:00, davehart@shiny.ad.hartbrothers.com
     sprintf() -> snprintf().
     Protect against buffer overrun in sprintb().
 
-ChangeSet@1.2519.1.4, 2011-04-08 02:02:48+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.7.4, 2011-04-08 02:02:48+00:00, davehart@shiny.ad.hartbrothers.com
   Use _mkgmtime() as timegm() in the Windows port, rather than
     libntp/mktime.c's timegm().  Fixed [Bug 1875] on Windows using the old
     asn2ntp() code from before 4.2.7p147.
@@ -1798,7 +1990,7 @@ ChangeSet@1.2519.1.4, 2011-04-08 02:02:48+00:00, davehart@shiny.ad.hartbrothers.
   util/ntp-keygen.c@1.81 +26 -21
     Remove duplicate BN_CTX_new() call from gen_gqkey(), flagged by Coverity.
 
-ChangeSet@1.2524, 2011-04-07 11:30:15+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2479.1.45, 2011-04-07 11:30:15+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P147
   TAG: NTP_4_2_7P147
 
@@ -1883,13 +2075,13 @@ ChangeSet@1.2524, 2011-04-07 11:30:15+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.150 +2 -2
     NTP_4_2_7P147
 
-ChangeSet@1.2522, 2011-04-05 19:23:34+02:00, jnperlin@hydra.localnet
+ChangeSet@1.2479.1.43, 2011-04-05 19:23:34+02:00, jnperlin@hydra.localnet
   [bug 1875] 'asn2ntp()' rewritten in terms of 'caltontp()' (ChangeLog update)
 
   ChangeLog@1.832.1.1 +2 -0
     [bug 1875] 'asn2ntp()' rewritten in terms of 'caltontp()'
 
-ChangeSet@1.2519.1.3, 2011-04-05 07:50:37+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2479.7.3, 2011-04-05 07:50:37+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P146
   TAG: NTP_4_2_7P146
 
@@ -1974,7 +2166,7 @@ ChangeSet@1.2519.1.3, 2011-04-05 07:50:37+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.149 +2 -2
     NTP_4_2_7P146
 
-ChangeSet@1.2519.1.2, 2011-04-05 07:30:59+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.7.2, 2011-04-05 07:30:59+00:00, davehart@shiny.ad.hartbrothers.com
   ChangeLog entry for prior cset.
   String buffer safety cleanup, converting to strlcpy() and strlcat().
   Use utmpname() before pututline() so repeated steps do not
@@ -1988,7 +2180,7 @@ ChangeSet@1.2519.1.2, 2011-04-05 07:30:59+00:00, davehart@shiny.ad.hartbrothers.
       accidentally record into wtmp where utmp was intended.
     Use setutent() before each pututline() including first.
 
-ChangeSet@1.2519.1.1, 2011-04-05 07:05:55+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.7.1, 2011-04-05 07:05:55+00:00, davehart@shiny.ad.hartbrothers.com
   String buffer safety cleanup, converting to strlcpy() and strlcat().
   Use utmpname() before pututline() so repeated steps do not accidentally
     record into wtmp where utmp was intended.
@@ -2180,19 +2372,19 @@ ChangeSet@1.2519.1.1, 2011-04-05 07:05:55+00:00, davehart@shiny.ad.hartbrothers.
     strcpy() -> strlcpy()
     strncat() -> strlcat()
 
-ChangeSet@1.2521, 2011-04-04 18:39:05+02:00, jnperlin@hydra.localnet
+ChangeSet@1.2479.1.42, 2011-04-04 18:39:05+02:00, jnperlin@hydra.localnet
   bug1875 added missing header
 
   ntpd/ntp_crypto.c@1.157 +1 -0
     added missing header
 
-ChangeSet@1.2520, 2011-04-04 18:37:14+02:00, jnperlin@hydra.localnet
+ChangeSet@1.2479.1.41, 2011-04-04 18:37:14+02:00, jnperlin@hydra.localnet
   bug1875: timegm() from libntp blows up with 64bit time_t on Windows
 
   ntpd/ntp_crypto.c@1.156 +14 -13
     bug1875: timegm() from libntp blows up with 64bit time_t on Windows
 
-ChangeSet@1.2519, 2011-04-04 11:43:59+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2479.1.40, 2011-04-04 11:43:59+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P145
   TAG: NTP_4_2_7P145
 
@@ -2277,7 +2469,7 @@ ChangeSet@1.2519, 2011-04-04 11:43:59+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.148 +2 -2
     NTP_4_2_7P145
 
-ChangeSet@1.2518, 2011-04-03 19:25:33+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.1.39, 2011-04-03 19:25:33+00:00, davehart@shiny.ad.hartbrothers.com
   Cleanup a few Coverity static analysis warnings.
 
   include/ntp_config.h@1.71 +3 -2
@@ -2300,7 +2492,7 @@ ChangeSet@1.2518, 2011-04-03 19:25:33+00:00, davehart@shiny.ad.hartbrothers.com
   ntpd/refclock_nmea.c@1.60 +8 -6
     leave room for terminating NUL by calling readlink with sizeof(...) - 1.
 
-ChangeSet@1.2517, 2011-04-03 17:35:33+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.1.38, 2011-04-03 17:35:33+00:00, davehart@shiny.ad.hartbrothers.com
   [Bug 1840] ntp_lists.h FIFO macros buggy.
 
   ChangeLog@1.831 +1 -0
@@ -2318,7 +2510,7 @@ ChangeSet@1.2517, 2011-04-03 17:35:33+00:00, davehart@shiny.ad.hartbrothers.com
     Move CHECK_FIFO_CONSISTENCY guts from macro to function so debuggers
       can highlight the failing check rather than entire macro invocation.
 
-ChangeSet@1.2516, 2011-04-03 06:35:28+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2479.1.37, 2011-04-03 06:35:28+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P144
   TAG: NTP_4_2_7P144
 
@@ -2403,7 +2595,7 @@ ChangeSet@1.2516, 2011-04-03 06:35:28+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.147 +2 -2
     NTP_4_2_7P144
 
-ChangeSet@1.2515, 2011-04-02 06:32:52+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.1.36, 2011-04-02 06:32:52+00:00, davehart@shiny.ad.hartbrothers.com
   [Bug 1874] ntpq -c "rv 0 sys_var_list" empty.
 
   ChangeLog@1.829 +1 -0
@@ -2415,7 +2607,7 @@ ChangeSet@1.2515, 2011-04-02 06:32:52+00:00, davehart@shiny.ad.hartbrothers.com
   ntpq/ntpq.c@1.134 +10 -10
     [Bug 1874] ntpq -c "rv 0 sys_var_list" empty.
 
-ChangeSet@1.2514, 2011-03-31 18:16:47+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2479.1.35, 2011-03-31 18:16:47+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P143
   TAG: NTP_4_2_7P143
 
@@ -2500,13 +2692,13 @@ ChangeSet@1.2514, 2011-03-31 18:16:47+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.146 +2 -2
     NTP_4_2_7P143
 
-ChangeSet@1.2513, 2011-03-31 13:11:38-04:00, stenn@deacon.udel.edu
+ChangeSet@1.2479.1.34, 2011-03-31 13:11:38-04:00, stenn@deacon.udel.edu
   Temporarily restore legacy ppsclock global fdpps for trak, zyfer refclocks
 
   ntpd/ntp_refclock.c@1.106 +6 -1
     Temporarily restore legacy ppsclock global fdpps for trak, zyfer refclocks
 
-ChangeSet@1.2512, 2011-03-30 04:53:34+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.1.33, 2011-03-30 04:53:34+00:00, davehart@shiny.ad.hartbrothers.com
   Follow Ralf Wildenhues' advice for avoiding dead-code elimination
     in configure test for in6addr_any.
 
@@ -2514,7 +2706,7 @@ ChangeSet@1.2512, 2011-03-30 04:53:34+00:00, davehart@shiny.ad.hartbrothers.com
     Follow Ralf Wildenhues' advice for avoiding dead-code elimination
       in configure test for in6addr_any.
 
-ChangeSet@1.2511, 2011-03-29 13:35:13+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.1.32, 2011-03-29 13:35:13+00:00, davehart@shiny.ad.hartbrothers.com
   [Bug 1862] in6addr_any test in configure fooled by arm gcc 4.1.3 -O2.
 
   ChangeLog@1.827 +1 -0
@@ -2526,7 +2718,7 @@ ChangeSet@1.2511, 2011-03-29 13:35:13+00:00, davehart@shiny.ad.hartbrothers.com
   sntp/m4/ntp_ipv6.m4@1.3 +2 -2
     [Bug 1862] in6addr_any test in configure fooled by arm gcc 4.1.3 -O2.
 
-ChangeSet@1.2508.1.1, 2011-03-28 02:29:10+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.6.1, 2011-03-28 02:29:10+00:00, davehart@shiny.ad.hartbrothers.com
   Remove "signal_no_reset: signal 17 had flags 4000000" logging, as it
     indicates no problem and is interpreted as an error.  Previously some
     bits had been ignored one-by-one, but Linux SA_RESTORER definition is
@@ -2548,7 +2740,7 @@ ChangeSet@1.2508.1.1, 2011-03-28 02:29:10+00:00, davehart@shiny.ad.hartbrothers.
   sntp/m4/ntp_libntp.m4@1.8 +0 -12
     Remove unneeded dead code.
 
-ChangeSet@1.2509, 2011-03-26 02:03:35+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.1.30, 2011-03-26 02:03:35+00:00, davehart@shiny.ad.hartbrothers.com
   [Bug 1861] tickadj build failure using uClibc.
 
   ChangeLog@1.825 +1 -0
@@ -2566,7 +2758,7 @@ ChangeSet@1.2509, 2011-03-26 02:03:35+00:00, davehart@shiny.ad.hartbrothers.com
   util/tickadj.c@1.12 +12 -9
     [Bug 1861] tickadj build failure using uClibc.
 
-ChangeSet@1.2508, 2011-03-23 07:14:48+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.1.29, 2011-03-23 07:14:48+00:00, davehart@shiny.ad.hartbrothers.com
   [Bug 1732] ntpd ties up CPU on disconnected USB refclock.
 
   ChangeLog@1.824 +1 -0
@@ -2575,7 +2767,7 @@ ChangeSet@1.2508, 2011-03-23 07:14:48+00:00, davehart@shiny.ad.hartbrothers.com
   ntpd/ntp_io.c@1.350 +39 -12
     [Bug 1732] ntpd ties up CPU on disconnected USB refclock.
 
-ChangeSet@1.2505.1.2, 2011-03-21 07:57:54+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2479.5.2, 2011-03-21 07:57:54+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P142
   TAG: NTP_4_2_7P142
 
@@ -2666,7 +2858,7 @@ ChangeSet@1.2505.1.2, 2011-03-21 07:57:54+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.145 +2 -2
     NTP_4_2_7P142
 
-ChangeSet@1.2505.1.1, 2011-03-21 06:28:29+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.5.1, 2011-03-21 06:28:29+00:00, davehart@shiny.ad.hartbrothers.com
   [Bug 1844] ntpd 4.2.7p131 NetBSD, ld --gc-sections links bad executable.
 
   ChangeLog@1.821.1.1 +2 -0
@@ -2682,7 +2874,7 @@ ChangeSet@1.2505.1.1, 2011-03-21 06:28:29+00:00, davehart@shiny.ad.hartbrothers.
   sntp/m4/ntp_compiler.m4@1.2 +45 -7
     [Bug 1844] ntpd 4.2.7p131 NetBSD, ld --gc-sections links bad executable.
 
-ChangeSet@1.2504.1.1, 2011-03-20 20:39:43+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.4.1, 2011-03-20 20:39:43+00:00, davehart@shiny.ad.hartbrothers.com
   Remove kernel line discipline driver code for clk and chu, deprecate
     related LDISC_ flags, and remove associated ntpd code to decode the
     timestamps, remove clktest line discipline test program.
@@ -2791,7 +2983,7 @@ ChangeSet@1.2504.1.1, 2011-03-20 20:39:43+00:00, davehart@shiny.ad.hartbrothers.
       related LDISC_ flags, and remove associated ntpd code to decode the
       timestamps, remove clktest line discipline test program.
 
-ChangeSet@1.2505, 2011-03-20 11:16:10+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2479.1.26, 2011-03-20 11:16:10+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P141
   TAG: NTP_4_2_7P141
 
@@ -2882,7 +3074,7 @@ ChangeSet@1.2505, 2011-03-20 11:16:10+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.144 +2 -2
     NTP_4_2_7P141
 
-ChangeSet@1.2504, 2011-03-19 20:14:05+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.1.25, 2011-03-19 20:14:05+00:00, davehart@shiny.ad.hartbrothers.com
   Add overlooked ChangeLog entry for refclock_pps() (was in commit comment
     but not ChangeLog text).
 
@@ -2890,7 +3082,7 @@ ChangeSet@1.2504, 2011-03-19 20:14:05+00:00, davehart@shiny.ad.hartbrothers.com
     Add overlooked ChangeLog entry for refclock_pps() (was in commit comment
       but not ChangeLog text).
 
-ChangeSet@1.2503, 2011-03-19 16:38:10+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.1.24, 2011-03-19 16:38:10+00:00, davehart@shiny.ad.hartbrothers.com
   Add "ntpq -c iostats" similar to "ntpdc -c iostats".
   Compare entire timestamp to reject duplicates in refclock_pps().
 
@@ -2910,7 +3102,7 @@ ChangeSet@1.2503, 2011-03-19 16:38:10+00:00, davehart@shiny.ad.hartbrothers.com
   ports/winnt/ntpd/ntp_iocompletionport.c@1.58 +7 -3
     Add "ntpq -c iostats" similar to "ntpdc -c iostats".
 
-ChangeSet@1.2502, 2011-03-17 11:20:23+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2479.1.23, 2011-03-17 11:20:23+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P140
   TAG: NTP_4_2_7P140
 
@@ -3001,7 +3193,7 @@ ChangeSet@1.2502, 2011-03-17 11:20:23+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.143 +2 -2
     NTP_4_2_7P140
 
-ChangeSet@1.2501, 2011-03-17 01:25:14+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.1.22, 2011-03-17 01:25:14+00:00, davehart@shiny.ad.hartbrothers.com
   [Bug 1848] ntpd 4.2.7p139 --disable-thread-support does not compile.
   Add --disable-thread-support to one flock-build variation.
   One more lock-while-init in lib/isc/task.c to quiet lock analysis.
@@ -3023,7 +3215,7 @@ ChangeSet@1.2501, 2011-03-17 01:25:14+00:00, davehart@shiny.ad.hartbrothers.com
   libntp/work_fork.c@1.10 +2 -2
     [Bug 1848] ntpd 4.2.7p139 --disable-thread-support does not compile.
 
-ChangeSet@1.2500, 2011-03-16 11:35:50+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2479.1.21, 2011-03-16 11:35:50+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P139
   TAG: NTP_4_2_7P139
 
@@ -3114,13 +3306,13 @@ ChangeSet@1.2500, 2011-03-16 11:35:50+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.142 +2 -2
     NTP_4_2_7P139
 
-ChangeSet@1.2499, 2011-03-16 04:58:25-04:00, stenn@deacon.udel.edu
+ChangeSet@1.2479.1.20, 2011-03-16 04:58:25-04:00, stenn@deacon.udel.edu
   typo
 
   ChangeLog@1.815 +1 -1
     typo
 
-ChangeSet@1.2498, 2011-03-16 02:09:56+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.1.19, 2011-03-16 02:09:56+00:00, davehart@shiny.ad.hartbrothers.com
   [Bug 1848] make check ntpd --saveconfigquit clutters syslog.
 
   ChangeLog@1.814 +2 -1
@@ -3144,7 +3336,7 @@ ChangeSet@1.2498, 2011-03-16 02:09:56+00:00, davehart@shiny.ad.hartbrothers.com
   sntp/log.c@1.21 +3 -2
     [Bug 1848] make check ntpd --saveconfigquit clutters syslog.
 
-ChangeSet@1.2497, 2011-03-08 11:17:41+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2479.1.18, 2011-03-08 11:17:41+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P138
   TAG: NTP_4_2_7P138
 
@@ -3235,13 +3427,13 @@ ChangeSet@1.2497, 2011-03-08 11:17:41+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.141 +2 -2
     NTP_4_2_7P138
 
-ChangeSet@1.2496, 2011-03-08 01:10:53-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2479.1.17, 2011-03-08 01:10:53-05:00, stenn@deacon.udel.edu
   [Bug 1846] MacOSX: debug symbol not found by propdelay or tickadj
 
   ChangeLog@1.812 +1 -0
     [Bug 1846] MacOSX: debug symbol not found by propdelay or tickadj
 
-ChangeSet@1.2495, 2011-03-07 12:12:49-08:00, harlan@hms-mbp.local
+ChangeSet@1.2479.1.16, 2011-03-07 12:12:49-08:00, harlan@hms-mbp.local
   Call init_lib() in propdelay and tickadj just to get the debug symbol from libntp
 
   clockstuff/propdelay.c@1.7 +2 -0
@@ -3250,7 +3442,7 @@ ChangeSet@1.2495, 2011-03-07 12:12:49-08:00, harlan@hms-mbp.local
   util/tickadj.c@1.11 +2 -0
     Call init_lib() just to get the debug symbol from libntp
 
-ChangeSet@1.2492.1.1, 2011-03-07 10:19:45+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.3.1, 2011-03-07 10:19:45+00:00, davehart@shiny.ad.hartbrothers.com
   Lock under-construction task, taskmgr objects to satisfy Coverity's
     mostly-correct assumptions about which variables are protected by
     which locks.
@@ -3265,7 +3457,7 @@ ChangeSet@1.2492.1.1, 2011-03-07 10:19:45+00:00, davehart@shiny.ad.hartbrothers.
       mostly-correct assumptions about which variables are protected by
       which locks.
 
-ChangeSet@1.2493, 2011-03-07 10:06:50+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2479.1.14, 2011-03-07 10:06:50+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P137
   TAG: NTP_4_2_7P137
 
@@ -3356,7 +3548,7 @@ ChangeSet@1.2493, 2011-03-07 10:06:50+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.140 +2 -2
     NTP_4_2_7P137
 
-ChangeSet@1.2492, 2011-03-06 01:24:22+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.1.13, 2011-03-06 01:24:22+00:00, davehart@shiny.ad.hartbrothers.com
   Add overlooked ChangeLog entry for last cset.
 
   ChangeLog@1.809 +2 -0
@@ -3368,7 +3560,7 @@ ChangeSet@1.2492, 2011-03-06 01:24:22+00:00, davehart@shiny.ad.hartbrothers.com
   ntpd/declcond.h@1.2 +4 -0
     Use multiple-inclusion guard.
 
-ChangeSet@1.2491, 2011-03-05 22:35:37+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.1.12, 2011-03-05 22:35:37+00:00, davehart@shiny.ad.hartbrothers.com
   Use TRACE() instead of DPRINTF() for libntp and utilities, which
     use the "debug" variable regardless of #ifdef DEBUG.
   Declare debug in libntp instead of each program.  Expose extern declaration
@@ -3554,7 +3746,7 @@ ChangeSet@1.2491, 2011-03-05 22:35:37+00:00, davehart@shiny.ad.hartbrothers.com
     Declare debug in libntp instead of each program.  Expose extern declaration
       to utilities, libntp, and DEBUG ntpd.
 
-ChangeSet@1.2490, 2011-03-02 07:25:19+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2479.1.11, 2011-03-02 07:25:19+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P136
   TAG: NTP_4_2_7P136
 
@@ -3645,7 +3837,7 @@ ChangeSet@1.2490, 2011-03-02 07:25:19+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.139 +2 -2
     NTP_4_2_7P136
 
-ChangeSet@1.2489, 2011-03-02 06:13:26+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.1.10, 2011-03-02 06:13:26+00:00, davehart@shiny.ad.hartbrothers.com
   [Bug 1839] 4.2.7p135 still installs libevent ev*.h headers.
 
   ChangeLog@1.806 +1 -0
@@ -3654,7 +3846,7 @@ ChangeSet@1.2489, 2011-03-02 06:13:26+00:00, davehart@shiny.ad.hartbrothers.com
   sntp/libevent/Makefile.am@1.3 +8 -2
     [Bug 1839] 4.2.7p135 still installs libevent ev*.h headers.
 
-ChangeSet@1.2488, 2011-03-02 00:29:27+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2479.1.9, 2011-03-02 00:29:27+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P135
   TAG: NTP_4_2_7P135
 
@@ -3745,7 +3937,7 @@ ChangeSet@1.2488, 2011-03-02 00:29:27+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.138 +2 -2
     NTP_4_2_7P135
 
-ChangeSet@1.2487, 2011-03-01 04:48:43+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.1.8, 2011-03-01 04:48:43+00:00, davehart@shiny.ad.hartbrothers.com
   libevent: When building on systems with CLOCK_MONOTONIC available,
     separate the internal timeline (possibly counting since system boot)
     from the gettimeofday() timeline in event_base cached timevals.  Adds
@@ -3837,7 +4029,7 @@ ChangeSet@1.2487, 2011-03-01 04:48:43+00:00, davehart@shiny.ad.hartbrothers.com
   sntp/utilities.c@1.17 +5 -14
     use prettydate() for l_fp_output()
 
-ChangeSet@1.2486, 2011-02-25 12:37:40+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.1.7, 2011-02-25 12:37:40+00:00, davehart@shiny.ad.hartbrothers.com
   [Bug 1839] 4.2.7p131 installs libevent ev*.h headers.
 
   ChangeLog@1.803 +1 -0
@@ -3846,7 +4038,7 @@ ChangeSet@1.2486, 2011-02-25 12:37:40+00:00, davehart@shiny.ad.hartbrothers.com
   sntp/libevent/include/Makefile.am@1.2 +9 -2
     [Bug 1839] 4.2.7p131 installs libevent ev*.h headers.
 
-ChangeSet@1.2485, 2011-02-25 12:36:58+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.1.6, 2011-02-25 12:36:58+00:00, davehart@shiny.ad.hartbrothers.com
   Ensure CONFIG_SHELL is not empty before relying on it for #! scripts.
 
   ChangeLog@1.802 +1 -0
@@ -3855,7 +4047,7 @@ ChangeSet@1.2485, 2011-02-25 12:36:58+00:00, davehart@shiny.ad.hartbrothers.com
   configure.ac@1.519 +1 -0
     Ensure CONFIG_SHELL is not empty before relying on it for #! scripts.
 
-ChangeSet@1.2484, 2011-02-24 10:50:23+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2479.1.5, 2011-02-24 10:50:23+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P134
   TAG: NTP_4_2_7P134
 
@@ -3946,7 +4138,7 @@ ChangeSet@1.2484, 2011-02-24 10:50:23+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.137 +2 -2
     NTP_4_2_7P134
 
-ChangeSet@1.2479.1.4, 2011-02-24 04:21:34+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.2.4, 2011-02-24 04:21:34+00:00, davehart@shiny.ad.hartbrothers.com
   Another ac_cv_path* variable needs clearing to prevent caching the
     full path to pkg-config.
 
@@ -3954,13 +4146,13 @@ ChangeSet@1.2479.1.4, 2011-02-24 04:21:34+00:00, davehart@shiny.ad.hartbrothers.
     Another ac_cv_path* variable needs clearing to prevent caching the
       full path to pkg-config.
 
-ChangeSet@1.2482, 2011-02-23 16:58:30-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2479.1.3, 2011-02-23 16:58:30-05:00, stenn@deacon.udel.edu
   merge cleanup
 
   ChangeLog@1.800 +7 -7
     merge cleanup
 
-ChangeSet@1.2479.1.3, 2011-02-23 20:34:51+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.2.3, 2011-02-23 20:34:51+00:00, davehart@shiny.ad.hartbrothers.com
   Fix make distcheck failure seen on psp-deb1 by distributing
     sntp/tests/data files individually by name rather than
     listing "data".
@@ -3970,7 +4162,7 @@ ChangeSet@1.2479.1.3, 2011-02-23 20:34:51+00:00, davehart@shiny.ad.hartbrothers.
       sntp/tests/data files individually by name rather than
       listing "data".
 
-ChangeSet@1.2479.1.1, 2011-02-23 18:57:00+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2479.2.1, 2011-02-23 18:57:00+00:00, davehart@shiny.ad.hartbrothers.com
   [Bug 1837] Build fails on Win7 due to regedit requiring privilege.
   Provide fallback definitions for GetAdaptersAddresses() for Windows
     build environments lacking iphlpapi.h.
@@ -4020,7 +4212,7 @@ ChangeSet@1.2479.1.1, 2011-02-23 18:57:00+00:00, davehart@shiny.ad.hartbrothers.
   ports/winnt/vs2008/libntp/libntp.vcproj@1.39 +6 -2
     add gaa_compat.h reference
 
-  sntp/Makefile.am@1.58 +14 -9
+  sntp/Makefile.am@1.57.1.1 +14 -9
     Rename cset file from sntp/version to sntp/scm-rev.
     Fixes psp-deb1 make distcheck failure on sntp/version.o, which was
       using an implicit rule to build presumed-executable "version" from
@@ -4032,7 +4224,7 @@ ChangeSet@1.2479.1.1, 2011-02-23 18:57:00+00:00, davehart@shiny.ad.hartbrothers.
   util/Makefile.am@1.59 +8 -6
     Rename cset file from sntp/version to sntp/scm-rev.
 
-ChangeSet@1.2480, 2011-02-23 11:06:18+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2479.1.1, 2011-02-23 11:06:18+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P133
   TAG: NTP_4_2_7P133
 
@@ -4122,6 +4314,12 @@ ChangeSet@1.2480, 2011-02-23 11:06:18+00:00, stenn@deacon.udel.edu
 
   util/ntp-keygen.1@1.136 +2 -2
     NTP_4_2_7P133
+
+ChangeSet@1.2478.1.1, 2011-02-22 19:38:18-05:00, stenn@psp-deb1.ntp.org
+  Start using the new autogen doc template
+
+  sntp/Makefile.am@1.56.1.1 +1 -1
+    Start using the new autogen doc template
 
 ChangeSet@1.2479, 2011-02-22 23:21:13+00:00, davehart@shiny.ad.hartbrothers.com
   [Bug 1834] ntpdate 4.2.7p131 aborts with assertion failure.

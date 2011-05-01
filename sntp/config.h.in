@@ -657,6 +657,10 @@
 /* define to 1 if library is thread safe */
 #undef LDAP_API_FEATURE_X_OPENLDAP_THREAD_SAFE
 
+/* Define to the sub-directory in which libtool stores uninstalled libraries.
+   */
+#undef LT_OBJDIR
+
 /* Does the target support multicast IP? */
 #undef MCAST
 
@@ -704,6 +708,9 @@
 
 /* Define to the version of this package. */
 #undef PACKAGE_VERSION
+
+/* define to a working POSIX compliant shell */
+#undef POSIX_SHELL
 
 /* enable thread safety */
 #undef REENTRANT

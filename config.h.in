@@ -1263,6 +1263,10 @@
 /* Should we align with the NIST lockclock scheme? */
 #undef LOCKCLOCK
 
+/* Define to the sub-directory in which libtool stores uninstalled libraries.
+   */
+#undef LT_OBJDIR
+
 /* Does the target support multicast IP? */
 #undef MCAST
 
@@ -1367,6 +1371,9 @@
 
 /* Define to the version of this package. */
 #undef PACKAGE_VERSION
+
+/* define to a working POSIX compliant shell */
+#undef POSIX_SHELL
 
 /* PARSE kernel PLL PPS support */
 #undef PPS_SYNC
