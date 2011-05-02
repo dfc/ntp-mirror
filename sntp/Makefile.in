@@ -48,11 +48,13 @@ DIST_COMMON = $(am__configure_deps) $(srcdir)/Makefile.am \
 	$(srcdir)/Makefile.in $(srcdir)/config.h.in \
 	$(top_srcdir)/bincheck.mf $(top_srcdir)/check-libntp.mf \
 	$(top_srcdir)/check-libopts.mf $(top_srcdir)/configure \
-	$(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf \
-	build-aux/compile build-aux/config.guess build-aux/config.sub \
-	build-aux/depcomp build-aux/install-sh build-aux/ltmain.sh \
-	build-aux/missing build-aux/ylwrap compile config.guess \
-	config.sub depcomp install-sh ltmain.sh missing
+	$(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf compile \
+	config.guess config.sub depcomp install-sh \
+	libevent/build-aux/compile libevent/build-aux/config.guess \
+	libevent/build-aux/config.sub libevent/build-aux/depcomp \
+	libevent/build-aux/install-sh libevent/build-aux/ltmain.sh \
+	libevent/build-aux/missing libevent/build-aux/ylwrap ltmain.sh \
+	missing
 subdir = .
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/libopts/m4/libopts.m4 \
@@ -102,7 +104,7 @@ AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
 am__v_lt_0 = --silent
 DEFAULT_INCLUDES = -I.@am__isrc@
-depcomp = $(SHELL) $(top_srcdir)/build-aux/depcomp
+depcomp = $(SHELL) $(top_srcdir)/libevent/build-aux/depcomp
 am__depfiles_maybe = depfiles
 am__mv = mv -f
 COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \

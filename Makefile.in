@@ -38,10 +38,14 @@ DIST_COMMON = README $(am__configure_deps) $(srcdir)/Makefile.am \
 	$(srcdir)/Makefile.in $(srcdir)/config.h.in \
 	$(top_srcdir)/configure ChangeLog INSTALL NEWS TODO compile \
 	config.guess config.sub depcomp install-sh ltmain.sh missing \
-	sntp/build-aux/compile sntp/build-aux/config.guess \
-	sntp/build-aux/config.sub sntp/build-aux/depcomp \
-	sntp/build-aux/install-sh sntp/build-aux/ltmain.sh \
-	sntp/build-aux/missing sntp/build-aux/ylwrap ylwrap
+	sntp/libevent/build-aux/compile \
+	sntp/libevent/build-aux/config.guess \
+	sntp/libevent/build-aux/config.sub \
+	sntp/libevent/build-aux/depcomp \
+	sntp/libevent/build-aux/install-sh \
+	sntp/libevent/build-aux/ltmain.sh \
+	sntp/libevent/build-aux/missing sntp/libevent/build-aux/ylwrap \
+	ylwrap
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/libevent/m4/openldap-thread-check.m4 \
@@ -61,6 +65,7 @@ am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/m4/ntp_googletest.m4 \
 	$(top_srcdir)/sntp/m4/ntp_ipv6.m4 \
 	$(top_srcdir)/sntp/m4/ntp_lib_m.m4 \
+	$(top_srcdir)/sntp/m4/ntp_libevent.m4 \
 	$(top_srcdir)/sntp/m4/ntp_libntp.m4 \
 	$(top_srcdir)/sntp/m4/ntp_lineeditlibs.m4 \
 	$(top_srcdir)/sntp/m4/ntp_openssl.m4 \
@@ -379,7 +384,7 @@ BUILT_SOURCES = \
 
 
 # HMS: The following seems to be a work-in-progress...
-CVO = `$(srcdir)/sntp/build-aux/config.guess`
+CVO = `$(srcdir)/sntp/libevent/build-aux/config.guess`
 BHOST = `(hostname || uname -n)`
 all: $(BUILT_SOURCES) config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-recursive

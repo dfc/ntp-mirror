@@ -1,3 +1,160 @@
+ChangeSet@1.2494, 2011-05-02 21:14:30+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P161
+  TAG: NTP_4_2_7P161
+
+  ChangeLog@1.872 +1 -0
+    NTP_4_2_7P161
+
+  ntpd/ntpd-opts.c@1.166 +3 -3
+    NTP_4_2_7P161
+
+  ntpd/ntpd-opts.h@1.166 +3 -3
+    NTP_4_2_7P161
+
+  ntpd/ntpd-opts.texi@1.164 +2 -2
+    NTP_4_2_7P161
+
+  ntpd/ntpd.1@1.164 +2 -2
+    NTP_4_2_7P161
+
+  ntpdc/ntpdc-opts.c@1.163 +3 -3
+    NTP_4_2_7P161
+
+  ntpdc/ntpdc-opts.h@1.163 +3 -3
+    NTP_4_2_7P161
+
+  ntpdc/ntpdc-opts.texi@1.163 +2 -2
+    NTP_4_2_7P161
+
+  ntpdc/ntpdc.1@1.163 +2 -2
+    NTP_4_2_7P161
+
+  ntpq/ntpq-opts.c@1.163 +3 -3
+    NTP_4_2_7P161
+
+  ntpq/ntpq-opts.h@1.163 +3 -3
+    NTP_4_2_7P161
+
+  ntpq/ntpq-opts.texi@1.163 +2 -2
+    NTP_4_2_7P161
+
+  ntpq/ntpq.1@1.163 +2 -2
+    NTP_4_2_7P161
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.163 +3 -3
+    NTP_4_2_7P161
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.163 +3 -3
+    NTP_4_2_7P161
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.163 +2 -2
+    NTP_4_2_7P161
+
+  ntpsnmpd/ntpsnmpd.1@1.163 +2 -2
+    NTP_4_2_7P161
+
+  packageinfo.sh@1.163 +1 -1
+    NTP_4_2_7P161
+
+  sntp/sntp-opts.c@1.157 +3 -3
+    NTP_4_2_7P161
+
+  sntp/sntp-opts.h@1.157 +3 -3
+    NTP_4_2_7P161
+
+  sntp/sntp-opts.texi@1.157 +2 -2
+    NTP_4_2_7P161
+
+  sntp/sntp.1@1.157 +2 -2
+    NTP_4_2_7P161
+
+  sntp/sntp.html@1.157 +1 -1
+    NTP_4_2_7P161
+
+  util/ntp-keygen-opts.c@1.161 +3 -3
+    NTP_4_2_7P161
+
+  util/ntp-keygen-opts.h@1.161 +3 -3
+    NTP_4_2_7P161
+
+  util/ntp-keygen-opts.texi@1.164 +2 -2
+    NTP_4_2_7P161
+
+  util/ntp-keygen.1@1.164 +2 -2
+    NTP_4_2_7P161
+
+ChangeSet@1.2493, 2011-05-01 22:57:03+00:00, davehart@shiny.ad.hartbrothers.com
+  Add missing --enable-local-libevent help to top-level configure.
+
+  ChangeLog@1.871 +1 -0
+    Add missing --enable-local-libevent help to top-level configure.
+
+  configure.ac@1.527 +2 -0
+    Add missing --enable-local-libevent help to top-level configure.
+
+  sntp/m4/ntp_libevent.m4@1.7 +24 -10
+    Add missing --enable-local-libevent help to top-level configure.
+
+ChangeSet@1.2492, 2011-05-01 21:15:54+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 1906] 4.2.7p160 - libtool: compile: cannot determine name of
+    library object in ./libevent
+  Share a single sntp/libevent/build-aux directory between all three
+    configure scripts.
+
+  ChangeLog@1.870 +4 -0
+    [Bug 1906] 4.2.7p160 - libtool: compile: cannot determine name of
+      library object in ./libevent
+    Share a single sntp/libevent/build-aux directory between all three
+      configure scripts.
+
+  Makefile.am@1.109 +1 -1
+    [Bug 1906] 4.2.7p160 - libtool: compile: cannot determine name of
+      library object in ./libevent
+    Share a single sntp/libevent/build-aux directory between all three
+      configure scripts.
+
+  build@1.45 +2 -2
+    [Bug 1906] 4.2.7p160 - libtool: compile: cannot determine name of
+      library object in ./libevent
+    Share a single sntp/libevent/build-aux directory between all three
+      configure scripts.
+
+  configure.ac@1.526 +1 -1
+    [Bug 1906] 4.2.7p160 - libtool: compile: cannot determine name of
+      library object in ./libevent
+    Share a single sntp/libevent/build-aux directory between all three
+      configure scripts.
+
+  flock-build@1.52 +1 -1
+    [Bug 1906] 4.2.7p160 - libtool: compile: cannot determine name of
+      library object in ./libevent
+    Share a single sntp/libevent/build-aux directory between all three
+      configure scripts.
+
+  sntp/configure.ac@1.61 +1 -1
+    [Bug 1906] 4.2.7p160 - libtool: compile: cannot determine name of
+      library object in ./libevent
+    Share a single sntp/libevent/build-aux directory between all three
+      configure scripts.
+
+  sntp/libevent/configure.in@1.7 +1 -0
+    [Bug 1906] 4.2.7p160 - libtool: compile: cannot determine name of
+      library object in ./libevent
+    Share a single sntp/libevent/build-aux directory between all three
+      configure scripts.
+
+ChangeSet@1.2491, 2011-05-01 10:40:29+00:00, davehart@shiny.ad.hartbrothers.com
+  ChangeLog entry needed for -dev, which rolled with the bug.
+
+  ChangeLog@1.869 +1 -0
+    ChangeLog entry needed for -dev, which rolled with the bug.
+
+ChangeSet@1.2082.4.207, 2011-05-01 10:37:55+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 1904] New: 4.2.7p160 Windows build broken (POSIX_SHELL).
+
+  ports/winnt/include/config.h@1.79.1.4 +1 -0
+    [Bug 1904] New: 4.2.7p160 Windows build broken (POSIX_SHELL).
+
 ChangeSet@1.2489, 2011-05-01 08:30:32+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P160
   TAG: NTP_4_2_7P160
