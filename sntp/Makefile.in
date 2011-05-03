@@ -48,13 +48,11 @@ DIST_COMMON = $(am__configure_deps) $(srcdir)/Makefile.am \
 	$(srcdir)/Makefile.in $(srcdir)/config.h.in \
 	$(top_srcdir)/bincheck.mf $(top_srcdir)/check-libntp.mf \
 	$(top_srcdir)/check-libopts.mf $(top_srcdir)/configure \
-	$(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf compile \
-	config.guess config.sub depcomp install-sh \
+	$(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf install-sh \
 	libevent/build-aux/compile libevent/build-aux/config.guess \
 	libevent/build-aux/config.sub libevent/build-aux/depcomp \
 	libevent/build-aux/install-sh libevent/build-aux/ltmain.sh \
-	libevent/build-aux/missing libevent/build-aux/ylwrap ltmain.sh \
-	missing
+	libevent/build-aux/missing libevent/build-aux/ylwrap
 subdir = .
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/libopts/m4/libopts.m4 \

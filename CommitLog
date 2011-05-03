@@ -1,3 +1,106 @@
+ChangeSet@1.2497, 2011-05-03 09:00:25+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P162
+  TAG: NTP_4_2_7P162
+
+  ChangeLog@1.874 +1 -0
+    NTP_4_2_7P162
+
+  ntpd/ntpd-opts.c@1.167 +3 -3
+    NTP_4_2_7P162
+
+  ntpd/ntpd-opts.h@1.167 +3 -3
+    NTP_4_2_7P162
+
+  ntpd/ntpd-opts.texi@1.165 +2 -2
+    NTP_4_2_7P162
+
+  ntpd/ntpd.1@1.165 +2 -2
+    NTP_4_2_7P162
+
+  ntpdc/ntpdc-opts.c@1.164 +3 -3
+    NTP_4_2_7P162
+
+  ntpdc/ntpdc-opts.h@1.164 +3 -3
+    NTP_4_2_7P162
+
+  ntpdc/ntpdc-opts.texi@1.164 +2 -2
+    NTP_4_2_7P162
+
+  ntpdc/ntpdc.1@1.164 +2 -2
+    NTP_4_2_7P162
+
+  ntpq/ntpq-opts.c@1.164 +3 -3
+    NTP_4_2_7P162
+
+  ntpq/ntpq-opts.h@1.164 +3 -3
+    NTP_4_2_7P162
+
+  ntpq/ntpq-opts.texi@1.164 +2 -2
+    NTP_4_2_7P162
+
+  ntpq/ntpq.1@1.164 +2 -2
+    NTP_4_2_7P162
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.164 +3 -3
+    NTP_4_2_7P162
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.164 +3 -3
+    NTP_4_2_7P162
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.164 +2 -2
+    NTP_4_2_7P162
+
+  ntpsnmpd/ntpsnmpd.1@1.164 +2 -2
+    NTP_4_2_7P162
+
+  packageinfo.sh@1.164 +1 -1
+    NTP_4_2_7P162
+
+  sntp/sntp-opts.c@1.158 +3 -3
+    NTP_4_2_7P162
+
+  sntp/sntp-opts.h@1.158 +3 -3
+    NTP_4_2_7P162
+
+  sntp/sntp-opts.texi@1.158 +2 -2
+    NTP_4_2_7P162
+
+  sntp/sntp.1@1.158 +2 -2
+    NTP_4_2_7P162
+
+  sntp/sntp.html@1.158 +1 -1
+    NTP_4_2_7P162
+
+  util/ntp-keygen-opts.c@1.162 +3 -3
+    NTP_4_2_7P162
+
+  util/ntp-keygen-opts.h@1.162 +3 -3
+    NTP_4_2_7P162
+
+  util/ntp-keygen-opts.texi@1.165 +2 -2
+    NTP_4_2_7P162
+
+  util/ntp-keygen.1@1.165 +2 -2
+    NTP_4_2_7P162
+
+ChangeSet@1.2496, 2011-05-02 21:16:22-07:00, harlan@hms-mbp.local
+  [Bug 1910] Support the Tristate Ltd. TS-GPSclock-01
+
+  ChangeLog@1.873 +1 -0
+    [Bug 1910] Support the Tristate Ltd. TS-GPSclock-01
+
+  html/drivers/driver40.html@1.15 +95 -23
+    [Bug 1910] Support the Tristate Ltd. TS-GPSclock-01
+
+  ntpd/refclock_jjy.c@1.24 +368 -24
+    [Bug 1910] Support the Tristate Ltd. TS-GPSclock-01
+
+ChangeSet@1.2495, 2011-05-02 17:58:58-04:00, stenn@deacon.udel.edu
+  more ignore file cleanup
+
+  BitKeeper/etc/ignore@1.80 +7 -11
+    more ignore file cleanup
+
 ChangeSet@1.2494, 2011-05-02 21:14:30+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P161
   TAG: NTP_4_2_7P161

@@ -36,16 +36,14 @@ host_triplet = @host@
 subdir = .
 DIST_COMMON = README $(am__configure_deps) $(srcdir)/Makefile.am \
 	$(srcdir)/Makefile.in $(srcdir)/config.h.in \
-	$(top_srcdir)/configure ChangeLog INSTALL NEWS TODO compile \
-	config.guess config.sub depcomp install-sh ltmain.sh missing \
+	$(top_srcdir)/configure ChangeLog INSTALL NEWS TODO install-sh \
 	sntp/libevent/build-aux/compile \
 	sntp/libevent/build-aux/config.guess \
 	sntp/libevent/build-aux/config.sub \
 	sntp/libevent/build-aux/depcomp \
 	sntp/libevent/build-aux/install-sh \
 	sntp/libevent/build-aux/ltmain.sh \
-	sntp/libevent/build-aux/missing sntp/libevent/build-aux/ylwrap \
-	ylwrap
+	sntp/libevent/build-aux/missing sntp/libevent/build-aux/ylwrap
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/libevent/m4/openldap-thread-check.m4 \
