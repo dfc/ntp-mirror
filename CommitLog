@@ -1,3 +1,99 @@
+ChangeSet@1.2499, 2011-05-08 09:10:24+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P163
+  TAG: NTP_4_2_7P163
+
+  ChangeLog@1.876 +1 -0
+    NTP_4_2_7P163
+
+  ntpd/ntpd-opts.c@1.168 +3 -3
+    NTP_4_2_7P163
+
+  ntpd/ntpd-opts.h@1.168 +3 -3
+    NTP_4_2_7P163
+
+  ntpd/ntpd-opts.texi@1.166 +2 -2
+    NTP_4_2_7P163
+
+  ntpd/ntpd.1@1.166 +2 -2
+    NTP_4_2_7P163
+
+  ntpdc/ntpdc-opts.c@1.165 +3 -3
+    NTP_4_2_7P163
+
+  ntpdc/ntpdc-opts.h@1.165 +3 -3
+    NTP_4_2_7P163
+
+  ntpdc/ntpdc-opts.texi@1.165 +2 -2
+    NTP_4_2_7P163
+
+  ntpdc/ntpdc.1@1.165 +2 -2
+    NTP_4_2_7P163
+
+  ntpq/ntpq-opts.c@1.165 +3 -3
+    NTP_4_2_7P163
+
+  ntpq/ntpq-opts.h@1.165 +3 -3
+    NTP_4_2_7P163
+
+  ntpq/ntpq-opts.texi@1.165 +2 -2
+    NTP_4_2_7P163
+
+  ntpq/ntpq.1@1.165 +2 -2
+    NTP_4_2_7P163
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.165 +3 -3
+    NTP_4_2_7P163
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.165 +3 -3
+    NTP_4_2_7P163
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.165 +2 -2
+    NTP_4_2_7P163
+
+  ntpsnmpd/ntpsnmpd.1@1.165 +2 -2
+    NTP_4_2_7P163
+
+  packageinfo.sh@1.165 +1 -1
+    NTP_4_2_7P163
+
+  sntp/sntp-opts.c@1.159 +3 -3
+    NTP_4_2_7P163
+
+  sntp/sntp-opts.h@1.159 +3 -3
+    NTP_4_2_7P163
+
+  sntp/sntp-opts.texi@1.159 +2 -2
+    NTP_4_2_7P163
+
+  sntp/sntp.1@1.159 +2 -2
+    NTP_4_2_7P163
+
+  sntp/sntp.html@1.159 +1 -1
+    NTP_4_2_7P163
+
+  util/ntp-keygen-opts.c@1.163 +3 -3
+    NTP_4_2_7P163
+
+  util/ntp-keygen-opts.h@1.163 +3 -3
+    NTP_4_2_7P163
+
+  util/ntp-keygen-opts.texi@1.166 +2 -2
+    NTP_4_2_7P163
+
+  util/ntp-keygen.1@1.166 +2 -2
+    NTP_4_2_7P163
+
+ChangeSet@1.2498, 2011-05-08 01:58:37+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 1911] missing curly brace in libntp/ntp_rfc2553.c
+
+  ChangeLog@1.875 +1 -0
+    [Bug 1911] missing curly brace in libntp/ntp_rfc2553.c
+
+  libntp/ntp_rfc2553.c@1.47 +57 -35
+    [Bug 1911] missing curly brace in libntp/ntp_rfc2553.c
+    Refactor copy_addrinfo_common() code out of copy_addrinfo_impl()
+      and copy_addrinfo_list_impl().
+
 ChangeSet@1.2497, 2011-05-03 09:00:25+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P162
   TAG: NTP_4_2_7P162
