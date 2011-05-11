@@ -1,8 +1,125 @@
+ChangeSet@1.2502, 2011-05-11 00:48:33+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P164
+  TAG: NTP_4_2_7P164
+
+  ChangeLog@1.870 +1 -0
+    NTP_4_2_7P164
+
+  ntpd/ntpd-opts.c@1.169 +3 -3
+    NTP_4_2_7P164
+
+  ntpd/ntpd-opts.h@1.169 +3 -3
+    NTP_4_2_7P164
+
+  ntpd/ntpd-opts.texi@1.167 +2 -2
+    NTP_4_2_7P164
+
+  ntpd/ntpd.1@1.167 +2 -2
+    NTP_4_2_7P164
+
+  ntpdc/ntpdc-opts.c@1.166 +3 -3
+    NTP_4_2_7P164
+
+  ntpdc/ntpdc-opts.h@1.166 +3 -3
+    NTP_4_2_7P164
+
+  ntpdc/ntpdc-opts.texi@1.166 +2 -2
+    NTP_4_2_7P164
+
+  ntpdc/ntpdc.1@1.166 +2 -2
+    NTP_4_2_7P164
+
+  ntpq/ntpq-opts.c@1.166 +3 -3
+    NTP_4_2_7P164
+
+  ntpq/ntpq-opts.h@1.166 +3 -3
+    NTP_4_2_7P164
+
+  ntpq/ntpq-opts.texi@1.166 +2 -2
+    NTP_4_2_7P164
+
+  ntpq/ntpq.1@1.166 +2 -2
+    NTP_4_2_7P164
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.166 +3 -3
+    NTP_4_2_7P164
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.166 +3 -3
+    NTP_4_2_7P164
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.166 +2 -2
+    NTP_4_2_7P164
+
+  ntpsnmpd/ntpsnmpd.1@1.166 +2 -2
+    NTP_4_2_7P164
+
+  packageinfo.sh@1.166 +1 -1
+    NTP_4_2_7P164
+
+  sntp/sntp-opts.c@1.160 +3 -3
+    NTP_4_2_7P164
+
+  sntp/sntp-opts.h@1.160 +3 -3
+    NTP_4_2_7P164
+
+  sntp/sntp-opts.texi@1.160 +2 -2
+    NTP_4_2_7P164
+
+  sntp/sntp.1@1.160 +2 -2
+    NTP_4_2_7P164
+
+  sntp/sntp.html@1.160 +1 -1
+    NTP_4_2_7P164
+
+  util/ntp-keygen-opts.c@1.164 +3 -3
+    NTP_4_2_7P164
+
+  util/ntp-keygen-opts.h@1.164 +3 -3
+    NTP_4_2_7P164
+
+  util/ntp-keygen-opts.texi@1.167 +2 -2
+    NTP_4_2_7P164
+
+  util/ntp-keygen.1@1.167 +2 -2
+    NTP_4_2_7P164
+
+ChangeSet@1.2501, 2011-05-10 15:46:36-04:00, stenn@deacon.udel.edu
+  Documentation updates from Dave Mills
+
+  ChangeLog@1.869 +1 -0
+    Documentation updates from Dave Mills
+
+  html/autokey.html@1.20 +36 -52
+    Documentation updates from Dave Mills
+
+  html/drivers/driver6.html@1.27 +1 -2
+    Documentation updates from Dave Mills
+
+  html/miscopt.html@1.65 +2 -2
+    Documentation updates from Dave Mills
+
+  html/release.html@1.40 +9 -7
+    Documentation updates from Dave Mills
+
+  html/warp.html@1.13 +8 -7
+    Documentation updates from Dave Mills
+
+  html/xleave.html@1.6 +2 -2
+    Documentation updates from Dave Mills
+
+ChangeSet@1.2479.13.2, 2011-05-09 23:20:17+00:00, davehart@shiny.ad.hartbrothers.com
+  Update ChangeLog additions for ntp_proto.c changes to reference newly-filed
+    bug reports:  [Bug 1921] [Bug 1922] [Bug 1923] [Bug 1924]
+
+  ChangeLog@1.867 +9 -5
+    Update ChangeLog additions for ntp_proto.c changes to reference newly-filed
+      bug reports:  [Bug 1921] [Bug 1922] [Bug 1923] [Bug 1924]
+
 ChangeSet@1.2499, 2011-05-08 09:10:24+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P163
   TAG: NTP_4_2_7P163
 
-  ChangeLog@1.876 +1 -0
+  ChangeLog@1.865.1.11 +1 -0
     NTP_4_2_7P163
 
   ntpd/ntpd-opts.c@1.168 +3 -3
@@ -86,7 +203,7 @@ ChangeSet@1.2499, 2011-05-08 09:10:24+00:00, stenn@deacon.udel.edu
 ChangeSet@1.2498, 2011-05-08 01:58:37+00:00, davehart@shiny.ad.hartbrothers.com
   [Bug 1911] missing curly brace in libntp/ntp_rfc2553.c
 
-  ChangeLog@1.875 +1 -0
+  ChangeLog@1.865.1.10 +1 -0
     [Bug 1911] missing curly brace in libntp/ntp_rfc2553.c
 
   libntp/ntp_rfc2553.c@1.47 +57 -35
@@ -98,7 +215,7 @@ ChangeSet@1.2497, 2011-05-03 09:00:25+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P162
   TAG: NTP_4_2_7P162
 
-  ChangeLog@1.874 +1 -0
+  ChangeLog@1.865.1.9 +1 -0
     NTP_4_2_7P162
 
   ntpd/ntpd-opts.c@1.167 +3 -3
@@ -182,7 +299,7 @@ ChangeSet@1.2497, 2011-05-03 09:00:25+00:00, stenn@deacon.udel.edu
 ChangeSet@1.2496, 2011-05-02 21:16:22-07:00, harlan@hms-mbp.local
   [Bug 1910] Support the Tristate Ltd. TS-GPSclock-01
 
-  ChangeLog@1.873 +1 -0
+  ChangeLog@1.865.1.8 +1 -0
     [Bug 1910] Support the Tristate Ltd. TS-GPSclock-01
 
   html/drivers/driver40.html@1.15 +95 -23
@@ -201,7 +318,7 @@ ChangeSet@1.2494, 2011-05-02 21:14:30+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P161
   TAG: NTP_4_2_7P161
 
-  ChangeLog@1.872 +1 -0
+  ChangeLog@1.865.1.7 +1 -0
     NTP_4_2_7P161
 
   ntpd/ntpd-opts.c@1.166 +3 -3
@@ -285,7 +402,7 @@ ChangeSet@1.2494, 2011-05-02 21:14:30+00:00, stenn@deacon.udel.edu
 ChangeSet@1.2493, 2011-05-01 22:57:03+00:00, davehart@shiny.ad.hartbrothers.com
   Add missing --enable-local-libevent help to top-level configure.
 
-  ChangeLog@1.871 +1 -0
+  ChangeLog@1.865.1.6 +1 -0
     Add missing --enable-local-libevent help to top-level configure.
 
   configure.ac@1.527 +2 -0
@@ -300,7 +417,7 @@ ChangeSet@1.2492, 2011-05-01 21:15:54+00:00, davehart@shiny.ad.hartbrothers.com
   Share a single sntp/libevent/build-aux directory between all three
     configure scripts.
 
-  ChangeLog@1.870 +4 -0
+  ChangeLog@1.865.1.5 +4 -0
     [Bug 1906] 4.2.7p160 - libtool: compile: cannot determine name of
       library object in ./libevent
     Share a single sntp/libevent/build-aux directory between all three
@@ -345,7 +462,7 @@ ChangeSet@1.2492, 2011-05-01 21:15:54+00:00, davehart@shiny.ad.hartbrothers.com
 ChangeSet@1.2491, 2011-05-01 10:40:29+00:00, davehart@shiny.ad.hartbrothers.com
   ChangeLog entry needed for -dev, which rolled with the bug.
 
-  ChangeLog@1.869 +1 -0
+  ChangeLog@1.865.1.4 +1 -0
     ChangeLog entry needed for -dev, which rolled with the bug.
 
 ChangeSet@1.2082.4.207, 2011-05-01 10:37:55+00:00, davehart@shiny.ad.hartbrothers.com
@@ -358,7 +475,7 @@ ChangeSet@1.2489, 2011-05-01 08:30:32+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P160
   TAG: NTP_4_2_7P160
 
-  ChangeLog@1.868 +1 -0
+  ChangeLog@1.865.1.3 +1 -0
     NTP_4_2_7P160
 
   ntpd/ntpd-opts.c@1.165 +41 -46
@@ -534,11 +651,71 @@ ChangeSet@1.2082.4.205, 2011-05-01 02:41:53-04:00, stenn@deacon.udel.edu
 ChangeSet@1.2487, 2011-04-30 03:15:11-04:00, stenn@psp-deb1.ntp.org
   [Bug 1901] Simulator does not set progname.
 
-  ChangeLog@1.866 +1 -0
+  ChangeLog@1.865.1.1 +1 -0
     [Bug 1901] Simulator does not set progname.
 
   ntpd/ntpd.c@1.126 +1 -0
     [Bug 1901] Simulator does not set progname.
+
+ChangeSet@1.2479.13.1, 2011-04-29 19:44:06+00:00, davehart@shiny.ad.hartbrothers.com
+  Change "pool DNS" messages from msyslog to debug trace output.
+  Prefer LOCAL and ACTS drivers to orphan parent peer as documented.
+  Include LOCAL and ACTS drivers marked prefer in candidate list.
+  Remove unused FLAG_SYSPEER from peer->status.
+  Respect "tos orphanwait 0" at startup.  Previously there was an
+    unconditional 300 s. startup orphanwait, though other values were
+    respected for subsequent orphan wait periods after no_sys_peer events.
+  Apply "tos orphanwait" (def. 300 seconds) to LOCAL and ACTS reference
+    clock drivers, in addition to orphan parent operation.  LOCAL and ACTS
+    are not selectable during the orphanwait delay at startup and after
+    each no_sys_peer event.  This prevents a particular form of clock-
+    hopping, such as using LOCAL briefly at startup before remote peers
+    are selectable.  This fixes the issue reported in [Bug 988].
+  [Bug 988] Local clock eats up -g option, so ntpd stops with large
+    initial time offset.
+
+  ChangeLog@1.866 +15 -0
+    Change "pool DNS" messages from msyslog to debug trace output.
+    Prefer LOCAL and ACTS drivers to orphan parent peer as documented.
+    Include LOCAL and ACTS drivers marked prefer in candidate list.
+    Remove unused FLAG_SYSPEER from peer->status.
+    Respect "tos orphanwait 0" at startup.  Previously there was an
+      unconditional 300 s. startup orphanwait, though other values were
+      respected for subsequent orphan wait periods after no_sys_peer events.
+    Apply "tos orphanwait" (def. 300 seconds) to LOCAL and ACTS reference
+      clock drivers, in addition to orphan parent operation.  LOCAL and ACTS
+      are not selectable during the orphanwait delay at startup and after
+      each no_sys_peer event.  This prevents a particular form of clock-
+      hopping, such as using LOCAL briefly at startup before remote peers
+      are selectable.  This fixes the issue reported in [Bug 988].
+    [Bug 988] Local clock eats up -g option, so ntpd stops with large
+      initial time offset.
+
+  include/ntp.h@1.194 +9 -9
+    Remove unused FLAG_SYSPEER from peer->status.
+
+  ntpd/ntp_loopfilter.c@1.163 +1 -1
+    comment typo fix
+
+  ntpd/ntp_proto.c@1.321 +41 -33
+    Change "pool DNS" messages from msyslog to debug trace output.
+    Prefer LOCAL and ACTS drivers to orphan parent peer as documented.
+    Include LOCAL and ACTS drivers marked prefer in candidate list.
+    Remove unused FLAG_SYSPEER from peer->status.
+    Respect "tos orphanwait 0" at startup.  Previously there was an
+      unconditional 300 s. startup orphanwait, though other values were
+      respected for subsequent orphan wait periods after no_sys_peer events.
+    Apply "tos orphanwait" (def. 300 seconds) to LOCAL and ACTS reference
+      clock drivers, in addition to orphan parent operation.  LOCAL and ACTS
+      are not selectable during the orphanwait delay at startup and after
+      each no_sys_peer event.  This prevents a particular form of clock-
+      hopping, such as using LOCAL briefly at startup before remote peers
+      are selectable.  This fixes the issue reported in [Bug 988].
+    [Bug 988] Local clock eats up -g option, so ntpd stops with large
+      initial time offset.
+
+  ntpd/refclock_acts.c@1.50 +7 -6
+    whitespace-only cleanup
 
 ChangeSet@1.2479.1.82, 2011-04-28 21:42:13-04:00, stenn@deacon.udel.edu
   cleanup the bk ignore file - add sntp/scm-rev, remove old version stuff
