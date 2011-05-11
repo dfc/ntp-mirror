@@ -1,3 +1,115 @@
+ChangeSet@1.2505, 2011-05-11 19:29:27+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P165
+  TAG: NTP_4_2_7P165
+
+  ChangeLog@1.873 +1 -0
+    NTP_4_2_7P165
+
+  ntpd/ntpd-opts.c@1.170 +5 -5
+    NTP_4_2_7P165
+
+  ntpd/ntpd-opts.h@1.170 +3 -3
+    NTP_4_2_7P165
+
+  ntpd/ntpd-opts.texi@1.168 +2 -2
+    NTP_4_2_7P165
+
+  ntpd/ntpd.1@1.168 +2 -2
+    NTP_4_2_7P165
+
+  ntpdc/ntpdc-opts.c@1.167 +5 -5
+    NTP_4_2_7P165
+
+  ntpdc/ntpdc-opts.h@1.167 +3 -3
+    NTP_4_2_7P165
+
+  ntpdc/ntpdc-opts.texi@1.167 +2 -2
+    NTP_4_2_7P165
+
+  ntpdc/ntpdc.1@1.167 +2 -2
+    NTP_4_2_7P165
+
+  ntpq/ntpq-opts.c@1.167 +5 -5
+    NTP_4_2_7P165
+
+  ntpq/ntpq-opts.h@1.167 +3 -3
+    NTP_4_2_7P165
+
+  ntpq/ntpq-opts.texi@1.167 +2 -2
+    NTP_4_2_7P165
+
+  ntpq/ntpq.1@1.167 +2 -2
+    NTP_4_2_7P165
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.167 +5 -5
+    NTP_4_2_7P165
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.167 +3 -3
+    NTP_4_2_7P165
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.167 +2 -2
+    NTP_4_2_7P165
+
+  ntpsnmpd/ntpsnmpd.1@1.167 +2 -2
+    NTP_4_2_7P165
+
+  packageinfo.sh@1.167 +1 -1
+    NTP_4_2_7P165
+
+  sntp/sntp-opts.c@1.161 +60 -60
+    NTP_4_2_7P165
+
+  sntp/sntp-opts.h@1.161 +24 -24
+    NTP_4_2_7P165
+
+  sntp/sntp-opts.texi@1.161 +23 -18
+    NTP_4_2_7P165
+
+  sntp/sntp.1@1.161 +127 -121
+    NTP_4_2_7P165
+
+  sntp/sntp.html@1.161 +23 -18
+    NTP_4_2_7P165
+
+  util/ntp-keygen-opts.c@1.165 +5 -5
+    NTP_4_2_7P165
+
+  util/ntp-keygen-opts.h@1.165 +3 -3
+    NTP_4_2_7P165
+
+  util/ntp-keygen-opts.texi@1.168 +2 -2
+    NTP_4_2_7P165
+
+  util/ntp-keygen.1@1.168 +2 -2
+    NTP_4_2_7P165
+
+ChangeSet@1.2082.4.208, 2011-05-11 04:40:35-04:00, stenn@deacon.udel.edu
+  Upgrade to AutoGen 5.11.9 (and require it)
+
+  ChangeLog@1.496.26.144 +1 -0
+    Upgrade to AutoGen 5.11.9 (and require it)
+
+  include/autogen-version.def@1.4.1.1 +1 -1
+    Upgrade to AutoGen 5.11.9 (and require it)
+
+ChangeSet@1.2503, 2011-05-11 03:21:39-04:00, stenn@psp-deb1.ntp.org
+  Convert snmp docs to mdoc format, which requires autogen 5.11.9
+
+  ChangeLog@1.871 +1 -0
+    Convert snmp docs to mdoc format, which requires autogen 5.11.9
+
+  sntp/Makefile.am@1.60 +3 -1
+    Convert snmp docs to mdoc format, which requires autogen 5.11.9
+
+  sntp/include/autogen-version.def@1.6 +1 -1
+    Upgrade autogen to 5.11.9
+
+  sntp/sntp-opts.def@1.26 +146 -130
+    Convert snmp docs to mdoc format, which requires autogen 5.11.9
+
+  sntp/sntp.texi@1.8 +1 -1
+    Convert snmp docs to mdoc format, which requires autogen 5.11.9
+
 ChangeSet@1.2502, 2011-05-11 00:48:33+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P164
   TAG: NTP_4_2_7P164
