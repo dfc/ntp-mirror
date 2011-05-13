@@ -1,3 +1,111 @@
+ChangeSet@1.2508, 2011-05-13 11:42:41+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P166
+  TAG: NTP_4_2_7P166
+
+  ChangeLog@1.875 +1 -0
+    NTP_4_2_7P166
+
+  ntpd/ntpd-opts.c@1.171 +3 -3
+    NTP_4_2_7P166
+
+  ntpd/ntpd-opts.h@1.171 +3 -3
+    NTP_4_2_7P166
+
+  ntpd/ntpd-opts.texi@1.169 +2 -2
+    NTP_4_2_7P166
+
+  ntpd/ntpd.1@1.169 +2 -2
+    NTP_4_2_7P166
+
+  ntpdc/ntpdc-opts.c@1.168 +3 -3
+    NTP_4_2_7P166
+
+  ntpdc/ntpdc-opts.h@1.168 +3 -3
+    NTP_4_2_7P166
+
+  ntpdc/ntpdc-opts.texi@1.168 +2 -2
+    NTP_4_2_7P166
+
+  ntpdc/ntpdc.1@1.168 +2 -2
+    NTP_4_2_7P166
+
+  ntpq/ntpq-opts.c@1.168 +3 -3
+    NTP_4_2_7P166
+
+  ntpq/ntpq-opts.h@1.168 +3 -3
+    NTP_4_2_7P166
+
+  ntpq/ntpq-opts.texi@1.168 +2 -2
+    NTP_4_2_7P166
+
+  ntpq/ntpq.1@1.168 +2 -2
+    NTP_4_2_7P166
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.168 +3 -3
+    NTP_4_2_7P166
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.168 +3 -3
+    NTP_4_2_7P166
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.168 +2 -2
+    NTP_4_2_7P166
+
+  ntpsnmpd/ntpsnmpd.1@1.168 +2 -2
+    NTP_4_2_7P166
+
+  packageinfo.sh@1.168 +1 -1
+    NTP_4_2_7P166
+
+  sntp/sntp-opts.c@1.162 +3 -3
+    NTP_4_2_7P166
+
+  sntp/sntp-opts.h@1.162 +3 -3
+    NTP_4_2_7P166
+
+  sntp/sntp-opts.texi@1.162 +2 -2
+    NTP_4_2_7P166
+
+  sntp/sntp.1@1.162 +27 -22
+    NTP_4_2_7P166
+
+  sntp/sntp.html@1.162 +2 -2
+    NTP_4_2_7P166
+
+  util/ntp-keygen-opts.c@1.166 +3 -3
+    NTP_4_2_7P166
+
+  util/ntp-keygen-opts.h@1.166 +3 -3
+    NTP_4_2_7P166
+
+  util/ntp-keygen-opts.texi@1.169 +2 -2
+    NTP_4_2_7P166
+
+  util/ntp-keygen.1@1.169 +2 -2
+    NTP_4_2_7P166
+
+ChangeSet@1.2507, 2011-05-13 06:05:54-04:00, stenn@psp-deb1.ntp.org
+  Distribute sntp/ag-tpl/
+
+  sntp/Makefile.am@1.62 +1 -0
+    Distribute sntp/ag-tpl/
+
+ChangeSet@1.2506, 2011-05-13 05:08:53-04:00, stenn@psp-deb1.ntp.org
+  Use our autogen templates if we have any
+
+  ChangeLog@1.874 +2 -0
+    Use our autogen templates if we have any
+
+  sntp/Makefile.am@1.61 +1 -1
+    Use our autogen templates if we have any
+
+  sntp/ag-tpl/agmdoc-cmd.tpl@1.1 +115 -0
+    BitKeeper file /home/stenn/ntp-dev/sntp/ag-tpl/agmdoc-cmd.tpl
+
+  sntp/ag-tpl/agmdoc-cmd.tpl@1.0 +0 -0
+
+  sntp/sntp-opts.def@1.27 +24 -20
+    Update sntp docs
+
 ChangeSet@1.2505, 2011-05-11 19:29:27+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P165
   TAG: NTP_4_2_7P165
