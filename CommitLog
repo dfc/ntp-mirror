@@ -1,3 +1,97 @@
+ChangeSet@1.2519, 2011-05-18 11:24:41+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P169
+  TAG: NTP_4_2_7P169
+
+  ChangeLog@1.885 +1 -0
+    NTP_4_2_7P169
+
+  ntpd/ntpd-opts.c@1.174 +3 -3
+    NTP_4_2_7P169
+
+  ntpd/ntpd-opts.h@1.174 +3 -3
+    NTP_4_2_7P169
+
+  ntpd/ntpd-opts.texi@1.172 +2 -2
+    NTP_4_2_7P169
+
+  ntpd/ntpd.1@1.172 +2 -2
+    NTP_4_2_7P169
+
+  ntpdc/ntpdc-opts.c@1.171 +3 -3
+    NTP_4_2_7P169
+
+  ntpdc/ntpdc-opts.h@1.171 +3 -3
+    NTP_4_2_7P169
+
+  ntpdc/ntpdc-opts.texi@1.171 +2 -2
+    NTP_4_2_7P169
+
+  ntpdc/ntpdc.1@1.171 +2 -2
+    NTP_4_2_7P169
+
+  ntpq/ntpq-opts.c@1.171 +3 -3
+    NTP_4_2_7P169
+
+  ntpq/ntpq-opts.h@1.171 +3 -3
+    NTP_4_2_7P169
+
+  ntpq/ntpq-opts.texi@1.171 +2 -2
+    NTP_4_2_7P169
+
+  ntpq/ntpq.1@1.171 +2 -2
+    NTP_4_2_7P169
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.171 +3 -3
+    NTP_4_2_7P169
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.171 +3 -3
+    NTP_4_2_7P169
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.171 +2 -2
+    NTP_4_2_7P169
+
+  ntpsnmpd/ntpsnmpd.1@1.171 +2 -2
+    NTP_4_2_7P169
+
+  packageinfo.sh@1.172 +1 -1
+    NTP_4_2_7P169
+
+  sntp/sntp-opts.c@1.165 +3 -3
+    NTP_4_2_7P169
+
+  sntp/sntp-opts.h@1.165 +3 -3
+    NTP_4_2_7P169
+
+  sntp/sntp-opts.texi@1.165 +2 -2
+    NTP_4_2_7P169
+
+  sntp/sntp.1@1.165 +2 -2
+    NTP_4_2_7P169
+
+  sntp/sntp.html@1.165 +2 -2
+    NTP_4_2_7P169
+
+  util/ntp-keygen-opts.c@1.169 +3 -3
+    NTP_4_2_7P169
+
+  util/ntp-keygen-opts.h@1.169 +3 -3
+    NTP_4_2_7P169
+
+  util/ntp-keygen-opts.texi@1.172 +2 -2
+    NTP_4_2_7P169
+
+  util/ntp-keygen.1@1.172 +2 -2
+    NTP_4_2_7P169
+
+ChangeSet@1.2518, 2011-05-17 23:17:51+00:00, davehart@shiny.ad.hartbrothers.com
+  Bug 1933 - WWVB/Spectracom driver timestamps LFs, not CRs
+
+  ChangeLog@1.884 +1 -0
+    Bug 1933 - WWVB/Spectracom driver timestamps LFs, not CRs
+
+  ntpd/refclock_wwvb.c@1.28 +49 -9
+    Bug 1933 - WWVB/Spectracom driver timestamps LFs, not CRs
+
 ChangeSet@1.2517, 2011-05-16 07:40:44+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P168
   TAG: NTP_4_2_7P168
