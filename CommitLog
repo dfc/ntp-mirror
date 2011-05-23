@@ -1,3 +1,165 @@
+ChangeSet@1.2524, 2011-05-23 06:42:59+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P171
+  TAG: NTP_4_2_7P171
+
+  ChangeLog@1.890 +1 -0
+    NTP_4_2_7P171
+
+  ntpd/ntpd-opts.c@1.176 +3 -3
+    NTP_4_2_7P171
+
+  ntpd/ntpd-opts.h@1.176 +3 -3
+    NTP_4_2_7P171
+
+  ntpd/ntpd-opts.texi@1.174 +2 -2
+    NTP_4_2_7P171
+
+  ntpd/ntpd.1@1.174 +2 -2
+    NTP_4_2_7P171
+
+  ntpdc/ntpdc-opts.c@1.173 +3 -3
+    NTP_4_2_7P171
+
+  ntpdc/ntpdc-opts.h@1.173 +3 -3
+    NTP_4_2_7P171
+
+  ntpdc/ntpdc-opts.texi@1.173 +2 -2
+    NTP_4_2_7P171
+
+  ntpdc/ntpdc.1@1.173 +2 -2
+    NTP_4_2_7P171
+
+  ntpq/ntpq-opts.c@1.173 +3 -3
+    NTP_4_2_7P171
+
+  ntpq/ntpq-opts.h@1.173 +3 -3
+    NTP_4_2_7P171
+
+  ntpq/ntpq-opts.texi@1.173 +2 -2
+    NTP_4_2_7P171
+
+  ntpq/ntpq.1@1.173 +2 -2
+    NTP_4_2_7P171
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.173 +3 -3
+    NTP_4_2_7P171
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.173 +3 -3
+    NTP_4_2_7P171
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.173 +2 -2
+    NTP_4_2_7P171
+
+  ntpsnmpd/ntpsnmpd.1@1.173 +2 -2
+    NTP_4_2_7P171
+
+  packageinfo.sh@1.174 +1 -1
+    NTP_4_2_7P171
+
+  sntp/sntp-opts.c@1.167 +3 -3
+    NTP_4_2_7P171
+
+  sntp/sntp-opts.h@1.167 +3 -3
+    NTP_4_2_7P171
+
+  sntp/sntp-opts.texi@1.167 +2 -2
+    NTP_4_2_7P171
+
+  sntp/sntp.1@1.167 +2 -2
+    NTP_4_2_7P171
+
+  sntp/sntp.html@1.167 +2 -2
+    NTP_4_2_7P171
+
+  util/ntp-keygen-opts.c@1.171 +3 -3
+    NTP_4_2_7P171
+
+  util/ntp-keygen-opts.h@1.171 +3 -3
+    NTP_4_2_7P171
+
+  util/ntp-keygen-opts.texi@1.174 +2 -2
+    NTP_4_2_7P171
+
+  util/ntp-keygen.1@1.174 +2 -2
+    NTP_4_2_7P171
+
+ChangeSet@1.2523, 2011-05-23 02:28:42-04:00, stenn@deacon.udel.edu
+  Documentation updates from Dave Mills
+
+  ChangeLog@1.889 +1 -0
+    Documentation updates from Dave Mills
+
+  html/discipline.html@1.4 +8 -8
+    Documentation updates from Dave Mills
+
+  html/ntpq.html@1.44 +41 -35
+    Documentation updates from Dave Mills
+
+  html/warp.html@1.14 +4 -3
+    Documentation updates from Dave Mills
+
+  html/xleave.html@1.7 +2 -2
+    Documentation updates from Dave Mills
+
+ChangeSet@1.2522, 2011-05-23 04:26:31+00:00, davehart@shiny.ad.hartbrothers.com
+  Eliminate warnings about shadowing global "basename" on Linux.
+  Use filegen_config() consistently when changing filegen options.
+  mprintf() should go to stdout, not stderr.
+  Repair a few simulator problems (more remain).
+
+  ChangeLog@1.888 +4 -0
+    Eliminate warnings about shadowing global "basename" on Linux.
+    Use filegen_config() consistently when changing filegen options.
+    mprintf() should go to stdout, not stderr.
+    Repair a few simulator problems (more remain).
+
+  include/ntp_filegen.h@1.10 +13 -12
+    Eliminate warnings about shadowing global "basename" on Linux.
+    Use filegen_config() consistently when changing filegen options.
+
+  include/ntpd.h@1.162 +10 -4
+    expose statsdir globally
+
+  include/ntpsim.h@1.16 +18 -20
+    whitespace -> tabs
+
+  libntp/msyslog.c@1.43 +1 -1
+    mprintf() should go to stdout, not stderr.
+
+  libntp/systime.c@1.55 +2 -13
+    remove empty #else block for SIM
+
+  ntpd/ntp_config.c@1.290 +13 -8
+    Eliminate warnings about shadowing global "basename" on Linux.
+    Use filegen_config() consistently when changing filegen options.
+
+  ntpd/ntp_filegen.c@1.24 +102 -71
+    Eliminate warnings about shadowing global "basename" on Linux.
+    Use filegen_config() consistently when changing filegen options.
+
+  ntpd/ntp_io.c@1.355 +71 -0
+    Move select_peerinterface() from ntp_peer.c to ntp_io.c so it can
+      use #ifdef SIM.
+
+  ntpd/ntp_monitor.c@1.39 +1 -1
+    struct interface -> endpt
+
+  ntpd/ntp_peer.c@1.147 +25 -95
+    Move select_peerinterface() from ntp_peer.c to ntp_io.c so it can
+      use #ifdef SIM.
+
+  ntpd/ntp_util.c@1.95 +9 -70
+    Eliminate warnings about shadowing global "basename" on Linux.
+    Use filegen_config() consistently when changing filegen options.
+
+  ntpd/ntpsim.c@1.32 +87 -50
+    Set msyslog_term = TRUE in ntpsim() to get syslog messages on console.
+    Use HTONL_FP() and NTOHL_FP() to byteswap simulated on-wire timestamps.
+    Use loopback IPv4 interface for simulator peer->dstadr.
+
+  ntpd/refclock_wwvb.c@1.29 +6 -0
+    timestamp 'T' polls in -D1 output
+
 ChangeSet@1.2521, 2011-05-19 11:26:01+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P170
   TAG: NTP_4_2_7P170
