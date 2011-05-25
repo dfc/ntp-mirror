@@ -1,3 +1,247 @@
+ChangeSet@1.2531, 2011-05-25 19:29:28+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P173
+  TAG: NTP_4_2_7P173
+
+  ChangeLog@1.896 +1 -0
+    NTP_4_2_7P173
+
+  ntpd/ntpd-opts.c@1.178 +3 -3
+    NTP_4_2_7P173
+
+  ntpd/ntpd-opts.h@1.178 +3 -3
+    NTP_4_2_7P173
+
+  ntpd/ntpd-opts.texi@1.176 +2 -2
+    NTP_4_2_7P173
+
+  ntpd/ntpd.1@1.176 +2 -2
+    NTP_4_2_7P173
+
+  ntpdc/ntpdc-opts.c@1.175 +3 -3
+    NTP_4_2_7P173
+
+  ntpdc/ntpdc-opts.h@1.175 +3 -3
+    NTP_4_2_7P173
+
+  ntpdc/ntpdc-opts.texi@1.175 +2 -2
+    NTP_4_2_7P173
+
+  ntpdc/ntpdc.1@1.175 +2 -2
+    NTP_4_2_7P173
+
+  ntpq/ntpq-opts.c@1.175 +3 -3
+    NTP_4_2_7P173
+
+  ntpq/ntpq-opts.h@1.175 +3 -3
+    NTP_4_2_7P173
+
+  ntpq/ntpq-opts.texi@1.175 +2 -2
+    NTP_4_2_7P173
+
+  ntpq/ntpq.1@1.175 +2 -2
+    NTP_4_2_7P173
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.175 +3 -3
+    NTP_4_2_7P173
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.175 +3 -3
+    NTP_4_2_7P173
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.175 +2 -2
+    NTP_4_2_7P173
+
+  ntpsnmpd/ntpsnmpd.1@1.175 +2 -2
+    NTP_4_2_7P173
+
+  packageinfo.sh@1.176 +1 -1
+    NTP_4_2_7P173
+
+  sntp/sntp-opts.c@1.169 +3 -3
+    NTP_4_2_7P173
+
+  sntp/sntp-opts.h@1.169 +3 -3
+    NTP_4_2_7P173
+
+  sntp/sntp-opts.texi@1.169 +2 -2
+    NTP_4_2_7P173
+
+  sntp/sntp.1@1.169 +2 -2
+    NTP_4_2_7P173
+
+  sntp/sntp.html@1.169 +2 -2
+    NTP_4_2_7P173
+
+  util/ntp-keygen-opts.c@1.173 +3 -3
+    NTP_4_2_7P173
+
+  util/ntp-keygen-opts.h@1.173 +3 -3
+    NTP_4_2_7P173
+
+  util/ntp-keygen-opts.texi@1.176 +2 -2
+    NTP_4_2_7P173
+
+  util/ntp-keygen.1@1.176 +2 -2
+    NTP_4_2_7P173
+
+ChangeSet@1.2528.1.1, 2011-05-25 07:35:27+00:00, davehart@shiny.ad.hartbrothers.com
+  parsesolaris.c compile fails on SPARC Solaris with conflicting printf.
+  ntp_util.c compile fails on AIX and OSF with conflicting statsdir.
+
+  ChangeLog@1.893.1.1 +2 -0
+    parsesolaris.c compile fails on SPARC Solaris with conflicting printf.
+    ntp_util.c compile fails on AIX and OSF with conflicting statsdir.
+    
+
+  include/ntp_fp.h@1.24 +11 -2
+    parsesolaris.c compile fails on SPARC Solaris with conflicting printf.
+
+  include/ntpd.h@1.163 +1 -4
+    ntp_util.c compile fails on AIX and OSF with conflicting statsdir.
+
+  ntpd/ntp_util.c@1.96 +1 -1
+    ntp_util.c compile fails on AIX and OSF with conflicting statsdir.
+
+ChangeSet@1.2082.4.212, 2011-05-25 05:27:31+00:00, stenn@deacon.udel.edu
+  NTP_4_2_6P4_BETA2
+  TAG: NTP_4_2_6P4_BETA2
+
+  ChangeLog@1.496.26.148 +1 -0
+    NTP_4_2_6P4_BETA2
+
+  ntpd/ntpd-opts.c@1.248.36.1 +3 -3
+    NTP_4_2_6P4_BETA2
+
+  ntpd/ntpd-opts.h@1.248.36.1 +3 -3
+    NTP_4_2_6P4_BETA2
+
+  ntpd/ntpd-opts.texi@1.246.35.1 +2 -2
+    NTP_4_2_6P4_BETA2
+
+  ntpd/ntpd.1@1.246.35.1 +2 -2
+    NTP_4_2_6P4_BETA2
+
+  ntpdc/ntpdc-opts.c@1.244.36.1 +3 -3
+    NTP_4_2_6P4_BETA2
+
+  ntpdc/ntpdc-opts.h@1.244.36.1 +3 -3
+    NTP_4_2_6P4_BETA2
+
+  ntpdc/ntpdc-opts.texi@1.243.35.1 +2 -2
+    NTP_4_2_6P4_BETA2
+
+  ntpdc/ntpdc.1@1.243.35.1 +2 -2
+    NTP_4_2_6P4_BETA2
+
+  ntpq/ntpq-opts.c@1.245.36.1 +3 -3
+    NTP_4_2_6P4_BETA2
+
+  ntpq/ntpq-opts.h@1.245.36.1 +3 -3
+    NTP_4_2_6P4_BETA2
+
+  ntpq/ntpq-opts.texi@1.244.35.1 +2 -2
+    NTP_4_2_6P4_BETA2
+
+  ntpq/ntpq.1@1.244.35.1 +2 -2
+    NTP_4_2_6P4_BETA2
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.123.37.1 +3 -3
+    NTP_4_2_6P4_BETA2
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.123.37.1 +3 -3
+    NTP_4_2_6P4_BETA2
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.123.36.1 +2 -2
+    NTP_4_2_6P4_BETA2
+
+  ntpsnmpd/ntpsnmpd.1@1.122.36.1 +2 -2
+    NTP_4_2_6P4_BETA2
+
+  packageinfo.sh@1.255.33.1 +1 -1
+    NTP_4_2_6P4_BETA2
+
+  sntp/sntp-opts.c@1.117.34.1 +3 -3
+    NTP_4_2_6P4_BETA2
+
+  sntp/sntp-opts.h@1.117.34.1 +3 -3
+    NTP_4_2_6P4_BETA2
+
+  sntp/sntp-opts.texi@1.117.33.1 +2 -2
+    NTP_4_2_6P4_BETA2
+
+  sntp/sntp.1@1.117.33.1 +2 -2
+    NTP_4_2_6P4_BETA2
+
+  sntp/sntp.html@1.7.34.1 +2 -2
+    NTP_4_2_6P4_BETA2
+
+  util/ntp-keygen-opts.c@1.247.36.1 +3 -3
+    NTP_4_2_6P4_BETA2
+
+  util/ntp-keygen-opts.h@1.247.36.1 +3 -3
+    NTP_4_2_6P4_BETA2
+
+  util/ntp-keygen-opts.texi@1.246.35.1 +2 -2
+    NTP_4_2_6P4_BETA2
+
+  util/ntp-keygen.1@1.246.35.1 +2 -2
+    NTP_4_2_6P4_BETA2
+
+ChangeSet@1.2527, 2011-05-25 03:52:15+00:00, davehart@shiny.ad.hartbrothers.com
+  typo in #ifndef EREALLOC_CALLSITE hides file/line number from
+    emalloc() error message where available.
+
+  libntp/emalloc.c@1.15 +1 -1
+    typo in #ifndef EREALLOC_CALLSITE hides file/line number from
+      emalloc() error message where available.
+
+ChangeSet@1.2082.4.211, 2011-05-25 03:44:32+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 1695] ntpdate takes longer than necessary.
+  [Bug 1832] ntpdate doesn't allow timeout > 2s.
+  [Bug 1933] WWVB/Spectracom driver timestamps LFs, not CRs.
+  Backport utility routines from ntp-dev: mprintf(), emalloc_zero().
+
+  ChangeLog@1.496.26.147 +7 -0
+    [Bug 1695] ntpdate takes longer than necessary.
+    [Bug 1832] ntpdate doesn't allow timeout > 2s.
+    [Bug 1933] WWVB/Spectracom driver timestamps LFs, not CRs.
+    Backport utility routines from ntp-dev: mprintf(), emalloc_zero().
+
+  include/ntp_assert.h@1.3.1.1 +54 -17
+    Backport utility routines from ntp-dev: mprintf(), emalloc_zero().
+
+  include/ntp_malloc.h@1.3.1.1 +46 -4
+    Backport utility routines from ntp-dev: mprintf(), emalloc_zero().
+
+  include/ntp_refclock.h@1.24.1.1 +1 -1
+    Use void * instead of char * for pp->unitptr to ease backports from 4.2.7.
+
+  include/ntp_stdlib.h@1.40.1.5 +37 -14
+    Backport utility routines from ntp-dev: mprintf(), emalloc_zero().
+
+  include/ntp_types.h@1.14.1.1 +7 -0
+    provide TRUE, FALSE definitions.
+
+  libntp/emalloc.c@1.10.1.1 +53 -79
+    Backport utility routines from ntp-dev: mprintf(), emalloc_zero().
+
+  libntp/msyslog.c@1.24.1.4 +80 -7
+    Backport utility routines from ntp-dev: mprintf(), emalloc_zero().
+
+  libntp/strdup.c@1.5.1.1 +16 -14
+    include <config.h> first, include <string.h> to resolve incompatible
+      implicit declaration warnings.
+
+  ntpd/refclock_wwvb.c@1.24.1.1 +61 -23
+    [Bug 1933] WWVB/Spectracom driver timestamps LFs, not CRs.
+
+  ntpdate/ntpdate.c@1.69.2.3 +50 -92
+    [Bug 1695] ntpdate takes longer than necessary.
+    [Bug 1832] ntpdate doesn't allow timeout > 2s.
+    
+
+  ports/winnt/include/config.h@1.79.1.6 +2 -0
+    Backport utility routines from ntp-dev: mprintf(), emalloc_zero().
+
 ChangeSet@1.2526, 2011-05-24 06:09:36+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P172
   TAG: NTP_4_2_7P172
