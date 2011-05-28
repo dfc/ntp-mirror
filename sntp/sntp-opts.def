@@ -10,15 +10,11 @@ prog-title     = "standard Simple Network Time Protocol program";
 homerc         =  $HOME, ".";
 argument       = '[ hostname-or-IP ...]';
 
+#include homerc.def
+
 long-opts;
 
 config-header  = "config.h";
-
-#ifndef __windows__
-rcfile         = ".ntprc";
-#else
-rcfile         = "ntp.ini";
-#endif
 
 environrc;
 
@@ -32,7 +28,7 @@ flag = {
   flags-cant	= ipv6;
   descrip	= "Force IPv4 DNS name resolution";
   doc		= <<-  _EndOfDoc_
-	Force DNS resolution of following host names on the command line
+	Force DNS resolution of the following host names on the command line
 	to the IPv4 namespace.
 	_EndOfDoc_;
 };
@@ -43,7 +39,7 @@ flag = {
   flags-cant	= ipv4;
   descrip	= "Force IPv6 DNS name resolution";
   doc		= <<-  _EndOfDoc_
-	Force DNS resolution of following host names on the command line
+	Force DNS resolution of the following host names on the command line
 	to the IPv6 namespace.
 	_EndOfDoc_;
 };
@@ -93,7 +89,7 @@ flag = {
 flag = {
   name	 	= concurrent;
   value		= c;
-  descrip	= "Concurrent query all IPs returned for host-name";
+  descrip	= "Concurrently query all IPs returned for host-name";
   arg-type	= string;
   arg-name	= "host-name";
   max		= NOLIMIT;
@@ -157,11 +153,11 @@ flag = {
 	keyid keytype key
 
 	Where	keyid is a number identifying this key
-		keytype is one of the follow:
-			S  Key in 64 Bit hexadecimal number as specified in in the DES specification.
-			N  Key in 64 Bit hexadecimal number as specified in the NTP standard.
-			A  Key in a 1-to-8 character ASCII string.
-			M  Key in a 1-to-8 character ASCII string using the MD5 authentication scheme.
+		keytype is one of the following:
+			S  Key is a 64 Bit hexadecimal number as specified in in the DES specification.
+			N  Key ina  64 Bit hexadecimal number as specified in the NTP standard.
+			A  Key is a 1-to-8 character ASCII string.
+			M  Key is a 1-to-8 character ASCII string using the MD5 authentication scheme.
 
 	For more information see ntp.keys(5).
 	_EndOfDoc_;
@@ -184,7 +180,7 @@ flag = {
   value		= M;
   arg-type	= number;
   arg-range	= "0->";
-  descrip	= "Adjustments less than steplimit msec will be slewed.";
+  descrip	= "Adjustments less than steplimit msec will be slewed";
   doc		= <<-  _EndOfDoc_
 	If the time adjustment is less than steplimit milliseconds, slew the
 	amount using adjtime().  Otherwise, step the correction using
@@ -361,10 +357,33 @@ or
 .Xr rdate 8
 commands.
 .El
-.Sh RETURN VALUE
-The program returns a zero exit
-status for success, and a non-zero one otherwise.
-.Sh BUGS
-Please report bugs to http://bugs.ntp.org .
 	_END_MDOC_USAGE;
+};
+
+doc-section	= {
+  ds-type	= 'EXIT STATUS';
+  ds-format     = 'mdoc';
+  ds-text       = <<-  _END_MDOC_EXITSTATUS
+.Nm
+returns a zero exit status for success,
+and a non-zero value otherwise.
+	_END_MDOC_EXITSTATUS;
+};
+
+doc-section	= {
+  ds-type	= 'AUTHORS';
+  ds-format     = 'mdoc';
+  ds-text       = <<-  _END_MDOC_AUTHORS
+.An "Johannes Maximilian Kuehn"
+.An "Harlan Stenn"
+.An "Dave Hart"
+	_END_MDOC_AUTHORS;
+};
+
+doc-section	= {
+  ds-type	= 'BUGS';
+  ds-format     = 'mdoc';
+  ds-text       = <<-  _END_MDOC_BUGS
+Please report bugs to http://bugs.ntp.org .
+	_END_MDOC_BUGS;
 };

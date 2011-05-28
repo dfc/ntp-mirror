@@ -1,4 +1,134 @@
-ChangeSet@1.2531, 2011-05-25 19:29:28+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2527, 2011-05-28 11:03:38+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P174
+  TAG: NTP_4_2_7P174
+
+  ChangeLog@1.900 +1 -0
+    NTP_4_2_7P174
+
+  ntpd/ntpd-opts.c@1.179 +7 -7
+    NTP_4_2_7P174
+
+  ntpd/ntpd-opts.h@1.179 +5 -5
+    NTP_4_2_7P174
+
+  ntpd/ntpd-opts.texi@1.177 +2 -2
+    NTP_4_2_7P174
+
+  ntpd/ntpd.1@1.177 +4 -4
+    NTP_4_2_7P174
+
+  ntpdc/ntpdc-opts.c@1.174 +95 -95
+    NTP_4_2_7P174
+
+  ntpdc/ntpdc-opts.h@1.174 +36 -36
+    NTP_4_2_7P174
+
+  ntpdc/ntpdc-opts.texi@1.174 +20 -22
+    NTP_4_2_7P174
+
+  ntpdc/ntpdc.1@1.174 +719 -86
+    NTP_4_2_7P174
+
+  ntpdc/ntpdc.html@1.2 +50 -73
+    NTP_4_2_7P174
+
+  ntpq/ntpq-opts.c@1.176 +10 -10
+    NTP_4_2_7P174
+
+  ntpq/ntpq-opts.h@1.176 +5 -5
+    NTP_4_2_7P174
+
+  ntpq/ntpq-opts.texi@1.176 +7 -10
+    NTP_4_2_7P174
+
+  ntpq/ntpq.1@1.176 +8 -9
+    NTP_4_2_7P174
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.176 +7 -7
+    NTP_4_2_7P174
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.176 +5 -5
+    NTP_4_2_7P174
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.176 +2 -2
+    NTP_4_2_7P174
+
+  ntpsnmpd/ntpsnmpd.1@1.176 +4 -4
+    NTP_4_2_7P174
+
+  packageinfo.sh@1.177 +1 -1
+    NTP_4_2_7P174
+
+  sntp/sntp-opts.c@1.170 +15 -13
+    NTP_4_2_7P174
+
+  sntp/sntp-opts.h@1.170 +5 -5
+    NTP_4_2_7P174
+
+  sntp/sntp-opts.texi@1.170 +21 -20
+    NTP_4_2_7P174
+
+  sntp/sntp.1@1.170 +27 -36
+    NTP_4_2_7P174
+
+  sntp/sntp.html@1.170 +19 -22
+    NTP_4_2_7P174
+
+  util/ntp-keygen-opts.c@1.174 +10 -10
+    NTP_4_2_7P174
+
+  util/ntp-keygen-opts.h@1.174 +5 -5
+    NTP_4_2_7P174
+
+  util/ntp-keygen-opts.texi@1.177 +8 -9
+    NTP_4_2_7P174
+
+  util/ntp-keygen.1@1.177 +8 -9
+    NTP_4_2_7P174
+
+ChangeSet@1.2526, 2011-05-27 16:40:04-04:00, stenn@psp-deb1.ntp.org
+  sntp documentation cleanup
+
+  sntp/include/debug-opt.def@1.7 +4 -7
+    sntp documentation cleanup
+
+  sntp/sntp-opts.def@1.30 +9 -9
+    sntp documentation cleanup
+
+ChangeSet@1.2525, 2011-05-27 06:32:14-04:00, stenn@psp-deb1.ntp.org
+  sntp documentation cleanup (for autogen)
+
+  ChangeLog@1.899 +1 -0
+    sntp documentation cleanup (for autogen)
+
+  sntp/ag-tpl/cmd-doc.tlib@1.2 +42 -151
+    documentation cleanup (for autogen)
+
+  sntp/include/copyright.def@1.17 +2 -2
+    documentation cleanup (for autogen)
+
+  sntp/sntp-opts.def@1.29 +28 -5
+    documentation cleanup (for autogen)
+
+ChangeSet@1.2524, 2011-05-27 05:15:52-04:00, stenn@psp-deb1.ntp.org
+  ntpdc documentation cleanup
+
+  ChangeLog@1.898 +1 -0
+    ntpdc documentation cleanup
+
+  ntpdc/ntpdc-opts.def@1.17 +4 -2
+    ntpdc documentation cleanup
+
+ChangeSet@1.2523, 2011-05-26 18:54:06-04:00, stenn@psp-deb1.ntp.org
+  Don't build libevent with openssl support
+
+  ChangeLog@1.897 +2 -0
+    Don't build libevent with openssl support
+
+  sntp/m4/ntp_libevent.m4@1.8 +1 -0
+    Don't build libevent with openssl support
+
+ChangeSet@1.2517.1.14, 2011-05-25 19:29:28+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P173
   TAG: NTP_4_2_7P173
 
@@ -17,16 +147,16 @@ ChangeSet@1.2531, 2011-05-25 19:29:28+00:00, stenn@deacon.udel.edu
   ntpd/ntpd.1@1.176 +2 -2
     NTP_4_2_7P173
 
-  ntpdc/ntpdc-opts.c@1.175 +3 -3
+  ntpdc/ntpdc-opts.c@1.170.1.5 +3 -3
     NTP_4_2_7P173
 
-  ntpdc/ntpdc-opts.h@1.175 +3 -3
+  ntpdc/ntpdc-opts.h@1.170.1.5 +3 -3
     NTP_4_2_7P173
 
-  ntpdc/ntpdc-opts.texi@1.175 +2 -2
+  ntpdc/ntpdc-opts.texi@1.170.1.5 +2 -2
     NTP_4_2_7P173
 
-  ntpdc/ntpdc.1@1.175 +2 -2
+  ntpdc/ntpdc.1@1.170.1.5 +2 -2
     NTP_4_2_7P173
 
   ntpq/ntpq-opts.c@1.175 +3 -3
@@ -83,7 +213,7 @@ ChangeSet@1.2531, 2011-05-25 19:29:28+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.176 +2 -2
     NTP_4_2_7P173
 
-ChangeSet@1.2528.1.1, 2011-05-25 07:35:27+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2517.2.1, 2011-05-25 07:35:27+00:00, davehart@shiny.ad.hartbrothers.com
   parsesolaris.c compile fails on SPARC Solaris with conflicting printf.
   ntp_util.c compile fails on AIX and OSF with conflicting statsdir.
 
@@ -186,7 +316,7 @@ ChangeSet@1.2082.4.212, 2011-05-25 05:27:31+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.246.35.1 +2 -2
     NTP_4_2_6P4_BETA2
 
-ChangeSet@1.2527, 2011-05-25 03:52:15+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2517.1.10, 2011-05-25 03:52:15+00:00, davehart@shiny.ad.hartbrothers.com
   typo in #ifndef EREALLOC_CALLSITE hides file/line number from
     emalloc() error message where available.
 
@@ -242,7 +372,7 @@ ChangeSet@1.2082.4.211, 2011-05-25 03:44:32+00:00, davehart@shiny.ad.hartbrother
   ports/winnt/include/config.h@1.79.1.6 +2 -0
     Backport utility routines from ntp-dev: mprintf(), emalloc_zero().
 
-ChangeSet@1.2526, 2011-05-24 06:09:36+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2517.1.9, 2011-05-24 06:09:36+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P172
   TAG: NTP_4_2_7P172
 
@@ -261,16 +391,16 @@ ChangeSet@1.2526, 2011-05-24 06:09:36+00:00, stenn@deacon.udel.edu
   ntpd/ntpd.1@1.175 +2 -2
     NTP_4_2_7P172
 
-  ntpdc/ntpdc-opts.c@1.174 +3 -3
+  ntpdc/ntpdc-opts.c@1.170.1.4 +3 -3
     NTP_4_2_7P172
 
-  ntpdc/ntpdc-opts.h@1.174 +3 -3
+  ntpdc/ntpdc-opts.h@1.170.1.4 +3 -3
     NTP_4_2_7P172
 
-  ntpdc/ntpdc-opts.texi@1.174 +2 -2
+  ntpdc/ntpdc-opts.texi@1.170.1.4 +2 -2
     NTP_4_2_7P172
 
-  ntpdc/ntpdc.1@1.174 +2 -2
+  ntpdc/ntpdc.1@1.170.1.4 +2 -2
     NTP_4_2_7P172
 
   ntpq/ntpq-opts.c@1.174 +3 -3
@@ -327,7 +457,7 @@ ChangeSet@1.2526, 2011-05-24 06:09:36+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.175 +2 -2
     NTP_4_2_7P172
 
-ChangeSet@1.2525, 2011-05-24 05:27:19+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2517.1.8, 2011-05-24 05:27:19+00:00, davehart@shiny.ad.hartbrothers.com
   Remove hardcoded 1/960 s. fudge for <CR> transmission time at 9600 8n1
     from WWVB/Spectracom driver introduced in 4.2.7p169.
 
@@ -339,7 +469,7 @@ ChangeSet@1.2525, 2011-05-24 05:27:19+00:00, davehart@shiny.ad.hartbrothers.com
     Remove hardcoded 1/960 s. fudge for <CR> transmission time at 9600 8n1
       from WWVB/Spectracom driver introduced in 4.2.7p169.
 
-ChangeSet@1.2524, 2011-05-23 06:42:59+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2517.1.7, 2011-05-23 06:42:59+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P171
   TAG: NTP_4_2_7P171
 
@@ -358,16 +488,16 @@ ChangeSet@1.2524, 2011-05-23 06:42:59+00:00, stenn@deacon.udel.edu
   ntpd/ntpd.1@1.174 +2 -2
     NTP_4_2_7P171
 
-  ntpdc/ntpdc-opts.c@1.173 +3 -3
+  ntpdc/ntpdc-opts.c@1.170.1.3 +3 -3
     NTP_4_2_7P171
 
-  ntpdc/ntpdc-opts.h@1.173 +3 -3
+  ntpdc/ntpdc-opts.h@1.170.1.3 +3 -3
     NTP_4_2_7P171
 
-  ntpdc/ntpdc-opts.texi@1.173 +2 -2
+  ntpdc/ntpdc-opts.texi@1.170.1.3 +2 -2
     NTP_4_2_7P171
 
-  ntpdc/ntpdc.1@1.173 +2 -2
+  ntpdc/ntpdc.1@1.170.1.3 +2 -2
     NTP_4_2_7P171
 
   ntpq/ntpq-opts.c@1.173 +3 -3
@@ -424,7 +554,7 @@ ChangeSet@1.2524, 2011-05-23 06:42:59+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.174 +2 -2
     NTP_4_2_7P171
 
-ChangeSet@1.2523, 2011-05-23 02:28:42-04:00, stenn@deacon.udel.edu
+ChangeSet@1.2517.1.6, 2011-05-23 02:28:42-04:00, stenn@deacon.udel.edu
   Documentation updates from Dave Mills
 
   ChangeLog@1.889 +1 -0
@@ -442,7 +572,7 @@ ChangeSet@1.2523, 2011-05-23 02:28:42-04:00, stenn@deacon.udel.edu
   html/xleave.html@1.7 +2 -2
     Documentation updates from Dave Mills
 
-ChangeSet@1.2522, 2011-05-23 04:26:31+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2517.1.5, 2011-05-23 04:26:31+00:00, davehart@shiny.ad.hartbrothers.com
   Eliminate warnings about shadowing global "basename" on Linux.
   Use filegen_config() consistently when changing filegen options.
   mprintf() should go to stdout, not stderr.
@@ -501,7 +631,7 @@ ChangeSet@1.2522, 2011-05-23 04:26:31+00:00, davehart@shiny.ad.hartbrothers.com
   ntpd/refclock_wwvb.c@1.29 +6 -0
     timestamp 'T' polls in -D1 output
 
-ChangeSet@1.2521, 2011-05-19 11:26:01+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2517.1.4, 2011-05-19 11:26:01+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P170
   TAG: NTP_4_2_7P170
 
@@ -520,16 +650,16 @@ ChangeSet@1.2521, 2011-05-19 11:26:01+00:00, stenn@deacon.udel.edu
   ntpd/ntpd.1@1.173 +2 -2
     NTP_4_2_7P170
 
-  ntpdc/ntpdc-opts.c@1.172 +3 -3
+  ntpdc/ntpdc-opts.c@1.170.1.2 +3 -3
     NTP_4_2_7P170
 
-  ntpdc/ntpdc-opts.h@1.172 +3 -3
+  ntpdc/ntpdc-opts.h@1.170.1.2 +3 -3
     NTP_4_2_7P170
 
-  ntpdc/ntpdc-opts.texi@1.172 +2 -2
+  ntpdc/ntpdc-opts.texi@1.170.1.2 +2 -2
     NTP_4_2_7P170
 
-  ntpdc/ntpdc.1@1.172 +2 -2
+  ntpdc/ntpdc.1@1.170.1.2 +2 -2
     NTP_4_2_7P170
 
   ntpq/ntpq-opts.c@1.172 +3 -3
@@ -586,7 +716,7 @@ ChangeSet@1.2521, 2011-05-19 11:26:01+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.173 +2 -2
     NTP_4_2_7P170
 
-ChangeSet@1.2520, 2011-05-19 02:46:37+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2517.1.3, 2011-05-19 02:46:37+00:00, davehart@shiny.ad.hartbrothers.com
   [Bug 1932] libevent/util_internal.h builtin_expect compile error with
     gcc 2.95.
   Use 64-bit scalars in LFPTOD() and DTOLFP() on more platforms by
@@ -607,7 +737,7 @@ ChangeSet@1.2520, 2011-05-19 02:46:37+00:00, davehart@shiny.ad.hartbrothers.com
     [Bug 1932] libevent/util_internal.h builtin_expect compile error with
       gcc 2.95.
 
-ChangeSet@1.2519, 2011-05-18 11:24:41+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2517.1.2, 2011-05-18 11:24:41+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P169
   TAG: NTP_4_2_7P169
 
@@ -626,16 +756,16 @@ ChangeSet@1.2519, 2011-05-18 11:24:41+00:00, stenn@deacon.udel.edu
   ntpd/ntpd.1@1.172 +2 -2
     NTP_4_2_7P169
 
-  ntpdc/ntpdc-opts.c@1.171 +3 -3
+  ntpdc/ntpdc-opts.c@1.170.1.1 +3 -3
     NTP_4_2_7P169
 
-  ntpdc/ntpdc-opts.h@1.171 +3 -3
+  ntpdc/ntpdc-opts.h@1.170.1.1 +3 -3
     NTP_4_2_7P169
 
-  ntpdc/ntpdc-opts.texi@1.171 +2 -2
+  ntpdc/ntpdc-opts.texi@1.170.1.1 +2 -2
     NTP_4_2_7P169
 
-  ntpdc/ntpdc.1@1.171 +2 -2
+  ntpdc/ntpdc.1@1.170.1.1 +2 -2
     NTP_4_2_7P169
 
   ntpq/ntpq-opts.c@1.171 +3 -3
@@ -692,7 +822,35 @@ ChangeSet@1.2519, 2011-05-18 11:24:41+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1@1.172 +2 -2
     NTP_4_2_7P169
 
-ChangeSet@1.2518, 2011-05-17 23:17:51+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2520, 2011-05-18 04:48:08-04:00, stenn@psp-deb1.ntp.org
+  More cleanup around autogen-erating ntpdc.1 and ntpdc.html
+
+  sntp/ag-tpl/cmd-doc.tlib@1.1 +943 -0
+    BitKeeper file /home/stenn/ntp-dev/sntp/ag-tpl/cmd-doc.tlib
+
+  sntp/ag-tpl/cmd-doc.tlib@1.0 +0 -0
+
+  sntp/ag-tpl/mdoc2mdoc@1.1 +2 -0
+    BitKeeper file /home/stenn/ntp-dev/sntp/ag-tpl/mdoc2mdoc
+
+  sntp/ag-tpl/mdoc2mdoc@1.0 +0 -0
+
+ChangeSet@1.2519, 2011-05-18 04:46:41-04:00, stenn@psp-deb1.ntp.org
+  More cleanup around autogen-erating ntpdc.1 and ntpdc.html
+
+  .point-changed-filelist@1.10 +1 -0
+    Deal with the creation of ntpdc/ntpdc.html
+
+  ntpdc/Makefile.am@1.62 +8 -1
+    autogen ntpdc.1 cleanup
+
+  ntpdc/ntpdc-opts.def@1.16 +29 -5
+    autogen ntpdc.1 cleanup
+
+  sntp/sntp-opts.def@1.28 +2 -6
+    Use the homerc.def file like the other programs do
+
+ChangeSet@1.2517.1.1, 2011-05-17 23:17:51+00:00, davehart@shiny.ad.hartbrothers.com
   Bug 1933 - WWVB/Spectracom driver timestamps LFs, not CRs
 
   ChangeLog@1.884 +1 -0
@@ -700,6 +858,40 @@ ChangeSet@1.2518, 2011-05-17 23:17:51+00:00, davehart@shiny.ad.hartbrothers.com
 
   ntpd/refclock_wwvb.c@1.28 +49 -9
     Bug 1933 - WWVB/Spectracom driver timestamps LFs, not CRs
+
+ChangeSet@1.2516.1.2, 2011-05-17 02:38:20-04:00, stenn@psp-deb1.ntp.org
+  Prepare for the autogen versions of ntpdc.1 and friends
+
+  ntpdc/ntpdc-opts.c@1.169.1.1 +95 -95
+    Prepare for the autogen versions of ntpdc.1 and friends
+
+  ntpdc/ntpdc-opts.h@1.169.1.1 +32 -32
+    Prepare for the autogen versions of ntpdc.1 and friends
+
+  ntpdc/ntpdc-opts.texi@1.169.1.1 +22 -23
+    Prepare for the autogen versions of ntpdc.1 and friends
+
+  ntpdc/ntpdc.1@1.169.1.1 +718 -81
+    Prepare for the autogen versions of ntpdc.1 and friends
+
+  ntpdc/ntpdc.html@1.1 +445 -0
+    BitKeeper file /home/stenn/ntp-dev/ntpdc/ntpdc.html
+
+  ntpdc/ntpdc.html@1.0 +0 -0
+
+ChangeSet@1.2516.1.1, 2011-05-17 02:19:23-04:00, stenn@psp-deb1.ntp.org
+  Prepare for the autogen versions of ntpdc.1 and friends
+
+  ntpdc/Makefile.am@1.61 +26 -5
+    Prepare for the autogen versions of ntpdc.1 and friends
+
+  ntpdc/ntpdc-opts.def@1.15 +696 -25
+    Prepare for the autogen versions of ntpdc.1 and friends
+
+  ntpdc/ntpdc.texi@1.1 +88 -0
+    BitKeeper file /home/stenn/ntp-dev/ntpdc/ntpdc.texi
+
+  ntpdc/ntpdc.texi@1.0 +0 -0
 
 ChangeSet@1.2517, 2011-05-16 07:40:44+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P168
