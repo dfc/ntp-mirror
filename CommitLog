@@ -1,3 +1,109 @@
+ChangeSet@1.2530, 2011-05-30 11:16:58+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P175
+  TAG: NTP_4_2_7P175
+
+  ChangeLog@1.903 +1 -0
+    NTP_4_2_7P175
+
+  ntpd/ntpd-opts.c@1.180 +3 -3
+    NTP_4_2_7P175
+
+  ntpd/ntpd-opts.h@1.180 +3 -3
+    NTP_4_2_7P175
+
+  ntpd/ntpd-opts.texi@1.178 +2 -2
+    NTP_4_2_7P175
+
+  ntpd/ntpd.1@1.178 +2 -2
+    NTP_4_2_7P175
+
+  ntpdc/ntpdc-opts.c@1.175 +3 -3
+    NTP_4_2_7P175
+
+  ntpdc/ntpdc-opts.h@1.175 +3 -3
+    NTP_4_2_7P175
+
+  ntpdc/ntpdc-opts.texi@1.175 +2 -2
+    NTP_4_2_7P175
+
+  ntpdc/ntpdc.1@1.175 +13 -12
+    NTP_4_2_7P175
+
+  ntpdc/ntpdc.html@1.3 +2 -2
+    NTP_4_2_7P175
+
+  ntpq/ntpq-opts.c@1.177 +3 -3
+    NTP_4_2_7P175
+
+  ntpq/ntpq-opts.h@1.177 +3 -3
+    NTP_4_2_7P175
+
+  ntpq/ntpq-opts.texi@1.177 +2 -2
+    NTP_4_2_7P175
+
+  ntpq/ntpq.1@1.177 +2 -2
+    NTP_4_2_7P175
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.177 +3 -3
+    NTP_4_2_7P175
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.177 +3 -3
+    NTP_4_2_7P175
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.177 +2 -2
+    NTP_4_2_7P175
+
+  ntpsnmpd/ntpsnmpd.1@1.177 +2 -2
+    NTP_4_2_7P175
+
+  packageinfo.sh@1.178 +1 -1
+    NTP_4_2_7P175
+
+  sntp/sntp-opts.c@1.171 +3 -3
+    NTP_4_2_7P175
+
+  sntp/sntp-opts.h@1.171 +3 -3
+    NTP_4_2_7P175
+
+  sntp/sntp-opts.texi@1.171 +2 -2
+    NTP_4_2_7P175
+
+  sntp/sntp.1@1.171 +9 -6
+    NTP_4_2_7P175
+
+  sntp/sntp.html@1.171 +2 -2
+    NTP_4_2_7P175
+
+  util/ntp-keygen-opts.c@1.175 +3 -3
+    NTP_4_2_7P175
+
+  util/ntp-keygen-opts.h@1.175 +3 -3
+    NTP_4_2_7P175
+
+  util/ntp-keygen-opts.texi@1.178 +2 -2
+    NTP_4_2_7P175
+
+  util/ntp-keygen.1@1.178 +2 -2
+    NTP_4_2_7P175
+
+ChangeSet@1.2529, 2011-05-29 21:36:04-04:00, stenn@psp-deb1.ntp.org
+  cmd-doc.tlib cleanup from Bruce Korb
+
+  ChangeLog@1.902 +1 -0
+    cmd-doc.tlib cleanup from Bruce Korb
+
+  sntp/ag-tpl/cmd-doc.tlib@1.3 +50 -35
+    cmd-doc.tlib cleanup from Bruce Korb
+
+ChangeSet@1.2528, 2011-05-29 21:28:17-04:00, stenn@psp-deb1.ntp.org
+  [Bug 1936] Correctly set IPV6_MULTICAST_LOOP
+
+  ChangeLog@1.901 +1 -0
+    [Bug 1936] Correctly set IPV6_MULTICAST_LOOP
+
+  ntpd/ntp_io.c@1.356 +7 -2
+    [Bug 1936] Correctly set IPV6_MULTICAST_LOOP
+
 ChangeSet@1.2527, 2011-05-28 11:03:38+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P174
   TAG: NTP_4_2_7P174
