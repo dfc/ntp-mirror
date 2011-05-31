@@ -1,8 +1,96 @@
-ChangeSet@1.2530, 2011-05-30 11:16:58+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2532, 2011-05-31 11:00:25+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P176
+  TAG: NTP_4_2_7P176
+
+  ChangeLog@1.905 +1 -0
+    NTP_4_2_7P176
+
+  ntpd/ntpd-opts.c@1.181 +3 -3
+    NTP_4_2_7P176
+
+  ntpd/ntpd-opts.h@1.181 +3 -3
+    NTP_4_2_7P176
+
+  ntpd/ntpd-opts.texi@1.179 +2 -2
+    NTP_4_2_7P176
+
+  ntpd/ntpd.1@1.179 +2 -2
+    NTP_4_2_7P176
+
+  ntpdc/ntpdc-opts.c@1.176 +3 -3
+    NTP_4_2_7P176
+
+  ntpdc/ntpdc-opts.h@1.176 +3 -3
+    NTP_4_2_7P176
+
+  ntpdc/ntpdc-opts.texi@1.176 +3 -3
+    NTP_4_2_7P176
+
+  ntpdc/ntpdc.1@1.176 +2 -2
+    NTP_4_2_7P176
+
+  ntpdc/ntpdc.html@1.4 +3 -3
+    NTP_4_2_7P176
+
+  ntpq/ntpq-opts.c@1.178 +3 -3
+    NTP_4_2_7P176
+
+  ntpq/ntpq-opts.h@1.178 +3 -3
+    NTP_4_2_7P176
+
+  ntpq/ntpq-opts.texi@1.178 +2 -2
+    NTP_4_2_7P176
+
+  ntpq/ntpq.1@1.178 +2 -2
+    NTP_4_2_7P176
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.178 +3 -3
+    NTP_4_2_7P176
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.178 +3 -3
+    NTP_4_2_7P176
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.178 +2 -2
+    NTP_4_2_7P176
+
+  ntpsnmpd/ntpsnmpd.1@1.178 +2 -2
+    NTP_4_2_7P176
+
+  packageinfo.sh@1.179 +1 -1
+    NTP_4_2_7P176
+
+  sntp/sntp-opts.c@1.172 +4 -10
+    NTP_4_2_7P176
+
+  sntp/sntp-opts.h@1.172 +3 -3
+    NTP_4_2_7P176
+
+  sntp/sntp-opts.texi@1.172 +4 -13
+    NTP_4_2_7P176
+
+  sntp/sntp.1@1.172 +3 -3
+    NTP_4_2_7P176
+
+  sntp/sntp.html@1.172 +4 -13
+    NTP_4_2_7P176
+
+  util/ntp-keygen-opts.c@1.176 +3 -3
+    NTP_4_2_7P176
+
+  util/ntp-keygen-opts.h@1.176 +3 -3
+    NTP_4_2_7P176
+
+  util/ntp-keygen-opts.texi@1.179 +2 -2
+    NTP_4_2_7P176
+
+  util/ntp-keygen.1@1.179 +2 -2
+    NTP_4_2_7P176
+
+ChangeSet@1.2529.1.1, 2011-05-30 11:16:58+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P175
   TAG: NTP_4_2_7P175
 
-  ChangeLog@1.903 +1 -0
+  ChangeLog@1.902.1.1 +1 -0
     NTP_4_2_7P175
 
   ntpd/ntpd-opts.c@1.180 +3 -3
@@ -85,6 +173,25 @@ ChangeSet@1.2530, 2011-05-30 11:16:58+00:00, stenn@deacon.udel.edu
 
   util/ntp-keygen.1@1.178 +2 -2
     NTP_4_2_7P175
+
+ChangeSet@1.2530, 2011-05-30 04:44:11-04:00, stenn@psp-deb1.ntp.org
+  sntp documentation updates
+
+  ChangeLog@1.903 +1 -0
+    sntp documentation cleanup
+
+  sntp/ag-tpl/aginfo.tpl@1.1 +308 -0
+    BitKeeper file /home/stenn/ntp-dev/sntp/ag-tpl/aginfo.tpl
+
+  sntp/ag-tpl/aginfo.tpl@1.0 +0 -0
+
+  sntp/ag-tpl/mdoc2man@1.1 +284 -0
+    BitKeeper file /home/stenn/ntp-dev/sntp/ag-tpl/mdoc2man
+
+  sntp/ag-tpl/mdoc2man@1.0 +0 -0
+
+  sntp/sntp-opts.def@1.31 +31 -42
+    documentation cleanup
 
 ChangeSet@1.2529, 2011-05-29 21:36:04-04:00, stenn@psp-deb1.ntp.org
   cmd-doc.tlib cleanup from Bruce Korb
