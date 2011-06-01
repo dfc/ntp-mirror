@@ -1,3 +1,135 @@
+ChangeSet@1.2537, 2011-06-01 11:01:22+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P177
+  TAG: NTP_4_2_7P177
+
+  ChangeLog@1.909 +1 -0
+    NTP_4_2_7P177
+
+  ntpd/ntpd-opts.c@1.182 +21 -11
+    NTP_4_2_7P177
+
+  ntpd/ntpd-opts.h@1.182 +4 -7
+    NTP_4_2_7P177
+
+  ntpd/ntpd-opts.texi@1.180 +3 -3
+    NTP_4_2_7P177
+
+  ntpd/ntpd.1@1.180 +4 -9
+    NTP_4_2_7P177
+
+  ntpdc/ntpdc-opts.c@1.177 +21 -11
+    NTP_4_2_7P177
+
+  ntpdc/ntpdc-opts.h@1.177 +4 -7
+    NTP_4_2_7P177
+
+  ntpdc/ntpdc-opts.texi@1.177 +2 -2
+    NTP_4_2_7P177
+
+  ntpdc/ntpdc.1@1.177 +3 -7
+    NTP_4_2_7P177
+
+  ntpdc/ntpdc.html@1.5 +2 -2
+    NTP_4_2_7P177
+
+  ntpq/ntpq-opts.c@1.179 +21 -11
+    NTP_4_2_7P177
+
+  ntpq/ntpq-opts.h@1.179 +4 -7
+    NTP_4_2_7P177
+
+  ntpq/ntpq-opts.texi@1.179 +3 -3
+    NTP_4_2_7P177
+
+  ntpq/ntpq.1@1.179 +4 -9
+    NTP_4_2_7P177
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.179 +21 -11
+    NTP_4_2_7P177
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.179 +4 -7
+    NTP_4_2_7P177
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.179 +3 -3
+    NTP_4_2_7P177
+
+  ntpsnmpd/ntpsnmpd.1@1.179 +4 -9
+    NTP_4_2_7P177
+
+  packageinfo.sh@1.180 +1 -1
+    NTP_4_2_7P177
+
+  sntp/sntp-opts.c@1.173 +21 -11
+    NTP_4_2_7P177
+
+  sntp/sntp-opts.h@1.173 +4 -7
+    NTP_4_2_7P177
+
+  sntp/sntp-opts.texi@1.173 +2 -2
+    NTP_4_2_7P177
+
+  sntp/sntp.1@1.173 +3 -7
+    NTP_4_2_7P177
+
+  sntp/sntp.html@1.173 +2 -2
+    NTP_4_2_7P177
+
+  util/ntp-keygen-opts.c@1.177 +21 -11
+    NTP_4_2_7P177
+
+  util/ntp-keygen-opts.h@1.177 +4 -7
+    NTP_4_2_7P177
+
+  util/ntp-keygen-opts.texi@1.180 +3 -3
+    NTP_4_2_7P177
+
+  util/ntp-keygen.1@1.180 +4 -9
+    NTP_4_2_7P177
+
+ChangeSet@1.2536, 2011-06-01 03:26:00-04:00, stenn@deacon.udel.edu
+  Clean up the ntp.lic file
+
+  ChangeLog@1.908 +1 -0
+    Clean up the ntp.lic file
+
+  sntp/ag-tpl/ntp.lic@1.2 +2 -2
+    Clean up the ntp.lic file
+
+ChangeSet@1.2535, 2011-06-01 03:14:41-04:00, stenn@psp-deb1.ntp.org
+  Provide ntp.lic for the new autogen license template
+
+  sntp/ag-tpl/ntp.lic@1.1 +15 -0
+    BitKeeper file /home/stenn/ntp-dev/sntp/ag-tpl/ntp.lic
+
+  sntp/ag-tpl/ntp.lic@1.0 +0 -0
+
+ChangeSet@1.2534, 2011-06-01 03:11:05-04:00, stenn@psp-deb1.ntp.org
+  Use the latest autogen's new copyright template code
+
+  ChangeLog@1.907 +1 -0
+    Use the latest autogen's new copyright template code
+
+  ntpd/Makefile.am@1.104 +1 -1
+    Use the latest autogen's new copyright template code
+
+  ntpq/Makefile.am@1.57 +1 -1
+    Use the latest autogen's new copyright template code
+
+  ntpsnmpd/Makefile.am@1.28 +1 -1
+    Use the latest autogen's new copyright template code
+
+  sntp/include/copyright.def@1.18 +2 -6
+    Use the latest autogen's new copyright template code
+
+  util/Makefile.am@1.60 +1 -1
+    Use the latest autogen's new copyright template code
+
+ChangeSet@1.2533, 2011-06-01 02:07:55-04:00, stenn@deacon.udel.edu
+  p176 cleaned up sntp docs and autogen doc templates
+
+  ChangeLog@1.906 +2 -0
+    p176 cleaned up sntp docs and autogen doc templates
+
 ChangeSet@1.2532, 2011-05-31 11:00:25+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P176
   TAG: NTP_4_2_7P176
