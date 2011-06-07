@@ -41,9 +41,10 @@ noinst_PROGRAMS = event-test$(EXEEXT) time-test$(EXEEXT) \
 subdir = sample
 DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/m4/libtool.m4 \
-	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
-	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
+am__aclocal_m4_deps = $(top_srcdir)/m4/ac_backport_259_ssizet.m4 \
+	$(top_srcdir)/m4/libtool.m4 $(top_srcdir)/m4/ltoptions.m4 \
+	$(top_srcdir)/m4/ltsugar.m4 $(top_srcdir)/m4/ltversion.m4 \
+	$(top_srcdir)/m4/lt~obsolete.m4 \
 	$(top_srcdir)/m4/openldap-thread-check.m4 \
 	$(top_srcdir)/m4/openldap.m4 $(top_srcdir)/configure.in
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
@@ -143,6 +144,8 @@ ECHO_C = @ECHO_C@
 ECHO_N = @ECHO_N@
 ECHO_T = @ECHO_T@
 EGREP = @EGREP@
+EV_LIB_GDI = @EV_LIB_GDI@
+EV_LIB_WS32 = @EV_LIB_WS32@
 EXEEXT = @EXEEXT@
 FGREP = @FGREP@
 GREP = @GREP@
@@ -250,7 +253,7 @@ dns_example_sources = dns-example.c
 hello_world_sources = hello-world.c
 http_server_sources = http-server.c
 @OPENSSL_TRUE@le_proxy_sources = le-proxy.c
-@OPENSSL_TRUE@le_proxy_LDADD = $(LDADD) ../libevent_openssl.la -lcrypto -lssl
+@OPENSSL_TRUE@le_proxy_LDADD = $(LDADD) ../libevent_openssl.la
 DISTCLEANFILES = *~
 all: all-am
 

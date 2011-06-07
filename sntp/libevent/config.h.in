@@ -166,6 +166,9 @@
 /* Define if the system has openssl */
 #undef HAVE_OPENSSL
 
+/* Define to 1 if you have the <openssl/bio.h> header file. */
+#undef HAVE_OPENSSL_BIO_H
+
 /* Define to 1 if you have the `pipe' function. */
 #undef HAVE_PIPE
 
@@ -430,6 +433,9 @@
 /* Define to the sub-directory in which libtool stores uninstalled libraries.
    */
 #undef LT_OBJDIR
+
+/* Define to 1 if your C compiler doesn't accept -c and -o together. */
+#undef NO_MINUS_C_MINUS_O
 
 /* define if you have (or want) no threads */
 #undef NO_THREADS

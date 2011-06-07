@@ -1,3 +1,263 @@
+ChangeSet@1.2549, 2011-06-07 10:34:42+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P181
+  TAG: NTP_4_2_7P181
+
+  ChangeLog@1.919 +1 -0
+    NTP_4_2_7P181
+
+  ntpd/ntpd-opts.c@1.186 +3 -3
+    NTP_4_2_7P181
+
+  ntpd/ntpd-opts.h@1.186 +3 -3
+    NTP_4_2_7P181
+
+  ntpd/ntpd-opts.texi@1.184 +2 -2
+    NTP_4_2_7P181
+
+  ntpd/ntpd.1@1.184 +2 -2
+    NTP_4_2_7P181
+
+  ntpdc/ntpdc-opts.c@1.181 +3 -3
+    NTP_4_2_7P181
+
+  ntpdc/ntpdc-opts.h@1.181 +3 -3
+    NTP_4_2_7P181
+
+  ntpdc/ntpdc-opts.texi@1.181 +2 -2
+    NTP_4_2_7P181
+
+  ntpdc/ntpdc.1@1.181 +2 -2
+    NTP_4_2_7P181
+
+  ntpdc/ntpdc.html@1.9 +2 -2
+    NTP_4_2_7P181
+
+  ntpq/ntpq-opts.c@1.183 +3 -3
+    NTP_4_2_7P181
+
+  ntpq/ntpq-opts.h@1.183 +3 -3
+    NTP_4_2_7P181
+
+  ntpq/ntpq-opts.texi@1.183 +2 -2
+    NTP_4_2_7P181
+
+  ntpq/ntpq.1@1.183 +2 -2
+    NTP_4_2_7P181
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.183 +3 -3
+    NTP_4_2_7P181
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.183 +3 -3
+    NTP_4_2_7P181
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.183 +2 -2
+    NTP_4_2_7P181
+
+  ntpsnmpd/ntpsnmpd.1@1.183 +2 -2
+    NTP_4_2_7P181
+
+  packageinfo.sh@1.184 +1 -1
+    NTP_4_2_7P181
+
+  sntp/sntp-opts.c@1.177 +3 -3
+    NTP_4_2_7P181
+
+  sntp/sntp-opts.h@1.177 +3 -3
+    NTP_4_2_7P181
+
+  sntp/sntp-opts.texi@1.177 +2 -2
+    NTP_4_2_7P181
+
+  sntp/sntp.1@1.177 +2 -2
+    NTP_4_2_7P181
+
+  sntp/sntp.html@1.177 +2 -2
+    NTP_4_2_7P181
+
+  util/ntp-keygen-opts.c@1.181 +3 -3
+    NTP_4_2_7P181
+
+  util/ntp-keygen-opts.h@1.181 +3 -3
+    NTP_4_2_7P181
+
+  util/ntp-keygen-opts.texi@1.184 +2 -2
+    NTP_4_2_7P181
+
+  util/ntp-keygen.1@1.184 +2 -2
+    NTP_4_2_7P181
+
+ChangeSet@1.2548, 2011-06-07 02:25:51-04:00, stenn@deacon.udel.edu
+  [Bug 1938] addr_eqprefix() doesn't clear enough storage
+
+  ChangeLog@1.918 +1 -0
+    [Bug 1938] addr_eqprefix() doesn't clear enough storage
+
+  ntpd/ntp_io.c@1.357 +2 -2
+    [Bug 1938] addr_eqprefix() doesn't clear enough storage
+
+ChangeSet@1.2547, 2011-06-06 18:10:10-04:00, stenn@deacon.udel.edu
+  p180 was: Upgrade to libevent-2.0.12
+
+  ChangeLog@1.917 +1 -0
+    p180 was: Upgrade to libevent-2.0.12
+
+ChangeSet@1.2546, 2011-06-06 10:41:22+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P180
+  TAG: NTP_4_2_7P180
+
+  ChangeLog@1.916 +1 -0
+    NTP_4_2_7P180
+
+  ntpd/ntpd-opts.c@1.185 +3 -3
+    NTP_4_2_7P180
+
+  ntpd/ntpd-opts.h@1.185 +3 -3
+    NTP_4_2_7P180
+
+  ntpd/ntpd-opts.texi@1.183 +2 -2
+    NTP_4_2_7P180
+
+  ntpd/ntpd.1@1.183 +2 -2
+    NTP_4_2_7P180
+
+  ntpdc/ntpdc-opts.c@1.180 +3 -3
+    NTP_4_2_7P180
+
+  ntpdc/ntpdc-opts.h@1.180 +3 -3
+    NTP_4_2_7P180
+
+  ntpdc/ntpdc-opts.texi@1.180 +2 -2
+    NTP_4_2_7P180
+
+  ntpdc/ntpdc.1@1.180 +2 -2
+    NTP_4_2_7P180
+
+  ntpdc/ntpdc.html@1.8 +2 -2
+    NTP_4_2_7P180
+
+  ntpq/ntpq-opts.c@1.182 +3 -3
+    NTP_4_2_7P180
+
+  ntpq/ntpq-opts.h@1.182 +3 -3
+    NTP_4_2_7P180
+
+  ntpq/ntpq-opts.texi@1.182 +2 -2
+    NTP_4_2_7P180
+
+  ntpq/ntpq.1@1.182 +2 -2
+    NTP_4_2_7P180
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.182 +3 -3
+    NTP_4_2_7P180
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.182 +3 -3
+    NTP_4_2_7P180
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.182 +2 -2
+    NTP_4_2_7P180
+
+  ntpsnmpd/ntpsnmpd.1@1.182 +2 -2
+    NTP_4_2_7P180
+
+  packageinfo.sh@1.183 +1 -1
+    NTP_4_2_7P180
+
+  sntp/sntp-opts.c@1.176 +3 -3
+    NTP_4_2_7P180
+
+  sntp/sntp-opts.h@1.176 +3 -3
+    NTP_4_2_7P180
+
+  sntp/sntp-opts.texi@1.176 +2 -2
+    NTP_4_2_7P180
+
+  sntp/sntp.1@1.176 +2 -2
+    NTP_4_2_7P180
+
+  sntp/sntp.html@1.176 +2 -2
+    NTP_4_2_7P180
+
+  util/ntp-keygen-opts.c@1.180 +3 -3
+    NTP_4_2_7P180
+
+  util/ntp-keygen-opts.h@1.180 +3 -3
+    NTP_4_2_7P180
+
+  util/ntp-keygen-opts.texi@1.183 +2 -2
+    NTP_4_2_7P180
+
+  util/ntp-keygen.1@1.183 +2 -2
+    NTP_4_2_7P180
+
+ChangeSet@1.2461.1.6, 2011-06-05 11:23:00+00:00, davehart@shiny.ad.hartbrothers.com
+  Update to libevent HEAD as of 20110604, e40bafe796a8e544e9e54e247cb3aa30c95e06b0
+  Snapshot of libevent 2.1, as of 2.0.12-stable release.
+
+  sntp/libevent/ChangeLog@1.3 +40 -0
+    Update to libevent HEAD as of 20110604, e40bafe796a8e544e9e54e247cb3aa30c95e06b0
+    Snapshot of libevent 2.1, as of 2.0.12-stable release.
+
+  sntp/libevent/Makefile.am@1.1.1.3 +16 -1
+    Update to libevent HEAD as of 20110604, e40bafe796a8e544e9e54e247cb3aa30c95e06b0
+    Snapshot of libevent 2.1, as of 2.0.12-stable release.
+
+  sntp/libevent/README@1.3 +5 -0
+    Update to libevent HEAD as of 20110604, e40bafe796a8e544e9e54e247cb3aa30c95e06b0
+    Snapshot of libevent 2.1, as of 2.0.12-stable release.
+
+  sntp/libevent/buffer.c@1.4 +41 -16
+    Update to libevent HEAD as of 20110604, e40bafe796a8e544e9e54e247cb3aa30c95e06b0
+    Snapshot of libevent 2.1, as of 2.0.12-stable release.
+
+  sntp/libevent/configure.in@1.1.1.3 +15 -0
+    Update to libevent HEAD as of 20110604, e40bafe796a8e544e9e54e247cb3aa30c95e06b0
+    Snapshot of libevent 2.1, as of 2.0.12-stable release.
+
+  sntp/libevent/event.c@1.1.1.3 +5 -1
+    Update to libevent HEAD as of 20110604, e40bafe796a8e544e9e54e247cb3aa30c95e06b0
+    Snapshot of libevent 2.1, as of 2.0.12-stable release.
+
+  sntp/libevent/event_iocp.c@1.4 +4 -0
+    Update to libevent HEAD as of 20110604, e40bafe796a8e544e9e54e247cb3aa30c95e06b0
+    Snapshot of libevent 2.1, as of 2.0.12-stable release.
+
+  sntp/libevent/evport.c@1.1.1.2 +85 -112
+    Update to libevent HEAD as of 20110604, e40bafe796a8e544e9e54e247cb3aa30c95e06b0
+    Snapshot of libevent 2.1, as of 2.0.12-stable release.
+
+  sntp/libevent/evthread_win32.c@1.4 +4 -0
+    Update to libevent HEAD as of 20110604, e40bafe796a8e544e9e54e247cb3aa30c95e06b0
+    Snapshot of libevent 2.1, as of 2.0.12-stable release.
+
+  sntp/libevent/http.c@1.1.1.3 +45 -11
+    Update to libevent HEAD as of 20110604, e40bafe796a8e544e9e54e247cb3aa30c95e06b0
+    Snapshot of libevent 2.1, as of 2.0.12-stable release.
+
+  sntp/libevent/listener.c@1.4 +4 -0
+    Update to libevent HEAD as of 20110604, e40bafe796a8e544e9e54e247cb3aa30c95e06b0
+    Snapshot of libevent 2.1, as of 2.0.12-stable release.
+
+  sntp/libevent/select.c@1.1.1.2 +3 -3
+    Update to libevent HEAD as of 20110604, e40bafe796a8e544e9e54e247cb3aa30c95e06b0
+    Snapshot of libevent 2.1, as of 2.0.12-stable release.
+
+  sntp/libevent/test/regress_http.c@1.1.1.3 +3 -3
+    Update to libevent HEAD as of 20110604, e40bafe796a8e544e9e54e247cb3aa30c95e06b0
+    Snapshot of libevent 2.1, as of 2.0.12-stable release.
+
+  sntp/libevent/test/regress_ssl.c@1.3 +1 -0
+    Update to libevent HEAD as of 20110604, e40bafe796a8e544e9e54e247cb3aa30c95e06b0
+    Snapshot of libevent 2.1, as of 2.0.12-stable release.
+
+ChangeSet@1.2461.1.5, 2011-06-05 11:16:07+00:00, davehart@shiny.ad.hartbrothers.com
+  cleanup arlib cruft.
+  add sntp/libevent/.git and .gitignore to ease shared bk/git repo for libevent upstream.
+
+  BitKeeper/etc/ignore@1.77.1.1 +2 -4
+    cleanup arlib cruft.
+    add sntp/libevent/.git and .gitignore to ease shared bk/git repo for libevent upstream.
+    
+
 ChangeSet@1.2544, 2011-06-03 08:00:33+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P179
   TAG: NTP_4_2_7P179
@@ -711,6 +971,269 @@ ChangeSet@1.2523, 2011-05-26 18:54:06-04:00, stenn@psp-deb1.ntp.org
 
   sntp/m4/ntp_libevent.m4@1.8 +1 -0
     Don't build libevent with openssl support
+
+ChangeSet@1.2461.1.4, 2011-05-26 07:10:45+00:00, davehart@shiny.ad.hartbrothers.com
+  libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/ChangeLog@1.2 +84 -0
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/Makefile.am@1.1.1.2 +2 -2
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/Makefile.nmake@1.2 +1 -1
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/README@1.2 +8 -2
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/WIN32-Code/event2/event-config.h@1.1.1.2 +3 -0
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/arc4random.c@1.1.1.2 +5 -5
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/buffer.c@1.3 +12 -12
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/bufferevent-internal.h@1.3 +1 -1
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/bufferevent.c@1.3 +1 -1
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/bufferevent_async.c@1.3 +10 -1
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/bufferevent_filter.c@1.3 +2 -1
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/bufferevent_openssl.c@1.3 +2 -1
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/bufferevent_pair.c@1.3 +1 -1
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/bufferevent_sock.c@1.3 +7 -6
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/compat/sys/queue.h@1.2 +1 -1
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/configure.in@1.1.1.2 +58 -25
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/evbuffer-internal.h@1.3 +4 -4
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/evdns.3@1.1 +322 -0
+    BitKeeper file C:/ntp/ntp-dev-libevent-upstream/sntp/libevent/evdns.3
+
+  sntp/libevent/evdns.3@1.0 +0 -0
+
+  sntp/libevent/evdns.c@1.1.1.3 +20 -8
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/event-internal.h@1.1.1.2 +2 -2
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/event.3@1.1 +624 -0
+    BitKeeper file C:/ntp/ntp-dev-libevent-upstream/sntp/libevent/event.3
+
+  sntp/libevent/event.3@1.0 +0 -0
+
+  sntp/libevent/event.c@1.1.1.2 +12 -12
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/event.h@1.2 +1 -1
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/event_iocp.c@1.3 +1 -1
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/event_tagging.c@1.3 +2 -2
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/evmap.c@1.3 +4 -4
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/evrpc.c@1.3 +3 -3
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/evthread-internal.h@1.3 +1 -1
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/evthread.c@1.1.1.2 +1 -0
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/evthread_win32.c@1.3 +1 -1
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/evutil.c@1.1.1.2 +19 -19
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/http.c@1.1.1.2 +165 -55
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/include/Makefile.am@1.1.1.1 +9 -2
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/include/event2/dns.h@1.2 +1 -1
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/include/event2/dns_compat.h@1.2 +1 -1
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/include/event2/event.h@1.1.1.2 +1 -1
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/include/event2/rpc.h@1.2 +1 -1
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/include/event2/thread.h@1.2 +1 -1
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/include/event2/util.h@1.2 +8 -8
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/iocp-internal.h@1.2 +1 -1
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/kqueue.c@1.3 +37 -9
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/libevent_openssl.pc.in@1.2 +1 -1
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/listener.c@1.3 +6 -6
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/log.c@1.3 +1 -1
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/m4/ac_backport_259_ssizet.m4@1.1 +3 -0
+    BitKeeper file C:/ntp/ntp-dev-libevent-upstream/sntp/libevent/m4/ac_backport_259_ssizet.m4
+
+  sntp/libevent/m4/ac_backport_259_ssizet.m4@1.0 +0 -0
+
+  sntp/libevent/make_epoll_table.py@1.1 +57 -0
+    BitKeeper file C:/ntp/ntp-dev-libevent-upstream/sntp/libevent/make_epoll_table.py
+
+  sntp/libevent/make_epoll_table.py@1.0 +0 -0
+
+  sntp/libevent/sample/Makefile.am@1.1.1.2 +1 -1
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/sample/dns-example.c@1.1.1.2 +4 -5
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/sample/event-test.c@1.2 +6 -6
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/sample/hello-world.c@1.1.1.2 +2 -2
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/sample/http-server.c@1.1.1.3 +11 -8
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/sample/le-proxy.c@1.2 +1 -1
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/sample/signal-test.c@1.2 +2 -2
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/sample/time-test.c@1.2 +3 -3
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/signal.c@1.3 +5 -5
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/test/Makefile.am@1.1.1.2 +6 -4
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/test/Makefile.nmake@1.2 +1 -1
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/test/bench.c@1.2 +11 -6
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/test/bench_cascade.c@1.2 +10 -5
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/test/bench_http.c@1.2 +3 -3
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/test/bench_httpclient.c@1.1.1.2 +9 -6
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/test/regress.c@1.2 +28 -16
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/test/regress_buffer.c@1.3 +4 -2
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/test/regress_bufferevent.c@1.2 +5 -5
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/test/regress_dns.c@1.1.1.2 +5 -6
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/test/regress_et.c@1.2 +3 -3
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/test/regress_http.c@1.1.1.2 +67 -4
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/test/regress_listener.c@1.1.1.2 +3 -3
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/test/regress_main.c@1.3 +9 -9
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/test/regress_rpc.c@1.2 +2 -2
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/test/regress_ssl.c@1.2 +2 -2
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/test/regress_testutils.c@1.1.1.2 +2 -2
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/test/regress_thread.c@1.2 +5 -5
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/test/regress_util.c@1.2 +7 -7
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/test/regress_zlib.c@1.2 +25 -3
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/test/test-changelist.c@1.2 +7 -7
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/test/test-eof.c@1.1.1.2 +2 -2
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/test/test-init.c@1.2 +2 -2
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/test/test-ratelim.c@1.1.1.2 +5 -5
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/test/test-time.c@1.2 +3 -3
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/test/test-weof.c@1.2 +3 -3
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/test/tinytest.c@1.2 +4 -4
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/test/tinytest_local.h@1.2 +4 -1
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
+
+  sntp/libevent/util-internal.h@1.1.1.2 +3 -3
+    libevent HEAD (will be 2.1) 20110526 95f70166df3bc9c0817ef98aa3711564300d5bb3
 
 ChangeSet@1.2517.1.14, 2011-05-25 19:29:28+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P173

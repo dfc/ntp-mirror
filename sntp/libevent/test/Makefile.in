@@ -46,14 +46,15 @@ EXTRA_PROGRAMS = regress$(EXEEXT)
 @PTHREADS_TRUE@am__append_3 = ../libevent_pthreads.la
 @BUILD_WIN32_TRUE@am__append_4 = regress_iocp.c
 @OPENSSL_TRUE@am__append_5 = regress_ssl.c
-@OPENSSL_TRUE@am__append_6 = ../libevent_openssl.la -lcrypto -lssl
+@OPENSSL_TRUE@am__append_6 = ../libevent_openssl.la
 subdir = test
 DIST_COMMON = $(noinst_HEADERS) $(srcdir)/Makefile.am \
 	$(srcdir)/Makefile.in
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/m4/libtool.m4 \
-	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
-	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
+am__aclocal_m4_deps = $(top_srcdir)/m4/ac_backport_259_ssizet.m4 \
+	$(top_srcdir)/m4/libtool.m4 $(top_srcdir)/m4/ltoptions.m4 \
+	$(top_srcdir)/m4/ltsugar.m4 $(top_srcdir)/m4/ltversion.m4 \
+	$(top_srcdir)/m4/lt~obsolete.m4 \
 	$(top_srcdir)/m4/openldap-thread-check.m4 \
 	$(top_srcdir)/m4/openldap.m4 $(top_srcdir)/configure.in
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
@@ -107,10 +108,8 @@ am_regress_OBJECTS = regress-regress.$(OBJEXT) \
 	$(am__objects_2) $(am__objects_3) $(am__objects_4)
 regress_OBJECTS = $(am_regress_OBJECTS)
 am__DEPENDENCIES_2 = $(am__append_3)
-@OPENSSL_TRUE@am__DEPENDENCIES_3 = ../libevent_openssl.la
 regress_DEPENDENCIES = $(am__DEPENDENCIES_1) ../libevent.la \
-	$(am__DEPENDENCIES_2) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_3)
+	$(am__DEPENDENCIES_2) $(am__DEPENDENCIES_1) $(am__append_6)
 regress_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
 	$(regress_LDFLAGS) $(LDFLAGS) -o $@
@@ -199,6 +198,8 @@ ECHO_C = @ECHO_C@
 ECHO_N = @ECHO_N@
 ECHO_T = @ECHO_T@
 EGREP = @EGREP@
+EV_LIB_GDI = @EV_LIB_GDI@
+EV_LIB_WS32 = @EV_LIB_WS32@
 EXEEXT = @EXEEXT@
 FGREP = @FGREP@
 GREP = @GREP@
@@ -326,9 +327,7 @@ regress_SOURCES = regress.c regress_buffer.c regress_http.c \
 @ZLIB_REGRESS_TRUE@regress_zlib_SOURCES = regress_zlib.c
 regress_LDADD = $(LIBEVENT_GC_SECTIONS) ../libevent.la $(PTHREAD_LIBS) \
 	$(ZLIB_LIBS) $(am__append_6)
-regress_CPPFLAGS = -I$(top_srcdir) -I$(top_srcdir)/compat \
-	-I$(top_srcdir)/include -I../include $(PTHREAD_CFLAGS) $(ZLIB_CFLAGS)
-
+regress_CPPFLAGS = $(AM_CPPFLAGS) $(PTHREAD_CFLAGS) $(ZLIB_CFLAGS)
 regress_LDFLAGS = $(PTHREAD_CFLAGS)
 bench_SOURCES = bench.c
 bench_LDADD = $(LIBEVENT_GC_SECTIONS) ../libevent.la

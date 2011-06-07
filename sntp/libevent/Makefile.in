@@ -61,9 +61,10 @@ DIST_COMMON = README $(am__configure_deps) $(am__include_HEADERS_DIST) \
 	build-aux/ltmain.sh build-aux/missing build-aux/ylwrap \
 	epoll_sub.c
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/m4/libtool.m4 \
-	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
-	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
+am__aclocal_m4_deps = $(top_srcdir)/m4/ac_backport_259_ssizet.m4 \
+	$(top_srcdir)/m4/libtool.m4 $(top_srcdir)/m4/ltoptions.m4 \
+	$(top_srcdir)/m4/ltsugar.m4 $(top_srcdir)/m4/ltversion.m4 \
+	$(top_srcdir)/m4/lt~obsolete.m4 \
 	$(top_srcdir)/m4/openldap-thread-check.m4 \
 	$(top_srcdir)/m4/openldap.m4 $(top_srcdir)/configure.in
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
@@ -156,7 +157,7 @@ libevent_core_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	-o $@
 @INSTALL_LIBEVENT_FALSE@am_libevent_core_la_rpath =
 @INSTALL_LIBEVENT_TRUE@am_libevent_core_la_rpath = -rpath $(libdir)
-@BUILD_WIN32_TRUE@am__DEPENDENCIES_2 = libevent_core.la
+@BUILD_WITH_NO_UNDEFINED_TRUE@am__DEPENDENCIES_2 = libevent_core.la
 libevent_extra_la_DEPENDENCIES = $(am__DEPENDENCIES_2) \
 	$(am__DEPENDENCIES_1)
 am_libevent_extra_la_OBJECTS = $(am__objects_10)
@@ -168,7 +169,7 @@ libevent_extra_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 @INSTALL_LIBEVENT_FALSE@am_libevent_extra_la_rpath =
 @INSTALL_LIBEVENT_TRUE@am_libevent_extra_la_rpath = -rpath $(libdir)
 @OPENSSL_TRUE@libevent_openssl_la_DEPENDENCIES =  \
-@OPENSSL_TRUE@	$(am__DEPENDENCIES_2)
+@OPENSSL_TRUE@	$(am__DEPENDENCIES_2) $(am__DEPENDENCIES_1)
 am__libevent_openssl_la_SOURCES_DIST = bufferevent_openssl.c
 @OPENSSL_TRUE@am_libevent_openssl_la_OBJECTS = bufferevent_openssl.lo
 libevent_openssl_la_OBJECTS = $(am_libevent_openssl_la_OBJECTS)
@@ -179,7 +180,8 @@ libevent_openssl_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 @INSTALL_LIBEVENT_FALSE@@OPENSSL_TRUE@am_libevent_openssl_la_rpath =
 @INSTALL_LIBEVENT_TRUE@@OPENSSL_TRUE@am_libevent_openssl_la_rpath =  \
 @INSTALL_LIBEVENT_TRUE@@OPENSSL_TRUE@	-rpath $(libdir)
-libevent_pthreads_la_LIBADD =
+@PTHREADS_TRUE@libevent_pthreads_la_DEPENDENCIES =  \
+@PTHREADS_TRUE@	$(am__DEPENDENCIES_2)
 am__libevent_pthreads_la_SOURCES_DIST = evthread_pthread.c
 @PTHREADS_TRUE@am_libevent_pthreads_la_OBJECTS = evthread_pthread.lo
 libevent_pthreads_la_OBJECTS = $(am_libevent_pthreads_la_OBJECTS)
@@ -312,6 +314,8 @@ ECHO_C = @ECHO_C@
 ECHO_N = @ECHO_N@
 ECHO_T = @ECHO_T@
 EGREP = @EGREP@
+EV_LIB_GDI = @EV_LIB_GDI@
+EV_LIB_WS32 = @EV_LIB_WS32@
 EXEEXT = @EXEEXT@
 FGREP = @FGREP@
 GREP = @GREP@
@@ -446,6 +450,20 @@ RELEASE = -release 2.1
 VERSION_INFO = 1:0:0
 
 # History:          RELEASE    VERSION_INFO
+#  2.0.1-alpha --     2.0        1:0:0
+#  2.0.2-alpha --                2:0:0
+#  2.0.3-alpha --                2:0:0  (should have incremented; didn't.)
+#  2.0.4-alpha --                3:0:0
+#  2.0.5-beta  --                4:0:0
+#  2.0.6-rc    --     2.0        2:0:0
+#  2.0.7-rc    --     2.0        3:0:1
+#  2.0.8-rc    --     2.0        4:0:2
+#  2.0.9-rc    --     2.0        5:0:0 (ABI changed slightly)
+#  2.0.10-stable--    2.0        5:1:0 (No ABI change)
+#  2.0.11-stable--    2.0        6:0:1 (ABI changed, backward-compatible)
+#  2.0.12-stable--    2.0        6:1:1 (No ABI change)
+#
+# For Libevent 2.1:
 #  2.1.1-alpha --     2.1        1:0:0
 
 # ABI version history for this package effectively restarts every time
@@ -492,7 +510,7 @@ LIBEVENT_LIBS_LA = libevent.la libevent_core.la libevent_extra.la \
 @INSTALL_LIBEVENT_FALSE@noinst_LTLIBRARIES = $(LIBEVENT_LIBS_LA)
 SUBDIRS = . include sample test
 @BUILD_WIN32_FALSE@SYS_LIBS = 
-@BUILD_WIN32_TRUE@SYS_LIBS = -lws2_32
+@BUILD_WIN32_TRUE@SYS_LIBS = -lws2_32 -lshell32 -ladvapi32
 @BUILD_WIN32_FALSE@SYS_SRC = $(am__append_5) $(am__append_6) \
 @BUILD_WIN32_FALSE@	$(am__append_7) $(am__append_8) \
 @BUILD_WIN32_FALSE@	$(am__append_9) $(am__append_10) \
@@ -512,10 +530,10 @@ CORE_SRC = event.c evthread.c buffer.c \
 	evmap.c	log.c evutil.c evutil_rand.c strlcpy.c $(SYS_SRC)
 
 EXTRA_SRC = event_tagging.c http.c evdns.c evrpc.c
-@BUILD_WIN32_FALSE@NO_UNDEFINED = 
-@BUILD_WIN32_TRUE@NO_UNDEFINED = -no-undefined
-@BUILD_WIN32_FALSE@MAYBE_CORE = 
-@BUILD_WIN32_TRUE@MAYBE_CORE = libevent_core.la
+@BUILD_WITH_NO_UNDEFINED_FALSE@NO_UNDEFINED = 
+@BUILD_WITH_NO_UNDEFINED_TRUE@NO_UNDEFINED = -no-undefined
+@BUILD_WITH_NO_UNDEFINED_FALSE@MAYBE_CORE = 
+@BUILD_WITH_NO_UNDEFINED_TRUE@MAYBE_CORE = libevent_core.la
 GENERIC_LDFLAGS = -version-info $(VERSION_INFO) $(RELEASE) $(NO_UNDEFINED)
 libevent_la_SOURCES = $(CORE_SRC) $(EXTRA_SRC)
 libevent_la_LIBADD = @LTLIBOBJS@ $(SYS_LIBS)
@@ -524,12 +542,13 @@ libevent_core_la_SOURCES = $(CORE_SRC)
 libevent_core_la_LIBADD = @LTLIBOBJS@ $(SYS_LIBS)
 libevent_core_la_LDFLAGS = $(GENERIC_LDFLAGS)
 @PTHREADS_TRUE@libevent_pthreads_la_SOURCES = evthread_pthread.c
+@PTHREADS_TRUE@libevent_pthreads_la_LIBADD = $(MAYBE_CORE)
 @PTHREADS_TRUE@libevent_pthreads_la_LDFLAGS = $(GENERIC_LDFLAGS)
 libevent_extra_la_SOURCES = $(EXTRA_SRC)
 libevent_extra_la_LIBADD = $(MAYBE_CORE) $(SYS_LIBS)
 libevent_extra_la_LDFLAGS = $(GENERIC_LDFLAGS)
 @OPENSSL_TRUE@libevent_openssl_la_SOURCES = bufferevent_openssl.c
-@OPENSSL_TRUE@libevent_openssl_la_LIBADD = $(MAYBE_CORE) -lcrypto -lssl
+@OPENSSL_TRUE@libevent_openssl_la_LIBADD = $(MAYBE_CORE) $(OPENSSL_LIBS)
 @OPENSSL_TRUE@libevent_openssl_la_LDFLAGS = $(GENERIC_LDFLAGS)
 noinst_HEADERS = util-internal.h mm-internal.h ipv6-internal.h \
 	evrpc-internal.h strlcpy-internal.h evbuffer-internal.h \
