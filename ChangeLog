@@ -1,7 +1,20 @@
+(4.2.7p182) 2011/06/15 Released by Harlan Stenn <stenn@ntp.org>
+* [Bug 1304] Update sntp.html to reflect new implementation.
+* Update .point-changed-filelist .
+* ntpdc documentation fixes.
+* Update ntp-wait autogen docs.
+* Update the ntpd autogen docs.
+* Update the ntpsnmpd autogen docs.
+* Use autogen to produce ntp-keygen docs.
+* Add "license name" to ntp.lic for autogen-5.11.10.
+* Prepare for ntp.keys.5.
 (4.2.7p181) 2011/06/07 Released by Harlan Stenn <stenn@ntp.org>
 * [Bug 1938] addr_eqprefix() doesn't clear enough storage.
 (4.2.7p180) 2011/06/06 Released by Harlan Stenn <stenn@ntp.org>
 * Upgrade to libevent-2.0.12.
+* More sntp.1 cleanups.
+* Produce ntpq.1 with the new autogen macros.
+* Remove the deprecated "detail" stanza from ntpdc-opts.def.
 (4.2.7p179) 2011/06/03 Released by Harlan Stenn <stenn@ntp.org>
 * Update cmd-doc.tlib to autogen-5.11.10pre5.
 * Upgrade local autoopts templates to 5.11.10pre5.
