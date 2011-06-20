@@ -1,3 +1,173 @@
+ChangeSet@1.2571, 2011-06-20 09:46:53+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P184
+  TAG: NTP_4_2_7P184
+
+  ChangeLog@1.937 +1 -0
+    NTP_4_2_7P184
+
+  ntpd/ntpd-opts.c@1.189 +3 -3
+    NTP_4_2_7P184
+
+  ntpd/ntpd-opts.h@1.189 +3 -3
+    NTP_4_2_7P184
+
+  ntpd/ntpd-opts.texi@1.187 +2 -2
+    NTP_4_2_7P184
+
+  ntpd/ntpd.1@1.187 +2 -2
+    NTP_4_2_7P184
+
+  ntpdc/ntpdc-opts.c@1.184 +3 -3
+    NTP_4_2_7P184
+
+  ntpdc/ntpdc-opts.h@1.184 +3 -3
+    NTP_4_2_7P184
+
+  ntpdc/ntpdc-opts.texi@1.184 +2 -2
+    NTP_4_2_7P184
+
+  ntpdc/ntpdc.1@1.184 +2 -2
+    NTP_4_2_7P184
+
+  ntpdc/ntpdc.html@1.12 +2 -2
+    NTP_4_2_7P184
+
+  ntpq/ntpq-opts.c@1.186 +3 -3
+    NTP_4_2_7P184
+
+  ntpq/ntpq-opts.h@1.186 +3 -3
+    NTP_4_2_7P184
+
+  ntpq/ntpq-opts.texi@1.186 +2 -2
+    NTP_4_2_7P184
+
+  ntpq/ntpq.1@1.186 +2 -2
+    NTP_4_2_7P184
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.186 +3 -3
+    NTP_4_2_7P184
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.186 +3 -3
+    NTP_4_2_7P184
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.186 +2 -2
+    NTP_4_2_7P184
+
+  ntpsnmpd/ntpsnmpd.1@1.186 +2 -2
+    NTP_4_2_7P184
+
+  packageinfo.sh@1.187 +1 -1
+    NTP_4_2_7P184
+
+  scripts/ntp-wait-opts.texi@1.4 +1 -1
+    NTP_4_2_7P184
+
+  scripts/ntp-wait.1@1.4 +2 -2
+    NTP_4_2_7P184
+
+  scripts/ntp-wait.html@1.4 +1 -1
+    NTP_4_2_7P184
+
+  sntp/sntp-opts.c@1.180 +3 -3
+    NTP_4_2_7P184
+
+  sntp/sntp-opts.h@1.180 +3 -3
+    NTP_4_2_7P184
+
+  sntp/sntp-opts.texi@1.180 +2 -2
+    NTP_4_2_7P184
+
+  sntp/sntp.1@1.180 +2 -2
+    NTP_4_2_7P184
+
+  sntp/sntp.html@1.180 +2 -2
+    NTP_4_2_7P184
+
+  util/ntp-keygen-opts.c@1.184 +3 -3
+    NTP_4_2_7P184
+
+  util/ntp-keygen-opts.h@1.184 +3 -3
+    NTP_4_2_7P184
+
+  util/ntp-keygen-opts.texi@1.187 +2 -2
+    NTP_4_2_7P184
+
+  util/ntp-keygen.1@1.187 +2 -2
+    NTP_4_2_7P184
+
+ChangeSet@1.2570, 2011-06-20 05:31:49-04:00, stenn@psp-deb1.ntp.org
+  genLocInfo cleanup
+
+  scripts/genLocInfo@1.4 +4 -0
+    genLocInfo cleanup
+
+ChangeSet@1.2569, 2011-06-20 05:24:55-04:00, stenn@psp-deb1.ntp.org
+  genLocInfo cleanup
+
+  sntp/m4/ntp_locs.m4@1.4 +2 -2
+    genLocInfo cleanup
+
+ChangeSet@1.2568, 2011-06-20 04:54:00-04:00, stenn@psp-deb1.ntp.org
+  genLocInfo cleanup
+
+  sntp/m4/ntp_locs.m4@1.3 +2 -1
+    genLocInfo cleanup
+
+ChangeSet@1.2567, 2011-06-20 03:58:19-04:00, stenn@psp-deb1.ntp.org
+  Updates to ntp_locs.m4
+
+  ChangeLog@1.936 +1 -0
+    Updates to ntp_locs.m4
+
+  sntp/m4/ntp_locs.m4@1.2 +1 -1
+    Updates to ntp_locs.m4
+
+  sntp/m4/ntp_locs.m4@1.1 +57 -0
+    BitKeeper file /home/stenn/ntp-dev/sntp/m4/ntp_locs.m4
+
+  sntp/m4/ntp_locs.m4@1.0 +0 -0
+
+ChangeSet@1.2566, 2011-06-20 02:08:50-04:00, stenn@psp-deb1.ntp.org
+  genLocInfo improvements
+
+  scripts/genLocInfo@1.3 +8 -3
+    genLocInfo improvements
+
+ChangeSet@1.2565, 2011-06-19 23:07:56-04:00, stenn@psp-deb1.ntp.org
+  genLocInfo improvements
+
+  ChangeLog@1.935 +1 -0
+    genLocInfo improvements
+
+  scripts/genLocInfo@1.2 +97 -12
+    genLocInfo improvements
+
+ChangeSet@1.2561.1.2, 2011-06-19 19:06:27-04:00, stenn@psp-deb1.ntp.org
+  Add the man page tag "flavor" to the loc.* files
+
+  ChangeLog@1.931.1.2 +1 -0
+    Add the man page tag "flavor" to the loc.* files
+
+  loc.freebsd@1.2 +1 -0
+    Add the man page tag "flavor" to the loc.* files
+
+  loc.legacy@1.2 +1 -0
+    Add the man page tag "flavor" to the loc.* files
+
+ChangeSet@1.2561.1.1, 2011-06-19 19:04:22-04:00, stenn@psp-deb1.ntp.org
+   Add/distribute genLocInfo
+
+  ChangeLog@1.931.1.1 +1 -0
+     Add/distribute genLocInfo
+
+  scripts/Makefile.am@1.23.1.1 +1 -0
+    Distribute genLocInfo
+
+  scripts/genLocInfo@1.1 +66 -0
+    BitKeeper file /home/stenn/ntp-dev/scripts/genLocInfo
+
+  scripts/genLocInfo@1.0 +0 -0
+
 ChangeSet@1.2563, 2011-06-19 22:34:06+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P183
   TAG: NTP_4_2_7P183
