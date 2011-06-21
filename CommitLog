@@ -1,3 +1,130 @@
+ChangeSet@1.2575, 2011-06-21 11:29:36+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P185
+  TAG: NTP_4_2_7P185
+
+  ChangeLog@1.940 +1 -0
+    NTP_4_2_7P185
+
+  ntpd/ntpd-opts.c@1.190 +3 -3
+    NTP_4_2_7P185
+
+  ntpd/ntpd-opts.h@1.190 +3 -3
+    NTP_4_2_7P185
+
+  ntpd/ntpd-opts.texi@1.188 +2 -2
+    NTP_4_2_7P185
+
+  ntpd/ntpd.1@1.188 +2 -2
+    NTP_4_2_7P185
+
+  ntpdc/ntpdc-opts.c@1.185 +3 -3
+    NTP_4_2_7P185
+
+  ntpdc/ntpdc-opts.h@1.185 +3 -3
+    NTP_4_2_7P185
+
+  ntpdc/ntpdc-opts.texi@1.185 +2 -2
+    NTP_4_2_7P185
+
+  ntpdc/ntpdc.1@1.185 +2 -2
+    NTP_4_2_7P185
+
+  ntpdc/ntpdc.html@1.13 +2 -2
+    NTP_4_2_7P185
+
+  ntpq/ntpq-opts.c@1.187 +3 -3
+    NTP_4_2_7P185
+
+  ntpq/ntpq-opts.h@1.187 +3 -3
+    NTP_4_2_7P185
+
+  ntpq/ntpq-opts.texi@1.187 +2 -2
+    NTP_4_2_7P185
+
+  ntpq/ntpq.1@1.187 +2 -2
+    NTP_4_2_7P185
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.187 +3 -3
+    NTP_4_2_7P185
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.187 +3 -3
+    NTP_4_2_7P185
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.187 +2 -2
+    NTP_4_2_7P185
+
+  ntpsnmpd/ntpsnmpd.1@1.187 +2 -2
+    NTP_4_2_7P185
+
+  packageinfo.sh@1.188 +1 -1
+    NTP_4_2_7P185
+
+  scripts/ntp-wait-opts.texi@1.5 +1 -1
+    NTP_4_2_7P185
+
+  scripts/ntp-wait.1@1.5 +2 -2
+    NTP_4_2_7P185
+
+  scripts/ntp-wait.html@1.5 +1 -1
+    NTP_4_2_7P185
+
+  sntp/sntp-opts.c@1.181 +3 -3
+    NTP_4_2_7P185
+
+  sntp/sntp-opts.h@1.181 +3 -3
+    NTP_4_2_7P185
+
+  sntp/sntp-opts.texi@1.181 +2 -2
+    NTP_4_2_7P185
+
+  sntp/sntp.1@1.181 +2 -2
+    NTP_4_2_7P185
+
+  sntp/sntp.html@1.181 +2 -2
+    NTP_4_2_7P185
+
+  util/ntp-keygen-opts.c@1.185 +3 -3
+    NTP_4_2_7P185
+
+  util/ntp-keygen-opts.h@1.185 +3 -3
+    NTP_4_2_7P185
+
+  util/ntp-keygen-opts.texi@1.188 +2 -2
+    NTP_4_2_7P185
+
+  util/ntp-keygen.1@1.188 +2 -2
+    NTP_4_2_7P185
+
+ChangeSet@1.2574, 2011-06-20 18:50:41-04:00, stenn@deacon.udel.edu
+  . may not be in the PATH - ntp_locs.m4 fix
+
+  ChangeLog@1.939 +1 -0
+    . may not be in the PATH - ntp_locs.m4 fix
+
+  sntp/m4/ntp_locs.m4@1.6 +1 -1
+    . may not be in the PATH - ntp_locs.m4 fix
+
+ChangeSet@1.2573, 2011-06-20 07:02:17-04:00, stenn@psp-deb1.ntp.org
+  More genLocInfo cleanup
+
+  ChangeLog@1.938 +1 -0
+    More genLocInfo cleanup
+
+  configure.ac@1.528 +2 -0
+    More genLocInfo cleanup
+
+  scripts/genLocInfo@1.5 +1 -0
+    More genLocInfo cleanup
+
+  sntp/m4/ntp_locs.m4@1.5 +7 -1
+    More genLocInfo cleanup
+
+ChangeSet@1.2572, 2011-06-20 05:58:04-04:00, stenn@deacon.udel.edu
+  genLocInfo is EXTRA_DIST, not noinst_SCRIPT
+
+  scripts/Makefile.am@1.26 +1 -1
+    genLocInfo is EXTRA_DIST, not noinst_SCRIPT
+
 ChangeSet@1.2571, 2011-06-20 09:46:53+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P184
   TAG: NTP_4_2_7P184

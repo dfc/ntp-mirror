@@ -1,0 +1,161 @@
+#! /bin/sh
+
+case "$1" in
+ -v)
+    V= ;;
+ *) V=": " ;;
+esac
+
+PATH=$PATH:sntp/libevent/build-aux
+
+RC=0
+
+# Figure out which loc.* file we want to use.
+#
+# Either start parsing them from least- to most-specific,
+# or just grab the one we like best.
+
+set `scripts/cvo.sh @osname@ @osver@` || exit 1
+
+CVO_OSNAME=$1
+CVO_OSVER=$2
+
+x=$CVO_OSVER
+LF=
+
+while true
+do
+    case "$x" in
+     '') break ;;
+    esac
+    lf=loc.$CVO_OSNAME$x
+${V}echo "Looking for <$lf>" >&2
+    if test -f $lf
+    then
+	LF=$lf
+	break
+    fi
+    case "$x" in
+     *.*) x=`echo $x | sed -e 's/\.[^.]*$//'` ;;
+     *) x= ;;
+    esac
+done
+case "$LF" in
+ '')
+    lf=loc.$CVO_OSNAME
+${V}echo "Looking for <$lf>" >&2
+    if test -f $lf
+    then
+	LF=$lf
+    fi
+    ;;
+esac
+case "$LF" in
+ '')
+    lf=loc.legacy
+${V}echo "Looking for <$lf>" >&2
+    if test -f $lf
+    then
+	LF=$lf
+    fi
+    ;;
+esac
+
+case "$LF" in
+ '')
+    echo "No loc.XXX file found!" >&2
+    exit 1
+    ;;
+esac
+
+${V}echo "Using <$LF>" >&2
+echo "GENLOCINFOFILE=$LF"
+
+###
+
+oIFS=$IFS
+IFS=","
+
+TF='?'
+while true
+do
+    if read c d s x
+    then
+	# echo "Got <$c><$d><$s><$x>" >&2
+	case "$c" in
+	 \#*) continue ;;
+	esac
+	case "$x" in
+	 '') ;;
+	 *) echo "Unrecognized input: <$c,$d,$s,$x>" >&2
+	    RC=1
+	    continue
+	    ;;
+	esac
+	case "$c,$d,$s" in
+	 [Mm][Aa][Nn],,)
+	    TF=man
+	    continue
+	    ;;
+	 [Mm][Dd][Oo][Cc],,)
+	    TF=man
+	    continue
+	    ;;
+	esac
+
+	case "$c,$d,$s" in
+	 *,bin,*)  DB=bin ; DS= ;;
+	 *,sbin,*) DB= ; DS=sbin ;;
+	 *) echo "Unrecognized input: <$c,$d,$s>" >&2
+	    RC=1
+	    continue
+	    ;;
+	esac
+	case "$c,$d,$s" in
+	 *,*,1) ;;
+	 *,*,1m) ;;
+	 *,*,8) ;;
+	 *) echo "Unrecognized input: <$c,$d,$s>" >&2
+	    RC=1
+	    continue
+	    ;;
+	esac
+
+	# Should be OK, mostly...
+	C=`echo $c | sed -e 'y/abcdefghijklmnopqrstuvwxyz-/ABCDEFGHIJKLMNOPQRSTUVWXYZ_/'`
+	# echo "c: <$c>, C: <$C>, DB: <$DB>, DS: <$DS>" >&2
+
+	case "$d" in
+	 bin)
+	    eval ${C}_DB=$c
+	    eval ${C}_DS=
+	    ;;
+	 sbin)
+	    eval ${C}_DB=
+	    eval ${C}_DS=$c
+	    ;;
+	 *) echo "$0: GRONK: d" >&2
+	    exit 1
+	    ;;
+	esac
+	eval ${C}_MS=$s
+
+	# echo "<$c> gets installed in <$d> with a <$s> manpage suffix" >&2
+	# echo "${C}_DB is <`eval echo '$'${C}_DB`>" >&2
+	# echo "${C}_DS is <`eval echo '$'${C}_DS`>" >&2
+	# echo "${C}_MS is <`eval echo '$'${C}_MS`>" >&2
+	echo "${C}_DB=`eval echo '$'${C}_DB`"
+	echo "${C}_DS=`eval echo '$'${C}_DS`"
+	echo "${C}_MS=`eval echo '$'${C}_MS`"
+    else
+	break
+    fi
+done < $LF
+IFS=$oIFS
+echo "MANTAGFMT=$TF"
+
+case "$RC" in
+ 0) echo 'GENLOCINFO=OK' ;;
+esac
+
+exit $RC
