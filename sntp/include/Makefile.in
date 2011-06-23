@@ -43,7 +43,7 @@ am__aclocal_m4_deps = $(top_srcdir)/libopts/m4/libopts.m4 \
 	$(top_srcdir)/libevent/m4/openldap.m4 \
 	$(top_srcdir)/m4/libtool.m4 $(top_srcdir)/m4/ltoptions.m4 \
 	$(top_srcdir)/m4/ltsugar.m4 $(top_srcdir)/m4/ltversion.m4 \
-	$(top_srcdir)/m4/lt~obsolete.m4 $(top_srcdir)/m4/ntp_bindir.m4 \
+	$(top_srcdir)/m4/lt~obsolete.m4 \
 	$(top_srcdir)/m4/ntp_cacheversion.m4 \
 	$(top_srcdir)/m4/ntp_compiler.m4 \
 	$(top_srcdir)/m4/ntp_crosscompile.m4 \
@@ -83,7 +83,6 @@ AUTOCONF = @AUTOCONF@
 AUTOHEADER = @AUTOHEADER@
 AUTOMAKE = @AUTOMAKE@
 AWK = @AWK@
-BINSUBDIR = @BINSUBDIR@
 CC = @CC@
 CCDEPMODE = @CCDEPMODE@
 CFLAGS = @CFLAGS@
@@ -140,9 +139,11 @@ LN_S = @LN_S@
 LTLIBOBJS = @LTLIBOBJS@
 MAKEINFO = @MAKEINFO@
 MANIFEST_TOOL = @MANIFEST_TOOL@
+MANTAGFMT = @MANTAGFMT@
 MKDIR_P = @MKDIR_P@
 NM = @NM@
 NMEDIT = @NMEDIT@
+NTPDATE_MS = @NTPDATE_MS@
 NTP_FORCE_LIBEVENT_DIST = @NTP_FORCE_LIBEVENT_DIST@
 OBJDUMP = @OBJDUMP@
 OBJEXT = @OBJEXT@
@@ -167,6 +168,9 @@ SED = @SED@
 SET_MAKE = @SET_MAKE@
 SHELL = @SHELL@
 SNTP = @SNTP@
+SNTP_DB = @SNTP_DB@
+SNTP_DS = @SNTP_DS@
+SNTP_MS = @SNTP_MS@
 STRIP = @STRIP@
 VERSION = @VERSION@
 abs_builddir = @abs_builddir@
@@ -229,6 +233,7 @@ EXTRA_DIST = \
 	copyright.def		\
 	debug-opt.def		\
 	homerc.def		\
+	mansec2subst.sed	\
 	ntp.lic			\
 	version.def		\
 	version.texi		\

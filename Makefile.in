@@ -54,7 +54,6 @@ am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/m4/ltsugar.m4 \
 	$(top_srcdir)/sntp/m4/ltversion.m4 \
 	$(top_srcdir)/sntp/m4/lt~obsolete.m4 \
-	$(top_srcdir)/sntp/m4/ntp_bindir.m4 \
 	$(top_srcdir)/sntp/m4/ntp_cacheversion.m4 \
 	$(top_srcdir)/sntp/m4/ntp_compiler.m4 \
 	$(top_srcdir)/sntp/m4/ntp_crosscompile.m4 \
@@ -66,7 +65,7 @@ am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/m4/ntp_libevent.m4 \
 	$(top_srcdir)/sntp/m4/ntp_libntp.m4 \
 	$(top_srcdir)/sntp/m4/ntp_lineeditlibs.m4 \
-	$(top_srcdir)/sntp/m4/ntp_locs.m4 \
+	$(top_srcdir)/sntp/m4/ntp_locinfo.m4 \
 	$(top_srcdir)/sntp/m4/ntp_openssl.m4 \
 	$(top_srcdir)/sntp/m4/ntp_pkg_config.m4 \
 	$(top_srcdir)/sntp/m4/ntp_prog_cc.m4 \
@@ -151,7 +150,6 @@ AUTOCONF = @AUTOCONF@
 AUTOHEADER = @AUTOHEADER@
 AUTOMAKE = @AUTOMAKE@
 AWK = @AWK@
-BINSUBDIR = @BINSUBDIR@
 CC = @CC@
 CCDEPMODE = @CCDEPMODE@
 CFLAGS = @CFLAGS@
@@ -396,8 +394,6 @@ EXTRA_DIST = \
 	config.h.in		\
 	dot.emacs		\
 	flock-build		\
-	loc.freebsd		\
-	loc.legacy		\
 	packageinfo.sh		\
 	readme.y2kfixes		\
 	results.y2kfixes	\
@@ -405,6 +401,7 @@ EXTRA_DIST = \
 	conf			\
 	html			\
 	lib/isc			\
+	loc			\
 	ports			\
 	\
 	deps-ver		\

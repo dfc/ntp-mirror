@@ -50,11 +50,12 @@ host_triplet = @host@
 @SIGNAL_SUPPORT_TRUE@am__append_11 = signal.c
 @INSTALL_LIBEVENT_FALSE@am__append_12 = $(EVENT1_HDRS)
 subdir = .
-DIST_COMMON = README $(am__configure_deps) $(am__include_HEADERS_DIST) \
-	$(am__noinst_HEADERS_DIST) $(dist_bin_SCRIPTS) \
-	$(srcdir)/Makefile.am $(srcdir)/Makefile.in \
-	$(srcdir)/config.h.in $(srcdir)/evconfig-private.h.in \
-	$(srcdir)/libevent.pc.in $(srcdir)/libevent_openssl.pc.in \
+DIST_COMMON = README $(am__configure_deps) \
+	$(am__dist_bin_SCRIPTS_DIST) $(am__include_HEADERS_DIST) \
+	$(am__noinst_HEADERS_DIST) $(srcdir)/Makefile.am \
+	$(srcdir)/Makefile.in $(srcdir)/config.h.in \
+	$(srcdir)/evconfig-private.h.in $(srcdir)/libevent.pc.in \
+	$(srcdir)/libevent_openssl.pc.in \
 	$(srcdir)/libevent_pthreads.pc.in $(top_srcdir)/configure \
 	ChangeLog build-aux/compile build-aux/config.guess \
 	build-aux/config.sub build-aux/depcomp build-aux/install-sh \
@@ -192,6 +193,7 @@ libevent_pthreads_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 @INSTALL_LIBEVENT_FALSE@@PTHREADS_TRUE@am_libevent_pthreads_la_rpath =
 @INSTALL_LIBEVENT_TRUE@@PTHREADS_TRUE@am_libevent_pthreads_la_rpath =  \
 @INSTALL_LIBEVENT_TRUE@@PTHREADS_TRUE@	-rpath $(libdir)
+am__dist_bin_SCRIPTS_DIST = event_rpcgen.py
 SCRIPTS = $(dist_bin_SCRIPTS)
 DEFAULT_INCLUDES = -I.@am__isrc@
 depcomp = $(SHELL) $(top_srcdir)/build-aux/depcomp
@@ -483,7 +485,7 @@ VERSION_INFO = 1:0:0
 # nice and rare.  For the next couple of years, though, 'struct event'
 # is user-visible, and so we can pretty much guarantee that release
 # series won't be binary-compatible.
-dist_bin_SCRIPTS = event_rpcgen.py
+@INSTALL_LIBEVENT_TRUE@dist_bin_SCRIPTS = event_rpcgen.py
 pkgconfigdir = $(libdir)/pkgconfig
 LIBEVENT_PKGCONFIG = libevent.pc $(am__append_2) $(am__append_4)
 
@@ -496,6 +498,7 @@ PLATFORM_DEPENDENT_SRC = \
 EXTRA_DIST = \
 	LICENSE \
 	autogen.sh \
+	event_rpcgen.py \
 	libevent.pc.in \
 	Doxyfile \
 	whatsnew-2.0.txt \

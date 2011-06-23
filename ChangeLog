@@ -1,5 +1,12 @@
+(4.2.7p186) 2011/06/23 Released by Harlan Stenn <stenn@ntp.org>
+* [Bug 1950] Control installation of event_rpcgen.py.
+* Update .point-changed-filelist for the new man pages.
+* Update the building of OS-specific programs.
+* Finish conversion to genLocInfo.
+* validate MANTAGFMT in genLocInfo.
+* Documentation update from Dave Mills.
 (4.2.7p185) 2011/06/21 Released by Harlan Stenn <stenn@ntp.org>
-* . may not be in the PATH - ntp_locs.m4 fix.
+* ntp_locs.m4: handle the case where . is not in the PATH.
 * More genLocInfo cleanup.
 (4.2.7p184) 2011/06/20 Released by Harlan Stenn <stenn@ntp.org>
 * Added ntp_locs.m4.

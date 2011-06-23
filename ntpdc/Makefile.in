@@ -40,9 +40,7 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
-@NTP_BINSUBDIR_IS_BIN_TRUE@bin_PROGRAMS = ntpdc$(EXEEXT)
-@NTP_BINSUBDIR_IS_BIN_FALSE@sbin_PROGRAMS = ntpdc$(EXEEXT)
-EXTRA_PROGRAMS = ntpdc-layout$(EXEEXT)
+EXTRA_PROGRAMS = ntpdc$(EXEEXT) ntpdc-layout$(EXEEXT)
 DIST_COMMON = README $(noinst_HEADERS) $(srcdir)/Makefile.am \
 	$(srcdir)/Makefile.in $(srcdir)/nl.pl.in \
 	$(top_srcdir)/bincheck.mf $(top_srcdir)/check-libopts.mf \
@@ -59,7 +57,6 @@ am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/m4/ltsugar.m4 \
 	$(top_srcdir)/sntp/m4/ltversion.m4 \
 	$(top_srcdir)/sntp/m4/lt~obsolete.m4 \
-	$(top_srcdir)/sntp/m4/ntp_bindir.m4 \
 	$(top_srcdir)/sntp/m4/ntp_cacheversion.m4 \
 	$(top_srcdir)/sntp/m4/ntp_compiler.m4 \
 	$(top_srcdir)/sntp/m4/ntp_crosscompile.m4 \
@@ -71,7 +68,7 @@ am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/m4/ntp_libevent.m4 \
 	$(top_srcdir)/sntp/m4/ntp_libntp.m4 \
 	$(top_srcdir)/sntp/m4/ntp_lineeditlibs.m4 \
-	$(top_srcdir)/sntp/m4/ntp_locs.m4 \
+	$(top_srcdir)/sntp/m4/ntp_locinfo.m4 \
 	$(top_srcdir)/sntp/m4/ntp_openssl.m4 \
 	$(top_srcdir)/sntp/m4/ntp_pkg_config.m4 \
 	$(top_srcdir)/sntp/m4/ntp_prog_cc.m4 \
@@ -87,7 +84,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
 CONFIG_CLEAN_FILES = nl.pl
 CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(sbindir)" \
-	"$(DESTDIR)$(man1dir)"
+	"$(DESTDIR)$(man1dir)" "$(DESTDIR)$(man8dir)"
 PROGRAMS = $(bin_PROGRAMS) $(sbin_PROGRAMS)
 am_ntpdc_OBJECTS = ntpdc.$(OBJEXT) ntpdc_ops.$(OBJEXT) \
 	ntpdc-opts.$(OBJEXT)
@@ -152,8 +149,9 @@ am__base_list = \
   sed '$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;s/\n/ /g' | \
   sed '$$!N;$$!N;$$!N;$$!N;s/\n/ /g'
 man1dir = $(mandir)/man1
+man8dir = $(mandir)/man8
 NROFF = nroff
-MANS = $(man_MANS)
+MANS = $(man1_MANS) $(man8_MANS) $(man_MANS)
 DATA = $(noinst_DATA)
 HEADERS = $(noinst_HEADERS)
 ETAGS = etags
@@ -168,7 +166,6 @@ AUTOCONF = @AUTOCONF@
 AUTOHEADER = @AUTOHEADER@
 AUTOMAKE = @AUTOMAKE@
 AWK = @AWK@
-BINSUBDIR = @BINSUBDIR@
 CC = @CC@
 CCDEPMODE = @CCDEPMODE@
 CFLAGS = @CFLAGS@
@@ -373,6 +370,8 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 NULL = 
+bin_PROGRAMS = $(NTPDC_DB)
+sbin_PROGRAMS = $(NTPDC_DS)
 EXTRA_DATA = check-layout
 BUILT_SOURCES = @MAKE_CHECK_LAYOUT@ ntpdc-opts.c ntpdc-opts.h \
 	check-libopts check-libntp .deps-ver
@@ -384,7 +383,7 @@ ntpdc_LDADD = version.o $(LIBOPTS_LDADD) ../libntp/libntp.a \
 	$(LDADD_LIBNTP) $(PTHREAD_LIBS) $(EDITLINE_LIBS) $(LCRYPTO)
 # ntpdc-layout doesn't need any additional libraries at all
 ntpdc_layout_LDADD = 
-DISTCLEANFILES = .version version.c
+DISTCLEANFILES = .version version.c config.log $(man_MANS)
 CLEANFILES = check-layout layout.here nl.c ntpdc-layout check-libopts \
 	check-libntp .deps-ver
 noinst_HEADERS = ntpdc.h
@@ -394,16 +393,23 @@ EXTRA_DIST = \
 	nl.pl			\
 	layout.std		\
 	ntpdc-opts.def		\
-	ntpdc.1			\
+	ntpdc.1ntpdcman		\
+	ntpdc.1ntpdcmdoc	\
+	ntpdc.man.in		\
+	ntpdc.mdoc.in		\
 	ntpdc.html		\
 	ntpdc.texi		\
 	ntpdc-opts.texi		\
 	ntpdc-opts.menu		\
 	$(NULL)
 
-man_MANS = $(srcdir)/ntpdc.1
+man1_MANS = 
+man8_MANS = 
+man_MANS = ntpdc.$(NTPDC_MS)
 noinst_DATA = \
 	$(srcdir)/ntpdc.html		\
+	$(srcdir)/ntpdc.man.in		\
+	$(srcdir)/ntpdc.mdoc.in		\
 	$(srcdir)/ntpdc-opts.texi	\
 	$(srcdir)/ntpdc-opts.menu	\
 	$(NULL)
@@ -594,10 +600,10 @@ mostlyclean-libtool:
 
 clean-libtool:
 	-rm -rf .libs _libs
-install-man1: $(man_MANS)
+install-man1: $(man1_MANS) $(man_MANS)
 	@$(NORMAL_INSTALL)
 	test -z "$(man1dir)" || $(MKDIR_P) "$(DESTDIR)$(man1dir)"
-	@list=''; test -n "$(man1dir)" || exit 0; \
+	@list='$(man1_MANS)'; test -n "$(man1dir)" || exit 0; \
 	{ for i in $$list; do echo "$$i"; done; \
 	l2='$(man_MANS)'; for i in $$l2; do echo "$$i"; done | \
 	  sed -n '/\.1[a-z]*$$/p'; \
@@ -623,7 +629,7 @@ install-man1: $(man_MANS)
 
 uninstall-man1:
 	@$(NORMAL_UNINSTALL)
-	@list=''; test -n "$(man1dir)" || exit 0; \
+	@list='$(man1_MANS)'; test -n "$(man1dir)" || exit 0; \
 	files=`{ for i in $$list; do echo "$$i"; done; \
 	l2='$(man_MANS)'; for i in $$l2; do echo "$$i"; done | \
 	  sed -n '/\.1[a-z]*$$/p'; \
@@ -632,6 +638,44 @@ uninstall-man1:
 	test -z "$$files" || { \
 	  echo " ( cd '$(DESTDIR)$(man1dir)' && rm -f" $$files ")"; \
 	  cd "$(DESTDIR)$(man1dir)" && rm -f $$files; }
+install-man8: $(man8_MANS) $(man_MANS)
+	@$(NORMAL_INSTALL)
+	test -z "$(man8dir)" || $(MKDIR_P) "$(DESTDIR)$(man8dir)"
+	@list='$(man8_MANS)'; test -n "$(man8dir)" || exit 0; \
+	{ for i in $$list; do echo "$$i"; done; \
+	l2='$(man_MANS)'; for i in $$l2; do echo "$$i"; done | \
+	  sed -n '/\.8[a-z]*$$/p'; \
+	} | while read p; do \
+	  if test -f $$p; then d=; else d="$(srcdir)/"; fi; \
+	  echo "$$d$$p"; echo "$$p"; \
+	done | \
+	sed -e 'n;s,.*/,,;p;h;s,.*\.,,;s,^[^8][0-9a-z]*$$,8,;x' \
+	      -e 's,\.[0-9a-z]*$$,,;$(transform);G;s,\n,.,' | \
+	sed 'N;N;s,\n, ,g' | { \
+	list=; while read file base inst; do \
+	  if test "$$base" = "$$inst"; then list="$$list $$file"; else \
+	    echo " $(INSTALL_DATA) '$$file' '$(DESTDIR)$(man8dir)/$$inst'"; \
+	    $(INSTALL_DATA) "$$file" "$(DESTDIR)$(man8dir)/$$inst" || exit $$?; \
+	  fi; \
+	done; \
+	for i in $$list; do echo "$$i"; done | $(am__base_list) | \
+	while read files; do \
+	  test -z "$$files" || { \
+	    echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(man8dir)'"; \
+	    $(INSTALL_DATA) $$files "$(DESTDIR)$(man8dir)" || exit $$?; }; \
+	done; }
+
+uninstall-man8:
+	@$(NORMAL_UNINSTALL)
+	@list='$(man8_MANS)'; test -n "$(man8dir)" || exit 0; \
+	files=`{ for i in $$list; do echo "$$i"; done; \
+	l2='$(man_MANS)'; for i in $$l2; do echo "$$i"; done | \
+	  sed -n '/\.8[a-z]*$$/p'; \
+	} | sed -e 's,.*/,,;h;s,.*\.,,;s,^[^8][0-9a-z]*$$,8,;x' \
+	      -e 's,\.[0-9a-z]*$$,,;$(transform);G;s,\n,.,'`; \
+	test -z "$$files" || { \
+	  echo " ( cd '$(DESTDIR)$(man8dir)' && rm -f" $$files ")"; \
+	  cd "$(DESTDIR)$(man8dir)" && rm -f $$files; }
 
 ID: $(HEADERS) $(SOURCES) $(LISP) $(TAGS_FILES)
 	list='$(SOURCES) $(HEADERS) $(LISP) $(TAGS_FILES)'; \
@@ -733,7 +777,7 @@ check: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) check-am
 all-am: Makefile $(PROGRAMS) $(MANS) $(DATA) $(HEADERS)
 installdirs:
-	for dir in "$(DESTDIR)$(bindir)" "$(DESTDIR)$(sbindir)" "$(DESTDIR)$(man1dir)"; do \
+	for dir in "$(DESTDIR)$(bindir)" "$(DESTDIR)$(sbindir)" "$(DESTDIR)$(man1dir)" "$(DESTDIR)$(man8dir)"; do \
 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
 	done
 install: $(BUILT_SOURCES)
@@ -805,7 +849,7 @@ install-info: install-info-am
 
 install-info-am:
 
-install-man: install-man1
+install-man: install-man1 install-man8
 
 install-pdf: install-pdf-am
 
@@ -838,7 +882,7 @@ ps-am:
 uninstall-am: uninstall-binPROGRAMS uninstall-man \
 	uninstall-sbinPROGRAMS
 
-uninstall-man: uninstall-man1
+uninstall-man: uninstall-man1 uninstall-man8
 
 .MAKE: all check install install-am install-exec-am install-strip
 
@@ -850,13 +894,14 @@ uninstall-man: uninstall-man1
 	install-data-am install-dvi install-dvi-am install-exec \
 	install-exec-am install-exec-hook install-html install-html-am \
 	install-info install-info-am install-man install-man1 \
-	install-pdf install-pdf-am install-ps install-ps-am \
-	install-sbinPROGRAMS install-strip installcheck \
+	install-man8 install-pdf install-pdf-am install-ps \
+	install-ps-am install-sbinPROGRAMS install-strip installcheck \
 	installcheck-am installdirs maintainer-clean \
 	maintainer-clean-generic mostlyclean mostlyclean-compile \
 	mostlyclean-generic mostlyclean-libtool pdf pdf-am ps ps-am \
 	tags uninstall uninstall-am uninstall-binPROGRAMS \
-	uninstall-man uninstall-man1 uninstall-sbinPROGRAMS
+	uninstall-man uninstall-man1 uninstall-man8 \
+	uninstall-sbinPROGRAMS
 
 
 $(srcdir)/ntpdc-opts.h: $(srcdir)/ntpdc-opts.c
@@ -865,13 +910,31 @@ $(srcdir)/ntpdc-opts.h: $(srcdir)/ntpdc-opts.c
 $(srcdir)/ntpdc-opts.c: $(srcdir)/ntpdc-opts.def $(std_def_list)
 	$(run_ag) ntpdc-opts.def
 
-# For man pages, use agman-cmd.tpl
-# For mdoc pages, use agmdoc-cmd.tpl
-#$(srcdir)/sntp.1: $(srcdir)/sntp-opts.def $(srcdir)/include/version.def $(srcdir)/include/copyright.def
-#	$(run_ag) -DMAN_SECTION=1 -Tagmdoc-cmd.tpl sntp-opts.def
 ###
-$(srcdir)/ntpdc.1: $(srcdir)/ntpdc-opts.def $(std_def_list)
-	$(run_ag) -DMAN_SECTION=1 -Tagmdoc-cmd.tpl ntpdc-opts.def
+
+$(srcdir)/ntpdc.1ntpdcman: $(srcdir)/ntpdc-opts.def $(std_def_list)
+	$(run_ag) -DMAN_SECTION=1ntpdcman -Tagman-cmd.tpl ntpdc-opts.def
+
+$(srcdir)/ntpdc.man.in: $(srcdir)/ntpdc.1ntpdcman $(top_srcdir)/sntp/include/mansec2subst.sed
+	sed -f $(top_srcdir)/sntp/include/mansec2subst.sed $(srcdir)/ntpdc.1ntpdcman > $(srcdir)/ntpdc.man.in+
+	mv $(srcdir)/ntpdc.man.in+ $(srcdir)/ntpdc.man.in
+
+###
+
+$(srcdir)/ntpdc.1ntpdcmdoc: $(srcdir)/ntpdc-opts.def $(std_def_list)
+	$(run_ag) -DMAN_SECTION=1ntpdcmdoc -Tagmdoc-cmd.tpl ntpdc-opts.def
+
+$(srcdir)/ntpdc.mdoc.in: $(srcdir)/ntpdc.1ntpdcmdoc $(top_srcdir)/sntp/include/mansec2subst.sed
+	sed -f $(top_srcdir)/sntp/include/mansec2subst.sed $(srcdir)/ntpdc.1ntpdcmdoc > $(srcdir)/ntpdc.mdoc.in+
+	mv $(srcdir)/ntpdc.mdoc.in+ $(srcdir)/ntpdc.mdoc.in
+
+###
+
+ntpdc.$(NTPDC_MS): $(srcdir)/ntpdc.$(MANTAGFMT).in $(top_builddir)/config.status
+	$(top_builddir)/config.status --file=ntpdc.$(NTPDC_MS)+:$(srcdir)/ntpdc.$(MANTAGFMT).in
+	mv ntpdc.$(NTPDC_MS)+ ntpdc.$(NTPDC_MS)
+
+###
 
 $(srcdir)/ntpdc-opts.menu: $(srcdir)/ntpdc-opts.texi
 	@: do-nothing action to avoid default SCCS get, .menu built with .texi
@@ -908,13 +971,15 @@ nl.c: nl_in.c nl.pl Makefile.am ../config.h ../include/ntp_request.h ntpdc.h
 	$(CC) -E $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(srcdir)/nl_in.c | ./nl.pl > nl.c
 
 install-exec-hook:
-	@case ${BINSUBDIR} in						\
-	 bin) ODIR=${sbindir} ;;					\
-	 sbin) ODIR=${bindir} ;;					\
-	esac;								\
-	test -z "${bin_PROGRAMS}${bin_SCRIPTS}"				\
-	|| for i in ${bin_PROGRAMS} ${bin_SCRIPTS} " "; do		\
-	   test ! -f $$ODIR/$$i || echo "*** $$i is also in $$ODIR!";	\
+	@test -z "${bin_PROGRAMS}${bin_SCRIPTS}"		\
+	|| for i in ${bin_PROGRAMS} ${bin_SCRIPTS} " "; do	\
+	   test ! -f ${sbindir}/$$i				\
+		|| echo "*** $$i is also in ${sbindir}!";	\
+	done
+	@test -z "${sbin_PROGRAMS}${asbin_SCRIPTS}"		\
+	|| for i in ${sbin_PROGRAMS} ${sbin_SCRIPTS} " "; do	\
+	   test ! -f ${bindir}/$$i				\
+		|| echo "*** $$i is also in ${bindir}!";	\
 	done
 
 #

@@ -1,3 +1,464 @@
+ChangeSet@1.2580, 2011-06-23 11:29:27+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P186
+  TAG: NTP_4_2_7P186
+
+  ChangeLog@1.945 +1 -0
+    NTP_4_2_7P186
+
+  ntpd/ntpd-opts.c@1.191 +3 -3
+    NTP_4_2_7P186
+
+  ntpd/ntpd-opts.h@1.191 +3 -3
+    NTP_4_2_7P186
+
+  ntpd/ntpd-opts.texi@1.189 +1 -1
+    NTP_4_2_7P186
+
+  ntpd/ntpd.1ntpdman@1.2 +2 -2
+    NTP_4_2_7P186
+
+  ntpd/ntpd.1ntpdmdoc@1.2 +3 -3
+    NTP_4_2_7P186
+
+  ntpd/ntpd.man.in@1.2 +2 -2
+    NTP_4_2_7P186
+
+  ntpd/ntpd.mdoc.in@1.2 +3 -3
+    NTP_4_2_7P186
+
+  ntpdc/ntpdc-opts.c@1.186 +3 -3
+    NTP_4_2_7P186
+
+  ntpdc/ntpdc-opts.h@1.186 +3 -3
+    NTP_4_2_7P186
+
+  ntpdc/ntpdc-opts.texi@1.186 +2 -2
+    NTP_4_2_7P186
+
+  ntpdc/ntpdc.1ntpdcman@1.2 +3 -31
+    NTP_4_2_7P186
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.2 +3 -3
+    NTP_4_2_7P186
+
+  ntpdc/ntpdc.html@1.14 +2 -2
+    NTP_4_2_7P186
+
+  ntpdc/ntpdc.man.in@1.2 +3 -31
+    NTP_4_2_7P186
+
+  ntpdc/ntpdc.mdoc.in@1.2 +3 -3
+    NTP_4_2_7P186
+
+  ntpq/ntpq-opts.c@1.188 +3 -3
+    NTP_4_2_7P186
+
+  ntpq/ntpq-opts.h@1.188 +3 -3
+    NTP_4_2_7P186
+
+  ntpq/ntpq-opts.texi@1.188 +2 -2
+    NTP_4_2_7P186
+
+  ntpq/ntpq.1ntpqman@1.2 +2 -2
+    NTP_4_2_7P186
+
+  ntpq/ntpq.1ntpqmdoc@1.2 +3 -3
+    NTP_4_2_7P186
+
+  ntpq/ntpq.man.in@1.2 +2 -2
+    NTP_4_2_7P186
+
+  ntpq/ntpq.mdoc.in@1.2 +3 -3
+    NTP_4_2_7P186
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.188 +3 -3
+    NTP_4_2_7P186
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.188 +3 -3
+    NTP_4_2_7P186
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.188 +2 -2
+    NTP_4_2_7P186
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.2 +2 -2
+    NTP_4_2_7P186
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.2 +3 -3
+    NTP_4_2_7P186
+
+  ntpsnmpd/ntpsnmpd.man.in@1.2 +2 -2
+    NTP_4_2_7P186
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.2 +3 -3
+    NTP_4_2_7P186
+
+  packageinfo.sh@1.189 +1 -1
+    NTP_4_2_7P186
+
+  scripts/ntp-wait-opts.texi@1.6 +1 -1
+    NTP_4_2_7P186
+
+  scripts/ntp-wait.1ntp-waitman@1.2 +2 -2
+    NTP_4_2_7P186
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.2 +3 -3
+    NTP_4_2_7P186
+
+  scripts/ntp-wait.html@1.6 +1 -1
+    NTP_4_2_7P186
+
+  scripts/ntp-wait.man.in@1.2 +2 -2
+    NTP_4_2_7P186
+
+  scripts/ntp-wait.mdoc.in@1.2 +3 -3
+    NTP_4_2_7P186
+
+  sntp/sntp-opts.c@1.182 +3 -3
+    NTP_4_2_7P186
+
+  sntp/sntp-opts.h@1.182 +3 -3
+    NTP_4_2_7P186
+
+  sntp/sntp-opts.texi@1.182 +2 -2
+    NTP_4_2_7P186
+
+  sntp/sntp.1sntpman@1.2 +2 -2
+    NTP_4_2_7P186
+
+  sntp/sntp.1sntpmdoc@1.2 +3 -3
+    NTP_4_2_7P186
+
+  sntp/sntp.html@1.182 +2 -2
+    NTP_4_2_7P186
+
+  sntp/sntp.man.in@1.2 +2 -2
+    NTP_4_2_7P186
+
+  sntp/sntp.mdoc.in@1.2 +3 -3
+    NTP_4_2_7P186
+
+  util/ntp-keygen-opts.c@1.186 +3 -3
+    NTP_4_2_7P186
+
+  util/ntp-keygen-opts.h@1.186 +3 -3
+    NTP_4_2_7P186
+
+  util/ntp-keygen-opts.texi@1.189 +2 -2
+    NTP_4_2_7P186
+
+  util/ntp-keygen.1ntp-keygenman@1.2 +2 -2
+    NTP_4_2_7P186
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.2 +3 -3
+    NTP_4_2_7P186
+
+  util/ntp-keygen.man.in@1.2 +2 -2
+    NTP_4_2_7P186
+
+  util/ntp-keygen.mdoc.in@1.2 +3 -3
+    NTP_4_2_7P186
+
+ChangeSet@1.2577.1.1, 2011-06-23 03:27:04-04:00, stenn@psp-deb1.ntp.org
+  Update .point-changed-filelist for the new man pages
+
+  .point-changed-filelist@1.13 +25 -7
+    Update .point-changed-filelist for the new man pages
+
+  ChangeLog@1.942.1.1 +1 -0
+    Update .point-changed-filelist for the new man pages
+
+ChangeSet@1.2578, 2011-06-23 02:47:56-04:00, stenn@deacon.udel.edu
+  Documentation update from Dave Mills
+
+  ChangeLog@1.943 +2 -1
+    Documentation update from Dave Mills
+
+  html/warp.html@1.15 +11 -3
+    Documentation update from Dave Mills
+
+ChangeSet@1.2577, 2011-06-23 02:42:14-04:00, stenn@psp-deb1.ntp.org
+  merge cleanup
+
+  ChangeLog@1.942 +1 -2
+    merge cleanup
+
+ChangeSet@1.2574.1.6, 2011-06-23 02:16:14-04:00, stenn@psp-deb1.ntp.org
+  Update the building of OS-specific programs
+
+  ChangeLog@1.939.1.3 +1 -0
+    Update the building of OS-specific programs
+
+  configure.ac@1.530 +25 -2
+    Update the building of OS-specific programs
+
+ChangeSet@1.2574.1.5, 2011-06-22 23:14:06-04:00, stenn@psp-deb1.ntp.org
+  generated man page updates
+
+  bootstrap@1.39 +1 -1
+    generated man page updates
+
+  ntpd/ntpd.1ntpdman@1.1 +909 -0
+    BitKeeper file /home/stenn/ntp-dev/ntpd/ntpd.1ntpdman
+
+  ntpd/ntpd.1ntpdman@1.0 +0 -0
+
+  ntpd/ntpd.1ntpdmdoc@1.1 +878 -0
+    BitKeeper file /home/stenn/ntp-dev/ntpd/ntpd.1ntpdmdoc
+
+  ntpd/ntpd.1ntpdmdoc@1.0 +0 -0
+
+  ntpd/ntpd.man.in@1.1 +909 -0
+    BitKeeper file /home/stenn/ntp-dev/ntpd/ntpd.man.in
+
+  ntpd/ntpd.man.in@1.0 +0 -0
+
+  ntpd/ntpd.mdoc.in@1.1 +878 -0
+    BitKeeper file /home/stenn/ntp-dev/ntpd/ntpd.mdoc.in
+
+  ntpd/ntpd.mdoc.in@1.0 +0 -0
+
+  ntpdc/ntpdc.1ntpdcman@1.1 +569 -0
+    BitKeeper file /home/stenn/ntp-dev/ntpdc/ntpdc.1ntpdcman
+
+  ntpdc/ntpdc.1ntpdcman@1.0 +0 -0
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.1 +793 -0
+    BitKeeper file /home/stenn/ntp-dev/ntpdc/ntpdc.1ntpdcmdoc
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.0 +0 -0
+
+  ntpdc/ntpdc.man.in@1.1 +569 -0
+    BitKeeper file /home/stenn/ntp-dev/ntpdc/ntpdc.man.in
+
+  ntpdc/ntpdc.man.in@1.0 +0 -0
+
+  ntpdc/ntpdc.mdoc.in@1.1 +793 -0
+    BitKeeper file /home/stenn/ntp-dev/ntpdc/ntpdc.mdoc.in
+
+  ntpdc/ntpdc.mdoc.in@1.0 +0 -0
+
+  ntpq/ntpq.1ntpqman@1.1 +397 -0
+    BitKeeper file /home/stenn/ntp-dev/ntpq/ntpq.1ntpqman
+
+  ntpq/ntpq.1ntpqman@1.0 +0 -0
+
+  ntpq/ntpq.1ntpqmdoc@1.1 +375 -0
+    BitKeeper file /home/stenn/ntp-dev/ntpq/ntpq.1ntpqmdoc
+
+  ntpq/ntpq.1ntpqmdoc@1.0 +0 -0
+
+  ntpq/ntpq.man.in@1.1 +397 -0
+    BitKeeper file /home/stenn/ntp-dev/ntpq/ntpq.man.in
+
+  ntpq/ntpq.man.in@1.0 +0 -0
+
+  ntpq/ntpq.mdoc.in@1.1 +375 -0
+    BitKeeper file /home/stenn/ntp-dev/ntpq/ntpq.mdoc.in
+
+  ntpq/ntpq.mdoc.in@1.0 +0 -0
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.1 +92 -0
+    BitKeeper file /home/stenn/ntp-dev/ntpsnmpd/ntpsnmpd.1ntpsnmpdman
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.0 +0 -0
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.1 +89 -0
+    BitKeeper file /home/stenn/ntp-dev/ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.0 +0 -0
+
+  ntpsnmpd/ntpsnmpd.man.in@1.1 +92 -0
+    BitKeeper file /home/stenn/ntp-dev/ntpsnmpd/ntpsnmpd.man.in
+
+  ntpsnmpd/ntpsnmpd.man.in@1.0 +0 -0
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.1 +89 -0
+    BitKeeper file /home/stenn/ntp-dev/ntpsnmpd/ntpsnmpd.mdoc.in
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.0 +0 -0
+
+  scripts/ntp-wait.1ntp-waitman@1.1 +93 -0
+    BitKeeper file /home/stenn/ntp-dev/scripts/ntp-wait.1ntp-waitman
+
+  scripts/ntp-wait.1ntp-waitman@1.0 +0 -0
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.1 +92 -0
+    BitKeeper file /home/stenn/ntp-dev/scripts/ntp-wait.1ntp-waitmdoc
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.0 +0 -0
+
+  scripts/ntp-wait.man.in@1.1 +93 -0
+    BitKeeper file /home/stenn/ntp-dev/scripts/ntp-wait.man.in
+
+  scripts/ntp-wait.man.in@1.0 +0 -0
+
+  scripts/ntp-wait.mdoc.in@1.1 +92 -0
+    BitKeeper file /home/stenn/ntp-dev/scripts/ntp-wait.mdoc.in
+
+  scripts/ntp-wait.mdoc.in@1.0 +0 -0
+
+  sntp/include/mansec2subst.sed@1.1 +26 -0
+    BitKeeper file /home/stenn/ntp-dev/sntp/include/mansec2subst.sed
+
+  sntp/include/mansec2subst.sed@1.0 +0 -0
+
+  sntp/sntp.1sntpman@1.1 +293 -0
+    BitKeeper file /home/stenn/ntp-dev/sntp/sntp.1sntpman
+
+  sntp/sntp.1sntpman@1.0 +0 -0
+
+  sntp/sntp.1sntpmdoc@1.1 +275 -0
+    BitKeeper file /home/stenn/ntp-dev/sntp/sntp.1sntpmdoc
+
+  sntp/sntp.1sntpmdoc@1.0 +0 -0
+
+  sntp/sntp.man.in@1.1 +293 -0
+    BitKeeper file /home/stenn/ntp-dev/sntp/sntp.man.in
+
+  sntp/sntp.man.in@1.0 +0 -0
+
+  sntp/sntp.mdoc.in@1.1 +275 -0
+    BitKeeper file /home/stenn/ntp-dev/sntp/sntp.mdoc.in
+
+  sntp/sntp.mdoc.in@1.0 +0 -0
+
+  util/ntp-keygen.1ntp-keygenman@1.1 +917 -0
+    BitKeeper file /home/stenn/ntp-dev/util/ntp-keygen.1ntp-keygenman
+
+  util/ntp-keygen.1ntp-keygenman@1.0 +0 -0
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.1 +884 -0
+    BitKeeper file /home/stenn/ntp-dev/util/ntp-keygen.1ntp-keygenmdoc
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.0 +0 -0
+
+  util/ntp-keygen.man.in@1.1 +917 -0
+    BitKeeper file /home/stenn/ntp-dev/util/ntp-keygen.man.in
+
+  util/ntp-keygen.man.in@1.0 +0 -0
+
+  util/ntp-keygen.mdoc.in@1.1 +884 -0
+    BitKeeper file /home/stenn/ntp-dev/util/ntp-keygen.mdoc.in
+
+  util/ntp-keygen.mdoc.in@1.0 +0 -0
+
+ChangeSet@1.2574.1.4, 2011-06-22 22:57:47-04:00, stenn@psp-deb1.ntp.org
+  Work around solaris /bin/sh braindamage
+
+  scripts/genLocInfo@1.8 +2 -12
+    Work around solaris /bin/sh braindamage
+
+ChangeSet@1.2574.1.3, 2011-06-22 22:57:21-04:00, stenn@psp-deb1.ntp.org
+  Do not ignore generated man pages
+
+  BitKeeper/etc/ignore@1.83 +0 -4
+    Do not ignore generated man pages
+
+ChangeSet@1.2574.1.2, 2011-06-22 20:18:20-04:00, stenn@psp-deb1.ntp.org
+  validate MANTAGFMT in genLocInfo
+
+  ChangeLog@1.939.1.2 +1 -0
+    validate MANTAGFMT in genLocInfo
+
+  scripts/genLocInfo@1.7 +9 -1
+    validate MANTAGFMT in genLocInfo
+
+ChangeSet@1.2573.1.4, 2011-06-22 18:49:43-04:00, stenn@psp-deb1.ntp.org
+  Finish conversion to genLocInfo.
+
+  .point-changed-filelist@1.12 +4 -1
+    Finish conversion to genLocInfo.
+
+  BitKeeper/deleted/10/ntp-wait.1~5aa615f3f31c2873@1.4.1.1 +0 -0
+    Delete: scripts/ntp-wait.1
+
+  BitKeeper/deleted/1d/ntp-keygen.1~ef7a6b66bc6794e8@1.187.1.1 +0 -0
+    Delete: util/ntp-keygen.1
+
+  BitKeeper/deleted/4d/sntp.1~9b6f13948b8b0ead@1.181 +0 -0
+    Delete: sntp/sntp.1
+
+  BitKeeper/deleted/70/ntpdsim.1~916fd6f22320fcad@1.16 +0 -0
+    Delete: ntpd/ntpdsim.1
+
+  BitKeeper/deleted/a7/ntpdc.1~1dd38e607d4b7e9a@1.184.1.1 +0 -0
+    Delete: ntpdc/ntpdc.1
+
+  BitKeeper/deleted/ac/ntpd.1~e95786c25d7ce6ae@1.187.1.1 +0 -0
+    Delete: ntpd/ntpd.1
+
+  BitKeeper/deleted/ad/ntpq.1~b5913739d03602e2@1.186.1.1 +0 -0
+    Delete: ntpq/ntpq.1
+
+  BitKeeper/deleted/e5/ntpsnmpd.1~14083c7c951dc39f@1.186.1.1 +0 -0
+    Delete: ntpsnmpd/ntpsnmpd.1
+
+  BitKeeper/etc/ignore@1.82 +5 -0
+    Finish conversion to genLocInfo.
+
+  ChangeLog@1.938.1.3 +1 -0
+    Finish conversion to genLocInfo.
+
+  Makefile.am@1.112 +1 -2
+    Finish conversion to genLocInfo.
+
+  adjtimed/Makefile.am@1.13 +2 -5
+    Finish conversion to genLocInfo.
+
+  bincheck.mf@1.4 +9 -7
+    Finish conversion to genLocInfo.
+
+  configure.ac@1.529 +26 -0
+    Finish conversion to genLocInfo.
+
+  loc/freebsd@1.3 +0 -0
+    Rename: loc.freebsd -> loc/freebsd
+
+  loc/legacy@1.3 +0 -0
+    Rename: loc.legacy -> loc/legacy
+
+  ntpd/Makefile.am@1.107 +45 -13
+    Finish conversion to genLocInfo.
+
+  ntpdate/Makefile.am@1.31 +3 -6
+    Finish conversion to genLocInfo.
+
+  ntpdc/Makefile.am@1.64 +38 -15
+    Finish conversion to genLocInfo.
+
+  ntpq/Makefile.am@1.60 +49 -15
+    Finish conversion to genLocInfo.
+
+  ntpsnmpd/Makefile.am@1.31 +50 -13
+    Finish conversion to genLocInfo.
+
+  scripts/Makefile.am@1.27 +42 -13
+    Finish conversion to genLocInfo.
+
+  scripts/genLocInfo@1.6 +7 -5
+    Finish conversion to genLocInfo.
+
+  sntp/Makefile.am@1.64 +39 -12
+    Finish conversion to genLocInfo.
+
+  sntp/configure.ac@1.62 +97 -0
+    Finish conversion to genLocInfo.
+
+  sntp/include/Makefile.am@1.3 +1 -0
+    Finish conversion to genLocInfo.
+
+  sntp/m4/ntp_libntp.m4@1.15 +0 -1
+    Finish conversion to genLocInfo.
+
+  sntp/m4/ntp_locinfo.m4@1.5.1.3 +2 -1
+    Finish conversion to genLocInfo.
+
+  sntp/sntp-opts.def@1.33 +1 -1
+    Finish conversion to genLocInfo.
+
+  util/Makefile.am@1.63 +54 -19
+    Finish conversion to genLocInfo.
+
 ChangeSet@1.2575, 2011-06-21 11:29:36+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P185
   TAG: NTP_4_2_7P185
@@ -77,7 +538,7 @@ ChangeSet@1.2575, 2011-06-21 11:29:36+00:00, stenn@deacon.udel.edu
   sntp/sntp-opts.texi@1.181 +2 -2
     NTP_4_2_7P185
 
-  sntp/sntp.1@1.181 +2 -2
+  sntp/sntp.1@1.180.1.1 +2 -2
     NTP_4_2_7P185
 
   sntp/sntp.html@1.181 +2 -2
@@ -94,6 +555,30 @@ ChangeSet@1.2575, 2011-06-21 11:29:36+00:00, stenn@deacon.udel.edu
 
   util/ntp-keygen.1@1.188 +2 -2
     NTP_4_2_7P185
+
+ChangeSet@1.2573.1.3, 2011-06-21 02:14:29-04:00, stenn@psp-deb1.ntp.org
+  Rename ntp_locs.m4 to ntp_locinfo.m4
+
+  sntp/m4/ntp_locinfo.m4@1.5.1.2 +0 -0
+    Rename: sntp/m4/ntp_locs.m4 -> sntp/m4/ntp_locinfo.m4
+
+ChangeSet@1.2573.1.2, 2011-06-21 02:09:40-04:00, stenn@psp-deb1.ntp.org
+  ntp_locs.m4: handle the case where . is not in the PATH
+
+  ChangeLog@1.938.1.2 +1 -0
+    ntp_locs.m4: handle the case where . is not in the PATH
+
+  sntp/m4/ntp_locs.m4@1.5.1.1 +1 -1
+    ntp_locs.m4: handle the case where . is not in the PATH
+
+ChangeSet@1.2573.1.1, 2011-06-21 01:58:35-04:00, stenn@psp-deb1.ntp.org
+  [Bug 1950] Control installation of event_rpcgen.py
+
+  ChangeLog@1.938.1.1 +1 -0
+    [Bug 1950] Control installation of event_rpcgen.py
+
+  sntp/libevent/Makefile.am@1.7 +3 -0
+    [Bug 1950] Control installation of event_rpcgen.py
 
 ChangeSet@1.2574, 2011-06-20 18:50:41-04:00, stenn@deacon.udel.edu
   . may not be in the PATH - ntp_locs.m4 fix
