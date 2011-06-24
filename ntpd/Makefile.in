@@ -41,8 +41,6 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
-bin_PROGRAMS =
-sbin_PROGRAMS =
 EXTRA_PROGRAMS = check_y2k$(EXEEXT) keyword-gen$(EXEEXT) ntpd$(EXEEXT) \
 	ntpdsim$(EXEEXT)
 DIST_COMMON = $(noinst_HEADERS) $(srcdir)/Makefile.am \
@@ -436,6 +434,8 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 NULL = 
+bin_PROGRAMS = $(NTPD_DB) $(NTPDSIM_DB)
+sbin_PROGRAMS = $(NTPD_DS) $(NTPDSIM_DS)
 noinst_LIBRARIES = libntpd.a
 AM_CFLAGS = $(CFLAGS_NTP)
 AM_CPPFLAGS = $(NTP_INCS) $(LIBOPTS_CFLAGS) $(CPPFLAGS_NTP)
