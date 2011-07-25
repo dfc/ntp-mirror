@@ -1,8 +1,168 @@
-ChangeSet@1.2608, 2011-07-25 07:02:42+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2601, 2011-07-25 08:10:23+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P195
+  TAG: NTP_4_2_7P195
+
+  ChangeLog@1.966 +1 -0
+    NTP_4_2_7P195
+
+  ntpd/ntpd-opts.c@1.200 +3 -3
+    NTP_4_2_7P195
+
+  ntpd/ntpd-opts.h@1.200 +3 -3
+    NTP_4_2_7P195
+
+  ntpd/ntpd-opts.texi@1.198 +2 -2
+    NTP_4_2_7P195
+
+  ntpd/ntpd.1ntpdman@1.11 +2 -2
+    NTP_4_2_7P195
+
+  ntpd/ntpd.1ntpdmdoc@1.11 +1 -1
+    NTP_4_2_7P195
+
+  ntpd/ntpd.man.in@1.11 +2 -2
+    NTP_4_2_7P195
+
+  ntpd/ntpd.mdoc.in@1.11 +1 -1
+    NTP_4_2_7P195
+
+  ntpdc/ntpdc-opts.c@1.195 +3 -3
+    NTP_4_2_7P195
+
+  ntpdc/ntpdc-opts.h@1.195 +3 -3
+    NTP_4_2_7P195
+
+  ntpdc/ntpdc-opts.texi@1.195 +2 -2
+    NTP_4_2_7P195
+
+  ntpdc/ntpdc.1ntpdcman@1.11 +2 -2
+    NTP_4_2_7P195
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.11 +1 -1
+    NTP_4_2_7P195
+
+  ntpdc/ntpdc.html@1.23 +2 -2
+    NTP_4_2_7P195
+
+  ntpdc/ntpdc.man.in@1.11 +2 -2
+    NTP_4_2_7P195
+
+  ntpdc/ntpdc.mdoc.in@1.11 +1 -1
+    NTP_4_2_7P195
+
+  ntpq/ntpq-opts.c@1.197 +3 -3
+    NTP_4_2_7P195
+
+  ntpq/ntpq-opts.h@1.197 +3 -3
+    NTP_4_2_7P195
+
+  ntpq/ntpq-opts.texi@1.197 +2 -2
+    NTP_4_2_7P195
+
+  ntpq/ntpq.1ntpqman@1.11 +2 -2
+    NTP_4_2_7P195
+
+  ntpq/ntpq.1ntpqmdoc@1.11 +1 -1
+    NTP_4_2_7P195
+
+  ntpq/ntpq.man.in@1.11 +2 -2
+    NTP_4_2_7P195
+
+  ntpq/ntpq.mdoc.in@1.11 +1 -1
+    NTP_4_2_7P195
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.197 +3 -3
+    NTP_4_2_7P195
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.197 +3 -3
+    NTP_4_2_7P195
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.197 +2 -2
+    NTP_4_2_7P195
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.11 +2 -2
+    NTP_4_2_7P195
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.11 +1 -1
+    NTP_4_2_7P195
+
+  ntpsnmpd/ntpsnmpd.man.in@1.11 +2 -2
+    NTP_4_2_7P195
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.11 +1 -1
+    NTP_4_2_7P195
+
+  packageinfo.sh@1.198 +1 -1
+    NTP_4_2_7P195
+
+  scripts/ntp-wait-opts.texi@1.15 +1 -1
+    NTP_4_2_7P195
+
+  scripts/ntp-wait.1ntp-waitman@1.11 +2 -2
+    NTP_4_2_7P195
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.11 +1 -1
+    NTP_4_2_7P195
+
+  scripts/ntp-wait.html@1.15 +1 -1
+    NTP_4_2_7P195
+
+  scripts/ntp-wait.man.in@1.11 +2 -2
+    NTP_4_2_7P195
+
+  scripts/ntp-wait.mdoc.in@1.11 +1 -1
+    NTP_4_2_7P195
+
+  sntp/sntp-opts.c@1.191 +3 -3
+    NTP_4_2_7P195
+
+  sntp/sntp-opts.h@1.191 +3 -3
+    NTP_4_2_7P195
+
+  sntp/sntp-opts.texi@1.191 +2 -2
+    NTP_4_2_7P195
+
+  sntp/sntp.1sntpman@1.11 +2 -2
+    NTP_4_2_7P195
+
+  sntp/sntp.1sntpmdoc@1.11 +1 -1
+    NTP_4_2_7P195
+
+  sntp/sntp.html@1.191 +2 -2
+    NTP_4_2_7P195
+
+  sntp/sntp.man.in@1.11 +2 -2
+    NTP_4_2_7P195
+
+  sntp/sntp.mdoc.in@1.11 +1 -1
+    NTP_4_2_7P195
+
+  util/ntp-keygen-opts.c@1.195 +3 -3
+    NTP_4_2_7P195
+
+  util/ntp-keygen-opts.h@1.195 +3 -3
+    NTP_4_2_7P195
+
+  util/ntp-keygen-opts.texi@1.198 +2 -2
+    NTP_4_2_7P195
+
+  util/ntp-keygen.1ntp-keygenman@1.11 +2 -2
+    NTP_4_2_7P195
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.11 +1 -1
+    NTP_4_2_7P195
+
+  util/ntp-keygen.man.in@1.11 +2 -2
+    NTP_4_2_7P195
+
+  util/ntp-keygen.mdoc.in@1.11 +1 -1
+    NTP_4_2_7P195
+
+ChangeSet@1.2598.1.10, 2011-07-25 07:02:42+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P194
   TAG: NTP_4_2_7P194
 
-  ChangeLog@1.971 +1 -0
+  ChangeLog@1.963.1.8 +1 -0
     NTP_4_2_7P194
 
   ntpd/ntpd-opts.c@1.199 +3 -3
@@ -158,10 +318,10 @@ ChangeSet@1.2608, 2011-07-25 07:02:42+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.10 +2 -2
     NTP_4_2_7P194
 
-ChangeSet@1.2607, 2011-07-25 02:23:52-04:00, stenn@deacon.udel.edu
+ChangeSet@1.2598.1.9, 2011-07-25 02:23:52-04:00, stenn@deacon.udel.edu
   Added loc/solaris
 
-  ChangeLog@1.970 +1 -0
+  ChangeLog@1.963.1.7 +1 -0
     Added loc/solaris
 
   loc/solaris@1.1 +14 -0
@@ -169,10 +329,10 @@ ChangeSet@1.2607, 2011-07-25 02:23:52-04:00, stenn@deacon.udel.edu
 
   loc/solaris@1.0 +0 -0
 
-ChangeSet@1.2606, 2011-07-25 02:21:49-04:00, stenn@deacon.udel.edu
+ChangeSet@1.2598.1.8, 2011-07-25 02:21:49-04:00, stenn@deacon.udel.edu
   Add support for installing programs and scripts to libexec
 
-  ChangeLog@1.969 +1 -0
+  ChangeLog@1.963.1.6 +1 -0
     Add support for installing programs and scripts to libexec
 
   adjtimed/Makefile.am@1.14 +1 -0
@@ -226,11 +386,11 @@ ChangeSet@1.2082.4.222, 2011-07-25 00:09:06-04:00, stenn@deacon.udel.edu
   ntpd/refclock_parse.c@1.52.1.2 +62 -13
     [Bug 1608] Parse Refclock driver should honor trusttime
 
-ChangeSet@1.2604, 2011-07-24 12:28:46+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2598.1.6, 2011-07-24 12:28:46+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P193
   TAG: NTP_4_2_7P193
 
-  ChangeLog@1.967 +1 -0
+  ChangeLog@1.963.1.4 +1 -0
     NTP_4_2_7P193
 
   ntpd/ntpd-opts.c@1.198 +3 -3
@@ -386,13 +546,13 @@ ChangeSet@1.2604, 2011-07-24 12:28:46+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.9 +2 -2
     NTP_4_2_7P193
 
-ChangeSet@1.2603, 2011-07-24 01:41:56+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2598.1.5, 2011-07-24 01:41:56+00:00, davehart@shiny.ad.hartbrothers.com
   Update libevent to 2.1 HEAD as of merge of 2.0.13-stable-dev.
     (applies to prior cset)
   Match addr_eqprefix() sizeof and memcpy destination to make it clear
     to static analysis that there is no buffer overrun (CID 402).
 
-  ChangeLog@1.966 +3 -0
+  ChangeLog@1.963.1.3 +3 -0
     Update libevent to 2.1 HEAD as of merge of 2.0.13-stable-dev.
     Match addr_eqprefix() sizeof and memcpy destination to make it clear
       to static analysis that there is no buffer overrun (CID 402).
@@ -626,10 +786,10 @@ ChangeSet@1.2461.1.7, 2011-07-24 00:59:52+00:00, davehart@shiny.ad.hartbrothers.
     Update to libevent HEAD as of 20110723, 77a4d7f406be9d78876ba8a1b7c7d834d8998479
     Snapshot of libevent 2.1, as of 2.0.13-stable-dev release.
 
-ChangeSet@1.2601, 2011-07-20 20:12:25+00:00, davehart@shiny.ad.hartbrothers.com
+ChangeSet@1.2598.1.3, 2011-07-20 20:12:25+00:00, davehart@shiny.ad.hartbrothers.com
   slight ChangeLog cleanup (wrap after 72 chars, s/4.2.6p4/4.2.6p4-RC2/)
 
-  ChangeLog@1.965 +2 -1
+  ChangeLog@1.963.1.2 +2 -1
     slight ChangeLog cleanup (wrap after 72 chars, s/4.2.6p4/4.2.6p4-RC2/)
 
 ChangeSet@1.2082.4.221, 2011-07-20 19:37:50+00:00, davehart@shiny.ad.hartbrothers.com
@@ -648,6 +808,17 @@ ChangeSet@1.2082.4.220, 2011-07-20 13:06:51+02:00, karlsson@beam.lund.zozs.se
 
   include/ntp_lists.h@1.1.1.2 +4 -3
     [BUG 1970] UNLINK_EXPR_SLIST() causes crash if list is empty.
+
+ChangeSet@1.2599, 2011-07-19 06:55:38-04:00, stenn@psp-deb1.ntp.org
+  Added loc/redhat
+
+  ChangeLog@1.964 +1 -0
+    Added loc/redhat
+
+  loc/redhat@1.1 +15 -0
+    BitKeeper file /home/stenn/ntp-dev/loc/redhat
+
+  loc/redhat@1.0 +0 -0
 
 ChangeSet@1.2598, 2011-07-18 11:53:33+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P192
