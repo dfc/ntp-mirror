@@ -1,3 +1,231 @@
+ChangeSet@1.2608, 2011-07-25 07:02:42+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P194
+  TAG: NTP_4_2_7P194
+
+  ChangeLog@1.971 +1 -0
+    NTP_4_2_7P194
+
+  ntpd/ntpd-opts.c@1.199 +3 -3
+    NTP_4_2_7P194
+
+  ntpd/ntpd-opts.h@1.199 +3 -3
+    NTP_4_2_7P194
+
+  ntpd/ntpd-opts.texi@1.197 +2 -2
+    NTP_4_2_7P194
+
+  ntpd/ntpd.1ntpdman@1.10 +2 -2
+    NTP_4_2_7P194
+
+  ntpd/ntpd.1ntpdmdoc@1.10 +2 -2
+    NTP_4_2_7P194
+
+  ntpd/ntpd.man.in@1.10 +2 -2
+    NTP_4_2_7P194
+
+  ntpd/ntpd.mdoc.in@1.10 +2 -2
+    NTP_4_2_7P194
+
+  ntpdc/ntpdc-opts.c@1.194 +3 -3
+    NTP_4_2_7P194
+
+  ntpdc/ntpdc-opts.h@1.194 +3 -3
+    NTP_4_2_7P194
+
+  ntpdc/ntpdc-opts.texi@1.194 +2 -2
+    NTP_4_2_7P194
+
+  ntpdc/ntpdc.1ntpdcman@1.10 +2 -2
+    NTP_4_2_7P194
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.10 +2 -2
+    NTP_4_2_7P194
+
+  ntpdc/ntpdc.html@1.22 +2 -2
+    NTP_4_2_7P194
+
+  ntpdc/ntpdc.man.in@1.10 +2 -2
+    NTP_4_2_7P194
+
+  ntpdc/ntpdc.mdoc.in@1.10 +2 -2
+    NTP_4_2_7P194
+
+  ntpq/ntpq-opts.c@1.196 +3 -3
+    NTP_4_2_7P194
+
+  ntpq/ntpq-opts.h@1.196 +3 -3
+    NTP_4_2_7P194
+
+  ntpq/ntpq-opts.texi@1.196 +2 -2
+    NTP_4_2_7P194
+
+  ntpq/ntpq.1ntpqman@1.10 +2 -2
+    NTP_4_2_7P194
+
+  ntpq/ntpq.1ntpqmdoc@1.10 +2 -2
+    NTP_4_2_7P194
+
+  ntpq/ntpq.man.in@1.10 +2 -2
+    NTP_4_2_7P194
+
+  ntpq/ntpq.mdoc.in@1.10 +2 -2
+    NTP_4_2_7P194
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.196 +3 -3
+    NTP_4_2_7P194
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.196 +3 -3
+    NTP_4_2_7P194
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.196 +2 -2
+    NTP_4_2_7P194
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.10 +2 -2
+    NTP_4_2_7P194
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.10 +2 -2
+    NTP_4_2_7P194
+
+  ntpsnmpd/ntpsnmpd.man.in@1.10 +2 -2
+    NTP_4_2_7P194
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.10 +2 -2
+    NTP_4_2_7P194
+
+  packageinfo.sh@1.197 +1 -1
+    NTP_4_2_7P194
+
+  scripts/ntp-wait-opts.texi@1.14 +1 -1
+    NTP_4_2_7P194
+
+  scripts/ntp-wait.1ntp-waitman@1.10 +2 -2
+    NTP_4_2_7P194
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.10 +2 -2
+    NTP_4_2_7P194
+
+  scripts/ntp-wait.html@1.14 +1 -1
+    NTP_4_2_7P194
+
+  scripts/ntp-wait.man.in@1.10 +2 -2
+    NTP_4_2_7P194
+
+  scripts/ntp-wait.mdoc.in@1.10 +2 -2
+    NTP_4_2_7P194
+
+  sntp/sntp-opts.c@1.190 +3 -3
+    NTP_4_2_7P194
+
+  sntp/sntp-opts.h@1.190 +3 -3
+    NTP_4_2_7P194
+
+  sntp/sntp-opts.texi@1.190 +2 -2
+    NTP_4_2_7P194
+
+  sntp/sntp.1sntpman@1.10 +2 -2
+    NTP_4_2_7P194
+
+  sntp/sntp.1sntpmdoc@1.10 +2 -2
+    NTP_4_2_7P194
+
+  sntp/sntp.html@1.190 +2 -2
+    NTP_4_2_7P194
+
+  sntp/sntp.man.in@1.10 +2 -2
+    NTP_4_2_7P194
+
+  sntp/sntp.mdoc.in@1.10 +2 -2
+    NTP_4_2_7P194
+
+  util/ntp-keygen-opts.c@1.194 +3 -3
+    NTP_4_2_7P194
+
+  util/ntp-keygen-opts.h@1.194 +3 -3
+    NTP_4_2_7P194
+
+  util/ntp-keygen-opts.texi@1.197 +2 -2
+    NTP_4_2_7P194
+
+  util/ntp-keygen.1ntp-keygenman@1.10 +2 -2
+    NTP_4_2_7P194
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.10 +2 -2
+    NTP_4_2_7P194
+
+  util/ntp-keygen.man.in@1.10 +2 -2
+    NTP_4_2_7P194
+
+  util/ntp-keygen.mdoc.in@1.10 +2 -2
+    NTP_4_2_7P194
+
+ChangeSet@1.2607, 2011-07-25 02:23:52-04:00, stenn@deacon.udel.edu
+  Added loc/solaris
+
+  ChangeLog@1.970 +1 -0
+    Added loc/solaris
+
+  loc/solaris@1.1 +14 -0
+    BitKeeper file /deacon/backroom/ntp-dev/loc/solaris
+
+  loc/solaris@1.0 +0 -0
+
+ChangeSet@1.2606, 2011-07-25 02:21:49-04:00, stenn@deacon.udel.edu
+  Add support for installing programs and scripts to libexec
+
+  ChangeLog@1.969 +1 -0
+    Add support for installing programs and scripts to libexec
+
+  adjtimed/Makefile.am@1.14 +1 -0
+    Add support for installing programs and scripts to libexec
+
+  configure.ac@1.531 +11 -0
+    Add support for installing programs and scripts to libexec
+
+  ntpd/Makefile.am@1.109 +1 -0
+    Add support for installing programs and scripts to libexec
+
+  ntpdate/Makefile.am@1.32 +1 -0
+    Add support for installing programs and scripts to libexec
+
+  ntpdc/Makefile.am@1.65 +1 -0
+    Add support for installing programs and scripts to libexec
+
+  ntpq/Makefile.am@1.61 +1 -0
+    Add support for installing programs and scripts to libexec
+
+  ntpsnmpd/Makefile.am@1.32 +1 -0
+    Add support for installing programs and scripts to libexec
+
+  scripts/Makefile.am@1.28 +1 -0
+    Add support for installing programs and scripts to libexec
+
+  scripts/genLocInfo@1.11 +13 -3
+    Add support for installing programs and scripts to libexec
+
+  sntp/Makefile.am@1.65 +1 -0
+    Add support for installing programs and scripts to libexec
+
+  sntp/configure.ac@1.64 +11 -2
+    Add support for installing programs and scripts to libexec
+
+  sntp/m4/ntp_locinfo.m4@1.10 +14 -1
+    Add support for installing programs and scripts to libexec
+
+  util/Makefile.am@1.64 +1 -0
+    Add support for installing programs and scripts to libexec
+
+ChangeSet@1.2082.4.222, 2011-07-25 00:09:06-04:00, stenn@deacon.udel.edu
+  [Bug 1608] Parse Refclock driver should honor trusttime
+
+  ChangeLog@1.496.26.156 +2 -1
+    [Bug 1608] Parse Refclock driver should honor trusttime
+
+  html/drivers/driver8.html@1.25.1.1 +9 -0
+    [Bug 1608] Parse Refclock driver should honor trusttime
+
+  ntpd/refclock_parse.c@1.52.1.2 +62 -13
+    [Bug 1608] Parse Refclock driver should honor trusttime
+
 ChangeSet@1.2604, 2011-07-24 12:28:46+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P193
   TAG: NTP_4_2_7P193
