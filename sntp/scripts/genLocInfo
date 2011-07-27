@@ -4,7 +4,6 @@ args=`getopt f:v $*`
 set -- $args
 
 LF=
-RC=0
 V=": "
 
 for i
@@ -23,7 +22,7 @@ case "$locfile" in
  '')
     ;;
  *)
-    lf=loc/$LOCFILE
+    lf=loc/$locfile
     if test -f $lf
     then
 	LF=$lf
@@ -34,7 +33,7 @@ esac
 # If we have a file to use (ie, LF is not empty) then look for one.
 case "$LF" in
  '')
-    PATH=$PATH:sntp/libevent/build-aux
+    PATH=$PATH:libevent/build-aux
     export PATH
     set `scripts/cvo.sh @osname@ @osver@` || exit 1
 
@@ -70,8 +69,40 @@ ${V}echo "Looking for <$lf>" >&2
 	fi
 	;;
     esac
+    # Handle some "aliases"
+    case "$LF" in
+     '')
+	case "$CVO_OSNAME" in
+	 redhat* | fedora*)
+	    lf=loc/redhat
+${V}echo "Looking for <$lf>" >&2
+	    if test -f $lf
+	    then
+		LF=$lf
+	    fi
+	    ;;
+	esac
+	;;
+    esac
+
     # This might be a good place to see if uname returns "Linux",
     # and if so, use a generic file for that.
+    case "$LF" in
+     '')
+	case "`uname`" in
+	 Linux)
+	    lf=loc/linux
+${V}echo "Looking for <$lf>" >&2
+	    if test -f $lf
+	    then
+		LF=$lf
+	    fi
+	    ;;
+	esac
+	;;
+    esac
+
+    # Finally, 'legacy'
     case "$LF" in
      '')
 	lf=loc/legacy
@@ -97,6 +128,8 @@ echo "GENLOCINFOFILE=$LF"
 
 ###
 
+rm genLocInfo.rc?
+
 oIFS=$IFS
 IFS=","
 
@@ -111,7 +144,7 @@ do
 	case "$x" in
 	 '') ;;
 	 *) echo "Unrecognized input: <$c,$d,$s,$x>" >&2
-	    RC=1
+	    touch genLocInfo.rc1
 	    continue
 	    ;;
 	esac
@@ -131,16 +164,17 @@ do
 	 *,libexec,*)  DB= ; DL=libexec ; DS= ;;
 	 *,sbin,*) DB= ; DL= ; DS=sbin ;;
 	 *) echo "Unrecognized input: <$c,$d,$s>" >&2
-	    RC=1
+	    touch genLocInfo.rc1
 	    continue
 	    ;;
 	esac
 	case "$c,$d,$s" in
 	 *,*,1) ;;
 	 *,*,1m) ;;
+	 *,*,1M) ;;
 	 *,*,8) ;;
 	 *) echo "Unrecognized input: <$c,$d,$s>" >&2
-	    RC=1
+	    touch genLocInfo.rc1
 	    continue
 	    ;;
 	esac
@@ -165,7 +199,7 @@ do
 	    eval ${C}_DL=
 	    eval ${C}_DS=$c
 	    ;;
-	 *) echo "$0: GRONK: d" >&2
+	 *) echo "$0: installdir <$d> must be bin, sbin, or libexec" >&2
 	    exit 1
 	    ;;
 	esac
@@ -180,14 +214,25 @@ do
 	echo "${C}_DL=`eval echo '$'${C}_DL`"
 	echo "${C}_DS=`eval echo '$'${C}_DS`"
 	echo "${C}_MS=`eval echo '$'${C}_MS`"
+
+	touch genLocInfo.rc0
     else
 	break
     fi
 done < $LF
 IFS=$oIFS
 
-case "$RC" in
- 0) echo 'GENLOCINFO=OK' ;;
-esac
+if test -f genLocInfo.rc1
+then
+    rm genLocInfo.rc?
+    exit 1
+fi
 
-exit $RC
+if test -f genLocInfo.rc0
+then
+    rm genLocInfo.rc?
+    echo 'GENLOCINFO=OK'
+    exit 0
+fi
+
+exit 1

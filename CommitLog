@@ -1,3 +1,356 @@
+ChangeSet@1.2612, 2011-07-27 02:25:56+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P196
+  TAG: NTP_4_2_7P196
+
+  ChangeLog@1.975 +1 -0
+    NTP_4_2_7P196
+
+  ntpd/ntpd-opts.c@1.201 +3 -3
+    NTP_4_2_7P196
+
+  ntpd/ntpd-opts.h@1.201 +3 -3
+    NTP_4_2_7P196
+
+  ntpd/ntpd-opts.texi@1.199 +2 -2
+    NTP_4_2_7P196
+
+  ntpd/ntpd.1ntpdman@1.12 +2 -2
+    NTP_4_2_7P196
+
+  ntpd/ntpd.1ntpdmdoc@1.12 +2 -2
+    NTP_4_2_7P196
+
+  ntpd/ntpd.man.in@1.12 +2 -2
+    NTP_4_2_7P196
+
+  ntpd/ntpd.mdoc.in@1.12 +2 -2
+    NTP_4_2_7P196
+
+  ntpdc/ntpdc-opts.c@1.196 +3 -3
+    NTP_4_2_7P196
+
+  ntpdc/ntpdc-opts.h@1.196 +3 -3
+    NTP_4_2_7P196
+
+  ntpdc/ntpdc-opts.texi@1.196 +2 -2
+    NTP_4_2_7P196
+
+  ntpdc/ntpdc.1ntpdcman@1.12 +2 -2
+    NTP_4_2_7P196
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.12 +2 -2
+    NTP_4_2_7P196
+
+  ntpdc/ntpdc.html@1.24 +2 -2
+    NTP_4_2_7P196
+
+  ntpdc/ntpdc.man.in@1.12 +2 -2
+    NTP_4_2_7P196
+
+  ntpdc/ntpdc.mdoc.in@1.12 +2 -2
+    NTP_4_2_7P196
+
+  ntpq/ntpq-opts.c@1.198 +3 -3
+    NTP_4_2_7P196
+
+  ntpq/ntpq-opts.h@1.198 +3 -3
+    NTP_4_2_7P196
+
+  ntpq/ntpq-opts.texi@1.198 +2 -2
+    NTP_4_2_7P196
+
+  ntpq/ntpq.1ntpqman@1.12 +2 -2
+    NTP_4_2_7P196
+
+  ntpq/ntpq.1ntpqmdoc@1.12 +2 -2
+    NTP_4_2_7P196
+
+  ntpq/ntpq.man.in@1.12 +2 -2
+    NTP_4_2_7P196
+
+  ntpq/ntpq.mdoc.in@1.12 +2 -2
+    NTP_4_2_7P196
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.198 +3 -3
+    NTP_4_2_7P196
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.198 +3 -3
+    NTP_4_2_7P196
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.198 +2 -2
+    NTP_4_2_7P196
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.12 +2 -2
+    NTP_4_2_7P196
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.12 +2 -2
+    NTP_4_2_7P196
+
+  ntpsnmpd/ntpsnmpd.man.in@1.12 +2 -2
+    NTP_4_2_7P196
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.12 +2 -2
+    NTP_4_2_7P196
+
+  packageinfo.sh@1.199 +1 -1
+    NTP_4_2_7P196
+
+  scripts/ntp-wait-opts.texi@1.16 +1 -1
+    NTP_4_2_7P196
+
+  scripts/ntp-wait.1ntp-waitman@1.12 +2 -2
+    NTP_4_2_7P196
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.12 +2 -2
+    NTP_4_2_7P196
+
+  scripts/ntp-wait.html@1.16 +1 -1
+    NTP_4_2_7P196
+
+  scripts/ntp-wait.man.in@1.12 +2 -2
+    NTP_4_2_7P196
+
+  scripts/ntp-wait.mdoc.in@1.12 +2 -2
+    NTP_4_2_7P196
+
+  sntp/sntp-opts.c@1.192 +3 -3
+    NTP_4_2_7P196
+
+  sntp/sntp-opts.h@1.192 +3 -3
+    NTP_4_2_7P196
+
+  sntp/sntp-opts.texi@1.192 +2 -2
+    NTP_4_2_7P196
+
+  sntp/sntp.1sntpman@1.12 +2 -2
+    NTP_4_2_7P196
+
+  sntp/sntp.1sntpmdoc@1.12 +2 -2
+    NTP_4_2_7P196
+
+  sntp/sntp.html@1.192 +2 -2
+    NTP_4_2_7P196
+
+  sntp/sntp.man.in@1.12 +2 -2
+    NTP_4_2_7P196
+
+  sntp/sntp.mdoc.in@1.12 +2 -2
+    NTP_4_2_7P196
+
+  util/ntp-keygen-opts.c@1.196 +3 -3
+    NTP_4_2_7P196
+
+  util/ntp-keygen-opts.h@1.196 +3 -3
+    NTP_4_2_7P196
+
+  util/ntp-keygen-opts.texi@1.199 +2 -2
+    NTP_4_2_7P196
+
+  util/ntp-keygen.1ntp-keygenman@1.12 +2 -2
+    NTP_4_2_7P196
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.12 +2 -2
+    NTP_4_2_7P196
+
+  util/ntp-keygen.man.in@1.12 +2 -2
+    NTP_4_2_7P196
+
+  util/ntp-keygen.mdoc.in@1.12 +2 -2
+    NTP_4_2_7P196
+
+ChangeSet@1.2611, 2011-07-26 21:55:09-04:00, stenn@deacon.udel.edu
+  use --with-loc=legacy in br-flock
+
+  br-flock@1.16 +1 -1
+    use --with-loc=legacy in br-flock
+
+ChangeSet@1.2610, 2011-07-26 21:51:16-04:00, stenn@deacon.udel.edu
+  cleanup
+
+  ChangeLog@1.974 +1 -1
+    cleanup
+
+ChangeSet@1.2609, 2011-07-26 21:38:54-04:00, stenn@pogo.udel.edu
+  work around solaris /bin/sh issues for genLocInfo.
+
+  ChangeLog@1.973 +1 -0
+    work around solaris /bin/sh issues for genLocInfo.
+
+  sntp/scripts/genLocInfo@1.14 +23 -12
+    work around solaris /bin/sh issues for genLocInfo.
+
+ChangeSet@1.2608, 2011-07-26 14:26:17-04:00, stenn@psp-deb1.ntp.org
+  Be louder about loc/ changes
+
+  ChangeLog@1.972 +2 -0
+    Be louder about loc/ changes
+
+ChangeSet@1.2607, 2011-07-26 14:23:35-04:00, stenn@psp-deb1.ntp.org
+  Improve the help text: --with-locfile=XXX
+
+  ChangeLog@1.971 +1 -0
+    Improve the help text: --with-locfile=XXX
+
+  sntp/m4/ntp_locinfo.m4@1.12 +1 -1
+    Improve the help text: --with-locfile=XXX
+
+ChangeSet@1.2606, 2011-07-26 14:10:34-04:00, stenn@psp-deb1.ntp.org
+  genLocInfo cleanup
+
+  ChangeLog@1.970 +10 -0
+    genLocInfo cleanup
+
+  Makefile.am@1.113 +0 -1
+    genLocInfo cleanup
+
+  build@1.46 +4 -4
+    genLocInfo cleanup
+
+  configure.ac@1.533 +1 -20
+    genLocInfo cleanup
+
+  ntpd/Makefile.am@1.110 +4 -4
+    genLocInfo cleanup
+
+  ntpdc/Makefile.am@1.66 +4 -4
+    genLocInfo cleanup
+
+  ntpq/Makefile.am@1.62 +4 -4
+    genLocInfo cleanup
+
+  ntpsnmpd/Makefile.am@1.33 +4 -4
+    genLocInfo cleanup
+
+  scripts/Makefile.am@1.29 +4 -6
+    genLocInfo cleanup
+
+  sntp/Makefile.am@1.66 +7 -6
+    genLocInfo cleanup
+
+  sntp/configure.ac@1.65 +2 -2
+    genLocInfo cleanup
+
+  sntp/include/Makefile.am@1.4 +0 -1
+    genLocInfo cleanup
+
+  sntp/loc/README@1.1 +9 -0
+    BitKeeper file /home/stenn/ntp-dev/sntp/loc/README
+
+  sntp/loc/README@1.0 +0 -0
+
+  sntp/loc/freebsd@1.4 +0 -0
+    Rename: loc/freebsd -> sntp/loc/freebsd
+
+  sntp/loc/legacy@1.4 +0 -0
+    Rename: loc/legacy -> sntp/loc/legacy
+
+  sntp/loc/redhat@1.2 +0 -0
+    Rename: loc/redhat -> sntp/loc/redhat
+
+  sntp/loc/solaris@1.2 +0 -0
+    Rename: loc/solaris -> sntp/loc/solaris
+
+  sntp/m4/ntp_locinfo.m4@1.11 +59 -58
+    genLocInfo cleanup
+
+  sntp/scripts/Makefile.am@1.2 +1 -0
+    genLocInfo cleanup
+
+  sntp/scripts/Makefile.am@1.1 +9 -0
+    BitKeeper file /home/stenn/ntp-dev/sntp/scripts/Makefile.am
+
+  sntp/scripts/Makefile.am@1.0 +0 -0
+
+  sntp/scripts/cvo.sh@1.7 +0 -0
+    Rename: scripts/cvo.sh -> sntp/scripts/cvo.sh
+
+  sntp/scripts/genLocInfo@1.13 +37 -3
+    genLocInfo cleanup
+
+  sntp/scripts/genLocInfo@1.12 +0 -0
+    Rename: scripts/genLocInfo -> sntp/scripts/genLocInfo
+
+  sntp/scripts/mansec2subst.sed@1.2 +0 -0
+    Rename: sntp/include/mansec2subst.sed -> sntp/scripts/mansec2subst.sed
+
+  util/Makefile.am@1.65 +4 -4
+    genLocInfo cleanup
+
+ChangeSet@1.2605, 2011-07-26 01:57:56-04:00, stenn@psp-deb1.ntp.org
+  Removed sntp/m4/ntp_bindir.m4 - no longer needed
+
+  BitKeeper/deleted/a9/ntp_bindir.m4~14281a43d40ac9cd@1.2 +0 -0
+    Delete: sntp/m4/ntp_bindir.m4
+
+  ChangeLog@1.969 +1 -0
+    Removed sntp/m4/ntp_bindir.m4 - no longer needed
+
+ChangeSet@1.2604, 2011-07-26 01:59:51+00:00, davehart@shiny.ad.hartbrothers.com
+  Fix build on Linux systems lacking linux/if_addr.h or IFA_F_TENTATIVE.
+
+  lib/isc/unix/interfaceiter.c@1.22 +3 -1
+    Fix build on Linux systems lacking linux/if_addr.h or IFA_F_TENTATIVE.
+
+  sntp/m4/ntp_libntp.m4@1.16 +9 -0
+    Fix build on Linux systems lacking linux/if_addr.h or IFA_F_TENTATIVE.
+
+ChangeSet@1.2603, 2011-07-26 00:18:29+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 1973] Widen reference clock mode from 8 to 32 bits.
+
+  ChangeLog@1.968 +1 -0
+    [Bug 1973] Widen reference clock mode from 8 to 32 bits.
+
+  include/ntp.h@1.196 +1 -1
+    [Bug 1973] Widen reference clock mode from 8 to 32 bits.
+
+  include/ntp_config.h@1.74 +2 -1
+    [Bug 1973] Widen reference clock mode from 8 to 32 bits.
+
+  include/ntpd.h@1.165 +3 -3
+    [Bug 1973] Widen reference clock mode from 8 to 32 bits.
+
+  libntp/tsftomsu.c@1.4 +10 -7
+    Eliminate warning: "round" shadows global (use "round_it").
+
+  ntpd/complete.conf@1.17 +1 -1
+    [Bug 1973] Widen reference clock mode from 8 to 32 bits.
+
+  ntpd/keyword-gen-utd@1.14 +1 -1
+    keyword-gen output
+
+  ntpd/ntp_config.c@1.292 +18 -6
+    [Bug 1973] Widen reference clock mode from 8 to 32 bits.
+
+  ntpd/ntp_keyword.h@1.16 +62 -61
+    keyword-gen output
+
+  ntpd/ntp_parser.c@1.76 +747 -744
+    Bison output
+
+  ntpd/ntp_parser.h@1.43 +44 -41
+    Bison output
+
+  ntpd/ntp_parser.y@1.70 +7 -3
+    [Bug 1973] Widen reference clock mode from 8 to 32 bits.
+
+  ntpd/ntp_peer.c@1.148 +6 -6
+    [Bug 1973] Widen reference clock mode from 8 to 32 bits.
+
+  ntpd/ntp_scanner.c@1.43 +103 -26
+    [Bug 1973] Widen reference clock mode from 8 to 32 bits.
+
+  sntp/main.c@1.72 +1 -1
+    Quiet incompatible type to recvdata() warning.
+
+ChangeSet@1.2082.4.223, 2011-07-25 14:10:27+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 1972] checking for struct rtattr fails.
+
+  ChangeLog@1.496.26.157 +1 -0
+    [Bug 1972] checking for struct rtattr fails.
+
+  configure.ac@1.465.1.27 +6 -5
+    [Bug 1972] checking for struct rtattr fails.
+
 ChangeSet@1.2601, 2011-07-25 08:10:23+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P195
   TAG: NTP_4_2_7P195

@@ -152,6 +152,9 @@
 /* Do we have Linux capabilities? */
 #undef HAVE_LINUX_CAPABILITIES
 
+/* Define to 1 if you have the <linux/if_addr.h> header file. */
+#undef HAVE_LINUX_IF_ADDR_H
+
 /* if you have LinuxThreads */
 #undef HAVE_LINUX_THREADS
 
