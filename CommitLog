@@ -1,3 +1,172 @@
+ChangeSet@1.2617, 2011-07-28 08:48:08+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P198
+  TAG: NTP_4_2_7P198
+
+  ChangeLog@1.987 +1 -0
+    NTP_4_2_7P198
+
+  ntpd/ntpd-opts.c@1.203 +3 -3
+    NTP_4_2_7P198
+
+  ntpd/ntpd-opts.h@1.203 +3 -3
+    NTP_4_2_7P198
+
+  ntpd/ntpd-opts.texi@1.201 +2 -2
+    NTP_4_2_7P198
+
+  ntpd/ntpd.1ntpdman@1.14 +2 -2
+    NTP_4_2_7P198
+
+  ntpd/ntpd.1ntpdmdoc@1.14 +1 -1
+    NTP_4_2_7P198
+
+  ntpd/ntpd.man.in@1.14 +2 -2
+    NTP_4_2_7P198
+
+  ntpd/ntpd.mdoc.in@1.14 +1 -1
+    NTP_4_2_7P198
+
+  ntpdc/ntpdc-opts.c@1.198 +3 -3
+    NTP_4_2_7P198
+
+  ntpdc/ntpdc-opts.h@1.198 +3 -3
+    NTP_4_2_7P198
+
+  ntpdc/ntpdc-opts.texi@1.198 +2 -2
+    NTP_4_2_7P198
+
+  ntpdc/ntpdc.1ntpdcman@1.14 +2 -2
+    NTP_4_2_7P198
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.14 +1 -1
+    NTP_4_2_7P198
+
+  ntpdc/ntpdc.html@1.26 +2 -2
+    NTP_4_2_7P198
+
+  ntpdc/ntpdc.man.in@1.14 +2 -2
+    NTP_4_2_7P198
+
+  ntpdc/ntpdc.mdoc.in@1.14 +1 -1
+    NTP_4_2_7P198
+
+  ntpq/ntpq-opts.c@1.200 +3 -3
+    NTP_4_2_7P198
+
+  ntpq/ntpq-opts.h@1.200 +3 -3
+    NTP_4_2_7P198
+
+  ntpq/ntpq-opts.texi@1.200 +2 -2
+    NTP_4_2_7P198
+
+  ntpq/ntpq.1ntpqman@1.14 +2 -2
+    NTP_4_2_7P198
+
+  ntpq/ntpq.1ntpqmdoc@1.14 +1 -1
+    NTP_4_2_7P198
+
+  ntpq/ntpq.man.in@1.14 +2 -2
+    NTP_4_2_7P198
+
+  ntpq/ntpq.mdoc.in@1.14 +1 -1
+    NTP_4_2_7P198
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.200 +3 -3
+    NTP_4_2_7P198
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.200 +3 -3
+    NTP_4_2_7P198
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.200 +2 -2
+    NTP_4_2_7P198
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.14 +2 -2
+    NTP_4_2_7P198
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.14 +1 -1
+    NTP_4_2_7P198
+
+  ntpsnmpd/ntpsnmpd.man.in@1.14 +2 -2
+    NTP_4_2_7P198
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.14 +1 -1
+    NTP_4_2_7P198
+
+  packageinfo.sh@1.201 +1 -1
+    NTP_4_2_7P198
+
+  scripts/ntp-wait-opts.texi@1.18 +1 -1
+    NTP_4_2_7P198
+
+  scripts/ntp-wait.1ntp-waitman@1.14 +2 -2
+    NTP_4_2_7P198
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.14 +1 -1
+    NTP_4_2_7P198
+
+  scripts/ntp-wait.html@1.18 +1 -1
+    NTP_4_2_7P198
+
+  scripts/ntp-wait.man.in@1.14 +2 -2
+    NTP_4_2_7P198
+
+  scripts/ntp-wait.mdoc.in@1.14 +1 -1
+    NTP_4_2_7P198
+
+  sntp/sntp-opts.c@1.194 +3 -3
+    NTP_4_2_7P198
+
+  sntp/sntp-opts.h@1.194 +3 -3
+    NTP_4_2_7P198
+
+  sntp/sntp-opts.texi@1.194 +2 -2
+    NTP_4_2_7P198
+
+  sntp/sntp.1sntpman@1.14 +2 -2
+    NTP_4_2_7P198
+
+  sntp/sntp.1sntpmdoc@1.14 +1 -1
+    NTP_4_2_7P198
+
+  sntp/sntp.html@1.194 +2 -2
+    NTP_4_2_7P198
+
+  sntp/sntp.man.in@1.14 +2 -2
+    NTP_4_2_7P198
+
+  sntp/sntp.mdoc.in@1.14 +1 -1
+    NTP_4_2_7P198
+
+  util/ntp-keygen-opts.c@1.198 +3 -3
+    NTP_4_2_7P198
+
+  util/ntp-keygen-opts.h@1.198 +3 -3
+    NTP_4_2_7P198
+
+  util/ntp-keygen-opts.texi@1.201 +2 -2
+    NTP_4_2_7P198
+
+  util/ntp-keygen.1ntp-keygenman@1.14 +2 -2
+    NTP_4_2_7P198
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.14 +1 -1
+    NTP_4_2_7P198
+
+  util/ntp-keygen.man.in@1.14 +2 -2
+    NTP_4_2_7P198
+
+  util/ntp-keygen.mdoc.in@1.14 +1 -1
+    NTP_4_2_7P198
+
+ChangeSet@1.2616, 2011-07-28 04:04:18-04:00, stenn@deacon.udel.edu
+  remove old binsubdir stuff from SNTP, as NTP_LOCINFO does that now.
+
+  ChangeLog@1.986 +1 -0
+    remove old binsubdir stuff from SNTP, as NTP_LOCINFO does that now.
+
+  sntp/configure.ac@1.66 +0 -100
+    remove old binsubdir stuff from SNTP, as NTP_LOCINFO does that now.
+
 ChangeSet@1.2615, 2011-07-28 07:03:09+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P197
   TAG: NTP_4_2_7P197
