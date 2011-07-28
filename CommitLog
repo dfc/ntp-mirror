@@ -1,3 +1,283 @@
+ChangeSet@1.2615, 2011-07-28 07:03:09+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P197
+  TAG: NTP_4_2_7P197
+
+  ChangeLog@1.985 +1 -0
+    NTP_4_2_7P197
+
+  ntpd/ntpd-opts.c@1.202 +3 -3
+    NTP_4_2_7P197
+
+  ntpd/ntpd-opts.h@1.202 +3 -3
+    NTP_4_2_7P197
+
+  ntpd/ntpd-opts.texi@1.200 +2 -2
+    NTP_4_2_7P197
+
+  ntpd/ntpd.1ntpdman@1.13 +2 -2
+    NTP_4_2_7P197
+
+  ntpd/ntpd.1ntpdmdoc@1.13 +2 -2
+    NTP_4_2_7P197
+
+  ntpd/ntpd.man.in@1.13 +2 -2
+    NTP_4_2_7P197
+
+  ntpd/ntpd.mdoc.in@1.13 +2 -2
+    NTP_4_2_7P197
+
+  ntpdc/ntpdc-opts.c@1.197 +3 -3
+    NTP_4_2_7P197
+
+  ntpdc/ntpdc-opts.h@1.197 +3 -3
+    NTP_4_2_7P197
+
+  ntpdc/ntpdc-opts.texi@1.197 +2 -2
+    NTP_4_2_7P197
+
+  ntpdc/ntpdc.1ntpdcman@1.13 +2 -2
+    NTP_4_2_7P197
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.13 +2 -2
+    NTP_4_2_7P197
+
+  ntpdc/ntpdc.html@1.25 +2 -2
+    NTP_4_2_7P197
+
+  ntpdc/ntpdc.man.in@1.13 +2 -2
+    NTP_4_2_7P197
+
+  ntpdc/ntpdc.mdoc.in@1.13 +2 -2
+    NTP_4_2_7P197
+
+  ntpq/ntpq-opts.c@1.199 +3 -3
+    NTP_4_2_7P197
+
+  ntpq/ntpq-opts.h@1.199 +3 -3
+    NTP_4_2_7P197
+
+  ntpq/ntpq-opts.texi@1.199 +2 -2
+    NTP_4_2_7P197
+
+  ntpq/ntpq.1ntpqman@1.13 +2 -2
+    NTP_4_2_7P197
+
+  ntpq/ntpq.1ntpqmdoc@1.13 +2 -2
+    NTP_4_2_7P197
+
+  ntpq/ntpq.man.in@1.13 +2 -2
+    NTP_4_2_7P197
+
+  ntpq/ntpq.mdoc.in@1.13 +2 -2
+    NTP_4_2_7P197
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.199 +3 -3
+    NTP_4_2_7P197
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.199 +3 -3
+    NTP_4_2_7P197
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.199 +2 -2
+    NTP_4_2_7P197
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.13 +2 -2
+    NTP_4_2_7P197
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.13 +2 -2
+    NTP_4_2_7P197
+
+  ntpsnmpd/ntpsnmpd.man.in@1.13 +2 -2
+    NTP_4_2_7P197
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.13 +2 -2
+    NTP_4_2_7P197
+
+  packageinfo.sh@1.200 +1 -1
+    NTP_4_2_7P197
+
+  scripts/ntp-wait-opts.texi@1.17 +1 -1
+    NTP_4_2_7P197
+
+  scripts/ntp-wait.1ntp-waitman@1.13 +2 -2
+    NTP_4_2_7P197
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.13 +2 -2
+    NTP_4_2_7P197
+
+  scripts/ntp-wait.html@1.17 +1 -1
+    NTP_4_2_7P197
+
+  scripts/ntp-wait.man.in@1.13 +2 -2
+    NTP_4_2_7P197
+
+  scripts/ntp-wait.mdoc.in@1.13 +2 -2
+    NTP_4_2_7P197
+
+  sntp/sntp-opts.c@1.193 +3 -3
+    NTP_4_2_7P197
+
+  sntp/sntp-opts.h@1.193 +3 -3
+    NTP_4_2_7P197
+
+  sntp/sntp-opts.texi@1.193 +2 -2
+    NTP_4_2_7P197
+
+  sntp/sntp.1sntpman@1.13 +2 -2
+    NTP_4_2_7P197
+
+  sntp/sntp.1sntpmdoc@1.13 +2 -2
+    NTP_4_2_7P197
+
+  sntp/sntp.html@1.193 +2 -2
+    NTP_4_2_7P197
+
+  sntp/sntp.man.in@1.13 +2 -2
+    NTP_4_2_7P197
+
+  sntp/sntp.mdoc.in@1.13 +2 -2
+    NTP_4_2_7P197
+
+  util/ntp-keygen-opts.c@1.197 +3 -3
+    NTP_4_2_7P197
+
+  util/ntp-keygen-opts.h@1.197 +3 -3
+    NTP_4_2_7P197
+
+  util/ntp-keygen-opts.texi@1.200 +4 -4
+    NTP_4_2_7P197
+
+  util/ntp-keygen.1ntp-keygenman@1.13 +4 -4
+    NTP_4_2_7P197
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.13 +4 -4
+    NTP_4_2_7P197
+
+  util/ntp-keygen.man.in@1.13 +4 -4
+    NTP_4_2_7P197
+
+  util/ntp-keygen.mdoc.in@1.13 +4 -4
+    NTP_4_2_7P197
+
+ChangeSet@1.2612.1.9, 2011-07-28 02:25:31-04:00, stenn@deacon.udel.edu
+  cleanup
+
+  ChangeLog@1.984 +1 -1
+    cleanup
+
+ChangeSet@1.2612.1.8, 2011-07-27 22:10:08-07:00, harlan@hms-mbp.local
+  [Bug 1977] Mismatch between flag and description in ntp-keygen-opts.def
+
+  ChangeLog@1.983 +1 -0
+    [Bug 1977] Mismatch between flag and description in ntp-keygen-opts.def
+
+  util/ntp-keygen-opts.def@1.15 +2 -2
+    [Bug 1977] Mismatch between flag and description in ntp-keygen-opts.def
+
+ChangeSet@1.2612.1.7, 2011-07-27 19:45:16-04:00, stenn@deacon.udel.edu
+  Update sntp/loc/solaris to conform to stock locations
+
+  ChangeLog@1.982 +1 -0
+    Update sntp/loc/solaris to conform to stock locations
+
+  sntp/loc/solaris@1.3 +11 -11
+    Update sntp/loc/solaris to conform to stock locations
+
+ChangeSet@1.2612.1.6, 2011-07-27 22:42:23+00:00, davehart@shiny.ad.hartbrothers.com
+  Fix warnings in ntp_request.c ([Bug 1973] oversight) and sntp/main.c
+    (CID 159, apparent overrun due to union, actually correct).
+
+  ChangeLog@1.981 +2 -0
+    Fix warnings in ntp_request.c ([Bug 1973] oversight) and sntp/main.c
+      (CID 159, apparent overrun due to union, actually correct).
+
+  ntpd/ntp_request.c@1.106 +1 -1
+    Fix warning in ntp_request.c ([Bug 1973] fix oversight, peer->ttl is now
+      32 bits but mode 7 protocol still uses 8 bits, cast to avoid truncation
+      warning.
+
+  sntp/main.c@1.73 +1 -1
+    Fix CID 159, apparent overrun due to union, actually correct.
+
+  sntp/networking.c@1.60 +3 -3
+    Fix CID 159, apparent overrun due to union, actually correct.
+
+  sntp/networking.h@1.26 +1 -1
+    Fix CID 159, apparent overrun due to union, actually correct.
+
+ChangeSet@1.2082.4.226, 2011-07-27 22:22:03+00:00, davehart@shiny.ad.hartbrothers.com
+  Correct [Bug 1978] description in ChangeLog.
+
+  ChangeLog@1.496.26.160 +1 -1
+    [Bug 1978] [Bug 1134] fix in 4.2.6p4-RC1 doesn't build on older Linux.
+
+ChangeSet@1.2082.4.225, 2011-07-27 21:41:02+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 1978] Ignore tentative IP addresses on Linux.
+  Backport several fixes for Coverity warnings from ntp-dev.
+
+  ChangeLog@1.496.26.159 +2 -0
+    [Bug 1978] Ignore tentative IP addresses on Linux.
+    Backport several fixes for Coverity warnings from ntp-dev.
+
+  configure.ac@1.465.1.28 +9 -0
+    [Bug 1978] Ignore tentative IP addresses on Linux.
+
+  include/ntp_rfc2553.h@1.33.1.1 +10 -2
+    Backport several fixes for Coverity warnings from ntp-dev.
+
+  lib/isc/unix/interfaceiter.c@1.19.1.2 +5 -3
+    [Bug 1978] Ignore tentative IP addresses on Linux.
+
+  libntp/audio.c@1.27.1.1 +29 -29
+    Backport several fixes for Coverity warnings from ntp-dev.
+
+  libntp/decodenetnum.c@1.10.1.1 +43 -10
+    Backport several fixes for Coverity warnings from ntp-dev.
+
+  libntp/icom.c@1.11.1.1 +34 -10
+    Backport several fixes for Coverity warnings from ntp-dev.
+
+  ntpd/refclock_arc.c@1.22.1.1 +37 -34
+    Backport several fixes for Coverity warnings from ntp-dev.
+
+  ntpdc/ntpdc.c@1.75.1.5 +25 -17
+    Backport several fixes for Coverity warnings from ntp-dev.
+
+  ntpq/ntpq.c@1.97.1.9 +25 -17
+    Backport several fixes for Coverity warnings from ntp-dev.
+
+ChangeSet@1.2612.1.3, 2011-07-27 16:38:38+00:00, davehart@shiny.ad.hartbrothers.com
+  Do not force "legacy" when --with-locfile is not given, genLocInfo
+    will find the correct default for the system.
+
+  ChangeLog@1.978 +2 -0
+    Do not force "legacy" when --with-locfile is not given, genLocInfo
+      will find the correct default for the system.
+
+  sntp/m4/ntp_locinfo.m4@1.14 +13 -4
+    Do not force "legacy" when --with-locfile is not given, genLocInfo
+      will find the correct default for the system.
+
+ChangeSet@1.2612.1.1, 2011-07-27 06:27:52+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 1976] genLocInfo writes to srcdir break 'make distcheck'.
+
+  ChangeLog@1.976 +2 -1
+    [Bug 1976] genLocInfo writes to srcdir break 'make distcheck'.
+
+  sntp/m4/ntp_locinfo.m4@1.13 +8 -6
+    [Bug 1976] genLocInfo writes to srcdir break 'make distcheck'.
+
+  sntp/scripts/Makefile.am@1.3 +0 -3
+    Remove unneeded DISTCLEANFILES=config.log in sntp/scripts/Makefile.am.
+
+  sntp/scripts/genLocInfo@1.14.1.1 +17 -11
+    [Bug 1976] genLocInfo writes to srcdir break 'make distcheck'.
+
+ChangeSet@1.2613, 2011-07-26 22:44:46-04:00, stenn@deacon.udel.edu
+  cleanup
+
+  sntp/scripts/genLocInfo@1.15 +1 -1
+    cleanup
+
 ChangeSet@1.2612, 2011-07-27 02:25:56+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P196
   TAG: NTP_4_2_7P196
@@ -275,6 +555,15 @@ ChangeSet@1.2606, 2011-07-26 14:10:34-04:00, stenn@psp-deb1.ntp.org
 
   util/Makefile.am@1.65 +4 -4
     genLocInfo cleanup
+
+ChangeSet@1.2082.4.224, 2011-07-26 11:21:46+02:00, karlsson@beam.lund.zozs.se
+  [Bug 1975] libntp/mktime.c won't work with 64-bit time_t
+
+  ChangeLog@1.496.26.158 +1 -0
+    [Bug 1975] libntp/mktime.c won't work with 64-bit time_t
+
+  libntp/mktime.c@1.8.1.2 +4 -0
+    [Bug 1975] libntp/mktime.c won't work with 64-bit time_t
 
 ChangeSet@1.2605, 2011-07-26 01:57:56-04:00, stenn@psp-deb1.ntp.org
   Removed sntp/m4/ntp_bindir.m4 - no longer needed
