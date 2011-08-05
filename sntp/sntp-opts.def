@@ -5,9 +5,8 @@ autogen definitions options;
 #include autogen-version.def
 #include copyright.def
 
-prog-name	= "sntp";
+prog-name      = "sntp";
 prog-title	= "standard Simple Network Time Protocol program";
-homerc		= $HOME, ".";
 argument	= '[ hostname-or-IP ...]';
 
 #include homerc.def
@@ -110,12 +109,12 @@ flag = {
 #include debug-opt.def
 
 flag = {
-  name		= headspace;
-  value		= h;
+  name		= gap;
+  value		= g;
   descrip	= "The gap (in milliseconds) between time requests";
   arg-type	= number;
   arg-name	= "milliseconds";
-  arg-default	= 10;
+  arg-default	= 50;
   doc		= <<- _EndOfDoc_
 	Since we're only going to use the first valid response we get and
 	there is benefit to specifying a good number of servers to query,
@@ -164,7 +163,7 @@ flag = {
 };
 
 flag = {
-  name		= filelog;
+  name		= logfile;
   value		= l;
   arg-type	= file;
   arg-name	= "file-name";

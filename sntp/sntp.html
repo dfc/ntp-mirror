@@ -36,7 +36,7 @@ display the time offset of the system clock relative to the server
 clock.  Run as root, it can correct the system clock to this offset as
 well.  It can be run as an interactive command or from a cron job.
 
-  <p>This document applies to version 4.2.7p200 of <code>sntp</code>.
+  <p>This document applies to version 4.2.7p201 of <code>sntp</code>.
 
   <p>The program implements the SNTP protocol as defined by RFC 5905, the NTPv4
 IETF specification.
@@ -122,12 +122,12 @@ the aginfo template and the option descriptions for the <span class="command">sn
 <li><a accesskey="4" href="#sntp-broadcast">sntp broadcast</a>:              broadcast option (-b)
 <li><a accesskey="5" href="#sntp-concurrent">sntp concurrent</a>:             concurrent option (-c)
 <li><a accesskey="6" href="#sntp-debug_002dlevel">sntp debug-level</a>:            debug-level option (-d)
-<li><a accesskey="7" href="#sntp-filelog">sntp filelog</a>:                filelog option (-l)
-<li><a accesskey="8" href="#sntp-headspace">sntp headspace</a>:              headspace option (-h)
-<li><a accesskey="9" href="#sntp-ipv4">sntp ipv4</a>:                   ipv4 option (-4)
-<li><a href="#sntp-ipv6">sntp ipv6</a>:                   ipv6 option (-6)
+<li><a accesskey="7" href="#sntp-gap">sntp gap</a>:                    gap option (-g)
+<li><a accesskey="8" href="#sntp-ipv4">sntp ipv4</a>:                   ipv4 option (-4)
+<li><a accesskey="9" href="#sntp-ipv6">sntp ipv6</a>:                   ipv6 option (-6)
 <li><a href="#sntp-keyfile">sntp keyfile</a>:                keyfile option (-k)
 <li><a href="#sntp-kod">sntp kod</a>:                    kod option (-K)
+<li><a href="#sntp-logfile">sntp logfile</a>:                logfile option (-l)
 <li><a href="#sntp-ntpversion">sntp ntpversion</a>:             ntpversion option (-o)
 <li><a href="#sntp-set_002ddebug_002dlevel">sntp set-debug-level</a>:        set-debug-level option (-D)
 <li><a href="#sntp-slew">sntp slew</a>:                   slew option (-s)
@@ -150,7 +150,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#sntp-Invocation">sntp Invocation</a>
 <p><a name="index-sntp-usage-3"></a>
 This is the automatically generated usage text for sntp:
 
-<pre class="example">sntp - standard Simple Network Time Protocol program - Ver. 4.2.7p200
+<pre class="example">sntp - standard Simple Network Time Protocol program - Ver. 4.2.7p201
 USAGE:  sntp [ -&lt;flag&gt; [&lt;val&gt;] | --&lt;name&gt;[{=| }&lt;val&gt;] ]... \
                 [ hostname-or-IP ...]
   Flg Arg Option-Name    Description
@@ -170,10 +170,10 @@ USAGE:  sntp [ -&lt;flag&gt; [&lt;val&gt;] | --&lt;name&gt;[{=| }&lt;val&gt;] ].
                                 - may appear multiple times
    -D Str set-debug-level Set the debug verbosity level
                                 - may appear multiple times
-   -h Num headspace      The gap (in milliseconds) between time requests
+   -g Num gap            The gap (in milliseconds) between time requests
    -K Fil kod            KoD history filename
    -k Fil keyfile        Look in this file for the key specified with -a
-   -l Fil filelog        Log to specified logfile
+   -l Fil logfile        Log to specified logfile
    -M Num steplimit      Adjustments less than steplimit msec will be slewed
                                 - It must be in the range:
                                   greater than or equal to 0
@@ -201,8 +201,6 @@ hyphen and the flag character.
 
 
 The following option preset mechanisms are supported:
- - reading file $HOME/.ntprc
- - reading file ./.ntprc
  - reading file $HOME/.ntprc
  - reading file ./.ntprc
  - examining environment variables named SNTP_*
@@ -293,7 +291,7 @@ can send concurrent queries.
 
 <div class="node">
 <p><hr>
-<a name="sntp-debug_002dlevel"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#sntp-filelog">sntp filelog</a>,
+<a name="sntp-debug_002dlevel"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#sntp-gap">sntp gap</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#sntp-concurrent">sntp concurrent</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#sntp-Invocation">sntp Invocation</a>
 <br>
@@ -311,30 +309,15 @@ This is the &ldquo;increase debug verbosity level&rdquo; option.
 
 <div class="node">
 <p><hr>
-<a name="sntp-filelog"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#sntp-headspace">sntp headspace</a>,
+<a name="sntp-gap"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#sntp-ipv4">sntp ipv4</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#sntp-debug_002dlevel">sntp debug-level</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#sntp-Invocation">sntp Invocation</a>
 <br>
 </div>
 
-<h4 class="subsection">filelog option (-l)</h4>
+<h4 class="subsection">gap option (-g)</h4>
 
-<p><a name="index-sntp_002dfilelog-9"></a>
-This is the &ldquo;log to specified logfile&rdquo; option. 
-This option causes the client to write log messages to the specified
-logfile.
-
-<div class="node">
-<p><hr>
-<a name="sntp-headspace"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#sntp-ipv4">sntp ipv4</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="#sntp-filelog">sntp filelog</a>,
-Up:&nbsp;<a rel="up" accesskey="u" href="#sntp-Invocation">sntp Invocation</a>
-<br>
-</div>
-
-<h4 class="subsection">headspace option (-h)</h4>
-
-<p><a name="index-sntp_002dheadspace-10"></a>
+<p><a name="index-sntp_002dgap-9"></a>
 This is the &ldquo;the gap (in milliseconds) between time requests&rdquo; option. 
 Since we're only going to use the first valid response we get and
 there is benefit to specifying a good number of servers to query,
@@ -345,14 +328,14 @@ Default 10 milliseconds.
 <div class="node">
 <p><hr>
 <a name="sntp-ipv4"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#sntp-ipv6">sntp ipv6</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="#sntp-headspace">sntp headspace</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="#sntp-gap">sntp gap</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#sntp-Invocation">sntp Invocation</a>
 <br>
 </div>
 
 <h4 class="subsection">ipv4 option (-4)</h4>
 
-<p><a name="index-sntp_002dipv4-11"></a>
+<p><a name="index-sntp_002dipv4-10"></a>
 This is the &ldquo;force ipv4 dns name resolution&rdquo; option.
 
   <p>This option has some usage constraints.  It:
@@ -374,7 +357,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#sntp-Invocation">sntp Invocation</a>
 
 <h4 class="subsection">ipv6 option (-6)</h4>
 
-<p><a name="index-sntp_002dipv6-12"></a>
+<p><a name="index-sntp_002dipv6-11"></a>
 This is the &ldquo;force ipv6 dns name resolution&rdquo; option.
 
   <p>This option has some usage constraints.  It:
@@ -396,7 +379,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#sntp-Invocation">sntp Invocation</a>
 
 <h4 class="subsection">keyfile option (-k)</h4>
 
-<p><a name="index-sntp_002dkeyfile-13"></a>
+<p><a name="index-sntp_002dkeyfile-12"></a>
 This is the &ldquo;look in this file for the key specified with -a&rdquo; option. 
 This option specifies the keyfile. 
 SNTP will search for the key specified with -a keyno in this
@@ -415,7 +398,7 @@ M  Key is a 1-to-8 character ASCII string using the MD5 authentication scheme.
 
 <div class="node">
 <p><hr>
-<a name="sntp-kod"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#sntp-ntpversion">sntp ntpversion</a>,
+<a name="sntp-kod"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#sntp-logfile">sntp logfile</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#sntp-keyfile">sntp keyfile</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#sntp-Invocation">sntp Invocation</a>
 <br>
@@ -423,7 +406,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#sntp-Invocation">sntp Invocation</a>
 
 <h4 class="subsection">kod option (-K)</h4>
 
-<p><a name="index-sntp_002dkod-14"></a>
+<p><a name="index-sntp_002dkod-13"></a>
 This is the &ldquo;kod history filename&rdquo; option. 
 Specifies the filename to be used for the persistent history of KoD
 responses received from servers.  The default is
@@ -431,8 +414,23 @@ responses received from servers.  The default is
 
 <div class="node">
 <p><hr>
-<a name="sntp-ntpversion"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#sntp-set_002ddebug_002dlevel">sntp set-debug-level</a>,
+<a name="sntp-logfile"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#sntp-ntpversion">sntp ntpversion</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#sntp-kod">sntp kod</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="#sntp-Invocation">sntp Invocation</a>
+<br>
+</div>
+
+<h4 class="subsection">logfile option (-l)</h4>
+
+<p><a name="index-sntp_002dlogfile-14"></a>
+This is the &ldquo;log to specified logfile&rdquo; option. 
+This option causes the client to write log messages to the specified
+logfile.
+
+<div class="node">
+<p><hr>
+<a name="sntp-ntpversion"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#sntp-set_002ddebug_002dlevel">sntp set-debug-level</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="#sntp-logfile">sntp logfile</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#sntp-Invocation">sntp Invocation</a>
 <br>
 </div>

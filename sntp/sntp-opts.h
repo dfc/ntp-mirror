@@ -1,7 +1,7 @@
 /*  
  *  EDIT THIS FILE WITH CAUTION  (sntp-opts.h)
  *  
- *  It has been AutoGen-ed  August  4, 2011 at 11:30:54 AM by AutoGen 5.12
+ *  It has been AutoGen-ed  August  5, 2011 at 04:53:03 AM by AutoGen 5.12
  *  From the definitions    sntp-opts.def
  *  and the template file   options
  *
@@ -71,10 +71,10 @@ typedef enum {
     INDEX_OPT_CONCURRENT       =  5,
     INDEX_OPT_DEBUG_LEVEL      =  6,
     INDEX_OPT_SET_DEBUG_LEVEL  =  7,
-    INDEX_OPT_HEADSPACE        =  8,
+    INDEX_OPT_GAP              =  8,
     INDEX_OPT_KOD              =  9,
     INDEX_OPT_KEYFILE          = 10,
-    INDEX_OPT_FILELOG          = 11,
+    INDEX_OPT_LOGFILE          = 11,
     INDEX_OPT_STEPLIMIT        = 12,
     INDEX_OPT_NTPVERSION       = 13,
     INDEX_OPT_USERESERVEDPORT  = 14,
@@ -90,8 +90,8 @@ typedef enum {
 } teOptIndex;
 
 #define OPTION_CT    24
-#define SNTP_VERSION       "4.2.7p200"
-#define SNTP_FULL_VERSION  "sntp 4.2.7p200"
+#define SNTP_VERSION       "4.2.7p201"
+#define SNTP_FULL_VERSION  "sntp 4.2.7p201"
 
 /*
  *  Interface defines for all options.  Replace "n" with the UPPER_CASED
@@ -158,9 +158,9 @@ typedef enum {
 #  warning undefining SET_DEBUG_LEVEL due to option name conflict
 #  undef   SET_DEBUG_LEVEL
 # endif
-# ifdef    HEADSPACE
-#  warning undefining HEADSPACE due to option name conflict
-#  undef   HEADSPACE
+# ifdef    GAP
+#  warning undefining GAP due to option name conflict
+#  undef   GAP
 # endif
 # ifdef    KOD
 #  warning undefining KOD due to option name conflict
@@ -170,9 +170,9 @@ typedef enum {
 #  warning undefining KEYFILE due to option name conflict
 #  undef   KEYFILE
 # endif
-# ifdef    FILELOG
-#  warning undefining FILELOG due to option name conflict
-#  undef   FILELOG
+# ifdef    LOGFILE
+#  warning undefining LOGFILE due to option name conflict
+#  undef   LOGFILE
 # endif
 # ifdef    STEPLIMIT
 #  warning undefining STEPLIMIT due to option name conflict
@@ -211,10 +211,10 @@ typedef enum {
 # undef CONCURRENT
 # undef DEBUG_LEVEL
 # undef SET_DEBUG_LEVEL
-# undef HEADSPACE
+# undef GAP
 # undef KOD
 # undef KEYFILE
-# undef FILELOG
+# undef LOGFILE
 # undef STEPLIMIT
 # undef NTPVERSION
 # undef USERESERVEDPORT
@@ -240,12 +240,12 @@ typedef enum {
 #define VALUE_OPT_CONCURRENT     'c'
 #define VALUE_OPT_DEBUG_LEVEL    'd'
 #define VALUE_OPT_SET_DEBUG_LEVEL 'D'
-#define VALUE_OPT_HEADSPACE      'h'
+#define VALUE_OPT_GAP            'g'
 
-#define OPT_VALUE_HEADSPACE      (DESC(HEADSPACE).optArg.argInt)
+#define OPT_VALUE_GAP            (DESC(GAP).optArg.argInt)
 #define VALUE_OPT_KOD            'K'
 #define VALUE_OPT_KEYFILE        'k'
-#define VALUE_OPT_FILELOG        'l'
+#define VALUE_OPT_LOGFILE        'l'
 #define VALUE_OPT_STEPLIMIT      'M'
 
 #define OPT_VALUE_STEPLIMIT      (DESC(STEPLIMIT).optArg.argInt)
