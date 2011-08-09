@@ -427,9 +427,9 @@ std_def_list = \
 	$(srcdir)/include/version.def			\
 	$(NULL)
 
-bin_PROGRAMS = $(SNTP_DB)
-libexec_PROGRAMS = $(SNTP_DL)
-sbin_PROGRAMS = $(SNTP_DS)
+bin_PROGRAMS = @SNTP_DB@
+libexec_PROGRAMS = @SNTP_DL@
+sbin_PROGRAMS = @SNTP_DS@
 SUBDIRS = include scripts $(am__append_1) $(am__append_3) \
 	$(am__append_4)
 DIST_SUBDIRS = include scripts $(am__append_2) libopts tests

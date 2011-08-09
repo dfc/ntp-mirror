@@ -841,6 +841,9 @@ typedef unsigned int	uintptr_t;
 /* Define to 500 only on HP-UX. */
 #undef _XOPEN_SOURCE
 
+/* Are we _special_? */
+#undef __APPLE_USE_RFC_3542
+
 /* Define to 1 if type `char' is unsigned and you are not using gcc.  */
 #ifndef __CHAR_UNSIGNED__
 # undef __CHAR_UNSIGNED__
