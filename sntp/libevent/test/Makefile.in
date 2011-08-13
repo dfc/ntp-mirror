@@ -299,7 +299,7 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 AUTOMAKE_OPTIONS = foreign
 AM_CPPFLAGS = -I$(top_srcdir) -I$(top_srcdir)/compat -I$(top_srcdir)/include -I../include -DTINYTEST_LOCAL
-EXTRA_DIST = regress.rpc regress.gen.h regress.gen.c test.sh
+EXTRA_DIST = regress.rpc regress.gen.h regress.gen.c rpcgen_wrapper.sh test.sh
 noinst_HEADERS = tinytest.h tinytest_macros.h regress.h tinytest_local.h
 TESTS = $(top_srcdir)/test/test.sh
 BUILT_SOURCES = $(am__append_2)
@@ -337,6 +337,7 @@ bench_http_SOURCES = bench_http.c
 bench_http_LDADD = $(LIBEVENT_GC_SECTIONS) ../libevent.la
 bench_httpclient_SOURCES = bench_httpclient.c
 bench_httpclient_LDADD = $(LIBEVENT_GC_SECTIONS) ../libevent_core.la
+CLEANFILES = rpcgen-attempted
 DISTCLEANFILES = *~
 all: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) all-am
@@ -967,6 +968,7 @@ install-strip:
 mostlyclean-generic:
 
 clean-generic:
+	-test -z "$(CLEANFILES)" || rm -f $(CLEANFILES)
 
 distclean-generic:
 	-test -z "$(CONFIG_CLEAN_FILES)" || rm -f $(CONFIG_CLEAN_FILES)
@@ -1065,11 +1067,14 @@ uninstall-am:
 	tags uninstall uninstall-am
 
 
-regress.gen.c regress.gen.h: regress.rpc $(top_srcdir)/event_rpcgen.py
-	if $(top_srcdir)/event_rpcgen.py $(srcdir)/regress.rpc ; then \
+regress.gen.c regress.gen.h: rpcgen-attempted
+
+rpcgen-attempted: $(srcdir)/regress.rpc $(srcdir)/../event_rpcgen.py $(srcdir)/rpcgen_wrapper.sh
+	date -u > $@
+	if $(srcdir)/rpcgen_wrapper.sh $(srcdir); then \
 	   echo "HI"; \
 	else \
-	   echo "No Python installed; can't test RPC."; \
+	   echo "No Python installed; stubbing out RPC test." >&2; \
 	   echo " "> regress.gen.c; \
 	   echo "#define NO_PYTHON_EXISTS" > regress.gen.h; \
 	fi

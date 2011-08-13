@@ -1,3 +1,275 @@
+ChangeSet@1.2638, 2011-08-13 10:46:20+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P203
+  TAG: NTP_4_2_7P203
+
+  ChangeLog@1.1006 +1 -0
+    NTP_4_2_7P203
+
+  ntpd/ntpd-opts.c@1.208 +3 -3
+    NTP_4_2_7P203
+
+  ntpd/ntpd-opts.h@1.208 +3 -3
+    NTP_4_2_7P203
+
+  ntpd/ntpd-opts.texi@1.206 +2 -2
+    NTP_4_2_7P203
+
+  ntpd/ntpd.1ntpdman@1.19 +2 -2
+    NTP_4_2_7P203
+
+  ntpd/ntpd.1ntpdmdoc@1.19 +2 -2
+    NTP_4_2_7P203
+
+  ntpd/ntpd.man.in@1.19 +2 -2
+    NTP_4_2_7P203
+
+  ntpd/ntpd.mdoc.in@1.19 +2 -2
+    NTP_4_2_7P203
+
+  ntpdc/ntpdc-opts.c@1.203 +3 -3
+    NTP_4_2_7P203
+
+  ntpdc/ntpdc-opts.h@1.203 +3 -3
+    NTP_4_2_7P203
+
+  ntpdc/ntpdc-opts.texi@1.203 +2 -2
+    NTP_4_2_7P203
+
+  ntpdc/ntpdc.1ntpdcman@1.19 +2 -2
+    NTP_4_2_7P203
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.19 +2 -2
+    NTP_4_2_7P203
+
+  ntpdc/ntpdc.html@1.31 +2 -2
+    NTP_4_2_7P203
+
+  ntpdc/ntpdc.man.in@1.19 +2 -2
+    NTP_4_2_7P203
+
+  ntpdc/ntpdc.mdoc.in@1.19 +2 -2
+    NTP_4_2_7P203
+
+  ntpq/ntpq-opts.c@1.205 +3 -3
+    NTP_4_2_7P203
+
+  ntpq/ntpq-opts.h@1.205 +3 -3
+    NTP_4_2_7P203
+
+  ntpq/ntpq-opts.texi@1.205 +2 -2
+    NTP_4_2_7P203
+
+  ntpq/ntpq.1ntpqman@1.19 +2 -2
+    NTP_4_2_7P203
+
+  ntpq/ntpq.1ntpqmdoc@1.19 +2 -2
+    NTP_4_2_7P203
+
+  ntpq/ntpq.man.in@1.19 +2 -2
+    NTP_4_2_7P203
+
+  ntpq/ntpq.mdoc.in@1.19 +2 -2
+    NTP_4_2_7P203
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.205 +3 -3
+    NTP_4_2_7P203
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.205 +3 -3
+    NTP_4_2_7P203
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.205 +2 -2
+    NTP_4_2_7P203
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.19 +2 -2
+    NTP_4_2_7P203
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.19 +2 -2
+    NTP_4_2_7P203
+
+  ntpsnmpd/ntpsnmpd.man.in@1.19 +2 -2
+    NTP_4_2_7P203
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.19 +2 -2
+    NTP_4_2_7P203
+
+  packageinfo.sh@1.206 +1 -1
+    NTP_4_2_7P203
+
+  scripts/ntp-wait-opts.texi@1.23 +1 -1
+    NTP_4_2_7P203
+
+  scripts/ntp-wait.1ntp-waitman@1.19 +2 -2
+    NTP_4_2_7P203
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.19 +2 -2
+    NTP_4_2_7P203
+
+  scripts/ntp-wait.html@1.23 +1 -1
+    NTP_4_2_7P203
+
+  scripts/ntp-wait.man.in@1.19 +2 -2
+    NTP_4_2_7P203
+
+  scripts/ntp-wait.mdoc.in@1.19 +2 -2
+    NTP_4_2_7P203
+
+  sntp/sntp-opts.c@1.201 +3 -3
+    NTP_4_2_7P203
+
+  sntp/sntp-opts.h@1.201 +3 -3
+    NTP_4_2_7P203
+
+  sntp/sntp-opts.texi@1.201 +2 -2
+    NTP_4_2_7P203
+
+  sntp/sntp.1sntpman@1.21 +2 -2
+    NTP_4_2_7P203
+
+  sntp/sntp.1sntpmdoc@1.21 +2 -2
+    NTP_4_2_7P203
+
+  sntp/sntp.html@1.201 +2 -2
+    NTP_4_2_7P203
+
+  sntp/sntp.man.in@1.21 +2 -2
+    NTP_4_2_7P203
+
+  sntp/sntp.mdoc.in@1.21 +2 -2
+    NTP_4_2_7P203
+
+  util/ntp-keygen-opts.c@1.203 +3 -3
+    NTP_4_2_7P203
+
+  util/ntp-keygen-opts.h@1.203 +3 -3
+    NTP_4_2_7P203
+
+  util/ntp-keygen-opts.texi@1.206 +2 -2
+    NTP_4_2_7P203
+
+  util/ntp-keygen.1ntp-keygenman@1.19 +2 -2
+    NTP_4_2_7P203
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.19 +2 -2
+    NTP_4_2_7P203
+
+  util/ntp-keygen.man.in@1.19 +2 -2
+    NTP_4_2_7P203
+
+  util/ntp-keygen.mdoc.in@1.19 +2 -2
+    NTP_4_2_7P203
+
+ChangeSet@1.2637, 2011-08-12 15:04:45-04:00, stenn@deacon.udel.edu
+  Note that 1986 was fixed by this changeset
+
+  ChangeLog@1.1005 +1 -1
+    Note that 1986 was fixed by this changeset
+
+ChangeSet@1.2636, 2011-08-12 17:17:54+00:00, davehart@shiny.ad.hartbrothers.com
+  Actually use long long for (u_)int64 by correcting spelling
+    of SIZEOF_LONG_LONG in ntp_types.h.
+  Require Visual C++ 2005 or later compilers in Windows port.
+  Force .exe minimum Windows version to 0x0400 to allow NT4 in
+    vs2005/*.vcproj files.
+
+  ChangeLog@1.1004 +5 -0
+    Actually use long long for (u_)int64 by correcting spelling of
+      SIZEOF_LONG_LONG in ntp_types.h.
+    Require Visual C++ 2005 or later compilers in Windows port.
+    Force .exe minimum Windows version to 0x0400 to allow NT4 in
+      vs2005/*.vcproj files.
+    
+
+  include/ntp_machine.h@1.36 +0 -5
+    Remove long-untested SYS_CYGWIN32-specific block.
+
+  include/ntp_types.h@1.25 +1 -6
+    Correct spelling of SIZEOF_LONG_LONG, which will restore NTP's int64 on a
+    number of platforms.
+    With VC++ 2005 the minimum requirement, remove _MSC_VER __int64 block,
+    using the same "long long" types for (u_)int64.
+
+  include/timetoa.h@1.4 +3 -2
+    comment cleanup
+
+  lib/isc/win32/include/isc/platform.h@1.8 +2 -0
+    Allow presetting ISC_PLATFORM_QUADFORMAT, as ports\winnt\include\config.h
+    now does.
+
+  libntp/timespecops.c@1.7 +4 -3
+    Use u_int64 where available, instead of only where long is 64-bit.
+
+  ntpd/complete.conf@1.19 +1 -0
+    test "server" with IPv6 link-local with interface specifier
+
+  ports/winnt/include/config.h@1.101 +54 -63
+    Require Visual C++ 2005 or later, enabling portable "long long" and
+    "%lld" for 64-bit scalars.
+    Switch libisc from %I64 to %ll.
+
+  ports/winnt/ntpd/nt_clockstuff.c@1.51 +77 -121
+    Require Visual C++ 2005 or later, enabling portable "long long" and
+    "%lld" for 64-bit scalars.
+    Switch from %I64 to %ll.
+    Remove workarounds for VC6 deficit converting u_int64 to double,
+      removing many (LONGLONG) casts of ULONGLONGs in particular.
+    Code style cleanup.
+
+  ports/winnt/vs2005/Instsrv.vcproj@1.3 +2 -0
+    Force .exe minimum Windows version to 0x0400 to allow NT4
+
+  ports/winnt/vs2005/ntpd.vcproj@1.15 +2 -0
+    Force .exe minimum Windows version to 0x0400 to allow NT4
+
+  ports/winnt/vs2005/ntpdate.vcproj@1.5 +2 -0
+    Force .exe minimum Windows version to 0x0400 to allow NT4
+
+  ports/winnt/vs2005/ntpdc.vcproj@1.7 +2 -0
+    Force .exe minimum Windows version to 0x0400 to allow NT4
+
+  ports/winnt/vs2005/ntpkeygen.vcproj@1.7 +2 -0
+    Force .exe minimum Windows version to 0x0400 to allow NT4
+
+  ports/winnt/vs2005/ntpq.vcproj@1.7 +2 -0
+    Force .exe minimum Windows version to 0x0400 to allow NT4
+
+ChangeSet@1.2635, 2011-08-12 06:25:53+00:00, davehart@shiny.ad.hartbrothers.com
+  Correct init_logging()'s def_syslogmask type to u_int32 following
+    change of ntp_syslogmask from u_long to u_int32 in p202.
+
+  ChangeLog@1.1003 +2 -0
+    Correct init_logging()'s def_syslogmask type to u_int32 following
+      change of ntp_syslogmask from u_long to u_int32 in p202.
+
+  include/ntp_stdlib.h@1.64 +1 -1
+    change init_logging()'s def_syslogmask type to u_int32 to match
+      recent change of ntp_syslogmask from u_long to u_int32.
+
+  libntp/msyslog.c@1.46 +7 -3
+    More (u_long) to (u_int32) around ntp_syslogmask type change.
+
+  sntp/m4/ntp_libevent.m4@1.9 +6 -1
+    Detect --gc-sections support by default for our tearoff libevent,
+      now that libevent has opted to default to --disable-function-sections.
+
+ChangeSet@1.2634, 2011-08-12 06:21:59+00:00, davehart@shiny.ad.hartbrothers.com
+  Attempt to fix libevent "make distcheck" failure related to read-only
+  srcdir and event_rpcgen.py by avoiding creating stub regress.gen.h and
+  regress.gen.c in the build directory when $srcdir has both already.
+
+  ChangeLog@1.1002 +2 -0
+    Fix make distcheck with --enable-libevent-regress problem with
+      unwritable $srcdir.
+
+  sntp/libevent/test/Makefile.am@1.8 +9 -4
+    Attempt to fix libevent "make distcheck" failure related to read-only
+    srcdir and event_rpcgen.py by avoiding creating stub regress.gen.h and
+    regress.gen.c in the build directory when $srcdir has both already.
+
+  sntp/libevent/test/rpcgen_wrapper.sh@1.1 +42 -0
+    BitKeeper file C:/ntp/ntp-dev-1986/sntp/libevent/test/rpcgen_wrapper.sh
+
+  sntp/libevent/test/rpcgen_wrapper.sh@1.0 +0 -0
+
 ChangeSet@1.2633, 2011-08-09 08:20:41+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P202
   TAG: NTP_4_2_7P202

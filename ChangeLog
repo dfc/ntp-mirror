@@ -1,3 +1,13 @@
+(4.2.7p203) 2011/08/13 Released by Harlan Stenn <stenn@ntp.org>
+* [Bug 1986] Require Visual C++ 2005 or later compilers in Windows port.
+* Actually use long long for (u_)int64 by correcting spelling of
+  SIZEOF_LONG_LONG in ntp_types.h.
+* Force .exe minimum Windows version to 0x0400 to allow NT4 in
+  vs2005/*.vcproj files.
+* Fix make distcheck with --enable-libevent-regress problem with
+  unwritable $srcdir.
+* Correct init_logging()'s def_syslogmask type to u_int32 following
+  change of ntp_syslogmask from u_long to u_int32 in p202.
 (4.2.7p202) 2011/08/09 Released by Harlan Stenn <stenn@ntp.org>
 * [Bug 1983] --without-sntp build breaks in sntp subdir.
 * [Bug 1984] from 4.2.6p4-RC3: ntp/libisc fails to compile on OS X 10.7.
