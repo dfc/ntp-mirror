@@ -1,8 +1,220 @@
-ChangeSet@1.2638, 2011-08-13 10:46:20+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2642, 2011-08-16 11:18:13+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P204
+  TAG: NTP_4_2_7P204
+
+  ChangeLog@1.1010 +1 -0
+    NTP_4_2_7P204
+
+  ntpd/ntpd-opts.c@1.209 +3 -3
+    NTP_4_2_7P204
+
+  ntpd/ntpd-opts.h@1.209 +3 -3
+    NTP_4_2_7P204
+
+  ntpd/ntpd-opts.texi@1.207 +2 -2
+    NTP_4_2_7P204
+
+  ntpd/ntpd.1ntpdman@1.20 +2 -2
+    NTP_4_2_7P204
+
+  ntpd/ntpd.1ntpdmdoc@1.20 +2 -2
+    NTP_4_2_7P204
+
+  ntpd/ntpd.man.in@1.20 +2 -2
+    NTP_4_2_7P204
+
+  ntpd/ntpd.mdoc.in@1.20 +2 -2
+    NTP_4_2_7P204
+
+  ntpdc/ntpdc-opts.c@1.204 +3 -3
+    NTP_4_2_7P204
+
+  ntpdc/ntpdc-opts.h@1.204 +3 -3
+    NTP_4_2_7P204
+
+  ntpdc/ntpdc-opts.texi@1.204 +2 -2
+    NTP_4_2_7P204
+
+  ntpdc/ntpdc.1ntpdcman@1.20 +2 -2
+    NTP_4_2_7P204
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.20 +2 -2
+    NTP_4_2_7P204
+
+  ntpdc/ntpdc.html@1.32 +2 -2
+    NTP_4_2_7P204
+
+  ntpdc/ntpdc.man.in@1.20 +2 -2
+    NTP_4_2_7P204
+
+  ntpdc/ntpdc.mdoc.in@1.20 +2 -2
+    NTP_4_2_7P204
+
+  ntpq/ntpq-opts.c@1.206 +3 -3
+    NTP_4_2_7P204
+
+  ntpq/ntpq-opts.h@1.206 +3 -3
+    NTP_4_2_7P204
+
+  ntpq/ntpq-opts.texi@1.206 +2 -2
+    NTP_4_2_7P204
+
+  ntpq/ntpq.1ntpqman@1.20 +2 -2
+    NTP_4_2_7P204
+
+  ntpq/ntpq.1ntpqmdoc@1.20 +2 -2
+    NTP_4_2_7P204
+
+  ntpq/ntpq.man.in@1.20 +2 -2
+    NTP_4_2_7P204
+
+  ntpq/ntpq.mdoc.in@1.20 +2 -2
+    NTP_4_2_7P204
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.206 +3 -3
+    NTP_4_2_7P204
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.206 +3 -3
+    NTP_4_2_7P204
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.206 +2 -2
+    NTP_4_2_7P204
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.20 +2 -2
+    NTP_4_2_7P204
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.20 +2 -2
+    NTP_4_2_7P204
+
+  ntpsnmpd/ntpsnmpd.man.in@1.20 +2 -2
+    NTP_4_2_7P204
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.20 +2 -2
+    NTP_4_2_7P204
+
+  packageinfo.sh@1.207 +1 -1
+    NTP_4_2_7P204
+
+  scripts/ntp-wait-opts.texi@1.24 +1 -1
+    NTP_4_2_7P204
+
+  scripts/ntp-wait.1ntp-waitman@1.20 +2 -2
+    NTP_4_2_7P204
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.20 +2 -2
+    NTP_4_2_7P204
+
+  scripts/ntp-wait.html@1.24 +1 -1
+    NTP_4_2_7P204
+
+  scripts/ntp-wait.man.in@1.20 +2 -2
+    NTP_4_2_7P204
+
+  scripts/ntp-wait.mdoc.in@1.20 +2 -2
+    NTP_4_2_7P204
+
+  sntp/sntp-opts.c@1.202 +3 -3
+    NTP_4_2_7P204
+
+  sntp/sntp-opts.h@1.202 +3 -3
+    NTP_4_2_7P204
+
+  sntp/sntp-opts.texi@1.202 +13 -15
+    NTP_4_2_7P204
+
+  sntp/sntp.1sntpman@1.22 +13 -15
+    NTP_4_2_7P204
+
+  sntp/sntp.1sntpmdoc@1.22 +13 -15
+    NTP_4_2_7P204
+
+  sntp/sntp.html@1.202 +14 -16
+    NTP_4_2_7P204
+
+  sntp/sntp.man.in@1.22 +13 -15
+    NTP_4_2_7P204
+
+  sntp/sntp.mdoc.in@1.22 +13 -15
+    NTP_4_2_7P204
+
+  util/ntp-keygen-opts.c@1.204 +3 -3
+    NTP_4_2_7P204
+
+  util/ntp-keygen-opts.h@1.204 +3 -3
+    NTP_4_2_7P204
+
+  util/ntp-keygen-opts.texi@1.207 +2 -2
+    NTP_4_2_7P204
+
+  util/ntp-keygen.1ntp-keygenman@1.20 +2 -2
+    NTP_4_2_7P204
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.20 +2 -2
+    NTP_4_2_7P204
+
+  util/ntp-keygen.man.in@1.20 +2 -2
+    NTP_4_2_7P204
+
+  util/ntp-keygen.mdoc.in@1.20 +2 -2
+    NTP_4_2_7P204
+
+ChangeSet@1.2637.1.3, 2011-08-15 18:24:53-04:00, stenn@psp-deb1.ntp.org
+  [Bug 1989] sntp manual page sometimes refers to SNTP as a program
+
+  ChangeLog@1.1005.1.3 +1 -0
+    [Bug 1989] sntp manual page sometimes refers to SNTP as a program
+
+  sntp/sntp-opts.def@1.37 +12 -14
+    [Bug 1989] sntp manual page sometimes refers to SNTP as a program
+
+ChangeSet@1.2637.1.2, 2011-08-14 23:08:50+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 1988] Better sntp send failed error message needed.
+  [Bug 1990] sntp output should include stratum.
+
+  ChangeLog@1.1005.1.2 +2 -0
+    [Bug 1988] Better sntp send failed error message needed.
+    [Bug 1990] sntp output should include stratum.
+
+  include/ntp_syslog.h@1.7 +2 -0
+    [Bug 1988] Better sntp send failed error message needed.
+    [Bug 1990] sntp output should include stratum.
+
+  libntp/msyslog.c@1.47 +21 -6
+    [Bug 1988] Better sntp send failed error message needed.
+    [Bug 1990] sntp output should include stratum.
+
+  libntp/socktoa.c@1.17 +9 -2
+    [Bug 1988] Better sntp send failed error message needed.
+    [Bug 1990] sntp output should include stratum.
+
+  sntp/log.c@1.22 +2 -1
+    [Bug 1988] Better sntp send failed error message needed.
+    [Bug 1990] sntp output should include stratum.
+
+  sntp/main.c@1.76 +42 -25
+    [Bug 1988] Better sntp send failed error message needed.
+    [Bug 1990] sntp output should include stratum.
+
+  sntp/networking.c@1.61 +11 -14
+    [Bug 1988] Better sntp send failed error message needed.
+    [Bug 1990] sntp output should include stratum.
+
+  sntp/networking.h@1.27 +2 -3
+    return FALSE from sendpkt() on error.
+
+  sntp/utilities.c@1.19 +33 -0
+    add hostnameaddr() to display given hostname and resolved numeric
+      IP address, avoid duplication if the input was a numeric address.
+
+  sntp/utilities.h@1.11 +14 -12
+    add hostnameaddr() to display given hostname and resolved numeric
+      IP address, avoid duplication if the input was a numeric address.
+
+ChangeSet@1.2637.1.1, 2011-08-13 10:46:20+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P203
   TAG: NTP_4_2_7P203
 
-  ChangeLog@1.1006 +1 -0
+  ChangeLog@1.1005.1.1 +1 -0
     NTP_4_2_7P203
 
   ntpd/ntpd-opts.c@1.208 +3 -3
@@ -157,6 +369,15 @@ ChangeSet@1.2638, 2011-08-13 10:46:20+00:00, stenn@deacon.udel.edu
 
   util/ntp-keygen.mdoc.in@1.19 +2 -2
     NTP_4_2_7P203
+
+ChangeSet@1.2638, 2011-08-13 08:59:34+02:00, jnperlin@hydra.localnet
+  PGRMF support in NMEA driver
+
+  ChangeLog@1.1006 +1 -0
+    PGRMF support in NMEA driver
+
+  ntpd/refclock_nmea.c@1.61 +647 -475
+    PGRMF support in NMEA driver
 
 ChangeSet@1.2637, 2011-08-12 15:04:45-04:00, stenn@deacon.udel.edu
   Note that 1986 was fixed by this changeset
