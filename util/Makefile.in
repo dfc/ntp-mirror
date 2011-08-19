@@ -158,7 +158,7 @@ tg_DEPENDENCIES = ../libntp/libntp.a $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1)
 tg2_SOURCES = tg2.c
 tg2_OBJECTS = tg2.$(OBJEXT)
-tg2_DEPENDENCIES = $(am__DEPENDENCIES_1)
+tg2_DEPENDENCIES = ../libntp/libntp.a $(am__DEPENDENCIES_1)
 tickadj_SOURCES = tickadj.c
 tickadj_OBJECTS = tickadj.$(OBJEXT)
 tickadj_LDADD = $(LDADD)
@@ -464,7 +464,7 @@ AM_CPPFLAGS = $(NTP_INCS) $(LIBOPTS_CFLAGS) $(CPPFLAGS_NTP)
 
 # LDADD might need RESLIB and ADJLIB
 LDADD = ../libntp/libntp.a $(LDADD_LIBNTP) $(PTHREAD_LIBS)
-tg2_LDADD = $(LIBM)
+tg2_LDADD = ../libntp/libntp.a $(LIBM)
 ntp_keygen_LDADD = version.o $(LIBOPTS_LDADD) ../libntp/libntp.a \
 	$(LDADD_LIBNTP) $(PTHREAD_LIBS) $(LCRYPTO)
 ntp_keygen_SOURCES = ntp-keygen.c ntp-keygen-opts.c ntp-keygen-opts.h

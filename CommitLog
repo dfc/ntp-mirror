@@ -1,3 +1,183 @@
+ChangeSet@1.2645, 2011-08-19 07:46:19+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P205
+  TAG: NTP_4_2_7P205
+
+  ChangeLog@1.1012 +1 -0
+    NTP_4_2_7P205
+
+  ntpd/ntpd-opts.c@1.210 +3 -3
+    NTP_4_2_7P205
+
+  ntpd/ntpd-opts.h@1.210 +3 -3
+    NTP_4_2_7P205
+
+  ntpd/ntpd-opts.texi@1.208 +2 -2
+    NTP_4_2_7P205
+
+  ntpd/ntpd.1ntpdman@1.21 +2 -2
+    NTP_4_2_7P205
+
+  ntpd/ntpd.1ntpdmdoc@1.21 +2 -2
+    NTP_4_2_7P205
+
+  ntpd/ntpd.man.in@1.21 +2 -2
+    NTP_4_2_7P205
+
+  ntpd/ntpd.mdoc.in@1.21 +2 -2
+    NTP_4_2_7P205
+
+  ntpdc/ntpdc-opts.c@1.205 +3 -3
+    NTP_4_2_7P205
+
+  ntpdc/ntpdc-opts.h@1.205 +3 -3
+    NTP_4_2_7P205
+
+  ntpdc/ntpdc-opts.texi@1.205 +2 -2
+    NTP_4_2_7P205
+
+  ntpdc/ntpdc.1ntpdcman@1.21 +2 -2
+    NTP_4_2_7P205
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.21 +2 -2
+    NTP_4_2_7P205
+
+  ntpdc/ntpdc.html@1.33 +2 -2
+    NTP_4_2_7P205
+
+  ntpdc/ntpdc.man.in@1.21 +2 -2
+    NTP_4_2_7P205
+
+  ntpdc/ntpdc.mdoc.in@1.21 +2 -2
+    NTP_4_2_7P205
+
+  ntpq/ntpq-opts.c@1.207 +3 -3
+    NTP_4_2_7P205
+
+  ntpq/ntpq-opts.h@1.207 +3 -3
+    NTP_4_2_7P205
+
+  ntpq/ntpq-opts.texi@1.207 +2 -2
+    NTP_4_2_7P205
+
+  ntpq/ntpq.1ntpqman@1.21 +2 -2
+    NTP_4_2_7P205
+
+  ntpq/ntpq.1ntpqmdoc@1.21 +2 -2
+    NTP_4_2_7P205
+
+  ntpq/ntpq.man.in@1.21 +2 -2
+    NTP_4_2_7P205
+
+  ntpq/ntpq.mdoc.in@1.21 +2 -2
+    NTP_4_2_7P205
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.207 +3 -3
+    NTP_4_2_7P205
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.207 +3 -3
+    NTP_4_2_7P205
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.207 +2 -2
+    NTP_4_2_7P205
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.21 +2 -2
+    NTP_4_2_7P205
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.21 +2 -2
+    NTP_4_2_7P205
+
+  ntpsnmpd/ntpsnmpd.man.in@1.21 +2 -2
+    NTP_4_2_7P205
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.21 +2 -2
+    NTP_4_2_7P205
+
+  packageinfo.sh@1.208 +1 -1
+    NTP_4_2_7P205
+
+  scripts/ntp-wait-opts.texi@1.25 +1 -1
+    NTP_4_2_7P205
+
+  scripts/ntp-wait.1ntp-waitman@1.21 +2 -2
+    NTP_4_2_7P205
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.21 +2 -2
+    NTP_4_2_7P205
+
+  scripts/ntp-wait.html@1.25 +1 -1
+    NTP_4_2_7P205
+
+  scripts/ntp-wait.man.in@1.21 +2 -2
+    NTP_4_2_7P205
+
+  scripts/ntp-wait.mdoc.in@1.21 +2 -2
+    NTP_4_2_7P205
+
+  sntp/sntp-opts.c@1.203 +3 -3
+    NTP_4_2_7P205
+
+  sntp/sntp-opts.h@1.203 +3 -3
+    NTP_4_2_7P205
+
+  sntp/sntp-opts.texi@1.203 +2 -2
+    NTP_4_2_7P205
+
+  sntp/sntp.1sntpman@1.23 +2 -2
+    NTP_4_2_7P205
+
+  sntp/sntp.1sntpmdoc@1.23 +2 -2
+    NTP_4_2_7P205
+
+  sntp/sntp.html@1.203 +2 -2
+    NTP_4_2_7P205
+
+  sntp/sntp.man.in@1.23 +2 -2
+    NTP_4_2_7P205
+
+  sntp/sntp.mdoc.in@1.23 +2 -2
+    NTP_4_2_7P205
+
+  util/ntp-keygen-opts.c@1.205 +3 -3
+    NTP_4_2_7P205
+
+  util/ntp-keygen-opts.h@1.205 +3 -3
+    NTP_4_2_7P205
+
+  util/ntp-keygen-opts.texi@1.208 +2 -2
+    NTP_4_2_7P205
+
+  util/ntp-keygen.1ntp-keygenman@1.21 +2 -2
+    NTP_4_2_7P205
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.21 +2 -2
+    NTP_4_2_7P205
+
+  util/ntp-keygen.man.in@1.21 +2 -2
+    NTP_4_2_7P205
+
+  util/ntp-keygen.mdoc.in@1.21 +2 -2
+    NTP_4_2_7P205
+
+ChangeSet@1.2644, 2011-08-18 02:26:57+00:00, davehart@shiny.ad.hartbrothers.com
+  Fix typo in libevent/test/rpcgen_wrapper.sh spotted by Nick Mathewson.
+
+  sntp/libevent/test/rpcgen_wrapper.sh@1.2 +1 -1
+    Fix typo in libevent/test/rpcgen_wrapper.sh spotted by Nick Mathewson.
+
+ChangeSet@1.2643, 2011-08-18 02:25:11+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 1992] util/tg2 doesn't compile, needs libntp.
+  Patch supplied by  kukabu@gmail.com:
+  http://bugs.ntp.org/attachment.cgi?id=786
+
+  ChangeLog@1.1011 +1 -0
+    [Bug 1992] util/tg2 doesn't compile, needs libntp.
+
+  util/Makefile.am@1.66 +1 -1
+    [Bug 1992] util/tg2 doesn't compile, needs libntp.
+
+  util/tg2.c@1.6 +2 -3
+    [Bug 1992] util/tg2 doesn't compile, needs libntp.
+
 ChangeSet@1.2642, 2011-08-16 11:18:13+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P204
   TAG: NTP_4_2_7P204
