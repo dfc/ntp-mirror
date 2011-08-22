@@ -1,3 +1,202 @@
+ChangeSet@1.2654, 2011-08-22 05:13:12+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P207
+  TAG: NTP_4_2_7P207
+
+  ChangeLog@1.1018 +1 -0
+    NTP_4_2_7P207
+
+  ntpd/ntpd-opts.c@1.212 +3 -3
+    NTP_4_2_7P207
+
+  ntpd/ntpd-opts.h@1.212 +3 -3
+    NTP_4_2_7P207
+
+  ntpd/ntpd-opts.texi@1.210 +2 -2
+    NTP_4_2_7P207
+
+  ntpd/ntpd.1ntpdman@1.23 +2 -2
+    NTP_4_2_7P207
+
+  ntpd/ntpd.1ntpdmdoc@1.23 +2 -2
+    NTP_4_2_7P207
+
+  ntpd/ntpd.man.in@1.23 +2 -2
+    NTP_4_2_7P207
+
+  ntpd/ntpd.mdoc.in@1.23 +2 -2
+    NTP_4_2_7P207
+
+  ntpdc/ntpdc-opts.c@1.207 +3 -3
+    NTP_4_2_7P207
+
+  ntpdc/ntpdc-opts.h@1.207 +3 -3
+    NTP_4_2_7P207
+
+  ntpdc/ntpdc-opts.texi@1.207 +2 -2
+    NTP_4_2_7P207
+
+  ntpdc/ntpdc.1ntpdcman@1.23 +2 -2
+    NTP_4_2_7P207
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.23 +2 -2
+    NTP_4_2_7P207
+
+  ntpdc/ntpdc.html@1.35 +2 -2
+    NTP_4_2_7P207
+
+  ntpdc/ntpdc.man.in@1.23 +2 -2
+    NTP_4_2_7P207
+
+  ntpdc/ntpdc.mdoc.in@1.23 +2 -2
+    NTP_4_2_7P207
+
+  ntpq/ntpq-opts.c@1.209 +3 -3
+    NTP_4_2_7P207
+
+  ntpq/ntpq-opts.h@1.209 +3 -3
+    NTP_4_2_7P207
+
+  ntpq/ntpq-opts.texi@1.209 +2 -2
+    NTP_4_2_7P207
+
+  ntpq/ntpq.1ntpqman@1.23 +2 -2
+    NTP_4_2_7P207
+
+  ntpq/ntpq.1ntpqmdoc@1.23 +2 -2
+    NTP_4_2_7P207
+
+  ntpq/ntpq.man.in@1.23 +2 -2
+    NTP_4_2_7P207
+
+  ntpq/ntpq.mdoc.in@1.23 +2 -2
+    NTP_4_2_7P207
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.209 +3 -3
+    NTP_4_2_7P207
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.209 +3 -3
+    NTP_4_2_7P207
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.209 +2 -2
+    NTP_4_2_7P207
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.23 +2 -2
+    NTP_4_2_7P207
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.23 +2 -2
+    NTP_4_2_7P207
+
+  ntpsnmpd/ntpsnmpd.man.in@1.23 +2 -2
+    NTP_4_2_7P207
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.23 +2 -2
+    NTP_4_2_7P207
+
+  packageinfo.sh@1.210 +1 -1
+    NTP_4_2_7P207
+
+  scripts/ntp-wait-opts.texi@1.27 +1 -1
+    NTP_4_2_7P207
+
+  scripts/ntp-wait.1ntp-waitman@1.23 +8 -7
+    NTP_4_2_7P207
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.23 +7 -6
+    NTP_4_2_7P207
+
+  scripts/ntp-wait.html@1.27 +1 -1
+    NTP_4_2_7P207
+
+  scripts/ntp-wait.man.in@1.23 +8 -7
+    NTP_4_2_7P207
+
+  scripts/ntp-wait.mdoc.in@1.23 +7 -6
+    NTP_4_2_7P207
+
+  sntp/sntp-opts.c@1.205 +3 -3
+    NTP_4_2_7P207
+
+  sntp/sntp-opts.h@1.205 +3 -3
+    NTP_4_2_7P207
+
+  sntp/sntp-opts.texi@1.205 +2 -2
+    NTP_4_2_7P207
+
+  sntp/sntp.1sntpman@1.25 +2 -2
+    NTP_4_2_7P207
+
+  sntp/sntp.1sntpmdoc@1.25 +2 -2
+    NTP_4_2_7P207
+
+  sntp/sntp.html@1.205 +2 -2
+    NTP_4_2_7P207
+
+  sntp/sntp.man.in@1.25 +2 -2
+    NTP_4_2_7P207
+
+  sntp/sntp.mdoc.in@1.25 +2 -2
+    NTP_4_2_7P207
+
+  util/ntp-keygen-opts.c@1.207 +3 -3
+    NTP_4_2_7P207
+
+  util/ntp-keygen-opts.h@1.207 +3 -3
+    NTP_4_2_7P207
+
+  util/ntp-keygen-opts.texi@1.210 +2 -2
+    NTP_4_2_7P207
+
+  util/ntp-keygen.1ntp-keygenman@1.23 +2 -2
+    NTP_4_2_7P207
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.23 +2 -2
+    NTP_4_2_7P207
+
+  util/ntp-keygen.man.in@1.23 +2 -2
+    NTP_4_2_7P207
+
+  util/ntp-keygen.mdoc.in@1.23 +2 -2
+    NTP_4_2_7P207
+
+ChangeSet@1.2653, 2011-08-22 02:58:47+00:00, stenn@psp-fb2.ntp.org
+  Cleanups for ntp-wait-opts.def
+
+  scripts/ntp-wait-opts.def@1.4 +1 -1
+    Cleanups for ntp-wait-opts.def
+
+ChangeSet@1.2652, 2011-08-21 23:45:28+00:00, stenn@psp-fb2.ntp.org
+  cleanup ntp.keys.def
+
+  ntpd/ntp.keys.def@1.5 +5 -1
+    cleanup ntp.keys.def
+
+ChangeSet@1.2651, 2011-08-21 09:13:07+00:00, stenn@psp-fb2.ntp.org
+  ntp.keys.def cleanup
+
+  ntpd/ntp.keys.def@1.4 +2 -2
+    ntp.keys.def cleanup
+
+ChangeSet@1.2650, 2011-08-21 01:24:12-04:00, stenn@deacon.udel.edu
+  Restore the original CLOCK_MONOTONIC output format in sntp
+
+  ChangeLog@1.1017 +1 -0
+    Restore the original CLOCK_MONOTONIC output format in sntp
+
+  sntp/main.c@1.78 +2 -1
+    Restore the original CLOCK_MONOTONIC output format in sntp
+
+ChangeSet@1.2649, 2011-08-21 05:04:33+00:00, stenn@psp-fb2.ntp.org
+  Cleanups for ntp-wait-opts.def and ntp.keys.def
+
+  ChangeLog@1.1016 +1 -0
+    Cleanups for ntp-wait-opts.def and ntp.keys.def
+
+  ntpd/ntp.keys.def@1.3 +11 -8
+    Cleanups for ntp-wait-opts.def and ntp.keys.def
+
+  scripts/ntp-wait-opts.def@1.3 +6 -5
+    Cleanups for ntp-wait-opts.def and ntp.keys.def
+
 ChangeSet@1.2648, 2011-08-20 06:04:34+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P206
   TAG: NTP_4_2_7P206
