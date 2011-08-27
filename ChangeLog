@@ -1,3 +1,11 @@
+(4.2.7p209) 2011/08/27 Released by Harlan Stenn <stenn@ntp.org>
+* [Bug 2000] ntpd worker threads must block signals expected in main
+  thread.
+* [Bug 2001] add ntpq -c timerstats like ntpdc -c timerstats.
+* [Bug 2001] from 4.2.6p4-RC3: ntpdc timerstats reports overruns as
+  handled.
+* Update sntp tests to track the change of root dispersion to
+  synchronization distance.
 (4.2.7p208) 2011/08/24 Released by Harlan Stenn <stenn@ntp.org>
 * Fix the CLOCK_MONOTONIC TRACE() message.
 (4.2.7p207) 2011/08/22 Released by Harlan Stenn <stenn@ntp.org>
@@ -1110,6 +1118,7 @@
 
 * [Bug 1984] ntp/libisc fails to compile on OS X 10.7 (Lion).
 * [Bug 1985] "logconfig =allall" rejected.
+* [Bug 2001] ntpdc timerstats reports overruns as handled.
 * [Backward Incompatible] sntp: -l/--filelog -> -l/--logfile, to be
   consistent with ntpd.
 * libopts/file.c fix from Bruce Korb (arg-type=file).

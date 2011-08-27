@@ -89,7 +89,8 @@ TEST_F(mainTest, OffsetCalculationPositiveOffset) {
 
 	rpkt.precision = -16; // 0,000015259
 	rpkt.rootdelay = HTONS_FP(DTOUFP(0.125));
-	rpkt.rootdisp = HTONS_FP(DTOUFP(0.25)); //
+	rpkt.rootdisp = HTONS_FP(DTOUFP(0.25));
+	// Synch Distance: (0.125+0.25)/2.0 == 0.1875
 	l_fp reftime;
 	get_systime(&reftime);
 	HTONL_FP(&reftime, &rpkt.reftime);
@@ -118,12 +119,12 @@ TEST_F(mainTest, OffsetCalculationPositiveOffset) {
 	TSTOTV(&tmp, &dst);
 	dst.tv_sec -= JAN_1970;
 
-	double offset, precision, root_disp;
-	offset_calculation(&rpkt, LEN_PKT_NOMAC, &dst, &offset, &precision, &root_disp);
+	double offset, precision, synch_distance;
+	offset_calculation(&rpkt, LEN_PKT_NOMAC, &dst, &offset, &precision, &synch_distance);
 
 	EXPECT_DOUBLE_EQ(1.25, offset);
 	EXPECT_DOUBLE_EQ(1. / ULOGTOD(16), precision);
-	EXPECT_DOUBLE_EQ(0.25, root_disp);
+	EXPECT_DOUBLE_EQ(0.1875, synch_distance);
 }
 
 TEST_F(mainTest, OffsetCalculationNegativeOffset) {
@@ -132,6 +133,7 @@ TEST_F(mainTest, OffsetCalculationNegativeOffset) {
 	rpkt.precision = -1;
 	rpkt.rootdelay = HTONS_FP(DTOUFP(0.5));
 	rpkt.rootdisp = HTONS_FP(DTOUFP(0.5));
+	// Synch Distance is (0.5+0.5)/2.0, or 0.5
 	l_fp reftime;
 	get_systime(&reftime);
 	HTONL_FP(&reftime, &rpkt.reftime);
@@ -160,12 +162,12 @@ TEST_F(mainTest, OffsetCalculationNegativeOffset) {
 	TSTOTV(&tmp, &dst);
 	dst.tv_sec -= JAN_1970;
 
-	double offset, precision, root_disp;
-	offset_calculation(&rpkt, LEN_PKT_NOMAC, &dst, &offset, &precision, &root_disp);
+	double offset, precision, synch_distance;
+	offset_calculation(&rpkt, LEN_PKT_NOMAC, &dst, &offset, &precision, &synch_distance);
 
 	EXPECT_DOUBLE_EQ(-1, offset);
 	EXPECT_DOUBLE_EQ(1. / ULOGTOD(1), precision);
-	EXPECT_DOUBLE_EQ(0.5, root_disp);
+	EXPECT_DOUBLE_EQ(0.5, synch_distance);
 }
 
 TEST_F(mainTest, HandleUnusableServer) {
