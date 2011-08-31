@@ -1,3 +1,172 @@
+ChangeSet@1.2666, 2011-08-31 04:15:36+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P210
+  TAG: NTP_4_2_7P210
+
+  ChangeLog@1.1028 +1 -0
+    NTP_4_2_7P210
+
+  ntpd/ntpd-opts.c@1.215 +3 -3
+    NTP_4_2_7P210
+
+  ntpd/ntpd-opts.h@1.215 +3 -3
+    NTP_4_2_7P210
+
+  ntpd/ntpd-opts.texi@1.213 +2 -2
+    NTP_4_2_7P210
+
+  ntpd/ntpd.1ntpdman@1.26 +2 -2
+    NTP_4_2_7P210
+
+  ntpd/ntpd.1ntpdmdoc@1.26 +2 -2
+    NTP_4_2_7P210
+
+  ntpd/ntpd.man.in@1.26 +2 -2
+    NTP_4_2_7P210
+
+  ntpd/ntpd.mdoc.in@1.26 +2 -2
+    NTP_4_2_7P210
+
+  ntpdc/ntpdc-opts.c@1.210 +3 -3
+    NTP_4_2_7P210
+
+  ntpdc/ntpdc-opts.h@1.210 +3 -3
+    NTP_4_2_7P210
+
+  ntpdc/ntpdc-opts.texi@1.210 +2 -2
+    NTP_4_2_7P210
+
+  ntpdc/ntpdc.1ntpdcman@1.26 +2 -2
+    NTP_4_2_7P210
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.26 +2 -2
+    NTP_4_2_7P210
+
+  ntpdc/ntpdc.html@1.38 +2 -2
+    NTP_4_2_7P210
+
+  ntpdc/ntpdc.man.in@1.26 +2 -2
+    NTP_4_2_7P210
+
+  ntpdc/ntpdc.mdoc.in@1.26 +2 -2
+    NTP_4_2_7P210
+
+  ntpq/ntpq-opts.c@1.212 +3 -3
+    NTP_4_2_7P210
+
+  ntpq/ntpq-opts.h@1.212 +3 -3
+    NTP_4_2_7P210
+
+  ntpq/ntpq-opts.texi@1.212 +2 -2
+    NTP_4_2_7P210
+
+  ntpq/ntpq.1ntpqman@1.26 +2 -2
+    NTP_4_2_7P210
+
+  ntpq/ntpq.1ntpqmdoc@1.26 +2 -2
+    NTP_4_2_7P210
+
+  ntpq/ntpq.man.in@1.26 +2 -2
+    NTP_4_2_7P210
+
+  ntpq/ntpq.mdoc.in@1.26 +2 -2
+    NTP_4_2_7P210
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.212 +3 -3
+    NTP_4_2_7P210
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.212 +3 -3
+    NTP_4_2_7P210
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.212 +2 -2
+    NTP_4_2_7P210
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.26 +2 -2
+    NTP_4_2_7P210
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.26 +2 -2
+    NTP_4_2_7P210
+
+  ntpsnmpd/ntpsnmpd.man.in@1.26 +2 -2
+    NTP_4_2_7P210
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.26 +2 -2
+    NTP_4_2_7P210
+
+  packageinfo.sh@1.213 +1 -1
+    NTP_4_2_7P210
+
+  scripts/ntp-wait-opts.texi@1.30 +1 -1
+    NTP_4_2_7P210
+
+  scripts/ntp-wait.1ntp-waitman@1.26 +2 -2
+    NTP_4_2_7P210
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.26 +2 -2
+    NTP_4_2_7P210
+
+  scripts/ntp-wait.html@1.30 +1 -1
+    NTP_4_2_7P210
+
+  scripts/ntp-wait.man.in@1.26 +2 -2
+    NTP_4_2_7P210
+
+  scripts/ntp-wait.mdoc.in@1.26 +2 -2
+    NTP_4_2_7P210
+
+  sntp/sntp-opts.c@1.208 +3 -3
+    NTP_4_2_7P210
+
+  sntp/sntp-opts.h@1.208 +3 -3
+    NTP_4_2_7P210
+
+  sntp/sntp-opts.texi@1.208 +2 -2
+    NTP_4_2_7P210
+
+  sntp/sntp.1sntpman@1.28 +2 -2
+    NTP_4_2_7P210
+
+  sntp/sntp.1sntpmdoc@1.28 +2 -2
+    NTP_4_2_7P210
+
+  sntp/sntp.html@1.208 +2 -2
+    NTP_4_2_7P210
+
+  sntp/sntp.man.in@1.28 +2 -2
+    NTP_4_2_7P210
+
+  sntp/sntp.mdoc.in@1.28 +2 -2
+    NTP_4_2_7P210
+
+  util/ntp-keygen-opts.c@1.210 +3 -3
+    NTP_4_2_7P210
+
+  util/ntp-keygen-opts.h@1.210 +3 -3
+    NTP_4_2_7P210
+
+  util/ntp-keygen-opts.texi@1.213 +2 -2
+    NTP_4_2_7P210
+
+  util/ntp-keygen.1ntp-keygenman@1.26 +2 -2
+    NTP_4_2_7P210
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.26 +2 -2
+    NTP_4_2_7P210
+
+  util/ntp-keygen.man.in@1.26 +2 -2
+    NTP_4_2_7P210
+
+  util/ntp-keygen.mdoc.in@1.26 +2 -2
+    NTP_4_2_7P210
+
+ChangeSet@1.2665, 2011-08-30 09:01:00+00:00, davehart@shiny.ad.hartbrothers.com
+  Require -D4 or higher for ntpd SIGALRM debug trace from [Bug 2000].
+
+  ChangeLog@1.1027 +1 -0
+    Require -D4 or higher for ntpd SIGALRM debug trace from [Bug 2000].
+
+  ntpd/ntp_timer.c@1.65 +10 -10
+    Require -D4 or higher for ntpd SIGALRM debug trace from [Bug 2000].
+
 ChangeSet@1.2664, 2011-08-27 10:47:44+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P209
   TAG: NTP_4_2_7P209
