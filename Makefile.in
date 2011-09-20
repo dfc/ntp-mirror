@@ -369,8 +369,8 @@ top_srcdir = @top_srcdir@
 ACLOCAL_AMFLAGS = -I sntp/m4 -I sntp/libevent/m4 -I sntp/libopts/m4
 NULL = 
 SUBDIRS = \
-	scripts 	\
-	include 	\
+	scripts		\
+	include		\
 	libntp		\
 	libparse	\
 	ntpd		\
