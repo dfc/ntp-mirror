@@ -1,3 +1,223 @@
+ChangeSet@1.2689, 2011-09-29 08:06:54+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P217
+  TAG: NTP_4_2_7P217
+
+  ChangeLog@1.1045 +1 -0
+    NTP_4_2_7P217
+
+  ntpd/ntpd-opts.c@1.222 +3 -3
+    NTP_4_2_7P217
+
+  ntpd/ntpd-opts.h@1.222 +3 -3
+    NTP_4_2_7P217
+
+  ntpd/ntpd-opts.texi@1.220 +2 -2
+    NTP_4_2_7P217
+
+  ntpd/ntpd.1ntpdman@1.33 +2 -2
+    NTP_4_2_7P217
+
+  ntpd/ntpd.1ntpdmdoc@1.33 +2 -2
+    NTP_4_2_7P217
+
+  ntpd/ntpd.man.in@1.33 +2 -2
+    NTP_4_2_7P217
+
+  ntpd/ntpd.mdoc.in@1.33 +2 -2
+    NTP_4_2_7P217
+
+  ntpdc/ntpdc-opts.c@1.217 +3 -3
+    NTP_4_2_7P217
+
+  ntpdc/ntpdc-opts.h@1.217 +3 -3
+    NTP_4_2_7P217
+
+  ntpdc/ntpdc-opts.texi@1.217 +2 -2
+    NTP_4_2_7P217
+
+  ntpdc/ntpdc.1ntpdcman@1.33 +2 -2
+    NTP_4_2_7P217
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.33 +2 -2
+    NTP_4_2_7P217
+
+  ntpdc/ntpdc.html@1.45 +2 -2
+    NTP_4_2_7P217
+
+  ntpdc/ntpdc.man.in@1.33 +2 -2
+    NTP_4_2_7P217
+
+  ntpdc/ntpdc.mdoc.in@1.33 +2 -2
+    NTP_4_2_7P217
+
+  ntpq/ntpq-opts.c@1.219 +3 -3
+    NTP_4_2_7P217
+
+  ntpq/ntpq-opts.h@1.219 +3 -3
+    NTP_4_2_7P217
+
+  ntpq/ntpq-opts.texi@1.219 +2 -2
+    NTP_4_2_7P217
+
+  ntpq/ntpq.1ntpqman@1.33 +2 -2
+    NTP_4_2_7P217
+
+  ntpq/ntpq.1ntpqmdoc@1.33 +2 -2
+    NTP_4_2_7P217
+
+  ntpq/ntpq.man.in@1.33 +2 -2
+    NTP_4_2_7P217
+
+  ntpq/ntpq.mdoc.in@1.33 +2 -2
+    NTP_4_2_7P217
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.219 +3 -3
+    NTP_4_2_7P217
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.219 +3 -3
+    NTP_4_2_7P217
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.219 +2 -2
+    NTP_4_2_7P217
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.33 +2 -2
+    NTP_4_2_7P217
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.33 +2 -2
+    NTP_4_2_7P217
+
+  ntpsnmpd/ntpsnmpd.man.in@1.33 +2 -2
+    NTP_4_2_7P217
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.33 +2 -2
+    NTP_4_2_7P217
+
+  packageinfo.sh@1.220 +1 -1
+    NTP_4_2_7P217
+
+  scripts/ntp-wait-opts.texi@1.37 +1 -1
+    NTP_4_2_7P217
+
+  scripts/ntp-wait.1ntp-waitman@1.33 +2 -2
+    NTP_4_2_7P217
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.33 +2 -2
+    NTP_4_2_7P217
+
+  scripts/ntp-wait.html@1.37 +1 -1
+    NTP_4_2_7P217
+
+  scripts/ntp-wait.man.in@1.33 +2 -2
+    NTP_4_2_7P217
+
+  scripts/ntp-wait.mdoc.in@1.33 +2 -2
+    NTP_4_2_7P217
+
+  sntp/sntp-opts.c@1.215 +3 -3
+    NTP_4_2_7P217
+
+  sntp/sntp-opts.h@1.215 +3 -3
+    NTP_4_2_7P217
+
+  sntp/sntp-opts.texi@1.215 +2 -2
+    NTP_4_2_7P217
+
+  sntp/sntp.1sntpman@1.35 +2 -2
+    NTP_4_2_7P217
+
+  sntp/sntp.1sntpmdoc@1.35 +2 -2
+    NTP_4_2_7P217
+
+  sntp/sntp.html@1.215 +2 -2
+    NTP_4_2_7P217
+
+  sntp/sntp.man.in@1.35 +2 -2
+    NTP_4_2_7P217
+
+  sntp/sntp.mdoc.in@1.35 +2 -2
+    NTP_4_2_7P217
+
+  util/ntp-keygen-opts.c@1.218 +3 -3
+    NTP_4_2_7P217
+
+  util/ntp-keygen-opts.h@1.218 +3 -3
+    NTP_4_2_7P217
+
+  util/ntp-keygen-opts.texi@1.220 +34 -20
+    NTP_4_2_7P217
+
+  util/ntp-keygen.1ntp-keygenman@1.33 +24 -10
+    NTP_4_2_7P217
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.33 +24 -10
+    NTP_4_2_7P217
+
+  util/ntp-keygen.man.in@1.33 +24 -10
+    NTP_4_2_7P217
+
+  util/ntp-keygen.mdoc.in@1.33 +24 -10
+    NTP_4_2_7P217
+
+ChangeSet@1.2688, 2011-09-29 03:52:53-04:00, stenn@deacon.udel.edu
+  cleanup
+
+  ChangeLog@1.1044 +2 -2
+    cleanup
+
+ChangeSet@1.2687, 2011-09-29 07:17:56+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 2020] ntp-keygen -s no longer sets host in cert file name.
+  ntp-keygen -i option long name changed from misleading --issuer-name
+    to --ident.  [Backward Incompatible]
+
+  ChangeLog@1.1043 +3 -0
+    [Bug 2020] ntp-keygen -s no longer sets host in cert file name.
+    ntp-keygen -i option long name changed from misleading --issuer-name
+      to --ident.  [Backward Incompatible]
+
+  ports/winnt/include/sys/time.h@1.7 +1 -1
+    Correct type of unused 2nd argument in port's gettimeofday()
+
+  ports/winnt/libntp/util_clockstuff.c@1.6 +2 -2
+    Correct type of unused 2nd argument in port's gettimeofday()
+
+  util/ntp-keygen-opts.c@1.217 +17 -17
+    ntp-keygen -i option long name changed from misleading --issuer-name
+      to --ident.  [Backward Incompatible]
+
+  util/ntp-keygen-opts.h@1.217 +7 -7
+    ntp-keygen -i option long name changed from misleading --issuer-name
+      to --ident.  [Backward Incompatible]
+
+  util/ntp-keygen.c@1.83 +51 -28
+    [Bug 2020] ntp-keygen -s no longer sets host in cert file name.
+    ntp-keygen -i option long name changed from misleading --issuer-name
+      to --ident.  [Backward Incompatible]
+
+ChangeSet@1.2686, 2011-09-29 05:16:02+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 2009] cleanup warning about adj_systime() returning no value.
+  [Bug 2020] Expand ntp-keygen-opts.def explanations of host name and
+    group name options and how they affect output, rename -i long form
+    from --issuer-name to --ident to match reality.
+
+  libntp/systime.c@1.57 +3 -3
+    [Bug 2009] cleanup: adj_systime() must return a value.
+
+  util/ntp-keygen-opts.def@1.16 +23 -9
+    [Bug 2020] groundwork.  Clarify interaction of -i group and -s host[@group]
+      options and rename long option for -i from --issuer-name to --ident, as
+      the group name is never used for certificate issuer.  Spell out how group
+      and host names are used.  Backward compatibility is a relatively minor
+      issue as the official documentation and Steve's examples mention only
+      the short flag -i.
+
+  util/ntp-keygen.c@1.82 +9 -9
+    [Bug 2020] groundwork.  Clarify interaction of -i group and -s host[@group]
+      options and rename long option for -i from --issuer-name to --ident, as
+      the group name is never used for certificate issuer.  Spell out how group
+      and host names are used.  Backward compatibility is a relatively minor
+      issue as the official documentation and Steve's examples mention only
+      the short flag -i.
+
 ChangeSet@1.2685, 2011-09-27 10:41:46+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P216
   TAG: NTP_4_2_7P216
