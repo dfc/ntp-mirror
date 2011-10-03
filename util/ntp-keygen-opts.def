@@ -34,6 +34,21 @@ flag = {
 	_EndOfDoc_;
 };
 
+flag = {
+    value     = C;
+    name      = cipher;
+    arg-type  = string;
+    arg-name  = cipher;
+    ifdef     = AUTOKEY;
+    descrip   = "privatekey cipher";
+    doc = <<-  _EndOfDoc_
+	Select the cipher which is used to encrypt the files containing
+	private keys.  The default is three-key triple DES in CBC mode,
+	equivalent to "-C des-ede3-cbc".  The openssl tool lists ciphers
+	available in "openssl -h" output.
+	_EndOfDoc_;
+};
+
 #include       debug-opt.def
 
 flag = {
@@ -152,7 +167,7 @@ flag = {
     descrip   = "output private password";
     doc = <<-  _EndOfDoc_
 	Encrypt generated files containing private data with the specified
-	password and the DES-CBC algorithm.
+	password and the cipher selected with -C/--cipher.
 	_EndOfDoc_;
 };
 

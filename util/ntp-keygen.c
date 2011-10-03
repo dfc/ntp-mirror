@@ -173,29 +173,73 @@ char	filename[MAXFILENAME + 1]; /* file name */
 u_int	modulus = PLEN;		/* prime modulus size (bits) */
 u_int	modulus2 = ILEN;	/* identity modulus size (bits) */
 long	d0, d1, d2, d3;		/* callback counters */
+const EVP_CIPHER * cipher = NULL;
 #endif	/* AUTOKEY */
 
 #ifdef SYS_WINNT
 BOOL init_randfile();
 
 /*
- * Don't try to follow symbolic links.  Assumes link == file.
+ * Don't try to follow symbolic links on Windows.  Assume link == file.
  */
 int
-readlink(char *link, char *file, int len)
+readlink(
+	char *	link,
+	char *	file,
+	int	len
+	)
 {
 	return strlen(file);
 }
 
 /*
- * Don't try to create a symbolic link for now.
- * Just move the file to the name you need.
+ * Don't try to create symbolic links on Windows, that is supported on
+ * Vista and later only.  Instead, if CreateHardLink is available (XP
+ * and later), hardlink the linkname to the original filename.  On
+ * earlier systems, user must rename file to match expected link for
+ * ntpd to find it.  To allow building a ntp-keygen.exe which loads on
+ * Windows pre-XP, runtime link to CreateHardLinkA().
  */
 int
-symlink(char *filename, char *linkname) {
-	DeleteFile(linkname);
-	MoveFile(filename, linkname);
-	return (0);
+symlink(
+	char *	filename,
+	char*	linkname
+	)
+{
+	typedef BOOL (WINAPI *PCREATEHARDLINKA)(
+		__in LPCSTR	lpFileName,
+		__in LPCSTR	lpExistingFileName,
+		__reserved LPSECURITY_ATTRIBUTES lpSA
+		);
+	static PCREATEHARDLINKA pCreateHardLinkA;
+	static int		tried;
+	HMODULE			hDll;
+	FARPROC			pfn;
+	int			link_created;
+	int			saved_errno;
+
+	if (!tried) {
+		tried = TRUE;
+		hDll = LoadLibrary("kernel32.dll");
+		pfn = GetProcAddress(hDll, "CreateHardLinkA");
+		pCreateHardLinkA = (PCREATEHARDLINKA)pfn;
+	}
+
+	if (NULL == pCreateHardLinkA) {
+		errno = ENOSYS;
+		return -1;
+	}
+
+	link_created = (*pCreateHardLinkA)(linkname, filename, NULL);
+	
+	if (link_created)
+		return 0;
+
+	saved_errno = GetLastError();	/* yes we play loose */
+	mfprintf(stderr, "Create hard link %s to %s failed: %m\n",
+		 linkname, filename);
+	errno = saved_errno;
+	return -1;
 }
 
 void
@@ -265,6 +309,7 @@ main(
 	const EVP_MD *ectx;	/* EVP digest */
 	char	pathbuf[MAXFILENAME + 1];
 	const char *scheme = NULL; /* digest/signature scheme */
+	const char *ciphername = NULL; /* to encrypt priv. key */
 	char	*exten = NULL;	/* private extension */
 	char	*grpkey = NULL;	/* identity extension */
 	int	nid;		/* X509 digest/signature scheme */
@@ -355,6 +400,9 @@ main(
 	if (HAVE_OPT( CERTIFICATE ))
 		scheme = OPT_ARG( CERTIFICATE );
 
+	if (HAVE_OPT( CIPHER ))
+		ciphername = OPT_ARG( CIPHER );
+
 	if (HAVE_OPT( SUBJECT_NAME ))
 		hostname = estrdup(OPT_ARG( SUBJECT_NAME ));
 
@@ -423,7 +471,18 @@ main(
 		    "Random seed file %s %u bytes\n", pathbuf, temp);
 		RAND_add(&epoch, sizeof(epoch), 4.0);
 	}
+#endif	/* AUTOKEY */
 
+	/*
+	 * Create new unencrypted MD5 keys file if requested. If this
+	 * option is selected, ignore all other options.
+	 */
+	if (md5key) {
+		gen_md5("md5");
+		exit (0);
+	}
+
+#ifdef AUTOKEY
 	/*
 	 * Load previous certificate if available.
 	 */
@@ -478,20 +537,16 @@ main(
 	}
 	if (scheme == NULL)
 		scheme = "RSA-MD5";
+	if (ciphername == NULL)
+		ciphername = "des-ede3-cbc";
+	cipher = EVP_get_cipherbyname(ciphername);
+	if (cipher == NULL) {
+		fprintf(stderr, "Unknown cipher %s\n", ciphername);
+		exit(-1);
+	}
 	fprintf(stderr, "Using host %s group %s\n", hostname,
 	    groupname);
-#endif	/* AUTOKEY */
 
-	/*
-	 * Create new unencrypted MD5 keys file if requested. If this
-	 * option is selected, ignore all other options.
-	 */
-	if (md5key) {
-		gen_md5("md5");
-		exit (0);
-	}
-
-#ifdef AUTOKEY
 	/*
 	 * Create a new encrypted RSA host key file if requested;
 	 * otherwise, look for an existing host key file. If not found,
@@ -513,7 +568,7 @@ main(
 	}
 	if (pkey_host == NULL) {
 		fprintf(stderr, "Generating host key fails\n");
-		exit (-1);
+		exit(-1);
 	}
 
 	/*
@@ -576,9 +631,9 @@ main(
 		BN_copy(rsa->q, BN_value_one());
 		pkey = EVP_PKEY_new();
 		EVP_PKEY_assign_RSA(pkey, rsa);
-		PEM_write_PrivateKey(stdout, pkey, NULL, NULL, 0, NULL,
-		    NULL);
-		fclose(stdout);
+		PEM_write_PKCS8PrivateKey(stdout, pkey, NULL, NULL, 0,
+		    NULL, NULL);
+		fflush(stdout);
 		if (debug)
 			RSA_print_fp(stderr, rsa, 0);
 	}
@@ -598,9 +653,9 @@ main(
 		rsa = pkey_gqkey->pkey.rsa;
 		pkey = EVP_PKEY_new();
 		EVP_PKEY_assign_RSA(pkey, rsa);
-		PEM_write_PrivateKey(stdout, pkey,
-		    EVP_des_cbc(), NULL, 0, NULL, passwd2);
-		fclose(stdout);
+		PEM_write_PKCS8PrivateKey(stdout, pkey, cipher, NULL, 0,
+		    NULL, passwd2);
+		fflush(stdout);
 		if (debug)
 			RSA_print_fp(stderr, rsa, 0);
 	}
@@ -640,9 +695,9 @@ main(
 		BN_copy(dsa->priv_key, BN_value_one());
 		pkey = EVP_PKEY_new();
 		EVP_PKEY_assign_DSA(pkey, dsa);
-		PEM_write_PrivateKey(stdout, pkey, NULL, NULL, 0, NULL,
-		    NULL);
-		fclose(stdout);
+		PEM_write_PKCS8PrivateKey(stdout, pkey, NULL, NULL, 0,
+		    NULL, NULL);
+		fflush(stdout);
 		if (debug)
 			DSA_print_fp(stderr, dsa, 0);
 	}
@@ -662,9 +717,9 @@ main(
 		dsa = pkey_iffkey->pkey.dsa;
 		pkey = EVP_PKEY_new();
 		EVP_PKEY_assign_DSA(pkey, dsa);
-		PEM_write_PrivateKey(stdout, pkey, EVP_des_cbc(), NULL,
-		    0, NULL, passwd2);
-		fclose(stdout);
+		PEM_write_PKCS8PrivateKey(stdout, pkey, cipher, NULL, 0,
+		    NULL, passwd2);
+		fflush(stdout);
 		if (debug)
 			DSA_print_fp(stderr, dsa, 0);
 	}
@@ -700,9 +755,9 @@ main(
 		fprintf(stdout, "# %s\n# %s\n", filename,
 		    ctime(&epoch));
 		pkey = pkey_mvpar[2];
-		PEM_write_PrivateKey(stdout, pkey, NULL, NULL, 0, NULL,
-		    NULL);
-		fclose(stdout);
+		PEM_write_PKCS8PrivateKey(stdout, pkey, NULL, NULL, 0,
+		    NULL, NULL);
+		fflush(stdout);
 		if (debug)
 			DSA_print_fp(stderr, pkey->pkey.dsa, 0);
 	}
@@ -718,9 +773,9 @@ main(
 		fprintf(stdout, "# %s\n# %s\n", filename,
 		    ctime(&epoch));
 		pkey = pkey_mvpar[1];
-		PEM_write_PrivateKey(stdout, pkey, EVP_des_cbc(), NULL,
-		    0, NULL, passwd2);
-		fclose(stdout);
+		PEM_write_PKCS8PrivateKey(stdout, pkey, cipher, NULL, 0,
+		    NULL, passwd2);
+		fflush(stdout);
 		if (debug)
 			DSA_print_fp(stderr, pkey->pkey.dsa, 0);
 	}
@@ -738,7 +793,7 @@ main(
 	}
 	x509(pkey_sign, ectx, grpkey, exten, certname);
 #endif	/* AUTOKEY */
-	exit (0);
+	exit(0);
 }
 
 
@@ -929,7 +984,7 @@ gen_rsa(
 		str = fheader("RSAhost", id, hostname);
 	pkey = EVP_PKEY_new();
 	EVP_PKEY_assign_RSA(pkey, rsa);
-	PEM_write_PrivateKey(str, pkey, EVP_des_cbc(), NULL, 0, NULL,
+	PEM_write_PKCS8PrivateKey(str, pkey, cipher, NULL, 0, NULL,
 	    passwd1);
 	fclose(str);
 	if (debug)
@@ -984,7 +1039,7 @@ gen_dsa(
 	str = fheader("DSAsign", id, hostname);
 	pkey = EVP_PKEY_new();
 	EVP_PKEY_assign_DSA(pkey, dsa);
-	PEM_write_PrivateKey(str, pkey, EVP_des_cbc(), NULL, 0, NULL,
+	PEM_write_PKCS8PrivateKey(str, pkey, cipher, NULL, 0, NULL,
 	    passwd1);
 	fclose(str);
 	if (debug)
@@ -1151,7 +1206,7 @@ gen_iffkey(
 	str = fheader("IFFkey", id, groupname);
 	pkey = EVP_PKEY_new();
 	EVP_PKEY_assign_DSA(pkey, dsa);
-	PEM_write_PrivateKey(str, pkey, EVP_des_cbc(), NULL, 0, NULL,
+	PEM_write_PKCS8PrivateKey(str, pkey, cipher, NULL, 0, NULL,
 	    passwd1);
 	fclose(str);
 	if (debug)
@@ -1348,7 +1403,7 @@ gen_gqkey(
 	str = fheader("GQkey", id, groupname);
 	pkey = EVP_PKEY_new();
 	EVP_PKEY_assign_RSA(pkey, rsa);
-	PEM_write_PrivateKey(str, pkey, EVP_des_cbc(), NULL, 0, NULL,
+	PEM_write_PKCS8PrivateKey(str, pkey, cipher, NULL, 0, NULL,
 	    passwd1);
 	fclose(str);
 	if (debug)
@@ -1750,7 +1805,7 @@ gen_mvkey(
 	BN_copy(dsa->pub_key, b);
 	pkey = EVP_PKEY_new();
 	EVP_PKEY_assign_DSA(pkey, dsa);
-	PEM_write_PrivateKey(str, pkey, EVP_des_cbc(), NULL, 0, NULL,
+	PEM_write_PKCS8PrivateKey(str, pkey, cipher, NULL, 0, NULL,
 	    passwd1);
 	evpars[i++] = pkey;
 	if (debug)
@@ -1776,7 +1831,7 @@ gen_mvkey(
 	dsa2->pub_key = BN_dup(ghat);
 	pkey1 = EVP_PKEY_new();
 	EVP_PKEY_assign_DSA(pkey1, dsa2);
-	PEM_write_PrivateKey(str, pkey1, EVP_des_cbc(), NULL, 0, NULL,
+	PEM_write_PKCS8PrivateKey(str, pkey1, cipher, NULL, 0, NULL,
 	    passwd1);
 	evpars[i++] = pkey1;
 	if (debug)
@@ -1801,7 +1856,7 @@ gen_mvkey(
 		sdsa->pub_key = BN_dup(xhat[j]);
 		pkey1 = EVP_PKEY_new();
 		EVP_PKEY_set1_DSA(pkey1, sdsa);
-		PEM_write_PrivateKey(str, pkey1, EVP_des_cbc(), NULL, 0,
+		PEM_write_PKCS8PrivateKey(str, pkey1, cipher, NULL, 0,
 		    NULL, passwd1);
 		evpars[i++] = pkey1;
 		if (debug)
@@ -1854,8 +1909,8 @@ gen_mvkey(
  */
 int
 x509	(
-	EVP_PKEY *pkey,		/* generic signature algorithm */
-	const EVP_MD *md,	/* generic digest algorithm */
+	EVP_PKEY *pkey,		/* signing key */
+	const EVP_MD *md,	/* signature/digest scheme */
 	char	*gqpub,		/* identity extension (hex string) */
 	char	*exten,		/* private cert extension */
 	char	*name		/* subject/issuer name */
@@ -1888,12 +1943,12 @@ x509	(
 	X509_time_adj(X509_get_notAfter(cert), lifetime * DAY, &epoch);
 	subj = X509_get_subject_name(cert);
 	X509_NAME_add_entry_by_txt(subj, "commonName", MBSTRING_ASC,
-	    (unsigned char *) name, strlen(name), -1, 0);
+	    (u_char *)name, strlen(name), -1, 0);
 	subj = X509_get_issuer_name(cert);
 	X509_NAME_add_entry_by_txt(subj, "commonName", MBSTRING_ASC,
-	    (unsigned char *) name, strlen(name), -1, 0);
+	    (u_char *)name, strlen(name), -1, 0);
 	if (!X509_set_pubkey(cert, pkey)) {
-		fprintf(stderr, "Assign key fails\n%s\n",
+		fprintf(stderr, "Assign certificate signing key fails\n%s\n",
 		    ERR_error_string(ERR_get_error(), NULL));
 		X509_free(cert);
 		return (0);

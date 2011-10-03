@@ -1,3 +1,284 @@
+ChangeSet@1.2695, 2011-10-03 05:00:26+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P218
+  TAG: NTP_4_2_7P218
+
+  ChangeLog@1.1049 +1 -0
+    NTP_4_2_7P218
+
+  ntpd/ntpd-opts.c@1.223 +3 -3
+    NTP_4_2_7P218
+
+  ntpd/ntpd-opts.h@1.223 +3 -3
+    NTP_4_2_7P218
+
+  ntpd/ntpd-opts.texi@1.221 +2 -2
+    NTP_4_2_7P218
+
+  ntpd/ntpd.1ntpdman@1.34 +2 -2
+    NTP_4_2_7P218
+
+  ntpd/ntpd.1ntpdmdoc@1.34 +2 -2
+    NTP_4_2_7P218
+
+  ntpd/ntpd.man.in@1.34 +2 -2
+    NTP_4_2_7P218
+
+  ntpd/ntpd.mdoc.in@1.34 +2 -2
+    NTP_4_2_7P218
+
+  ntpdc/ntpdc-opts.c@1.218 +3 -3
+    NTP_4_2_7P218
+
+  ntpdc/ntpdc-opts.h@1.218 +3 -3
+    NTP_4_2_7P218
+
+  ntpdc/ntpdc-opts.texi@1.218 +2 -2
+    NTP_4_2_7P218
+
+  ntpdc/ntpdc.1ntpdcman@1.34 +2 -2
+    NTP_4_2_7P218
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.34 +2 -2
+    NTP_4_2_7P218
+
+  ntpdc/ntpdc.html@1.46 +2 -2
+    NTP_4_2_7P218
+
+  ntpdc/ntpdc.man.in@1.34 +2 -2
+    NTP_4_2_7P218
+
+  ntpdc/ntpdc.mdoc.in@1.34 +2 -2
+    NTP_4_2_7P218
+
+  ntpq/ntpq-opts.c@1.220 +3 -3
+    NTP_4_2_7P218
+
+  ntpq/ntpq-opts.h@1.220 +3 -3
+    NTP_4_2_7P218
+
+  ntpq/ntpq-opts.texi@1.220 +2 -2
+    NTP_4_2_7P218
+
+  ntpq/ntpq.1ntpqman@1.34 +2 -2
+    NTP_4_2_7P218
+
+  ntpq/ntpq.1ntpqmdoc@1.34 +2 -2
+    NTP_4_2_7P218
+
+  ntpq/ntpq.man.in@1.34 +2 -2
+    NTP_4_2_7P218
+
+  ntpq/ntpq.mdoc.in@1.34 +2 -2
+    NTP_4_2_7P218
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.220 +3 -3
+    NTP_4_2_7P218
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.220 +3 -3
+    NTP_4_2_7P218
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.220 +2 -2
+    NTP_4_2_7P218
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.34 +2 -2
+    NTP_4_2_7P218
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.34 +2 -2
+    NTP_4_2_7P218
+
+  ntpsnmpd/ntpsnmpd.man.in@1.34 +2 -2
+    NTP_4_2_7P218
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.34 +2 -2
+    NTP_4_2_7P218
+
+  packageinfo.sh@1.221 +1 -1
+    NTP_4_2_7P218
+
+  scripts/ntp-wait-opts.texi@1.38 +1 -1
+    NTP_4_2_7P218
+
+  scripts/ntp-wait.1ntp-waitman@1.34 +2 -2
+    NTP_4_2_7P218
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.34 +2 -2
+    NTP_4_2_7P218
+
+  scripts/ntp-wait.html@1.38 +1 -1
+    NTP_4_2_7P218
+
+  scripts/ntp-wait.man.in@1.34 +2 -2
+    NTP_4_2_7P218
+
+  scripts/ntp-wait.mdoc.in@1.34 +2 -2
+    NTP_4_2_7P218
+
+  sntp/sntp-opts.c@1.216 +3 -3
+    NTP_4_2_7P218
+
+  sntp/sntp-opts.h@1.216 +3 -3
+    NTP_4_2_7P218
+
+  sntp/sntp-opts.texi@1.216 +2 -2
+    NTP_4_2_7P218
+
+  sntp/sntp.1sntpman@1.36 +2 -2
+    NTP_4_2_7P218
+
+  sntp/sntp.1sntpmdoc@1.36 +2 -2
+    NTP_4_2_7P218
+
+  sntp/sntp.html@1.216 +2 -2
+    NTP_4_2_7P218
+
+  sntp/sntp.man.in@1.36 +2 -2
+    NTP_4_2_7P218
+
+  sntp/sntp.mdoc.in@1.36 +2 -2
+    NTP_4_2_7P218
+
+  util/ntp-keygen-opts.c@1.220 +3 -3
+    NTP_4_2_7P218
+
+  util/ntp-keygen-opts.h@1.220 +3 -3
+    NTP_4_2_7P218
+
+  util/ntp-keygen-opts.texi@1.221 +22 -3
+    NTP_4_2_7P218
+
+  util/ntp-keygen.1ntp-keygenman@1.34 +11 -3
+    NTP_4_2_7P218
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.34 +10 -3
+    NTP_4_2_7P218
+
+  util/ntp-keygen.man.in@1.34 +11 -3
+    NTP_4_2_7P218
+
+  util/ntp-keygen.mdoc.in@1.34 +10 -3
+    NTP_4_2_7P218
+
+ChangeSet@1.2694, 2011-10-02 19:41:17-04:00, stenn@deacon.udel.edu
+  typo
+
+  util/ntp-keygen-opts.def@1.19 +1 -1
+    typo
+
+ChangeSet@1.2692, 2011-10-02 22:12:47+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 2019] Allow selection of cipher for private key files.
+  ntp-keygen private key cipher default now triple-key triple DES CBC.
+  ntp-keygen on Windows XP and later systems will now create links
+    expected by ntpd.  They are hardlinks on Windows, soft on POSIX.
+
+  ChangeLog@1.1047 +4 -0
+    [Bug 2019] Allow selection of cipher for private key files.
+    ntp-keygen private key cipher default now triple-key triple DES CBC.
+    ntp-keygen on Windows XP and later systems will now create links
+      expected by ntpd.  They are hardlinks on Windows, soft on POSIX.
+    
+
+  util/ntp-keygen-opts.c@1.219 +68 -38
+    [Bug 2019] add -c/--cipher
+
+  util/ntp-keygen-opts.def@1.18 +1 -1
+    Minor correction.
+
+  util/ntp-keygen-opts.h@1.219 +32 -25
+    [Bug 2019] add -c/--cipher
+
+  util/ntp-keygen.c@1.86 +81 -38
+    Change multiple fclose(stdout) to fflush(stdout).
+    Generate ntp-keygen (hard) links correctly on Windows XP and later.
+    Use PEM_write_PKCS8PrivateKey() in place of deprecated predecessor.
+      Existing clients going back to at least 2002 can use the new format
+      with no changes to deployed code.
+    
+
+ChangeSet@1.2689.1.2, 2011-10-02 18:09:07-04:00, stenn@deacon.udel.edu
+  Documentation updates from Dave Mills
+
+  html/history.html@1.1 +74 -0
+    BitKeeper file /deacon/backroom/ntp-dev/html/history.html
+
+  html/history.html@1.0 +0 -0
+
+ChangeSet@1.2689.1.1, 2011-10-02 17:43:54-04:00, stenn@deacon.udel.edu
+  Documentation updates from Dave Mills
+
+  ChangeLog@1.1045.1.1 +1 -0
+    Documentation updates from Dave Mills
+
+  html/authentic.html@1.7 +10 -10
+    Documentation updates from Dave Mills
+
+  html/keygen.html@1.30 +2 -3
+    Documentation updates from Dave Mills
+
+  html/release.html@1.41 +2 -1
+    Documentation updates from Dave Mills
+
+ChangeSet@1.2691, 2011-10-02 19:14:22+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 2019] Allow selection of cipher for private key files.
+  Change default cipher from DES CBC to triple-key triple DES CBC.
+
+  util/ntp-keygen-opts.def@1.17 +15 -0
+    Add -C/--cipher option to ntp-keygen for [Bug 2019]
+
+  util/ntp-keygen.c@1.85 +20 -8
+    [Bug 2019] Allow selection of cipher for private key files.
+    Change default cipher from DES CBC to triple-key triple DES CBC.
+
+ChangeSet@1.2690, 2011-10-02 08:47:56+00:00, davehart@shiny.ad.hartbrothers.com
+  ntp-keygen -M is intended to ignore all other defaults and
+    options, so do not attempt to open existing Autokey host certificate
+    before generating symmetric keys and terminating.
+  Restore IFF, MV, and GQ identity parameter filename convention to
+    ntpkey_<scheme>par_<group/host> in ntpd, matching ntp-keygen.
+  Change some error logging to syslog to ignore logconfig mask, such
+    as reporting PPSAPI failure in NMEA and WWVB refclocks.
+  Conditionalize NMEA serial open message under clockevent.
+  Send all peer variables to trappers in report_event().
+
+  ChangeLog@1.1046 +9 -0
+    ntp-keygen -M is intended to ignore all other defaults and
+      options, so do not attempt to open existing Autokey host certificate
+      before generating symmetric keys and terminating.
+    Restore IFF, MV, and GQ identity parameter filename convention to
+      ntpkey_<scheme>par_<group/host> in ntpd, matching ntp-keygen.
+    Change some error logging to syslog to ignore logconfig mask, such
+      as reporting PPSAPI failure in NMEA and WWVB refclocks.
+    Conditionalize NMEA serial open message under clockevent.
+    Send all peer variables to trappers in report_event().
+    
+
+  include/ntp_syslog.h@1.8 +8 -1
+    Provide LOGIF(CLOCKINFO, (LOG_INFO, "msyslog %s", "args"))
+    as alternative to
+    NLOG(NLOG_CLOCKINFO)
+        msyslog(LOG_INFO, "msyslog %s", args);
+
+  ntpd/ntp_control.c@1.171 +6 -21
+    Send all peer variables to trappers, as intended.
+
+  ntpd/ntp_crypto.c@1.159 +37 -27
+    Restore IFF, MV, and GQ identity parameter filename convention to
+    ntpkey_<scheme>par_<group/host> in ntpd, matching ntp-keygen.
+
+  ntpd/ntp_loopfilter.c@1.166 +1 -1
+    Fix spelling in comment.
+
+  ntpd/refclock_nmea.c@1.63 +32 -34
+    Make failure and GPS time syslog output ignore logconfig.
+    Conditionalize serial output syslog under clockevent.
+
+  ntpd/refclock_wwvb.c@1.32 +10 -11
+    Report PPSAPI failure to log regardless of logconfig.
+
+  util/ntp-keygen.c@1.84 +11 -11
+    ntp-keygen -M is intended to ignore all other defaults and
+      options, so do not attempt to open existing Autokey host certificate
+      before generating symmetric keys and terminating.
+
 ChangeSet@1.2689, 2011-09-29 08:06:54+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P217
   TAG: NTP_4_2_7P217
