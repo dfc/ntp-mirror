@@ -1,3 +1,231 @@
+ChangeSet@1.2701, 2011-10-05 09:03:57+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P220
+  TAG: NTP_4_2_7P220
+
+  ChangeLog@1.1054 +1 -0
+    NTP_4_2_7P220
+
+  ntpd/ntpd-opts.c@1.225 +3 -3
+    NTP_4_2_7P220
+
+  ntpd/ntpd-opts.h@1.225 +3 -3
+    NTP_4_2_7P220
+
+  ntpd/ntpd-opts.texi@1.223 +2 -2
+    NTP_4_2_7P220
+
+  ntpd/ntpd.1ntpdman@1.36 +2 -2
+    NTP_4_2_7P220
+
+  ntpd/ntpd.1ntpdmdoc@1.36 +2 -2
+    NTP_4_2_7P220
+
+  ntpd/ntpd.man.in@1.36 +2 -2
+    NTP_4_2_7P220
+
+  ntpd/ntpd.mdoc.in@1.36 +2 -2
+    NTP_4_2_7P220
+
+  ntpdc/ntpdc-opts.c@1.220 +3 -3
+    NTP_4_2_7P220
+
+  ntpdc/ntpdc-opts.h@1.220 +3 -3
+    NTP_4_2_7P220
+
+  ntpdc/ntpdc-opts.texi@1.220 +2 -2
+    NTP_4_2_7P220
+
+  ntpdc/ntpdc.1ntpdcman@1.36 +2 -2
+    NTP_4_2_7P220
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.36 +2 -2
+    NTP_4_2_7P220
+
+  ntpdc/ntpdc.html@1.48 +2 -2
+    NTP_4_2_7P220
+
+  ntpdc/ntpdc.man.in@1.36 +2 -2
+    NTP_4_2_7P220
+
+  ntpdc/ntpdc.mdoc.in@1.36 +2 -2
+    NTP_4_2_7P220
+
+  ntpq/ntpq-opts.c@1.222 +3 -3
+    NTP_4_2_7P220
+
+  ntpq/ntpq-opts.h@1.222 +3 -3
+    NTP_4_2_7P220
+
+  ntpq/ntpq-opts.texi@1.222 +2 -2
+    NTP_4_2_7P220
+
+  ntpq/ntpq.1ntpqman@1.36 +2 -2
+    NTP_4_2_7P220
+
+  ntpq/ntpq.1ntpqmdoc@1.36 +2 -2
+    NTP_4_2_7P220
+
+  ntpq/ntpq.man.in@1.36 +2 -2
+    NTP_4_2_7P220
+
+  ntpq/ntpq.mdoc.in@1.36 +2 -2
+    NTP_4_2_7P220
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.222 +3 -3
+    NTP_4_2_7P220
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.222 +3 -3
+    NTP_4_2_7P220
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.222 +2 -2
+    NTP_4_2_7P220
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.36 +2 -2
+    NTP_4_2_7P220
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.36 +2 -2
+    NTP_4_2_7P220
+
+  ntpsnmpd/ntpsnmpd.man.in@1.36 +2 -2
+    NTP_4_2_7P220
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.36 +2 -2
+    NTP_4_2_7P220
+
+  packageinfo.sh@1.223 +1 -1
+    NTP_4_2_7P220
+
+  scripts/ntp-wait-opts.texi@1.40 +1 -1
+    NTP_4_2_7P220
+
+  scripts/ntp-wait.1ntp-waitman@1.36 +2 -2
+    NTP_4_2_7P220
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.36 +2 -2
+    NTP_4_2_7P220
+
+  scripts/ntp-wait.html@1.40 +1 -1
+    NTP_4_2_7P220
+
+  scripts/ntp-wait.man.in@1.36 +2 -2
+    NTP_4_2_7P220
+
+  scripts/ntp-wait.mdoc.in@1.36 +2 -2
+    NTP_4_2_7P220
+
+  sntp/sntp-opts.c@1.218 +3 -3
+    NTP_4_2_7P220
+
+  sntp/sntp-opts.h@1.218 +3 -3
+    NTP_4_2_7P220
+
+  sntp/sntp-opts.texi@1.218 +2 -2
+    NTP_4_2_7P220
+
+  sntp/sntp.1sntpman@1.38 +2 -2
+    NTP_4_2_7P220
+
+  sntp/sntp.1sntpmdoc@1.38 +2 -2
+    NTP_4_2_7P220
+
+  sntp/sntp.html@1.218 +2 -2
+    NTP_4_2_7P220
+
+  sntp/sntp.man.in@1.38 +2 -2
+    NTP_4_2_7P220
+
+  sntp/sntp.mdoc.in@1.38 +2 -2
+    NTP_4_2_7P220
+
+  util/ntp-keygen-opts.c@1.222 +3 -3
+    NTP_4_2_7P220
+
+  util/ntp-keygen-opts.h@1.222 +3 -3
+    NTP_4_2_7P220
+
+  util/ntp-keygen-opts.texi@1.223 +2 -2
+    NTP_4_2_7P220
+
+  util/ntp-keygen.1ntp-keygenman@1.36 +2 -2
+    NTP_4_2_7P220
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.36 +2 -2
+    NTP_4_2_7P220
+
+  util/ntp-keygen.man.in@1.36 +2 -2
+    NTP_4_2_7P220
+
+  util/ntp-keygen.mdoc.in@1.36 +2 -2
+    NTP_4_2_7P220
+
+ChangeSet@1.2700, 2011-10-05 08:34:46+00:00, davehart@shiny.ad.hartbrothers.com
+  Keep add_full_recv_buffer() and SetEvent(WaitableIoEventHandle) 1:1
+
+  include/ntp_refclock.h@1.32 +4 -0
+    Keep add_full_recv_buffer() and SetEvent(WaitableIoEventHandle) 1:1
+
+  ntpd/ntp_refclock.c@1.109 +3 -1
+    Keep add_full_recv_buffer() and SetEvent(WaitableIoEventHandle) 1:1
+
+  ntpd/refclock_parse.c@1.61 +3 -0
+    Keep add_full_recv_buffer() and SetEvent(WaitableIoEventHandle) 1:1
+
+  ports/winnt/ntpd/ntp_iocompletionport.c@1.60 +2 -4
+    Keep add_full_recv_buffer() and SetEvent(WaitableIoEventHandle) 1:1
+
+ChangeSet@1.2699, 2011-10-05 07:49:15+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 1945] mbg_gps166.h use of _TM_DEFINED conflicts with MS VC.
+  [Bug 1946] parse_start uses open; does not work on Windows.
+  [Bug 1947] Porting parse-based Wharton refclock driver to Windows.
+
+  ChangeLog@1.1053 +3 -0
+    [Bug 1945] mbg_gps166.h use of _TM_DEFINED conflicts with MS VC.
+    [Bug 1946] parse_start uses open; does not work on Windows.
+    [Bug 1947] Porting parse-based Wharton refclock driver to Windows.
+
+  include/mbg_gps166.h@1.11 +2 -2
+    [Bug 1945] mbg_gps166.h use of _TM_DEFINED conflicts with MS VC.
+
+  include/ntp_refclock.h@1.31 +4 -1
+    [Bug 1947] Porting parse-based Wharton refclock driver to Windows.
+
+  libparse/clk_wharton.c@1.8 +1 -1
+    [Bug 1947] Porting parse-based Wharton refclock driver to Windows.
+
+  ntpd/ntp_io.c@1.359 +15 -22
+    [Bug 1947] Porting parse-based Wharton refclock driver to Windows.
+
+  ntpd/ntp_refclock.c@1.108 +33 -0
+    [Bug 1947] Porting parse-based Wharton refclock driver to Windows.
+
+  ntpd/refclock_parse.c@1.60 +13 -10
+    [Bug 1946] parse_start uses open; does not work on Windows.
+    [Bug 1947] Porting parse-based Wharton refclock driver to Windows.
+
+  ports/winnt/include/config.h@1.102 +14 -1
+    [Bug 1947] Porting parse-based Wharton refclock driver to Windows.
+
+  ports/winnt/ntpd/ntp_iocompletionport.c@1.59 +17 -15
+    [Bug 1947] Porting parse-based Wharton refclock driver to Windows.
+
+  ports/winnt/vs2005/ntpd.vcproj@1.16 +12 -240
+    [Bug 1947] Porting parse-based Wharton refclock driver to Windows.
+
+  ports/winnt/vs2008/ntpd/ntpd.vcproj@1.41 +4 -336
+    [Bug 1947] Porting parse-based Wharton refclock driver to Windows.
+
+ChangeSet@1.2698, 2011-10-04 21:34:33+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 2024] Remove unused system event code EVNT_CLKHOP.
+
+  ChangeLog@1.1052 +1 -0
+    [Bug 2024] Remove unused system event code EVNT_CLKHOP.
+
+  include/ntp.h@1.197 +0 -1
+    [Bug 2024] Remove unused system event code EVNT_CLKHOP.
+
+  libntp/statestr.c@1.25 +0 -1
+    [Bug 2024] Remove unused system event code EVNT_CLKHOP.
+
 ChangeSet@1.2697, 2011-10-04 10:54:55+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P219
   TAG: NTP_4_2_7P219
