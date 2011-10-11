@@ -1,3 +1,183 @@
+ChangeSet@1.2708, 2011-10-11 09:09:30+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P222
+  TAG: NTP_4_2_7P222
+
+  ChangeLog@1.1060 +1 -0
+    NTP_4_2_7P222
+
+  ntpd/ntpd-opts.c@1.227 +3 -3
+    NTP_4_2_7P222
+
+  ntpd/ntpd-opts.h@1.227 +3 -3
+    NTP_4_2_7P222
+
+  ntpd/ntpd-opts.texi@1.225 +2 -2
+    NTP_4_2_7P222
+
+  ntpd/ntpd.1ntpdman@1.38 +2 -2
+    NTP_4_2_7P222
+
+  ntpd/ntpd.1ntpdmdoc@1.38 +2 -2
+    NTP_4_2_7P222
+
+  ntpd/ntpd.man.in@1.38 +2 -2
+    NTP_4_2_7P222
+
+  ntpd/ntpd.mdoc.in@1.38 +2 -2
+    NTP_4_2_7P222
+
+  ntpdc/ntpdc-opts.c@1.222 +3 -3
+    NTP_4_2_7P222
+
+  ntpdc/ntpdc-opts.h@1.222 +3 -3
+    NTP_4_2_7P222
+
+  ntpdc/ntpdc-opts.texi@1.222 +2 -2
+    NTP_4_2_7P222
+
+  ntpdc/ntpdc.1ntpdcman@1.38 +2 -2
+    NTP_4_2_7P222
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.38 +2 -2
+    NTP_4_2_7P222
+
+  ntpdc/ntpdc.html@1.50 +2 -2
+    NTP_4_2_7P222
+
+  ntpdc/ntpdc.man.in@1.38 +2 -2
+    NTP_4_2_7P222
+
+  ntpdc/ntpdc.mdoc.in@1.38 +2 -2
+    NTP_4_2_7P222
+
+  ntpq/ntpq-opts.c@1.224 +3 -3
+    NTP_4_2_7P222
+
+  ntpq/ntpq-opts.h@1.224 +3 -3
+    NTP_4_2_7P222
+
+  ntpq/ntpq-opts.texi@1.224 +2 -2
+    NTP_4_2_7P222
+
+  ntpq/ntpq.1ntpqman@1.38 +2 -2
+    NTP_4_2_7P222
+
+  ntpq/ntpq.1ntpqmdoc@1.38 +2 -2
+    NTP_4_2_7P222
+
+  ntpq/ntpq.man.in@1.38 +2 -2
+    NTP_4_2_7P222
+
+  ntpq/ntpq.mdoc.in@1.38 +2 -2
+    NTP_4_2_7P222
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.224 +3 -3
+    NTP_4_2_7P222
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.224 +3 -3
+    NTP_4_2_7P222
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.224 +2 -2
+    NTP_4_2_7P222
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.38 +2 -2
+    NTP_4_2_7P222
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.38 +2 -2
+    NTP_4_2_7P222
+
+  ntpsnmpd/ntpsnmpd.man.in@1.38 +2 -2
+    NTP_4_2_7P222
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.38 +2 -2
+    NTP_4_2_7P222
+
+  packageinfo.sh@1.225 +1 -1
+    NTP_4_2_7P222
+
+  scripts/ntp-wait-opts.texi@1.42 +14 -2
+    NTP_4_2_7P222
+
+  scripts/ntp-wait.1ntp-waitman@1.38 +2 -2
+    NTP_4_2_7P222
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.38 +2 -2
+    NTP_4_2_7P222
+
+  scripts/ntp-wait.html@1.42 +14 -2
+    NTP_4_2_7P222
+
+  scripts/ntp-wait.man.in@1.38 +2 -2
+    NTP_4_2_7P222
+
+  scripts/ntp-wait.mdoc.in@1.38 +2 -2
+    NTP_4_2_7P222
+
+  sntp/sntp-opts.c@1.220 +3 -3
+    NTP_4_2_7P222
+
+  sntp/sntp-opts.h@1.220 +3 -3
+    NTP_4_2_7P222
+
+  sntp/sntp-opts.texi@1.220 +2 -2
+    NTP_4_2_7P222
+
+  sntp/sntp.1sntpman@1.40 +2 -2
+    NTP_4_2_7P222
+
+  sntp/sntp.1sntpmdoc@1.40 +2 -2
+    NTP_4_2_7P222
+
+  sntp/sntp.html@1.220 +2 -2
+    NTP_4_2_7P222
+
+  sntp/sntp.man.in@1.40 +2 -2
+    NTP_4_2_7P222
+
+  sntp/sntp.mdoc.in@1.40 +2 -2
+    NTP_4_2_7P222
+
+  util/ntp-keygen-opts.c@1.224 +3 -3
+    NTP_4_2_7P222
+
+  util/ntp-keygen-opts.h@1.224 +3 -3
+    NTP_4_2_7P222
+
+  util/ntp-keygen-opts.texi@1.225 +2 -2
+    NTP_4_2_7P222
+
+  util/ntp-keygen.1ntp-keygenman@1.38 +2 -2
+    NTP_4_2_7P222
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.38 +2 -2
+    NTP_4_2_7P222
+
+  util/ntp-keygen.man.in@1.38 +2 -2
+    NTP_4_2_7P222
+
+  util/ntp-keygen.mdoc.in@1.38 +2 -2
+    NTP_4_2_7P222
+
+ChangeSet@1.2707, 2011-10-11 02:04:21+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 2029] "make check" clutters syslog.
+  Log signal description along with number on ntpd exit.
+
+  ChangeLog@1.1059 +2 -0
+    [Bug 2029] "make check" clutters syslog.
+    Log signal description along with number on ntpd exit.
+    
+
+  configure.ac@1.537 +1 -4
+    Log signal description along with number on ntpd exit.
+
+  include/ntpd.h@1.169 +1 -1
+    cosmetic only
+
+  ntpd/ntpd.c@1.129 +26 -47
+    [Bug 2029] "make check" clutters syslog.
+    Log signal description along with number on ntpd exit.
+    
+
 ChangeSet@1.2706, 2011-10-10 05:59:08+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P221
   TAG: NTP_4_2_7P221
