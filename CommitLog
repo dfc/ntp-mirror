@@ -1,3 +1,194 @@
+ChangeSet@1.2713, 2011-10-14 10:39:22+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P224
+  TAG: NTP_4_2_7P224
+
+  ChangeLog@1.1064 +1 -0
+    NTP_4_2_7P224
+
+  ntpd/ntpd-opts.c@1.229 +3 -3
+    NTP_4_2_7P224
+
+  ntpd/ntpd-opts.h@1.229 +3 -3
+    NTP_4_2_7P224
+
+  ntpd/ntpd-opts.texi@1.227 +2 -2
+    NTP_4_2_7P224
+
+  ntpd/ntpd.1ntpdman@1.40 +2 -2
+    NTP_4_2_7P224
+
+  ntpd/ntpd.1ntpdmdoc@1.40 +2 -2
+    NTP_4_2_7P224
+
+  ntpd/ntpd.man.in@1.40 +2 -2
+    NTP_4_2_7P224
+
+  ntpd/ntpd.mdoc.in@1.40 +2 -2
+    NTP_4_2_7P224
+
+  ntpdc/ntpdc-opts.c@1.224 +3 -3
+    NTP_4_2_7P224
+
+  ntpdc/ntpdc-opts.h@1.224 +3 -3
+    NTP_4_2_7P224
+
+  ntpdc/ntpdc-opts.texi@1.224 +2 -2
+    NTP_4_2_7P224
+
+  ntpdc/ntpdc.1ntpdcman@1.40 +2 -2
+    NTP_4_2_7P224
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.40 +2 -2
+    NTP_4_2_7P224
+
+  ntpdc/ntpdc.html@1.52 +2 -2
+    NTP_4_2_7P224
+
+  ntpdc/ntpdc.man.in@1.40 +2 -2
+    NTP_4_2_7P224
+
+  ntpdc/ntpdc.mdoc.in@1.40 +2 -2
+    NTP_4_2_7P224
+
+  ntpq/ntpq-opts.c@1.226 +3 -3
+    NTP_4_2_7P224
+
+  ntpq/ntpq-opts.h@1.226 +3 -3
+    NTP_4_2_7P224
+
+  ntpq/ntpq-opts.texi@1.226 +2 -2
+    NTP_4_2_7P224
+
+  ntpq/ntpq.1ntpqman@1.40 +2 -2
+    NTP_4_2_7P224
+
+  ntpq/ntpq.1ntpqmdoc@1.40 +2 -2
+    NTP_4_2_7P224
+
+  ntpq/ntpq.man.in@1.40 +2 -2
+    NTP_4_2_7P224
+
+  ntpq/ntpq.mdoc.in@1.40 +2 -2
+    NTP_4_2_7P224
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.226 +3 -3
+    NTP_4_2_7P224
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.226 +3 -3
+    NTP_4_2_7P224
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.226 +2 -2
+    NTP_4_2_7P224
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.40 +2 -2
+    NTP_4_2_7P224
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.40 +2 -2
+    NTP_4_2_7P224
+
+  ntpsnmpd/ntpsnmpd.man.in@1.40 +2 -2
+    NTP_4_2_7P224
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.40 +2 -2
+    NTP_4_2_7P224
+
+  packageinfo.sh@1.227 +1 -1
+    NTP_4_2_7P224
+
+  scripts/ntp-wait-opts.texi@1.44 +1 -1
+    NTP_4_2_7P224
+
+  scripts/ntp-wait.1ntp-waitman@1.40 +2 -2
+    NTP_4_2_7P224
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.40 +2 -2
+    NTP_4_2_7P224
+
+  scripts/ntp-wait.html@1.44 +1 -1
+    NTP_4_2_7P224
+
+  scripts/ntp-wait.man.in@1.40 +2 -2
+    NTP_4_2_7P224
+
+  scripts/ntp-wait.mdoc.in@1.40 +2 -2
+    NTP_4_2_7P224
+
+  sntp/sntp-opts.c@1.222 +3 -3
+    NTP_4_2_7P224
+
+  sntp/sntp-opts.h@1.222 +3 -3
+    NTP_4_2_7P224
+
+  sntp/sntp-opts.texi@1.222 +2 -2
+    NTP_4_2_7P224
+
+  sntp/sntp.1sntpman@1.42 +2 -2
+    NTP_4_2_7P224
+
+  sntp/sntp.1sntpmdoc@1.42 +2 -2
+    NTP_4_2_7P224
+
+  sntp/sntp.html@1.222 +2 -2
+    NTP_4_2_7P224
+
+  sntp/sntp.man.in@1.42 +2 -2
+    NTP_4_2_7P224
+
+  sntp/sntp.mdoc.in@1.42 +2 -2
+    NTP_4_2_7P224
+
+  util/ntp-keygen-opts.c@1.226 +3 -3
+    NTP_4_2_7P224
+
+  util/ntp-keygen-opts.h@1.226 +3 -3
+    NTP_4_2_7P224
+
+  util/ntp-keygen-opts.texi@1.227 +2 -2
+    NTP_4_2_7P224
+
+  util/ntp-keygen.1ntp-keygenman@1.40 +2 -2
+    NTP_4_2_7P224
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.40 +2 -2
+    NTP_4_2_7P224
+
+  util/ntp-keygen.man.in@1.40 +2 -2
+    NTP_4_2_7P224
+
+  util/ntp-keygen.mdoc.in@1.40 +2 -2
+    NTP_4_2_7P224
+
+ChangeSet@1.2712, 2011-10-13 18:13:58+00:00, davehart@shiny.ad.hartbrothers.com
+  ntpq mrulist shows intermediate counts every five seconds while
+    retrieving list, and allows Ctrl-C interruption of the retrieval,
+    showing the incomplete list as retrieved.  Reduce delay between
+    successive mrulist retrieval queries from 30 to 5 msec.  Do not
+    give up mrulist retrieval when a single query times out.
+
+  ChangeLog@1.1063 +5 -0
+    ntpq mrulist shows intermediate counts every five seconds while
+      retrieving list, and allows Ctrl-C interruption of the retrieval,
+      showing the incomplete list as retrieved.  Reduce delay between
+      successive mrulist retrieval queries from 30 to 5 msec.  Do not
+      give up mrulist retrieval when a single query times out.
+
+  include/ntp_stdlib.h@1.66 +3 -0
+    provide portable POSIX/Win32 Ctrl-C interception.
+
+  libntp/syssignal.c@1.15 +79 -0
+    provide portable POSIX/Win32 Ctrl-C interception.
+
+  ntpq/ntpq-subs.c@1.89 +53 -8
+    ntpq mrulist shows intermediate counts every five seconds while
+      retrieving list, and allows Ctrl-C interruption of the retrieval,
+      showing the incomplete list as retrieved.  Reduce delay between
+      successive mrulist retrieval queries from 30 to 5 msec.  Do not
+      give up mrulist retrieval when a single query times out.
+
+  ntpq/ntpq.h@1.24 +5 -0
+    ntpq mrulist shows intermediate counts every five seconds while
+      retrieving list.
+
 ChangeSet@1.2711, 2011-10-12 10:41:01+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P223
   TAG: NTP_4_2_7P223
