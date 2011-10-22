@@ -1,3 +1,208 @@
+ChangeSet@1.2723, 2011-10-22 10:34:17+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P227
+  TAG: NTP_4_2_7P227
+
+  ChangeLog@1.1074 +1 -0
+    NTP_4_2_7P227
+
+  ntpd/ntpd-opts.c@1.232 +3 -3
+    NTP_4_2_7P227
+
+  ntpd/ntpd-opts.h@1.232 +3 -3
+    NTP_4_2_7P227
+
+  ntpd/ntpd-opts.texi@1.230 +2 -2
+    NTP_4_2_7P227
+
+  ntpd/ntpd.1ntpdman@1.43 +2 -2
+    NTP_4_2_7P227
+
+  ntpd/ntpd.1ntpdmdoc@1.43 +2 -2
+    NTP_4_2_7P227
+
+  ntpd/ntpd.man.in@1.43 +2 -2
+    NTP_4_2_7P227
+
+  ntpd/ntpd.mdoc.in@1.43 +2 -2
+    NTP_4_2_7P227
+
+  ntpdc/ntpdc-opts.c@1.227 +3 -3
+    NTP_4_2_7P227
+
+  ntpdc/ntpdc-opts.h@1.227 +3 -3
+    NTP_4_2_7P227
+
+  ntpdc/ntpdc-opts.texi@1.227 +2 -2
+    NTP_4_2_7P227
+
+  ntpdc/ntpdc.1ntpdcman@1.43 +2 -2
+    NTP_4_2_7P227
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.43 +2 -2
+    NTP_4_2_7P227
+
+  ntpdc/ntpdc.html@1.55 +2 -2
+    NTP_4_2_7P227
+
+  ntpdc/ntpdc.man.in@1.43 +2 -2
+    NTP_4_2_7P227
+
+  ntpdc/ntpdc.mdoc.in@1.43 +2 -2
+    NTP_4_2_7P227
+
+  ntpq/ntpq-opts.c@1.229 +3 -3
+    NTP_4_2_7P227
+
+  ntpq/ntpq-opts.h@1.229 +3 -3
+    NTP_4_2_7P227
+
+  ntpq/ntpq-opts.texi@1.229 +2 -2
+    NTP_4_2_7P227
+
+  ntpq/ntpq.1ntpqman@1.43 +2 -2
+    NTP_4_2_7P227
+
+  ntpq/ntpq.1ntpqmdoc@1.43 +2 -2
+    NTP_4_2_7P227
+
+  ntpq/ntpq.man.in@1.43 +2 -2
+    NTP_4_2_7P227
+
+  ntpq/ntpq.mdoc.in@1.43 +2 -2
+    NTP_4_2_7P227
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.229 +3 -3
+    NTP_4_2_7P227
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.229 +3 -3
+    NTP_4_2_7P227
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.229 +2 -2
+    NTP_4_2_7P227
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.43 +2 -2
+    NTP_4_2_7P227
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.43 +2 -2
+    NTP_4_2_7P227
+
+  ntpsnmpd/ntpsnmpd.man.in@1.43 +2 -2
+    NTP_4_2_7P227
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.43 +2 -2
+    NTP_4_2_7P227
+
+  packageinfo.sh@1.230 +1 -1
+    NTP_4_2_7P227
+
+  scripts/ntp-wait-opts.texi@1.47 +1 -1
+    NTP_4_2_7P227
+
+  scripts/ntp-wait.1ntp-waitman@1.43 +2 -2
+    NTP_4_2_7P227
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.43 +2 -2
+    NTP_4_2_7P227
+
+  scripts/ntp-wait.html@1.47 +1 -1
+    NTP_4_2_7P227
+
+  scripts/ntp-wait.man.in@1.43 +2 -2
+    NTP_4_2_7P227
+
+  scripts/ntp-wait.mdoc.in@1.43 +2 -2
+    NTP_4_2_7P227
+
+  sntp/sntp-opts.c@1.225 +3 -3
+    NTP_4_2_7P227
+
+  sntp/sntp-opts.h@1.225 +3 -3
+    NTP_4_2_7P227
+
+  sntp/sntp-opts.texi@1.225 +2 -2
+    NTP_4_2_7P227
+
+  sntp/sntp.1sntpman@1.45 +2 -2
+    NTP_4_2_7P227
+
+  sntp/sntp.1sntpmdoc@1.45 +2 -2
+    NTP_4_2_7P227
+
+  sntp/sntp.html@1.225 +2 -2
+    NTP_4_2_7P227
+
+  sntp/sntp.man.in@1.45 +2 -2
+    NTP_4_2_7P227
+
+  sntp/sntp.mdoc.in@1.45 +2 -2
+    NTP_4_2_7P227
+
+  util/ntp-keygen-opts.c@1.229 +3 -3
+    NTP_4_2_7P227
+
+  util/ntp-keygen-opts.h@1.229 +3 -3
+    NTP_4_2_7P227
+
+  util/ntp-keygen-opts.texi@1.230 +2 -2
+    NTP_4_2_7P227
+
+  util/ntp-keygen.1ntp-keygenman@1.43 +2 -2
+    NTP_4_2_7P227
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.43 +2 -2
+    NTP_4_2_7P227
+
+  util/ntp-keygen.man.in@1.43 +2 -2
+    NTP_4_2_7P227
+
+  util/ntp-keygen.mdoc.in@1.43 +2 -2
+    NTP_4_2_7P227
+
+ChangeSet@1.2722, 2011-10-21 19:10:02+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 2036] gcc 2.95.3 preprocessor can't nest #ifdef in macro args.
+  A number of compiler warnings eliminated.
+
+  ChangeLog@1.1073 +2 -0
+    [Bug 2036] gcc 2.95.3 preprocessor can't nest #ifdef in macro args.
+    A number of compiler warnings eliminated.
+
+  lib/isc/include/isc/file.h@1.5 +2 -2
+    A number of compiler warnings eliminated.
+
+  lib/isc/include/isc/util.h@1.5 +1 -1
+    A number of compiler warnings eliminated.
+
+  lib/isc/inet_ntop.c@1.12 +2 -1
+    A number of compiler warnings eliminated.
+
+  lib/isc/inet_pton.c@1.6 +1 -0
+    A number of compiler warnings eliminated.
+
+  lib/isc/result.c@1.2 +13 -13
+    A number of compiler warnings eliminated.
+
+  lib/isc/unix/file.c@1.4 +7 -7
+    A number of compiler warnings eliminated.
+
+  libntp/msyslog.c@1.48 +6 -2
+    A number of compiler warnings eliminated.
+
+  libntp/snprintf.c@1.12 +0 -2
+    A number of compiler warnings eliminated.
+
+  ntpd/ntp_io.c@1.361 +6 -1
+    A number of compiler warnings eliminated.
+
+  ntpd/refclock_nmea.c@1.64 +2 -0
+    A number of compiler warnings eliminated.
+
+  ntpd/refclock_parse.c@1.62 +9 -11
+    [Bug 2036] gcc 2.95.3 preprocessor can't nest #ifdef in macro args.
+    A number of compiler warnings eliminated.
+
+  ntpd/refclock_wwvb.c@1.33 +2 -0
+    A number of compiler warnings eliminated.
+
 ChangeSet@1.2721, 2011-10-21 18:40:55+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P226
   TAG: NTP_4_2_7P226
