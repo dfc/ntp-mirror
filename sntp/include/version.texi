@@ -1,3 +1,3 @@
-@set UPDATED 26 October 2011
-@set EDITION 4.2.7p229
-@set VERSION 4.2.7p229
+@set UPDATED 01 November 2011
+@set EDITION 4.2.7p230
+@set VERSION 4.2.7p230

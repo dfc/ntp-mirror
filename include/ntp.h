@@ -700,6 +700,7 @@ struct pkt {
 #define	PROTO_BEACON		25
 #define	PROTO_ORPHAN		26
 #define	PROTO_ORPHWAIT		27
+#define	PROTO_MODE7		28
 
 /*
  * Configuration items for the loop filter
@@ -880,4 +881,6 @@ struct endpoint {
 
 /* ntpq -c mrulist rows per request limit in ntpd */
 #define MRU_ROW_LIMIT	256
+/* similar datagrams per response limit for ntpd */
+#define MRU_FRAGS_LIMIT	128
 #endif /* NTP_H */

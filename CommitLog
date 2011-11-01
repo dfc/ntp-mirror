@@ -1,3 +1,302 @@
+ChangeSet@1.2686, 2011-11-01 10:56:11+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P230
+  TAG: NTP_4_2_7P230
+
+  ChangeLog@1.1042 +1 -0
+    NTP_4_2_7P230
+
+  ntpd/ntpd-opts.c@1.235 +3 -3
+    NTP_4_2_7P230
+
+  ntpd/ntpd-opts.h@1.235 +3 -3
+    NTP_4_2_7P230
+
+  ntpd/ntpd-opts.texi@1.233 +2 -2
+    NTP_4_2_7P230
+
+  ntpd/ntpd.1ntpdman@1.46 +2 -2
+    NTP_4_2_7P230
+
+  ntpd/ntpd.1ntpdmdoc@1.46 +2 -2
+    NTP_4_2_7P230
+
+  ntpd/ntpd.man.in@1.46 +2 -2
+    NTP_4_2_7P230
+
+  ntpd/ntpd.mdoc.in@1.46 +2 -2
+    NTP_4_2_7P230
+
+  ntpdc/ntpdc-opts.c@1.230 +3 -3
+    NTP_4_2_7P230
+
+  ntpdc/ntpdc-opts.h@1.230 +3 -3
+    NTP_4_2_7P230
+
+  ntpdc/ntpdc-opts.texi@1.230 +2 -2
+    NTP_4_2_7P230
+
+  ntpdc/ntpdc.1ntpdcman@1.46 +2 -2
+    NTP_4_2_7P230
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.46 +2 -2
+    NTP_4_2_7P230
+
+  ntpdc/ntpdc.html@1.58 +2 -2
+    NTP_4_2_7P230
+
+  ntpdc/ntpdc.man.in@1.46 +2 -2
+    NTP_4_2_7P230
+
+  ntpdc/ntpdc.mdoc.in@1.46 +2 -2
+    NTP_4_2_7P230
+
+  ntpq/ntpq-opts.c@1.232 +3 -3
+    NTP_4_2_7P230
+
+  ntpq/ntpq-opts.h@1.232 +3 -3
+    NTP_4_2_7P230
+
+  ntpq/ntpq-opts.texi@1.232 +2 -2
+    NTP_4_2_7P230
+
+  ntpq/ntpq.1ntpqman@1.46 +2 -2
+    NTP_4_2_7P230
+
+  ntpq/ntpq.1ntpqmdoc@1.46 +2 -2
+    NTP_4_2_7P230
+
+  ntpq/ntpq.man.in@1.46 +2 -2
+    NTP_4_2_7P230
+
+  ntpq/ntpq.mdoc.in@1.46 +2 -2
+    NTP_4_2_7P230
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.232 +3 -3
+    NTP_4_2_7P230
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.232 +3 -3
+    NTP_4_2_7P230
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.232 +2 -2
+    NTP_4_2_7P230
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.46 +2 -2
+    NTP_4_2_7P230
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.46 +2 -2
+    NTP_4_2_7P230
+
+  ntpsnmpd/ntpsnmpd.man.in@1.46 +2 -2
+    NTP_4_2_7P230
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.46 +2 -2
+    NTP_4_2_7P230
+
+  packageinfo.sh@1.233 +1 -1
+    NTP_4_2_7P230
+
+  scripts/ntp-wait-opts.texi@1.50 +1 -1
+    NTP_4_2_7P230
+
+  scripts/ntp-wait.1ntp-waitman@1.46 +2 -2
+    NTP_4_2_7P230
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.46 +2 -2
+    NTP_4_2_7P230
+
+  scripts/ntp-wait.html@1.50 +1 -1
+    NTP_4_2_7P230
+
+  scripts/ntp-wait.man.in@1.46 +2 -2
+    NTP_4_2_7P230
+
+  scripts/ntp-wait.mdoc.in@1.46 +2 -2
+    NTP_4_2_7P230
+
+  sntp/sntp-opts.c@1.228 +3 -3
+    NTP_4_2_7P230
+
+  sntp/sntp-opts.h@1.228 +3 -3
+    NTP_4_2_7P230
+
+  sntp/sntp-opts.texi@1.228 +2 -2
+    NTP_4_2_7P230
+
+  sntp/sntp.1sntpman@1.48 +2 -2
+    NTP_4_2_7P230
+
+  sntp/sntp.1sntpmdoc@1.48 +2 -2
+    NTP_4_2_7P230
+
+  sntp/sntp.html@1.228 +2 -2
+    NTP_4_2_7P230
+
+  sntp/sntp.man.in@1.48 +2 -2
+    NTP_4_2_7P230
+
+  sntp/sntp.mdoc.in@1.48 +2 -2
+    NTP_4_2_7P230
+
+  util/ntp-keygen-opts.c@1.232 +3 -3
+    NTP_4_2_7P230
+
+  util/ntp-keygen-opts.h@1.232 +3 -3
+    NTP_4_2_7P230
+
+  util/ntp-keygen-opts.texi@1.233 +2 -2
+    NTP_4_2_7P230
+
+  util/ntp-keygen.1ntp-keygenman@1.46 +2 -2
+    NTP_4_2_7P230
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.46 +2 -2
+    NTP_4_2_7P230
+
+  util/ntp-keygen.man.in@1.46 +2 -2
+    NTP_4_2_7P230
+
+  util/ntp-keygen.mdoc.in@1.46 +2 -2
+    NTP_4_2_7P230
+
+ChangeSet@1.2685, 2011-10-31 15:38:17-04:00, stenn@deacon.udel.edu
+  Documentation updates from Dave Mills
+
+  ChangeLog@1.1041 +1 -0
+    Documentation updates from Dave Mills
+
+  html/cluster.html@1.6 +7 -7
+    Documentation updates from Dave Mills
+
+  html/discipline.html@1.6 +2 -2
+    Documentation updates from Dave Mills
+
+  html/discover.html@1.4 +14 -12
+    Documentation updates from Dave Mills
+
+  html/drivers/driver22.html@1.20 +3 -3
+    Documentation updates from Dave Mills
+
+  html/filter.html@1.4 +4 -4
+    Documentation updates from Dave Mills
+
+  html/prefer.html@1.27 +12 -11
+    Documentation updates from Dave Mills
+
+  html/rate.html@1.9 +22 -17
+    Documentation updates from Dave Mills
+
+  html/select.html@1.4 +5 -4
+    Documentation updates from Dave Mills
+
+  html/warp.html@1.19 +21 -20
+    Documentation updates from Dave Mills
+
+ChangeSet@1.2684, 2011-10-31 14:54:08+00:00, davehart@shiny.ad.hartbrothers.com
+  use rand() twice to get about 32 bits of noise for mrulist.
+
+  ntpd/ntp_control.c@1.173 +3 -3
+    use rand() twice to get about 32 bits of noise for mrulist.
+
+ChangeSet@1.2683, 2011-10-31 04:40:04+00:00, davehart@shiny.ad.hartbrothers.com
+  Disable mode 7 (ntpdc) query processing in ntpd by default.  ntpq is
+    believed to provide all functionality ntpdc did, and uses a less-
+    fragile protocol that's safer and easier to maintain.  If you do find
+    some management via ntpdc is needed, you can use "enable mode7" in the
+    ntpd configuration.
+
+  ChangeLog@1.1040 +5 -0
+    Disable mode 7 (ntpdc) query processing in ntpd by default.  ntpq is
+      believed to provide all functionality ntpdc did, and uses a less-
+      fragile protocol that's safer and easier to maintain.  If you do find
+      some management via ntpdc is needed, you can use "enable mode7" in the
+      ntpd configuration.
+
+  include/ntp.h@1.199 +1 -0
+    Disable mode 7 (ntpdc) query processing in ntpd by default.  ntpq is
+      believed to provide all functionality ntpdc did, and uses a less-
+      fragile protocol that's safer and easier to maintain.  If you do find
+      some management via ntpdc is needed, you can use "enable mode7" in the
+      ntpd configuration.
+
+  ntpd/complete.conf@1.20 +1 -1
+    Disable mode 7 (ntpdc) query processing in ntpd by default.  ntpq is
+      believed to provide all functionality ntpdc did, and uses a less-
+      fragile protocol that's safer and easier to maintain.  If you do find
+      some management via ntpdc is needed, you can use "enable mode7" in the
+      ntpd configuration.
+
+  ntpd/keyword-gen-utd@1.15 +1 -1
+    derived from ntp_keyword.h
+
+  ntpd/keyword-gen.c@1.20 +1 -0
+    Disable mode 7 (ntpdc) query processing in ntpd by default.  ntpq is
+      believed to provide all functionality ntpdc did, and uses a less-
+      fragile protocol that's safer and easier to maintain.  If you do find
+      some management via ntpdc is needed, you can use "enable mode7" in the
+      ntpd configuration.
+
+  ntpd/ntp_config.c@1.294 +5 -1
+    Disable mode 7 (ntpdc) query processing in ntpd by default.  ntpq is
+      believed to provide all functionality ntpdc did, and uses a less-
+      fragile protocol that's safer and easier to maintain.  If you do find
+      some management via ntpdc is needed, you can use "enable mode7" in the
+      ntpd configuration.
+
+  ntpd/ntp_keyword.h@1.17 +545 -543
+    keyword-gen output
+
+  ntpd/ntp_parser.c@1.77 +831 -823
+    Bison output
+
+  ntpd/ntp_parser.h@1.44 +175 -173
+    Bison output
+
+  ntpd/ntp_parser.y@1.71 +14 -2
+    Disable mode 7 (ntpdc) query processing in ntpd by default.  ntpq is
+      believed to provide all functionality ntpdc did, and uses a less-
+      fragile protocol that's safer and easier to maintain.  If you do find
+      some management via ntpdc is needed, you can use "enable mode7" in the
+      ntpd configuration.
+
+  ntpd/ntp_proto.c@1.324 +7 -2
+    Disable mode 7 (ntpdc) query processing in ntpd by default.  ntpq is
+      believed to provide all functionality ntpdc did, and uses a less-
+      fragile protocol that's safer and easier to maintain.  If you do find
+      some management via ntpdc is needed, you can use "enable mode7" in the
+      ntpd configuration.
+
+ChangeSet@1.2682, 2011-10-31 03:52:23+00:00, davehart@shiny.ad.hartbrothers.com
+  Directly limit the number of datagrams in a mrulist response, rather
+    than limiting the number of entries returned to indirectly limit the
+    datagram count.
+
+  ChangeLog@1.1039 +3 -0
+    Directly limit the number of datagrams in a mrulist response, rather
+      than limiting the number of entries returned to indirectly limit the
+      datagram count.
+
+  include/ntp.h@1.198 +2 -0
+    Directly limit the number of datagrams in a mrulist response, rather
+      than limiting the number of entries returned to indirectly limit the
+      datagram count.
+
+  libntp/ntp_random.c@1.9 +8 -5
+    Seed rand() while seeding ntp_random(), so that code needing low-grade
+      random numbers can use the former.
+
+  ntpd/ntp_control.c@1.172 +53 -28
+    Directly limit the number of datagrams in a mrulist response, rather
+      than limiting the number of entries returned to indirectly limit the
+      datagram count.
+
+  ntpq/ntpq-subs.c@1.91 +53 -21
+    Directly limit the number of datagrams in a mrulist response, rather
+      than limiting the number of entries returned to indirectly limit the
+      datagram count.
+
+  util/ntp-keygen.c@1.87 +1 -1
+    Use a better random seed for ntp-keygen (tv_sec + tv_usec)
+
 ChangeSet@1.2681, 2011-10-26 00:22:53+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P229
   TAG: NTP_4_2_7P229
