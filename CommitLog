@@ -1,3 +1,218 @@
+ChangeSet@1.2690, 2011-11-03 19:28:33+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P231
+  TAG: NTP_4_2_7P231
+
+  ChangeLog@1.1046 +1 -0
+    NTP_4_2_7P231
+
+  ntpd/ntpd-opts.c@1.236 +3 -3
+    NTP_4_2_7P231
+
+  ntpd/ntpd-opts.h@1.236 +3 -3
+    NTP_4_2_7P231
+
+  ntpd/ntpd-opts.texi@1.234 +2 -2
+    NTP_4_2_7P231
+
+  ntpd/ntpd.1ntpdman@1.47 +2 -2
+    NTP_4_2_7P231
+
+  ntpd/ntpd.1ntpdmdoc@1.47 +2 -2
+    NTP_4_2_7P231
+
+  ntpd/ntpd.man.in@1.47 +2 -2
+    NTP_4_2_7P231
+
+  ntpd/ntpd.mdoc.in@1.47 +2 -2
+    NTP_4_2_7P231
+
+  ntpdc/ntpdc-opts.c@1.231 +3 -3
+    NTP_4_2_7P231
+
+  ntpdc/ntpdc-opts.h@1.231 +3 -3
+    NTP_4_2_7P231
+
+  ntpdc/ntpdc-opts.texi@1.231 +2 -2
+    NTP_4_2_7P231
+
+  ntpdc/ntpdc.1ntpdcman@1.47 +2 -2
+    NTP_4_2_7P231
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.47 +2 -2
+    NTP_4_2_7P231
+
+  ntpdc/ntpdc.html@1.59 +2 -2
+    NTP_4_2_7P231
+
+  ntpdc/ntpdc.man.in@1.47 +2 -2
+    NTP_4_2_7P231
+
+  ntpdc/ntpdc.mdoc.in@1.47 +2 -2
+    NTP_4_2_7P231
+
+  ntpq/ntpq-opts.c@1.233 +3 -3
+    NTP_4_2_7P231
+
+  ntpq/ntpq-opts.h@1.233 +3 -3
+    NTP_4_2_7P231
+
+  ntpq/ntpq-opts.texi@1.233 +2 -2
+    NTP_4_2_7P231
+
+  ntpq/ntpq.1ntpqman@1.47 +2 -2
+    NTP_4_2_7P231
+
+  ntpq/ntpq.1ntpqmdoc@1.47 +2 -2
+    NTP_4_2_7P231
+
+  ntpq/ntpq.man.in@1.47 +2 -2
+    NTP_4_2_7P231
+
+  ntpq/ntpq.mdoc.in@1.47 +2 -2
+    NTP_4_2_7P231
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.233 +3 -3
+    NTP_4_2_7P231
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.233 +3 -3
+    NTP_4_2_7P231
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.233 +2 -2
+    NTP_4_2_7P231
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.47 +2 -2
+    NTP_4_2_7P231
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.47 +2 -2
+    NTP_4_2_7P231
+
+  ntpsnmpd/ntpsnmpd.man.in@1.47 +2 -2
+    NTP_4_2_7P231
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.47 +2 -2
+    NTP_4_2_7P231
+
+  packageinfo.sh@1.234 +1 -1
+    NTP_4_2_7P231
+
+  scripts/ntp-wait-opts.texi@1.51 +1 -1
+    NTP_4_2_7P231
+
+  scripts/ntp-wait.1ntp-waitman@1.47 +2 -2
+    NTP_4_2_7P231
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.47 +2 -2
+    NTP_4_2_7P231
+
+  scripts/ntp-wait.html@1.51 +1 -1
+    NTP_4_2_7P231
+
+  scripts/ntp-wait.man.in@1.47 +2 -2
+    NTP_4_2_7P231
+
+  scripts/ntp-wait.mdoc.in@1.47 +2 -2
+    NTP_4_2_7P231
+
+  sntp/sntp-opts.c@1.229 +3 -3
+    NTP_4_2_7P231
+
+  sntp/sntp-opts.h@1.229 +3 -3
+    NTP_4_2_7P231
+
+  sntp/sntp-opts.texi@1.229 +2 -2
+    NTP_4_2_7P231
+
+  sntp/sntp.1sntpman@1.49 +2 -2
+    NTP_4_2_7P231
+
+  sntp/sntp.1sntpmdoc@1.49 +2 -2
+    NTP_4_2_7P231
+
+  sntp/sntp.html@1.229 +2 -2
+    NTP_4_2_7P231
+
+  sntp/sntp.man.in@1.49 +2 -2
+    NTP_4_2_7P231
+
+  sntp/sntp.mdoc.in@1.49 +2 -2
+    NTP_4_2_7P231
+
+  util/ntp-keygen-opts.c@1.233 +3 -3
+    NTP_4_2_7P231
+
+  util/ntp-keygen-opts.h@1.233 +3 -3
+    NTP_4_2_7P231
+
+  util/ntp-keygen-opts.texi@1.234 +2 -2
+    NTP_4_2_7P231
+
+  util/ntp-keygen.1ntp-keygenman@1.47 +2 -2
+    NTP_4_2_7P231
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.47 +2 -2
+    NTP_4_2_7P231
+
+  util/ntp-keygen.man.in@1.47 +2 -2
+    NTP_4_2_7P231
+
+  util/ntp-keygen.mdoc.in@1.47 +2 -2
+    NTP_4_2_7P231
+
+ChangeSet@1.2689, 2011-11-03 10:46:39+00:00, davehart@shiny.ad.hartbrothers.com
+  Add ntpq reslist command to query access restrictions, similar to
+    ntpdc's reslist.
+
+  ChangeLog@1.1045 +2 -0
+    Add ntpq reslist command to query access restrictions, similar to
+      ntpdc's reslist.
+
+  include/ntp_control.h@1.58 +9 -1
+    Add ntpq reslist command to query access restrictions, similar to
+      ntpdc's reslist.
+
+  include/ntp_stdlib.h@1.67 +3 -0
+    Add ntpq reslist command to query access restrictions, similar to
+      ntpdc's reslist.
+
+  libntp/decodenetnum.c@1.16 +1 -0
+    Add ntpq reslist command to query access restrictions, similar to
+      ntpdc's reslist.
+
+  libntp/socktoa.c@1.18 +26 -6
+    Add ntpq reslist command to query access restrictions, similar to
+      ntpdc's reslist.
+
+  libntp/statestr.c@1.27 +49 -0
+    Add ntpq reslist command to query access restrictions, similar to
+      ntpdc's reslist.
+
+  ntpd/ntp_control.c@1.174 +263 -66
+    Add ntpq reslist command to query access restrictions, similar to
+      ntpdc's reslist.
+
+  ntpq/ntpq-subs.c@1.92 +218 -13
+    Add ntpq reslist command to query access restrictions, similar to
+      ntpdc's reslist.
+
+  ntpq/ntpq.c@1.141 +40 -31
+    Add ntpq reslist command to query access restrictions, similar to
+      ntpdc's reslist.
+
+ChangeSet@1.2688, 2011-11-03 05:55:39+00:00, stenn@psp-fb1.ntp.org
+  cleanup
+
+  ChangeLog@1.1044 +1 -1
+    cleanup
+
+ChangeSet@1.2687, 2011-11-02 22:39:22+01:00, jnperlin@hydra.localnet
+  [Bug 1940] ignore auth key if hex decoding fails
+
+  ChangeLog@1.1043 +1 -0
+    [Bug 1940] ignore auth key if hex decoding fails
+
+  libntp/authreadkeys.c@1.18 +8 -6
+    [Bug 1940] ignore auth key if hex decoding fails
+
 ChangeSet@1.2686, 2011-11-01 10:56:11+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P230
   TAG: NTP_4_2_7P230
