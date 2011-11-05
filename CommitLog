@@ -1,3 +1,181 @@
+ChangeSet@1.2693, 2011-11-05 10:46:22+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P232
+  TAG: NTP_4_2_7P232
+
+  ChangeLog@1.1049 +1 -0
+    NTP_4_2_7P232
+
+  ntpd/ntpd-opts.c@1.237 +3 -3
+    NTP_4_2_7P232
+
+  ntpd/ntpd-opts.h@1.237 +3 -3
+    NTP_4_2_7P232
+
+  ntpd/ntpd-opts.texi@1.235 +2 -2
+    NTP_4_2_7P232
+
+  ntpd/ntpd.1ntpdman@1.48 +2 -2
+    NTP_4_2_7P232
+
+  ntpd/ntpd.1ntpdmdoc@1.48 +2 -2
+    NTP_4_2_7P232
+
+  ntpd/ntpd.man.in@1.48 +2 -2
+    NTP_4_2_7P232
+
+  ntpd/ntpd.mdoc.in@1.48 +2 -2
+    NTP_4_2_7P232
+
+  ntpdc/ntpdc-opts.c@1.232 +3 -3
+    NTP_4_2_7P232
+
+  ntpdc/ntpdc-opts.h@1.232 +3 -3
+    NTP_4_2_7P232
+
+  ntpdc/ntpdc-opts.texi@1.232 +2 -2
+    NTP_4_2_7P232
+
+  ntpdc/ntpdc.1ntpdcman@1.48 +2 -2
+    NTP_4_2_7P232
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.48 +2 -2
+    NTP_4_2_7P232
+
+  ntpdc/ntpdc.html@1.60 +2 -2
+    NTP_4_2_7P232
+
+  ntpdc/ntpdc.man.in@1.48 +2 -2
+    NTP_4_2_7P232
+
+  ntpdc/ntpdc.mdoc.in@1.48 +2 -2
+    NTP_4_2_7P232
+
+  ntpq/ntpq-opts.c@1.234 +3 -3
+    NTP_4_2_7P232
+
+  ntpq/ntpq-opts.h@1.234 +3 -3
+    NTP_4_2_7P232
+
+  ntpq/ntpq-opts.texi@1.234 +2 -2
+    NTP_4_2_7P232
+
+  ntpq/ntpq.1ntpqman@1.48 +2 -2
+    NTP_4_2_7P232
+
+  ntpq/ntpq.1ntpqmdoc@1.48 +2 -2
+    NTP_4_2_7P232
+
+  ntpq/ntpq.man.in@1.48 +2 -2
+    NTP_4_2_7P232
+
+  ntpq/ntpq.mdoc.in@1.48 +2 -2
+    NTP_4_2_7P232
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.234 +3 -3
+    NTP_4_2_7P232
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.234 +3 -3
+    NTP_4_2_7P232
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.234 +2 -2
+    NTP_4_2_7P232
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.48 +2 -2
+    NTP_4_2_7P232
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.48 +2 -2
+    NTP_4_2_7P232
+
+  ntpsnmpd/ntpsnmpd.man.in@1.48 +2 -2
+    NTP_4_2_7P232
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.48 +2 -2
+    NTP_4_2_7P232
+
+  packageinfo.sh@1.235 +1 -1
+    NTP_4_2_7P232
+
+  scripts/ntp-wait-opts.texi@1.52 +1 -1
+    NTP_4_2_7P232
+
+  scripts/ntp-wait.1ntp-waitman@1.48 +2 -2
+    NTP_4_2_7P232
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.48 +2 -2
+    NTP_4_2_7P232
+
+  scripts/ntp-wait.html@1.52 +1 -1
+    NTP_4_2_7P232
+
+  scripts/ntp-wait.man.in@1.48 +2 -2
+    NTP_4_2_7P232
+
+  scripts/ntp-wait.mdoc.in@1.48 +2 -2
+    NTP_4_2_7P232
+
+  sntp/sntp-opts.c@1.230 +3 -3
+    NTP_4_2_7P232
+
+  sntp/sntp-opts.h@1.230 +3 -3
+    NTP_4_2_7P232
+
+  sntp/sntp-opts.texi@1.230 +2 -2
+    NTP_4_2_7P232
+
+  sntp/sntp.1sntpman@1.50 +2 -2
+    NTP_4_2_7P232
+
+  sntp/sntp.1sntpmdoc@1.50 +2 -2
+    NTP_4_2_7P232
+
+  sntp/sntp.html@1.230 +2 -2
+    NTP_4_2_7P232
+
+  sntp/sntp.man.in@1.50 +2 -2
+    NTP_4_2_7P232
+
+  sntp/sntp.mdoc.in@1.50 +2 -2
+    NTP_4_2_7P232
+
+  util/ntp-keygen-opts.c@1.234 +3 -3
+    NTP_4_2_7P232
+
+  util/ntp-keygen-opts.h@1.234 +3 -3
+    NTP_4_2_7P232
+
+  util/ntp-keygen-opts.texi@1.235 +2 -2
+    NTP_4_2_7P232
+
+  util/ntp-keygen.1ntp-keygenman@1.48 +2 -2
+    NTP_4_2_7P232
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.48 +2 -2
+    NTP_4_2_7P232
+
+  util/ntp-keygen.man.in@1.48 +2 -2
+    NTP_4_2_7P232
+
+  util/ntp-keygen.mdoc.in@1.48 +2 -2
+    NTP_4_2_7P232
+
+ChangeSet@1.2692, 2011-11-05 00:03:53-04:00, stenn@deacon.udel.edu
+  Clean up some bitrotted code in libntp/socket.c
+
+  ChangeLog@1.1048 +1 -0
+    Clean up some bitrotted code in libntp/socket.c
+
+  libntp/socket.c@1.8 +2 -503
+    Clean up some bitrotted code in libntp/socket.c
+
+ChangeSet@1.2691, 2011-11-05 00:01:22-04:00, stenn@deacon.udel.edu
+  Update the NEWS file so we note the default disable of mode 7 requests
+
+  ChangeLog@1.1047 +1 -0
+    Update the NEWS file so we note the default disable of mode 7 requests
+
+  NEWS@1.124 +35 -0
+    Update the NEWS file so we note the default disable of mode 7 requests
+
 ChangeSet@1.2690, 2011-11-03 19:28:33+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P231
   TAG: NTP_4_2_7P231
