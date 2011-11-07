@@ -132,6 +132,7 @@ check_y2k_OBJECTS = check_y2k.$(OBJEXT)
 am__DEPENDENCIES_1 =
 am__DEPENDENCIES_2 = version.o libntpd.a $(am__DEPENDENCIES_1)
 check_y2k_DEPENDENCIES = $(am__DEPENDENCIES_2) ../libntp/libntp.a \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
@@ -139,7 +140,7 @@ am__v_lt_0 = --silent
 keyword_gen_SOURCES = keyword-gen.c
 keyword_gen_OBJECTS = keyword-gen.$(OBJEXT)
 keyword_gen_DEPENDENCIES = ../libntp/libntp.a $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
 am_ntpd_OBJECTS = ntp_config.$(OBJEXT) ntp_io.$(OBJEXT) \
 	ntp_parser.$(OBJEXT) ntp_scanner.$(OBJEXT) ntpd.$(OBJEXT) \
 	ntpd-opts.$(OBJEXT) $(am__objects_1)
@@ -148,6 +149,7 @@ am__DEPENDENCIES_3 = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1)
 ntpd_DEPENDENCIES = $(am__DEPENDENCIES_2) ../libntp/libntp.a \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_3)
 am__objects_2 = ntpdsim-ntp_config.$(OBJEXT) ntpdsim-ntp_io.$(OBJEXT) \
 	ntpdsim-ntp_parser.$(OBJEXT) ntpdsim-ntp_scanner.$(OBJEXT) \
@@ -495,11 +497,11 @@ man_MANS = ntpd.$(NTPD_MS)
 # longer a reason to have ntpdbase-opts.def split off of ntpd-opts.def.
 LDADD_NTPD_COMMON = @LDADD_LIBNTP@ $(LIBOPTS_LDADD) $(PTHREAD_LIBS) \
 	$(LIBM) $(LCRYPTO) $(LSCF)
-ntpd_LDADD = $(LDADD) ../libntp/libntp.a $(LDADD_NTPD_COMMON)
+ntpd_LDADD = $(LDADD) ../libntp/libntp.a $(LDADD_LIBNTP) $(LIBM) $(LDADD_NTPD_COMMON)
 ntpdsim_LDADD = $(LDADD) ../libntp/libntpsim.a $(LDADD_NTPD_COMMON)
 ntpdsim_CPPFLAGS = $(AM_CPPFLAGS) -DSIM
-check_y2k_LDADD = $(LDADD) ../libntp/libntp.a $(LDADD_LIBNTP) $(PTHREAD_LIBS)
-keyword_gen_LDADD = ../libntp/libntp.a $(LDADD_LIBNTP) $(PTHREAD_LIBS)
+check_y2k_LDADD = $(LDADD) ../libntp/libntp.a $(LDADD_LIBNTP) $(LIBM) $(LDADD_LIBNTP) $(PTHREAD_LIBS)
+keyword_gen_LDADD = ../libntp/libntp.a $(LDADD_LIBNTP) $(LIBM) $(PTHREAD_LIBS)
 DISTCLEANFILES = \
 	keyword-gen		\
 	.version		\

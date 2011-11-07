@@ -104,8 +104,8 @@ am_ntpq_OBJECTS = ntpq.$(OBJEXT) ntpq-subs.$(OBJEXT) \
 	ntpq-opts.$(OBJEXT)
 ntpq_OBJECTS = $(am_ntpq_OBJECTS)
 am__DEPENDENCIES_1 =
-ntpq_DEPENDENCIES = version.o $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) ../libntp/libntp.a $(am__DEPENDENCIES_1) \
+ntpq_DEPENDENCIES = version.o $(am__DEPENDENCIES_1) ../libntp/libntp.a \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1)
 AM_V_lt = $(am__v_lt_$(V))
@@ -399,8 +399,9 @@ AM_CFLAGS = $(CFLAGS_NTP)
 AM_CPPFLAGS = $(NTP_INCS) $(LIBOPTS_CFLAGS) $(CPPFLAGS_NTP)
 
 # LDADD might need RESLIB and ADJLIB
-ntpq_LDADD = version.o $(LIBOPTS_LDADD) $(LIBM) ../libntp/libntp.a \
-	$(LDADD_LIBNTP) $(PTHREAD_LIBS) $(EDITLINE_LIBS) $(LCRYPTO)
+ntpq_LDADD = version.o $(LIBOPTS_LDADD) ../libntp/libntp.a \
+	$(LDADD_LIBNTP) $(LIBM) $(PTHREAD_LIBS) $(EDITLINE_LIBS) \
+	$(LCRYPTO)
 noinst_HEADERS = ntpq.h
 noinst_LIBRARIES = libntpq.a
 libntpq_a_CFLAGS = -DNO_MAIN_ALLOWED -DBUILD_AS_LIB

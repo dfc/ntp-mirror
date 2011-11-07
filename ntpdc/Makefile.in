@@ -93,7 +93,8 @@ ntpdc_OBJECTS = $(am_ntpdc_OBJECTS)
 am__DEPENDENCIES_1 =
 ntpdc_DEPENDENCIES = version.o $(am__DEPENDENCIES_1) \
 	../libntp/libntp.a $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1)
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
 am__v_lt_0 = --silent
@@ -395,7 +396,8 @@ AM_CPPFLAGS = $(NTP_INCS) $(LIBOPTS_CFLAGS) $(CPPFLAGS_NTP)
 
 # LDADD might need RESLIB and ADJLIB
 ntpdc_LDADD = version.o $(LIBOPTS_LDADD) ../libntp/libntp.a \
-	$(LDADD_LIBNTP) $(PTHREAD_LIBS) $(EDITLINE_LIBS) $(LCRYPTO)
+	$(LDADD_LIBNTP) $(LIBM) $(PTHREAD_LIBS) $(EDITLINE_LIBS) \
+	$(LCRYPTO)
 # ntpdc-layout doesn't need any additional libraries at all
 ntpdc_layout_LDADD = 
 DISTCLEANFILES = .version version.c config.log $(man_MANS)

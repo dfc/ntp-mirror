@@ -90,7 +90,7 @@ adjtimed_OBJECTS = adjtimed.$(OBJEXT)
 adjtimed_LDADD = $(LDADD)
 am__DEPENDENCIES_1 =
 adjtimed_DEPENDENCIES = ../libntp/libntp.a $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
 am__v_lt_0 = --silent
@@ -354,7 +354,7 @@ BUILT_SOURCES = check-libntp .deps-ver
 CLEANFILES = check-libntp .deps-ver
 AM_CFLAGS = $(CFLAGS_NTP)
 AM_CPPFLAGS = $(NTP_INCS) $(CPPFLAGS_NTP)
-LDADD = ../libntp/libntp.a $(LDADD_LIBNTP) $(PTHREAD_LIBS)
+LDADD = ../libntp/libntp.a $(LDADD_LIBNTP) $(LIBM) $(PTHREAD_LIBS)
 NTP_INCS = -I$(top_srcdir)/include -I$(top_srcdir)/lib/isc/include \
 	-I$(top_srcdir)/lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/include \
 	-I$(top_srcdir)/lib/isc/unix/include

@@ -94,7 +94,7 @@ audio_pcm_OBJECTS = audio-pcm.$(OBJEXT)
 audio_pcm_LDADD = $(LDADD)
 am__DEPENDENCIES_1 =
 audio_pcm_DEPENDENCIES = ../libntp/libntp.a $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
 am__v_lt_0 = --silent
@@ -102,12 +102,12 @@ byteorder_SOURCES = byteorder.c
 byteorder_OBJECTS = byteorder.$(OBJEXT)
 byteorder_LDADD = $(LDADD)
 byteorder_DEPENDENCIES = ../libntp/libntp.a $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
 hist_SOURCES = hist.c
 hist_OBJECTS = hist.$(OBJEXT)
 hist_LDADD = $(LDADD)
 hist_DEPENDENCIES = ../libntp/libntp.a $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
 am_jitter_OBJECTS = jitter.$(OBJEXT)
 jitter_OBJECTS = $(am_jitter_OBJECTS)
 jitter_DEPENDENCIES =
@@ -115,12 +115,12 @@ kern_SOURCES = kern.c
 kern_OBJECTS = kern.$(OBJEXT)
 kern_LDADD = $(LDADD)
 kern_DEPENDENCIES = ../libntp/libntp.a $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
 longsize_SOURCES = longsize.c
 longsize_OBJECTS = longsize.$(OBJEXT)
 longsize_LDADD = $(LDADD)
 longsize_DEPENDENCIES = ../libntp/libntp.a $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
 am_ntp_keygen_OBJECTS = ntp-keygen.$(OBJEXT) ntp-keygen-opts.$(OBJEXT)
 ntp_keygen_OBJECTS = $(am_ntp_keygen_OBJECTS)
 ntp_keygen_DEPENDENCIES = version.o $(am__DEPENDENCIES_1) \
@@ -130,45 +130,46 @@ ntptime_SOURCES = ntptime.c
 ntptime_OBJECTS = ntptime.$(OBJEXT)
 ntptime_LDADD = $(LDADD)
 ntptime_DEPENDENCIES = ../libntp/libntp.a $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
 pps_api_SOURCES = pps-api.c
 pps_api_OBJECTS = pps-api.$(OBJEXT)
 pps_api_LDADD = $(LDADD)
 pps_api_DEPENDENCIES = ../libntp/libntp.a $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
 precision_SOURCES = precision.c
 precision_OBJECTS = precision.$(OBJEXT)
 precision_LDADD = $(LDADD)
 precision_DEPENDENCIES = ../libntp/libntp.a $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
 sht_SOURCES = sht.c
 sht_OBJECTS = sht.$(OBJEXT)
 sht_LDADD = $(LDADD)
 sht_DEPENDENCIES = ../libntp/libntp.a $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
 testrs6000_SOURCES = testrs6000.c
 testrs6000_OBJECTS = testrs6000.$(OBJEXT)
 testrs6000_LDADD = $(LDADD)
 testrs6000_DEPENDENCIES = ../libntp/libntp.a $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
 tg_SOURCES = tg.c
 tg_OBJECTS = tg.$(OBJEXT)
 tg_LDADD = $(LDADD)
 tg_DEPENDENCIES = ../libntp/libntp.a $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
 tg2_SOURCES = tg2.c
 tg2_OBJECTS = tg2.$(OBJEXT)
-tg2_DEPENDENCIES = ../libntp/libntp.a $(am__DEPENDENCIES_1)
+tg2_DEPENDENCIES = ../libntp/libntp.a $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1)
 tickadj_SOURCES = tickadj.c
 tickadj_OBJECTS = tickadj.$(OBJEXT)
 tickadj_LDADD = $(LDADD)
 tickadj_DEPENDENCIES = ../libntp/libntp.a $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
 timetrim_SOURCES = timetrim.c
 timetrim_OBJECTS = timetrim.$(OBJEXT)
 timetrim_LDADD = $(LDADD)
 timetrim_DEPENDENCIES = ../libntp/libntp.a $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
 DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/sntp/libevent/build-aux/depcomp
 am__depfiles_maybe = depfiles
@@ -463,8 +464,8 @@ AM_CFLAGS = $(CFLAGS_NTP)
 AM_CPPFLAGS = $(NTP_INCS) $(LIBOPTS_CFLAGS) $(CPPFLAGS_NTP)
 
 # LDADD might need RESLIB and ADJLIB
-LDADD = ../libntp/libntp.a $(LDADD_LIBNTP) $(PTHREAD_LIBS)
-tg2_LDADD = ../libntp/libntp.a $(LIBM)
+LDADD = ../libntp/libntp.a $(LDADD_LIBNTP) $(LIBM) $(PTHREAD_LIBS)
+tg2_LDADD = ../libntp/libntp.a $(LDADD_LIBNTP) $(LIBM)
 ntp_keygen_LDADD = version.o $(LIBOPTS_LDADD) ../libntp/libntp.a \
 	$(LDADD_LIBNTP) $(PTHREAD_LIBS) $(LCRYPTO)
 ntp_keygen_SOURCES = ntp-keygen.c ntp-keygen-opts.c ntp-keygen-opts.h

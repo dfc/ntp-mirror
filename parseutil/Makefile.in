@@ -79,14 +79,16 @@ dcfd_SOURCES = dcfd.c
 dcfd_OBJECTS = dcfd.$(OBJEXT)
 dcfd_LDADD = $(LDADD)
 am__DEPENDENCIES_1 =
-dcfd_DEPENDENCIES = ../libntp/libntp.a $(am__DEPENDENCIES_1)
+dcfd_DEPENDENCIES = ../libntp/libntp.a $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1)
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
 am__v_lt_0 = --silent
 testdcf_SOURCES = testdcf.c
 testdcf_OBJECTS = testdcf.$(OBJEXT)
 testdcf_LDADD = $(LDADD)
-testdcf_DEPENDENCIES = ../libntp/libntp.a $(am__DEPENDENCIES_1)
+testdcf_DEPENDENCIES = ../libntp/libntp.a $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1)
 DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/sntp/libevent/build-aux/depcomp
 am__depfiles_maybe = depfiles
@@ -349,7 +351,7 @@ CLEANFILES = .deps-ver
 noinst_PROGRAMS = @TESTDCF@ @DCFD@
 AM_CFLAGS = $(CFLAGS_NTP)
 AM_CPPFLAGS = $(NTP_INCS) $(CPPFLAGS_NTP)
-LDADD = ../libntp/libntp.a $(LDADD_LIBNTP)
+LDADD = ../libntp/libntp.a $(LDADD_LIBNTP) $(LIBM)
 ETAGS_ARGS = Makefile.am
 DISTCLEANFILES = $(EXTRA_PROGRAMS)
 NTP_INCS = -I$(top_srcdir)/include -I$(top_srcdir)/lib/isc/include \

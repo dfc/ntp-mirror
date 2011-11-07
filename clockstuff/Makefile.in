@@ -81,15 +81,15 @@ chutest_OBJECTS = chutest.$(OBJEXT)
 chutest_LDADD = $(LDADD)
 am__DEPENDENCIES_1 =
 chutest_DEPENDENCIES = ../libntp/libntp.a $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
 am__v_lt_0 = --silent
 propdelay_SOURCES = propdelay.c
 propdelay_OBJECTS = propdelay.$(OBJEXT)
 am__DEPENDENCIES_2 = ../libntp/libntp.a $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
-propdelay_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_2)
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
+propdelay_DEPENDENCIES = $(am__DEPENDENCIES_2)
 DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/sntp/libevent/build-aux/depcomp
 am__depfiles_maybe = depfiles
@@ -349,8 +349,8 @@ top_srcdir = @top_srcdir@
 noinst_PROGRAMS = @PROPDELAY@ @CHUTEST@
 AM_CFLAGS = $(CFLAGS_NTP)
 AM_CPPFLAGS = $(NTP_INCS) $(CPPFLAGS_NTP)
-LDADD = ../libntp/libntp.a $(LDADD_LIBNTP) $(PTHREAD_LIBS)
-propdelay_LDADD = $(LIBM) $(LDADD)
+LDADD = ../libntp/libntp.a $(LDADD_LIBNTP) $(LIBM) $(PTHREAD_LIBS)
+propdelay_LDADD = $(LDADD)
 BUILT_SOURCES = check-libntp .deps-ver
 CLEANFILES = check-libntp .deps-ver
 NTP_INCS = -I$(top_srcdir)/include -I$(top_srcdir)/lib/isc/include \
