@@ -12,6 +12,7 @@
 
 extern char *	chosts[];
 extern char	currenthost[];
+extern int	currenthostisnum;
 size_t		maxhostlen;
 
 /*
@@ -1569,14 +1570,18 @@ doprintpeers(
 	int c;
 	int len;
 	int have_srchost;
+	int have_dstadr;
+	int have_da_rid;
 	int have_jitter;
 	sockaddr_u srcadr;
 	sockaddr_u dstadr;
 	sockaddr_u dum_store;
+	sockaddr_u refidadr;
 	long hmode = 0;
 	u_long srcport = 0;
 	u_int32 u32;
 	const char *dstadr_refid = "0.0.0.0";
+	const char *serverlocal;
 	size_t drlen;
 	u_long stratum = 0;
 	long ppoll = 0;
@@ -1597,6 +1602,8 @@ doprintpeers(
 	get_systime(&ts);
 	
 	have_srchost = FALSE;
+	have_dstadr = FALSE;
+	have_da_rid = FALSE;
 	have_jitter = FALSE;
 	ZERO_SOCK(&srcadr);
 	ZERO_SOCK(&dstadr);
@@ -1628,15 +1635,18 @@ doprintpeers(
 		} else if (!strcmp("dstadr", name)) {
 			if (decodenetnum(value, &dum_store)) {
 				type = decodeaddrtype(&dum_store);
+				have_dstadr = TRUE;
+				dstadr = dum_store;
 				if (pvl == opeervarlist) {
-					dstadr = dum_store;
-					dstadr_refid = stoa(&dstadr);
+					have_da_rid = TRUE;
+					dstadr_refid = trunc_left(stoa(&dstadr), 15);
 				}
 			}
 		} else if (!strcmp("hmode", name)) {
 			decodeint(value, &hmode);
 		} else if (!strcmp("refid", name)) {
 			if (pvl == peervarlist) {
+				have_da_rid = TRUE;
 				drlen = strlen(value);
 				if (0 == drlen) {
 					dstadr_refid = "";
@@ -1644,9 +1654,17 @@ doprintpeers(
 					ZERO(u32);
 					memcpy(&u32, value, drlen);
 					dstadr_refid = refid_str(u32, 1);
-				} else if (decodenetnum(value, &dstadr)) {
-					dstadr_refid =
-					    refnumtoa(&dstadr);
+				} else if (decodenetnum(value, &refidadr)) {
+					if (SOCK_UNSPEC(&refidadr))
+						dstadr_refid = "0.0.0.0";
+					else if (ISREFCLOCKADR(&refidadr))
+						dstadr_refid =
+						    refnumtoa(&refidadr);
+					else
+						dstadr_refid =
+						    stoa(&refidadr);
+				} else {
+					have_da_rid = FALSE;
 				}
 			}
 		} else if (!strcmp("stratum", name)) {
@@ -1712,8 +1730,12 @@ doprintpeers(
 		break;
 
 	case MODE_ACTIVE:
-		type = 's';		/* symmetric */
-		break;
+		type = 's';		/* symmetric active */
+		break;			/* configured */
+
+	case MODE_PASSIVE:
+		type = 'S';		/* symmetric passive */
+		break;			/* ephemeral */
 	}
 
 	/*
@@ -1724,15 +1746,31 @@ doprintpeers(
 		c = flash3[CTL_PEER_STATVAL(rstatus) & 0x7];
 	else
 		c = flash2[CTL_PEER_STATVAL(rstatus) & 0x3];
-	if (numhosts > 1)
-		fprintf(fp, "%-*s ", (int)maxhostlen, currenthost);
+	if (numhosts > 1) {
+		if (peervarlist == pvl && have_dstadr) {
+			serverlocal = nntohost_col(&dstadr,
+			    (size_t)min(LIB_BUFLENGTH - 1, maxhostlen),
+			    TRUE);
+		} else {
+			if (currenthostisnum)
+				serverlocal = trunc_left(currenthost,
+							 maxhostlen);
+			else
+				serverlocal = currenthost;
+		}
+		fprintf(fp, "%-*s ", (int)maxhostlen, serverlocal);
+	}
 	if (AF_UNSPEC == af || AF(&srcadr) == af) {
 		if (!have_srchost)
 			strlcpy(clock_name, nntohost(&srcadr),
 				sizeof(clock_name));
 		fprintf(fp, "%c%-15.15s ", c, clock_name);
-		drlen = strlen(dstadr_refid);
-		makeascii(drlen, dstadr_refid, fp);
+		if (!have_da_rid) {
+			drlen = 0;
+		} else {
+			drlen = strlen(dstadr_refid);
+			makeascii(drlen, dstadr_refid, fp);
+		}
 		while (drlen++ < 15)
 			fputc(' ', fp);
 		fprintf(fp,
@@ -1809,40 +1847,45 @@ dopeers(
 	int af
 	)
 {
-	u_int i;
-	char fullname[LENHOSTNAME];
-	sockaddr_u netnum;
+	u_int		u;
+	char		fullname[LENHOSTNAME];
+	sockaddr_u	netnum;
+	const char *	name_or_num;
+	size_t		sl;
 
 	if (!dogetassoc(fp))
 		return;
 
-	for (i = 0; i < numhosts; ++i) {
-		if (getnetnum(chosts[i], &netnum, fullname, af))
-			if ((int)strlen(fullname) > maxhostlen)
-				maxhostlen = strlen(fullname);
+	for (u = 0; u < numhosts; u++) {
+		if (getnetnum(chosts[u], &netnum, fullname, af)) {
+			name_or_num = nntohost(&netnum);
+			sl = strlen(name_or_num);
+			maxhostlen = max(maxhostlen, sl);
+		}
 	}
 	if (numhosts > 1)
 		fprintf(fp, "%-*.*s ", (int)maxhostlen, (int)maxhostlen,
-			"server");
+			"server (local)");
 	fprintf(fp,
 		"     remote           refid      st t when poll reach   delay   offset  jitter\n");
 	if (numhosts > 1)
-		for (i = 0; i <= maxhostlen; ++i)
+		for (u = 0; u <= maxhostlen; u++)
 			fprintf(fp, "=");
 	fprintf(fp,
 		"==============================================================================\n");
 
-	for (i = 0; i < numassoc; i++) {
+	for (u = 0; u < numassoc; u++) {
 		if (!showall &&
-		    !(CTL_PEER_STATVAL(assoc_cache[i].status)
+		    !(CTL_PEER_STATVAL(assoc_cache[u].status)
 		      & (CTL_PST_CONFIG|CTL_PST_REACH))) {
 			if (debug)
-				fprintf(stderr, "eliding [%d]\n", assoc_cache[i].assid);
+				fprintf(stderr, "eliding [%d]\n",
+					(int)assoc_cache[u].assid);
 			continue;
 		}
-		if (!dogetpeers(peervarlist, (int)assoc_cache[i].assid, fp, af)) {
+		if (!dogetpeers(peervarlist, (int)assoc_cache[u].assid,
+				fp, af))
 			return;
-		}
 	}
 	return;
 }

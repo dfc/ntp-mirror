@@ -1,3 +1,464 @@
+ChangeSet@1.2713, 2011-12-01 05:30:22+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P237
+  TAG: NTP_4_2_7P237
+
+  ChangeLog@1.1065 +1 -0
+    NTP_4_2_7P237
+
+  ntpd/ntpd-opts.c@1.242 +3 -3
+    NTP_4_2_7P237
+
+  ntpd/ntpd-opts.h@1.242 +3 -3
+    NTP_4_2_7P237
+
+  ntpd/ntpd-opts.texi@1.240 +2 -2
+    NTP_4_2_7P237
+
+  ntpd/ntpd.1ntpdman@1.53 +2 -2
+    NTP_4_2_7P237
+
+  ntpd/ntpd.1ntpdmdoc@1.53 +2 -2
+    NTP_4_2_7P237
+
+  ntpd/ntpd.man.in@1.53 +2 -2
+    NTP_4_2_7P237
+
+  ntpd/ntpd.mdoc.in@1.53 +2 -2
+    NTP_4_2_7P237
+
+  ntpdc/ntpdc-opts.c@1.237 +3 -3
+    NTP_4_2_7P237
+
+  ntpdc/ntpdc-opts.h@1.237 +3 -3
+    NTP_4_2_7P237
+
+  ntpdc/ntpdc-opts.texi@1.237 +2 -2
+    NTP_4_2_7P237
+
+  ntpdc/ntpdc.1ntpdcman@1.53 +2 -2
+    NTP_4_2_7P237
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.53 +2 -2
+    NTP_4_2_7P237
+
+  ntpdc/ntpdc.html@1.65 +2 -2
+    NTP_4_2_7P237
+
+  ntpdc/ntpdc.man.in@1.53 +2 -2
+    NTP_4_2_7P237
+
+  ntpdc/ntpdc.mdoc.in@1.53 +2 -2
+    NTP_4_2_7P237
+
+  ntpq/ntpq-opts.c@1.239 +3 -3
+    NTP_4_2_7P237
+
+  ntpq/ntpq-opts.h@1.239 +3 -3
+    NTP_4_2_7P237
+
+  ntpq/ntpq-opts.texi@1.239 +2 -2
+    NTP_4_2_7P237
+
+  ntpq/ntpq.1ntpqman@1.53 +2 -2
+    NTP_4_2_7P237
+
+  ntpq/ntpq.1ntpqmdoc@1.53 +2 -2
+    NTP_4_2_7P237
+
+  ntpq/ntpq.man.in@1.53 +2 -2
+    NTP_4_2_7P237
+
+  ntpq/ntpq.mdoc.in@1.53 +2 -2
+    NTP_4_2_7P237
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.239 +3 -3
+    NTP_4_2_7P237
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.239 +3 -3
+    NTP_4_2_7P237
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.239 +2 -2
+    NTP_4_2_7P237
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.53 +2 -2
+    NTP_4_2_7P237
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.53 +2 -2
+    NTP_4_2_7P237
+
+  ntpsnmpd/ntpsnmpd.man.in@1.53 +2 -2
+    NTP_4_2_7P237
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.53 +2 -2
+    NTP_4_2_7P237
+
+  packageinfo.sh@1.240 +1 -1
+    NTP_4_2_7P237
+
+  scripts/ntp-wait-opts.texi@1.57 +1 -1
+    NTP_4_2_7P237
+
+  scripts/ntp-wait.1ntp-waitman@1.53 +2 -2
+    NTP_4_2_7P237
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.53 +2 -2
+    NTP_4_2_7P237
+
+  scripts/ntp-wait.html@1.57 +1 -1
+    NTP_4_2_7P237
+
+  scripts/ntp-wait.man.in@1.53 +2 -2
+    NTP_4_2_7P237
+
+  scripts/ntp-wait.mdoc.in@1.53 +2 -2
+    NTP_4_2_7P237
+
+  sntp/sntp-opts.c@1.235 +3 -3
+    NTP_4_2_7P237
+
+  sntp/sntp-opts.h@1.235 +3 -3
+    NTP_4_2_7P237
+
+  sntp/sntp-opts.texi@1.235 +2 -2
+    NTP_4_2_7P237
+
+  sntp/sntp.1sntpman@1.55 +2 -2
+    NTP_4_2_7P237
+
+  sntp/sntp.1sntpmdoc@1.55 +2 -2
+    NTP_4_2_7P237
+
+  sntp/sntp.html@1.235 +2 -2
+    NTP_4_2_7P237
+
+  sntp/sntp.man.in@1.55 +2 -2
+    NTP_4_2_7P237
+
+  sntp/sntp.mdoc.in@1.55 +2 -2
+    NTP_4_2_7P237
+
+  util/ntp-keygen-opts.c@1.239 +3 -3
+    NTP_4_2_7P237
+
+  util/ntp-keygen-opts.h@1.239 +3 -3
+    NTP_4_2_7P237
+
+  util/ntp-keygen-opts.texi@1.240 +2 -2
+    NTP_4_2_7P237
+
+  util/ntp-keygen.1ntp-keygenman@1.53 +2 -2
+    NTP_4_2_7P237
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.53 +2 -2
+    NTP_4_2_7P237
+
+  util/ntp-keygen.man.in@1.53 +2 -2
+    NTP_4_2_7P237
+
+  util/ntp-keygen.mdoc.in@1.53 +2 -2
+    NTP_4_2_7P237
+
+ChangeSet@1.2082.4.251, 2011-11-30 22:06:41-05:00, stenn@deacon.udel.edu
+  NTP_4_2_6P5_RC2
+  TAG: NTP_4_2_6P5_RC2
+
+  ChangeLog@1.496.26.179 +1 -0
+    NTP_4_2_6P5_RC2
+
+  ntpd/ntpd-opts.c@1.248.41.1 +3 -3
+    NTP_4_2_6P5_RC2
+
+  ntpd/ntpd-opts.h@1.248.41.1 +3 -3
+    NTP_4_2_6P5_RC2
+
+  ntpd/ntpd-opts.texi@1.246.40.1 +2 -2
+    NTP_4_2_6P5_RC2
+
+  ntpd/ntpd.1@1.246.40.1 +2 -2
+    NTP_4_2_6P5_RC2
+
+  ntpdc/ntpdc-opts.c@1.244.41.1 +3 -3
+    NTP_4_2_6P5_RC2
+
+  ntpdc/ntpdc-opts.h@1.244.41.1 +3 -3
+    NTP_4_2_6P5_RC2
+
+  ntpdc/ntpdc-opts.texi@1.243.40.1 +2 -2
+    NTP_4_2_6P5_RC2
+
+  ntpdc/ntpdc.1@1.243.40.1 +2 -2
+    NTP_4_2_6P5_RC2
+
+  ntpq/ntpq-opts.c@1.245.41.1 +3 -3
+    NTP_4_2_6P5_RC2
+
+  ntpq/ntpq-opts.h@1.245.41.1 +3 -3
+    NTP_4_2_6P5_RC2
+
+  ntpq/ntpq-opts.texi@1.244.40.1 +2 -2
+    NTP_4_2_6P5_RC2
+
+  ntpq/ntpq.1@1.244.40.1 +2 -2
+    NTP_4_2_6P5_RC2
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.123.42.1 +3 -3
+    NTP_4_2_6P5_RC2
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.123.42.1 +3 -3
+    NTP_4_2_6P5_RC2
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.123.41.1 +2 -2
+    NTP_4_2_6P5_RC2
+
+  ntpsnmpd/ntpsnmpd.1@1.122.41.1 +2 -2
+    NTP_4_2_6P5_RC2
+
+  packageinfo.sh@1.255.38.1 +1 -1
+    NTP_4_2_6P5_RC2
+
+  sntp/sntp-opts.c@1.117.40.1 +3 -3
+    NTP_4_2_6P5_RC2
+
+  sntp/sntp-opts.h@1.117.40.1 +3 -3
+    NTP_4_2_6P5_RC2
+
+  sntp/sntp-opts.texi@1.117.39.1 +2 -2
+    NTP_4_2_6P5_RC2
+
+  sntp/sntp.1@1.117.39.1 +2 -2
+    NTP_4_2_6P5_RC2
+
+  sntp/sntp.html@1.7.40.1 +2 -2
+    NTP_4_2_6P5_RC2
+
+  util/ntp-keygen-opts.c@1.247.41.1 +3 -3
+    NTP_4_2_6P5_RC2
+
+  util/ntp-keygen-opts.h@1.247.41.1 +3 -3
+    NTP_4_2_6P5_RC2
+
+  util/ntp-keygen-opts.texi@1.246.40.1 +2 -2
+    NTP_4_2_6P5_RC2
+
+  util/ntp-keygen.1@1.246.40.1 +2 -2
+    NTP_4_2_6P5_RC2
+
+ChangeSet@1.2082.4.250, 2011-11-30 21:49:45-05:00, stenn@pogo.udel.edu
+  update
+
+  NEWS@1.122.1.1 +20 -5
+    update
+
+ChangeSet@1.2711, 2011-11-30 04:00:32+00:00, davehart@shiny.ad.hartbrothers.com
+  Floor calculation of sys_rootdisp at sys_mindisp in clock_update (from
+    Dave Mills).
+
+  ChangeLog@1.1063 +2 -0
+    Floor calculation of sys_rootdisp at sys_mindisp in clock_update (from
+      Dave Mills).
+
+  ntpd/ntp_proto.c@1.332 +6 -3
+    Floor calculation of sys_rootdisp at sys_mindisp in clock_update (from
+      Dave Mills).
+
+ChangeSet@1.2709, 2011-11-29 21:58:49+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 2073] Correct ntpq billboard's MODE_PASSIVE t from 'u' to 'S'.
+  Round l_fp traffic interval when converting to integer in rate limit
+    and KoD calculation.
+
+  ChangeLog@1.1061 +4 -1
+    [Bug 2073] Correct ntpq billboard's MODE_PASSIVE t from 'u' to 'S'.
+    Round l_fp traffic interval when converting to integer in rate limit
+      and KoD calculation.
+
+  include/ntp.h@1.201 +1 -1
+    MDF_UCLNT indicates preemptible, not ephemeral (comment fix).
+
+  ntpd/ntp_monitor.c@1.40 +5 -1
+    Round l_fp traffic interval when converting to integer in rate limit
+      and KoD calculation.
+
+  ntpd/ntp_peer.c@1.151 +20 -2
+    provide debug trace output of newpeer()/findexistingpeer() search
+      for duplicate associations.
+
+  ntpd/ntp_proto.c@1.330 +12 -10
+    Avoid duplicate "no servers found".
+
+  ntpq/ntpq-subs.c@1.95 +6 -2
+    [Bug 2073] Correct ntpq billboard's MODE_PASSIVE t from 'u' to 'S'.
+
+ChangeSet@1.2082.4.249, 2011-11-29 13:35:16+00:00, davehart@shiny.ad.hartbrothers.com
+  merge cleanup
+
+  ChangeLog@1.496.26.178 +0 -1
+    merge cleanup
+
+ChangeSet@1.2082.47.2, 2011-11-29 13:33:26+00:00, davehart@shiny.ad.hartbrothers.com
+  Never send KoD rate limiting response to MODE_SERVER response.
+
+  ChangeLog@1.496.61.2 +3 -1
+    Never send KoD rate limiting response to MODE_SERVER response.
+
+  ntpd/ntp_crypto.c@1.146.1.1 +1 -1
+    Use () to enforce intended precendence of & and && operators
+
+  ntpd/ntp_proto.c@1.297.3.2 +3 -3
+    Never send KoD rate limiting response to MODE_SERVER response.
+
+ChangeSet@1.2082.48.2, 2011-11-27 00:39:11+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 2072] Orphan parent selection metric needs ntohl().
+
+  ChangeLog@1.496.62.1 +1 -0
+    [Bug 2072] Orphan parent selection metric needs ntohl().
+
+  libntp/a_md5encrypt.c@1.26.1.2 +1 -0
+    [Bug 2072] Orphan parent selection metric needs ntohl().
+
+  ntpd/ntp_proto.c@1.297.4.1 +3 -3
+    [Bug 2072] Orphan parent selection metric needs ntohl().
+
+ChangeSet@1.2707, 2011-11-26 23:06:48+00:00, davehart@shiny.ad.hartbrothers.com
+  more merge cleanup
+
+  include/lib_strbuf.h@1.11 +4 -0
+    guard against multiple inclusion (more merge cleanup)
+
+  include/ntp_fp.h@1.26 +1 -1
+    more merge cleanup
+
+  include/ntp_types.h@1.30 +11 -11
+    more merge cleanup
+
+ChangeSet@1.2082.48.1, 2011-11-26 19:43:12+00:00, davehart@shiny.ad.hartbrothers.com
+  Avoid redefinition warnings for INT32_MIN, INT32_MAX, U_INT32_MAX.
+
+  include/ntp_types.h@1.14.1.3 +18 -6
+    Avoid redefinition warnings for INT32_MIN, INT32_MAX, U_INT32_MAX.
+
+ChangeSet@1.2705, 2011-11-26 12:50:07+00:00, davehart@shiny.ad.hartbrothers.com
+  Restore 4.2.6 clock_combine() weighting to ntp-dev, reverting
+   to pre-4.2.7p70 logic and avoiding divide-by-zero (from Dave Mills).
+
+  ChangeLog@1.1059 +3 -1
+    Restore 4.2.6 clock_combine() weighting to ntp-dev, reverting
+     to pre-4.2.7p70 logic and avoiding divide-by-zero (from Dave Mills).
+
+  ntpd/ntp_proto.c@1.328 +5 -5
+    Restore 4.2.6 clock_combine() weighting to ntp-dev, reverting
+     to pre-4.2.7p70 logic and avoiding divide-by-zero (from Dave Mills).
+
+ChangeSet@1.2704, 2011-11-26 12:11:56+00:00, davehart@shiny.ad.hartbrothers.com
+  merge cleanup
+
+  ntpd/ntp_control.c@1.176 +6 -6
+    merge cleanup
+
+  ntpd/ntp_io.c@1.363 +0 -11
+    merge cleanup
+
+  ntpd/ntp_peer.c@1.150 +6 -4
+    merge cleanup
+
+  ntpd/ntp_proto.c@1.327 +1 -1
+    merge cleanup
+
+  ntpq/ntpq-subs.c@1.94 +28 -18
+    merge cleanup
+
+  ntpq/ntpq.c@1.143 +3 -3
+    merge cleanup
+
+  ntpq/ntpq.h@1.26 +2 -2
+    merge cleanup
+
+ChangeSet@1.2082.47.1, 2011-11-25 10:23:58+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 2059] optional billboard column "server" does not honor -n.
+  [Bug 2066] ntpq lopeers ipv6 "local" column overrun.
+  [Bug 2068] ntpd sends nonprintable stratum 16 refid to ntpq.
+  [Bug 2069] broadcastclient, multicastclient spin up duplicate
+    ephemeral associations without broadcastdelay.
+  Exclude not-yet-determined sys_refid from use in loopback TEST12
+    (from David Mills).
+
+  ChangeLog@1.496.61.1 +9 -0
+    [Bug 2059] optional billboard column "server" does not honor -n.
+    [Bug 2066] ntpq lopeers ipv6 "local" column overrun.
+    [Bug 2068] ntpd sends nonprintable stratum 16 refid to ntpq.
+    [Bug 2069] broadcastclient, multicastclient spin up duplicate
+      ephemeral associations without broadcastdelay.
+    Exclude not-yet-determined sys_refid from use in loopback TEST12
+      (from David Mills).
+
+  include/ntp.h@1.168.1.7 +1 -0
+    Add peer flag FLAG_BC_VOL indicating the broadcastclient delay
+      calibration is still in progress.
+
+  include/ntp_refclock.h@1.24.1.2 +1 -1
+    [Bug 2068] ntpd sends nonprintable stratum 16 refid to ntpq.
+
+  include/ntp_request.h@1.40.1.1 +2 -2
+    [Bug 2068] ntpd sends nonprintable stratum 16 refid to ntpq.
+
+  include/ntpd.h@1.137.2.7 +3 -1
+    [Bug 2069] broadcastclient, multicastclient spin up duplicate
+      ephemeral associations without broadcastdelay.
+    backport latoa() -> localaddrtoa(endpt *) from 4.2.7
+
+  ntpd/ntp_config.c@1.241.1.10 +1 -1
+    [Bug 2069] broadcastclient, multicastclient spin up duplicate
+      ephemeral associations without broadcastdelay.
+
+  ntpd/ntp_control.c@1.129.1.7 +50 -37
+    [Bug 2068] ntpd sends nonprintable stratum 16 refid to ntpq.
+
+  ntpd/ntp_io.c@1.306.1.17 +11 -0
+    backport latoa() -> localaddrtoa(endpt *) from 4.2.7
+
+  ntpd/ntp_peer.c@1.126.1.4 +40 -21
+    [Bug 2069] broadcastclient, multicastclient spin up duplicate
+      ephemeral associations without broadcastdelay.
+
+  ntpd/ntp_proto.c@1.297.3.1 +53 -14
+    [Bug 2069] broadcastclient, multicastclient spin up duplicate
+      ephemeral associations without broadcastdelay.
+    Exclude not-yet-determined sys_refid from use in loopback TEST12
+      (from David Mills).
+
+  ntpd/ntp_refclock.c@1.92.1.3 +2 -2
+    [Bug 2069] broadcastclient, multicastclient spin up duplicate
+      ephemeral associations without broadcastdelay.
+
+  ntpd/ntp_request.c@1.82.1.6 +13 -11
+    [Bug 2069] broadcastclient, multicastclient spin up duplicate
+      ephemeral associations without broadcastdelay.
+
+  ntpq/ntpq-subs.c@1.39.2.6 +42 -22
+    [Bug 2059] optional billboard column "server" does not honor -n.
+    [Bug 2066] ntpq lopeers ipv6 "local" column overrun.
+
+  ntpq/ntpq.c@1.97.1.10 +94 -9
+    [Bug 2059] optional billboard column "server" does not honor -n.
+
+  ntpq/ntpq.h@1.10.1.5 +4 -0
+    [Bug 2059] optional billboard column "server" does not honor -n.
+    [Bug 2066] ntpq lopeers ipv6 "local" column overrun.
+
+ChangeSet@1.2082.4.244, 2011-11-21 09:35:28+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 2050] Orphan mode stratum counting to infinity.
+
+  ChangeLog@1.496.26.174 +4 -0
+    [Bug 2050] Orphan mode stratum counting to infinity.
+
+  include/ntp_types.h@1.14.1.2 +6 -0
+    [Bug 2050] Orphan mode stratum counting to infinity.
+
+  ntpd/ntp_proto.c@1.297.2.4 +31 -8
+    [Bug 2050] Orphan mode stratum counting to infinity.
+
+  ntpd/ntp_timer.c@1.56.1.1 +2 -2
+    [Bug 2050] Orphan mode stratum counting to infinity.
+
 ChangeSet@1.2702, 2011-11-16 10:47:59+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P236
   TAG: NTP_4_2_7P236

@@ -130,6 +130,7 @@ static	void	fast_xmit	(struct recvbuf *, int, keyid_t, int);
 static	void	pool_xmit	(struct peer *);
 static	void	clock_update	(struct peer *);
 static	int	default_get_precision (void);
+static	int	local_refid	(struct peer *);
 static	int	peer_unfit	(struct peer *);
 #ifdef AUTOKEY
 static	int	group_test	(char *, char *);
@@ -311,9 +312,10 @@ transmit(
 				peer_ntpdate--;
 				if (peer_ntpdate == 0) {
 					msyslog(LOG_NOTICE,
-					    "ntpd: no servers found");
-					printf(
 					    "ntpd: no servers found\n");
+					if (!msyslog_term)
+						printf(
+						    "ntpd: no servers found\n");
 					exit (0);
 				}
 			}
@@ -354,6 +356,7 @@ receive(
 	u_int32	opcode = 0;		/* extension field opcode */
 	sockaddr_u *dstadr_sin; 	/* active runway */
 	struct peer *peer2;		/* aux peer structure pointer */
+	endpt *	match_ep;		/* newpeer() local address */
 	l_fp	p_org;			/* origin timestamp */
 	l_fp	p_rec;			/* receive timestamp */
 	l_fp	p_xmt;			/* transmit timestamp */
@@ -547,10 +550,13 @@ receive(
 	restrict_mask = ntp_monitor(rbufp, restrict_mask);
 	if (restrict_mask & RES_LIMITED) {
 		sys_limitrejected++;
-		if (!(restrict_mask & RES_KOD) || hismode ==
-		    MODE_BROADCAST)
+		if (!(restrict_mask & RES_KOD) || MODE_BROADCAST ==
+		    hismode || MODE_SERVER == hismode) {
+			if (MODE_SERVER == hismode)
+				DPRINTF(1, ("Possibly self-induced rate limiting of MODE_SERVER from %s\n",
+					stoa(&rbufp->recv_srcadr)));
 			return;			/* rate exceeded */
-
+		}
 		if (hismode == MODE_CLIENT)
 			fast_xmit(rbufp, MODE_SERVER, skeyid,
 			    restrict_mask);
@@ -968,6 +974,20 @@ receive(
 #endif	/* AUTOKEY */
 
 		/*
+		 * Broadcasts received via a multicast address may
+		 * arrive after a unicast volley has begun
+		 * with the same remote address.  newpeer() will not
+		 * find duplicate associations on other local endpoints
+		 * if a non-NULL endpoint is supplied.  multicastclient
+		 * ephemeral associations are unique across all local
+		 * endpoints.
+		 */
+		if (!(INT_MCASTOPEN & rbufp->dstadr->flags))
+			match_ep = rbufp->dstadr;
+		else
+			match_ep = NULL;
+
+		/*
 		 * Determine whether to execute the initial volley.
 		 */
 		if (sys_bdelay != 0) {
@@ -986,10 +1006,11 @@ receive(
 			 * Do not execute the volley. Start out in
 			 * broadcast client mode.
 			 */
-			if ((peer = newpeer(&rbufp->recv_srcadr, NULL,
-			    rbufp->dstadr, MODE_BCLIENT, hisversion,
-			    pkt->ppoll, pkt->ppoll, 0, 0, 0,
-			    skeyid, sys_ident)) == NULL) {
+			peer = newpeer(&rbufp->recv_srcadr, NULL,
+			    match_ep, MODE_BCLIENT, hisversion,
+			    pkt->ppoll, pkt->ppoll, FLAG_PREEMPT,
+			    MDF_BCLNT, 0, skeyid, sys_ident);
+			if (NULL == peer) {
 				sys_restricted++;
 				return;		/* ignore duplicate */
 
@@ -1007,10 +1028,11 @@ receive(
 		 * packet, normally 6 (64 s) and that the poll interval
 		 * is fixed at this value.
 		 */
-		if ((peer = newpeer(&rbufp->recv_srcadr, NULL,
-		    rbufp->dstadr, MODE_CLIENT, hisversion, pkt->ppoll,
-		    pkt->ppoll, FLAG_IBURST, MDF_BCLNT, 0, skeyid,
-		    sys_ident)) == NULL) {
+		peer = newpeer(&rbufp->recv_srcadr, NULL, match_ep,
+		    MODE_CLIENT, hisversion, pkt->ppoll, pkt->ppoll,
+		    FLAG_BC_VOL | FLAG_IBURST | FLAG_PREEMPT, MDF_BCLNT,
+		    0, skeyid, sys_ident);
+		if (NULL == peer) {
 			sys_restricted++;
 			return;			/* ignore duplicate */
 		}
@@ -1061,12 +1083,14 @@ receive(
 		}
 
 		/*
-		 * Do not respond if synchronized and stratum is either
+		 * Do not respond if synchronized and if stratum is
 		 * below the floor or at or above the ceiling. Note,
 		 * this allows an unsynchronized peer to synchronize to
 		 * us. It would be very strange if he did and then was
 		 * nipped, but that could only happen if we were
-		 * operating at the top end of the range.
+		 * operating at the top end of the range.  It also means
+		 * we will spin an ephemeral association in response to
+		 * MODE_ACTIVE KoDs, which will time out eventually.
 		 */
 		if (hisleap != LEAP_NOTINSYNC && (hisstratum <
 		    sys_floor || hisstratum >= sys_ceiling)) {
@@ -1634,8 +1658,8 @@ process_packet(
 		 * timestamp. This works for both basic and interleaved
 		 * modes.
 		 */
-		if (peer->cast_flags & MDF_BCLNT) {
-			peer->cast_flags &= ~MDF_BCLNT;
+		if (FLAG_BC_VOL & peer->flags) {
+			peer->flags &= ~FLAG_BC_VOL;
 			peer->delay = fabs(peer->offset - p_offset) * 2;
 		}
 		p_del = peer->delay;
@@ -1740,8 +1764,8 @@ process_packet(
 	 * client mode when the client is fit and the autokey dance is
 	 * complete.
 	 */
-	if ((peer->cast_flags & MDF_BCLNT) && !(peer_unfit(peer) &
-	    TEST11)) {
+	if ((FLAG_BC_VOL & peer->flags) && MODE_CLIENT == peer->hmode &&
+	    !(TEST11 & peer_unfit(peer))) {	/* distance exceeded */
 #ifdef AUTOKEY
 		if (peer->flags & FLAG_SKEY) {
 			if (!(~peer->crypto & CRYPTO_FLAG_ALL))
@@ -1787,9 +1811,12 @@ clock_update(
 		sys_refid = peer->refid;
 	else
 		sys_refid = addr2refid(&peer->srcadr);
-	dtemp = sys_jitter + fabs(sys_offset) + peer->disp + clock_phi *
-	    (current_time - peer->update);
-	sys_rootdisp = dtemp + peer->rootdisp;
+	dtemp = fabs(sys_offset) + peer->disp + peer->rootdisp +
+	    clock_phi * (current_time - peer->update) + sys_jitter;
+	if (dtemp > sys_mindisp)
+		sys_rootdisp = dtemp;
+	else
+		sys_rootdisp = sys_mindisp;
 	sys_rootdelay = peer->delay + peer->rootdelay;
 	sys_reftime = peer->dst;
 
@@ -1975,7 +2002,7 @@ poll_update(
 	 * sending in a burst, use the earliest time. When not in a
 	 * burst but with a reply pending, send at the earliest time
 	 * unless the next scheduled time has not advanced. This can
-	 * only happen if multiple replies are peinding in the same
+	 * only happen if multiple replies are pending in the same
 	 * response interval. Otherwise, send at the later of the next
 	 * scheduled time and the earliest time.
 	 *
@@ -2355,7 +2382,7 @@ clock_select(void)
 	double	d, e, f, g;
 	double	high, low;
 	double	seljitter;
-	double	orphdist = 1e10;
+	double	orphmet = 2.0 * U_INT32_MAX; /* 2x is greater than */
 	struct peer *osys_peer = NULL;
 	struct peer *sys_prefer = NULL;	/* prefer peer */
 	struct peer *typesystem = NULL;
@@ -2432,20 +2459,42 @@ clock_select(void)
 			continue;
 
 		/*
-		 * If this is an orphan, choose the one with
-		 * the lowest metric defined as the IPv4 address
-		 * or the first 64 bits of the hashed IPv6 address.
+		 * If this peer is an orphan parent, elect the
+		 * one with the lowest metric defined as the
+		 * IPv4 address or the first 64 bits of the
+		 * hashed IPv6 address.  To ensure convergence
+		 * on the same selected orphan, consider as
+		 * well that this system may have the lowest
+		 * metric and be the orphan parent.  If this
+		 * system wins, sys_peer will be NULL to trigger
+		 * orphan mode in timer().
 		 */
 		if (peer->stratum == sys_orphan) {
-			double	ftemp;
+			u_int32	localmet;
+			u_int32 peermet;
 
-			ftemp = addr2refid(&peer->srcadr);
-			if (ftemp < orphdist) {
+			localmet = ntohl(peer->dstadr->addr_refid);
+			peermet = ntohl(addr2refid(&peer->srcadr));
+			if (peermet < localmet && peermet < orphmet) {
 				typeorphan = peer;
-				orphdist = ftemp;
+				orphmet = peermet;
 			}
 			continue;
 		}
+
+		/*
+		 * If this peer could have the orphan parent
+		 * as a synchronization ancestor, exclude it
+		 * from selection to avoid forming a 
+		 * synchronization loop within the orphan mesh,
+		 * triggering stratum climb to infinity 
+		 * instability.  Peers at stratum higher than
+		 * the orphan stratum could have the orphan
+		 * parent in ancestry so are excluded.
+		 * See http://bugs.ntp.org/2050
+		 */
+		if (peer->stratum > sys_orphan)
+			continue;
 #ifdef REFCLOCK
 		/*
 		 * The following are special cases. We deal
@@ -2862,9 +2911,6 @@ clock_select(void)
 }
 
 
-/*
- * clock_combine - compute system offset and jitter from selected peers
- */
 static void
 clock_combine(
 	struct peer **peers,	/* survivor list */
@@ -2872,11 +2918,12 @@ clock_combine(
 	)
 {
 	int	i;
-	double	x, y, z, w;
+	double	d, x, y, z, w;
 
 	y = z = w = 0;
 	for (i = 0; i < npeers; i++) {
-		x = max(sys_maxdist - root_distance(peers[i]), sys_mindisp);
+		d = root_distance(peers[i]);
+		x = 1. / d;
 		y += x;
 		z += peers[i]->offset * x;
 		w += SQUARE(peers[i]->offset - peers[0]->offset) * x;
@@ -3541,7 +3588,7 @@ pool_xmit(
 		/* copy_addrinfo_list ai_addr points to a sockaddr_u */
 		rmtadr = (sockaddr_u *)(void *)pool->ai->ai_addr;
 		pool->ai = pool->ai->ai_next;
-		p = findexistingpeer(rmtadr, NULL, NULL, MODE_CLIENT);
+		p = findexistingpeer(rmtadr, NULL, NULL, MODE_CLIENT, 0);
 	} while (p != NULL && pool->ai != NULL);
 	if (p != NULL)
 		return;	/* out of addresses, re-query DNS next poll */
@@ -3679,6 +3726,29 @@ key_expire(
 
 
 /*
+ * local_refid(peer) - check peer refid to avoid selecting peers
+ *		       currently synced to this ntpd.
+ */
+static int
+local_refid(
+	struct peer *	p
+	)
+{
+	endpt *	unicast_ep;
+
+	if (p->dstadr != NULL && !(INT_MCASTIF & p->dstadr->flags))
+		unicast_ep = p->dstadr;
+	else
+		unicast_ep = findinterface(&p->srcadr);
+
+	if (unicast_ep != NULL && p->refid == unicast_ep->addr_refid)
+		return TRUE;
+	else
+		return FALSE;
+}
+
+
+/*
  * Determine if the peer is unfit for synchronization
  *
  * A peer is unfit for synchronization if
@@ -3718,9 +3788,7 @@ peer_unfit(
 	 * server as the local peer but only if the remote peer is
 	 * neither a reference clock nor an orphan.
 	 */
-	if (peer->stratum > 1 && peer->refid != htonl(LOOPBACKADR) &&
-	    (peer->refid == (peer->dstadr ? peer->dstadr->addr_refid :
-	    0) || peer->refid == sys_refid))
+	if (peer->stratum > 1 && local_refid(peer))
 		rval |= TEST12;		/* synchronization loop */
 
 	/*

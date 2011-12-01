@@ -443,6 +443,7 @@ struct peer {
 #define	FLAG_PREEMPT	0x0002	/* preemptable association */
 #define	FLAG_AUTHENTIC	0x0004	/* last message was authentic */
 #define	FLAG_REFCLOCK	0x0008	/* this is actually a reference clock */
+#define	FLAG_BC_VOL	0x0010	/* broadcast client volleying */
 #define	FLAG_PREFER	0x0020	/* prefer peer */
 #define	FLAG_BURST	0x0040	/* burst mode */
 #define	FLAG_PPS	0x0080	/* steered by PPS */
@@ -761,7 +762,7 @@ struct mon_data {
 #define	MDF_POOL	0x08	/* pool client solicitor */
 #define MDF_ACAST	0x10	/* manycast client solicitor */
 #define	MDF_BCLNT	0x20	/* eph. broadcast/multicast client */
-#define MDF_UCLNT	0x40	/* eph. manycast or pool client */
+#define MDF_UCLNT	0x40	/* preemptible manycast or pool client */
 /*
  * In the context of struct peer in ntpd, three of the cast_flags bits
  * represent configured associations which never receive packets, and

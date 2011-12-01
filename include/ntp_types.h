@@ -66,29 +66,50 @@ typedef unsigned int u_int;
 # endif
 # ifndef HAVE_U_INT32
    typedef	uint32_t	u_int32;
+#  ifndef U_INT32_MAX
+#   define U_INT32_MAX UINT32_MAX
+#  endif
 # endif
 #elif (SIZEOF_INT == 4)
 # if !defined(HAVE_INT32) && !defined(int32)
    typedef	int		int32;
+#  ifndef INT32_MIN
+#   define INT32_MIN INT_MIN
+#  endif
+#  ifndef INT32_MAX
+#   define INT32_MAX INT_MAX
+#  endif
 # endif
 # if !defined(HAVE_U_INT32) && !defined(u_int32)
    typedef	unsigned	u_int32;
+#  ifndef U_INT32_MAX
+#   define U_INT32_MAX UINT_MAX
+#  endif
 # endif
 #else	/* SIZEOF_INT != 4 */
 # if (SIZEOF_LONG == 4)
 # if !defined(HAVE_INT32) && !defined(int32)
     typedef	long		int32;
+#   ifndef INT32_MIN
+#    define INT32_MIN LONG_MIN
+#   endif
+#   ifndef INT32_MAX
+#    define INT32_MAX LONG_MAX
+#   endif
 #  endif
 # if !defined(HAVE_U_INT32) && !defined(u_int32)
     typedef	unsigned long	u_int32;
+#   ifndef U_INT32_MAX
+#    define U_INT32_MAX ULONG_MAX
+#   endif
 #  endif
 # else	/* SIZEOF_LONG != 4 */
 #  include "Bletch: what's 32 bits on this machine?"
 # endif
 #endif	/* !HAVE_UINT32_T && SIZEOF_INT != 4 */
 
-#ifndef UINT32_MAX
-#define UINT32_MAX	0xffffffff
+#ifndef U_INT32_MAX
+#define U_INT32_MAX	0xffffffff
 #endif
 
 
