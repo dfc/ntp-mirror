@@ -1812,7 +1812,8 @@ clock_update(
 	else
 		sys_refid = addr2refid(&peer->srcadr);
 	dtemp = fabs(sys_offset) + peer->disp + peer->rootdisp +
-	    clock_phi * (current_time - peer->update) + sys_jitter;
+	    (peer->delay + peer->rootdelay) / 2 + clock_phi *
+	    (current_time - peer->update) + sys_jitter;
 	if (dtemp > sys_mindisp)
 		sys_rootdisp = dtemp;
 	else
@@ -2473,7 +2474,10 @@ clock_select(void)
 			u_int32	localmet;
 			u_int32 peermet;
 
-			localmet = ntohl(peer->dstadr->addr_refid);
+			if (peer->dstadr != NULL)
+				localmet = ntohl(peer->dstadr->addr_refid);
+			else
+				localmet = U_INT32_MAX;
 			peermet = ntohl(addr2refid(&peer->srcadr));
 			if (peermet < localmet && peermet < orphmet) {
 				typeorphan = peer;
@@ -2836,8 +2840,8 @@ clock_select(void)
 		if (sys_prefer == NULL) {
 			typesystem->new_status = CTL_PST_SEL_SYSPEER;
 			clock_combine(peers, sys_survivors);
-			sys_jitter = SQRT(SQUARE(typesystem->jitter) +
-			    SQUARE(sys_jitter) + SQUARE(seljitter));
+			sys_jitter = SQRT(SQUARE(sys_jitter) +
+			    SQUARE(seljitter));
 		} else {
 			typesystem = sys_prefer;
 			sys_clockhop = 0;
