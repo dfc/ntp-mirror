@@ -1,3 +1,187 @@
+ChangeSet@1.2722, 2011-12-15 08:50:47+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P240
+  TAG: NTP_4_2_7P240
+
+  ChangeLog@1.1074 +1 -0
+    NTP_4_2_7P240
+
+  ntpd/ntpd-opts.c@1.245 +3 -3
+    NTP_4_2_7P240
+
+  ntpd/ntpd-opts.h@1.245 +3 -3
+    NTP_4_2_7P240
+
+  ntpd/ntpd-opts.texi@1.243 +2 -2
+    NTP_4_2_7P240
+
+  ntpd/ntpd.1ntpdman@1.56 +2 -2
+    NTP_4_2_7P240
+
+  ntpd/ntpd.1ntpdmdoc@1.56 +2 -2
+    NTP_4_2_7P240
+
+  ntpd/ntpd.man.in@1.56 +2 -2
+    NTP_4_2_7P240
+
+  ntpd/ntpd.mdoc.in@1.56 +2 -2
+    NTP_4_2_7P240
+
+  ntpdc/ntpdc-opts.c@1.240 +3 -3
+    NTP_4_2_7P240
+
+  ntpdc/ntpdc-opts.h@1.240 +3 -3
+    NTP_4_2_7P240
+
+  ntpdc/ntpdc-opts.texi@1.240 +2 -2
+    NTP_4_2_7P240
+
+  ntpdc/ntpdc.1ntpdcman@1.56 +2 -2
+    NTP_4_2_7P240
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.56 +2 -2
+    NTP_4_2_7P240
+
+  ntpdc/ntpdc.html@1.68 +2 -2
+    NTP_4_2_7P240
+
+  ntpdc/ntpdc.man.in@1.56 +2 -2
+    NTP_4_2_7P240
+
+  ntpdc/ntpdc.mdoc.in@1.56 +2 -2
+    NTP_4_2_7P240
+
+  ntpq/ntpq-opts.c@1.242 +3 -3
+    NTP_4_2_7P240
+
+  ntpq/ntpq-opts.h@1.242 +3 -3
+    NTP_4_2_7P240
+
+  ntpq/ntpq-opts.texi@1.242 +2 -2
+    NTP_4_2_7P240
+
+  ntpq/ntpq.1ntpqman@1.56 +2 -2
+    NTP_4_2_7P240
+
+  ntpq/ntpq.1ntpqmdoc@1.56 +2 -2
+    NTP_4_2_7P240
+
+  ntpq/ntpq.man.in@1.56 +2 -2
+    NTP_4_2_7P240
+
+  ntpq/ntpq.mdoc.in@1.56 +2 -2
+    NTP_4_2_7P240
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.242 +3 -3
+    NTP_4_2_7P240
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.242 +3 -3
+    NTP_4_2_7P240
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.242 +2 -2
+    NTP_4_2_7P240
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.56 +2 -2
+    NTP_4_2_7P240
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.56 +2 -2
+    NTP_4_2_7P240
+
+  ntpsnmpd/ntpsnmpd.man.in@1.56 +2 -2
+    NTP_4_2_7P240
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.56 +2 -2
+    NTP_4_2_7P240
+
+  packageinfo.sh@1.243 +1 -1
+    NTP_4_2_7P240
+
+  scripts/ntp-wait-opts.texi@1.60 +1 -1
+    NTP_4_2_7P240
+
+  scripts/ntp-wait.1ntp-waitman@1.56 +2 -2
+    NTP_4_2_7P240
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.56 +2 -2
+    NTP_4_2_7P240
+
+  scripts/ntp-wait.html@1.60 +1 -1
+    NTP_4_2_7P240
+
+  scripts/ntp-wait.man.in@1.56 +2 -2
+    NTP_4_2_7P240
+
+  scripts/ntp-wait.mdoc.in@1.56 +2 -2
+    NTP_4_2_7P240
+
+  sntp/sntp-opts.c@1.238 +3 -3
+    NTP_4_2_7P240
+
+  sntp/sntp-opts.h@1.238 +3 -3
+    NTP_4_2_7P240
+
+  sntp/sntp-opts.texi@1.238 +2 -2
+    NTP_4_2_7P240
+
+  sntp/sntp.1sntpman@1.58 +2 -2
+    NTP_4_2_7P240
+
+  sntp/sntp.1sntpmdoc@1.58 +2 -2
+    NTP_4_2_7P240
+
+  sntp/sntp.html@1.238 +2 -2
+    NTP_4_2_7P240
+
+  sntp/sntp.man.in@1.58 +2 -2
+    NTP_4_2_7P240
+
+  sntp/sntp.mdoc.in@1.58 +2 -2
+    NTP_4_2_7P240
+
+  util/ntp-keygen-opts.c@1.242 +3 -3
+    NTP_4_2_7P240
+
+  util/ntp-keygen-opts.h@1.242 +3 -3
+    NTP_4_2_7P240
+
+  util/ntp-keygen-opts.texi@1.243 +2 -2
+    NTP_4_2_7P240
+
+  util/ntp-keygen.1ntp-keygenman@1.56 +2 -2
+    NTP_4_2_7P240
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.56 +2 -2
+    NTP_4_2_7P240
+
+  util/ntp-keygen.man.in@1.56 +2 -2
+    NTP_4_2_7P240
+
+  util/ntp-keygen.mdoc.in@1.56 +2 -2
+    NTP_4_2_7P240
+
+ChangeSet@1.2721, 2011-12-15 03:27:02+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 2092] clock_select() selection jitter miscalculated.
+  [Bug 2093] Reintroduce smaller stratum factor to system peer metric.
+
+  ChangeLog@1.1073 +2 -0
+    [Bug 2092] clock_select() selection jitter miscalculated.
+    [Bug 2093] Reintroduce smaller stratum factor to system peer metric.
+
+  include/ntp_calendar.h@1.11 +14 -12
+    Reduce use of magic precomputed numbers in favor of construction.
+
+  include/ntp_unixtime.h@1.11 +5 -2
+    Reduce use of magic precomputed numbers in favor of construction.
+
+  libntp/humandate.c@1.11 +0 -1
+    Remove declaration now redundant with ntp_calendar.h
+
+  ntpd/ntp_proto.c@1.335 +157 -164
+    [Bug 2092] clock_select() selection jitter miscalculated.
+    [Bug 2093] Reintroduce smaller stratum factor to system peer metric.
+    Refactor clock_select() to use single peers array of new peer_select
+      struct instead of separate synch and error arrays kept in sync,
+      no longer sort peers array by selection metric.
+
 ChangeSet@1.2720, 2011-12-11 11:39:38+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P239
   TAG: NTP_4_2_7P239
