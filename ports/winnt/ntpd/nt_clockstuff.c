@@ -559,25 +559,27 @@ adj_systime(
 
 
 	sys_residual = dtemp / 1e6;
-	DPRINTF(3, ("adj_systime: %.9f -> %.9f residual %.9f adjtime %.9f\n", 
+	DPRINTF(3, ("adj_systime: %.9f -> %.9f residual %.9f", 
 		    now, 1e-6 * (TimeAdjustment * ppm_per_adjust_unit),
-		    sys_residual, adjtime_carry));
+		    sys_residual));
+	if (0. == adjtime_carry)
+		DPRINTF(3, ("\n"));
+	else
+		DPRINTF(3, (" adjtime %.9f\n", adjtime_carry));
 
 	/* only adjust the clock if adjustment changes */
 	TimeAdjustment += wintickadj;
 	if (last_Adj != TimeAdjustment) {
 		last_Adj = TimeAdjustment;
 		DPRINTF(2, ("SetSystemTimeAdjustment(%+ld)\n", TimeAdjustment));
-		rc = !SetSystemTimeAdjustment(clockperiod + TimeAdjustment, FALSE);
+		rc = SetSystemTimeAdjustment(clockperiod + TimeAdjustment, FALSE);
+		if (!rc)
+			msyslog(LOG_ERR, "Can't adjust time: %m");
 	} else {
-		rc = FALSE;
-	}
-	if (rc) {
-		msyslog(LOG_ERR, "Can't adjust time: %m");
-		return FALSE;
+		rc = TRUE;
 	}
 
-	return TRUE;
+	return rc;
 }
 
 

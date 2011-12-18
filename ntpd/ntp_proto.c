@@ -108,7 +108,7 @@ char	*sys_ident = NULL;	/* identity scheme */
  * TOS and multicast mapping stuff
  */
 int	sys_floor = 0;		/* cluster stratum floor */
-int	sys_ceiling = STRATUM_UNSPEC; /* cluster stratum ceiling */
+int	sys_ceiling = STRATUM_UNSPEC - 1; /* cluster stratum ceiling */
 int	sys_minsane = 1;	/* minimum candidates */
 int	sys_minclock = NTP_MINCLOCK; /* minimum candidates */
 int	sys_maxclock = NTP_MAXCLOCK; /* maximum candidates */
@@ -140,7 +140,7 @@ static	void	peer_xmit	(struct peer *);
 static	void	fast_xmit	(struct recvbuf *, int, keyid_t, int);
 static	void	pool_xmit	(struct peer *);
 static	void	clock_update	(struct peer *);
-static	int	default_get_precision (void);
+static	void	measure_precision(void);
 static	int	local_refid	(struct peer *);
 static	int	peer_unfit	(struct peer *);
 #ifdef AUTOKEY
@@ -1692,6 +1692,7 @@ process_packet(
 		p_del = fabs(t21 - t34);
 		p_offset = (t21 + t34) / 2.;
 	}
+	p_del = max(p_del, LOGTOD(sys_precision));
 	p_disp = LOGTOD(sys_precision) + LOGTOD(peer->precision) +
 	    clock_phi * p_del;
 
@@ -3804,9 +3805,10 @@ peer_unfit(
 /*
  * Find the precision of this particular machine
  */
-#define MINSTEP 100e-9		/* minimum clock increment (s) */
-#define MAXSTEP 20e-3		/* maximum clock increment (s) */
-#define MINLOOPS 5		/* minimum number of step samples */
+#define MINSTEP		20e-9	/* minimum clock increment (s) */
+#define MAXSTEP		1	/* maximum clock increment (s) */
+#define MINCHANGES	5	/* minimum number of step samples */
+#define MAXLOOPS	((int)(1. / MINSTEP))	/* avoid infinite loop */
 
 /*
  * This routine measures the system precision defined as the minimum of
@@ -3814,49 +3816,114 @@ peer_unfit(
  * clock. However, if a difference is less than MINSTEP, the clock has
  * been read more than once during a clock tick and the difference is
  * ignored. We set MINSTEP greater than zero in case something happens
- * like a cache miss.
+ * like a cache miss, and to tolerate underlying system clocks which
+ * ensure each reading is strictly greater than prior readings while
+ * using an underlying stepping (not interpolated) clock.
+ *
+ * sys_tick and sys_precision represent the time to read the clock for
+ * systems with high-precision clocks, and the tick interval or step
+ * size for lower-precision stepping clocks.
+ *
+ * This routine also measures the time to read the clock on stepping
+ * system clocks by counting the number of readings between changes of
+ * the underlying clock.  With either type of clock, the minimum time
+ * to read the clock is saved as sys_fuzz, and used to ensure the
+ * get_systime() readings always increase and are fuzzed below sys_fuzz.
  */
-int
-default_get_precision(void)
+void
+measure_precision(void)
 {
 	l_fp	val;		/* current seconds fraction */
 	l_fp	last;		/* last seconds fraction */
-	l_fp	diff;		/* difference */
+	l_fp	ldiff;		/* difference */
 	double	tick;		/* computed tick value */
-	double	dtemp;		/* scratch */
+	double	diff;		/* scratch */
 	int	i;		/* log2 precision */
+	int	changes;
+	long	repeats;
+	long	max_repeats;
 
 	/*
-	 * Loop to find precision value in seconds.
+	 * Loop to find precision value in seconds.  With sys_fuzz set
+	 * to zero, get_systime() disables its fuzzing of low bits.
+	 * measured_tick and sys_tick are zeroed to disable get_ostime()
+	 * low-precision clock simulation.
 	 */
 	tick = MAXSTEP;
-	i = 0;
+	sys_tick = 0;
+	measured_tick = 0;
+	set_sys_fuzz(0.);
+	max_repeats = 0;
+	repeats = 0;
+	changes = 0;
 	get_systime(&last);
-	while (1) {
+	for (i = 0; i < MAXLOOPS && changes < MINCHANGES; i++) {
 		get_systime(&val);
-		diff = val;
-		L_SUB(&diff, &last);
+		ldiff = val;
+		L_SUB(&ldiff, &last);
 		last = val;
-		LFPTOD(&diff, dtemp);
-		if (dtemp < MINSTEP)
-			continue;
+		LFPTOD(&ldiff, diff);
+		if (diff > MINSTEP) {
+			max_repeats = max(repeats, max_repeats);
+			repeats = 0;
+			changes++;
+			tick = min(diff, tick);
+		} else {
+			repeats++;
+		}
+	}
+	if (changes < MINCHANGES) {
+		msyslog(LOG_ERR, "Fatal error: precision could not be measured (MINSTEP too large?)");
+		exit(1);
+	}
+	measured_tick = tick;
+	set_sys_tick_precision(tick);
+	if (0 == max_repeats) {
+		set_sys_fuzz(tick);
+	} else {
+		set_sys_fuzz(tick / max_repeats);
+		msyslog(LOG_NOTICE, "proto: fuzz beneath %.3f usec",
+			sys_fuzz * 1e6);
+	}
 
-		if (dtemp < tick)
-			tick = dtemp;
-		if (++i >= MINLOOPS)
-			break;
+}
+
+
+void
+set_sys_tick_precision(
+	double tick
+	)
+{
+	int i;
+
+	if (tick > 1.) {
+		msyslog(LOG_ERR,
+			"unsupported tick %.3f > 1s ignored", tick);
+		return;
+	}
+	if (tick < measured_tick) {
+		msyslog(LOG_ERR,
+			"proto: tick %.3f less than measured tick %.3f, ignored",
+			tick, measured_tick);
+		return;
+	} else if (tick > measured_tick) {
+		msyslog(LOG_NOTICE,
+			"proto: truncating system clock to multiples of %.9f",
+			tick);
 	}
 	sys_tick = tick;
 
 	/*
 	 * Find the nearest power of two.
 	 */
-	msyslog(LOG_NOTICE, "proto: precision = %.3f usec", tick * 1e6);
-	for (i = 0; tick <= 1; i++)
+	for (i = 0; tick <= 1; i--)
 		tick *= 2;
 	if (tick - 1 > 1 - tick / 2)
-		i--;
-	return (-i);
+		i++;
+
+	sys_precision = (s_char)i;
+	msyslog(LOG_NOTICE, "proto: precision = %.3f usec (%d)",
+		sys_tick * 1e6, sys_precision);
 }
 
 
@@ -3881,7 +3948,7 @@ init_proto(void)
 	sys_rootdisp = 0;
 	L_CLR(&sys_reftime);
 	sys_jitter = 0;
-	sys_precision = (s_char)default_get_precision();
+	measure_precision();
 	get_systime(&dummy);
 	sys_survivors = 0;
 	sys_manycastserver = 0;
@@ -4021,10 +4088,6 @@ proto_config(
 		orphwait -= sys_orphwait;
 		sys_orphwait = (int)dvalue;
 		orphwait += sys_orphwait;
-		break;
-
-	case PROTO_ADJ:		/* tick increment (tick) */
-		sys_tick = dvalue;
 		break;
 
 	/*

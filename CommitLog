@@ -1,3 +1,251 @@
+ChangeSet@1.2725, 2011-12-18 22:08:57+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P241
+  TAG: NTP_4_2_7P241
+
+  ChangeLog@1.1077 +1 -0
+    NTP_4_2_7P241
+
+  ntpd/ntpd-opts.c@1.246 +3 -3
+    NTP_4_2_7P241
+
+  ntpd/ntpd-opts.h@1.246 +3 -3
+    NTP_4_2_7P241
+
+  ntpd/ntpd-opts.texi@1.244 +2 -2
+    NTP_4_2_7P241
+
+  ntpd/ntpd.1ntpdman@1.57 +2 -2
+    NTP_4_2_7P241
+
+  ntpd/ntpd.1ntpdmdoc@1.57 +2 -2
+    NTP_4_2_7P241
+
+  ntpd/ntpd.man.in@1.57 +2 -2
+    NTP_4_2_7P241
+
+  ntpd/ntpd.mdoc.in@1.57 +2 -2
+    NTP_4_2_7P241
+
+  ntpdc/ntpdc-opts.c@1.241 +3 -3
+    NTP_4_2_7P241
+
+  ntpdc/ntpdc-opts.h@1.241 +3 -3
+    NTP_4_2_7P241
+
+  ntpdc/ntpdc-opts.texi@1.241 +2 -2
+    NTP_4_2_7P241
+
+  ntpdc/ntpdc.1ntpdcman@1.57 +2 -2
+    NTP_4_2_7P241
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.57 +2 -2
+    NTP_4_2_7P241
+
+  ntpdc/ntpdc.html@1.69 +2 -2
+    NTP_4_2_7P241
+
+  ntpdc/ntpdc.man.in@1.57 +2 -2
+    NTP_4_2_7P241
+
+  ntpdc/ntpdc.mdoc.in@1.57 +2 -2
+    NTP_4_2_7P241
+
+  ntpq/ntpq-opts.c@1.243 +3 -3
+    NTP_4_2_7P241
+
+  ntpq/ntpq-opts.h@1.243 +3 -3
+    NTP_4_2_7P241
+
+  ntpq/ntpq-opts.texi@1.243 +2 -2
+    NTP_4_2_7P241
+
+  ntpq/ntpq.1ntpqman@1.57 +2 -2
+    NTP_4_2_7P241
+
+  ntpq/ntpq.1ntpqmdoc@1.57 +2 -2
+    NTP_4_2_7P241
+
+  ntpq/ntpq.man.in@1.57 +2 -2
+    NTP_4_2_7P241
+
+  ntpq/ntpq.mdoc.in@1.57 +2 -2
+    NTP_4_2_7P241
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.243 +3 -3
+    NTP_4_2_7P241
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.243 +3 -3
+    NTP_4_2_7P241
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.243 +2 -2
+    NTP_4_2_7P241
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.57 +2 -2
+    NTP_4_2_7P241
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.57 +2 -2
+    NTP_4_2_7P241
+
+  ntpsnmpd/ntpsnmpd.man.in@1.57 +2 -2
+    NTP_4_2_7P241
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.57 +2 -2
+    NTP_4_2_7P241
+
+  packageinfo.sh@1.244 +1 -1
+    NTP_4_2_7P241
+
+  scripts/ntp-wait-opts.texi@1.61 +1 -1
+    NTP_4_2_7P241
+
+  scripts/ntp-wait.1ntp-waitman@1.57 +2 -2
+    NTP_4_2_7P241
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.57 +2 -2
+    NTP_4_2_7P241
+
+  scripts/ntp-wait.html@1.61 +1 -1
+    NTP_4_2_7P241
+
+  scripts/ntp-wait.man.in@1.57 +2 -2
+    NTP_4_2_7P241
+
+  scripts/ntp-wait.mdoc.in@1.57 +2 -2
+    NTP_4_2_7P241
+
+  sntp/sntp-opts.c@1.239 +3 -3
+    NTP_4_2_7P241
+
+  sntp/sntp-opts.h@1.239 +3 -3
+    NTP_4_2_7P241
+
+  sntp/sntp-opts.texi@1.239 +2 -2
+    NTP_4_2_7P241
+
+  sntp/sntp.1sntpman@1.59 +2 -2
+    NTP_4_2_7P241
+
+  sntp/sntp.1sntpmdoc@1.59 +2 -2
+    NTP_4_2_7P241
+
+  sntp/sntp.html@1.239 +2 -2
+    NTP_4_2_7P241
+
+  sntp/sntp.man.in@1.59 +2 -2
+    NTP_4_2_7P241
+
+  sntp/sntp.mdoc.in@1.59 +2 -2
+    NTP_4_2_7P241
+
+  util/ntp-keygen-opts.c@1.243 +3 -3
+    NTP_4_2_7P241
+
+  util/ntp-keygen-opts.h@1.243 +3 -3
+    NTP_4_2_7P241
+
+  util/ntp-keygen-opts.texi@1.244 +2 -2
+    NTP_4_2_7P241
+
+  util/ntp-keygen.1ntp-keygenman@1.57 +2 -2
+    NTP_4_2_7P241
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.57 +2 -2
+    NTP_4_2_7P241
+
+  util/ntp-keygen.man.in@1.57 +2 -2
+    NTP_4_2_7P241
+
+  util/ntp-keygen.mdoc.in@1.57 +2 -2
+    NTP_4_2_7P241
+
+ChangeSet@1.2724, 2011-12-18 04:24:58+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 2015] Overriding sys_tick should recalculate sys_precision.
+  [Bug 2068] "tos ceiling" default and cap changed to 15.
+  Floor peer delay using system precision, as with jitter, reflecting
+    inability to measure shorter intervals.
+
+  ChangeLog@1.1076 +4 -0
+    [Bug 2015] Overriding sys_tick should recalculate sys_precision.
+    [Bug 2068] "tos ceiling" default and cap changed to 15.
+    Floor peer delay using system precision, as with jitter, reflecting
+      inability to measure shorter intervals.
+
+  include/ntp.h@1.202 +2 -1
+    move sys_tick override from proto_config() to loop_config()
+
+  include/ntp_stdlib.h@1.69 +1 -0
+    [Bug 2015] Overriding sys_tick should recalculate sys_precision.
+
+  include/ntp_unixtime.h@1.12 +2 -0
+    include timespecops.h and timevalops.h
+
+  include/ntpd.h@1.171 +1 -0
+    [Bug 2015] Overriding sys_tick should recalculate sys_precision.
+
+  libntp/systime.c@1.61 +11 -3
+    [Bug 2015] Overriding sys_tick should recalculate sys_precision.
+
+  ntpd/complete.conf@1.21 +1 -1
+    add "tinker tick 0.01" coverage
+
+  ntpd/ntp_config.c@1.296 +17 -4
+    support "tinker tick 0.01" syntax alongside older "tick 0.01"
+    [Bug 2068] "tos ceiling" default and cap changed to 15.
+
+  ntpd/ntp_control.c@1.178 +8 -2
+    Expose sys_fuzz to ntpq as nondefault system variable fuzz.
+
+  ntpd/ntp_io.c@1.364 +30 -25
+    [Bug 2015] Overriding sys_tick should recalculate sys_precision.
+
+  ntpd/ntp_loopfilter.c@1.169 +5 -1
+    move sys_tick override from proto_config() to loop_config()
+
+  ntpd/ntp_parser.c@1.78 +428 -424
+    Bison output for ntp_parser.y
+
+  ntpd/ntp_parser.y@1.72 +1 -0
+    support "tinker tick 0.01" syntax alongside older "tick 0.01"
+
+  ntpd/ntp_proto.c@1.337 +46 -17
+    [Bug 2015] Overriding sys_tick should recalculate sys_precision.
+    [Bug 2068] "tos ceiling" default and cap changed to 15.
+    Floor peer delay using system precision, as with jitter, reflecting
+      inability to measure shorter intervals.
+
+  ports/winnt/ntpd/nt_clockstuff.c@1.55 +6 -13
+    nonfunctional cleanup
+
+  util/ntp-keygen.c@1.88 +1 -2
+    remove now-redundant MAXHOSTNAME declaration (in ntp.h)
+
+ChangeSet@1.2713.1.1, 2011-12-17 02:30:42+00:00, davehart@shiny.ad.hartbrothers.com
+  [Bug 2037] Fuzzed non-interpolated clock may decrease.
+
+  ChangeLog@1.1065.1.1 +1 -0
+    [Bug 2037] Fuzzed non-interpolated clock may decrease.
+
+  include/ntp_fp.h@1.27 +7 -1
+    [Bug 2037] Fuzzed non-interpolated clock may decrease.
+
+  include/ntp_stdlib.h@1.68 +2 -1
+    [Bug 2037] Fuzzed non-interpolated clock may decrease.
+
+  libntp/systime.c@1.58.1.1 +151 -74
+    [Bug 2037] Fuzzed non-interpolated clock may decrease.
+
+  libntp/timespecops.c@1.8 +1 -1
+    [Bug 2037] Fuzzed non-interpolated clock may decrease.
+
+  ntpd/ntp_proto.c@1.332.1.1 +57 -23
+    [Bug 2037] Fuzzed non-interpolated clock may decrease.
+
+  ntpd/refclock_arc.c@1.27 +1 -1
+    [Bug 2037] Fuzzed non-interpolated clock may decrease.
+
+  ports/winnt/ntpd/nt_clockstuff.c@1.54 +11 -2
+    [Bug 2037] Fuzzed non-interpolated clock may decrease.
+
 ChangeSet@1.2722, 2011-12-15 08:50:47+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P240
   TAG: NTP_4_2_7P240
