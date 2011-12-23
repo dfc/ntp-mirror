@@ -1,3 +1,178 @@
+ChangeSet@1.2730, 2011-12-23 04:43:47+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P243
+  TAG: NTP_4_2_7P243
+
+  ChangeLog@1.1083 +1 -0
+    NTP_4_2_7P243
+
+  ntpd/ntpd-opts.c@1.248 +3 -3
+    NTP_4_2_7P243
+
+  ntpd/ntpd-opts.h@1.248 +3 -3
+    NTP_4_2_7P243
+
+  ntpd/ntpd-opts.texi@1.246 +2 -2
+    NTP_4_2_7P243
+
+  ntpd/ntpd.1ntpdman@1.59 +2 -2
+    NTP_4_2_7P243
+
+  ntpd/ntpd.1ntpdmdoc@1.59 +2 -2
+    NTP_4_2_7P243
+
+  ntpd/ntpd.man.in@1.59 +2 -2
+    NTP_4_2_7P243
+
+  ntpd/ntpd.mdoc.in@1.59 +2 -2
+    NTP_4_2_7P243
+
+  ntpdc/ntpdc-opts.c@1.243 +3 -3
+    NTP_4_2_7P243
+
+  ntpdc/ntpdc-opts.h@1.243 +3 -3
+    NTP_4_2_7P243
+
+  ntpdc/ntpdc-opts.texi@1.243 +2 -2
+    NTP_4_2_7P243
+
+  ntpdc/ntpdc.1ntpdcman@1.59 +2 -2
+    NTP_4_2_7P243
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.59 +2 -2
+    NTP_4_2_7P243
+
+  ntpdc/ntpdc.html@1.71 +2 -2
+    NTP_4_2_7P243
+
+  ntpdc/ntpdc.man.in@1.59 +2 -2
+    NTP_4_2_7P243
+
+  ntpdc/ntpdc.mdoc.in@1.59 +2 -2
+    NTP_4_2_7P243
+
+  ntpq/ntpq-opts.c@1.245 +3 -3
+    NTP_4_2_7P243
+
+  ntpq/ntpq-opts.h@1.245 +3 -3
+    NTP_4_2_7P243
+
+  ntpq/ntpq-opts.texi@1.245 +2 -2
+    NTP_4_2_7P243
+
+  ntpq/ntpq.1ntpqman@1.59 +2 -2
+    NTP_4_2_7P243
+
+  ntpq/ntpq.1ntpqmdoc@1.59 +2 -2
+    NTP_4_2_7P243
+
+  ntpq/ntpq.man.in@1.59 +2 -2
+    NTP_4_2_7P243
+
+  ntpq/ntpq.mdoc.in@1.59 +2 -2
+    NTP_4_2_7P243
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.245 +3 -3
+    NTP_4_2_7P243
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.245 +3 -3
+    NTP_4_2_7P243
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.245 +2 -2
+    NTP_4_2_7P243
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.59 +2 -2
+    NTP_4_2_7P243
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.59 +2 -2
+    NTP_4_2_7P243
+
+  ntpsnmpd/ntpsnmpd.man.in@1.59 +2 -2
+    NTP_4_2_7P243
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.59 +2 -2
+    NTP_4_2_7P243
+
+  packageinfo.sh@1.246 +1 -1
+    NTP_4_2_7P243
+
+  scripts/ntp-wait-opts.texi@1.63 +1 -1
+    NTP_4_2_7P243
+
+  scripts/ntp-wait.1ntp-waitman@1.59 +2 -2
+    NTP_4_2_7P243
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.59 +2 -2
+    NTP_4_2_7P243
+
+  scripts/ntp-wait.html@1.63 +1 -1
+    NTP_4_2_7P243
+
+  scripts/ntp-wait.man.in@1.59 +2 -2
+    NTP_4_2_7P243
+
+  scripts/ntp-wait.mdoc.in@1.59 +2 -2
+    NTP_4_2_7P243
+
+  sntp/sntp-opts.c@1.241 +3 -3
+    NTP_4_2_7P243
+
+  sntp/sntp-opts.h@1.241 +3 -3
+    NTP_4_2_7P243
+
+  sntp/sntp-opts.texi@1.241 +2 -2
+    NTP_4_2_7P243
+
+  sntp/sntp.1sntpman@1.61 +2 -2
+    NTP_4_2_7P243
+
+  sntp/sntp.1sntpmdoc@1.61 +2 -2
+    NTP_4_2_7P243
+
+  sntp/sntp.html@1.241 +2 -2
+    NTP_4_2_7P243
+
+  sntp/sntp.man.in@1.61 +2 -2
+    NTP_4_2_7P243
+
+  sntp/sntp.mdoc.in@1.61 +2 -2
+    NTP_4_2_7P243
+
+  util/ntp-keygen-opts.c@1.245 +3 -3
+    NTP_4_2_7P243
+
+  util/ntp-keygen-opts.h@1.245 +3 -3
+    NTP_4_2_7P243
+
+  util/ntp-keygen-opts.texi@1.246 +2 -2
+    NTP_4_2_7P243
+
+  util/ntp-keygen.1ntp-keygenman@1.59 +2 -2
+    NTP_4_2_7P243
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.59 +2 -2
+    NTP_4_2_7P243
+
+  util/ntp-keygen.man.in@1.59 +2 -2
+    NTP_4_2_7P243
+
+  util/ntp-keygen.mdoc.in@1.59 +2 -2
+    NTP_4_2_7P243
+
+ChangeSet@1.2729, 2011-12-22 23:22:36-05:00, stenn@deacon.udel.edu
+  typo
+
+  ChangeLog@1.1082 +1 -1
+    typo
+
+ChangeSet@1.2728, 2011-12-22 23:07:30-05:00, stenn@deacon.udel.edu
+   [Bug 2095] ntptrace now needs 'rv' instead pf 'pstat', reported by Michael Tatarinov
+
+  ChangeLog@1.1081 +2 -0
+     [Bug 2095] ntptrace now needs 'rv' instead pf 'pstat', reported by Michael Tatarinov
+
+  scripts/ntptrace.in@1.7 +1 -1
+     [Bug 2095] ntptrace now needs 'rv' instead pf 'pstat', reported by Michael Tatarinov
+
 ChangeSet@1.2727, 2011-12-21 21:08:34+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P242
   TAG: NTP_4_2_7P242
