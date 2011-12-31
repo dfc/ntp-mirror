@@ -1,3 +1,201 @@
+ChangeSet@1.2736, 2011-12-31 11:27:35+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P245
+  TAG: NTP_4_2_7P245
+
+  ChangeLog@1.1088 +1 -0
+    NTP_4_2_7P245
+
+  ntpd/ntpd-opts.c@1.250 +3 -3
+    NTP_4_2_7P245
+
+  ntpd/ntpd-opts.h@1.250 +3 -3
+    NTP_4_2_7P245
+
+  ntpd/ntpd-opts.texi@1.248 +2 -2
+    NTP_4_2_7P245
+
+  ntpd/ntpd.1ntpdman@1.61 +2 -2
+    NTP_4_2_7P245
+
+  ntpd/ntpd.1ntpdmdoc@1.61 +2 -2
+    NTP_4_2_7P245
+
+  ntpd/ntpd.man.in@1.61 +2 -2
+    NTP_4_2_7P245
+
+  ntpd/ntpd.mdoc.in@1.61 +2 -2
+    NTP_4_2_7P245
+
+  ntpdc/ntpdc-opts.c@1.245 +3 -3
+    NTP_4_2_7P245
+
+  ntpdc/ntpdc-opts.h@1.245 +3 -3
+    NTP_4_2_7P245
+
+  ntpdc/ntpdc-opts.texi@1.245 +2 -2
+    NTP_4_2_7P245
+
+  ntpdc/ntpdc.1ntpdcman@1.61 +2 -2
+    NTP_4_2_7P245
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.61 +2 -2
+    NTP_4_2_7P245
+
+  ntpdc/ntpdc.html@1.73 +2 -2
+    NTP_4_2_7P245
+
+  ntpdc/ntpdc.man.in@1.61 +2 -2
+    NTP_4_2_7P245
+
+  ntpdc/ntpdc.mdoc.in@1.61 +2 -2
+    NTP_4_2_7P245
+
+  ntpq/ntpq-opts.c@1.247 +3 -3
+    NTP_4_2_7P245
+
+  ntpq/ntpq-opts.h@1.247 +3 -3
+    NTP_4_2_7P245
+
+  ntpq/ntpq-opts.texi@1.247 +2 -2
+    NTP_4_2_7P245
+
+  ntpq/ntpq.1ntpqman@1.61 +2 -2
+    NTP_4_2_7P245
+
+  ntpq/ntpq.1ntpqmdoc@1.61 +2 -2
+    NTP_4_2_7P245
+
+  ntpq/ntpq.man.in@1.61 +2 -2
+    NTP_4_2_7P245
+
+  ntpq/ntpq.mdoc.in@1.61 +2 -2
+    NTP_4_2_7P245
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.247 +3 -3
+    NTP_4_2_7P245
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.247 +3 -3
+    NTP_4_2_7P245
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.247 +2 -2
+    NTP_4_2_7P245
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.61 +2 -2
+    NTP_4_2_7P245
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.61 +2 -2
+    NTP_4_2_7P245
+
+  ntpsnmpd/ntpsnmpd.man.in@1.61 +2 -2
+    NTP_4_2_7P245
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.61 +2 -2
+    NTP_4_2_7P245
+
+  packageinfo.sh@1.248 +1 -1
+    NTP_4_2_7P245
+
+  scripts/ntp-wait-opts.texi@1.65 +1 -1
+    NTP_4_2_7P245
+
+  scripts/ntp-wait.1ntp-waitman@1.61 +2 -2
+    NTP_4_2_7P245
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.61 +2 -2
+    NTP_4_2_7P245
+
+  scripts/ntp-wait.html@1.65 +1 -1
+    NTP_4_2_7P245
+
+  scripts/ntp-wait.man.in@1.61 +2 -2
+    NTP_4_2_7P245
+
+  scripts/ntp-wait.mdoc.in@1.61 +2 -2
+    NTP_4_2_7P245
+
+  sntp/sntp-opts.c@1.243 +3 -3
+    NTP_4_2_7P245
+
+  sntp/sntp-opts.h@1.243 +3 -3
+    NTP_4_2_7P245
+
+  sntp/sntp-opts.texi@1.243 +2 -2
+    NTP_4_2_7P245
+
+  sntp/sntp.1sntpman@1.63 +2 -2
+    NTP_4_2_7P245
+
+  sntp/sntp.1sntpmdoc@1.63 +2 -2
+    NTP_4_2_7P245
+
+  sntp/sntp.html@1.243 +2 -2
+    NTP_4_2_7P245
+
+  sntp/sntp.man.in@1.63 +2 -2
+    NTP_4_2_7P245
+
+  sntp/sntp.mdoc.in@1.63 +2 -2
+    NTP_4_2_7P245
+
+  util/ntp-keygen-opts.c@1.247 +3 -3
+    NTP_4_2_7P245
+
+  util/ntp-keygen-opts.h@1.247 +3 -3
+    NTP_4_2_7P245
+
+  util/ntp-keygen-opts.texi@1.248 +2 -2
+    NTP_4_2_7P245
+
+  util/ntp-keygen.1ntp-keygenman@1.61 +2 -2
+    NTP_4_2_7P245
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.61 +2 -2
+    NTP_4_2_7P245
+
+  util/ntp-keygen.man.in@1.61 +2 -2
+    NTP_4_2_7P245
+
+  util/ntp-keygen.mdoc.in@1.61 +2 -2
+    NTP_4_2_7P245
+
+ChangeSet@1.2735, 2011-12-30 21:10:00-05:00, stenn@deacon.udel.edu
+  typo
+
+  ChangeLog@1.1087 +3 -2
+    typo
+
+ChangeSet@1.2734, 2011-12-30 12:17:49+01:00, jnperlin@hydra.localnet
+  [Bug2100] conversion timespec/timeval <--> l_fp fixed
+
+  ChangeLog@1.1086 +2 -0
+    [Bug2100] conversion timespec/timeval <--> l_fp fixed
+
+  libntp/timespecops.c@1.9 +2 -2
+    [Bug2100] conversion l_fp --> timespec fixed
+
+  libntp/timevalops.c@1.8 +2 -2
+    [Bug2100] conversion lfp --> timeval fixed
+
+ChangeSet@1.2733, 2011-12-30 12:12:49+01:00, jnperlin@hydra.localnet
+  add test cases to reveal bug#2100
+  cleanup of test code
+
+  tests/libntp/timespecops.cpp@1.7 +229 -130
+    add test cases to reveal bug#2100
+    synchronise test cases & coding between timeval <--> timespec
+
+  tests/libntp/timestructs.cpp@1.2 +34 -1
+    use 'lfptoa' for printing l_fp values
+    timespec closeness predicate implementation
+
+  tests/libntp/timestructs.h@1.2 +27 -0
+    added copy C'TORs to timespec/timeval wrappers,
+    added a timespec closeness predicate class
+
+  tests/libntp/timevalops.cpp@1.7 +109 -45
+    add test cases to reveal bug#2100
+    synchronise test cases & coding between timeval <--> timespec
+
 ChangeSet@1.2732, 2011-12-25 11:32:25+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P244
   TAG: NTP_4_2_7P244
