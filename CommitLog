@@ -1,3 +1,366 @@
+ChangeSet@1.2738, 2012-01-06 22:04:11+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P246
+  TAG: NTP_4_2_7P246
+
+  ChangeLog@1.1090 +1 -0
+    NTP_4_2_7P246
+
+  ntpd/ntpd-opts.c@1.251 +3 -3
+    NTP_4_2_7P246
+
+  ntpd/ntpd-opts.h@1.251 +3 -3
+    NTP_4_2_7P246
+
+  ntpd/ntpd-opts.texi@1.249 +2 -2
+    NTP_4_2_7P246
+
+  ntpd/ntpd.1ntpdman@1.62 +2 -2
+    NTP_4_2_7P246
+
+  ntpd/ntpd.1ntpdmdoc@1.62 +2 -2
+    NTP_4_2_7P246
+
+  ntpd/ntpd.man.in@1.62 +2 -2
+    NTP_4_2_7P246
+
+  ntpd/ntpd.mdoc.in@1.62 +2 -2
+    NTP_4_2_7P246
+
+  ntpdc/ntpdc-opts.c@1.246 +3 -3
+    NTP_4_2_7P246
+
+  ntpdc/ntpdc-opts.h@1.246 +3 -3
+    NTP_4_2_7P246
+
+  ntpdc/ntpdc-opts.texi@1.246 +2 -2
+    NTP_4_2_7P246
+
+  ntpdc/ntpdc.1ntpdcman@1.62 +2 -2
+    NTP_4_2_7P246
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.62 +2 -2
+    NTP_4_2_7P246
+
+  ntpdc/ntpdc.html@1.74 +2 -2
+    NTP_4_2_7P246
+
+  ntpdc/ntpdc.man.in@1.62 +2 -2
+    NTP_4_2_7P246
+
+  ntpdc/ntpdc.mdoc.in@1.62 +2 -2
+    NTP_4_2_7P246
+
+  ntpq/ntpq-opts.c@1.248 +3 -3
+    NTP_4_2_7P246
+
+  ntpq/ntpq-opts.h@1.248 +3 -3
+    NTP_4_2_7P246
+
+  ntpq/ntpq-opts.texi@1.248 +2 -2
+    NTP_4_2_7P246
+
+  ntpq/ntpq.1ntpqman@1.62 +2 -2
+    NTP_4_2_7P246
+
+  ntpq/ntpq.1ntpqmdoc@1.62 +2 -2
+    NTP_4_2_7P246
+
+  ntpq/ntpq.man.in@1.62 +2 -2
+    NTP_4_2_7P246
+
+  ntpq/ntpq.mdoc.in@1.62 +2 -2
+    NTP_4_2_7P246
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.248 +3 -3
+    NTP_4_2_7P246
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.248 +3 -3
+    NTP_4_2_7P246
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.248 +2 -2
+    NTP_4_2_7P246
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.62 +2 -2
+    NTP_4_2_7P246
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.62 +2 -2
+    NTP_4_2_7P246
+
+  ntpsnmpd/ntpsnmpd.man.in@1.62 +2 -2
+    NTP_4_2_7P246
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.62 +2 -2
+    NTP_4_2_7P246
+
+  packageinfo.sh@1.249 +1 -1
+    NTP_4_2_7P246
+
+  scripts/ntp-wait-opts.texi@1.66 +1 -1
+    NTP_4_2_7P246
+
+  scripts/ntp-wait.1ntp-waitman@1.62 +2 -2
+    NTP_4_2_7P246
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.62 +2 -2
+    NTP_4_2_7P246
+
+  scripts/ntp-wait.html@1.66 +1 -1
+    NTP_4_2_7P246
+
+  scripts/ntp-wait.man.in@1.62 +2 -2
+    NTP_4_2_7P246
+
+  scripts/ntp-wait.mdoc.in@1.62 +2 -2
+    NTP_4_2_7P246
+
+  sntp/sntp-opts.c@1.244 +3 -3
+    NTP_4_2_7P246
+
+  sntp/sntp-opts.h@1.244 +3 -3
+    NTP_4_2_7P246
+
+  sntp/sntp-opts.texi@1.244 +2 -2
+    NTP_4_2_7P246
+
+  sntp/sntp.1sntpman@1.64 +2 -2
+    NTP_4_2_7P246
+
+  sntp/sntp.1sntpmdoc@1.64 +2 -2
+    NTP_4_2_7P246
+
+  sntp/sntp.html@1.244 +2 -2
+    NTP_4_2_7P246
+
+  sntp/sntp.man.in@1.64 +2 -2
+    NTP_4_2_7P246
+
+  sntp/sntp.mdoc.in@1.64 +2 -2
+    NTP_4_2_7P246
+
+  util/ntp-keygen-opts.c@1.248 +3 -3
+    NTP_4_2_7P246
+
+  util/ntp-keygen-opts.h@1.248 +3 -3
+    NTP_4_2_7P246
+
+  util/ntp-keygen-opts.texi@1.249 +2 -2
+    NTP_4_2_7P246
+
+  util/ntp-keygen.1ntp-keygenman@1.62 +2 -2
+    NTP_4_2_7P246
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.62 +2 -2
+    NTP_4_2_7P246
+
+  util/ntp-keygen.man.in@1.62 +2 -2
+    NTP_4_2_7P246
+
+  util/ntp-keygen.mdoc.in@1.62 +2 -2
+    NTP_4_2_7P246
+
+ChangeSet@1.2732.1.1, 2012-01-05 19:29:42+00:00, davehart@dlh-7551.ad.hartbrothers.com
+  [Bug 2104] ntpdc fault with oversize -c command.
+  [Bug 2106] Fix warnings when using -Wformat-security.
+  Refactor timespecops.h and timevalops.h into inline functions.
+
+  BitKeeper/deleted/0e/fptoa.c~3e480692@1.5 +0 -0
+    Rename: libntp/fptoa.c -> BitKeeper/deleted/0e/fptoa.c~3e480692
+
+  BitKeeper/deleted/22/mfptoa.c~3e480692@1.5 +0 -0
+    Rename: libntp/mfptoa.c -> BitKeeper/deleted/22/mfptoa.c~3e480692
+
+  BitKeeper/deleted/40/tsftomsu.c~3e480692@1.5 +0 -0
+    Rename: libntp/tsftomsu.c -> BitKeeper/deleted/40/tsftomsu.c~3e480692
+
+  BitKeeper/deleted/6d/mfptoms.c~3e480692@1.5 +0 -0
+    Rename: libntp/mfptoms.c -> BitKeeper/deleted/6d/mfptoms.c~3e480692
+
+  BitKeeper/deleted/84/tvtots.c~3e480692@1.5 +0 -0
+    Rename: libntp/tvtots.c -> BitKeeper/deleted/84/tvtots.c~3e480692
+
+  BitKeeper/deleted/b0/tstotv.c~3e480692@1.5 +0 -0
+    Rename: libntp/tstotv.c -> BitKeeper/deleted/b0/tstotv.c~3e480692
+
+  BitKeeper/deleted/b2/msutotsf.c~3e480692@1.5 +0 -0
+    Rename: libntp/msutotsf.c -> BitKeeper/deleted/b2/msutotsf.c~3e480692
+
+  BitKeeper/deleted/b2/timespecops.c~89e74bdf8b9e22c4@1.8.1.1 +0 -0
+    Rename: libntp/timespecops.c -> BitKeeper/deleted/b2/timespecops.c~89e74bdf8b9e22c4
+
+  BitKeeper/deleted/ed/tsftomsu.cpp~5ef492abb78ec38b@1.2 +0 -0
+    Rename: tests/libntp/tsftomsu.cpp -> BitKeeper/deleted/ed/tsftomsu.cpp~5ef492abb78ec38b
+
+  BitKeeper/deleted/f5/fptoms.c~3e480692@1.5 +0 -0
+    Rename: libntp/fptoms.c -> BitKeeper/deleted/f5/fptoms.c~3e480692
+
+  BitKeeper/etc/ignore@1.84 +1 -0
+    added ports/winnt/vs2008/ntp.suo
+
+  ChangeLog@1.1085.1.1 +3 -0
+    [Bug 2104] ntpdc fault with oversize -c command.
+    [Bug 2106] Fix warnings when using -Wformat-security.
+    Refactor timespecops.h and timevalops.h into inline functions.
+
+  deps-ver@1.6 +1 -1
+    No longer building some libntp source files can trigger breakage via
+      stale Makefiles including nonexistent .deps/*.Po files.  Bumping
+      deps-ver cleans older .deps dirs to cure the problem.
+
+  depsver.mf@1.3 +3 -10
+    Support tests/libntp use of depsver.mf by removing requirement that
+      consuming Makefile.am files be no deeper than one subdirectory from
+      the top $srcdir.
+
+  include/ntp_fp.h@1.28 +83 -59
+    remove lfp.l_f signed fraction, which has little legit use.
+    remove unused fraction argument from M_ISNEG().
+    style cleanup.
+
+  include/ntp_stdlib.h@1.70 +3 -3
+    use u_int32 not u_long for mfpto*() l_fp halves
+
+  include/ntp_types.h@1.31 +9 -0
+    provide NONEMPTY_TRANSLATION_UNIT macro for conditionally-compiled files.
+
+  include/ntp_unixtime.h@1.13 +1 -98
+    consolidate timeval conversion in timevalops.[ch]
+
+  include/timespecops.h@1.5 +295 -46
+    experiment with two levels of inlining timespecops/timevalops
+
+  include/timevalops.h@1.4 +369 -38
+    experiment with two levels of inlining timespecops/timevalops
+
+  lib/isc/include/isc/util.h@1.6 +1 -1
+    suppress "defined but not used" warning re: nonempty_translation_unit.
+
+  lib/isc/unix/ifiter_sysctl.c@1.17 +5 -4
+    [Bug 2106] Fix warnings when using -Wformat-security.
+
+  libntp/Makefile.am@1.63 +0 -9
+    consolidate several single-function source files
+
+  libntp/buftvtots.c@1.6 +7 -22
+    consolidate timeval conversion in timevalops.[ch]
+
+  libntp/dofptoa.c@1.9 +40 -0
+    consolidate several single-function source files
+
+  libntp/dolfptoa.c@1.11 +42 -3
+    consolidate several single-function source files
+
+  libntp/ntp_calendar.c@1.10 +1 -1
+    remove unused M_ISNEG() fraction argument
+
+  libntp/systime.c@1.62 +34 -48
+    Refine recent get_systime() fuzzing changes on non-interpolated clocks.
+      Conditionalize less iin get_systime() so measure_precision() sees
+      performance while calibrating which is closer to get_systime() use
+      later.  Instead of comparing two doubles to decide if the rarely-
+      used simulation of a low-precision clock is configured via "tinker
+      tick", use a Bool-like int trunc_os_clock.
+
+  libntp/timevalops.c@1.7.1.1 +278 -347
+    refactor time*ops.h with renamed inline functions
+
+  libntp/work_thread.c@1.12 +1 -1
+    experiment with two levels of inlining timespecops/timevalops
+
+  libparse/clk_trimtsip.c@1.11 +1 -1
+    move timeval fraction macros to timevalops.h
+
+  libparse/parse.c@1.15 +1 -1
+    move timeval fraction macros to timevalops.h
+
+  ntpd/ntp_io.c@1.365 +3 -3
+    include timevalops.h explicitly
+
+  ntpd/ntp_proto.c@1.338 +41 -22
+    Minor refinement of prior precision and fuzz determination changes.
+
+  ntpd/ntp_request.c@1.109 +1 -1
+    remove l_fp.l_f signed fraction
+
+  ntpd/refclock_arc.c@1.28 +4 -2
+    remove l_fp.l_f signed fraction
+
+  ntpd/refclock_chu.c@1.53 +4 -2
+    remove l_fp.l_f signed fraction
+
+  ntpd/refclock_datum.c@1.20 +4 -2
+    move timeval fraction macros to timevalops.h
+
+  ntpd/refclock_leitch.c@1.15 +4 -2
+    move milllisecond/l_fp conversion macro to timevalops.h
+
+  ntpd/refclock_msfees.c@1.16 +7 -6
+    use tval_stamp_to_lfp() rather than buftvtots()
+
+  ntpd/refclock_nmea.c@1.65 +5 -3
+    refactor time*ops.h with renamed inline functions
+
+  ntpd/refclock_parse.c@1.63 +15 -34
+    use tval_stamp_to_lfp() rather than buftvtots().
+    remove l_fp.l_f signed fraction.
+
+  ntpd/refclock_shm.c@1.23 +7 -5
+    move timeval fraction macros to timevalops.h
+
+  ntpdate/ntpdate.c@1.90 +1 -1
+    move timeval fraction macros to timevalops.h
+
+  ntpdc/ntpdc.c@1.98 +5 -0
+    [Bug 2104] ntpdc fault with oversize -c command.
+
+  ports/winnt/include/termios.h@1.15 +1 -0
+    add overlooked tcflush() prototype referenced by refclock_parse.c
+
+  ports/winnt/vs2005/libntp.vcproj@1.21 +0 -36
+    consolidate several single-function source files
+
+  ports/winnt/vs2008/libntp/libntp.vcproj@1.44 +2 -38
+    consolidate several single-function source files
+
+  ports/winnt/vs2008/ntpd/ntpd.vcproj@1.42 +8 -0
+    add timespecops.h and timevalops.h references
+
+  sntp/main.c@1.80 +4 -4
+    refactor time*ops.h with renamed inline functions
+
+  tests/libntp/Makefile.am@1.37 +0 -1
+    remove tsftomsu.cpp as tested code was unused and removed.
+
+  tests/libntp/lfptostr.cpp@1.3 +2 -2
+    remove l_fp.l_f signed fraction
+
+  tests/libntp/strtolfp.cpp@1.9 +1 -1
+    remove l_fp.l_f signed fraction
+
+  tests/libntp/timespecops.cpp@1.6.1.1 +260 -144
+    refactor time*ops.h with renamed inline functions (thanks to Juergen
+      for helping refactor the tests).
+
+  tests/libntp/timestructs.cpp@1.1.1.1 +36 -7
+    refactor time*ops.h with renamed inline functions
+
+  tests/libntp/timestructs.h@1.1.1.1 +28 -2
+    Cherry-picked from Juergen's [Bug 2100] fix
+
+  tests/libntp/timevalops.cpp@1.6.1.1 +140 -59
+    experiment with two levels of inlining timespecops/timevalops
+
+  tests/libntp/tstotv.cpp@1.2 +1 -1
+    move timeval fraction macros to timevalops.h
+
+  tests/libntp/tvtots.cpp@1.6 +1 -1
+    move timeval fraction macros to timevalops.h
+
+  util/ntp-keygen.c@1.89 +1 -1
+    Resolve MAXFILENAME redefinition warning.
+
+  util/ntptime.c@1.24 +8 -1
+    move timeval fraction macros to timevalops.h
+
 ChangeSet@1.2736, 2011-12-31 11:27:35+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P245
   TAG: NTP_4_2_7P245
