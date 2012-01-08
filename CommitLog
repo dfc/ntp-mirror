@@ -1,3 +1,229 @@
+ChangeSet@1.2744, 2012-01-08 23:14:53+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P248
+  TAG: NTP_4_2_7P248
+
+  ChangeLog@1.1094 +1 -0
+    NTP_4_2_7P248
+
+  ntpd/ntpd-opts.c@1.253 +3 -3
+    NTP_4_2_7P248
+
+  ntpd/ntpd-opts.h@1.253 +3 -3
+    NTP_4_2_7P248
+
+  ntpd/ntpd-opts.texi@1.251 +2 -2
+    NTP_4_2_7P248
+
+  ntpd/ntpd.1ntpdman@1.64 +2 -2
+    NTP_4_2_7P248
+
+  ntpd/ntpd.1ntpdmdoc@1.64 +2 -2
+    NTP_4_2_7P248
+
+  ntpd/ntpd.man.in@1.64 +2 -2
+    NTP_4_2_7P248
+
+  ntpd/ntpd.mdoc.in@1.64 +2 -2
+    NTP_4_2_7P248
+
+  ntpdc/ntpdc-opts.c@1.248 +3 -3
+    NTP_4_2_7P248
+
+  ntpdc/ntpdc-opts.h@1.248 +3 -3
+    NTP_4_2_7P248
+
+  ntpdc/ntpdc-opts.texi@1.248 +2 -2
+    NTP_4_2_7P248
+
+  ntpdc/ntpdc.1ntpdcman@1.64 +2 -2
+    NTP_4_2_7P248
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.64 +2 -2
+    NTP_4_2_7P248
+
+  ntpdc/ntpdc.html@1.76 +2 -2
+    NTP_4_2_7P248
+
+  ntpdc/ntpdc.man.in@1.64 +2 -2
+    NTP_4_2_7P248
+
+  ntpdc/ntpdc.mdoc.in@1.64 +2 -2
+    NTP_4_2_7P248
+
+  ntpq/ntpq-opts.c@1.250 +3 -3
+    NTP_4_2_7P248
+
+  ntpq/ntpq-opts.h@1.250 +3 -3
+    NTP_4_2_7P248
+
+  ntpq/ntpq-opts.texi@1.250 +2 -2
+    NTP_4_2_7P248
+
+  ntpq/ntpq.1ntpqman@1.64 +2 -2
+    NTP_4_2_7P248
+
+  ntpq/ntpq.1ntpqmdoc@1.64 +2 -2
+    NTP_4_2_7P248
+
+  ntpq/ntpq.man.in@1.64 +2 -2
+    NTP_4_2_7P248
+
+  ntpq/ntpq.mdoc.in@1.64 +2 -2
+    NTP_4_2_7P248
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.250 +3 -3
+    NTP_4_2_7P248
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.250 +3 -3
+    NTP_4_2_7P248
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.250 +2 -2
+    NTP_4_2_7P248
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.64 +2 -2
+    NTP_4_2_7P248
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.64 +2 -2
+    NTP_4_2_7P248
+
+  ntpsnmpd/ntpsnmpd.man.in@1.64 +2 -2
+    NTP_4_2_7P248
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.64 +2 -2
+    NTP_4_2_7P248
+
+  packageinfo.sh@1.251 +1 -1
+    NTP_4_2_7P248
+
+  scripts/ntp-wait-opts.texi@1.68 +1 -1
+    NTP_4_2_7P248
+
+  scripts/ntp-wait.1ntp-waitman@1.64 +2 -2
+    NTP_4_2_7P248
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.64 +2 -2
+    NTP_4_2_7P248
+
+  scripts/ntp-wait.html@1.68 +1 -1
+    NTP_4_2_7P248
+
+  scripts/ntp-wait.man.in@1.64 +2 -2
+    NTP_4_2_7P248
+
+  scripts/ntp-wait.mdoc.in@1.64 +2 -2
+    NTP_4_2_7P248
+
+  sntp/sntp-opts.c@1.246 +3 -3
+    NTP_4_2_7P248
+
+  sntp/sntp-opts.h@1.246 +3 -3
+    NTP_4_2_7P248
+
+  sntp/sntp-opts.texi@1.246 +2 -2
+    NTP_4_2_7P248
+
+  sntp/sntp.1sntpman@1.66 +2 -2
+    NTP_4_2_7P248
+
+  sntp/sntp.1sntpmdoc@1.66 +2 -2
+    NTP_4_2_7P248
+
+  sntp/sntp.html@1.246 +2 -2
+    NTP_4_2_7P248
+
+  sntp/sntp.man.in@1.66 +2 -2
+    NTP_4_2_7P248
+
+  sntp/sntp.mdoc.in@1.66 +2 -2
+    NTP_4_2_7P248
+
+  util/ntp-keygen-opts.c@1.250 +3 -3
+    NTP_4_2_7P248
+
+  util/ntp-keygen-opts.h@1.250 +3 -3
+    NTP_4_2_7P248
+
+  util/ntp-keygen-opts.texi@1.251 +2 -2
+    NTP_4_2_7P248
+
+  util/ntp-keygen.1ntp-keygenman@1.64 +2 -2
+    NTP_4_2_7P248
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.64 +2 -2
+    NTP_4_2_7P248
+
+  util/ntp-keygen.man.in@1.64 +2 -2
+    NTP_4_2_7P248
+
+  util/ntp-keygen.mdoc.in@1.64 +2 -2
+    NTP_4_2_7P248
+
+ChangeSet@1.2743, 2012-01-08 12:02:32+00:00, davehart@dlh-7551.ad.hartbrothers.com
+  [Bug 2109] "make clean check" is broken with gtest available.
+  [Bug 2110] systime.c typo breaks build on microsecond clocks.
+  Use $(MAKE) $(AM_MAKEFLAGS) for submakes.
+
+  ChangeLog@1.1093 +2 -0
+    [Bug 2109] "make clean check" is broken with gtest available.
+    [Bug 2110] systime.c typo breaks build on microsecond clocks.
+
+  Makefile.am@1.115 +1 -1
+    use $(MAKE) $(AM_MAKEFLAGS) for submakes
+
+  check-libopts.mf@1.2 +1 -1
+    use $(MAKE) $(AM_MAKEFLAGS) for submakes
+
+  depsver.mf@1.4 +2 -2
+    use $(MAKE) $(AM_MAKEFLAGS) for submakes
+
+  libntp/systime.c@1.63 +1 -1
+    [Bug 2110] systime.c typo breaks build on microsecond clocks.
+
+  ntpd/Makefile.am@1.112 +4 -4
+    use $(MAKE) $(AM_MAKEFLAGS) for submakes
+
+  ntpdate/Makefile.am@1.33 +1 -1
+    use $(MAKE) $(AM_MAKEFLAGS) for submakes
+
+  ntpdc/Makefile.am@1.69 +1 -1
+    use $(MAKE) $(AM_MAKEFLAGS) for submakes
+
+  ntpq/Makefile.am@1.65 +1 -1
+    use $(MAKE) $(AM_MAKEFLAGS) for submakes
+
+  sntp/Makefile.am@1.70 +31 -24
+    [Bug 2109] "make clean check" is broken with gtest available.
+
+  sntp/check-libntp.mf@1.2 +1 -1
+    use $(MAKE) $(AM_MAKEFLAGS) for submakes
+
+  sntp/check-libopts.mf@1.2 +1 -1
+    use $(MAKE) $(AM_MAKEFLAGS) for submakes
+
+  sntp/include/Makefile.am@1.5 +2 -2
+    use $(MAKE) $(AM_MAKEFLAGS) for submakes
+
+  sntp/main.c@1.81 +3 -3
+    Pass version string to sntp_main() as arg instead of global to remove main.o dependency on version.o for libsntp.a.
+
+  sntp/main.h@1.7 +1 -1
+    Pass version string to sntp_main() as arg instead of global to remove main.o dependency on version.o for libsntp.a.
+
+  sntp/sntp.c@1.4 +1 -1
+    Pass version string to sntp_main() as arg instead of global to remove main.o dependency on version.o for libsntp.a.
+
+  sntp/tests/Makefile.am@1.26 +13 -15
+    [Bug 2109] "make clean check" is broken with gtest available.
+
+  sntp/tests/utilities.cpp@1.8 +1 -0
+    Provide stub Version string for libntp.a/ntp_libopts.o
+
+  tests/libntp/Makefile.am@1.38 +1 -1
+    use $(MAKE) $(AM_MAKEFLAGS) for submakes
+
+  util/Makefile.am@1.68 +1 -1
+    use $(MAKE) $(AM_MAKEFLAGS) for submakes
+
 ChangeSet@1.2742, 2012-01-07 01:05:31+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P247
   TAG: NTP_4_2_7P247

@@ -474,10 +474,10 @@ uninstall-am:
 
 
 $(srcdir)/version.def: $(srcdir)/../../packageinfo.sh
-	cd .. && $(MAKE) $(abs_top_srcdir)/include/version.def
+	cd .. && $(MAKE) $(AM_MAKEFLAGS) $(abs_top_srcdir)/include/version.def
 
 $(srcdir)/version.texi: $(srcdir)/../../packageinfo.sh
-	cd .. && $(MAKE) $(abs_top_srcdir)/include/version.texi
+	cd .. && $(MAKE) $(AM_MAKEFLAGS) $(abs_top_srcdir)/include/version.texi
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

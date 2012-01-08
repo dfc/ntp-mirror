@@ -79,15 +79,10 @@ am_tests_OBJECTS = $(am__objects_2) crypto.$(OBJEXT) keyFile.$(OBJEXT) \
 tests_OBJECTS = $(am_tests_OBJECTS)
 tests_LDADD = $(LDADD)
 am__DEPENDENCIES_1 =
-am__DEPENDENCIES_2 = $(sntp_objs)/crypto.o \
-	$(sntp_objs)/kod_management.o $(sntp_objs)/log.o \
-	$(sntp_objs)/main.o $(sntp_objs)/networking.o \
-	$(sntp_objs)/sntp-opts.o $(sntp_objs)/utilities.o \
-	$(sntp_objs)/version.o $(am__DEPENDENCIES_1)
-tests_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(top_builddir)/../libntp/libntp.a $(am__DEPENDENCIES_1) \
+tests_DEPENDENCIES = ../libsntp.a $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1) $(top_builddir)/../libntp/libntp.a \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_2) \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1)
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
@@ -328,19 +323,7 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 NULL = 
-BUILT_SOURCES = check-libntp .deps-ver
-sntp_objs = ..
-sntp_SOURCES_USED = \
-	$(sntp_objs)/crypto.o		\
-	$(sntp_objs)/kod_management.o	\
-	$(sntp_objs)/log.o		\
-	$(sntp_objs)/main.o		\
-	$(sntp_objs)/networking.o	\
-	$(sntp_objs)/sntp-opts.o	\
-	$(sntp_objs)/utilities.o	\
-	$(sntp_objs)/version.o		\
-	$(NULL)
-
+BUILT_SOURCES = check-libsntp check-libntp .deps-ver
 base_SOURCES = \
 	$(srcdir)/../tests_main.cpp	\
 	$(NULL)
@@ -382,8 +365,9 @@ EXTRA_DIST = \
 CLEANFILES = data/kod-output-multiple data/kod-output-single \
 	data/debug-output-pkt data/debug-output-lfp-dec \
 	data/kod-output-blank data/debug-output-lfp-bin $(NULL) \
-	check-libntp .deps-ver
+	check-libsntp check-libntp .deps-ver
 LDADD = \
+	../libsntp.a				\
 	$(LIBOPTS_LDADD)			\
 	$(LDADD_LIBEVENT)			\
 	$(top_builddir)/../libntp/libntp.a	\
@@ -391,7 +375,6 @@ LDADD = \
 	$(LCRYPTO)				\
 	$(GTEST_LDFLAGS)			\
 	$(GTEST_LIBS)				\
-	$(sntp_SOURCES_USED)			\
 	$(NULL)
 
 AM_CFLAGS = $(CFLAGS_NTP)
@@ -815,18 +798,24 @@ uninstall-am:
 	tags uninstall uninstall-am
 
 
+check-libsntp: ../libsntp.a
+	@echo stamp > $@
+
+../libsntp.a:
+	cd .. && $(MAKE) $(AM_MAKEFLAGS) libsntp.a
+
 check-libntp: ../../libntp/libntp.a
 	@echo stamp > $@
 
 ../../libntp/libntp.a:
-	cd ../../libntp && $(MAKE) libntp.a
+	cd ../../libntp && $(MAKE) $(AM_MAKEFLAGS) libntp.a
 $(DEPDIR)/deps-ver: $(top_srcdir)/deps-ver
 	@[ -f $@ ] ||							\
 		cp $(top_srcdir)/deps-ver $@
 	@[ -w $@ ] ||							\
 		chmod ug+w $@
 	@cmp $(top_srcdir)/deps-ver $@ > /dev/null || (			\
-		$(MAKE) clean &&					\
+		$(MAKE) $(AM_MAKEFLAGS) clean &&					\
 		echo -n "Prior $(subdir)/$(DEPDIR) version " &&		\
 		cat $@ &&						\
 		rm -rf $(DEPDIR) &&					\
@@ -847,7 +836,7 @@ $(DEPDIR)/deps-ver: $(top_srcdir)/deps-ver
 	cp $(top_srcdir)/deps-ver $@
 
 .deps-ver: $(top_srcdir)/deps-ver
-	@[ ! -d $(DEPDIR) ] || $(MAKE) $(DEPDIR)/deps-ver
+	@[ ! -d $(DEPDIR) ] || $(MAKE) $(AM_MAKEFLAGS) $(DEPDIR)/deps-ver
 	@touch $@
 
 #
