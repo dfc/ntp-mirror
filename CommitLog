@@ -1,3 +1,226 @@
+ChangeSet@1.2747, 2012-01-10 06:49:35+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P249
+  TAG: NTP_4_2_7P249
+
+  ChangeLog@1.1097 +1 -0
+    NTP_4_2_7P249
+
+  ntpd/ntpd-opts.c@1.254 +3 -3
+    NTP_4_2_7P249
+
+  ntpd/ntpd-opts.h@1.254 +3 -3
+    NTP_4_2_7P249
+
+  ntpd/ntpd-opts.texi@1.252 +2 -2
+    NTP_4_2_7P249
+
+  ntpd/ntpd.1ntpdman@1.65 +2 -2
+    NTP_4_2_7P249
+
+  ntpd/ntpd.1ntpdmdoc@1.65 +2 -2
+    NTP_4_2_7P249
+
+  ntpd/ntpd.man.in@1.65 +2 -2
+    NTP_4_2_7P249
+
+  ntpd/ntpd.mdoc.in@1.65 +2 -2
+    NTP_4_2_7P249
+
+  ntpdc/ntpdc-opts.c@1.249 +3 -3
+    NTP_4_2_7P249
+
+  ntpdc/ntpdc-opts.h@1.249 +3 -3
+    NTP_4_2_7P249
+
+  ntpdc/ntpdc-opts.texi@1.249 +2 -2
+    NTP_4_2_7P249
+
+  ntpdc/ntpdc.1ntpdcman@1.65 +2 -2
+    NTP_4_2_7P249
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.65 +2 -2
+    NTP_4_2_7P249
+
+  ntpdc/ntpdc.html@1.77 +2 -2
+    NTP_4_2_7P249
+
+  ntpdc/ntpdc.man.in@1.65 +2 -2
+    NTP_4_2_7P249
+
+  ntpdc/ntpdc.mdoc.in@1.65 +2 -2
+    NTP_4_2_7P249
+
+  ntpq/ntpq-opts.c@1.251 +3 -3
+    NTP_4_2_7P249
+
+  ntpq/ntpq-opts.h@1.251 +3 -3
+    NTP_4_2_7P249
+
+  ntpq/ntpq-opts.texi@1.251 +2 -2
+    NTP_4_2_7P249
+
+  ntpq/ntpq.1ntpqman@1.65 +2 -2
+    NTP_4_2_7P249
+
+  ntpq/ntpq.1ntpqmdoc@1.65 +2 -2
+    NTP_4_2_7P249
+
+  ntpq/ntpq.man.in@1.65 +2 -2
+    NTP_4_2_7P249
+
+  ntpq/ntpq.mdoc.in@1.65 +2 -2
+    NTP_4_2_7P249
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.251 +3 -3
+    NTP_4_2_7P249
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.251 +3 -3
+    NTP_4_2_7P249
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.251 +2 -2
+    NTP_4_2_7P249
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.65 +2 -2
+    NTP_4_2_7P249
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.65 +2 -2
+    NTP_4_2_7P249
+
+  ntpsnmpd/ntpsnmpd.man.in@1.65 +2 -2
+    NTP_4_2_7P249
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.65 +2 -2
+    NTP_4_2_7P249
+
+  packageinfo.sh@1.252 +1 -1
+    NTP_4_2_7P249
+
+  scripts/ntp-wait-opts.texi@1.69 +1 -1
+    NTP_4_2_7P249
+
+  scripts/ntp-wait.1ntp-waitman@1.65 +2 -2
+    NTP_4_2_7P249
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.65 +2 -2
+    NTP_4_2_7P249
+
+  scripts/ntp-wait.html@1.69 +1 -1
+    NTP_4_2_7P249
+
+  scripts/ntp-wait.man.in@1.65 +2 -2
+    NTP_4_2_7P249
+
+  scripts/ntp-wait.mdoc.in@1.65 +2 -2
+    NTP_4_2_7P249
+
+  sntp/sntp-opts.c@1.247 +3 -3
+    NTP_4_2_7P249
+
+  sntp/sntp-opts.h@1.247 +3 -3
+    NTP_4_2_7P249
+
+  sntp/sntp-opts.texi@1.247 +2 -2
+    NTP_4_2_7P249
+
+  sntp/sntp.1sntpman@1.67 +2 -2
+    NTP_4_2_7P249
+
+  sntp/sntp.1sntpmdoc@1.67 +2 -2
+    NTP_4_2_7P249
+
+  sntp/sntp.html@1.247 +2 -2
+    NTP_4_2_7P249
+
+  sntp/sntp.man.in@1.67 +2 -2
+    NTP_4_2_7P249
+
+  sntp/sntp.mdoc.in@1.67 +2 -2
+    NTP_4_2_7P249
+
+  util/ntp-keygen-opts.c@1.251 +3 -3
+    NTP_4_2_7P249
+
+  util/ntp-keygen-opts.h@1.251 +3 -3
+    NTP_4_2_7P249
+
+  util/ntp-keygen-opts.texi@1.252 +2 -2
+    NTP_4_2_7P249
+
+  util/ntp-keygen.1ntp-keygenman@1.65 +2 -2
+    NTP_4_2_7P249
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.65 +2 -2
+    NTP_4_2_7P249
+
+  util/ntp-keygen.man.in@1.65 +2 -2
+    NTP_4_2_7P249
+
+  util/ntp-keygen.mdoc.in@1.65 +2 -2
+    NTP_4_2_7P249
+
+ChangeSet@1.2746, 2012-01-10 05:24:10+00:00, davehart@dlh-7551.ad.hartbrothers.com
+  [Bug 2111] Remove minpoll delay before iburst for pool and
+    manycastclient.
+
+  ChangeLog@1.1096 +2 -0
+    [Bug 2111] Remove minpoll delay before iburst for pool and
+      manycastclient.
+
+  ntpd/ntp_proto.c@1.339 +30 -46
+    [Bug 2111] Remove minpoll delay before iburst for pool and
+      manycastclient.
+
+ChangeSet@1.2745, 2012-01-10 04:55:48+00:00, davehart@dlh-7551.ad.hartbrothers.com
+  Move refclock-specific scheduled timer code under #ifdef REFCLOCK
+    and move "action" and "nextaction" data for same from struct peer to
+    struct refclockproc.  These provide a way to schedule a callback some
+    seconds in the future.
+
+  ChangeLog@1.1095 +4 -0
+    Move refclock-specific scheduled timer code under #ifdef REFCLOCK
+      and move "action" and "nextaction" data for same from struct peer to
+      struct refclockproc.  These provide a way to schedule a callback some
+      seconds in the future.
+
+  include/ntp.h@1.203 +1 -3
+    Move refclock-specific scheduled timer code under #ifdef REFCLOCK
+      and move "action" and "nextaction" data for same from struct peer to
+      struct refclockproc.  These provide a way to schedule a callback some
+      seconds in the future.
+
+  include/ntp_refclock.h@1.34 +4 -1
+    Move refclock-specific scheduled timer code under #ifdef REFCLOCK
+      and move "action" and "nextaction" data for same from struct peer to
+      struct refclockproc.  These provide a way to schedule a callback some
+      seconds in the future.
+
+  ntpd/ntp_peer.c@1.152 +2 -3
+    use TRUE and comment typo
+
+  ntpd/ntp_refclock.c@1.111 +12 -8
+    Move refclock-specific scheduled timer code under #ifdef REFCLOCK
+      and move "action" and "nextaction" data for same from struct peer to
+      struct refclockproc.  These provide a way to schedule a callback some
+      seconds in the future.
+
+  ntpd/ntp_timer.c@1.67 +0 -2
+    Move refclock-specific scheduled timer code under #ifdef REFCLOCK
+      and move "action" and "nextaction" data for same from struct peer to
+      struct refclockproc.  These provide a way to schedule a callback some
+      seconds in the future.
+
+  ntpd/refclock_arc.c@1.29 +3 -3
+    Move refclock-specific scheduled timer code under #ifdef REFCLOCK
+      and move "action" and "nextaction" data for same from struct peer to
+      struct refclockproc.  These provide a way to schedule a callback some
+      seconds in the future.
+
+  ntpd/refclock_parse.c@1.64 +10 -10
+    Move refclock-specific scheduled timer code under #ifdef REFCLOCK
+      and move "action" and "nextaction" data for same from struct peer to
+      struct refclockproc.  These provide a way to schedule a callback some
+      seconds in the future.
+
 ChangeSet@1.2744, 2012-01-08 23:14:53+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P248
   TAG: NTP_4_2_7P248
