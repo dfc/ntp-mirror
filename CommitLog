@@ -1,3 +1,172 @@
+ChangeSet@1.2752, 2012-01-17 11:36:18+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P251
+  TAG: NTP_4_2_7P251
+
+  ChangeLog@1.1102 +1 -0
+    NTP_4_2_7P251
+
+  ntpd/ntpd-opts.c@1.256 +3 -3
+    NTP_4_2_7P251
+
+  ntpd/ntpd-opts.h@1.256 +3 -3
+    NTP_4_2_7P251
+
+  ntpd/ntpd-opts.texi@1.254 +2 -2
+    NTP_4_2_7P251
+
+  ntpd/ntpd.1ntpdman@1.67 +2 -2
+    NTP_4_2_7P251
+
+  ntpd/ntpd.1ntpdmdoc@1.67 +2 -2
+    NTP_4_2_7P251
+
+  ntpd/ntpd.man.in@1.67 +2 -2
+    NTP_4_2_7P251
+
+  ntpd/ntpd.mdoc.in@1.67 +2 -2
+    NTP_4_2_7P251
+
+  ntpdc/ntpdc-opts.c@1.251 +3 -3
+    NTP_4_2_7P251
+
+  ntpdc/ntpdc-opts.h@1.251 +3 -3
+    NTP_4_2_7P251
+
+  ntpdc/ntpdc-opts.texi@1.251 +2 -2
+    NTP_4_2_7P251
+
+  ntpdc/ntpdc.1ntpdcman@1.67 +2 -2
+    NTP_4_2_7P251
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.67 +2 -2
+    NTP_4_2_7P251
+
+  ntpdc/ntpdc.html@1.79 +2 -2
+    NTP_4_2_7P251
+
+  ntpdc/ntpdc.man.in@1.67 +2 -2
+    NTP_4_2_7P251
+
+  ntpdc/ntpdc.mdoc.in@1.67 +2 -2
+    NTP_4_2_7P251
+
+  ntpq/ntpq-opts.c@1.253 +3 -3
+    NTP_4_2_7P251
+
+  ntpq/ntpq-opts.h@1.253 +3 -3
+    NTP_4_2_7P251
+
+  ntpq/ntpq-opts.texi@1.253 +2 -2
+    NTP_4_2_7P251
+
+  ntpq/ntpq.1ntpqman@1.67 +2 -2
+    NTP_4_2_7P251
+
+  ntpq/ntpq.1ntpqmdoc@1.67 +2 -2
+    NTP_4_2_7P251
+
+  ntpq/ntpq.man.in@1.67 +2 -2
+    NTP_4_2_7P251
+
+  ntpq/ntpq.mdoc.in@1.67 +2 -2
+    NTP_4_2_7P251
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.253 +3 -3
+    NTP_4_2_7P251
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.253 +3 -3
+    NTP_4_2_7P251
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.253 +2 -2
+    NTP_4_2_7P251
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.67 +2 -2
+    NTP_4_2_7P251
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.67 +2 -2
+    NTP_4_2_7P251
+
+  ntpsnmpd/ntpsnmpd.man.in@1.67 +2 -2
+    NTP_4_2_7P251
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.67 +2 -2
+    NTP_4_2_7P251
+
+  packageinfo.sh@1.254 +1 -1
+    NTP_4_2_7P251
+
+  scripts/ntp-wait-opts.texi@1.71 +1 -1
+    NTP_4_2_7P251
+
+  scripts/ntp-wait.1ntp-waitman@1.67 +2 -2
+    NTP_4_2_7P251
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.67 +2 -2
+    NTP_4_2_7P251
+
+  scripts/ntp-wait.html@1.71 +1 -1
+    NTP_4_2_7P251
+
+  scripts/ntp-wait.man.in@1.67 +2 -2
+    NTP_4_2_7P251
+
+  scripts/ntp-wait.mdoc.in@1.67 +2 -2
+    NTP_4_2_7P251
+
+  sntp/sntp-opts.c@1.249 +3 -3
+    NTP_4_2_7P251
+
+  sntp/sntp-opts.h@1.249 +3 -3
+    NTP_4_2_7P251
+
+  sntp/sntp-opts.texi@1.249 +2 -2
+    NTP_4_2_7P251
+
+  sntp/sntp.1sntpman@1.69 +2 -2
+    NTP_4_2_7P251
+
+  sntp/sntp.1sntpmdoc@1.69 +2 -2
+    NTP_4_2_7P251
+
+  sntp/sntp.html@1.249 +2 -2
+    NTP_4_2_7P251
+
+  sntp/sntp.man.in@1.69 +2 -2
+    NTP_4_2_7P251
+
+  sntp/sntp.mdoc.in@1.69 +2 -2
+    NTP_4_2_7P251
+
+  util/ntp-keygen-opts.c@1.253 +3 -3
+    NTP_4_2_7P251
+
+  util/ntp-keygen-opts.h@1.253 +3 -3
+    NTP_4_2_7P251
+
+  util/ntp-keygen-opts.texi@1.254 +2 -2
+    NTP_4_2_7P251
+
+  util/ntp-keygen.1ntp-keygenman@1.67 +2 -2
+    NTP_4_2_7P251
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.67 +2 -2
+    NTP_4_2_7P251
+
+  util/ntp-keygen.man.in@1.67 +2 -2
+    NTP_4_2_7P251
+
+  util/ntp-keygen.mdoc.in@1.67 +2 -2
+    NTP_4_2_7P251
+
+ChangeSet@1.2751, 2012-01-17 00:59:47+00:00, stenn@psp-fb1.ntp.org
+  [Bug 2115] ntptrace should accept both rootdispersion and rootdisp
+
+  ChangeLog@1.1101 +1 -0
+    [Bug 2115] ntptrace should accept both rootdispersion and rootdisp
+
+  scripts/ntptrace.in@1.8 +2 -1
+    [Bug 2115] ntptrace should accept both rootdispersion and rootdisp
+
 ChangeSet@1.2750, 2012-01-15 11:37:29+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P250
   TAG: NTP_4_2_7P250
