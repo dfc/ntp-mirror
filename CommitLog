@@ -1,3 +1,258 @@
+ChangeSet@1.2754, 2012-01-25 12:05:43+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P252
+  TAG: NTP_4_2_7P252
+
+  ChangeLog@1.1104 +1 -0
+    NTP_4_2_7P252
+
+  ntpd/ntpd-opts.c@1.257 +516 -442
+    NTP_4_2_7P252
+
+  ntpd/ntpd-opts.h@1.257 +11 -10
+    NTP_4_2_7P252
+
+  ntpd/ntpd-opts.texi@1.255 +3 -3
+    NTP_4_2_7P252
+
+  ntpd/ntpd.1ntpdman@1.68 +2 -2
+    NTP_4_2_7P252
+
+  ntpd/ntpd.1ntpdmdoc@1.68 +2 -2
+    NTP_4_2_7P252
+
+  ntpd/ntpd.man.in@1.68 +2 -2
+    NTP_4_2_7P252
+
+  ntpd/ntpd.mdoc.in@1.68 +2 -2
+    NTP_4_2_7P252
+
+  ntpdc/ntpdc-opts.c@1.252 +255 -219
+    NTP_4_2_7P252
+
+  ntpdc/ntpdc-opts.h@1.252 +11 -9
+    NTP_4_2_7P252
+
+  ntpdc/ntpdc-opts.texi@1.252 +3 -3
+    NTP_4_2_7P252
+
+  ntpdc/ntpdc.1ntpdcman@1.68 +2 -2
+    NTP_4_2_7P252
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.68 +2 -2
+    NTP_4_2_7P252
+
+  ntpdc/ntpdc.html@1.80 +3 -3
+    NTP_4_2_7P252
+
+  ntpdc/ntpdc.man.in@1.68 +2 -2
+    NTP_4_2_7P252
+
+  ntpdc/ntpdc.mdoc.in@1.68 +2 -2
+    NTP_4_2_7P252
+
+  ntpq/ntpq-opts.c@1.254 +244 -207
+    NTP_4_2_7P252
+
+  ntpq/ntpq-opts.h@1.254 +11 -9
+    NTP_4_2_7P252
+
+  ntpq/ntpq-opts.texi@1.254 +3 -3
+    NTP_4_2_7P252
+
+  ntpq/ntpq.1ntpqman@1.68 +2 -2
+    NTP_4_2_7P252
+
+  ntpq/ntpq.1ntpqmdoc@1.68 +2 -2
+    NTP_4_2_7P252
+
+  ntpq/ntpq.man.in@1.68 +2 -2
+    NTP_4_2_7P252
+
+  ntpq/ntpq.mdoc.in@1.68 +2 -2
+    NTP_4_2_7P252
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.254 +164 -132
+    NTP_4_2_7P252
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.254 +11 -9
+    NTP_4_2_7P252
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.254 +3 -3
+    NTP_4_2_7P252
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.68 +2 -2
+    NTP_4_2_7P252
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.68 +2 -2
+    NTP_4_2_7P252
+
+  ntpsnmpd/ntpsnmpd.man.in@1.68 +2 -2
+    NTP_4_2_7P252
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.68 +2 -2
+    NTP_4_2_7P252
+
+  packageinfo.sh@1.255 +1 -1
+    NTP_4_2_7P252
+
+  scripts/ntp-wait-opts.texi@1.72 +2 -2
+    NTP_4_2_7P252
+
+  scripts/ntp-wait.1ntp-waitman@1.68 +2 -2
+    NTP_4_2_7P252
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.68 +2 -2
+    NTP_4_2_7P252
+
+  scripts/ntp-wait.html@1.72 +2 -2
+    NTP_4_2_7P252
+
+  scripts/ntp-wait.man.in@1.68 +2 -2
+    NTP_4_2_7P252
+
+  scripts/ntp-wait.mdoc.in@1.68 +2 -2
+    NTP_4_2_7P252
+
+  sntp/sntp-opts.c@1.250 +366 -305
+    NTP_4_2_7P252
+
+  sntp/sntp-opts.h@1.250 +11 -9
+    NTP_4_2_7P252
+
+  sntp/sntp-opts.texi@1.250 +3 -3
+    NTP_4_2_7P252
+
+  sntp/sntp.1sntpman@1.70 +2 -2
+    NTP_4_2_7P252
+
+  sntp/sntp.1sntpmdoc@1.70 +2 -2
+    NTP_4_2_7P252
+
+  sntp/sntp.html@1.250 +3 -3
+    NTP_4_2_7P252
+
+  sntp/sntp.man.in@1.70 +2 -2
+    NTP_4_2_7P252
+
+  sntp/sntp.mdoc.in@1.70 +2 -2
+    NTP_4_2_7P252
+
+  util/ntp-keygen-opts.c@1.254 +451 -387
+    NTP_4_2_7P252
+
+  util/ntp-keygen-opts.h@1.254 +11 -13
+    NTP_4_2_7P252
+
+  util/ntp-keygen-opts.texi@1.255 +3 -3
+    NTP_4_2_7P252
+
+  util/ntp-keygen.1ntp-keygenman@1.68 +2 -2
+    NTP_4_2_7P252
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.68 +2 -2
+    NTP_4_2_7P252
+
+  util/ntp-keygen.man.in@1.68 +2 -2
+    NTP_4_2_7P252
+
+  util/ntp-keygen.mdoc.in@1.68 +2 -2
+    NTP_4_2_7P252
+
+ChangeSet@1.2753, 2012-01-25 09:54:11+00:00, stenn@psp-fb1.ntp.org
+  Upgrade to autogen-5.14 (and libopts-36.1.11)
+
+  BitKeeper/deleted/94/enumeration.c~263a95e02049b99c@1.9 +0 -0
+    Delete: sntp/libopts/enumeration.c
+
+  BitKeeper/deleted/97/environment.c~444322456d6044d7@1.11 +0 -0
+    Delete: sntp/libopts/environment.c
+
+  ChangeLog@1.1103 +1 -0
+    Upgrade to autogen-5.14 (and libopts-36.1.11)
+
+  sntp/include/autogen-version.def@1.9 +1 -1
+    Upgrade to autogen 5.14
+
+  sntp/libopts/Makefile.am@1.11 +16 -15
+    Upgrade to libopts-36.1.11
+
+  sntp/libopts/ag-char-map.h@1.14 +3 -3
+    Upgrade to libopts-36.1.11
+
+  sntp/libopts/autoopts.c@1.11 +48 -515
+    Upgrade to libopts-36.1.11
+
+  sntp/libopts/autoopts/options.h@1.13 +47 -37
+    Upgrade to libopts-36.1.11
+
+  sntp/libopts/autoopts/usage-txt.h@1.13 +324 -312
+    Upgrade to libopts-36.1.11
+
+  sntp/libopts/check.c@1.1 +164 -0
+    BitKeeper file /a/etc/amd.stage/thump2-g3/export/ntp/home/stenn/ntp-dev/sntp/libopts/check.c
+
+  sntp/libopts/check.c@1.0 +0 -0
+
+  sntp/libopts/configfile.c@1.12 +35 -25
+    Upgrade to libopts-36.1.11
+
+  sntp/libopts/enum.c@1.1 +522 -0
+    BitKeeper file /a/etc/amd.stage/thump2-g3/export/ntp/home/stenn/ntp-dev/sntp/libopts/enum.c
+
+  sntp/libopts/enum.c@1.0 +0 -0
+
+  sntp/libopts/env.c@1.1 +259 -0
+    BitKeeper file /a/etc/amd.stage/thump2-g3/export/ntp/home/stenn/ntp-dev/sntp/libopts/env.c
+
+  sntp/libopts/env.c@1.0 +0 -0
+
+  sntp/libopts/file.c@1.9 +129 -94
+    Upgrade to libopts-36.1.11
+
+  sntp/libopts/find.c@1.1 +568 -0
+    BitKeeper file /a/etc/amd.stage/thump2-g3/export/ntp/home/stenn/ntp-dev/sntp/libopts/find.c
+
+  sntp/libopts/find.c@1.0 +0 -0
+
+  sntp/libopts/genshell.c@1.14 +140 -114
+    Upgrade to libopts-36.1.11
+
+  sntp/libopts/genshell.h@1.14 +29 -24
+    Upgrade to libopts-36.1.11
+
+  sntp/libopts/libopts.c@1.4 +4 -2
+    Upgrade to libopts-36.1.11
+
+  sntp/libopts/load.c@1.10 +15 -16
+    Upgrade to libopts-36.1.11
+
+  sntp/libopts/m4/libopts.m4@1.17 +4 -4
+    Upgrade to libopts-36.1.11
+
+  sntp/libopts/proto.h@1.14 +35 -14
+    Upgrade to libopts-36.1.11
+
+  sntp/libopts/reset.c@1.8 +3 -3
+    Upgrade to libopts-36.1.11
+
+  sntp/libopts/sort.c@1.8 +5 -5
+    Upgrade to libopts-36.1.11
+
+  sntp/libopts/text_mmap.c@1.8 +231 -248
+    Upgrade to libopts-36.1.11
+
+  sntp/libopts/usage.c@1.9 +220 -62
+    Upgrade to libopts-36.1.11
+
+  sntp/libopts/value-type.h@1.14 +1 -1
+    Upgrade to libopts-36.1.11
+
+  sntp/libopts/version.c@1.9 +14 -7
+    Upgrade to libopts-36.1.11
+
+  sntp/libopts/xat-attribute.h@1.14 +1 -1
+    Upgrade to libopts-36.1.11
+
 ChangeSet@1.2752, 2012-01-17 11:36:18+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P251
   TAG: NTP_4_2_7P251
