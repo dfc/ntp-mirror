@@ -1,3 +1,199 @@
+ChangeSet@1.2758, 2012-01-26 06:05:07+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P253
+  TAG: NTP_4_2_7P253
+
+  ChangeLog@1.1107 +1 -0
+    NTP_4_2_7P253
+
+  ntpd/ntpd-opts.c@1.258 +251 -256
+    NTP_4_2_7P253
+
+  ntpd/ntpd-opts.h@1.258 +7 -7
+    NTP_4_2_7P253
+
+  ntpd/ntpd-opts.texi@1.256 +2 -2
+    NTP_4_2_7P253
+
+  ntpd/ntpd.1ntpdman@1.69 +4 -4
+    NTP_4_2_7P253
+
+  ntpd/ntpd.1ntpdmdoc@1.69 +4 -4
+    NTP_4_2_7P253
+
+  ntpd/ntpd.man.in@1.69 +4 -4
+    NTP_4_2_7P253
+
+  ntpd/ntpd.mdoc.in@1.69 +4 -4
+    NTP_4_2_7P253
+
+  ntpdc/ntpdc-opts.c@1.253 +120 -125
+    NTP_4_2_7P253
+
+  ntpdc/ntpdc-opts.h@1.253 +7 -7
+    NTP_4_2_7P253
+
+  ntpdc/ntpdc-opts.texi@1.253 +2 -2
+    NTP_4_2_7P253
+
+  ntpdc/ntpdc.1ntpdcman@1.69 +3 -3
+    NTP_4_2_7P253
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.69 +3 -3
+    NTP_4_2_7P253
+
+  ntpdc/ntpdc.html@1.81 +2 -2
+    NTP_4_2_7P253
+
+  ntpdc/ntpdc.man.in@1.69 +3 -3
+    NTP_4_2_7P253
+
+  ntpdc/ntpdc.mdoc.in@1.69 +3 -3
+    NTP_4_2_7P253
+
+  ntpq/ntpq-opts.c@1.255 +111 -116
+    NTP_4_2_7P253
+
+  ntpq/ntpq-opts.h@1.255 +7 -7
+    NTP_4_2_7P253
+
+  ntpq/ntpq-opts.texi@1.255 +2 -2
+    NTP_4_2_7P253
+
+  ntpq/ntpq.1ntpqman@1.69 +4 -4
+    NTP_4_2_7P253
+
+  ntpq/ntpq.1ntpqmdoc@1.69 +4 -4
+    NTP_4_2_7P253
+
+  ntpq/ntpq.man.in@1.69 +4 -4
+    NTP_4_2_7P253
+
+  ntpq/ntpq.mdoc.in@1.69 +4 -4
+    NTP_4_2_7P253
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.255 +81 -86
+    NTP_4_2_7P253
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.255 +7 -7
+    NTP_4_2_7P253
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.255 +2 -2
+    NTP_4_2_7P253
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.69 +3 -3
+    NTP_4_2_7P253
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.69 +3 -3
+    NTP_4_2_7P253
+
+  ntpsnmpd/ntpsnmpd.man.in@1.69 +3 -3
+    NTP_4_2_7P253
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.69 +3 -3
+    NTP_4_2_7P253
+
+  packageinfo.sh@1.256 +1 -1
+    NTP_4_2_7P253
+
+  scripts/ntp-wait-opts.texi@1.73 +1 -1
+    NTP_4_2_7P253
+
+  scripts/ntp-wait.1ntp-waitman@1.69 +3 -3
+    NTP_4_2_7P253
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.69 +3 -3
+    NTP_4_2_7P253
+
+  scripts/ntp-wait.html@1.73 +1 -1
+    NTP_4_2_7P253
+
+  scripts/ntp-wait.man.in@1.69 +3 -3
+    NTP_4_2_7P253
+
+  scripts/ntp-wait.mdoc.in@1.69 +3 -3
+    NTP_4_2_7P253
+
+  sntp/sntp-opts.c@1.251 +178 -183
+    NTP_4_2_7P253
+
+  sntp/sntp-opts.h@1.251 +7 -7
+    NTP_4_2_7P253
+
+  sntp/sntp-opts.texi@1.251 +2 -2
+    NTP_4_2_7P253
+
+  sntp/sntp.1sntpman@1.71 +3 -3
+    NTP_4_2_7P253
+
+  sntp/sntp.1sntpmdoc@1.71 +3 -3
+    NTP_4_2_7P253
+
+  sntp/sntp.html@1.251 +2 -2
+    NTP_4_2_7P253
+
+  sntp/sntp.man.in@1.71 +3 -3
+    NTP_4_2_7P253
+
+  sntp/sntp.mdoc.in@1.71 +3 -3
+    NTP_4_2_7P253
+
+  util/ntp-keygen-opts.c@1.255 +180 -185
+    NTP_4_2_7P253
+
+  util/ntp-keygen-opts.h@1.255 +7 -7
+    NTP_4_2_7P253
+
+  util/ntp-keygen-opts.texi@1.256 +2 -2
+    NTP_4_2_7P253
+
+  util/ntp-keygen.1ntp-keygenman@1.69 +4 -4
+    NTP_4_2_7P253
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.69 +4 -4
+    NTP_4_2_7P253
+
+  util/ntp-keygen.man.in@1.69 +4 -4
+    NTP_4_2_7P253
+
+  util/ntp-keygen.mdoc.in@1.69 +4 -4
+    NTP_4_2_7P253
+
+ChangeSet@1.2757, 2012-01-25 23:01:37-05:00, stenn@deacon.udel.edu
+  Update a license URL
+
+  ChangeLog@1.1106 +1 -0
+    Update a license URL
+
+  sntp/include/ntp.lic@1.6 +1 -1
+    Update a license URL
+
+ChangeSet@1.2756, 2012-01-26 03:33:12+00:00, davehart@dlh-7551.ad.hartbrothers.com
+  Override --version output without the ugly hack previously used,
+    as Autogen 5.13 and later provide version-proc = override in .def.
+
+  include/ntp_libopts.h@1.2 +1 -0
+    Override --version output without the ugly hack previously used,
+      as Autogen 5.13 and later provide version-proc = override in .def.
+
+  libntp/ntp_libopts.c@1.5 +28 -30
+    Override --version output without the ugly hack previously used,
+      as Autogen 5.13 and later provide version-proc = override in .def.
+
+  sntp/include/copyright.def@1.20 +2 -1
+    Override --version output without the ugly hack previously used,
+      as Autogen 5.13 and later provide version-proc = override in .def.
+    Change owner = to match copyright.html.
+
+ChangeSet@1.2755, 2012-01-26 01:44:08+00:00, davehart@dlh-7551.ad.hartbrothers.com
+  [Bug 2126] Compile error on Windows with libopts from Autogen 5.14.
+
+  ChangeLog@1.1105 +1 -0
+    [Bug 2126] Compile error on Windows with libopts from Autogen 5.14.
+
+  sntp/libopts/text_mmap.c@1.9 +6 -2
+    [Bug 2126] Compile error on Windows with libopts from Autogen 5.14.
+    Patch provided by Bruce Korb based on pending Autogen changes.
+
 ChangeSet@1.2754, 2012-01-25 12:05:43+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P252
   TAG: NTP_4_2_7P252
