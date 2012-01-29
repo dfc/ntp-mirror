@@ -458,23 +458,11 @@
 /* Define to 1 if you have the `kvm_open' function. */
 #undef HAVE_KVM_OPEN
 
-/* Define to 1 if you have the `elf' library (-lelf). */
-#undef HAVE_LIBELF
-
 /* Define to 1 if you have the `gen' library (-lgen). */
 #undef HAVE_LIBGEN
 
 /* Define to 1 if you have the <libgen.h> header file. */
 #undef HAVE_LIBGEN_H
-
-/* Define to 1 if you have the `kvm' library (-lkvm). */
-#undef HAVE_LIBKVM
-
-/* Define to 1 if you have the `ld' library (-lld). */
-#undef HAVE_LIBLD
-
-/* Define to 1 if you have the `mld' library (-lmld). */
-#undef HAVE_LIBMLD
 
 /* Define to 1 if you have the `posix4' library (-lposix4). */
 #undef HAVE_LIBPOSIX4
