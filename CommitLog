@@ -1,3 +1,184 @@
+ChangeSet@1.2765, 2012-02-08 08:33:47+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P256
+  TAG: NTP_4_2_7P256
+
+  ChangeLog@1.1114 +1 -0
+    NTP_4_2_7P256
+
+  ntpd/ntpd-opts.c@1.261 +4 -4
+    NTP_4_2_7P256
+
+  ntpd/ntpd-opts.h@1.261 +3 -3
+    NTP_4_2_7P256
+
+  ntpd/ntpd-opts.texi@1.259 +2 -2
+    NTP_4_2_7P256
+
+  ntpd/ntpd.1ntpdman@1.72 +2 -2
+    NTP_4_2_7P256
+
+  ntpd/ntpd.1ntpdmdoc@1.72 +2 -2
+    NTP_4_2_7P256
+
+  ntpd/ntpd.man.in@1.72 +2 -2
+    NTP_4_2_7P256
+
+  ntpd/ntpd.mdoc.in@1.72 +2 -2
+    NTP_4_2_7P256
+
+  ntpdc/ntpdc-opts.c@1.256 +4 -4
+    NTP_4_2_7P256
+
+  ntpdc/ntpdc-opts.h@1.256 +3 -3
+    NTP_4_2_7P256
+
+  ntpdc/ntpdc-opts.texi@1.256 +2 -2
+    NTP_4_2_7P256
+
+  ntpdc/ntpdc.1ntpdcman@1.72 +2 -2
+    NTP_4_2_7P256
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.72 +2 -2
+    NTP_4_2_7P256
+
+  ntpdc/ntpdc.html@1.84 +2 -2
+    NTP_4_2_7P256
+
+  ntpdc/ntpdc.man.in@1.72 +2 -2
+    NTP_4_2_7P256
+
+  ntpdc/ntpdc.mdoc.in@1.72 +2 -2
+    NTP_4_2_7P256
+
+  ntpq/ntpq-opts.c@1.258 +4 -4
+    NTP_4_2_7P256
+
+  ntpq/ntpq-opts.h@1.258 +3 -3
+    NTP_4_2_7P256
+
+  ntpq/ntpq-opts.texi@1.258 +2 -2
+    NTP_4_2_7P256
+
+  ntpq/ntpq.1ntpqman@1.72 +2 -2
+    NTP_4_2_7P256
+
+  ntpq/ntpq.1ntpqmdoc@1.72 +2 -2
+    NTP_4_2_7P256
+
+  ntpq/ntpq.man.in@1.72 +2 -2
+    NTP_4_2_7P256
+
+  ntpq/ntpq.mdoc.in@1.72 +2 -2
+    NTP_4_2_7P256
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.258 +4 -4
+    NTP_4_2_7P256
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.258 +3 -3
+    NTP_4_2_7P256
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.258 +2 -2
+    NTP_4_2_7P256
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.72 +2 -2
+    NTP_4_2_7P256
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.72 +2 -2
+    NTP_4_2_7P256
+
+  ntpsnmpd/ntpsnmpd.man.in@1.72 +2 -2
+    NTP_4_2_7P256
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.72 +2 -2
+    NTP_4_2_7P256
+
+  packageinfo.sh@1.259 +1 -1
+    NTP_4_2_7P256
+
+  scripts/ntp-wait-opts.texi@1.76 +1 -1
+    NTP_4_2_7P256
+
+  scripts/ntp-wait.1ntp-waitman@1.72 +2 -2
+    NTP_4_2_7P256
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.72 +2 -2
+    NTP_4_2_7P256
+
+  scripts/ntp-wait.html@1.76 +1 -1
+    NTP_4_2_7P256
+
+  scripts/ntp-wait.man.in@1.72 +2 -2
+    NTP_4_2_7P256
+
+  scripts/ntp-wait.mdoc.in@1.72 +2 -2
+    NTP_4_2_7P256
+
+  sntp/sntp-opts.c@1.254 +4 -4
+    NTP_4_2_7P256
+
+  sntp/sntp-opts.h@1.254 +3 -3
+    NTP_4_2_7P256
+
+  sntp/sntp-opts.texi@1.254 +2 -2
+    NTP_4_2_7P256
+
+  sntp/sntp.1sntpman@1.74 +2 -2
+    NTP_4_2_7P256
+
+  sntp/sntp.1sntpmdoc@1.74 +2 -2
+    NTP_4_2_7P256
+
+  sntp/sntp.html@1.254 +2 -2
+    NTP_4_2_7P256
+
+  sntp/sntp.man.in@1.74 +2 -2
+    NTP_4_2_7P256
+
+  sntp/sntp.mdoc.in@1.74 +2 -2
+    NTP_4_2_7P256
+
+  util/ntp-keygen-opts.c@1.258 +4 -4
+    NTP_4_2_7P256
+
+  util/ntp-keygen-opts.h@1.258 +3 -3
+    NTP_4_2_7P256
+
+  util/ntp-keygen-opts.texi@1.259 +2 -2
+    NTP_4_2_7P256
+
+  util/ntp-keygen.1ntp-keygenman@1.72 +2 -2
+    NTP_4_2_7P256
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.72 +2 -2
+    NTP_4_2_7P256
+
+  util/ntp-keygen.man.in@1.72 +2 -2
+    NTP_4_2_7P256
+
+  util/ntp-keygen.mdoc.in@1.72 +2 -2
+    NTP_4_2_7P256
+
+ChangeSet@1.2764, 2012-02-08 07:25:26+00:00, davehart@dlh-7551.ad.hartbrothers.com
+  [Bug 2131] Set the system variable settimeofday only after clock step.
+
+  ChangeLog@1.1113 +1 -0
+    [Bug 2131] Set the system variable settimeofday only after clock step.
+
+  ntpd/ntp_config.c@1.297 +0 -8
+    [Bug 2131] Set the system variable settimeofday only after clock step.
+
+  ntpd/ntp_refclock.c@1.112 +0 -1
+    Remove unused local from refclock_timer().
+
+ChangeSet@1.2763, 2012-02-08 02:33:45+00:00, davehart@dlh-7551.ad.hartbrothers.com
+  [Bug 2134] --enable-C99-snprintf does not force rpl_snprintf use.
+
+  ChangeLog@1.1112 +1 -0
+    [Bug 2134] --enable-C99-snprintf does not force rpl_snprintf use.
+
+  sntp/m4/snprintf.m4@1.3 +4 -4
+    [Bug 2134] --enable-C99-snprintf does not force rpl_snprintf use.
+
 ChangeSet@1.2762, 2012-01-29 22:06:30+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P255
   TAG: NTP_4_2_7P255
