@@ -1,3 +1,206 @@
+ChangeSet@1.2768, 2012-02-17 05:52:44+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P257
+  TAG: NTP_4_2_7P257
+
+  ChangeLog@1.1116 +1 -0
+    NTP_4_2_7P257
+
+  ntpd/ntpd-opts.c@1.262 +4 -4
+    NTP_4_2_7P257
+
+  ntpd/ntpd-opts.h@1.262 +3 -3
+    NTP_4_2_7P257
+
+  ntpd/ntpd-opts.texi@1.260 +2 -2
+    NTP_4_2_7P257
+
+  ntpd/ntpd.1ntpdman@1.73 +2 -2
+    NTP_4_2_7P257
+
+  ntpd/ntpd.1ntpdmdoc@1.73 +2 -2
+    NTP_4_2_7P257
+
+  ntpd/ntpd.man.in@1.73 +2 -2
+    NTP_4_2_7P257
+
+  ntpd/ntpd.mdoc.in@1.73 +2 -2
+    NTP_4_2_7P257
+
+  ntpdc/ntpdc-opts.c@1.257 +4 -4
+    NTP_4_2_7P257
+
+  ntpdc/ntpdc-opts.h@1.257 +3 -3
+    NTP_4_2_7P257
+
+  ntpdc/ntpdc-opts.texi@1.257 +2 -2
+    NTP_4_2_7P257
+
+  ntpdc/ntpdc.1ntpdcman@1.73 +2 -2
+    NTP_4_2_7P257
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.73 +2 -2
+    NTP_4_2_7P257
+
+  ntpdc/ntpdc.html@1.85 +2 -2
+    NTP_4_2_7P257
+
+  ntpdc/ntpdc.man.in@1.73 +2 -2
+    NTP_4_2_7P257
+
+  ntpdc/ntpdc.mdoc.in@1.73 +2 -2
+    NTP_4_2_7P257
+
+  ntpq/ntpq-opts.c@1.259 +4 -4
+    NTP_4_2_7P257
+
+  ntpq/ntpq-opts.h@1.259 +3 -3
+    NTP_4_2_7P257
+
+  ntpq/ntpq-opts.texi@1.259 +2 -2
+    NTP_4_2_7P257
+
+  ntpq/ntpq.1ntpqman@1.73 +2 -2
+    NTP_4_2_7P257
+
+  ntpq/ntpq.1ntpqmdoc@1.73 +2 -2
+    NTP_4_2_7P257
+
+  ntpq/ntpq.man.in@1.73 +2 -2
+    NTP_4_2_7P257
+
+  ntpq/ntpq.mdoc.in@1.73 +2 -2
+    NTP_4_2_7P257
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.259 +4 -4
+    NTP_4_2_7P257
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.259 +3 -3
+    NTP_4_2_7P257
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.259 +2 -2
+    NTP_4_2_7P257
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.73 +2 -2
+    NTP_4_2_7P257
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.73 +2 -2
+    NTP_4_2_7P257
+
+  ntpsnmpd/ntpsnmpd.man.in@1.73 +2 -2
+    NTP_4_2_7P257
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.73 +2 -2
+    NTP_4_2_7P257
+
+  packageinfo.sh@1.260 +1 -1
+    NTP_4_2_7P257
+
+  scripts/ntp-wait-opts.texi@1.77 +1 -1
+    NTP_4_2_7P257
+
+  scripts/ntp-wait.1ntp-waitman@1.73 +2 -2
+    NTP_4_2_7P257
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.73 +2 -2
+    NTP_4_2_7P257
+
+  scripts/ntp-wait.html@1.77 +1 -1
+    NTP_4_2_7P257
+
+  scripts/ntp-wait.man.in@1.73 +2 -2
+    NTP_4_2_7P257
+
+  scripts/ntp-wait.mdoc.in@1.73 +2 -2
+    NTP_4_2_7P257
+
+  sntp/sntp-opts.c@1.255 +4 -4
+    NTP_4_2_7P257
+
+  sntp/sntp-opts.h@1.255 +3 -3
+    NTP_4_2_7P257
+
+  sntp/sntp-opts.texi@1.255 +2 -2
+    NTP_4_2_7P257
+
+  sntp/sntp.1sntpman@1.75 +2 -2
+    NTP_4_2_7P257
+
+  sntp/sntp.1sntpmdoc@1.75 +2 -2
+    NTP_4_2_7P257
+
+  sntp/sntp.html@1.255 +2 -2
+    NTP_4_2_7P257
+
+  sntp/sntp.man.in@1.75 +2 -2
+    NTP_4_2_7P257
+
+  sntp/sntp.mdoc.in@1.75 +2 -2
+    NTP_4_2_7P257
+
+  util/ntp-keygen-opts.c@1.259 +4 -4
+    NTP_4_2_7P257
+
+  util/ntp-keygen-opts.h@1.259 +3 -3
+    NTP_4_2_7P257
+
+  util/ntp-keygen-opts.texi@1.260 +2 -2
+    NTP_4_2_7P257
+
+  util/ntp-keygen.1ntp-keygenman@1.73 +2 -2
+    NTP_4_2_7P257
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.73 +2 -2
+    NTP_4_2_7P257
+
+  util/ntp-keygen.man.in@1.73 +2 -2
+    NTP_4_2_7P257
+
+  util/ntp-keygen.mdoc.in@1.73 +2 -2
+    NTP_4_2_7P257
+
+ChangeSet@1.2767, 2012-02-15 02:48:49+00:00, davehart@dlh-7551.ad.hartbrothers.com
+  Restore accidentally-removed "parsetime" local variable declaration
+    in refclock_parse.c stream_receive().
+  Remove Windows-specific code from indicate_refclock_packet() as it is
+    now used only on non-Windows systems.
+  process_refclock_packet() is used only on Windows, #ifdef away elsewhere.
+
+  ntpd/ntp_refclock.c@1.114 +3 -3
+    Remove Windows-specific code from indicate_refclock_packet() as it is
+      now used only on non-Windows systems.
+    process_refclock_packet() is used only on Windows, #ifdef away elsewhere.
+    
+
+  ntpd/refclock_parse.c@1.66 +1 -0
+    Restore accidentally-removed "parsetime" local variable declaration
+      in refclock_parse.c stream_receive().
+
+ChangeSet@1.2762.1.1, 2012-02-09 23:18:03+01:00, jnperlin@hydra.localnet
+  [Bug 2135] defer calls to 'io_input' to main thread under Windows
+
+  ChangeLog@1.1111.1.1 +1 -0
+    [Bug 2135] defer calls to 'io_input' to main thread under Windows
+
+  include/ntp_refclock.h@1.35 +1 -0
+    [Bug 2135] defer calls to 'io_input' to main thread under Windows
+     * add prototype for 'process_refclock_packet()'
+
+  ntpd/ntp_refclock.c@1.111.1.1 +65 -32
+    [Bug 2135] defer calls to 'io_input' to main thread under Windows
+     * implement 'process_refclock_packet()'
+     * cleanup 'refclock_gtlin()' and refclock_gtraw()'
+
+  ntpd/refclock_msfees.c@1.17 +2 -2
+    [Bug 2135] defer calls to 'io_input' to main thread under Windows
+     * fix 'io.srcclock' mangling -- this should be the peer. Use the unit ptr to get the unit.
+
+  ntpd/refclock_parse.c@1.65 +8 -5
+    [Bug 2135] defer calls to 'io_input' to main thread under Windows
+     * fix 'io.srcclock' mangling -- this should be the peer. Use the unit ptr to get the unit.
+
+  ports/winnt/ntpd/ntp_iocompletionport.c@1.61 +7 -14
+    [Bug 2135] defer calls to 'io_input' to main thread under Windows
+
 ChangeSet@1.2765, 2012-02-08 08:33:47+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P256
   TAG: NTP_4_2_7P256
