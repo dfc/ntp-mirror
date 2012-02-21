@@ -1,3 +1,229 @@
+ChangeSet@1.2776, 2012-02-21 04:53:59+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P258
+  TAG: NTP_4_2_7P258
+
+  ChangeLog@1.1120 +1 -0
+    NTP_4_2_7P258
+
+  ntpd/ntpd-opts.c@1.263 +4 -4
+    NTP_4_2_7P258
+
+  ntpd/ntpd-opts.h@1.263 +3 -3
+    NTP_4_2_7P258
+
+  ntpd/ntpd-opts.texi@1.261 +2 -2
+    NTP_4_2_7P258
+
+  ntpd/ntpd.1ntpdman@1.74 +2 -2
+    NTP_4_2_7P258
+
+  ntpd/ntpd.1ntpdmdoc@1.74 +2 -2
+    NTP_4_2_7P258
+
+  ntpd/ntpd.man.in@1.74 +2 -2
+    NTP_4_2_7P258
+
+  ntpd/ntpd.mdoc.in@1.74 +2 -2
+    NTP_4_2_7P258
+
+  ntpdc/ntpdc-opts.c@1.258 +4 -4
+    NTP_4_2_7P258
+
+  ntpdc/ntpdc-opts.h@1.258 +3 -3
+    NTP_4_2_7P258
+
+  ntpdc/ntpdc-opts.texi@1.258 +2 -2
+    NTP_4_2_7P258
+
+  ntpdc/ntpdc.1ntpdcman@1.74 +2 -2
+    NTP_4_2_7P258
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.74 +2 -2
+    NTP_4_2_7P258
+
+  ntpdc/ntpdc.html@1.86 +2 -2
+    NTP_4_2_7P258
+
+  ntpdc/ntpdc.man.in@1.74 +2 -2
+    NTP_4_2_7P258
+
+  ntpdc/ntpdc.mdoc.in@1.74 +2 -2
+    NTP_4_2_7P258
+
+  ntpq/ntpq-opts.c@1.260 +4 -4
+    NTP_4_2_7P258
+
+  ntpq/ntpq-opts.h@1.260 +3 -3
+    NTP_4_2_7P258
+
+  ntpq/ntpq-opts.texi@1.260 +2 -2
+    NTP_4_2_7P258
+
+  ntpq/ntpq.1ntpqman@1.74 +2 -2
+    NTP_4_2_7P258
+
+  ntpq/ntpq.1ntpqmdoc@1.74 +2 -2
+    NTP_4_2_7P258
+
+  ntpq/ntpq.man.in@1.74 +2 -2
+    NTP_4_2_7P258
+
+  ntpq/ntpq.mdoc.in@1.74 +2 -2
+    NTP_4_2_7P258
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.260 +4 -4
+    NTP_4_2_7P258
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.260 +3 -3
+    NTP_4_2_7P258
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.260 +2 -2
+    NTP_4_2_7P258
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.74 +2 -2
+    NTP_4_2_7P258
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.74 +2 -2
+    NTP_4_2_7P258
+
+  ntpsnmpd/ntpsnmpd.man.in@1.74 +2 -2
+    NTP_4_2_7P258
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.74 +2 -2
+    NTP_4_2_7P258
+
+  packageinfo.sh@1.261 +1 -1
+    NTP_4_2_7P258
+
+  scripts/ntp-wait-opts.texi@1.78 +1 -1
+    NTP_4_2_7P258
+
+  scripts/ntp-wait.1ntp-waitman@1.74 +2 -2
+    NTP_4_2_7P258
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.74 +2 -2
+    NTP_4_2_7P258
+
+  scripts/ntp-wait.html@1.78 +1 -1
+    NTP_4_2_7P258
+
+  scripts/ntp-wait.man.in@1.74 +2 -2
+    NTP_4_2_7P258
+
+  scripts/ntp-wait.mdoc.in@1.74 +2 -2
+    NTP_4_2_7P258
+
+  sntp/sntp-opts.c@1.256 +4 -4
+    NTP_4_2_7P258
+
+  sntp/sntp-opts.h@1.256 +3 -3
+    NTP_4_2_7P258
+
+  sntp/sntp-opts.texi@1.256 +2 -2
+    NTP_4_2_7P258
+
+  sntp/sntp.1sntpman@1.76 +2 -2
+    NTP_4_2_7P258
+
+  sntp/sntp.1sntpmdoc@1.76 +2 -2
+    NTP_4_2_7P258
+
+  sntp/sntp.html@1.256 +2 -2
+    NTP_4_2_7P258
+
+  sntp/sntp.man.in@1.76 +2 -2
+    NTP_4_2_7P258
+
+  sntp/sntp.mdoc.in@1.76 +2 -2
+    NTP_4_2_7P258
+
+  util/ntp-keygen-opts.c@1.260 +4 -4
+    NTP_4_2_7P258
+
+  util/ntp-keygen-opts.h@1.260 +3 -3
+    NTP_4_2_7P258
+
+  util/ntp-keygen-opts.texi@1.261 +2 -2
+    NTP_4_2_7P258
+
+  util/ntp-keygen.1ntp-keygenman@1.74 +2 -2
+    NTP_4_2_7P258
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.74 +2 -2
+    NTP_4_2_7P258
+
+  util/ntp-keygen.man.in@1.74 +2 -2
+    NTP_4_2_7P258
+
+  util/ntp-keygen.mdoc.in@1.74 +2 -2
+    NTP_4_2_7P258
+
+ChangeSet@1.2775, 2012-02-21 02:43:49+00:00, hart@psp-os1.ntp.org
+  refclock_nmea.c:
+    add newline to EOF
+
+  ntpd/refclock_nmea.c@1.69 +1 -1
+    add newline to EOF
+
+ChangeSet@1.2768.2.1, 2012-02-21 01:26:03+01:00, jnperlin@hydra.localnet
+  [bug 2143] discard data if quality indication not good to avoid glitches
+  add stat counters for diagnostics (mode bit enabled) to clockstats file
+
+  ChangeLog@1.1116.2.1 +2 -0
+    [bug 2143] discard data if quality indication not good to avoid glitches
+    add stat counters for diagnostics (mode bit enabled) to clockstats file
+
+  ntpd/refclock_nmea.c@1.65.1.1 +63 -12
+    [bug 2143] discard data if quality indication not good to avoid glitches
+    add stat counters for diagnostics (mode bit enabled) to clockstats file
+
+ChangeSet@1.2768.1.2, 2012-02-20 22:16:37+00:00, davehart@dlh-7551.ad.hartbrothers.com
+  [Bug 2143] NMEA 4.2.7p204 uses timecodes indicating lost reception.
+  Increase detail in clockstats for NMEA driver (from Hal Murray).
+
+  ChangeLog@1.1116.1.1 +2 -0
+    [Bug 2143] NMEA 4.2.7p204 uses timecodes indicating lost reception.
+    Increase detail in clockstats for NMEA driver (from Hal Murray).
+
+  ntpd/refclock_nmea.c@1.67 +39 -6
+    Increase detail in clockstats for NMEA driver (from Hal Murray).
+    
+
+ChangeSet@1.2772, 2012-02-19 16:30:28+00:00, davehart@dlh-7551.ad.hartbrothers.com
+  fix user-mode PPS end of line timestamp, and use wait I/O
+    completion timestamp not read completion.
+
+  ports/winnt/ntpd/ntp_iocompletionport.c@1.65 +5 -2
+    fix user-mode PPS end of line timestamp, and use wait I/O
+      completion timestamp not read completion.
+
+ChangeSet@1.2769.1.1, 2012-02-19 16:06:38+00:00, davehart@dlh-7551.ad.hartbrothers.com
+  Minor nonfunctional refclock_nmea.c cleanup while hunting bug.
+
+  ports/winnt/ntpd/ntp_iocompletionport.c@1.62.1.1 +74 -54
+    Minor nonfunctional cleanup while hunting bug.
+
+ChangeSet@1.2770, 2012-02-19 16:10:00+01:00, jnperlin@hydra.localnet
+  hack to get rid of leading CR/LF and keep timestamp for the whole buffer
+
+  ports/winnt/ntpd/ntp_iocompletionport.c@1.63 +16 -6
+    hack to get rid of leading CR/LF and keep timestamp for the whole buffer
+
+ChangeSet@1.2768.1.1, 2012-02-19 09:29:05+01:00, jnperlin@hydra.localnet
+  [bug 2143] do not process data if quality indication says 'not good' to avoid glitches
+
+  ntpd/refclock_nmea.c@1.66 +6 -1
+    [bug 2143] do not process data if quality indication says 'not good' to avoid glitches
+
+ChangeSet@1.2769, 2012-02-18 02:41:22+01:00, jnperlin@hydra.localnet
+  [Bug 2140] Rework of Windows I/O completion port handling to avoid garbling serial input in UNIX line discipline emulation.
+
+  ChangeLog@1.1117 +2 -0
+    [Bug 2140] Rework of Windows I/O completion port handling to avoid garbling serial input in UNIX line discipline emulation.
+
+  ports/winnt/ntpd/ntp_iocompletionport.c@1.62 +775 -598
+    [Bug 2140] Rework of Windows I/O completion port handling to avoid garbling serial input in UNIX line discipline emulation.
+
 ChangeSet@1.2768, 2012-02-17 05:52:44+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P257
   TAG: NTP_4_2_7P257
