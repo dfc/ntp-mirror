@@ -1,3 +1,211 @@
+ChangeSet@1.2778, 2012-02-22 05:59:53+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P259
+  TAG: NTP_4_2_7P259
+
+  ChangeLog@1.1122 +1 -0
+    NTP_4_2_7P259
+
+  ntpd/ntpd-opts.c@1.264 +4 -4
+    NTP_4_2_7P259
+
+  ntpd/ntpd-opts.h@1.264 +3 -3
+    NTP_4_2_7P259
+
+  ntpd/ntpd-opts.texi@1.262 +2 -2
+    NTP_4_2_7P259
+
+  ntpd/ntpd.1ntpdman@1.75 +2 -2
+    NTP_4_2_7P259
+
+  ntpd/ntpd.1ntpdmdoc@1.75 +2 -2
+    NTP_4_2_7P259
+
+  ntpd/ntpd.man.in@1.75 +2 -2
+    NTP_4_2_7P259
+
+  ntpd/ntpd.mdoc.in@1.75 +2 -2
+    NTP_4_2_7P259
+
+  ntpdc/ntpdc-opts.c@1.259 +4 -4
+    NTP_4_2_7P259
+
+  ntpdc/ntpdc-opts.h@1.259 +3 -3
+    NTP_4_2_7P259
+
+  ntpdc/ntpdc-opts.texi@1.259 +2 -2
+    NTP_4_2_7P259
+
+  ntpdc/ntpdc.1ntpdcman@1.75 +2 -2
+    NTP_4_2_7P259
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.75 +2 -2
+    NTP_4_2_7P259
+
+  ntpdc/ntpdc.html@1.87 +2 -2
+    NTP_4_2_7P259
+
+  ntpdc/ntpdc.man.in@1.75 +2 -2
+    NTP_4_2_7P259
+
+  ntpdc/ntpdc.mdoc.in@1.75 +2 -2
+    NTP_4_2_7P259
+
+  ntpq/ntpq-opts.c@1.261 +4 -4
+    NTP_4_2_7P259
+
+  ntpq/ntpq-opts.h@1.261 +3 -3
+    NTP_4_2_7P259
+
+  ntpq/ntpq-opts.texi@1.261 +2 -2
+    NTP_4_2_7P259
+
+  ntpq/ntpq.1ntpqman@1.75 +2 -2
+    NTP_4_2_7P259
+
+  ntpq/ntpq.1ntpqmdoc@1.75 +2 -2
+    NTP_4_2_7P259
+
+  ntpq/ntpq.man.in@1.75 +2 -2
+    NTP_4_2_7P259
+
+  ntpq/ntpq.mdoc.in@1.75 +2 -2
+    NTP_4_2_7P259
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.261 +4 -4
+    NTP_4_2_7P259
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.261 +3 -3
+    NTP_4_2_7P259
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.261 +2 -2
+    NTP_4_2_7P259
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.75 +2 -2
+    NTP_4_2_7P259
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.75 +2 -2
+    NTP_4_2_7P259
+
+  ntpsnmpd/ntpsnmpd.man.in@1.75 +2 -2
+    NTP_4_2_7P259
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.75 +2 -2
+    NTP_4_2_7P259
+
+  packageinfo.sh@1.262 +1 -1
+    NTP_4_2_7P259
+
+  scripts/ntp-wait-opts.texi@1.79 +1 -1
+    NTP_4_2_7P259
+
+  scripts/ntp-wait.1ntp-waitman@1.75 +2 -2
+    NTP_4_2_7P259
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.75 +2 -2
+    NTP_4_2_7P259
+
+  scripts/ntp-wait.html@1.79 +1 -1
+    NTP_4_2_7P259
+
+  scripts/ntp-wait.man.in@1.75 +2 -2
+    NTP_4_2_7P259
+
+  scripts/ntp-wait.mdoc.in@1.75 +2 -2
+    NTP_4_2_7P259
+
+  sntp/sntp-opts.c@1.257 +4 -4
+    NTP_4_2_7P259
+
+  sntp/sntp-opts.h@1.257 +3 -3
+    NTP_4_2_7P259
+
+  sntp/sntp-opts.texi@1.257 +2 -2
+    NTP_4_2_7P259
+
+  sntp/sntp.1sntpman@1.77 +2 -2
+    NTP_4_2_7P259
+
+  sntp/sntp.1sntpmdoc@1.77 +2 -2
+    NTP_4_2_7P259
+
+  sntp/sntp.html@1.257 +2 -2
+    NTP_4_2_7P259
+
+  sntp/sntp.man.in@1.77 +2 -2
+    NTP_4_2_7P259
+
+  sntp/sntp.mdoc.in@1.77 +2 -2
+    NTP_4_2_7P259
+
+  util/ntp-keygen-opts.c@1.261 +4 -4
+    NTP_4_2_7P259
+
+  util/ntp-keygen-opts.h@1.261 +3 -3
+    NTP_4_2_7P259
+
+  util/ntp-keygen-opts.texi@1.262 +2 -2
+    NTP_4_2_7P259
+
+  util/ntp-keygen.1ntp-keygenman@1.75 +2 -2
+    NTP_4_2_7P259
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.75 +2 -2
+    NTP_4_2_7P259
+
+  util/ntp-keygen.man.in@1.75 +2 -2
+    NTP_4_2_7P259
+
+  util/ntp-keygen.mdoc.in@1.75 +2 -2
+    NTP_4_2_7P259
+
+ChangeSet@1.2777, 2012-02-22 05:05:04+00:00, davehart@dlh-7551.ad.hartbrothers.com
+  [Bug 2148] ntpd 4.2.7p258 segfault with 0x0100000 bit in NMEA mode.
+  refclock_nmea.c merge cleanup thanks to Juergen Perlinger.
+  Use mutex with Lamport checks in get_systime() on Windows, which
+    unlike portable ntpd uses the routine across threads.
+
+  ChangeLog@1.1121 +2 -0
+    [Bug 2148] ntpd 4.2.7p258 segfault with 0x0100000 bit in NMEA mode.
+    refclock_nmea.c merge cleanup thanks to Juergen Perlinger.
+
+  include/ntp_assert.h@1.7 +4 -4
+    Do not evaluate expression for compiled-out DEBUG_INSIST() and other
+      DEBUG_*() assertions.
+
+  include/ntp_fp.h@1.29 +30 -0
+    Make recent fuzz Lamport checks in get_systime() safe on Windows ntpd,
+      which invokes get_systime() on independent threads with mutex.
+
+  libntp/lib_strbuf.c@1.10 +5 -0
+    Make recent fuzz Lamport checks in get_systime() safe on Windows ntpd,
+      which invokes get_systime() on independent threads with mutex.
+
+  libntp/systime.c@1.64 +26 -2
+    Make recent fuzz Lamport checks in get_systime() safe on Windows ntpd,
+      which invokes get_systime() on independent threads with mutex.
+
+  ntpd/ntp_control.c@1.179 +7 -1
+    [Bug 2148] ntpd 4.2.7p258 segfault with 0x0100000 bit in NMEA mode.
+
+  ntpd/ntp_refclock.c@1.115 +3 -1
+    p257 change requires reflective change to debug trace code to avoid
+      unprintable spew.
+
+  ntpd/ntpd.c@1.130 +1 -1
+    init_lib() calls init_systime() which needs to happen before get_systime()
+
+  ntpd/refclock_nmea.c@1.70 +0 -13
+    merge cleanup of Dave's merge, courtesy Juergen OOB
+
+  ports/winnt/ntpd/ntp_iocompletionport.c@1.66 +1 -1
+    debug trace of user PPS hack treated DCD timestamp as signed.
+
+  sntp/tests_main.cpp@1.7 +2 -0
+    Call libntp's init_lib() early in unit tests.
+
+  sntp/tests_main.h@1.8 +3 -0
+    ntp_stdlib.h for init_lib()
+
 ChangeSet@1.2776, 2012-02-21 04:53:59+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P258
   TAG: NTP_4_2_7P258
