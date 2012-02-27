@@ -1,8 +1,168 @@
-ChangeSet@1.2780, 2012-02-24 11:36:14+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2782, 2012-02-27 11:45:56+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P261
+  TAG: NTP_4_2_7P261
+
+  ChangeLog@1.1126 +1 -0
+    NTP_4_2_7P261
+
+  ntpd/ntpd-opts.c@1.266 +4 -4
+    NTP_4_2_7P261
+
+  ntpd/ntpd-opts.h@1.266 +3 -3
+    NTP_4_2_7P261
+
+  ntpd/ntpd-opts.texi@1.264 +2 -2
+    NTP_4_2_7P261
+
+  ntpd/ntpd.1ntpdman@1.77 +2 -2
+    NTP_4_2_7P261
+
+  ntpd/ntpd.1ntpdmdoc@1.77 +2 -2
+    NTP_4_2_7P261
+
+  ntpd/ntpd.man.in@1.77 +2 -2
+    NTP_4_2_7P261
+
+  ntpd/ntpd.mdoc.in@1.77 +2 -2
+    NTP_4_2_7P261
+
+  ntpdc/ntpdc-opts.c@1.261 +4 -4
+    NTP_4_2_7P261
+
+  ntpdc/ntpdc-opts.h@1.261 +3 -3
+    NTP_4_2_7P261
+
+  ntpdc/ntpdc-opts.texi@1.261 +2 -2
+    NTP_4_2_7P261
+
+  ntpdc/ntpdc.1ntpdcman@1.77 +2 -2
+    NTP_4_2_7P261
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.77 +2 -2
+    NTP_4_2_7P261
+
+  ntpdc/ntpdc.html@1.89 +2 -2
+    NTP_4_2_7P261
+
+  ntpdc/ntpdc.man.in@1.77 +2 -2
+    NTP_4_2_7P261
+
+  ntpdc/ntpdc.mdoc.in@1.77 +2 -2
+    NTP_4_2_7P261
+
+  ntpq/ntpq-opts.c@1.263 +4 -4
+    NTP_4_2_7P261
+
+  ntpq/ntpq-opts.h@1.263 +3 -3
+    NTP_4_2_7P261
+
+  ntpq/ntpq-opts.texi@1.263 +2 -2
+    NTP_4_2_7P261
+
+  ntpq/ntpq.1ntpqman@1.77 +2 -2
+    NTP_4_2_7P261
+
+  ntpq/ntpq.1ntpqmdoc@1.77 +2 -2
+    NTP_4_2_7P261
+
+  ntpq/ntpq.man.in@1.77 +2 -2
+    NTP_4_2_7P261
+
+  ntpq/ntpq.mdoc.in@1.77 +2 -2
+    NTP_4_2_7P261
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.263 +4 -4
+    NTP_4_2_7P261
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.263 +3 -3
+    NTP_4_2_7P261
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.263 +2 -2
+    NTP_4_2_7P261
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.77 +2 -2
+    NTP_4_2_7P261
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.77 +2 -2
+    NTP_4_2_7P261
+
+  ntpsnmpd/ntpsnmpd.man.in@1.77 +2 -2
+    NTP_4_2_7P261
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.77 +2 -2
+    NTP_4_2_7P261
+
+  packageinfo.sh@1.264 +1 -1
+    NTP_4_2_7P261
+
+  scripts/ntp-wait-opts.texi@1.81 +1 -1
+    NTP_4_2_7P261
+
+  scripts/ntp-wait.1ntp-waitman@1.77 +2 -2
+    NTP_4_2_7P261
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.77 +2 -2
+    NTP_4_2_7P261
+
+  scripts/ntp-wait.html@1.81 +1 -1
+    NTP_4_2_7P261
+
+  scripts/ntp-wait.man.in@1.77 +2 -2
+    NTP_4_2_7P261
+
+  scripts/ntp-wait.mdoc.in@1.77 +2 -2
+    NTP_4_2_7P261
+
+  sntp/sntp-opts.c@1.259 +4 -4
+    NTP_4_2_7P261
+
+  sntp/sntp-opts.h@1.259 +3 -3
+    NTP_4_2_7P261
+
+  sntp/sntp-opts.texi@1.259 +2 -2
+    NTP_4_2_7P261
+
+  sntp/sntp.1sntpman@1.79 +2 -2
+    NTP_4_2_7P261
+
+  sntp/sntp.1sntpmdoc@1.79 +2 -2
+    NTP_4_2_7P261
+
+  sntp/sntp.html@1.259 +2 -2
+    NTP_4_2_7P261
+
+  sntp/sntp.man.in@1.79 +2 -2
+    NTP_4_2_7P261
+
+  sntp/sntp.mdoc.in@1.79 +2 -2
+    NTP_4_2_7P261
+
+  util/ntp-keygen-opts.c@1.263 +4 -4
+    NTP_4_2_7P261
+
+  util/ntp-keygen-opts.h@1.263 +3 -3
+    NTP_4_2_7P261
+
+  util/ntp-keygen-opts.texi@1.264 +2 -2
+    NTP_4_2_7P261
+
+  util/ntp-keygen.1ntp-keygenman@1.77 +2 -2
+    NTP_4_2_7P261
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.77 +2 -2
+    NTP_4_2_7P261
+
+  util/ntp-keygen.man.in@1.77 +2 -2
+    NTP_4_2_7P261
+
+  util/ntp-keygen.mdoc.in@1.77 +2 -2
+    NTP_4_2_7P261
+
+ChangeSet@1.2779.1.1, 2012-02-24 11:36:14+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P260
   TAG: NTP_4_2_7P260
 
-  ChangeLog@1.1124 +1 -0
+  ChangeLog@1.1123.1.1 +1 -0
     NTP_4_2_7P260
 
   ntpd/ntpd-opts.c@1.265 +4 -4
@@ -157,6 +317,16 @@ ChangeSet@1.2780, 2012-02-24 11:36:14+00:00, stenn@deacon.udel.edu
 
   util/ntp-keygen.mdoc.in@1.76 +2 -2
     NTP_4_2_7P260
+
+ChangeSet@1.2780, 2012-02-24 08:07:56+00:00, davehart@dlh-7551.ad.hartbrothers.com
+  [Bug 2048] add the clock variable timecode to SHM refclock.
+    Thanks to Michael Tatarinov.
+
+  ChangeLog@1.1124 +1 -0
+    [Bug 2048] add the clock variable timecode to SHM refclock.
+
+  ntpd/refclock_shm.c@1.24 +16 -6
+    [Bug 2048] add the clock variable timecode to SHM refclock.
 
 ChangeSet@1.2779, 2012-02-23 18:16:42-05:00, stenn@deacon.udel.edu
   Fix the check-scm-rev invocation in several Makefile.am's.
