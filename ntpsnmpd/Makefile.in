@@ -93,7 +93,7 @@ am__DEPENDENCIES_1 =
 ntpsnmpd_DEPENDENCIES = ../ntpq/libntpq.a ../libntp/libntp.a \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
 am__v_lt_0 = --silent
@@ -389,7 +389,7 @@ ntpsnmpd_SOURCES = netsnmp_daemonize.c ntpsnmpd.c ntpSnmpSubagentObject.c \
 		ntp_snmp.h
 
 # HMS: we probably want a version.o file here, too.
-LDADD = ../ntpq/libntpq.a ../libntp/libntp.a $(LDADD_LIBNTP) \
+LDADD = ../ntpq/libntpq.a ../libntp/libntp.a $(LDADD_LIBNTP) $(LIBM) \
 	$(PTHREAD_LIBS) $(LCRYPTO) $(SNMP_LIBS) $(LIBOPTS_LDADD)
 AM_CFLAGS = $(SNMP_CFLAGS) $(CFLAGS_NTP)
 AM_CPPFLAGS = -I$(top_srcdir)/ntpq $(NTP_INCS) $(LIBOPTS_CFLAGS) \
