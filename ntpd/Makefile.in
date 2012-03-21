@@ -121,7 +121,8 @@ am_libntpd_a_OBJECTS = cmd_args.$(OBJEXT) ntp_control.$(OBJEXT) \
 	refclock_tpro.$(OBJEXT) refclock_true.$(OBJEXT) \
 	refclock_tt560.$(OBJEXT) refclock_ulink.$(OBJEXT) \
 	refclock_wwv.$(OBJEXT) refclock_wwvb.$(OBJEXT) \
-	refclock_zyfer.$(OBJEXT) $(am__objects_1)
+	refclock_zyfer.$(OBJEXT) refclock_tsyncpci.$(OBJEXT) \
+	$(am__objects_1)
 libntpd_a_OBJECTS = $(am_libntpd_a_OBJECTS)
 am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(libexecdir)" \
 	"$(DESTDIR)$(sbindir)" "$(DESTDIR)$(man1dir)" \
@@ -629,6 +630,7 @@ libntpd_a_SOURCES = \
 	refclock_wwv.c		\
 	refclock_wwvb.c		\
 	refclock_zyfer.c	\
+	refclock_tsyncpci.c	\
 	$(NULL)
 
 NTP_INCS = -I$(top_srcdir)/include -I$(top_srcdir)/lib/isc/include \
@@ -902,6 +904,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/refclock_shm.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/refclock_tpro.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/refclock_true.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/refclock_tsyncpci.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/refclock_tt560.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/refclock_ulink.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/refclock_wwv.Po@am__quote@

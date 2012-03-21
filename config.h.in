@@ -153,6 +153,9 @@
 /* Kinemetrics/TrueTime receivers */
 #undef CLOCK_TRUETIME
 
+/* Spectracom TSYNC timing board */
+#undef CLOCK_TSYNCPCI
+
 /* TrueTime 560 IRIG-B decoder? */
 #undef CLOCK_TT560
 
