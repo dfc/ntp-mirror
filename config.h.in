@@ -12,9 +12,6 @@
 /* Is adjtime() accurate? */
 #undef ADJTIME_IS_ACCURATE
 
-/* CHU audio/decoder? */
-#undef AUDIO_CHU
-
 /* Support NTP Autokey protocol? */
 #undef AUTOKEY
 

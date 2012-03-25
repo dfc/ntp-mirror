@@ -1,4 +1,348 @@
-ChangeSet@1.2803, 2012-03-23 11:23:34+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2771, 2012-03-25 05:07:53+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P269
+  TAG: NTP_4_2_7P269
+
+  ChangeLog@1.1144 +1 -0
+    NTP_4_2_7P269
+
+  ntpd/ntpd-opts.c@1.274 +4 -4
+    NTP_4_2_7P269
+
+  ntpd/ntpd-opts.h@1.274 +3 -3
+    NTP_4_2_7P269
+
+  ntpd/ntpd-opts.texi@1.272 +2 -2
+    NTP_4_2_7P269
+
+  ntpd/ntpd.1ntpdman@1.85 +8 -548
+    NTP_4_2_7P269
+
+  ntpd/ntpd.1ntpdmdoc@1.85 +8 -547
+    NTP_4_2_7P269
+
+  ntpd/ntpd.man.in@1.85 +8 -548
+    NTP_4_2_7P269
+
+  ntpd/ntpd.mdoc.in@1.85 +8 -547
+    NTP_4_2_7P269
+
+  ntpdc/ntpdc-opts.c@1.269 +4 -4
+    NTP_4_2_7P269
+
+  ntpdc/ntpdc-opts.h@1.269 +3 -3
+    NTP_4_2_7P269
+
+  ntpdc/ntpdc-opts.texi@1.269 +2 -2
+    NTP_4_2_7P269
+
+  ntpdc/ntpdc.1ntpdcman@1.85 +7 -704
+    NTP_4_2_7P269
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.85 +7 -659
+    NTP_4_2_7P269
+
+  ntpdc/ntpdc.html@1.97 +2 -2
+    NTP_4_2_7P269
+
+  ntpdc/ntpdc.man.in@1.85 +7 -704
+    NTP_4_2_7P269
+
+  ntpdc/ntpdc.mdoc.in@1.85 +7 -659
+    NTP_4_2_7P269
+
+  ntpq/ntpq-opts.c@1.271 +4 -4
+    NTP_4_2_7P269
+
+  ntpq/ntpq-opts.h@1.271 +3 -3
+    NTP_4_2_7P269
+
+  ntpq/ntpq-opts.texi@1.271 +2 -2
+    NTP_4_2_7P269
+
+  ntpq/ntpq.1ntpqman@1.85 +3 -260
+    NTP_4_2_7P269
+
+  ntpq/ntpq.1ntpqmdoc@1.85 +3 -245
+    NTP_4_2_7P269
+
+  ntpq/ntpq.man.in@1.85 +3 -260
+    NTP_4_2_7P269
+
+  ntpq/ntpq.mdoc.in@1.85 +3 -245
+    NTP_4_2_7P269
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.271 +4 -4
+    NTP_4_2_7P269
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.271 +3 -3
+    NTP_4_2_7P269
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.271 +2 -2
+    NTP_4_2_7P269
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.85 +4 -3
+    NTP_4_2_7P269
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.85 +4 -3
+    NTP_4_2_7P269
+
+  ntpsnmpd/ntpsnmpd.man.in@1.85 +4 -3
+    NTP_4_2_7P269
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.85 +4 -3
+    NTP_4_2_7P269
+
+  packageinfo.sh@1.272 +1 -1
+    NTP_4_2_7P269
+
+  scripts/ntp-wait-opts.texi@1.89 +1 -1
+    NTP_4_2_7P269
+
+  scripts/ntp-wait.1ntp-waitman@1.85 +4 -18
+    NTP_4_2_7P269
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.85 +4 -18
+    NTP_4_2_7P269
+
+  scripts/ntp-wait.html@1.89 +1 -1
+    NTP_4_2_7P269
+
+  scripts/ntp-wait.man.in@1.85 +4 -18
+    NTP_4_2_7P269
+
+  scripts/ntp-wait.mdoc.in@1.85 +4 -18
+    NTP_4_2_7P269
+
+  sntp/sntp-opts.c@1.267 +4 -4
+    NTP_4_2_7P269
+
+  sntp/sntp-opts.h@1.267 +3 -3
+    NTP_4_2_7P269
+
+  sntp/sntp-opts.texi@1.267 +2 -2
+    NTP_4_2_7P269
+
+  sntp/sntp.1sntpman@1.87 +6 -65
+    NTP_4_2_7P269
+
+  sntp/sntp.1sntpmdoc@1.87 +6 -65
+    NTP_4_2_7P269
+
+  sntp/sntp.html@1.267 +2 -2
+    NTP_4_2_7P269
+
+  sntp/sntp.man.in@1.87 +6 -65
+    NTP_4_2_7P269
+
+  sntp/sntp.mdoc.in@1.87 +6 -65
+    NTP_4_2_7P269
+
+  util/ntp-keygen-opts.c@1.271 +4 -4
+    NTP_4_2_7P269
+
+  util/ntp-keygen-opts.h@1.271 +3 -3
+    NTP_4_2_7P269
+
+  util/ntp-keygen-opts.texi@1.272 +2 -2
+    NTP_4_2_7P269
+
+  util/ntp-keygen.1ntp-keygenman@1.85 +6 -720
+    NTP_4_2_7P269
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.85 +6 -706
+    NTP_4_2_7P269
+
+  util/ntp-keygen.man.in@1.85 +6 -720
+    NTP_4_2_7P269
+
+  util/ntp-keygen.mdoc.in@1.85 +6 -706
+    NTP_4_2_7P269
+
+ChangeSet@1.2770, 2012-03-24 22:19:50-04:00, stenn@deacon.udel.edu
+  Clean up configure.ac
+
+  ChangeLog@1.1143 +1 -0
+    Clean up configure.ac
+
+  configure.ac@1.544 +221 -117
+    Clean up configure.ac
+
+ChangeSet@1.2769, 2012-03-24 19:30:26-04:00, stenn@psp-deb1.ntp.org
+  Cleanup configure.ac's TSYNC PCI section
+
+  ChangeLog@1.1142 +2 -0
+    Cleanup configure.ac's TSYNC PCI section
+
+  configure.ac@1.543 +2 -2
+    Cleanup configure.ac's TSYNC PCI section
+
+ChangeSet@1.2762.1.43, 2012-03-24 11:22:52+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P268
+  TAG: NTP_4_2_7P268
+
+  ChangeLog@1.1141 +1 -0
+    NTP_4_2_7P268
+
+  ntpd/ntpd-opts.c@1.273 +4 -4
+    NTP_4_2_7P268
+
+  ntpd/ntpd-opts.h@1.273 +3 -3
+    NTP_4_2_7P268
+
+  ntpd/ntpd-opts.texi@1.271 +2 -2
+    NTP_4_2_7P268
+
+  ntpd/ntpd.1ntpdman@1.84 +2 -2
+    NTP_4_2_7P268
+
+  ntpd/ntpd.1ntpdmdoc@1.84 +2 -2
+    NTP_4_2_7P268
+
+  ntpd/ntpd.man.in@1.84 +2 -2
+    NTP_4_2_7P268
+
+  ntpd/ntpd.mdoc.in@1.84 +2 -2
+    NTP_4_2_7P268
+
+  ntpdc/ntpdc-opts.c@1.268 +4 -4
+    NTP_4_2_7P268
+
+  ntpdc/ntpdc-opts.h@1.268 +3 -3
+    NTP_4_2_7P268
+
+  ntpdc/ntpdc-opts.texi@1.268 +2 -2
+    NTP_4_2_7P268
+
+  ntpdc/ntpdc.1ntpdcman@1.84 +2 -2
+    NTP_4_2_7P268
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.84 +2 -2
+    NTP_4_2_7P268
+
+  ntpdc/ntpdc.html@1.96 +2 -2
+    NTP_4_2_7P268
+
+  ntpdc/ntpdc.man.in@1.84 +2 -2
+    NTP_4_2_7P268
+
+  ntpdc/ntpdc.mdoc.in@1.84 +2 -2
+    NTP_4_2_7P268
+
+  ntpq/ntpq-opts.c@1.270 +4 -4
+    NTP_4_2_7P268
+
+  ntpq/ntpq-opts.h@1.270 +3 -3
+    NTP_4_2_7P268
+
+  ntpq/ntpq-opts.texi@1.270 +2 -2
+    NTP_4_2_7P268
+
+  ntpq/ntpq.1ntpqman@1.84 +2 -2
+    NTP_4_2_7P268
+
+  ntpq/ntpq.1ntpqmdoc@1.84 +2 -2
+    NTP_4_2_7P268
+
+  ntpq/ntpq.man.in@1.84 +2 -2
+    NTP_4_2_7P268
+
+  ntpq/ntpq.mdoc.in@1.84 +2 -2
+    NTP_4_2_7P268
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.270 +4 -4
+    NTP_4_2_7P268
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.270 +3 -3
+    NTP_4_2_7P268
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.270 +2 -2
+    NTP_4_2_7P268
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.84 +2 -2
+    NTP_4_2_7P268
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.84 +2 -2
+    NTP_4_2_7P268
+
+  ntpsnmpd/ntpsnmpd.man.in@1.84 +2 -2
+    NTP_4_2_7P268
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.84 +2 -2
+    NTP_4_2_7P268
+
+  packageinfo.sh@1.271 +1 -1
+    NTP_4_2_7P268
+
+  scripts/ntp-wait-opts.texi@1.88 +1 -1
+    NTP_4_2_7P268
+
+  scripts/ntp-wait.1ntp-waitman@1.84 +2 -2
+    NTP_4_2_7P268
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.84 +2 -2
+    NTP_4_2_7P268
+
+  scripts/ntp-wait.html@1.88 +1 -1
+    NTP_4_2_7P268
+
+  scripts/ntp-wait.man.in@1.84 +2 -2
+    NTP_4_2_7P268
+
+  scripts/ntp-wait.mdoc.in@1.84 +2 -2
+    NTP_4_2_7P268
+
+  sntp/sntp-opts.c@1.266 +4 -4
+    NTP_4_2_7P268
+
+  sntp/sntp-opts.h@1.266 +3 -3
+    NTP_4_2_7P268
+
+  sntp/sntp-opts.texi@1.266 +2 -2
+    NTP_4_2_7P268
+
+  sntp/sntp.1sntpman@1.86 +2 -2
+    NTP_4_2_7P268
+
+  sntp/sntp.1sntpmdoc@1.86 +2 -2
+    NTP_4_2_7P268
+
+  sntp/sntp.html@1.266 +2 -2
+    NTP_4_2_7P268
+
+  sntp/sntp.man.in@1.86 +2 -2
+    NTP_4_2_7P268
+
+  sntp/sntp.mdoc.in@1.86 +2 -2
+    NTP_4_2_7P268
+
+  util/ntp-keygen-opts.c@1.270 +4 -4
+    NTP_4_2_7P268
+
+  util/ntp-keygen-opts.h@1.270 +3 -3
+    NTP_4_2_7P268
+
+  util/ntp-keygen-opts.texi@1.271 +2 -2
+    NTP_4_2_7P268
+
+  util/ntp-keygen.1ntp-keygenman@1.84 +2 -2
+    NTP_4_2_7P268
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.84 +2 -2
+    NTP_4_2_7P268
+
+  util/ntp-keygen.man.in@1.84 +2 -2
+    NTP_4_2_7P268
+
+  util/ntp-keygen.mdoc.in@1.84 +2 -2
+    NTP_4_2_7P268
+
+ChangeSet@1.2762.1.42, 2012-03-23 21:50:58-04:00, stenn@deacon.udel.edu
+  reindent driver45.html
+
+  html/drivers/driver45.html@1.2 +22 -22
+    reindent driver45.html
+
+ChangeSet@1.2762.1.41, 2012-03-23 11:23:34+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P267
   TAG: NTP_4_2_7P267
 
@@ -158,7 +502,7 @@ ChangeSet@1.2803, 2012-03-23 11:23:34+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.83 +2 -2
     NTP_4_2_7P267
 
-ChangeSet@1.2802, 2012-03-22 20:20:29-04:00, stenn@deacon.udel.edu
+ChangeSet@1.2762.1.40, 2012-03-22 20:20:29-04:00, stenn@deacon.udel.edu
   Initial cut at a basic driver45.html page
 
   ChangeLog@1.1139 +1 -0
@@ -169,7 +513,7 @@ ChangeSet@1.2802, 2012-03-22 20:20:29-04:00, stenn@deacon.udel.edu
 
   html/drivers/driver45.html@1.0 +0 -0
 
-ChangeSet@1.2801, 2012-03-21 11:24:58+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2762.1.39, 2012-03-21 11:24:58+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P266
   TAG: NTP_4_2_7P266
 
@@ -329,7 +673,7 @@ ChangeSet@1.2801, 2012-03-21 11:24:58+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.82 +2 -2
     NTP_4_2_7P266
 
-ChangeSet@1.2800, 2012-03-21 05:23:41+00:00, hart@psp-os1.ntp.org
+ChangeSet@1.2762.1.38, 2012-03-21 05:23:41+00:00, hart@psp-os1.ntp.org
   refclock_tsyncpci.c:
     Change mode to -rw-rw-r--
 
@@ -339,7 +683,7 @@ ChangeSet@1.2800, 2012-03-21 05:23:41+00:00, hart@psp-os1.ntp.org
   ntpd/refclock_tsyncpci.c@1.3 +0 -0
     Change mode to -rw-r--r--
 
-ChangeSet@1.2798, 2012-03-21 03:04:51+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2762.1.36, 2012-03-21 03:04:51+00:00, davehart@dlh-7551.ad.hartbrothers.com
   Include Linux-specific refclock_tsyncpci.c in --enable-all-clocks only
     on Linux.
   Clean up configure.ac m4 quoting, indents to match current style.
@@ -352,7 +696,7 @@ ChangeSet@1.2798, 2012-03-21 03:04:51+00:00, davehart@dlh-7551.ad.hartbrothers.c
   ntpd/refclock_tsyncpci.c@1.2 +3 -1
     protect sys/ioctl.h include with HAVE_SYS_IOCTL_H
 
-ChangeSet@1.2795.1.1, 2012-03-20 11:25:09+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2762.8.1, 2012-03-20 11:25:09+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P265
   TAG: NTP_4_2_7P265
 
@@ -512,7 +856,7 @@ ChangeSet@1.2795.1.1, 2012-03-20 11:25:09+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.81 +2 -2
     NTP_4_2_7P265
 
-ChangeSet@1.2797, 2012-03-20 06:29:13+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2762.1.35, 2012-03-20 06:29:13+00:00, davehart@dlh-7551.ad.hartbrothers.com
   Add reference to refclock_tsyncpci.c to ntpd.vcproj
 
   ports/winnt/vs2005/ntpd.vcproj@1.17 +4 -0
@@ -521,7 +865,7 @@ ChangeSet@1.2797, 2012-03-20 06:29:13+00:00, davehart@dlh-7551.ad.hartbrothers.c
   ports/winnt/vs2008/ntpd/ntpd.vcproj@1.43 +4 -0
     Add reference to refclock_tsyncpci.c
 
-ChangeSet@1.2796, 2012-03-20 06:18:59+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2762.1.34, 2012-03-20 06:18:59+00:00, davehart@dlh-7551.ad.hartbrothers.com
   Spectracom TSYNC reference clock driver from tsync.2.5.0.tar.gz downloaded from
   http://www.spectracomcorp.com/Support/HowCanWeHelpYou/Library/tabid/59/Default.aspx?EntryId=107
   (see linux/ntp/tsync.patch)
@@ -552,7 +896,7 @@ ChangeSet@1.2796, 2012-03-20 06:18:59+00:00, davehart@dlh-7551.ad.hartbrothers.c
 
   ntpd/refclock_tsyncpci.c@1.0 +0 -0
 
-ChangeSet@1.2795, 2012-03-20 06:03:15+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2762.1.33, 2012-03-20 06:03:15+00:00, davehart@dlh-7551.ad.hartbrothers.com
   Treat zero counter as indication of precise system time in Windows
     PPSAPI helper function pps_ntp_timestamp_from_counter(), enabling
     PPSAPI providers to use the Windows 8 precise clock directly.
@@ -572,7 +916,7 @@ ChangeSet@1.2795, 2012-03-20 06:03:15+00:00, davehart@dlh-7551.ad.hartbrothers.c
       PPSAPI helper function pps_ntp_timestamp_from_counter(), enabling
       PPSAPI providers to use the Windows 8 precise clock directly.
 
-ChangeSet@1.2794, 2012-03-14 07:58:25+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2762.1.32, 2012-03-14 07:58:25+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P264
   TAG: NTP_4_2_7P264
 
@@ -732,13 +1076,13 @@ ChangeSet@1.2794, 2012-03-14 07:58:25+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.80 +2 -2
     NTP_4_2_7P264
 
-ChangeSet@1.2793, 2012-03-13 09:31:09+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2762.1.31, 2012-03-13 09:31:09+00:00, davehart@dlh-7551.ad.hartbrothers.com
   Quiet "DAY" redefinition warning compiling ntp-keygen.c
 
   util/ntp-keygen.c@1.91 +0 -1
     Quiet "DAY" redefinition warning.
 
-ChangeSet@1.2792, 2012-03-13 09:22:37+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2762.1.30, 2012-03-13 09:22:37+00:00, davehart@dlh-7551.ad.hartbrothers.com
   [Bug 2160] Note if leapseconds file is past its prime.
 
   ChangeLog@1.1133 +1 -0
@@ -747,7 +1091,7 @@ ChangeSet@1.2792, 2012-03-13 09:22:37+00:00, davehart@dlh-7551.ad.hartbrothers.c
   ntpd/ntp_util.c@1.97 +10 -3
     [Bug 2160] Note if leapseconds file is past its prime.
 
-ChangeSet@1.2791, 2012-03-13 09:02:35+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2762.1.29, 2012-03-13 09:02:35+00:00, davehart@dlh-7551.ad.hartbrothers.com
   Use GetSystemTimePreciseAsFileTime() on Windows 8.
 
   ChangeLog@1.1132 +1 -0
@@ -774,7 +1118,7 @@ ChangeSet@1.2791, 2012-03-13 09:02:35+00:00, davehart@dlh-7551.ad.hartbrothers.c
   util/ntp-keygen.c@1.90 +1 -1
     Use GetSystemTimePreciseAsFileTime() on Windows 8.
 
-ChangeSet@1.2790, 2012-03-13 03:57:29+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2762.1.28, 2012-03-13 03:57:29+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P263
   TAG: NTP_4_2_7P263
 
@@ -934,7 +1278,7 @@ ChangeSet@1.2790, 2012-03-13 03:57:29+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.79 +2 -2
     NTP_4_2_7P263
 
-ChangeSet@1.2789, 2012-03-11 07:10:54+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2762.1.27, 2012-03-11 07:10:54+00:00, davehart@dlh-7551.ad.hartbrothers.com
   [Bug 2159] Windows ntpd using leapfile erroneous leap second 20120401.
 
   ChangeLog@1.1130 +1 -0
@@ -949,7 +1293,7 @@ ChangeSet@1.2789, 2012-03-11 07:10:54+00:00, davehart@dlh-7551.ad.hartbrothers.c
   ports/winnt/ntpd/nt_clockstuff.c@1.56 +4 -3
     [Bug 2159] Windows ntpd using leapfile erroneous leap second 20120401.
 
-ChangeSet@1.2788, 2012-03-10 17:27:45+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2762.1.26, 2012-03-10 17:27:45+00:00, davehart@dlh-7551.ad.hartbrothers.com
   [Bug 2156] clock instability with LOCAL driver, from Miroslav Lichvar.
 
   ChangeLog@1.1129 +1 -0
@@ -964,7 +1308,7 @@ ChangeSet@1.2082.4.263, 2012-03-10 04:49:48-05:00, stenn@deacon.udel.edu
   BitKeeper/triggers/2mirrors@1.7.1.1 +5 -3
     Update 2mirror trigger to copy directly to bk2
 
-ChangeSet@1.2786, 2012-02-29 01:27:56+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2762.1.24, 2012-02-29 01:27:56+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P262
   TAG: NTP_4_2_7P262
 
@@ -1124,19 +1468,19 @@ ChangeSet@1.2786, 2012-02-29 01:27:56+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.78 +2 -2
     NTP_4_2_7P262
 
-ChangeSet@1.2785, 2012-02-28 20:27:35-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2762.1.23, 2012-02-28 20:27:35-05:00, stenn@deacon.udel.edu
   Add missing library to ntpsnmpd build
 
   ntpsnmpd/Makefile.am@1.34 +1 -1
     Add missing library to ntpsnmpd build
 
-ChangeSet@1.2782.1.1, 2012-02-28 04:42:34-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2762.7.1, 2012-02-28 04:42:34-05:00, stenn@deacon.udel.edu
   Disable bkbits as a mirror for now
 
   BitKeeper/triggers/2mirrors@1.8 +3 -1
     Disable bkbits as a mirror for now
 
-ChangeSet@1.2783, 2012-02-27 23:05:11+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2762.1.21, 2012-02-27 23:05:11+00:00, davehart@dlh-7551.ad.hartbrothers.com
   Improve ntpd scalability for servers with many trusted keys.
 
   ChangeLog@1.1127 +1 -0
@@ -1172,7 +1516,7 @@ ChangeSet@1.2783, 2012-02-27 23:05:11+00:00, davehart@dlh-7551.ad.hartbrothers.c
   tests/libntp/authkeys.cpp@1.7 +7 -11
     Improve ntpd scalability for servers with many trusted keys.
 
-ChangeSet@1.2782, 2012-02-27 11:45:56+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2762.1.20, 2012-02-27 11:45:56+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P261
   TAG: NTP_4_2_7P261
 
@@ -1332,7 +1676,7 @@ ChangeSet@1.2782, 2012-02-27 11:45:56+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.77 +2 -2
     NTP_4_2_7P261
 
-ChangeSet@1.2779.1.1, 2012-02-24 11:36:14+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2762.6.1, 2012-02-24 11:36:14+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P260
   TAG: NTP_4_2_7P260
 
@@ -1492,7 +1836,7 @@ ChangeSet@1.2779.1.1, 2012-02-24 11:36:14+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.76 +2 -2
     NTP_4_2_7P260
 
-ChangeSet@1.2780, 2012-02-24 08:07:56+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2762.1.18, 2012-02-24 08:07:56+00:00, davehart@dlh-7551.ad.hartbrothers.com
   [Bug 2048] add the clock variable timecode to SHM refclock.
     Thanks to Michael Tatarinov.
 
@@ -1502,7 +1846,7 @@ ChangeSet@1.2780, 2012-02-24 08:07:56+00:00, davehart@dlh-7551.ad.hartbrothers.c
   ntpd/refclock_shm.c@1.24 +16 -6
     [Bug 2048] add the clock variable timecode to SHM refclock.
 
-ChangeSet@1.2779, 2012-02-23 18:16:42-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2762.1.17, 2012-02-23 18:16:42-05:00, stenn@deacon.udel.edu
   Fix the check-scm-rev invocation in several Makefile.am's.
 
   ChangeLog@1.1123 +1 -0
@@ -1523,7 +1867,7 @@ ChangeSet@1.2779, 2012-02-23 18:16:42-05:00, stenn@deacon.udel.edu
   util/Makefile.am@1.70 +1 -1
     Fix the check-scm-rev invocation in several Makefile.am's.
 
-ChangeSet@1.2778, 2012-02-22 05:59:53+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2762.1.16, 2012-02-22 05:59:53+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P259
   TAG: NTP_4_2_7P259
 
@@ -1683,7 +2027,7 @@ ChangeSet@1.2778, 2012-02-22 05:59:53+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.75 +2 -2
     NTP_4_2_7P259
 
-ChangeSet@1.2777, 2012-02-22 05:05:04+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2762.1.15, 2012-02-22 05:05:04+00:00, davehart@dlh-7551.ad.hartbrothers.com
   [Bug 2148] ntpd 4.2.7p258 segfault with 0x0100000 bit in NMEA mode.
   refclock_nmea.c merge cleanup thanks to Juergen Perlinger.
   Use mutex with Lamport checks in get_systime() on Windows, which
@@ -1731,7 +2075,7 @@ ChangeSet@1.2777, 2012-02-22 05:05:04+00:00, davehart@dlh-7551.ad.hartbrothers.c
   sntp/tests_main.h@1.8 +3 -0
     ntp_stdlib.h for init_lib()
 
-ChangeSet@1.2776, 2012-02-21 04:53:59+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2762.1.14, 2012-02-21 04:53:59+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P258
   TAG: NTP_4_2_7P258
 
@@ -1891,14 +2235,14 @@ ChangeSet@1.2776, 2012-02-21 04:53:59+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.74 +2 -2
     NTP_4_2_7P258
 
-ChangeSet@1.2775, 2012-02-21 02:43:49+00:00, hart@psp-os1.ntp.org
+ChangeSet@1.2762.1.13, 2012-02-21 02:43:49+00:00, hart@psp-os1.ntp.org
   refclock_nmea.c:
     add newline to EOF
 
   ntpd/refclock_nmea.c@1.69 +1 -1
     add newline to EOF
 
-ChangeSet@1.2768.2.1, 2012-02-21 01:26:03+01:00, jnperlin@hydra.localnet
+ChangeSet@1.2762.5.1, 2012-02-21 01:26:03+01:00, jnperlin@hydra.localnet
   [bug 2143] discard data if quality indication not good to avoid glitches
   add stat counters for diagnostics (mode bit enabled) to clockstats file
 
@@ -1910,7 +2254,7 @@ ChangeSet@1.2768.2.1, 2012-02-21 01:26:03+01:00, jnperlin@hydra.localnet
     [bug 2143] discard data if quality indication not good to avoid glitches
     add stat counters for diagnostics (mode bit enabled) to clockstats file
 
-ChangeSet@1.2768.1.2, 2012-02-20 22:16:37+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2762.3.2, 2012-02-20 22:16:37+00:00, davehart@dlh-7551.ad.hartbrothers.com
   [Bug 2143] NMEA 4.2.7p204 uses timecodes indicating lost reception.
   Increase detail in clockstats for NMEA driver (from Hal Murray).
 
@@ -1922,7 +2266,7 @@ ChangeSet@1.2768.1.2, 2012-02-20 22:16:37+00:00, davehart@dlh-7551.ad.hartbrothe
     Increase detail in clockstats for NMEA driver (from Hal Murray).
     
 
-ChangeSet@1.2772, 2012-02-19 16:30:28+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2762.1.10, 2012-02-19 16:30:28+00:00, davehart@dlh-7551.ad.hartbrothers.com
   fix user-mode PPS end of line timestamp, and use wait I/O
     completion timestamp not read completion.
 
@@ -1930,25 +2274,25 @@ ChangeSet@1.2772, 2012-02-19 16:30:28+00:00, davehart@dlh-7551.ad.hartbrothers.c
     fix user-mode PPS end of line timestamp, and use wait I/O
       completion timestamp not read completion.
 
-ChangeSet@1.2769.1.1, 2012-02-19 16:06:38+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2762.4.1, 2012-02-19 16:06:38+00:00, davehart@dlh-7551.ad.hartbrothers.com
   Minor nonfunctional refclock_nmea.c cleanup while hunting bug.
 
   ports/winnt/ntpd/ntp_iocompletionport.c@1.62.1.1 +74 -54
     Minor nonfunctional cleanup while hunting bug.
 
-ChangeSet@1.2770, 2012-02-19 16:10:00+01:00, jnperlin@hydra.localnet
+ChangeSet@1.2762.1.8, 2012-02-19 16:10:00+01:00, jnperlin@hydra.localnet
   hack to get rid of leading CR/LF and keep timestamp for the whole buffer
 
   ports/winnt/ntpd/ntp_iocompletionport.c@1.63 +16 -6
     hack to get rid of leading CR/LF and keep timestamp for the whole buffer
 
-ChangeSet@1.2768.1.1, 2012-02-19 09:29:05+01:00, jnperlin@hydra.localnet
+ChangeSet@1.2762.3.1, 2012-02-19 09:29:05+01:00, jnperlin@hydra.localnet
   [bug 2143] do not process data if quality indication says 'not good' to avoid glitches
 
   ntpd/refclock_nmea.c@1.66 +6 -1
     [bug 2143] do not process data if quality indication says 'not good' to avoid glitches
 
-ChangeSet@1.2769, 2012-02-18 02:41:22+01:00, jnperlin@hydra.localnet
+ChangeSet@1.2762.1.7, 2012-02-18 02:41:22+01:00, jnperlin@hydra.localnet
   [Bug 2140] Rework of Windows I/O completion port handling to avoid garbling serial input in UNIX line discipline emulation.
 
   ChangeLog@1.1117 +2 -0
@@ -1957,7 +2301,7 @@ ChangeSet@1.2769, 2012-02-18 02:41:22+01:00, jnperlin@hydra.localnet
   ports/winnt/ntpd/ntp_iocompletionport.c@1.62 +775 -598
     [Bug 2140] Rework of Windows I/O completion port handling to avoid garbling serial input in UNIX line discipline emulation.
 
-ChangeSet@1.2768, 2012-02-17 05:52:44+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2762.1.6, 2012-02-17 05:52:44+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P257
   TAG: NTP_4_2_7P257
 
@@ -2117,7 +2461,7 @@ ChangeSet@1.2768, 2012-02-17 05:52:44+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.73 +2 -2
     NTP_4_2_7P257
 
-ChangeSet@1.2767, 2012-02-15 02:48:49+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2762.1.5, 2012-02-15 02:48:49+00:00, davehart@dlh-7551.ad.hartbrothers.com
   Restore accidentally-removed "parsetime" local variable declaration
     in refclock_parse.c stream_receive().
   Remove Windows-specific code from indicate_refclock_packet() as it is
@@ -2134,7 +2478,7 @@ ChangeSet@1.2767, 2012-02-15 02:48:49+00:00, davehart@dlh-7551.ad.hartbrothers.c
     Restore accidentally-removed "parsetime" local variable declaration
       in refclock_parse.c stream_receive().
 
-ChangeSet@1.2762.1.1, 2012-02-09 23:18:03+01:00, jnperlin@hydra.localnet
+ChangeSet@1.2762.2.1, 2012-02-09 23:18:03+01:00, jnperlin@hydra.localnet
   [Bug 2135] defer calls to 'io_input' to main thread under Windows
 
   ChangeLog@1.1111.1.1 +1 -0
@@ -2160,7 +2504,7 @@ ChangeSet@1.2762.1.1, 2012-02-09 23:18:03+01:00, jnperlin@hydra.localnet
   ports/winnt/ntpd/ntp_iocompletionport.c@1.61 +7 -14
     [Bug 2135] defer calls to 'io_input' to main thread under Windows
 
-ChangeSet@1.2765, 2012-02-08 08:33:47+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2762.1.3, 2012-02-08 08:33:47+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P256
   TAG: NTP_4_2_7P256
 
@@ -2320,7 +2664,7 @@ ChangeSet@1.2765, 2012-02-08 08:33:47+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.72 +2 -2
     NTP_4_2_7P256
 
-ChangeSet@1.2764, 2012-02-08 07:25:26+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2762.1.2, 2012-02-08 07:25:26+00:00, davehart@dlh-7551.ad.hartbrothers.com
   [Bug 2131] Set the system variable settimeofday only after clock step.
 
   ChangeLog@1.1113 +1 -0
@@ -2332,7 +2676,7 @@ ChangeSet@1.2764, 2012-02-08 07:25:26+00:00, davehart@dlh-7551.ad.hartbrothers.c
   ntpd/ntp_refclock.c@1.112 +0 -1
     Remove unused local from refclock_timer().
 
-ChangeSet@1.2763, 2012-02-08 02:33:45+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2762.1.1, 2012-02-08 02:33:45+00:00, davehart@dlh-7551.ad.hartbrothers.com
   [Bug 2134] --enable-C99-snprintf does not force rpl_snprintf use.
 
   ChangeLog@1.1112 +1 -0
@@ -2340,6 +2684,41 @@ ChangeSet@1.2763, 2012-02-08 02:33:45+00:00, davehart@dlh-7551.ad.hartbrothers.c
 
   sntp/m4/snprintf.m4@1.3 +4 -4
     [Bug 2134] --enable-C99-snprintf does not force rpl_snprintf use.
+
+ChangeSet@1.2764, 2012-02-06 19:40:41+00:00, stenn@psp-fb1.ntp.org
+  cleanup
+
+  sntp/ag-tpl/texi2txt@1.2 +2 -4
+    cleanup
+
+ChangeSet@1.2763, 2012-02-06 06:04:15+00:00, stenn@psp-fb1.ntp.org
+  autogen translator updates
+
+  BitKeeper/deleted/02/mdoc2mdoc~efc40f7d5fb243b2@1.2 +0 -0
+    Delete: sntp/ag-tpl/mdoc2mdoc
+
+  BitKeeper/deleted/55/mdoc2man~beb9c4c088d95890@1.3 +0 -0
+    Delete: sntp/ag-tpl/mdoc2man
+
+  sntp/ag-tpl/texi2man@1.1 +63 -0
+    BitKeeper file /a/etc/amd.stage/thump2-g3/export/ntp/home/stenn/ntp-dev/sntp/ag-tpl/texi2man
+
+  sntp/ag-tpl/texi2man@1.0 +0 -0
+
+  sntp/ag-tpl/texi2mdoc@1.1 +182 -0
+    BitKeeper file /a/etc/amd.stage/thump2-g3/export/ntp/home/stenn/ntp-dev/sntp/ag-tpl/texi2mdoc
+
+  sntp/ag-tpl/texi2mdoc@1.0 +0 -0
+
+  sntp/ag-tpl/texi2plain@1.1 +62 -0
+    BitKeeper file /a/etc/amd.stage/thump2-g3/export/ntp/home/stenn/ntp-dev/sntp/ag-tpl/texi2plain
+
+  sntp/ag-tpl/texi2plain@1.0 +0 -0
+
+  sntp/ag-tpl/texi2txt@1.1 +81 -0
+    BitKeeper file /a/etc/amd.stage/thump2-g3/export/ntp/home/stenn/ntp-dev/sntp/ag-tpl/texi2txt
+
+  sntp/ag-tpl/texi2txt@1.0 +0 -0
 
 ChangeSet@1.2762, 2012-01-29 22:06:30+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P255
