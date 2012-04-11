@@ -1,3 +1,231 @@
+ChangeSet@1.2776, 2012-04-11 08:44:21+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P271
+  TAG: NTP_4_2_7P271
+
+  ChangeLog@1.1148 +1 -0
+    NTP_4_2_7P271
+
+  ntpd/ntpd-opts.c@1.276 +4 -4
+    NTP_4_2_7P271
+
+  ntpd/ntpd-opts.h@1.276 +3 -3
+    NTP_4_2_7P271
+
+  ntpd/ntpd-opts.texi@1.274 +2 -2
+    NTP_4_2_7P271
+
+  ntpd/ntpd.1ntpdman@1.87 +2 -2
+    NTP_4_2_7P271
+
+  ntpd/ntpd.1ntpdmdoc@1.87 +2 -2
+    NTP_4_2_7P271
+
+  ntpd/ntpd.man.in@1.87 +2 -2
+    NTP_4_2_7P271
+
+  ntpd/ntpd.mdoc.in@1.87 +2 -2
+    NTP_4_2_7P271
+
+  ntpdc/ntpdc-opts.c@1.271 +4 -4
+    NTP_4_2_7P271
+
+  ntpdc/ntpdc-opts.h@1.271 +3 -3
+    NTP_4_2_7P271
+
+  ntpdc/ntpdc-opts.texi@1.271 +2 -2
+    NTP_4_2_7P271
+
+  ntpdc/ntpdc.1ntpdcman@1.87 +2 -2
+    NTP_4_2_7P271
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.87 +2 -2
+    NTP_4_2_7P271
+
+  ntpdc/ntpdc.html@1.99 +2 -2
+    NTP_4_2_7P271
+
+  ntpdc/ntpdc.man.in@1.87 +2 -2
+    NTP_4_2_7P271
+
+  ntpdc/ntpdc.mdoc.in@1.87 +2 -2
+    NTP_4_2_7P271
+
+  ntpq/ntpq-opts.c@1.273 +4 -4
+    NTP_4_2_7P271
+
+  ntpq/ntpq-opts.h@1.273 +3 -3
+    NTP_4_2_7P271
+
+  ntpq/ntpq-opts.texi@1.273 +2 -2
+    NTP_4_2_7P271
+
+  ntpq/ntpq.1ntpqman@1.87 +2 -2
+    NTP_4_2_7P271
+
+  ntpq/ntpq.1ntpqmdoc@1.87 +2 -2
+    NTP_4_2_7P271
+
+  ntpq/ntpq.man.in@1.87 +2 -2
+    NTP_4_2_7P271
+
+  ntpq/ntpq.mdoc.in@1.87 +2 -2
+    NTP_4_2_7P271
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.273 +4 -4
+    NTP_4_2_7P271
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.273 +3 -3
+    NTP_4_2_7P271
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.273 +2 -2
+    NTP_4_2_7P271
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.87 +2 -2
+    NTP_4_2_7P271
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.87 +2 -2
+    NTP_4_2_7P271
+
+  ntpsnmpd/ntpsnmpd.man.in@1.87 +2 -2
+    NTP_4_2_7P271
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.87 +2 -2
+    NTP_4_2_7P271
+
+  packageinfo.sh@1.274 +1 -1
+    NTP_4_2_7P271
+
+  scripts/ntp-wait-opts.texi@1.91 +14 -2
+    NTP_4_2_7P271
+
+  scripts/ntp-wait.1ntp-waitman@1.87 +2 -2
+    NTP_4_2_7P271
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.87 +2 -2
+    NTP_4_2_7P271
+
+  scripts/ntp-wait.html@1.91 +14 -2
+    NTP_4_2_7P271
+
+  scripts/ntp-wait.man.in@1.87 +2 -2
+    NTP_4_2_7P271
+
+  scripts/ntp-wait.mdoc.in@1.87 +2 -2
+    NTP_4_2_7P271
+
+  sntp/sntp-opts.c@1.269 +4 -4
+    NTP_4_2_7P271
+
+  sntp/sntp-opts.h@1.269 +3 -3
+    NTP_4_2_7P271
+
+  sntp/sntp-opts.texi@1.269 +2 -2
+    NTP_4_2_7P271
+
+  sntp/sntp.1sntpman@1.89 +2 -2
+    NTP_4_2_7P271
+
+  sntp/sntp.1sntpmdoc@1.89 +2 -2
+    NTP_4_2_7P271
+
+  sntp/sntp.html@1.269 +2 -2
+    NTP_4_2_7P271
+
+  sntp/sntp.man.in@1.89 +2 -2
+    NTP_4_2_7P271
+
+  sntp/sntp.mdoc.in@1.89 +2 -2
+    NTP_4_2_7P271
+
+  util/ntp-keygen-opts.c@1.273 +4 -4
+    NTP_4_2_7P271
+
+  util/ntp-keygen-opts.h@1.273 +3 -3
+    NTP_4_2_7P271
+
+  util/ntp-keygen-opts.texi@1.274 +2 -2
+    NTP_4_2_7P271
+
+  util/ntp-keygen.1ntp-keygenman@1.87 +2 -2
+    NTP_4_2_7P271
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.87 +2 -2
+    NTP_4_2_7P271
+
+  util/ntp-keygen.man.in@1.87 +2 -2
+    NTP_4_2_7P271
+
+  util/ntp-keygen.mdoc.in@1.87 +2 -2
+    NTP_4_2_7P271
+
+ChangeSet@1.2775, 2012-04-09 16:19:04+00:00, davehart@dlh-7551.ad.hartbrothers.com
+  Put openssl -L flags from pkg-config in LDADD_NTP as comment indicates,
+    rather than in LDFLAGS_NTP.
+
+  sntp/m4/ntp_openssl.m4@1.19 +4 -4
+    Put openssl -L flags from pkg-config in LDADD_NTP as comment indicates,
+      rather than in LDFLAGS_NTP.
+
+ChangeSet@1.2774, 2012-04-09 05:25:13+00:00, davehart@dlh-7551.ad.hartbrothers.com
+  [Bug 1122] openssl detection via pkg-config fails when no additional
+    -Idir flags are needed.
+  Avoid overwriting user variable LDFLAGS with OpenSSL flags, instead
+    they are added to LDFLAGS_NTP.
+
+  ChangeLog@1.1147 +4 -0
+    [Bug 1122] openssl detection via pkg-config fails when no additional
+      -Idir flags are needed.
+    Avoid overwriting user variable LDFLAGS with OpenSSL flags, instead
+      they are added to LDFLAGS_NTP.
+    
+
+  ntpd/Makefile.am@1.115 +4 -2
+    Avoid overwriting user variable LDFLAGS with OpenSSL flags, instead
+      they are added to LDFLAGS_NTP.
+
+  ntpdate/Makefile.am@1.35 +3 -1
+    Avoid overwriting user variable LDFLAGS with OpenSSL flags, instead
+      they are added to LDFLAGS_NTP.
+
+  ntpdc/Makefile.am@1.71 +3 -1
+    Avoid overwriting user variable LDFLAGS with OpenSSL flags, instead
+      they are added to LDFLAGS_NTP.
+
+  ntpq/Makefile.am@1.67 +3 -1
+    Avoid overwriting user variable LDFLAGS with OpenSSL flags, instead
+      they are added to LDFLAGS_NTP.
+
+  ntpsnmpd/Makefile.am@1.35 +3 -1
+    Avoid overwriting user variable LDFLAGS with OpenSSL flags, instead
+      they are added to LDFLAGS_NTP.
+
+  sntp/Makefile.am@1.71 +3 -1
+    Avoid overwriting user variable LDFLAGS with OpenSSL flags, instead
+      they are added to LDFLAGS_NTP.
+
+  sntp/m4/ntp_compiler.m4@1.3 +4 -0
+    Avoid overwriting user variable LDFLAGS with OpenSSL flags, instead
+      they are added to LDFLAGS_NTP.
+
+  sntp/m4/ntp_openssl.m4@1.18 +185 -197
+    [Bug 1122] openssl detection via pkg-config fails when no additional
+      -Idir flags are needed.
+    Avoid overwriting user variable LDFLAGS with OpenSSL flags, instead
+      they are added to LDFLAGS_NTP.
+    
+
+  sntp/tests/Makefile.am@1.27 +3 -1
+    Avoid overwriting user variable LDFLAGS with OpenSSL flags, instead
+      they are added to LDFLAGS_NTP.
+
+  tests/libntp/Makefile.am@1.39 +3 -1
+    Avoid overwriting user variable LDFLAGS with OpenSSL flags, instead
+      they are added to LDFLAGS_NTP.
+
+  util/Makefile.am@1.71 +3 -1
+    Avoid overwriting user variable LDFLAGS with OpenSSL flags, instead
+      they are added to LDFLAGS_NTP.
+
 ChangeSet@1.2773, 2012-03-26 09:24:14+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P270
   TAG: NTP_4_2_7P270
