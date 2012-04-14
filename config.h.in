@@ -593,9 +593,6 @@
 /* Define to 1 if you have the `nice' function. */
 #undef HAVE_NICE
 
-/* Define to 1 if you have the `nlist' function. */
-#undef HAVE_NLIST
-
 /* Define to 1 if you have the <nlist.h> header file. */
 #undef HAVE_NLIST_H
 

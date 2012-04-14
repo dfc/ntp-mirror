@@ -71,6 +71,7 @@ am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/m4/ntp_pkg_config.m4 \
 	$(top_srcdir)/sntp/m4/ntp_prog_cc.m4 \
 	$(top_srcdir)/sntp/m4/ntp_sntp.m4 \
+	$(top_srcdir)/sntp/m4/ntp_ver_suffix.m4 \
 	$(top_srcdir)/sntp/m4/ntp_vpathhack.m4 \
 	$(top_srcdir)/sntp/m4/os_cflags.m4 \
 	$(top_srcdir)/sntp/m4/snprintf.m4 \
@@ -322,6 +323,7 @@ TIMETRIM_DL = @TIMETRIM_DL@
 TIMETRIM_DS = @TIMETRIM_DS@
 TIMETRIM_MS = @TIMETRIM_MS@
 VERSION = @VERSION@
+VER_SUFFIX = @VER_SUFFIX@
 YACC = @YACC@
 YFLAGS = @YFLAGS@
 abs_builddir = @abs_builddir@
@@ -387,8 +389,9 @@ ntpsnmpd_SOURCES = netsnmp_daemonize.c ntpsnmpd.c ntpSnmpSubagentObject.c \
 		ntp_snmp.h
 
 # HMS: we probably want a version.o file here, too.
-LDADD = ../ntpq/libntpq.a ../libntp/libntp.a $(LDADD_LIBNTP) $(LIBM) \
-	$(PTHREAD_LIBS) $(LDADD_NTP) $(SNMP_LIBS) $(LIBOPTS_LDADD)
+LDADD = ../ntpq/libntpq.a ../libntp/libntp.a $(SNMP_LIBS) \
+	$(LDADD_LIBNTP) $(LIBM) $(PTHREAD_LIBS) $(LDADD_NTP) \
+	$(LIBOPTS_LDADD)
 AM_CFLAGS = $(SNMP_CFLAGS) $(CFLAGS_NTP)
 AM_CPPFLAGS = -I$(top_srcdir)/ntpq $(NTP_INCS) $(LIBOPTS_CFLAGS) \
 	$(SNMP_CPPFLAGS) $(CPPFLAGS_NTP)
