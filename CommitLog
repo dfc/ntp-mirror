@@ -1,3 +1,234 @@
+ChangeSet@1.2783, 2012-04-19 05:43:39+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P273
+  TAG: NTP_4_2_7P273
+
+  ChangeLog@1.1154 +1 -0
+    NTP_4_2_7P273
+
+  libntp/Makefile.am@1.69 +1 -1
+    Use $(OBJEXT), not .o
+
+  libntp/Makefile.am@1.68 +1 -2
+    Fix systime_s.o dependency
+
+  ntpd/ntpd-opts.c@1.278 +4 -4
+    NTP_4_2_7P273
+
+  ntpd/ntpd-opts.h@1.278 +3 -3
+    NTP_4_2_7P273
+
+  ntpd/ntpd-opts.texi@1.276 +2 -2
+    NTP_4_2_7P273
+
+  ntpd/ntpd.1ntpdman@1.89 +2 -2
+    NTP_4_2_7P273
+
+  ntpd/ntpd.1ntpdmdoc@1.89 +2 -2
+    NTP_4_2_7P273
+
+  ntpd/ntpd.man.in@1.89 +2 -2
+    NTP_4_2_7P273
+
+  ntpd/ntpd.mdoc.in@1.89 +2 -2
+    NTP_4_2_7P273
+
+  ntpdc/ntpdc-opts.c@1.273 +4 -4
+    NTP_4_2_7P273
+
+  ntpdc/ntpdc-opts.h@1.273 +3 -3
+    NTP_4_2_7P273
+
+  ntpdc/ntpdc-opts.texi@1.273 +2 -2
+    NTP_4_2_7P273
+
+  ntpdc/ntpdc.1ntpdcman@1.89 +2 -2
+    NTP_4_2_7P273
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.89 +2 -2
+    NTP_4_2_7P273
+
+  ntpdc/ntpdc.html@1.101 +2 -2
+    NTP_4_2_7P273
+
+  ntpdc/ntpdc.man.in@1.89 +2 -2
+    NTP_4_2_7P273
+
+  ntpdc/ntpdc.mdoc.in@1.89 +2 -2
+    NTP_4_2_7P273
+
+  ntpq/ntpq-opts.c@1.275 +4 -4
+    NTP_4_2_7P273
+
+  ntpq/ntpq-opts.h@1.275 +3 -3
+    NTP_4_2_7P273
+
+  ntpq/ntpq-opts.texi@1.275 +2 -2
+    NTP_4_2_7P273
+
+  ntpq/ntpq.1ntpqman@1.89 +2 -2
+    NTP_4_2_7P273
+
+  ntpq/ntpq.1ntpqmdoc@1.89 +2 -2
+    NTP_4_2_7P273
+
+  ntpq/ntpq.man.in@1.89 +2 -2
+    NTP_4_2_7P273
+
+  ntpq/ntpq.mdoc.in@1.89 +2 -2
+    NTP_4_2_7P273
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.275 +4 -4
+    NTP_4_2_7P273
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.275 +3 -3
+    NTP_4_2_7P273
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.275 +2 -2
+    NTP_4_2_7P273
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.89 +2 -2
+    NTP_4_2_7P273
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.89 +2 -2
+    NTP_4_2_7P273
+
+  ntpsnmpd/ntpsnmpd.man.in@1.89 +2 -2
+    NTP_4_2_7P273
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.89 +2 -2
+    NTP_4_2_7P273
+
+  packageinfo.sh@1.276 +1 -1
+    NTP_4_2_7P273
+
+  scripts/ntp-wait-opts.texi@1.93 +1 -1
+    NTP_4_2_7P273
+
+  scripts/ntp-wait.1ntp-waitman@1.89 +2 -2
+    NTP_4_2_7P273
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.89 +2 -2
+    NTP_4_2_7P273
+
+  scripts/ntp-wait.html@1.93 +1 -1
+    NTP_4_2_7P273
+
+  scripts/ntp-wait.man.in@1.89 +2 -2
+    NTP_4_2_7P273
+
+  scripts/ntp-wait.mdoc.in@1.89 +2 -2
+    NTP_4_2_7P273
+
+  sntp/sntp-opts.c@1.271 +4 -4
+    NTP_4_2_7P273
+
+  sntp/sntp-opts.h@1.271 +3 -3
+    NTP_4_2_7P273
+
+  sntp/sntp-opts.texi@1.271 +2 -2
+    NTP_4_2_7P273
+
+  sntp/sntp.1sntpman@1.91 +2 -2
+    NTP_4_2_7P273
+
+  sntp/sntp.1sntpmdoc@1.91 +2 -2
+    NTP_4_2_7P273
+
+  sntp/sntp.html@1.271 +2 -2
+    NTP_4_2_7P273
+
+  sntp/sntp.man.in@1.91 +2 -2
+    NTP_4_2_7P273
+
+  sntp/sntp.mdoc.in@1.91 +2 -2
+    NTP_4_2_7P273
+
+  util/ntp-keygen-opts.c@1.275 +4 -4
+    NTP_4_2_7P273
+
+  util/ntp-keygen-opts.h@1.275 +3 -3
+    NTP_4_2_7P273
+
+  util/ntp-keygen-opts.texi@1.276 +2 -2
+    NTP_4_2_7P273
+
+  util/ntp-keygen.1ntp-keygenman@1.89 +2 -2
+    NTP_4_2_7P273
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.89 +2 -2
+    NTP_4_2_7P273
+
+  util/ntp-keygen.man.in@1.89 +2 -2
+    NTP_4_2_7P273
+
+  util/ntp-keygen.mdoc.in@1.89 +2 -2
+    NTP_4_2_7P273
+
+ChangeSet@1.2782, 2012-04-18 19:30:28+00:00, davehart@dlh-7551.ad.hartbrothers.com
+  Correct authnumfreekeys accounting broken in 4.2.7p262.
+
+  ChangeLog@1.1153 +1 -0
+    Correct authnumfreekeys accounting broken in 4.2.7p262.
+
+  libntp/authkeys.c@1.24 +2 -2
+    Correct authnumfreekeys accounting broken in 4.2.7p262.
+
+ChangeSet@1.2781, 2012-04-18 11:46:26+00:00, davehart@dlh-7551.ad.hartbrothers.com
+  [Bug 2141] handle_sigio() calls get_systime(), which must be
+    reentrant when SIGIO is used.  Sanity checks relative to the prior
+    get_systime() are disabled in ntpd on systems with signaled I/O, but
+    active in sntp and ntpdate.
+
+  ChangeLog@1.1152 +4 -0
+    [Bug 2141] handle_sigio() calls get_systime(), which must be
+      reentrant when SIGIO is used.  Sanity checks relative to the prior
+      get_systime() are disabled in ntpd on systems with signaled I/O, but
+      active in sntp and ntpdate.
+
+  include/iosignal.h@1.6 +5 -0
+    Add USING_SIGIO() and using_sigio.
+
+  libntp/iosignal.c@1.16 +2 -0
+    Set using_sigio when doing so.
+
+  libntp/systime.c@1.66 +51 -31
+    Disable non-reentrant checks in get_systime() when SIGIO is being used,
+    as handle_sigio() calls get_systime().
+
+ChangeSet@1.2780, 2012-04-18 05:03:10+00:00, davehart@dlh-7551.ad.hartbrothers.com
+  Remove inttoa() and uinttoa(), convert solitary use of latter
+    to simpler code.
+
+  BitKeeper/deleted/73/inttoa.cpp~827ae0ffc75432e4@1.5 +0 -0
+    Delete: tests/libntp/inttoa.cpp
+
+  BitKeeper/deleted/a5/inttoa.c~3e480692@1.5 +0 -0
+    Delete: libntp/inttoa.c
+
+  BitKeeper/deleted/ac/uinttoa.c~3e480692@1.5 +0 -0
+    Delete: libntp/uinttoa.c
+
+  BitKeeper/deleted/f0/uinttoa.cpp~d804670d7d9346f4@1.2 +0 -0
+    Delete: tests/libntp/uinttoa.cpp
+
+  include/ntp_stdlib.h@1.73 +0 -2
+    Remove inttoa() and uinttoa().
+
+  libntp/Makefile.am@1.67 +0 -2
+    Remove inttoa() and uinttoa().
+
+  ntpq/ntpq-subs.c@1.96 +2 -4
+    Convert solitary callsite of uinttoa() to simpler equivalent.
+
+  ports/winnt/vs2005/libntp.vcproj@1.22 +0 -8
+    Remove inttoa() and uinttoa().
+
+  ports/winnt/vs2008/libntp/libntp.vcproj@1.45 +2 -10
+    Remove inttoa() and uinttoa().
+
+  tests/libntp/Makefile.am@1.40 +0 -2
+    Remove inttoa() and uinttoa() unit tests.
+
 ChangeSet@1.2779, 2012-04-14 04:43:39+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P272
   TAG: NTP_4_2_7P272

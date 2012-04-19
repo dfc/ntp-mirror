@@ -84,15 +84,14 @@ am_tests_OBJECTS = tests_main.$(OBJEXT) libntptest.$(OBJEXT) \
 	authkeys.$(OBJEXT) buftvtots.$(OBJEXT) calendar.$(OBJEXT) \
 	caljulian.$(OBJEXT) caltontp.$(OBJEXT) calyearstart.$(OBJEXT) \
 	clocktime.$(OBJEXT) decodenetnum.$(OBJEXT) hextoint.$(OBJEXT) \
-	hextolfp.$(OBJEXT) humandate.$(OBJEXT) inttoa.$(OBJEXT) \
-	lfptostr.$(OBJEXT) modetoa.$(OBJEXT) msyslog.$(OBJEXT) \
-	netof.$(OBJEXT) numtoa.$(OBJEXT) numtohost.$(OBJEXT) \
-	octtoint.$(OBJEXT) prettydate.$(OBJEXT) recvbuff.$(OBJEXT) \
-	refnumtoa.$(OBJEXT) sfptostr.$(OBJEXT) socktoa.$(OBJEXT) \
-	ssl_init.$(OBJEXT) statestr.$(OBJEXT) strtolfp.$(OBJEXT) \
-	timespecops.$(OBJEXT) timestructs.$(OBJEXT) \
-	timevalops.$(OBJEXT) tstotv.$(OBJEXT) tvtots.$(OBJEXT) \
-	uglydate.$(OBJEXT) uinttoa.$(OBJEXT) ymd2yd.$(OBJEXT) \
+	hextolfp.$(OBJEXT) humandate.$(OBJEXT) lfptostr.$(OBJEXT) \
+	modetoa.$(OBJEXT) msyslog.$(OBJEXT) netof.$(OBJEXT) \
+	numtoa.$(OBJEXT) numtohost.$(OBJEXT) octtoint.$(OBJEXT) \
+	prettydate.$(OBJEXT) recvbuff.$(OBJEXT) refnumtoa.$(OBJEXT) \
+	sfptostr.$(OBJEXT) socktoa.$(OBJEXT) ssl_init.$(OBJEXT) \
+	statestr.$(OBJEXT) strtolfp.$(OBJEXT) timespecops.$(OBJEXT) \
+	timestructs.$(OBJEXT) timevalops.$(OBJEXT) tstotv.$(OBJEXT) \
+	tvtots.$(OBJEXT) uglydate.$(OBJEXT) ymd2yd.$(OBJEXT) \
 	$(am__objects_1)
 tests_OBJECTS = $(am_tests_OBJECTS)
 tests_LDADD = $(LDADD)
@@ -397,7 +396,6 @@ tests_SOURCES = $(top_srcdir)/sntp/tests_main.cpp	\
 		hextoint.cpp		\
 		hextolfp.cpp		\
 		humandate.cpp		\
-		inttoa.cpp		\
 		lfptostr.cpp		\
 		modetoa.cpp		\
 		msyslog.cpp		\
@@ -419,7 +417,6 @@ tests_SOURCES = $(top_srcdir)/sntp/tests_main.cpp	\
 		tstotv.cpp		\
 		tvtots.cpp		\
 		uglydate.cpp		\
-		uinttoa.cpp		\
 		ymd2yd.cpp		\
 		$(NULL)
 
@@ -500,7 +497,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/hextoint.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/hextolfp.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/humandate.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/inttoa.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/lfptostr.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libntptest.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/modetoa.Po@am__quote@
@@ -524,7 +520,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tstotv.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tvtots.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/uglydate.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/uinttoa.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ymd2yd.Po@am__quote@
 
 .cpp.o:

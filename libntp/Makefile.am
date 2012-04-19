@@ -66,7 +66,6 @@ libntp_a_SRCS =						\
 	hextolfp.c					\
 	humandate.c					\
 	icom.c						\
-	inttoa.c					\
 	iosignal.c					\
 	lib_strbuf.c					\
 	machines.c					\
@@ -100,7 +99,6 @@ libntp_a_SRCS =						\
 	timetoa.c					\
 	timevalops.c					\
 	uglydate.c					\
-	uinttoa.c					\
 	work_fork.c					\
 	work_thread.c					\
 	ymd2yd.c					\
@@ -124,8 +122,7 @@ EXTRA_DIST = README
 # need to rebuild systime_s.o for a newer systime.c without an explicit
 # dependency.
 
-$(srcdir)/systime_s.c: $(srcdir)/systime.c
-	@: do-nothing action to avoid default SCCS get
+systime_s.$(OBJEXT): $(srcdir)/systime.c
 
 include $(top_srcdir)/depsver.mf
 include $(top_srcdir)/includes.mf
