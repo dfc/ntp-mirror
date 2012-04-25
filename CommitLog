@@ -1,3 +1,185 @@
+ChangeSet@1.2786, 2012-04-25 04:41:40+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P274
+  TAG: NTP_4_2_7P274
+
+  ChangeLog@1.1156 +1 -0
+    NTP_4_2_7P274
+
+  ntpd/ntpd-opts.c@1.279 +4 -4
+    NTP_4_2_7P274
+
+  ntpd/ntpd-opts.h@1.279 +3 -3
+    NTP_4_2_7P274
+
+  ntpd/ntpd-opts.texi@1.277 +2 -2
+    NTP_4_2_7P274
+
+  ntpd/ntpd.1ntpdman@1.90 +2 -2
+    NTP_4_2_7P274
+
+  ntpd/ntpd.1ntpdmdoc@1.90 +2 -2
+    NTP_4_2_7P274
+
+  ntpd/ntpd.man.in@1.90 +2 -2
+    NTP_4_2_7P274
+
+  ntpd/ntpd.mdoc.in@1.90 +2 -2
+    NTP_4_2_7P274
+
+  ntpdc/ntpdc-opts.c@1.274 +4 -4
+    NTP_4_2_7P274
+
+  ntpdc/ntpdc-opts.h@1.274 +3 -3
+    NTP_4_2_7P274
+
+  ntpdc/ntpdc-opts.texi@1.274 +2 -2
+    NTP_4_2_7P274
+
+  ntpdc/ntpdc.1ntpdcman@1.90 +2 -2
+    NTP_4_2_7P274
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.90 +2 -2
+    NTP_4_2_7P274
+
+  ntpdc/ntpdc.html@1.102 +2 -2
+    NTP_4_2_7P274
+
+  ntpdc/ntpdc.man.in@1.90 +2 -2
+    NTP_4_2_7P274
+
+  ntpdc/ntpdc.mdoc.in@1.90 +2 -2
+    NTP_4_2_7P274
+
+  ntpq/ntpq-opts.c@1.276 +4 -4
+    NTP_4_2_7P274
+
+  ntpq/ntpq-opts.h@1.276 +3 -3
+    NTP_4_2_7P274
+
+  ntpq/ntpq-opts.texi@1.276 +2 -2
+    NTP_4_2_7P274
+
+  ntpq/ntpq.1ntpqman@1.90 +2 -2
+    NTP_4_2_7P274
+
+  ntpq/ntpq.1ntpqmdoc@1.90 +2 -2
+    NTP_4_2_7P274
+
+  ntpq/ntpq.man.in@1.90 +2 -2
+    NTP_4_2_7P274
+
+  ntpq/ntpq.mdoc.in@1.90 +2 -2
+    NTP_4_2_7P274
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.276 +4 -4
+    NTP_4_2_7P274
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.276 +3 -3
+    NTP_4_2_7P274
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.276 +2 -2
+    NTP_4_2_7P274
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.90 +2 -2
+    NTP_4_2_7P274
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.90 +2 -2
+    NTP_4_2_7P274
+
+  ntpsnmpd/ntpsnmpd.man.in@1.90 +2 -2
+    NTP_4_2_7P274
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.90 +2 -2
+    NTP_4_2_7P274
+
+  packageinfo.sh@1.277 +1 -1
+    NTP_4_2_7P274
+
+  scripts/ntp-wait-opts.texi@1.94 +1 -1
+    NTP_4_2_7P274
+
+  scripts/ntp-wait.1ntp-waitman@1.90 +2 -2
+    NTP_4_2_7P274
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.90 +2 -2
+    NTP_4_2_7P274
+
+  scripts/ntp-wait.html@1.94 +1 -1
+    NTP_4_2_7P274
+
+  scripts/ntp-wait.man.in@1.90 +2 -2
+    NTP_4_2_7P274
+
+  scripts/ntp-wait.mdoc.in@1.90 +2 -2
+    NTP_4_2_7P274
+
+  sntp/sntp-opts.c@1.272 +4 -4
+    NTP_4_2_7P274
+
+  sntp/sntp-opts.h@1.272 +3 -3
+    NTP_4_2_7P274
+
+  sntp/sntp-opts.texi@1.272 +2 -2
+    NTP_4_2_7P274
+
+  sntp/sntp.1sntpman@1.92 +2 -2
+    NTP_4_2_7P274
+
+  sntp/sntp.1sntpmdoc@1.92 +2 -2
+    NTP_4_2_7P274
+
+  sntp/sntp.html@1.272 +2 -2
+    NTP_4_2_7P274
+
+  sntp/sntp.man.in@1.92 +2 -2
+    NTP_4_2_7P274
+
+  sntp/sntp.mdoc.in@1.92 +2 -2
+    NTP_4_2_7P274
+
+  util/ntp-keygen-opts.c@1.276 +4 -4
+    NTP_4_2_7P274
+
+  util/ntp-keygen-opts.h@1.276 +3 -3
+    NTP_4_2_7P274
+
+  util/ntp-keygen-opts.texi@1.277 +2 -2
+    NTP_4_2_7P274
+
+  util/ntp-keygen.1ntp-keygenman@1.90 +2 -2
+    NTP_4_2_7P274
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.90 +2 -2
+    NTP_4_2_7P274
+
+  util/ntp-keygen.man.in@1.90 +2 -2
+    NTP_4_2_7P274
+
+  util/ntp-keygen.mdoc.in@1.90 +2 -2
+    NTP_4_2_7P274
+
+ChangeSet@1.2785, 2012-04-25 03:53:28+00:00, davehart@dlh-7551.ad.hartbrothers.com
+  [Bug 2174] ntpd rejects source UDP ports less than 123 as bogus.
+
+  ChangeLog@1.1155 +1 -0
+    [Bug 2174] ntpd rejects source UDP ports less than 123 as bogus.
+
+  ntpd/ntp_proto.c@1.341 +3 -6
+    [Bug 2174] ntpd rejects source UDP ports less than 123 as bogus.
+
+ChangeSet@1.2784, 2012-04-25 03:18:53+00:00, davehart@dlh-7551.ad.hartbrothers.com
+  Remove redundant manual systime_s.o: systime.c dependency from libntp's
+  Makefile.am.
+
+  libntp/Makefile.am@1.70 +0 -7
+    Remove redundant manual dependency of systime_s.o upon systime.c.  The
+    same dependency is automatically generated in .deps/systime_s.Po which
+    Makefile includes.  The manual dependency was an attempt to resolve a
+    problem caused by the release snapshot Makefile erroneously removing
+    all .deps directories from the build tree before running configure.
+    .dep/*.Po must not be removed unless *.o are removed at the same time,
+    or else automatic dependencies are missing.
+
 ChangeSet@1.2783, 2012-04-19 05:43:39+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P273
   TAG: NTP_4_2_7P273

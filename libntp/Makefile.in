@@ -1402,13 +1402,6 @@ uninstall-am:
 	mostlyclean-compile mostlyclean-generic mostlyclean-libtool \
 	pdf pdf-am ps ps-am tags uninstall uninstall-am
 
-
-# systime_s.c includes systime.c, and after a deps-ver bump triggers
-# regeneration of dummy .deps/*.Po files, make will be unaware of the
-# need to rebuild systime_s.o for a newer systime.c without an explicit
-# dependency.
-
-systime_s.$(OBJEXT): $(srcdir)/systime.c
 $(DEPDIR)/deps-ver: $(top_srcdir)/deps-ver
 	@[ -f $@ ] ||							\
 		cp $(top_srcdir)/deps-ver $@
