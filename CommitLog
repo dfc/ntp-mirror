@@ -1,3 +1,178 @@
+ChangeSet@1.2788, 2012-04-28 06:38:07+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P275
+  TAG: NTP_4_2_7P275
+
+  ChangeLog@1.1158 +1 -0
+    NTP_4_2_7P275
+
+  ntpd/ntpd-opts.c@1.280 +4 -4
+    NTP_4_2_7P275
+
+  ntpd/ntpd-opts.h@1.280 +3 -3
+    NTP_4_2_7P275
+
+  ntpd/ntpd-opts.texi@1.278 +2 -2
+    NTP_4_2_7P275
+
+  ntpd/ntpd.1ntpdman@1.91 +2 -2
+    NTP_4_2_7P275
+
+  ntpd/ntpd.1ntpdmdoc@1.91 +2 -2
+    NTP_4_2_7P275
+
+  ntpd/ntpd.man.in@1.91 +2 -2
+    NTP_4_2_7P275
+
+  ntpd/ntpd.mdoc.in@1.91 +2 -2
+    NTP_4_2_7P275
+
+  ntpdc/ntpdc-opts.c@1.275 +4 -4
+    NTP_4_2_7P275
+
+  ntpdc/ntpdc-opts.h@1.275 +3 -3
+    NTP_4_2_7P275
+
+  ntpdc/ntpdc-opts.texi@1.275 +2 -2
+    NTP_4_2_7P275
+
+  ntpdc/ntpdc.1ntpdcman@1.91 +2 -2
+    NTP_4_2_7P275
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.91 +2 -2
+    NTP_4_2_7P275
+
+  ntpdc/ntpdc.html@1.103 +2 -2
+    NTP_4_2_7P275
+
+  ntpdc/ntpdc.man.in@1.91 +2 -2
+    NTP_4_2_7P275
+
+  ntpdc/ntpdc.mdoc.in@1.91 +2 -2
+    NTP_4_2_7P275
+
+  ntpq/ntpq-opts.c@1.277 +4 -4
+    NTP_4_2_7P275
+
+  ntpq/ntpq-opts.h@1.277 +3 -3
+    NTP_4_2_7P275
+
+  ntpq/ntpq-opts.texi@1.277 +2 -2
+    NTP_4_2_7P275
+
+  ntpq/ntpq.1ntpqman@1.91 +2 -2
+    NTP_4_2_7P275
+
+  ntpq/ntpq.1ntpqmdoc@1.91 +2 -2
+    NTP_4_2_7P275
+
+  ntpq/ntpq.man.in@1.91 +2 -2
+    NTP_4_2_7P275
+
+  ntpq/ntpq.mdoc.in@1.91 +2 -2
+    NTP_4_2_7P275
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.277 +4 -4
+    NTP_4_2_7P275
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.277 +3 -3
+    NTP_4_2_7P275
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.277 +2 -2
+    NTP_4_2_7P275
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.91 +2 -2
+    NTP_4_2_7P275
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.91 +2 -2
+    NTP_4_2_7P275
+
+  ntpsnmpd/ntpsnmpd.man.in@1.91 +2 -2
+    NTP_4_2_7P275
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.91 +2 -2
+    NTP_4_2_7P275
+
+  packageinfo.sh@1.278 +1 -1
+    NTP_4_2_7P275
+
+  scripts/ntp-wait-opts.texi@1.95 +1 -1
+    NTP_4_2_7P275
+
+  scripts/ntp-wait.1ntp-waitman@1.91 +2 -2
+    NTP_4_2_7P275
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.91 +2 -2
+    NTP_4_2_7P275
+
+  scripts/ntp-wait.html@1.95 +1 -1
+    NTP_4_2_7P275
+
+  scripts/ntp-wait.man.in@1.91 +2 -2
+    NTP_4_2_7P275
+
+  scripts/ntp-wait.mdoc.in@1.91 +2 -2
+    NTP_4_2_7P275
+
+  sntp/sntp-opts.c@1.273 +4 -4
+    NTP_4_2_7P275
+
+  sntp/sntp-opts.h@1.273 +3 -3
+    NTP_4_2_7P275
+
+  sntp/sntp-opts.texi@1.273 +2 -2
+    NTP_4_2_7P275
+
+  sntp/sntp.1sntpman@1.93 +2 -2
+    NTP_4_2_7P275
+
+  sntp/sntp.1sntpmdoc@1.93 +2 -2
+    NTP_4_2_7P275
+
+  sntp/sntp.html@1.273 +2 -2
+    NTP_4_2_7P275
+
+  sntp/sntp.man.in@1.93 +2 -2
+    NTP_4_2_7P275
+
+  sntp/sntp.mdoc.in@1.93 +2 -2
+    NTP_4_2_7P275
+
+  util/ntp-keygen-opts.c@1.277 +4 -4
+    NTP_4_2_7P275
+
+  util/ntp-keygen-opts.h@1.277 +3 -3
+    NTP_4_2_7P275
+
+  util/ntp-keygen-opts.texi@1.278 +2 -2
+    NTP_4_2_7P275
+
+  util/ntp-keygen.1ntp-keygenman@1.91 +2 -2
+    NTP_4_2_7P275
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.91 +2 -2
+    NTP_4_2_7P275
+
+  util/ntp-keygen.man.in@1.91 +2 -2
+    NTP_4_2_7P275
+
+  util/ntp-keygen.mdoc.in@1.91 +2 -2
+    NTP_4_2_7P275
+
+ChangeSet@1.2787, 2012-04-27 15:02:14-07:00, harlan@hms-mbp.local
+  [Bug 1744] Remove obsolete ntpdate/ntptime* items
+
+  BitKeeper/deleted/2e/ntptime_config.c~491a3955@1.7 +0 -0
+    Delete: ntpdate/ntptime_config.c
+
+  BitKeeper/deleted/92/ntptimeset.c~491a3955@1.16 +0 -0
+    Delete: ntpdate/ntptimeset.c
+
+  ChangeLog@1.1157 +1 -0
+    [Bug 1744] Remove obsolete ntpdate/ntptime* items
+
+  ntpdate/Makefile.am@1.36 +1 -3
+    [Bug 1744] Remove obsolete ntpdate/ntptime* items
+
 ChangeSet@1.2786, 2012-04-25 04:41:40+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P274
   TAG: NTP_4_2_7P274

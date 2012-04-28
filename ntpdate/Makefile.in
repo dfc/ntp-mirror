@@ -39,7 +39,7 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
-EXTRA_PROGRAMS = ntpdate$(EXEEXT) ntptimeset$(EXEEXT)
+EXTRA_PROGRAMS = ntpdate$(EXEEXT)
 DIST_COMMON = README $(noinst_HEADERS) $(srcdir)/Makefile.am \
 	$(srcdir)/Makefile.in $(top_srcdir)/bincheck.mf \
 	$(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf \
@@ -94,10 +94,6 @@ ntpdate_DEPENDENCIES = $(LDADD) $(am__DEPENDENCIES_1) \
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
 am__v_lt_0 = --silent
-am_ntptimeset_OBJECTS = ntptimeset.$(OBJEXT) ntptime_config.$(OBJEXT)
-ntptimeset_OBJECTS = $(am_ntptimeset_OBJECTS)
-ntptimeset_LDADD = $(LDADD)
-ntptimeset_DEPENDENCIES = version.o ../libntp/libntp.a
 DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/sntp/libevent/build-aux/depcomp
 am__depfiles_maybe = depfiles
@@ -124,8 +120,8 @@ am__v_CCLD_0 = @echo "  CCLD  " $@;
 AM_V_GEN = $(am__v_GEN_$(V))
 am__v_GEN_ = $(am__v_GEN_$(AM_DEFAULT_VERBOSITY))
 am__v_GEN_0 = @echo "  GEN   " $@;
-SOURCES = ntpdate.c $(ntptimeset_SOURCES)
-DIST_SOURCES = ntpdate.c $(ntptimeset_SOURCES)
+SOURCES = ntpdate.c
+DIST_SOURCES = ntpdate.c
 HEADERS = $(noinst_HEADERS)
 ETAGS = etags
 CTAGS = ctags
@@ -361,7 +357,6 @@ CLEANFILES = check-libntp .deps-ver
 bin_PROGRAMS = $(NTPDATE_DB)
 libexec_PROGRAMS = $(NTPDATE_DL)
 sbin_PROGRAMS = $(NTPDATE_DS)
-ntptimeset_SOURCES = ntptimeset.c ntptime_config.c
 AM_CFLAGS = $(CFLAGS_NTP)
 AM_CPPFLAGS = $(NTP_INCS) $(CPPFLAGS_NTP)
 AM_LDFLAGS = $(LDFLAGS_NTP)
@@ -542,9 +537,6 @@ clean-sbinPROGRAMS:
 ntpdate$(EXEEXT): $(ntpdate_OBJECTS) $(ntpdate_DEPENDENCIES) 
 	@rm -f ntpdate$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(ntpdate_OBJECTS) $(ntpdate_LDADD) $(LIBS)
-ntptimeset$(EXEEXT): $(ntptimeset_OBJECTS) $(ntptimeset_DEPENDENCIES) 
-	@rm -f ntptimeset$(EXEEXT)
-	$(AM_V_CCLD)$(LINK) $(ntptimeset_OBJECTS) $(ntptimeset_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -553,8 +545,6 @@ distclean-compile:
 	-rm -f *.tab.c
 
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ntpdate.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ntptime_config.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ntptimeset.Po@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
