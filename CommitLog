@@ -1,3 +1,175 @@
+ChangeSet@1.2792, 2012-05-25 05:07:31+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P277
+  TAG: NTP_4_2_7P277
+
+  ChangeLog@1.1162 +1 -0
+    NTP_4_2_7P277
+
+  ntpd/ntpd-opts.c@1.282 +4 -4
+    NTP_4_2_7P277
+
+  ntpd/ntpd-opts.h@1.282 +3 -3
+    NTP_4_2_7P277
+
+  ntpd/ntpd-opts.texi@1.280 +2 -2
+    NTP_4_2_7P277
+
+  ntpd/ntpd.1ntpdman@1.93 +2 -2
+    NTP_4_2_7P277
+
+  ntpd/ntpd.1ntpdmdoc@1.93 +2 -2
+    NTP_4_2_7P277
+
+  ntpd/ntpd.man.in@1.93 +2 -2
+    NTP_4_2_7P277
+
+  ntpd/ntpd.mdoc.in@1.93 +2 -2
+    NTP_4_2_7P277
+
+  ntpdc/ntpdc-opts.c@1.277 +4 -4
+    NTP_4_2_7P277
+
+  ntpdc/ntpdc-opts.h@1.277 +3 -3
+    NTP_4_2_7P277
+
+  ntpdc/ntpdc-opts.texi@1.277 +2 -2
+    NTP_4_2_7P277
+
+  ntpdc/ntpdc.1ntpdcman@1.93 +2 -2
+    NTP_4_2_7P277
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.93 +2 -2
+    NTP_4_2_7P277
+
+  ntpdc/ntpdc.html@1.105 +2 -2
+    NTP_4_2_7P277
+
+  ntpdc/ntpdc.man.in@1.93 +2 -2
+    NTP_4_2_7P277
+
+  ntpdc/ntpdc.mdoc.in@1.93 +2 -2
+    NTP_4_2_7P277
+
+  ntpq/ntpq-opts.c@1.279 +4 -4
+    NTP_4_2_7P277
+
+  ntpq/ntpq-opts.h@1.279 +3 -3
+    NTP_4_2_7P277
+
+  ntpq/ntpq-opts.texi@1.279 +2 -2
+    NTP_4_2_7P277
+
+  ntpq/ntpq.1ntpqman@1.93 +2 -2
+    NTP_4_2_7P277
+
+  ntpq/ntpq.1ntpqmdoc@1.93 +2 -2
+    NTP_4_2_7P277
+
+  ntpq/ntpq.man.in@1.93 +2 -2
+    NTP_4_2_7P277
+
+  ntpq/ntpq.mdoc.in@1.93 +2 -2
+    NTP_4_2_7P277
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.279 +4 -4
+    NTP_4_2_7P277
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.279 +3 -3
+    NTP_4_2_7P277
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.279 +2 -2
+    NTP_4_2_7P277
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.93 +2 -2
+    NTP_4_2_7P277
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.93 +2 -2
+    NTP_4_2_7P277
+
+  ntpsnmpd/ntpsnmpd.man.in@1.93 +2 -2
+    NTP_4_2_7P277
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.93 +2 -2
+    NTP_4_2_7P277
+
+  packageinfo.sh@1.280 +1 -1
+    NTP_4_2_7P277
+
+  scripts/ntp-wait-opts.texi@1.97 +1 -1
+    NTP_4_2_7P277
+
+  scripts/ntp-wait.1ntp-waitman@1.93 +2 -2
+    NTP_4_2_7P277
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.93 +2 -2
+    NTP_4_2_7P277
+
+  scripts/ntp-wait.html@1.97 +1 -1
+    NTP_4_2_7P277
+
+  scripts/ntp-wait.man.in@1.93 +2 -2
+    NTP_4_2_7P277
+
+  scripts/ntp-wait.mdoc.in@1.93 +2 -2
+    NTP_4_2_7P277
+
+  sntp/sntp-opts.c@1.275 +4 -4
+    NTP_4_2_7P277
+
+  sntp/sntp-opts.h@1.275 +3 -3
+    NTP_4_2_7P277
+
+  sntp/sntp-opts.texi@1.275 +2 -2
+    NTP_4_2_7P277
+
+  sntp/sntp.1sntpman@1.95 +2 -2
+    NTP_4_2_7P277
+
+  sntp/sntp.1sntpmdoc@1.95 +2 -2
+    NTP_4_2_7P277
+
+  sntp/sntp.html@1.275 +2 -2
+    NTP_4_2_7P277
+
+  sntp/sntp.man.in@1.95 +2 -2
+    NTP_4_2_7P277
+
+  sntp/sntp.mdoc.in@1.95 +2 -2
+    NTP_4_2_7P277
+
+  util/ntp-keygen-opts.c@1.279 +4 -4
+    NTP_4_2_7P277
+
+  util/ntp-keygen-opts.h@1.279 +3 -3
+    NTP_4_2_7P277
+
+  util/ntp-keygen-opts.texi@1.280 +2 -2
+    NTP_4_2_7P277
+
+  util/ntp-keygen.1ntp-keygenman@1.93 +2 -2
+    NTP_4_2_7P277
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.93 +2 -2
+    NTP_4_2_7P277
+
+  util/ntp-keygen.man.in@1.93 +2 -2
+    NTP_4_2_7P277
+
+  util/ntp-keygen.mdoc.in@1.93 +2 -2
+    NTP_4_2_7P277
+
+ChangeSet@1.2791, 2012-05-25 00:36:37+02:00, karlsson@luft.lund.zozs.se
+  [Bug 2193] Building timestruct tests with Clang 3.1 fails.
+
+  ChangeLog@1.1161 +1 -0
+    [Bug 2193] Building timestruct tests with Clang 3.1 fails.
+
+  tests/libntp/timestructs.cpp@1.4 +2 -2
+    [Bug 2193] Building timestruct tests with Clang 3.1 fails.
+
+  tests/libntp/timestructs.h@1.4 +2 -2
+    [Bug 2193] Building timestruct tests with Clang 3.1 fails.
+
 ChangeSet@1.2790, 2012-05-15 06:32:44+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P276
   TAG: NTP_4_2_7P276
