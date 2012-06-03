@@ -100,6 +100,8 @@ am__libntp_a_SOURCES_DIST = systime.c a_md5encrypt.c adjtime.c \
 	timevalops.c uglydate.c work_fork.c work_thread.c ymd2yd.c \
 	$(srcdir)/../lib/isc/assertions.c \
 	$(srcdir)/../lib/isc/buffer.c \
+	$(srcdir)/../lib/isc/backtrace-emptytbl.c \
+	$(srcdir)/../lib/isc/backtrace.c \
 	$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/condition.c \
 	$(srcdir)/../lib/isc/unix/dir.c $(srcdir)/../lib/isc/error.c \
 	$(srcdir)/../lib/isc/unix/errno2result.c \
@@ -124,6 +126,7 @@ am__libntp_a_SOURCES_DIST = systime.c a_md5encrypt.c adjtime.c \
 am__objects_1 =
 @PTHREADS_TRUE@am__objects_2 = mutex.$(OBJEXT)
 am__objects_3 = assertions.$(OBJEXT) buffer.$(OBJEXT) \
+	backtrace-emptytbl.$(OBJEXT) backtrace.$(OBJEXT) \
 	condition.$(OBJEXT) dir.$(OBJEXT) error.$(OBJEXT) \
 	errno2result.$(OBJEXT) event.$(OBJEXT) file.$(OBJEXT) \
 	inet_ntop.$(OBJEXT) inet_pton.$(OBJEXT) \
@@ -176,6 +179,8 @@ am__libntpsim_a_SOURCES_DIST = systime_s.c a_md5encrypt.c adjtime.c \
 	timevalops.c uglydate.c work_fork.c work_thread.c ymd2yd.c \
 	$(srcdir)/../lib/isc/assertions.c \
 	$(srcdir)/../lib/isc/buffer.c \
+	$(srcdir)/../lib/isc/backtrace-emptytbl.c \
+	$(srcdir)/../lib/isc/backtrace.c \
 	$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/condition.c \
 	$(srcdir)/../lib/isc/unix/dir.c $(srcdir)/../lib/isc/error.c \
 	$(srcdir)/../lib/isc/unix/errno2result.c \
@@ -464,6 +469,8 @@ noinst_LIBRARIES = libntp.a @MAKE_LIBNTPSIM@
 EXTRA_LIBRARIES = libntpsim.a
 libisc_SRCS = $(srcdir)/../lib/isc/assertions.c \
 	$(srcdir)/../lib/isc/buffer.c \
+	$(srcdir)/../lib/isc/backtrace-emptytbl.c \
+	$(srcdir)/../lib/isc/backtrace.c \
 	$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/condition.c \
 	$(srcdir)/../lib/isc/unix/dir.c $(srcdir)/../lib/isc/error.c \
 	$(srcdir)/../lib/isc/unix/errno2result.c \
@@ -623,6 +630,8 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/authkeys.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/authreadkeys.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/authusekey.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/backtrace-emptytbl.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/backtrace.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bsd_strerror.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/buffer.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/buftvtots.Po@am__quote@
@@ -762,6 +771,38 @@ buffer.obj: $(srcdir)/../lib/isc/buffer.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='$(srcdir)/../lib/isc/buffer.c' object='buffer.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o buffer.obj `if test -f '$(srcdir)/../lib/isc/buffer.c'; then $(CYGPATH_W) '$(srcdir)/../lib/isc/buffer.c'; else $(CYGPATH_W) '$(srcdir)/$(srcdir)/../lib/isc/buffer.c'; fi`
+
+backtrace-emptytbl.o: $(srcdir)/../lib/isc/backtrace-emptytbl.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT backtrace-emptytbl.o -MD -MP -MF $(DEPDIR)/backtrace-emptytbl.Tpo -c -o backtrace-emptytbl.o `test -f '$(srcdir)/../lib/isc/backtrace-emptytbl.c' || echo '$(srcdir)/'`$(srcdir)/../lib/isc/backtrace-emptytbl.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/backtrace-emptytbl.Tpo $(DEPDIR)/backtrace-emptytbl.Po
+@am__fastdepCC_FALSE@	$(AM_V_CC) @AM_BACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='$(srcdir)/../lib/isc/backtrace-emptytbl.c' object='backtrace-emptytbl.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o backtrace-emptytbl.o `test -f '$(srcdir)/../lib/isc/backtrace-emptytbl.c' || echo '$(srcdir)/'`$(srcdir)/../lib/isc/backtrace-emptytbl.c
+
+backtrace-emptytbl.obj: $(srcdir)/../lib/isc/backtrace-emptytbl.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT backtrace-emptytbl.obj -MD -MP -MF $(DEPDIR)/backtrace-emptytbl.Tpo -c -o backtrace-emptytbl.obj `if test -f '$(srcdir)/../lib/isc/backtrace-emptytbl.c'; then $(CYGPATH_W) '$(srcdir)/../lib/isc/backtrace-emptytbl.c'; else $(CYGPATH_W) '$(srcdir)/$(srcdir)/../lib/isc/backtrace-emptytbl.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/backtrace-emptytbl.Tpo $(DEPDIR)/backtrace-emptytbl.Po
+@am__fastdepCC_FALSE@	$(AM_V_CC) @AM_BACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='$(srcdir)/../lib/isc/backtrace-emptytbl.c' object='backtrace-emptytbl.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o backtrace-emptytbl.obj `if test -f '$(srcdir)/../lib/isc/backtrace-emptytbl.c'; then $(CYGPATH_W) '$(srcdir)/../lib/isc/backtrace-emptytbl.c'; else $(CYGPATH_W) '$(srcdir)/$(srcdir)/../lib/isc/backtrace-emptytbl.c'; fi`
+
+backtrace.o: $(srcdir)/../lib/isc/backtrace.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT backtrace.o -MD -MP -MF $(DEPDIR)/backtrace.Tpo -c -o backtrace.o `test -f '$(srcdir)/../lib/isc/backtrace.c' || echo '$(srcdir)/'`$(srcdir)/../lib/isc/backtrace.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/backtrace.Tpo $(DEPDIR)/backtrace.Po
+@am__fastdepCC_FALSE@	$(AM_V_CC) @AM_BACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='$(srcdir)/../lib/isc/backtrace.c' object='backtrace.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o backtrace.o `test -f '$(srcdir)/../lib/isc/backtrace.c' || echo '$(srcdir)/'`$(srcdir)/../lib/isc/backtrace.c
+
+backtrace.obj: $(srcdir)/../lib/isc/backtrace.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT backtrace.obj -MD -MP -MF $(DEPDIR)/backtrace.Tpo -c -o backtrace.obj `if test -f '$(srcdir)/../lib/isc/backtrace.c'; then $(CYGPATH_W) '$(srcdir)/../lib/isc/backtrace.c'; else $(CYGPATH_W) '$(srcdir)/$(srcdir)/../lib/isc/backtrace.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/backtrace.Tpo $(DEPDIR)/backtrace.Po
+@am__fastdepCC_FALSE@	$(AM_V_CC) @AM_BACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='$(srcdir)/../lib/isc/backtrace.c' object='backtrace.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o backtrace.obj `if test -f '$(srcdir)/../lib/isc/backtrace.c'; then $(CYGPATH_W) '$(srcdir)/../lib/isc/backtrace.c'; else $(CYGPATH_W) '$(srcdir)/$(srcdir)/../lib/isc/backtrace.c'; fi`
 
 condition.o: $(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/condition.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT condition.o -MD -MP -MF $(DEPDIR)/condition.Tpo -c -o condition.o `test -f '$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/condition.c' || echo '$(srcdir)/'`$(srcdir)/../lib/isc/$(LIBISC_PTHREADS_NOTHREADS)/condition.c

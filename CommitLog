@@ -1,3 +1,765 @@
+ChangeSet@1.2798, 2012-06-03 08:13:26+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P278
+  TAG: NTP_4_2_7P278
+
+  ChangeLog@1.1165 +1 -0
+    NTP_4_2_7P278
+
+  ntpd/ntpd-opts.c@1.283 +4 -4
+    NTP_4_2_7P278
+
+  ntpd/ntpd-opts.h@1.283 +3 -3
+    NTP_4_2_7P278
+
+  ntpd/ntpd-opts.texi@1.281 +2 -2
+    NTP_4_2_7P278
+
+  ntpd/ntpd.1ntpdman@1.94 +2 -2
+    NTP_4_2_7P278
+
+  ntpd/ntpd.1ntpdmdoc@1.94 +2 -2
+    NTP_4_2_7P278
+
+  ntpd/ntpd.man.in@1.94 +2 -2
+    NTP_4_2_7P278
+
+  ntpd/ntpd.mdoc.in@1.94 +2 -2
+    NTP_4_2_7P278
+
+  ntpdc/ntpdc-opts.c@1.278 +4 -4
+    NTP_4_2_7P278
+
+  ntpdc/ntpdc-opts.h@1.278 +3 -3
+    NTP_4_2_7P278
+
+  ntpdc/ntpdc-opts.texi@1.278 +2 -2
+    NTP_4_2_7P278
+
+  ntpdc/ntpdc.1ntpdcman@1.94 +2 -2
+    NTP_4_2_7P278
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.94 +2 -2
+    NTP_4_2_7P278
+
+  ntpdc/ntpdc.html@1.106 +2 -2
+    NTP_4_2_7P278
+
+  ntpdc/ntpdc.man.in@1.94 +2 -2
+    NTP_4_2_7P278
+
+  ntpdc/ntpdc.mdoc.in@1.94 +2 -2
+    NTP_4_2_7P278
+
+  ntpq/ntpq-opts.c@1.280 +4 -4
+    NTP_4_2_7P278
+
+  ntpq/ntpq-opts.h@1.280 +3 -3
+    NTP_4_2_7P278
+
+  ntpq/ntpq-opts.texi@1.280 +2 -2
+    NTP_4_2_7P278
+
+  ntpq/ntpq.1ntpqman@1.94 +2 -2
+    NTP_4_2_7P278
+
+  ntpq/ntpq.1ntpqmdoc@1.94 +2 -2
+    NTP_4_2_7P278
+
+  ntpq/ntpq.man.in@1.94 +2 -2
+    NTP_4_2_7P278
+
+  ntpq/ntpq.mdoc.in@1.94 +2 -2
+    NTP_4_2_7P278
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.280 +4 -4
+    NTP_4_2_7P278
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.280 +3 -3
+    NTP_4_2_7P278
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.280 +2 -2
+    NTP_4_2_7P278
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.94 +2 -2
+    NTP_4_2_7P278
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.94 +2 -2
+    NTP_4_2_7P278
+
+  ntpsnmpd/ntpsnmpd.man.in@1.94 +2 -2
+    NTP_4_2_7P278
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.94 +2 -2
+    NTP_4_2_7P278
+
+  packageinfo.sh@1.281 +1 -1
+    NTP_4_2_7P278
+
+  scripts/ntp-wait-opts.texi@1.98 +1 -1
+    NTP_4_2_7P278
+
+  scripts/ntp-wait.1ntp-waitman@1.94 +2 -2
+    NTP_4_2_7P278
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.94 +2 -2
+    NTP_4_2_7P278
+
+  scripts/ntp-wait.html@1.98 +1 -1
+    NTP_4_2_7P278
+
+  scripts/ntp-wait.man.in@1.94 +2 -2
+    NTP_4_2_7P278
+
+  scripts/ntp-wait.mdoc.in@1.94 +2 -2
+    NTP_4_2_7P278
+
+  sntp/sntp-opts.c@1.276 +4 -4
+    NTP_4_2_7P278
+
+  sntp/sntp-opts.h@1.276 +3 -3
+    NTP_4_2_7P278
+
+  sntp/sntp-opts.texi@1.276 +2 -2
+    NTP_4_2_7P278
+
+  sntp/sntp.1sntpman@1.96 +2 -2
+    NTP_4_2_7P278
+
+  sntp/sntp.1sntpmdoc@1.96 +2 -2
+    NTP_4_2_7P278
+
+  sntp/sntp.html@1.276 +2 -2
+    NTP_4_2_7P278
+
+  sntp/sntp.man.in@1.96 +2 -2
+    NTP_4_2_7P278
+
+  sntp/sntp.mdoc.in@1.96 +2 -2
+    NTP_4_2_7P278
+
+  util/ntp-keygen-opts.c@1.280 +4 -4
+    NTP_4_2_7P278
+
+  util/ntp-keygen-opts.h@1.280 +3 -3
+    NTP_4_2_7P278
+
+  util/ntp-keygen-opts.texi@1.281 +2 -2
+    NTP_4_2_7P278
+
+  util/ntp-keygen.1ntp-keygenman@1.94 +2 -2
+    NTP_4_2_7P278
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.94 +2 -2
+    NTP_4_2_7P278
+
+  util/ntp-keygen.man.in@1.94 +2 -2
+    NTP_4_2_7P278
+
+  util/ntp-keygen.mdoc.in@1.94 +2 -2
+    NTP_4_2_7P278
+
+ChangeSet@1.2797, 2012-06-03 07:18:47+00:00, davehart@dlh-7551.ad.hartbrothers.com
+  Update --enable-getifaddrs handling in ntp_ipv6.m4 to match bind 9.9.1 for
+    [Bug 2204] Build with --enable-getifaddrs=glibc fails
+
+  include/isc/mem.h@1.5 +3 -3
+    Clean up merge of libisc from bind-9.9.1
+    some isc_mem_* are now implemented in isc__mem_*
+
+  include/ntp_stdlib.h@1.74 +0 -19
+    Clean up merge of libisc from bind-9.9.1
+    __attribute__ conditionaliztion moved to config.h
+
+  lib/isc/assertions.c@1.7 +1 -2
+    Clean up merge of libisc from bind-9.9.1
+    Follow libisc __attribute__((__noreturn__)) convention now there is one.
+
+  lib/isc/include/isc/assertions.h@1.7 +1 -21
+    Clean up merge of libisc from bind-9.9.1
+    __attribute__ conditionaliztion moved to config.h
+
+  lib/isc/task.c@1.7 +0 -2
+    Automerge was successful where I might wish it had not been.
+
+  lib/isc/unix/interfaceiter.c@1.25 +1 -30
+    Remove NTP local addition to Linux fallback IPv6 address enumeration code
+      which broke --enable-getifaddrs on Linux, which is now default there with
+      coincident ntp_ipv6.m4 change.
+
+  libntp/Makefile.am@1.71 +2 -0
+    Clean up merge of libisc from bind-9.9.1
+    task.c depends on global provided by backtrace.c
+
+  libntp/msyslog.c@1.49 +1 -17
+    Remove broken strerror_r workaround code with the real problem fixed,
+      which is ensuring _GNU_SOURCE is defined before the first system
+      header is included.
+
+  ports/winnt/include/config.h@1.103 +2 -1
+    Clean up merge of libisc from bind-9.9.1
+    __attribute__ conditionaliztion moved to config.h
+
+  ports/winnt/vs2005/libntp.vcproj@1.23 +8 -0
+    Clean up merge of libisc from bind-9.9.1
+    task.c depends on global provided by backtrace.c
+
+  ports/winnt/vs2008/libntp/libntp.vcproj@1.46 +10 -2
+    Clean up merge of libisc from bind-9.9.1
+    task.c depends on global provided by backtrace.c
+
+  sntp/m4/ntp_compiler.m4@1.4 +29 -0
+    Clean up merge of libisc from bind-9.9.1
+    __attribute__ conditionaliztion moved to config.h
+
+  sntp/m4/ntp_ipv6.m4@1.6 +6 -39
+    Update --enable-getifaddrs handling to match bind 9.9.1 configure.in
+
+  sntp/m4/ntp_libntp.m4@1.17 +10 -4
+    ensure _GNU_SOURCE is defined before any system headers are included.
+
+ChangeSet@1.2795, 2012-06-02 12:51:48+00:00, davehart@dlh-7551.ad.hartbrothers.com
+  Correct incompatible pointer type assignment warning refclock_tsyncpci.c:341
+
+  ntpd/refclock_tsyncpci.c@1.6 +1 -1
+    Correct incompatible pointer type assignment warning refclock_tsyncpci.c:341
+
+ChangeSet@1.2794, 2012-06-02 12:44:37+00:00, davehart@dlh-7551.ad.hartbrothers.com
+  [Bug 2191] dcfd -Y y2kcheck on CentOS 6.2 x86_64 breaks make check.
+
+  ChangeLog@1.1164 +1 -0
+    [Bug 2191] dcfd -Y y2kcheck on CentOS 6.2 x86_64 breaks make check.
+
+  parseutil/dcfd.c@1.25 +0 -37
+    [Bug 2191] dcfd -Y y2kcheck on CentOS 6.2 x86_64 breaks make check.
+      Patch supplied by Frank Kardel.
+
+ChangeSet@1.2793, 2012-06-02 00:02:32+00:00, davehart@dlh-7551.ad.hartbrothers.com
+  [Bug 2178] refclock_tsyncpci.c reach register fails to shift.
+
+  ChangeLog@1.1163 +1 -0
+    [Bug 2178] refclock_tsyncpci.c reach register fails to shift.
+
+  ntpd/ntp_io.c@1.366 +1 -1
+    DPRINTF lacked \n
+
+  ntpd/refclock_as2201.c@1.16 +0 -4
+    [Bug 2178] refclock_tsyncpci.c reach register fails to shift.
+
+  ntpd/refclock_fg.c@1.15 +0 -3
+    [Bug 2178] refclock_tsyncpci.c reach register fails to shift.
+
+  ntpd/refclock_heath.c@1.18 +0 -4
+    [Bug 2178] refclock_tsyncpci.c reach register fails to shift.
+
+  ntpd/refclock_hopfser.c@1.17 +0 -1
+    [Bug 2178] refclock_tsyncpci.c reach register fails to shift.
+
+  ntpd/refclock_jjy.c@1.25 +0 -1
+    [Bug 2178] refclock_tsyncpci.c reach register fails to shift.
+
+  ntpd/refclock_neoclock4x.c@1.22 +0 -1
+    [Bug 2178] refclock_tsyncpci.c reach register fails to shift.
+
+  ntpd/refclock_pst.c@1.13 +0 -4
+    [Bug 2178] refclock_tsyncpci.c reach register fails to shift.
+
+  ntpd/refclock_tpro.c@1.14 +0 -4
+    [Bug 2178] refclock_tsyncpci.c reach register fails to shift.
+
+  ntpd/refclock_tsyncpci.c@1.5 +0 -8
+    [Bug 2178] refclock_tsyncpci.c reach register fails to shift.
+
+  ntpd/refclock_tt560.c@1.4 +0 -4
+    [Bug 2178] refclock_tsyncpci.c reach register fails to shift.
+
+  ntpd/refclock_ulink.c@1.18 +0 -4
+    [Bug 2178] refclock_tsyncpci.c reach register fails to shift.
+
+ChangeSet@1.2004.2.2, 2012-06-01 18:17:30+00:00, davehart@dlh-7551.ad.hartbrothers.com
+  unmodified bind-9.9.1
+
+  lib/isc/Atffile@1.1 +5 -0
+    bind-9.9.1
+
+  lib/isc/Atffile@1.0 +0 -0
+
+  lib/isc/alpha/include/isc/atomic.h@1.2 +1 -1
+    bind-9.9.1
+
+  lib/isc/api@1.2 +6 -1
+    bind-9.9.1
+
+  lib/isc/app_api.c@1.1 +136 -0
+    bind-9.9.1
+
+  lib/isc/app_api.c@1.0 +0 -0
+
+  lib/isc/assertions.c@1.4.1.1 +53 -11
+    bind-9.9.1
+
+  lib/isc/backtrace-emptytbl.c@1.1 +34 -0
+    bind-9.9.1
+
+  lib/isc/backtrace-emptytbl.c@1.0 +0 -0
+
+  lib/isc/backtrace.c@1.1 +285 -0
+    bind-9.9.1
+
+  lib/isc/backtrace.c@1.0 +0 -0
+
+  lib/isc/base32.c@1.2 +3 -1
+    bind-9.9.1
+
+  lib/isc/base64.c@1.2 +5 -3
+    bind-9.9.1
+
+  lib/isc/entropy.c@1.2 +7 -4
+    bind-9.9.1
+
+  lib/isc/hash.c@1.2 +17 -3
+    bind-9.9.1
+
+  lib/isc/heap.c@1.2 +11 -8
+    bind-9.9.1
+
+  lib/isc/hmacmd5.c@1.2 +33 -2
+    bind-9.9.1
+
+  lib/isc/hmacsha.c@1.2 +220 -64
+    bind-9.9.1
+
+  lib/isc/httpd.c@1.2 +58 -17
+    bind-9.9.1
+
+  lib/isc/ia64/include/isc/atomic.h@1.2 +4 -4
+    bind-9.9.1
+
+  lib/isc/include/isc/app.h@1.5 +168 -5
+    bind-9.9.1
+
+  lib/isc/include/isc/assertions.h@1.4.1.1 +5 -3
+    bind-9.9.1
+
+  lib/isc/include/isc/backtrace.h@1.1 +131 -0
+    bind-9.9.1
+
+  lib/isc/include/isc/backtrace.h@1.0 +0 -0
+
+  lib/isc/include/isc/bind9.h@1.1 +30 -0
+    bind-9.9.1
+
+  lib/isc/include/isc/bind9.h@1.0 +0 -0
+
+  lib/isc/include/isc/buffer.h@1.5 +2 -2
+    bind-9.9.1
+
+  lib/isc/include/isc/entropy.h@1.2 +7 -7
+    bind-9.9.1
+
+  lib/isc/include/isc/error.h@1.5 +5 -4
+    bind-9.9.1
+
+  lib/isc/include/isc/file.h@1.4.1.1 +50 -2
+    bind-9.9.1
+
+  lib/isc/include/isc/fsaccess.h@1.2 +1 -1
+    bind-9.9.1
+
+  lib/isc/include/isc/hash.h@1.2 +1 -1
+    bind-9.9.1
+
+  lib/isc/include/isc/heap.h@1.2 +1 -1
+    bind-9.9.1
+
+  lib/isc/include/isc/hmacmd5.h@1.2 +11 -2
+    bind-9.9.1
+
+  lib/isc/include/isc/hmacsha.h@1.2 +15 -2
+    bind-9.9.1
+
+  lib/isc/include/isc/lib.h@1.5 +11 -2
+    bind-9.9.1
+
+  lib/isc/include/isc/list.h@1.5 +15 -2
+    bind-9.9.1
+
+  lib/isc/include/isc/log.h@1.4 +1 -1
+    bind-9.9.1
+
+  lib/isc/include/isc/md5.h@1.3 +12 -2
+    bind-9.9.1
+
+  lib/isc/include/isc/mem.h@1.6 +148 -27
+    bind-9.9.1
+
+  lib/isc/include/isc/msgs.h@1.5.1.1 +3 -3
+    bind-9.9.1
+
+  lib/isc/include/isc/namespace.h@1.1 +171 -0
+    bind-9.9.1
+
+  lib/isc/include/isc/namespace.h@1.0 +0 -0
+
+  lib/isc/include/isc/netaddr.h@1.7 +1 -1
+    bind-9.9.1
+
+  lib/isc/include/isc/netscope.h@1.4 +3 -3
+    bind-9.9.1
+
+  lib/isc/include/isc/platform.h.in@1.2 +30 -2
+    bind-9.9.1
+
+  lib/isc/include/isc/portset.h@1.2 +2 -2
+    bind-9.9.1
+
+  lib/isc/include/isc/queue.h@1.1 +100 -0
+    bind-9.9.1
+
+  lib/isc/include/isc/queue.h@1.0 +0 -0
+
+  lib/isc/include/isc/radix.h@1.2 +1 -1
+    bind-9.9.1
+
+  lib/isc/include/isc/random.h@1.2 +1 -1
+    bind-9.9.1
+
+  lib/isc/include/isc/ratelimiter.h@1.2 +1 -1
+    bind-9.9.1
+
+  lib/isc/include/isc/refcount.h@1.2 +6 -6
+    bind-9.9.1
+
+  lib/isc/include/isc/result.h@1.6 +5 -3
+    bind-9.9.1
+
+  lib/isc/include/isc/resultclass.h@1.2 +3 -2
+    bind-9.9.1
+
+  lib/isc/include/isc/serial.h@1.2 +1 -1
+    bind-9.9.1
+
+  lib/isc/include/isc/sha1.h@1.2 +11 -2
+    bind-9.9.1
+
+  lib/isc/include/isc/sha2.h@1.2 +18 -5
+    bind-9.9.1
+
+  lib/isc/include/isc/sockaddr.h@1.6 +1 -1
+    bind-9.9.1
+
+  lib/isc/include/isc/socket.h@1.2 +163 -2
+    bind-9.9.1
+
+  lib/isc/include/isc/stats.h@1.2 +2 -2
+    bind-9.9.1
+
+  lib/isc/include/isc/symtab.h@1.2 +10 -2
+    bind-9.9.1
+
+  lib/isc/include/isc/task.h@1.2 +176 -4
+    bind-9.9.1
+
+  lib/isc/include/isc/taskpool.h@1.2 +58 -6
+    bind-9.9.1
+
+  lib/isc/include/isc/timer.h@1.2 +90 -3
+    bind-9.9.1
+
+  lib/isc/include/isc/types.h@1.5 +8 -3
+    bind-9.9.1
+
+  lib/isc/include/isc/util.h@1.4.1.1 +7 -2
+    bind-9.9.1
+
+  lib/isc/inet_aton.c@1.5 +2 -2
+    bind-9.9.1
+
+  lib/isc/inet_ntop.c@1.7.1.1 +6 -5
+    bind-9.9.1
+
+  lib/isc/iterated_hash.c@1.2 +1 -1
+    bind-9.9.1
+
+  lib/isc/lib.c@1.5 +29 -5
+    bind-9.9.1
+
+  lib/isc/log.c@1.3.1.1 +5 -4
+    bind-9.9.1
+
+  lib/isc/md5.c@1.3 +28 -2
+    bind-9.9.1
+
+  lib/isc/mem.c@1.6 +444 -172
+    bind-9.9.1
+
+  lib/isc/mem_api.c@1.1 +303 -0
+    bind-9.9.1
+
+  lib/isc/mem_api.c@1.0 +0 -0
+
+  lib/isc/mutexblock.c@1.2 +4 -5
+    bind-9.9.1
+
+  lib/isc/netaddr.c@1.6.1.1 +20 -22
+    bind-9.9.1
+
+  lib/isc/powerpc/include/isc/atomic.h@1.2 +54 -17
+    bind-9.9.1
+
+  lib/isc/print.c@1.2 +3 -3
+    bind-9.9.1
+
+  lib/isc/pthreads/mutex.c@1.1.1.1 +13 -10
+    bind-9.9.1
+
+  lib/isc/radix.c@1.2 +3 -3
+    bind-9.9.1
+
+  lib/isc/random.c@1.2 +19 -10
+    bind-9.9.1
+
+  lib/isc/result.c@1.1.1.1 +3 -2
+    bind-9.9.1
+
+  lib/isc/rwlock.c@1.2 +3 -2
+    bind-9.9.1
+
+  lib/isc/sha1.c@1.2 +41 -2
+    bind-9.9.1
+
+  lib/isc/sha2.c@1.2 +335 -120
+    bind-9.9.1
+
+  lib/isc/sockaddr.c@1.8.1.1 +7 -4
+    bind-9.9.1
+
+  lib/isc/socket_api.c@1.1 +231 -0
+    bind-9.9.1
+
+  lib/isc/socket_api.c@1.0 +0 -0
+
+  lib/isc/stats.c@1.2 +2 -2
+    bind-9.9.1
+
+  lib/isc/string.c@1.2 +6 -5
+    bind-9.9.1
+
+  lib/isc/symtab.c@1.2 +51 -2
+    bind-9.9.1
+
+  lib/isc/task.c@1.1.1.1 +607 -178
+    bind-9.9.1
+
+  lib/isc/task_api.c@1.1 +244 -0
+    bind-9.9.1
+
+  lib/isc/task_api.c@1.0 +0 -0
+
+  lib/isc/task_p.h@1.2 +12 -4
+    bind-9.9.1
+
+  lib/isc/taskpool.c@1.2 +103 -14
+    bind-9.9.1
+
+  lib/isc/tests/Atffile@1.1 +5 -0
+    bind-9.9.1
+
+  lib/isc/tests/Atffile@1.0 +0 -0
+
+  lib/isc/tests/hash_test.c@1.1 +1805 -0
+    bind-9.9.1
+
+  lib/isc/tests/hash_test.c@1.0 +0 -0
+
+  lib/isc/tests/isctest.c@1.1 +178 -0
+    bind-9.9.1
+
+  lib/isc/tests/isctest.c@1.0 +0 -0
+
+  lib/isc/tests/isctest.h@1.1 +57 -0
+    bind-9.9.1
+
+  lib/isc/tests/isctest.h@1.0 +0 -0
+
+  lib/isc/tests/queue_test.c@1.1 +144 -0
+    bind-9.9.1
+
+  lib/isc/tests/queue_test.c@1.0 +0 -0
+
+  lib/isc/tests/socket_test.c@1.1 +255 -0
+    bind-9.9.1
+
+  lib/isc/tests/socket_test.c@1.0 +0 -0
+
+  lib/isc/tests/symtab_test.c@1.1 +147 -0
+    bind-9.9.1
+
+  lib/isc/tests/symtab_test.c@1.0 +0 -0
+
+  lib/isc/tests/task_test.c@1.1 +416 -0
+    bind-9.9.1
+
+  lib/isc/tests/task_test.c@1.0 +0 -0
+
+  lib/isc/tests/taskpool_test.c@1.1 +211 -0
+    bind-9.9.1
+
+  lib/isc/tests/taskpool_test.c@1.0 +0 -0
+
+  lib/isc/timer.c@1.2 +246 -107
+    bind-9.9.1
+
+  lib/isc/timer_api.c@1.1 +144 -0
+    bind-9.9.1
+
+  lib/isc/timer_api.c@1.0 +0 -0
+
+  lib/isc/timer_p.h@1.2 +4 -4
+    bind-9.9.1
+
+  lib/isc/unix/app.c@1.2 +399 -137
+    bind-9.9.1
+
+  lib/isc/unix/dir.c@1.1.1.1 +3 -3
+    bind-9.9.1
+
+  lib/isc/unix/entropy.c@1.2 +2 -2
+    bind-9.9.1
+
+  lib/isc/unix/errno2result.c@1.2 +5 -6
+    bind-9.9.1
+
+  lib/isc/unix/errno2result.h@1.2 +5 -3
+    bind-9.9.1
+
+  lib/isc/unix/file.c@1.1.1.1 +102 -5
+    bind-9.9.1
+
+  lib/isc/unix/ifiter_getifaddrs.c@1.7.1.1 +3 -3
+    bind-9.9.1
+
+  lib/isc/unix/ifiter_ioctl.c@1.27.1.1 +1 -1
+    bind-9.9.1
+
+  lib/isc/unix/include/isc/net.h@1.10.1.1 +2 -2
+    bind-9.9.1
+
+  lib/isc/unix/include/isc/offset.h@1.5 +2 -2
+    bind-9.9.1
+
+  lib/isc/unix/include/isc/stdtime.h@1.2 +6 -2
+    bind-9.9.1
+
+  lib/isc/unix/include/isc/strerror.h@1.5 +2 -2
+    bind-9.9.1
+
+  lib/isc/unix/include/isc/time.h@1.4 +1 -1
+    bind-9.9.1
+
+  lib/isc/unix/interfaceiter.c@1.17.1.1 +2 -2
+    bind-9.9.1
+
+  lib/isc/unix/net.c@1.12.1.1 +2 -2
+    bind-9.9.1
+
+  lib/isc/unix/resource.c@1.2 +1 -1
+    bind-9.9.1
+
+  lib/isc/unix/socket.c@1.2 +851 -390
+    bind-9.9.1
+
+  lib/isc/unix/socket_p.h@1.2 +5 -4
+    bind-9.9.1
+
+  lib/isc/unix/stdio.c@1.2 +15 -3
+    bind-9.9.1
+
+  lib/isc/unix/strerror.c@1.5.1.1 +1 -1
+    bind-9.9.1
+
+  lib/isc/unix/time.c@1.2 +6 -24
+    bind-9.9.1
+
+  lib/isc/win32/app.c@1.2 +11 -11
+    bind-9.9.1
+
+  lib/isc/win32/dir.c@1.2 +3 -3
+    bind-9.9.1
+
+  lib/isc/win32/entropy.c@1.2 +1 -1
+    bind-9.9.1
+
+  lib/isc/win32/file.c@1.2 +126 -14
+    bind-9.9.1
+
+  lib/isc/win32/include/isc/ipv6.h@1.8.1.1 +6 -6
+    bind-9.9.1
+
+  lib/isc/win32/include/isc/mutex.h@1.5 +1 -1
+    bind-9.9.1
+
+  lib/isc/win32/include/isc/net.h@1.8.1.1 +2 -2
+    bind-9.9.1
+
+  lib/isc/win32/include/isc/ntpaths.h@1.2 +5 -4
+    bind-9.9.1
+
+  lib/isc/win32/include/isc/platform.h@1.5.1.1 +7 -1
+    bind-9.9.1
+
+  lib/isc/win32/include/isc/stat.h@1.3.1.1 +16 -3
+    bind-9.9.1
+
+  lib/isc/win32/include/isc/stdtime.h@1.2 +6 -2
+    bind-9.9.1
+
+  lib/isc/win32/include/isc/thread.h@1.1.1.1 +7 -7
+    bind-9.9.1
+
+  lib/isc/win32/include/isc/time.h@1.2 +1 -1
+    bind-9.9.1
+
+  lib/isc/win32/include/isc/win32os.h@1.5 +3 -3
+    bind-9.9.1
+
+  lib/isc/win32/interfaceiter.c@1.10.2.1 +1 -1
+    bind-9.9.1
+
+  lib/isc/win32/libgen.h@1.1 +25 -0
+    bind-9.9.1
+
+  lib/isc/win32/libgen.h@1.0 +0 -0
+
+  lib/isc/win32/libisc.def@1.2 +149 -117
+    bind-9.9.1
+
+  lib/isc/win32/libisc.dsp@1.2 +22 -4
+    bind-9.9.1
+
+  lib/isc/win32/libisc.mak@1.2 +53 -4
+    bind-9.9.1
+
+  lib/isc/win32/net.c@1.11.1.1 +7 -5
+    bind-9.9.1
+
+  lib/isc/win32/netdb.h@1.2 +1 -1
+    bind-9.9.1
+
+  lib/isc/win32/ntgroups.c@1.2 +23 -23
+    bind-9.9.1
+
+  lib/isc/win32/ntpaths.c@1.2 +11 -4
+    bind-9.9.1
+
+  lib/isc/win32/socket.c@1.2 +388 -95
+    bind-9.9.1
+
+  lib/isc/win32/time.c@1.2 +44 -19
+    bind-9.9.1
+
+  lib/isc/win32/unistd.h@1.2 +9 -2
+    bind-9.9.1
+
 ChangeSet@1.2792, 2012-05-25 05:07:31+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P277
   TAG: NTP_4_2_7P277

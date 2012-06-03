@@ -1,11 +1,5 @@
 /* config.h.in.  Generated from configure.ac by autoheader.  */
 
-
-	#if !defined(_KERNEL) && !defined(PARSESTREAM)
-	# include <stdio.h>	/* before #define vsnprintf rpl_... */
-	#endif
-	
-
 /* Define if building universal (internal helper macro) */
 #undef AC_APPLE_UNIVERSAL_BUILD
 
@@ -592,6 +586,19 @@
 /* Define to 1 if the system has the type `_Bool'. */
 #undef HAVE__BOOL
 
+/* defined if C compiler supports __attribute__((...)) */
+#undef HAVE___ATTRIBUTE__
+
+
+	/* define away __attribute__() if unsupported */
+	#ifndef HAVE___ATTRIBUTE__
+	# define __attribute__(x) /* empty */
+	#endif
+	#define ISC_PLATFORM_NORETURN_PRE
+	#define ISC_PLATFORM_NORETURN_POST __attribute__((__noreturn__))
+    
+
+
 /* Define to 1 if you have the `__res_init' function. */
 #undef HAVE___RES_INIT
 
@@ -892,6 +899,16 @@ typedef unsigned int	uintptr_t;
 
 /* Define to `unsigned int' if <sys/types.h> does not define. */
 #undef size_t
+
+	
+	    #if !defined(_KERNEL) && !defined(PARSESTREAM)
+	    /*
+	     * stdio.h must be included after _GNU_SOURCE is defined
+	     * but before #define snprintf rpl_snprintf
+	     */
+	    # include <stdio.h>	
+	    #endif
+	
 
 /* Define to rpl_snprintf if the replacement function should be used. */
 #undef snprintf
