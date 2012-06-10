@@ -1,3 +1,177 @@
+ChangeSet@1.2800, 2012-06-10 06:52:04+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P279
+  TAG: NTP_4_2_7P279
+
+  ChangeLog@1.1167 +1 -0
+    NTP_4_2_7P279
+
+  ntpd/ntpd-opts.c@1.284 +4 -4
+    NTP_4_2_7P279
+
+  ntpd/ntpd-opts.h@1.284 +3 -3
+    NTP_4_2_7P279
+
+  ntpd/ntpd-opts.texi@1.282 +2 -2
+    NTP_4_2_7P279
+
+  ntpd/ntpd.1ntpdman@1.95 +2 -2
+    NTP_4_2_7P279
+
+  ntpd/ntpd.1ntpdmdoc@1.95 +2 -2
+    NTP_4_2_7P279
+
+  ntpd/ntpd.man.in@1.95 +2 -2
+    NTP_4_2_7P279
+
+  ntpd/ntpd.mdoc.in@1.95 +2 -2
+    NTP_4_2_7P279
+
+  ntpdc/ntpdc-opts.c@1.279 +4 -4
+    NTP_4_2_7P279
+
+  ntpdc/ntpdc-opts.h@1.279 +3 -3
+    NTP_4_2_7P279
+
+  ntpdc/ntpdc-opts.texi@1.279 +2 -2
+    NTP_4_2_7P279
+
+  ntpdc/ntpdc.1ntpdcman@1.95 +2 -2
+    NTP_4_2_7P279
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.95 +2 -2
+    NTP_4_2_7P279
+
+  ntpdc/ntpdc.html@1.107 +2 -2
+    NTP_4_2_7P279
+
+  ntpdc/ntpdc.man.in@1.95 +2 -2
+    NTP_4_2_7P279
+
+  ntpdc/ntpdc.mdoc.in@1.95 +2 -2
+    NTP_4_2_7P279
+
+  ntpq/ntpq-opts.c@1.281 +4 -4
+    NTP_4_2_7P279
+
+  ntpq/ntpq-opts.h@1.281 +3 -3
+    NTP_4_2_7P279
+
+  ntpq/ntpq-opts.texi@1.281 +2 -2
+    NTP_4_2_7P279
+
+  ntpq/ntpq.1ntpqman@1.95 +2 -2
+    NTP_4_2_7P279
+
+  ntpq/ntpq.1ntpqmdoc@1.95 +2 -2
+    NTP_4_2_7P279
+
+  ntpq/ntpq.man.in@1.95 +2 -2
+    NTP_4_2_7P279
+
+  ntpq/ntpq.mdoc.in@1.95 +2 -2
+    NTP_4_2_7P279
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.281 +4 -4
+    NTP_4_2_7P279
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.281 +3 -3
+    NTP_4_2_7P279
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.281 +2 -2
+    NTP_4_2_7P279
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.95 +2 -2
+    NTP_4_2_7P279
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.95 +2 -2
+    NTP_4_2_7P279
+
+  ntpsnmpd/ntpsnmpd.man.in@1.95 +2 -2
+    NTP_4_2_7P279
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.95 +2 -2
+    NTP_4_2_7P279
+
+  packageinfo.sh@1.282 +1 -1
+    NTP_4_2_7P279
+
+  scripts/ntp-wait-opts.texi@1.99 +1 -1
+    NTP_4_2_7P279
+
+  scripts/ntp-wait.1ntp-waitman@1.95 +2 -2
+    NTP_4_2_7P279
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.95 +2 -2
+    NTP_4_2_7P279
+
+  scripts/ntp-wait.html@1.99 +1 -1
+    NTP_4_2_7P279
+
+  scripts/ntp-wait.man.in@1.95 +2 -2
+    NTP_4_2_7P279
+
+  scripts/ntp-wait.mdoc.in@1.95 +2 -2
+    NTP_4_2_7P279
+
+  sntp/sntp-opts.c@1.277 +4 -4
+    NTP_4_2_7P279
+
+  sntp/sntp-opts.h@1.277 +3 -3
+    NTP_4_2_7P279
+
+  sntp/sntp-opts.texi@1.277 +2 -2
+    NTP_4_2_7P279
+
+  sntp/sntp.1sntpman@1.97 +2 -2
+    NTP_4_2_7P279
+
+  sntp/sntp.1sntpmdoc@1.97 +2 -2
+    NTP_4_2_7P279
+
+  sntp/sntp.html@1.277 +2 -2
+    NTP_4_2_7P279
+
+  sntp/sntp.man.in@1.97 +2 -2
+    NTP_4_2_7P279
+
+  sntp/sntp.mdoc.in@1.97 +2 -2
+    NTP_4_2_7P279
+
+  util/ntp-keygen-opts.c@1.281 +4 -4
+    NTP_4_2_7P279
+
+  util/ntp-keygen-opts.h@1.281 +3 -3
+    NTP_4_2_7P279
+
+  util/ntp-keygen-opts.texi@1.282 +2 -2
+    NTP_4_2_7P279
+
+  util/ntp-keygen.1ntp-keygenman@1.95 +2 -2
+    NTP_4_2_7P279
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.95 +2 -2
+    NTP_4_2_7P279
+
+  util/ntp-keygen.man.in@1.95 +2 -2
+    NTP_4_2_7P279
+
+  util/ntp-keygen.mdoc.in@1.95 +2 -2
+    NTP_4_2_7P279
+
+ChangeSet@1.2799, 2012-06-09 14:16:49+00:00, davehart@dlh-7551.ad.hartbrothers.com
+  [Bug 2211] findbcastinter(): possibly undefined variable iface used.
+  [Bug 2220] Incorrect check for maximum association id in ntpq.
+
+  ChangeLog@1.1166 +3 -0
+    [Bug 2211] findbcastinter(): possibly undefined variable iface used.
+    [Bug 2220] Incorrect check for maximum association id in ntpq.
+
+  ntpd/ntp_io.c@1.367 +6 -4
+    [Bug 2211] findbcastinter(): possibly undefined variable iface used.
+
+  ntpq/ntpq.c@1.146 +9 -7
+    [Bug 2220] Incorrect check for maximum association id in ntpq.
+
 ChangeSet@1.2798, 2012-06-03 08:13:26+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P278
   TAG: NTP_4_2_7P278
