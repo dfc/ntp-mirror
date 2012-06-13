@@ -1,3 +1,172 @@
+ChangeSet@1.2802, 2012-06-13 05:35:48+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P280
+  TAG: NTP_4_2_7P280
+
+  ChangeLog@1.1169 +1 -0
+    NTP_4_2_7P280
+
+  ntpd/ntpd-opts.c@1.285 +4 -4
+    NTP_4_2_7P280
+
+  ntpd/ntpd-opts.h@1.285 +3 -3
+    NTP_4_2_7P280
+
+  ntpd/ntpd-opts.texi@1.283 +2 -2
+    NTP_4_2_7P280
+
+  ntpd/ntpd.1ntpdman@1.96 +2 -2
+    NTP_4_2_7P280
+
+  ntpd/ntpd.1ntpdmdoc@1.96 +2 -2
+    NTP_4_2_7P280
+
+  ntpd/ntpd.man.in@1.96 +2 -2
+    NTP_4_2_7P280
+
+  ntpd/ntpd.mdoc.in@1.96 +2 -2
+    NTP_4_2_7P280
+
+  ntpdc/ntpdc-opts.c@1.280 +4 -4
+    NTP_4_2_7P280
+
+  ntpdc/ntpdc-opts.h@1.280 +3 -3
+    NTP_4_2_7P280
+
+  ntpdc/ntpdc-opts.texi@1.280 +2 -2
+    NTP_4_2_7P280
+
+  ntpdc/ntpdc.1ntpdcman@1.96 +2 -2
+    NTP_4_2_7P280
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.96 +2 -2
+    NTP_4_2_7P280
+
+  ntpdc/ntpdc.html@1.108 +2 -2
+    NTP_4_2_7P280
+
+  ntpdc/ntpdc.man.in@1.96 +2 -2
+    NTP_4_2_7P280
+
+  ntpdc/ntpdc.mdoc.in@1.96 +2 -2
+    NTP_4_2_7P280
+
+  ntpq/ntpq-opts.c@1.282 +4 -4
+    NTP_4_2_7P280
+
+  ntpq/ntpq-opts.h@1.282 +3 -3
+    NTP_4_2_7P280
+
+  ntpq/ntpq-opts.texi@1.282 +2 -2
+    NTP_4_2_7P280
+
+  ntpq/ntpq.1ntpqman@1.96 +2 -2
+    NTP_4_2_7P280
+
+  ntpq/ntpq.1ntpqmdoc@1.96 +2 -2
+    NTP_4_2_7P280
+
+  ntpq/ntpq.man.in@1.96 +2 -2
+    NTP_4_2_7P280
+
+  ntpq/ntpq.mdoc.in@1.96 +2 -2
+    NTP_4_2_7P280
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.282 +4 -4
+    NTP_4_2_7P280
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.282 +3 -3
+    NTP_4_2_7P280
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.282 +2 -2
+    NTP_4_2_7P280
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.96 +2 -2
+    NTP_4_2_7P280
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.96 +2 -2
+    NTP_4_2_7P280
+
+  ntpsnmpd/ntpsnmpd.man.in@1.96 +2 -2
+    NTP_4_2_7P280
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.96 +2 -2
+    NTP_4_2_7P280
+
+  packageinfo.sh@1.283 +1 -1
+    NTP_4_2_7P280
+
+  scripts/ntp-wait-opts.texi@1.100 +2 -14
+    NTP_4_2_7P280
+
+  scripts/ntp-wait.1ntp-waitman@1.96 +2 -2
+    NTP_4_2_7P280
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.96 +2 -2
+    NTP_4_2_7P280
+
+  scripts/ntp-wait.html@1.100 +2 -14
+    NTP_4_2_7P280
+
+  scripts/ntp-wait.man.in@1.96 +2 -2
+    NTP_4_2_7P280
+
+  scripts/ntp-wait.mdoc.in@1.96 +2 -2
+    NTP_4_2_7P280
+
+  sntp/sntp-opts.c@1.278 +4 -4
+    NTP_4_2_7P280
+
+  sntp/sntp-opts.h@1.278 +3 -3
+    NTP_4_2_7P280
+
+  sntp/sntp-opts.texi@1.278 +2 -2
+    NTP_4_2_7P280
+
+  sntp/sntp.1sntpman@1.98 +2 -2
+    NTP_4_2_7P280
+
+  sntp/sntp.1sntpmdoc@1.98 +2 -2
+    NTP_4_2_7P280
+
+  sntp/sntp.html@1.278 +2 -2
+    NTP_4_2_7P280
+
+  sntp/sntp.man.in@1.98 +2 -2
+    NTP_4_2_7P280
+
+  sntp/sntp.mdoc.in@1.98 +2 -2
+    NTP_4_2_7P280
+
+  util/ntp-keygen-opts.c@1.282 +4 -4
+    NTP_4_2_7P280
+
+  util/ntp-keygen-opts.h@1.282 +3 -3
+    NTP_4_2_7P280
+
+  util/ntp-keygen-opts.texi@1.283 +2 -2
+    NTP_4_2_7P280
+
+  util/ntp-keygen.1ntp-keygenman@1.96 +2 -2
+    NTP_4_2_7P280
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.96 +2 -2
+    NTP_4_2_7P280
+
+  util/ntp-keygen.man.in@1.96 +2 -2
+    NTP_4_2_7P280
+
+  util/ntp-keygen.mdoc.in@1.96 +2 -2
+    NTP_4_2_7P280
+
+ChangeSet@1.2801, 2012-06-11 17:22:29+00:00, davehart@dlh-7551.ad.hartbrothers.com
+  [Bug 2224] Use-after-free in routing socket code after dropping root.
+
+  ChangeLog@1.1168 +2 -1
+    [Bug 2224] Use-after-free in routing socket code after dropping root.
+
+  ntpd/ntp_io.c@1.368 +6 -3
+    [Bug 2224] Use-after-free in routing socket code after dropping root.
+
 ChangeSet@1.2800, 2012-06-10 06:52:04+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P279
   TAG: NTP_4_2_7P279
