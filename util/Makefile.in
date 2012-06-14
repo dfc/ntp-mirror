@@ -126,7 +126,7 @@ am_ntp_keygen_OBJECTS = ntp-keygen.$(OBJEXT) ntp-keygen-opts.$(OBJEXT)
 ntp_keygen_OBJECTS = $(am_ntp_keygen_OBJECTS)
 ntp_keygen_DEPENDENCIES = version.o $(am__DEPENDENCIES_1) \
 	../libntp/libntp.a $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
 ntptime_SOURCES = ntptime.c
 ntptime_OBJECTS = ntptime.$(OBJEXT)
 ntptime_LDADD = $(LDADD)
@@ -164,7 +164,7 @@ tg2_DEPENDENCIES = ../libntp/libntp.a $(am__DEPENDENCIES_1) \
 tickadj_SOURCES = tickadj.c
 tickadj_OBJECTS = tickadj.$(OBJEXT)
 tickadj_DEPENDENCIES = ../libntp/libntp.a $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
 timetrim_SOURCES = timetrim.c
 timetrim_OBJECTS = timetrim.$(OBJEXT)
 timetrim_LDADD = $(LDADD)
@@ -468,9 +468,9 @@ AM_LDFLAGS = $(LDFLAGS_NTP)
 LDADD = ../libntp/libntp.a $(LDADD_LIBNTP) $(LIBM) $(PTHREAD_LIBS)
 tg2_LDADD = ../libntp/libntp.a $(LDADD_LIBNTP) $(LIBM)
 ntp_keygen_LDADD = version.o $(LIBOPTS_LDADD) ../libntp/libntp.a \
-	$(LDADD_LIBNTP) $(PTHREAD_LIBS) $(LDADD_NTP)
+	$(LDADD_LIBNTP) $(PTHREAD_LIBS) $(LDADD_NTP) $(LIBM)
 ntp_keygen_SOURCES = ntp-keygen.c ntp-keygen-opts.c ntp-keygen-opts.h
-tickadj_LDADD = ../libntp/libntp.a $(LDADD_LIBNTP) $(LDADD_NLIST)
+tickadj_LDADD = ../libntp/libntp.a $(LDADD_LIBNTP) $(LIBM) $(LDADD_NLIST)
 EXTRA_DIST = \
 	ntp-keygen-opts.def		\
 	ntp-keygen-opts.menu		\
