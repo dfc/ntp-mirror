@@ -1,3 +1,172 @@
+ChangeSet@1.2807, 2012-06-15 11:22:51+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P282
+  TAG: NTP_4_2_7P282
+
+  ChangeLog@1.1174 +1 -0
+    NTP_4_2_7P282
+
+  ntpd/ntpd-opts.c@1.287 +4 -4
+    NTP_4_2_7P282
+
+  ntpd/ntpd-opts.h@1.287 +3 -3
+    NTP_4_2_7P282
+
+  ntpd/ntpd-opts.texi@1.285 +2 -2
+    NTP_4_2_7P282
+
+  ntpd/ntpd.1ntpdman@1.98 +2 -2
+    NTP_4_2_7P282
+
+  ntpd/ntpd.1ntpdmdoc@1.98 +2 -2
+    NTP_4_2_7P282
+
+  ntpd/ntpd.man.in@1.98 +2 -2
+    NTP_4_2_7P282
+
+  ntpd/ntpd.mdoc.in@1.98 +2 -2
+    NTP_4_2_7P282
+
+  ntpdc/ntpdc-opts.c@1.282 +4 -4
+    NTP_4_2_7P282
+
+  ntpdc/ntpdc-opts.h@1.282 +3 -3
+    NTP_4_2_7P282
+
+  ntpdc/ntpdc-opts.texi@1.282 +2 -2
+    NTP_4_2_7P282
+
+  ntpdc/ntpdc.1ntpdcman@1.98 +2 -2
+    NTP_4_2_7P282
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.98 +2 -2
+    NTP_4_2_7P282
+
+  ntpdc/ntpdc.html@1.110 +2 -2
+    NTP_4_2_7P282
+
+  ntpdc/ntpdc.man.in@1.98 +2 -2
+    NTP_4_2_7P282
+
+  ntpdc/ntpdc.mdoc.in@1.98 +2 -2
+    NTP_4_2_7P282
+
+  ntpq/ntpq-opts.c@1.284 +4 -4
+    NTP_4_2_7P282
+
+  ntpq/ntpq-opts.h@1.284 +3 -3
+    NTP_4_2_7P282
+
+  ntpq/ntpq-opts.texi@1.284 +2 -2
+    NTP_4_2_7P282
+
+  ntpq/ntpq.1ntpqman@1.98 +2 -2
+    NTP_4_2_7P282
+
+  ntpq/ntpq.1ntpqmdoc@1.98 +2 -2
+    NTP_4_2_7P282
+
+  ntpq/ntpq.man.in@1.98 +2 -2
+    NTP_4_2_7P282
+
+  ntpq/ntpq.mdoc.in@1.98 +2 -2
+    NTP_4_2_7P282
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.284 +4 -4
+    NTP_4_2_7P282
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.284 +3 -3
+    NTP_4_2_7P282
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.284 +2 -2
+    NTP_4_2_7P282
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.98 +2 -2
+    NTP_4_2_7P282
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.98 +2 -2
+    NTP_4_2_7P282
+
+  ntpsnmpd/ntpsnmpd.man.in@1.98 +2 -2
+    NTP_4_2_7P282
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.98 +2 -2
+    NTP_4_2_7P282
+
+  packageinfo.sh@1.285 +1 -1
+    NTP_4_2_7P282
+
+  scripts/ntp-wait-opts.texi@1.102 +1 -1
+    NTP_4_2_7P282
+
+  scripts/ntp-wait.1ntp-waitman@1.98 +2 -2
+    NTP_4_2_7P282
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.98 +2 -2
+    NTP_4_2_7P282
+
+  scripts/ntp-wait.html@1.102 +1 -1
+    NTP_4_2_7P282
+
+  scripts/ntp-wait.man.in@1.98 +2 -2
+    NTP_4_2_7P282
+
+  scripts/ntp-wait.mdoc.in@1.98 +2 -2
+    NTP_4_2_7P282
+
+  sntp/sntp-opts.c@1.280 +4 -4
+    NTP_4_2_7P282
+
+  sntp/sntp-opts.h@1.280 +3 -3
+    NTP_4_2_7P282
+
+  sntp/sntp-opts.texi@1.280 +2 -2
+    NTP_4_2_7P282
+
+  sntp/sntp.1sntpman@1.100 +2 -2
+    NTP_4_2_7P282
+
+  sntp/sntp.1sntpmdoc@1.100 +2 -2
+    NTP_4_2_7P282
+
+  sntp/sntp.html@1.280 +2 -2
+    NTP_4_2_7P282
+
+  sntp/sntp.man.in@1.100 +2 -2
+    NTP_4_2_7P282
+
+  sntp/sntp.mdoc.in@1.100 +2 -2
+    NTP_4_2_7P282
+
+  util/ntp-keygen-opts.c@1.284 +4 -4
+    NTP_4_2_7P282
+
+  util/ntp-keygen-opts.h@1.284 +3 -3
+    NTP_4_2_7P282
+
+  util/ntp-keygen-opts.texi@1.285 +2 -2
+    NTP_4_2_7P282
+
+  util/ntp-keygen.1ntp-keygenman@1.98 +2 -2
+    NTP_4_2_7P282
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.98 +2 -2
+    NTP_4_2_7P282
+
+  util/ntp-keygen.man.in@1.98 +2 -2
+    NTP_4_2_7P282
+
+  util/ntp-keygen.mdoc.in@1.98 +2 -2
+    NTP_4_2_7P282
+
+ChangeSet@1.2806, 2012-06-14 07:53:00-04:00, stenn@deacon.udel.edu
+  tickadj may need to be linked with PTHREAD_LIBS
+
+  ChangeLog@1.1173 +1 -0
+    tickadj may need to be linked with PTHREAD_LIBS
+
+  util/Makefile.am@1.73 +1 -1
+    tickadj may need to be linked with PTHREAD_LIBS
+
 ChangeSet@1.2805, 2012-06-14 11:24:21+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P281
   TAG: NTP_4_2_7P281
