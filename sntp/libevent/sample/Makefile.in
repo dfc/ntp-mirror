@@ -15,6 +15,12 @@
 
 @SET_MAKE@
 
+# sample/Makefile.am for libevent
+# Copyright 2000-2007 Niels Provos
+# Copyright 2007-2012 Niels Provos and Nick Mathewson
+#
+# See LICENSE for copying information.
+
 VPATH = @srcdir@
 pkgdatadir = $(datadir)/@PACKAGE@
 pkgincludedir = $(includedir)/@PACKAGE@
@@ -34,9 +40,9 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
-noinst_PROGRAMS = event-test$(EXEEXT) time-test$(EXEEXT) \
-	signal-test$(EXEEXT) dns-example$(EXEEXT) hello-world$(EXEEXT) \
-	http-server$(EXEEXT) $(am__EXEEXT_1)
+noinst_PROGRAMS = dns-example$(EXEEXT) event-read-fifo$(EXEEXT) \
+	hello-world$(EXEEXT) http-server$(EXEEXT) signal-test$(EXEEXT) \
+	time-test$(EXEEXT) $(am__EXEEXT_1)
 @OPENSSL_TRUE@am__append_1 = $(OPENSSL_INCS)
 @OPENSSL_TRUE@am__append_2 = le-proxy
 subdir = sample
@@ -59,37 +65,38 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 @OPENSSL_TRUE@am__EXEEXT_1 = le-proxy$(EXEEXT)
 PROGRAMS = $(noinst_PROGRAMS)
-dns_example_SOURCES = dns-example.c
-dns_example_OBJECTS = dns-example.$(OBJEXT)
+am_dns_example_OBJECTS = dns-example.$(OBJEXT)
+dns_example_OBJECTS = $(am_dns_example_OBJECTS)
 dns_example_LDADD = $(LDADD)
 am__DEPENDENCIES_1 =
 dns_example_DEPENDENCIES = $(am__DEPENDENCIES_1) ../libevent.la
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
 am__v_lt_0 = --silent
-event_test_SOURCES = event-test.c
-event_test_OBJECTS = event-test.$(OBJEXT)
-event_test_LDADD = $(LDADD)
-event_test_DEPENDENCIES = $(am__DEPENDENCIES_1) ../libevent.la
-hello_world_SOURCES = hello-world.c
-hello_world_OBJECTS = hello-world.$(OBJEXT)
+am_event_read_fifo_OBJECTS = event-read-fifo.$(OBJEXT)
+event_read_fifo_OBJECTS = $(am_event_read_fifo_OBJECTS)
+event_read_fifo_LDADD = $(LDADD)
+event_read_fifo_DEPENDENCIES = $(am__DEPENDENCIES_1) ../libevent.la
+am_hello_world_OBJECTS = hello-world.$(OBJEXT)
+hello_world_OBJECTS = $(am_hello_world_OBJECTS)
 hello_world_LDADD = $(LDADD)
 hello_world_DEPENDENCIES = $(am__DEPENDENCIES_1) ../libevent.la
-http_server_SOURCES = http-server.c
-http_server_OBJECTS = http-server.$(OBJEXT)
+am_http_server_OBJECTS = http-server.$(OBJEXT)
+http_server_OBJECTS = $(am_http_server_OBJECTS)
 http_server_LDADD = $(LDADD)
 http_server_DEPENDENCIES = $(am__DEPENDENCIES_1) ../libevent.la
-le_proxy_SOURCES = le-proxy.c
-le_proxy_OBJECTS = le-proxy.$(OBJEXT)
+am__le_proxy_SOURCES_DIST = le-proxy.c
+@OPENSSL_TRUE@am_le_proxy_OBJECTS = le-proxy.$(OBJEXT)
+le_proxy_OBJECTS = $(am_le_proxy_OBJECTS)
 am__DEPENDENCIES_2 = $(am__DEPENDENCIES_1) ../libevent.la
 @OPENSSL_TRUE@le_proxy_DEPENDENCIES = $(am__DEPENDENCIES_2) \
-@OPENSSL_TRUE@	../libevent_openssl.la
-signal_test_SOURCES = signal-test.c
-signal_test_OBJECTS = signal-test.$(OBJEXT)
+@OPENSSL_TRUE@	../libevent_openssl.la $(am__DEPENDENCIES_1)
+am_signal_test_OBJECTS = signal-test.$(OBJEXT)
+signal_test_OBJECTS = $(am_signal_test_OBJECTS)
 signal_test_LDADD = $(LDADD)
 signal_test_DEPENDENCIES = $(am__DEPENDENCIES_1) ../libevent.la
-time_test_SOURCES = time-test.c
-time_test_OBJECTS = time-test.$(OBJEXT)
+am_time_test_OBJECTS = time-test.$(OBJEXT)
+time_test_OBJECTS = $(am_time_test_OBJECTS)
 time_test_LDADD = $(LDADD)
 time_test_DEPENDENCIES = $(am__DEPENDENCIES_1) ../libevent.la
 DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
@@ -117,10 +124,14 @@ am__v_CCLD_0 = @echo "  CCLD  " $@;
 AM_V_GEN = $(am__v_GEN_$(V))
 am__v_GEN_ = $(am__v_GEN_$(AM_DEFAULT_VERBOSITY))
 am__v_GEN_0 = @echo "  GEN   " $@;
-SOURCES = dns-example.c event-test.c hello-world.c http-server.c \
-	le-proxy.c signal-test.c time-test.c
-DIST_SOURCES = dns-example.c event-test.c hello-world.c http-server.c \
-	le-proxy.c signal-test.c time-test.c
+SOURCES = $(dns_example_SOURCES) $(event_read_fifo_SOURCES) \
+	$(hello_world_SOURCES) $(http_server_SOURCES) \
+	$(le_proxy_SOURCES) $(signal_test_SOURCES) \
+	$(time_test_SOURCES)
+DIST_SOURCES = $(dns_example_SOURCES) $(event_read_fifo_SOURCES) \
+	$(hello_world_SOURCES) $(http_server_SOURCES) \
+	$(am__le_proxy_SOURCES_DIST) $(signal_test_SOURCES) \
+	$(time_test_SOURCES)
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
@@ -175,6 +186,7 @@ NMEDIT = @NMEDIT@
 OBJDUMP = @OBJDUMP@
 OBJEXT = @OBJEXT@
 OPENSSL_INCS = @OPENSSL_INCS@
+OPENSSL_LIBADD = @OPENSSL_LIBADD@
 OPENSSL_LIBS = @OPENSSL_LIBS@
 OTOOL = @OTOOL@
 OTOOL64 = @OTOOL64@
@@ -252,14 +264,14 @@ AUTOMAKE_OPTIONS = foreign no-dependencies
 LDADD = $(LIBEVENT_GC_SECTIONS) ../libevent.la
 AM_CPPFLAGS = -I$(top_srcdir) -I$(top_srcdir)/compat \
 	-I$(top_srcdir)/include -I../include $(am__append_1)
-event_test_sources = event-test.c
-time_test_sources = time-test.c
-signal_test_sources = signal-test.c
-dns_example_sources = dns-example.c
-hello_world_sources = hello-world.c
-http_server_sources = http-server.c
-@OPENSSL_TRUE@le_proxy_sources = le-proxy.c
-@OPENSSL_TRUE@le_proxy_LDADD = $(LDADD) ../libevent_openssl.la
+event_read_fifo_SOURCES = event-read-fifo.c
+time_test_SOURCES = time-test.c
+signal_test_SOURCES = signal-test.c
+dns_example_SOURCES = dns-example.c
+hello_world_SOURCES = hello-world.c
+http_server_SOURCES = http-server.c
+@OPENSSL_TRUE@le_proxy_SOURCES = le-proxy.c
+@OPENSSL_TRUE@le_proxy_LDADD = $(LDADD) ../libevent_openssl.la -lssl -lcrypto ${OPENSSL_LIBADD}
 DISTCLEANFILES = *~
 all: all-am
 
@@ -307,9 +319,9 @@ clean-noinstPROGRAMS:
 dns-example$(EXEEXT): $(dns_example_OBJECTS) $(dns_example_DEPENDENCIES) 
 	@rm -f dns-example$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(dns_example_OBJECTS) $(dns_example_LDADD) $(LIBS)
-event-test$(EXEEXT): $(event_test_OBJECTS) $(event_test_DEPENDENCIES) 
-	@rm -f event-test$(EXEEXT)
-	$(AM_V_CCLD)$(LINK) $(event_test_OBJECTS) $(event_test_LDADD) $(LIBS)
+event-read-fifo$(EXEEXT): $(event_read_fifo_OBJECTS) $(event_read_fifo_DEPENDENCIES) 
+	@rm -f event-read-fifo$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(event_read_fifo_OBJECTS) $(event_read_fifo_LDADD) $(LIBS)
 hello-world$(EXEEXT): $(hello_world_OBJECTS) $(hello_world_DEPENDENCIES) 
 	@rm -f hello-world$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(hello_world_OBJECTS) $(hello_world_LDADD) $(LIBS)
