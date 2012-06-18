@@ -1,3 +1,235 @@
+ChangeSet@1.2817, 2012-06-18 11:33:40+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P285
+  TAG: NTP_4_2_7P285
+
+  ChangeLog@1.1181 +1 -0
+    NTP_4_2_7P285
+
+  ntpd/ntpd-opts.c@1.290 +4 -4
+    NTP_4_2_7P285
+
+  ntpd/ntpd-opts.h@1.290 +3 -3
+    NTP_4_2_7P285
+
+  ntpd/ntpd-opts.texi@1.288 +2 -2
+    NTP_4_2_7P285
+
+  ntpd/ntpd.1ntpdman@1.101 +2 -2
+    NTP_4_2_7P285
+
+  ntpd/ntpd.1ntpdmdoc@1.101 +2 -2
+    NTP_4_2_7P285
+
+  ntpd/ntpd.man.in@1.101 +2 -2
+    NTP_4_2_7P285
+
+  ntpd/ntpd.mdoc.in@1.101 +2 -2
+    NTP_4_2_7P285
+
+  ntpdc/ntpdc-opts.c@1.285 +4 -4
+    NTP_4_2_7P285
+
+  ntpdc/ntpdc-opts.h@1.285 +3 -3
+    NTP_4_2_7P285
+
+  ntpdc/ntpdc-opts.texi@1.285 +2 -2
+    NTP_4_2_7P285
+
+  ntpdc/ntpdc.1ntpdcman@1.101 +2 -2
+    NTP_4_2_7P285
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.101 +2 -2
+    NTP_4_2_7P285
+
+  ntpdc/ntpdc.html@1.113 +2 -2
+    NTP_4_2_7P285
+
+  ntpdc/ntpdc.man.in@1.101 +2 -2
+    NTP_4_2_7P285
+
+  ntpdc/ntpdc.mdoc.in@1.101 +2 -2
+    NTP_4_2_7P285
+
+  ntpq/ntpq-opts.c@1.287 +4 -4
+    NTP_4_2_7P285
+
+  ntpq/ntpq-opts.h@1.287 +3 -3
+    NTP_4_2_7P285
+
+  ntpq/ntpq-opts.texi@1.287 +2 -2
+    NTP_4_2_7P285
+
+  ntpq/ntpq.1ntpqman@1.101 +2 -2
+    NTP_4_2_7P285
+
+  ntpq/ntpq.1ntpqmdoc@1.101 +2 -2
+    NTP_4_2_7P285
+
+  ntpq/ntpq.man.in@1.101 +2 -2
+    NTP_4_2_7P285
+
+  ntpq/ntpq.mdoc.in@1.101 +2 -2
+    NTP_4_2_7P285
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.287 +4 -4
+    NTP_4_2_7P285
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.287 +3 -3
+    NTP_4_2_7P285
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.287 +2 -2
+    NTP_4_2_7P285
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.101 +2 -2
+    NTP_4_2_7P285
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.101 +2 -2
+    NTP_4_2_7P285
+
+  ntpsnmpd/ntpsnmpd.man.in@1.101 +2 -2
+    NTP_4_2_7P285
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.101 +2 -2
+    NTP_4_2_7P285
+
+  packageinfo.sh@1.288 +1 -1
+    NTP_4_2_7P285
+
+  scripts/ntp-wait-opts.texi@1.105 +1 -1
+    NTP_4_2_7P285
+
+  scripts/ntp-wait.1ntp-waitman@1.101 +2 -2
+    NTP_4_2_7P285
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.101 +2 -2
+    NTP_4_2_7P285
+
+  scripts/ntp-wait.html@1.105 +1 -1
+    NTP_4_2_7P285
+
+  scripts/ntp-wait.man.in@1.101 +2 -2
+    NTP_4_2_7P285
+
+  scripts/ntp-wait.mdoc.in@1.101 +2 -2
+    NTP_4_2_7P285
+
+  sntp/sntp-opts.c@1.283 +4 -4
+    NTP_4_2_7P285
+
+  sntp/sntp-opts.h@1.283 +3 -3
+    NTP_4_2_7P285
+
+  sntp/sntp-opts.texi@1.283 +2 -2
+    NTP_4_2_7P285
+
+  sntp/sntp.1sntpman@1.103 +2 -2
+    NTP_4_2_7P285
+
+  sntp/sntp.1sntpmdoc@1.103 +2 -2
+    NTP_4_2_7P285
+
+  sntp/sntp.html@1.283 +2 -2
+    NTP_4_2_7P285
+
+  sntp/sntp.man.in@1.103 +2 -2
+    NTP_4_2_7P285
+
+  sntp/sntp.mdoc.in@1.103 +2 -2
+    NTP_4_2_7P285
+
+  util/ntp-keygen-opts.c@1.287 +4 -4
+    NTP_4_2_7P285
+
+  util/ntp-keygen-opts.h@1.287 +3 -3
+    NTP_4_2_7P285
+
+  util/ntp-keygen-opts.texi@1.288 +2 -2
+    NTP_4_2_7P285
+
+  util/ntp-keygen.1ntp-keygenman@1.101 +2 -2
+    NTP_4_2_7P285
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.101 +2 -2
+    NTP_4_2_7P285
+
+  util/ntp-keygen.man.in@1.101 +2 -2
+    NTP_4_2_7P285
+
+  util/ntp-keygen.mdoc.in@1.101 +2 -2
+    NTP_4_2_7P285
+
+ChangeSet@1.2816, 2012-06-18 07:49:19+00:00, stenn@psp-fb1.ntp.org
+  Automake-1.12 wants us to use AM_PROG_AR
+
+  ChangeLog@1.1180 +1 -0
+    Automake-1.12 wants us to use AM_PROG_AR
+
+  configure.ac@1.546 +6 -0
+    Automake-1.12 wants us to use AM_PROG_AR
+
+  sntp/configure.ac@1.69 +6 -0
+    Automake-1.12 wants us to use AM_PROG_AR
+
+ChangeSet@1.2815, 2012-06-18 05:18:28+00:00, davehart@dlh-7551.ad.hartbrothers.com
+  generated files from last cset's ntp_parser.y and keyword-gen.c changes.
+
+  ntpd/keyword-gen-utd@1.16 +1 -1
+    generated from last cset's keyword-gen.c changes.
+
+  ntpd/ntp_keyword.h@1.18 +535 -528
+    generated from last cset's keyword-gen.c changes.
+
+  ntpd/ntp_parser.c@1.79 +806 -796
+    generated from last cset's ntp_parser.y changes.
+
+  ntpd/ntp_parser.h@1.45 +161 -159
+    generated from last cset's ntp_parser.y changes.
+
+ChangeSet@1.2814, 2012-06-18 05:01:49+00:00, davehart@dlh-7551.ad.hartbrothers.com
+  [Bug 2227] Enable mrulist access control via "restrict ... nomrulist".
+  Conditionalize msyslog messages about rejected mode 6 requests due to
+    nomodify and nomrulist restrictions under "logconfig +sysinfo".
+  Increment sys_restricted in a few rejection paths due to nomodify
+    restrictions where previosuly overlooked.
+
+  ChangeLog@1.1179 +5 -0
+    [Bug 2227] Enable mrulist access control via "restrict ... nomrulist".
+    Conditionalize msyslog messages about rejected mode 6 requests due to
+      nomodify and nomrulist restrictions under "logconfig +sysinfo".
+    Increment sys_restricted in a few rejection paths due to nomodify
+      restrictions where previosuly overlooked.
+
+  include/ntp.h@1.205 +5 -3
+    Add RES_NOMRULIST (0x2000) for "restrict ... nomrulist"
+
+  include/ntp_request.h@1.46 +1 -0
+    Make explicit MAX_INFO_ERR macro for ntp_request.c
+
+  ntpd/complete.conf@1.22 +1 -1
+    Add "nomrulist" to round-trip parser/saveconfig test.
+
+  ntpd/keyword-gen.c@1.21 +1 -0
+    Add "nomrulist" / T_Nomrulist
+
+  ntpd/ntp_config.c@1.299 +4 -0
+    [Bug 2227] Enable mrulist access control via "restrict ... nomrulist".
+
+  ntpd/ntp_control.c@1.181 +24 -10
+    [Bug 2227] Enable mrulist access control via "restrict ... nomrulist".
+    Conditionalize msyslog messages about rejected mode 6 requests due to
+      nomodify and nomrulist restrictions under "logconfig +sysinfo".
+    Increment sys_restricted in a few rejection paths due to nomodify
+      restrictions where previosuly overlooked.
+
+  ntpd/ntp_parser.y@1.73 +2 -0
+    Add, use "nomrulist" restriction.
+
+  ntpd/ntp_request.c@1.110 +7 -2
+    Increment sys_restricted in a few rejection paths due to nomodify
+      restrictions where previosuly overlooked.
+    Use explicit MAX_INFO_ERR macro instead of implicitly assuming
+      INFO_ERR_AUTH is the highest-numbered.
+
 ChangeSet@1.2813, 2012-06-16 21:36:44+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P284
   TAG: NTP_4_2_7P284
