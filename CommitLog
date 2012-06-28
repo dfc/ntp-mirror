@@ -1,3 +1,190 @@
+ChangeSet@1.2821, 2012-06-28 07:06:07+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P286
+  TAG: NTP_4_2_7P286
+
+  ChangeLog@1.1185 +1 -0
+    NTP_4_2_7P286
+
+  ntpd/ntpd-opts.c@1.291 +4 -4
+    NTP_4_2_7P286
+
+  ntpd/ntpd-opts.h@1.291 +3 -3
+    NTP_4_2_7P286
+
+  ntpd/ntpd-opts.texi@1.289 +2 -2
+    NTP_4_2_7P286
+
+  ntpd/ntpd.1ntpdman@1.102 +2 -2
+    NTP_4_2_7P286
+
+  ntpd/ntpd.1ntpdmdoc@1.102 +2 -2
+    NTP_4_2_7P286
+
+  ntpd/ntpd.man.in@1.102 +2 -2
+    NTP_4_2_7P286
+
+  ntpd/ntpd.mdoc.in@1.102 +2 -2
+    NTP_4_2_7P286
+
+  ntpdc/ntpdc-opts.c@1.286 +4 -4
+    NTP_4_2_7P286
+
+  ntpdc/ntpdc-opts.h@1.286 +3 -3
+    NTP_4_2_7P286
+
+  ntpdc/ntpdc-opts.texi@1.286 +2 -2
+    NTP_4_2_7P286
+
+  ntpdc/ntpdc.1ntpdcman@1.102 +2 -2
+    NTP_4_2_7P286
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.102 +2 -2
+    NTP_4_2_7P286
+
+  ntpdc/ntpdc.html@1.114 +2 -2
+    NTP_4_2_7P286
+
+  ntpdc/ntpdc.man.in@1.102 +2 -2
+    NTP_4_2_7P286
+
+  ntpdc/ntpdc.mdoc.in@1.102 +2 -2
+    NTP_4_2_7P286
+
+  ntpq/ntpq-opts.c@1.288 +4 -4
+    NTP_4_2_7P286
+
+  ntpq/ntpq-opts.h@1.288 +3 -3
+    NTP_4_2_7P286
+
+  ntpq/ntpq-opts.texi@1.288 +2 -2
+    NTP_4_2_7P286
+
+  ntpq/ntpq.1ntpqman@1.102 +2 -2
+    NTP_4_2_7P286
+
+  ntpq/ntpq.1ntpqmdoc@1.102 +2 -2
+    NTP_4_2_7P286
+
+  ntpq/ntpq.man.in@1.102 +2 -2
+    NTP_4_2_7P286
+
+  ntpq/ntpq.mdoc.in@1.102 +2 -2
+    NTP_4_2_7P286
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.288 +4 -4
+    NTP_4_2_7P286
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.288 +3 -3
+    NTP_4_2_7P286
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.288 +2 -2
+    NTP_4_2_7P286
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.102 +2 -2
+    NTP_4_2_7P286
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.102 +2 -2
+    NTP_4_2_7P286
+
+  ntpsnmpd/ntpsnmpd.man.in@1.102 +2 -2
+    NTP_4_2_7P286
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.102 +2 -2
+    NTP_4_2_7P286
+
+  packageinfo.sh@1.289 +1 -1
+    NTP_4_2_7P286
+
+  scripts/ntp-wait-opts.texi@1.106 +2 -14
+    NTP_4_2_7P286
+
+  scripts/ntp-wait.1ntp-waitman@1.102 +2 -2
+    NTP_4_2_7P286
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.102 +2 -2
+    NTP_4_2_7P286
+
+  scripts/ntp-wait.html@1.106 +2 -14
+    NTP_4_2_7P286
+
+  scripts/ntp-wait.man.in@1.102 +2 -2
+    NTP_4_2_7P286
+
+  scripts/ntp-wait.mdoc.in@1.102 +2 -2
+    NTP_4_2_7P286
+
+  sntp/sntp-opts.c@1.284 +4 -4
+    NTP_4_2_7P286
+
+  sntp/sntp-opts.h@1.284 +3 -3
+    NTP_4_2_7P286
+
+  sntp/sntp-opts.texi@1.284 +2 -2
+    NTP_4_2_7P286
+
+  sntp/sntp.1sntpman@1.104 +2 -2
+    NTP_4_2_7P286
+
+  sntp/sntp.1sntpmdoc@1.104 +2 -2
+    NTP_4_2_7P286
+
+  sntp/sntp.html@1.284 +2 -2
+    NTP_4_2_7P286
+
+  sntp/sntp.man.in@1.104 +2 -2
+    NTP_4_2_7P286
+
+  sntp/sntp.mdoc.in@1.104 +2 -2
+    NTP_4_2_7P286
+
+  util/ntp-keygen-opts.c@1.288 +4 -4
+    NTP_4_2_7P286
+
+  util/ntp-keygen-opts.h@1.288 +3 -3
+    NTP_4_2_7P286
+
+  util/ntp-keygen-opts.texi@1.289 +2 -2
+    NTP_4_2_7P286
+
+  util/ntp-keygen.1ntp-keygenman@1.102 +2 -2
+    NTP_4_2_7P286
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.102 +2 -2
+    NTP_4_2_7P286
+
+  util/ntp-keygen.man.in@1.102 +2 -2
+    NTP_4_2_7P286
+
+  util/ntp-keygen.mdoc.in@1.102 +2 -2
+    NTP_4_2_7P286
+
+ChangeSet@1.2820, 2012-06-27 23:43:05-07:00, stenn@stenn.ntp.org
+  CID 97193: check return from sscanf() in ntp_config.c
+
+  ChangeLog@1.1184 +1 -0
+    CID 97193: check return from sscanf() in ntp_config.c
+
+  ntpd/ntp_config.c@1.300 +3 -3
+    CID 97193: check return from sscanf() in ntp_config.c
+
+ChangeSet@1.2819, 2012-06-27 23:37:22-07:00, stenn@stenn.ntp.org
+  CID 709207: Initialize "quality" for ulink_receive
+
+  ChangeLog@1.1183 +1 -0
+    CID 709207: Initialize "quality" for ulink_receive
+
+  ntpd/refclock_ulink.c@1.19 +7 -7
+    CID 709207: Initialize "quality" for ulink_receive
+
+ChangeSet@1.2818, 2012-06-27 23:28:32-07:00, stenn@stenn.ntp.org
+  CID 709169: check return from open("/dev/null", 0) and friends
+
+  ChangeLog@1.1182 +1 -0
+    CID 709169: check return from open("/dev/null", 0) and friends
+
+  ntpd/ntpd.c@1.131 +2 -3
+    CID 709169: check return from open("/dev/null", 0) and friends
+
 ChangeSet@1.2817, 2012-06-18 11:33:40+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P285
   TAG: NTP_4_2_7P285
