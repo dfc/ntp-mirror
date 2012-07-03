@@ -1,3 +1,181 @@
+ChangeSet@1.2823, 2012-07-03 01:29:06+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P287
+  TAG: NTP_4_2_7P287
+
+  ChangeLog@1.1187 +1 -0
+    NTP_4_2_7P287
+
+  ntpd/ntpd-opts.c@1.292 +4 -4
+    NTP_4_2_7P287
+
+  ntpd/ntpd-opts.h@1.292 +3 -3
+    NTP_4_2_7P287
+
+  ntpd/ntpd-opts.texi@1.290 +2 -2
+    NTP_4_2_7P287
+
+  ntpd/ntpd.1ntpdman@1.103 +2 -2
+    NTP_4_2_7P287
+
+  ntpd/ntpd.1ntpdmdoc@1.103 +2 -2
+    NTP_4_2_7P287
+
+  ntpd/ntpd.man.in@1.103 +2 -2
+    NTP_4_2_7P287
+
+  ntpd/ntpd.mdoc.in@1.103 +2 -2
+    NTP_4_2_7P287
+
+  ntpdc/ntpdc-opts.c@1.287 +4 -4
+    NTP_4_2_7P287
+
+  ntpdc/ntpdc-opts.h@1.287 +3 -3
+    NTP_4_2_7P287
+
+  ntpdc/ntpdc-opts.texi@1.287 +2 -2
+    NTP_4_2_7P287
+
+  ntpdc/ntpdc.1ntpdcman@1.103 +2 -2
+    NTP_4_2_7P287
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.103 +2 -2
+    NTP_4_2_7P287
+
+  ntpdc/ntpdc.html@1.115 +2 -2
+    NTP_4_2_7P287
+
+  ntpdc/ntpdc.man.in@1.103 +2 -2
+    NTP_4_2_7P287
+
+  ntpdc/ntpdc.mdoc.in@1.103 +2 -2
+    NTP_4_2_7P287
+
+  ntpq/ntpq-opts.c@1.289 +4 -4
+    NTP_4_2_7P287
+
+  ntpq/ntpq-opts.h@1.289 +3 -3
+    NTP_4_2_7P287
+
+  ntpq/ntpq-opts.texi@1.289 +2 -2
+    NTP_4_2_7P287
+
+  ntpq/ntpq.1ntpqman@1.103 +2 -2
+    NTP_4_2_7P287
+
+  ntpq/ntpq.1ntpqmdoc@1.103 +2 -2
+    NTP_4_2_7P287
+
+  ntpq/ntpq.man.in@1.103 +2 -2
+    NTP_4_2_7P287
+
+  ntpq/ntpq.mdoc.in@1.103 +2 -2
+    NTP_4_2_7P287
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.289 +4 -4
+    NTP_4_2_7P287
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.289 +3 -3
+    NTP_4_2_7P287
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.289 +2 -2
+    NTP_4_2_7P287
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.103 +2 -2
+    NTP_4_2_7P287
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.103 +2 -2
+    NTP_4_2_7P287
+
+  ntpsnmpd/ntpsnmpd.man.in@1.103 +2 -2
+    NTP_4_2_7P287
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.103 +2 -2
+    NTP_4_2_7P287
+
+  packageinfo.sh@1.290 +1 -1
+    NTP_4_2_7P287
+
+  scripts/ntp-wait-opts.texi@1.107 +14 -2
+    NTP_4_2_7P287
+
+  scripts/ntp-wait.1ntp-waitman@1.103 +2 -2
+    NTP_4_2_7P287
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.103 +2 -2
+    NTP_4_2_7P287
+
+  scripts/ntp-wait.html@1.107 +14 -2
+    NTP_4_2_7P287
+
+  scripts/ntp-wait.man.in@1.103 +2 -2
+    NTP_4_2_7P287
+
+  scripts/ntp-wait.mdoc.in@1.103 +2 -2
+    NTP_4_2_7P287
+
+  sntp/sntp-opts.c@1.285 +4 -4
+    NTP_4_2_7P287
+
+  sntp/sntp-opts.h@1.285 +3 -3
+    NTP_4_2_7P287
+
+  sntp/sntp-opts.texi@1.285 +2 -2
+    NTP_4_2_7P287
+
+  sntp/sntp.1sntpman@1.105 +2 -2
+    NTP_4_2_7P287
+
+  sntp/sntp.1sntpmdoc@1.105 +2 -2
+    NTP_4_2_7P287
+
+  sntp/sntp.html@1.285 +2 -2
+    NTP_4_2_7P287
+
+  sntp/sntp.man.in@1.105 +2 -2
+    NTP_4_2_7P287
+
+  sntp/sntp.mdoc.in@1.105 +2 -2
+    NTP_4_2_7P287
+
+  util/ntp-keygen-opts.c@1.289 +4 -4
+    NTP_4_2_7P287
+
+  util/ntp-keygen-opts.h@1.289 +3 -3
+    NTP_4_2_7P287
+
+  util/ntp-keygen-opts.texi@1.290 +2 -2
+    NTP_4_2_7P287
+
+  util/ntp-keygen.1ntp-keygenman@1.103 +2 -2
+    NTP_4_2_7P287
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.103 +2 -2
+    NTP_4_2_7P287
+
+  util/ntp-keygen.man.in@1.103 +2 -2
+    NTP_4_2_7P287
+
+  util/ntp-keygen.mdoc.in@1.103 +2 -2
+    NTP_4_2_7P287
+
+ChangeSet@1.2822, 2012-07-02 02:17:35+00:00, davehart@dlh-7551.ad.hartbrothers.com
+  Remove 1024 associations-per-server limit from ntpq.
+  Remove blank line between ntpq mreadvar associations.
+
+  ChangeLog@1.1186 +2 -0
+    Remove 1024 associations-per-server limit from ntpq.
+    Remove blank line between ntpq mreadvar associations.
+
+  ntpq/ntpq-subs.c@1.97 +13 -10
+    Remove 1024 associations-per-server limit from ntpq.
+    Remove blank line between ntpq mreadvar associations.
+
+  ntpq/ntpq.c@1.147 +28 -2
+    Remove 1024 associations-per-server limit from ntpq.
+
+  ntpq/ntpq.h@1.27 +3 -3
+    Remove 1024 associations-per-server limit from ntpq.
+
 ChangeSet@1.2821, 2012-06-28 07:06:07+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P286
   TAG: NTP_4_2_7P286
