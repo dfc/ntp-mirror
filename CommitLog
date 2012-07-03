@@ -1,3 +1,172 @@
+ChangeSet@1.2825, 2012-07-03 09:13:40+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P288
+  TAG: NTP_4_2_7P288
+
+  ChangeLog@1.1189 +1 -0
+    NTP_4_2_7P288
+
+  ntpd/ntpd-opts.c@1.293 +4 -4
+    NTP_4_2_7P288
+
+  ntpd/ntpd-opts.h@1.293 +3 -3
+    NTP_4_2_7P288
+
+  ntpd/ntpd-opts.texi@1.291 +2 -2
+    NTP_4_2_7P288
+
+  ntpd/ntpd.1ntpdman@1.104 +554 -8
+    NTP_4_2_7P288
+
+  ntpd/ntpd.1ntpdmdoc@1.104 +552 -7
+    NTP_4_2_7P288
+
+  ntpd/ntpd.man.in@1.104 +554 -8
+    NTP_4_2_7P288
+
+  ntpd/ntpd.mdoc.in@1.104 +552 -7
+    NTP_4_2_7P288
+
+  ntpdc/ntpdc-opts.c@1.288 +4 -4
+    NTP_4_2_7P288
+
+  ntpdc/ntpdc-opts.h@1.288 +3 -3
+    NTP_4_2_7P288
+
+  ntpdc/ntpdc-opts.texi@1.288 +2 -2
+    NTP_4_2_7P288
+
+  ntpdc/ntpdc.1ntpdcman@1.104 +709 -7
+    NTP_4_2_7P288
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.104 +663 -6
+    NTP_4_2_7P288
+
+  ntpdc/ntpdc.html@1.116 +2 -2
+    NTP_4_2_7P288
+
+  ntpdc/ntpdc.man.in@1.104 +709 -7
+    NTP_4_2_7P288
+
+  ntpdc/ntpdc.mdoc.in@1.104 +663 -6
+    NTP_4_2_7P288
+
+  ntpq/ntpq-opts.c@1.290 +4 -4
+    NTP_4_2_7P288
+
+  ntpq/ntpq-opts.h@1.290 +3 -3
+    NTP_4_2_7P288
+
+  ntpq/ntpq-opts.texi@1.290 +2 -2
+    NTP_4_2_7P288
+
+  ntpq/ntpq.1ntpqman@1.104 +261 -3
+    NTP_4_2_7P288
+
+  ntpq/ntpq.1ntpqmdoc@1.104 +245 -2
+    NTP_4_2_7P288
+
+  ntpq/ntpq.man.in@1.104 +261 -3
+    NTP_4_2_7P288
+
+  ntpq/ntpq.mdoc.in@1.104 +245 -2
+    NTP_4_2_7P288
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.290 +4 -4
+    NTP_4_2_7P288
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.290 +3 -3
+    NTP_4_2_7P288
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.290 +2 -2
+    NTP_4_2_7P288
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.104 +5 -4
+    NTP_4_2_7P288
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.104 +4 -3
+    NTP_4_2_7P288
+
+  ntpsnmpd/ntpsnmpd.man.in@1.104 +5 -4
+    NTP_4_2_7P288
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.104 +4 -3
+    NTP_4_2_7P288
+
+  packageinfo.sh@1.291 +1 -1
+    NTP_4_2_7P288
+
+  scripts/ntp-wait-opts.texi@1.108 +1 -1
+    NTP_4_2_7P288
+
+  scripts/ntp-wait.1ntp-waitman@1.104 +20 -4
+    NTP_4_2_7P288
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.104 +19 -3
+    NTP_4_2_7P288
+
+  scripts/ntp-wait.html@1.108 +1 -1
+    NTP_4_2_7P288
+
+  scripts/ntp-wait.man.in@1.104 +20 -4
+    NTP_4_2_7P288
+
+  scripts/ntp-wait.mdoc.in@1.104 +19 -3
+    NTP_4_2_7P288
+
+  sntp/sntp-opts.c@1.286 +4 -4
+    NTP_4_2_7P288
+
+  sntp/sntp-opts.h@1.286 +3 -3
+    NTP_4_2_7P288
+
+  sntp/sntp-opts.texi@1.286 +2 -2
+    NTP_4_2_7P288
+
+  sntp/sntp.1sntpman@1.106 +69 -6
+    NTP_4_2_7P288
+
+  sntp/sntp.1sntpmdoc@1.106 +68 -5
+    NTP_4_2_7P288
+
+  sntp/sntp.html@1.286 +2 -2
+    NTP_4_2_7P288
+
+  sntp/sntp.man.in@1.106 +69 -6
+    NTP_4_2_7P288
+
+  sntp/sntp.mdoc.in@1.106 +68 -5
+    NTP_4_2_7P288
+
+  util/ntp-keygen-opts.c@1.290 +4 -4
+    NTP_4_2_7P288
+
+  util/ntp-keygen-opts.h@1.290 +3 -3
+    NTP_4_2_7P288
+
+  util/ntp-keygen-opts.texi@1.291 +2 -2
+    NTP_4_2_7P288
+
+  util/ntp-keygen.1ntp-keygenman@1.104 +724 -6
+    NTP_4_2_7P288
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.104 +709 -5
+    NTP_4_2_7P288
+
+  util/ntp-keygen.man.in@1.104 +724 -6
+    NTP_4_2_7P288
+
+  util/ntp-keygen.mdoc.in@1.104 +709 -5
+    NTP_4_2_7P288
+
+ChangeSet@1.2824, 2012-07-03 04:44:18-04:00, stenn@deacon.udel.edu
+  CID 709173: Make sure a libisc function we do not use is called properly
+
+  ChangeLog@1.1188 +1 -0
+    CID 709173: Make sure a libisc function we do not use is called properly
+
+  lib/isc/unix/file.c@1.6 +2 -0
+    CID 709173: Make sure a libisc function we do not use is called properly
+
 ChangeSet@1.2823, 2012-07-03 01:29:06+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P287
   TAG: NTP_4_2_7P287
