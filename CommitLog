@@ -1,3 +1,190 @@
+ChangeSet@1.2829, 2012-07-16 00:21:24+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P289
+  TAG: NTP_4_2_7P289
+
+  ChangeLog@1.1193 +1 -0
+    NTP_4_2_7P289
+
+  ntpd/ntpd-opts.c@1.294 +4 -4
+    NTP_4_2_7P289
+
+  ntpd/ntpd-opts.h@1.294 +3 -3
+    NTP_4_2_7P289
+
+  ntpd/ntpd-opts.texi@1.292 +2 -2
+    NTP_4_2_7P289
+
+  ntpd/ntpd.1ntpdman@1.105 +4 -10
+    NTP_4_2_7P289
+
+  ntpd/ntpd.1ntpdmdoc@1.105 +4 -10
+    NTP_4_2_7P289
+
+  ntpd/ntpd.man.in@1.105 +4 -10
+    NTP_4_2_7P289
+
+  ntpd/ntpd.mdoc.in@1.105 +4 -10
+    NTP_4_2_7P289
+
+  ntpdc/ntpdc-opts.c@1.289 +4 -4
+    NTP_4_2_7P289
+
+  ntpdc/ntpdc-opts.h@1.289 +3 -3
+    NTP_4_2_7P289
+
+  ntpdc/ntpdc-opts.texi@1.289 +2 -2
+    NTP_4_2_7P289
+
+  ntpdc/ntpdc.1ntpdcman@1.105 +3 -8
+    NTP_4_2_7P289
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.105 +3 -8
+    NTP_4_2_7P289
+
+  ntpdc/ntpdc.html@1.117 +2 -2
+    NTP_4_2_7P289
+
+  ntpdc/ntpdc.man.in@1.105 +3 -8
+    NTP_4_2_7P289
+
+  ntpdc/ntpdc.mdoc.in@1.105 +3 -8
+    NTP_4_2_7P289
+
+  ntpq/ntpq-opts.c@1.291 +4 -4
+    NTP_4_2_7P289
+
+  ntpq/ntpq-opts.h@1.291 +3 -3
+    NTP_4_2_7P289
+
+  ntpq/ntpq-opts.texi@1.291 +2 -2
+    NTP_4_2_7P289
+
+  ntpq/ntpq.1ntpqman@1.105 +2 -3
+    NTP_4_2_7P289
+
+  ntpq/ntpq.1ntpqmdoc@1.105 +2 -3
+    NTP_4_2_7P289
+
+  ntpq/ntpq.man.in@1.105 +2 -3
+    NTP_4_2_7P289
+
+  ntpq/ntpq.mdoc.in@1.105 +2 -3
+    NTP_4_2_7P289
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.291 +4 -4
+    NTP_4_2_7P289
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.291 +3 -3
+    NTP_4_2_7P289
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.291 +2 -2
+    NTP_4_2_7P289
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.105 +2 -4
+    NTP_4_2_7P289
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.105 +2 -4
+    NTP_4_2_7P289
+
+  ntpsnmpd/ntpsnmpd.man.in@1.105 +2 -4
+    NTP_4_2_7P289
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.105 +2 -4
+    NTP_4_2_7P289
+
+  packageinfo.sh@1.292 +1 -1
+    NTP_4_2_7P289
+
+  scripts/ntp-wait-opts.texi@1.109 +2 -14
+    NTP_4_2_7P289
+
+  scripts/ntp-wait.1ntp-waitman@1.105 +2 -4
+    NTP_4_2_7P289
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.105 +2 -4
+    NTP_4_2_7P289
+
+  scripts/ntp-wait.html@1.109 +2 -14
+    NTP_4_2_7P289
+
+  scripts/ntp-wait.man.in@1.105 +2 -4
+    NTP_4_2_7P289
+
+  scripts/ntp-wait.mdoc.in@1.105 +2 -4
+    NTP_4_2_7P289
+
+  sntp/sntp-opts.c@1.287 +4 -4
+    NTP_4_2_7P289
+
+  sntp/sntp-opts.h@1.287 +3 -3
+    NTP_4_2_7P289
+
+  sntp/sntp-opts.texi@1.287 +2 -2
+    NTP_4_2_7P289
+
+  sntp/sntp.1sntpman@1.107 +3 -7
+    NTP_4_2_7P289
+
+  sntp/sntp.1sntpmdoc@1.107 +3 -7
+    NTP_4_2_7P289
+
+  sntp/sntp.html@1.287 +2 -2
+    NTP_4_2_7P289
+
+  sntp/sntp.man.in@1.107 +3 -7
+    NTP_4_2_7P289
+
+  sntp/sntp.mdoc.in@1.107 +3 -7
+    NTP_4_2_7P289
+
+  util/ntp-keygen-opts.c@1.291 +4 -4
+    NTP_4_2_7P289
+
+  util/ntp-keygen-opts.h@1.291 +3 -3
+    NTP_4_2_7P289
+
+  util/ntp-keygen-opts.texi@1.292 +2 -2
+    NTP_4_2_7P289
+
+  util/ntp-keygen.1ntp-keygenman@1.105 +4 -8
+    NTP_4_2_7P289
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.105 +4 -8
+    NTP_4_2_7P289
+
+  util/ntp-keygen.man.in@1.105 +4 -8
+    NTP_4_2_7P289
+
+  util/ntp-keygen.mdoc.in@1.105 +4 -8
+    NTP_4_2_7P289
+
+ChangeSet@1.2828, 2012-07-15 02:28:03-07:00, stenn@stenn.ntp.org
+  CID 97123: Future-proof possible change to refclock_nmea.c
+
+  ChangeLog@1.1192 +1 -0
+    CID 97123: Future-proof possible change to refclock_nmea.c
+
+  ntpd/refclock_nmea.c@1.71 +1 -0
+    CID 97123: Future-proof possible change to refclock_nmea.c
+
+ChangeSet@1.2827, 2012-07-15 01:04:03-07:00, stenn@stenn.ntp.org
+  CID 97377: ntp-keygen.c's followlink() might not NUL-terminate
+
+  ChangeLog@1.1191 +1 -0
+    CID 97377: ntp-keygen.c's followlink() might not NUL-terminate
+
+  util/ntp-keygen.c@1.92 +5 -1
+    CID 97377: ntp-keygen.c's followlink() might not NUL-terminate
+
+ChangeSet@1.2826, 2012-07-14 23:46:24-07:00, stenn@stenn.ntp.org
+  CID 709185: refclock_chu.c will leak fd==0 (which should be impossible)
+
+  ChangeLog@1.1190 +1 -0
+    CID 709185: refclock_chu.c will leak fd==0 (which should be impossible)
+
+  ntpd/refclock_chu.c@1.54 +11 -0
+    CID 709185: refclock_chu.c will leak fd==0 (which should be impossible)
+
 ChangeSet@1.2825, 2012-07-03 09:13:40+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P288
   TAG: NTP_4_2_7P288
