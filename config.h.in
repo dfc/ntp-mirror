@@ -126,6 +126,9 @@
 /* Schmid DCF77 clock */
 #undef CLOCK_SCHMID
 
+/* SEL240X protocol */
+#undef CLOCK_SEL240X
+
 /* clock thru shared memory */
 #undef CLOCK_SHM
 

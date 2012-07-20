@@ -1,3 +1,198 @@
+ChangeSet@1.2832, 2012-07-20 00:03:09+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P290
+  TAG: NTP_4_2_7P290
+
+  ChangeLog@1.1196 +1 -0
+    NTP_4_2_7P290
+
+  ntpd/ntpd-opts.c@1.295 +4 -4
+    NTP_4_2_7P290
+
+  ntpd/ntpd-opts.h@1.295 +3 -3
+    NTP_4_2_7P290
+
+  ntpd/ntpd-opts.texi@1.293 +2 -2
+    NTP_4_2_7P290
+
+  ntpd/ntpd.1ntpdman@1.106 +2 -2
+    NTP_4_2_7P290
+
+  ntpd/ntpd.1ntpdmdoc@1.106 +2 -2
+    NTP_4_2_7P290
+
+  ntpd/ntpd.man.in@1.106 +2 -2
+    NTP_4_2_7P290
+
+  ntpd/ntpd.mdoc.in@1.106 +2 -2
+    NTP_4_2_7P290
+
+  ntpdc/ntpdc-opts.c@1.290 +4 -4
+    NTP_4_2_7P290
+
+  ntpdc/ntpdc-opts.h@1.290 +3 -3
+    NTP_4_2_7P290
+
+  ntpdc/ntpdc-opts.texi@1.290 +2 -2
+    NTP_4_2_7P290
+
+  ntpdc/ntpdc.1ntpdcman@1.106 +2 -2
+    NTP_4_2_7P290
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.106 +2 -2
+    NTP_4_2_7P290
+
+  ntpdc/ntpdc.html@1.118 +2 -2
+    NTP_4_2_7P290
+
+  ntpdc/ntpdc.man.in@1.106 +2 -2
+    NTP_4_2_7P290
+
+  ntpdc/ntpdc.mdoc.in@1.106 +2 -2
+    NTP_4_2_7P290
+
+  ntpq/ntpq-opts.c@1.292 +4 -4
+    NTP_4_2_7P290
+
+  ntpq/ntpq-opts.h@1.292 +3 -3
+    NTP_4_2_7P290
+
+  ntpq/ntpq-opts.texi@1.292 +2 -2
+    NTP_4_2_7P290
+
+  ntpq/ntpq.1ntpqman@1.106 +2 -2
+    NTP_4_2_7P290
+
+  ntpq/ntpq.1ntpqmdoc@1.106 +2 -2
+    NTP_4_2_7P290
+
+  ntpq/ntpq.man.in@1.106 +2 -2
+    NTP_4_2_7P290
+
+  ntpq/ntpq.mdoc.in@1.106 +2 -2
+    NTP_4_2_7P290
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.292 +4 -4
+    NTP_4_2_7P290
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.292 +3 -3
+    NTP_4_2_7P290
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.292 +2 -2
+    NTP_4_2_7P290
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.106 +2 -2
+    NTP_4_2_7P290
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.106 +2 -2
+    NTP_4_2_7P290
+
+  ntpsnmpd/ntpsnmpd.man.in@1.106 +2 -2
+    NTP_4_2_7P290
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.106 +2 -2
+    NTP_4_2_7P290
+
+  packageinfo.sh@1.293 +1 -1
+    NTP_4_2_7P290
+
+  scripts/ntp-wait-opts.texi@1.110 +1 -1
+    NTP_4_2_7P290
+
+  scripts/ntp-wait.1ntp-waitman@1.106 +2 -2
+    NTP_4_2_7P290
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.106 +2 -2
+    NTP_4_2_7P290
+
+  scripts/ntp-wait.html@1.110 +1 -1
+    NTP_4_2_7P290
+
+  scripts/ntp-wait.man.in@1.106 +2 -2
+    NTP_4_2_7P290
+
+  scripts/ntp-wait.mdoc.in@1.106 +2 -2
+    NTP_4_2_7P290
+
+  sntp/sntp-opts.c@1.288 +4 -4
+    NTP_4_2_7P290
+
+  sntp/sntp-opts.h@1.288 +3 -3
+    NTP_4_2_7P290
+
+  sntp/sntp-opts.texi@1.288 +2 -2
+    NTP_4_2_7P290
+
+  sntp/sntp.1sntpman@1.108 +2 -2
+    NTP_4_2_7P290
+
+  sntp/sntp.1sntpmdoc@1.108 +2 -2
+    NTP_4_2_7P290
+
+  sntp/sntp.html@1.288 +2 -2
+    NTP_4_2_7P290
+
+  sntp/sntp.man.in@1.108 +2 -2
+    NTP_4_2_7P290
+
+  sntp/sntp.mdoc.in@1.108 +2 -2
+    NTP_4_2_7P290
+
+  util/ntp-keygen-opts.c@1.292 +4 -4
+    NTP_4_2_7P290
+
+  util/ntp-keygen-opts.h@1.292 +3 -3
+    NTP_4_2_7P290
+
+  util/ntp-keygen-opts.texi@1.293 +2 -2
+    NTP_4_2_7P290
+
+  util/ntp-keygen.1ntp-keygenman@1.106 +2 -2
+    NTP_4_2_7P290
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.106 +2 -2
+    NTP_4_2_7P290
+
+  util/ntp-keygen.man.in@1.106 +2 -2
+    NTP_4_2_7P290
+
+  util/ntp-keygen.mdoc.in@1.106 +2 -2
+    NTP_4_2_7P290
+
+ChangeSet@1.2831, 2012-07-19 19:26:56-04:00, stenn@psp-deb1.ntp.org
+  [Bug 1454] Add parse clock support for the SEL-240x GPS products
+
+  ChangeLog@1.1195 +1 -0
+    [Bug 1454] Add parse clock support for the SEL-240x GPS products
+
+  configure.ac@1.547 +16 -0
+    [Bug 1454] Add parse clock support for the SEL-240x GPS products
+
+  html/drivers/driver8.html@1.29 +252 -242
+    [Bug 1454] Add parse clock support for the SEL-240x GPS products
+
+  libparse/Makefile.am@1.29 +8 -0
+    [Bug 1454] Add parse clock support for the SEL-240x GPS products
+
+  libparse/clk_sel240x.c@1.1 +194 -0
+    BitKeeper file /home/stenn/ntp-dev/libparse/clk_sel240x.c
+
+  libparse/clk_sel240x.c@1.0 +0 -0
+
+  libparse/parse_conf.c@1.10 +7 -0
+    [Bug 1454] Add parse clock support for the SEL-240x GPS products
+
+  ntpd/refclock_parse.c@1.67 +52 -0
+    [Bug 1454] Add parse clock support for the SEL-240x GPS products
+
+ChangeSet@1.2830, 2012-07-17 01:15:11-04:00, stenn@psp-deb1.ntp.org
+  CID 709185: refclock_chu.c will leak fd==0 (better fix)
+
+  ChangeLog@1.1194 +1 -0
+    CID 709185: refclock_chu.c will leak fd==0 (better fix)
+
+  ntpd/refclock_chu.c@1.55 +4 -13
+    CID 709185: refclock_chu.c will leak fd==0 (better fix)
+
 ChangeSet@1.2829, 2012-07-16 00:21:24+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P289
   TAG: NTP_4_2_7P289

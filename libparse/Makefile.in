@@ -94,10 +94,10 @@ am_libparse_a_OBJECTS = parse.$(OBJEXT) parse_conf.$(OBJEXT) \
 	clk_dcf7000.$(OBJEXT) clk_trimtaip.$(OBJEXT) \
 	clk_rcc8000.$(OBJEXT) clk_hopf6021.$(OBJEXT) \
 	clk_computime.$(OBJEXT) clk_wharton.$(OBJEXT) \
-	clk_varitext.$(OBJEXT) data_mbg.$(OBJEXT) \
-	info_trimble.$(OBJEXT) trim_info.$(OBJEXT) binio.$(OBJEXT) \
-	ieee754io.$(OBJEXT) mfp_mul.$(OBJEXT) gpstolfp.$(OBJEXT) \
-	$(am__objects_1)
+	clk_varitext.$(OBJEXT) clk_sel240x.$(OBJEXT) \
+	data_mbg.$(OBJEXT) info_trimble.$(OBJEXT) trim_info.$(OBJEXT) \
+	binio.$(OBJEXT) ieee754io.$(OBJEXT) mfp_mul.$(OBJEXT) \
+	gpstolfp.$(OBJEXT) $(am__objects_1)
 libparse_a_OBJECTS = $(am_libparse_a_OBJECTS)
 libparse_kernel_a_AR = $(AR) $(ARFLAGS)
 am__DEPENDENCIES_1 =
@@ -105,7 +105,7 @@ libparse_kernel_a_DEPENDENCIES = kparse.o kparse_conf.o \
 	kclk_computime.o kclk_dcf7000.o kclk_hopf6021.o \
 	kclk_meinberg.o kclk_rawdcf.o kclk_rcc8000.o kclk_schmid.o \
 	kclk_trimtaip.o kclk_trimtsip.o kclk_varitext.o kclk_wharton.o \
-	kbinio.o kieee754io.o kmfp_mul.o kgpstolfp.o \
+	kclk_sel240x$u.o kbinio.o kieee754io.o kmfp_mul.o kgpstolfp.o \
 	$(am__DEPENDENCIES_1)
 am_libparse_kernel_a_OBJECTS =
 libparse_kernel_a_OBJECTS = $(am_libparse_kernel_a_OBJECTS)
@@ -398,6 +398,7 @@ libparse_a_SOURCES = parse.c \
 		     clk_computime.c \
 		     clk_wharton.c \
 		     clk_varitext.c \
+		     clk_sel240x.c \
 		     data_mbg.c \
 		     info_trimble.c \
 		     trim_info.c \
@@ -422,6 +423,7 @@ libparse_kernel_a_LIBADD = \
 	kclk_trimtsip.o		\
 	kclk_varitext.o		\
 	kclk_wharton.o		\
+	kclk_sel240x$u.o	\
 	kbinio.o		\
 	kieee754io.o		\
 	kmfp_mul.o		\
@@ -510,6 +512,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/clk_rawdcf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/clk_rcc8000.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/clk_schmid.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/clk_sel240x.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/clk_trimtaip.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/clk_trimtsip.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/clk_varitext.Po@am__quote@
@@ -807,6 +810,12 @@ kclk_varitext.o: $(srcdir)/clk_varitext.c
 
 kclk_wharton.o: $(srcdir)/clk_wharton.c
 	$(COMPILE) $(K_CFLAGS) -c $(srcdir)/clk_wharton.c -o $@
+
+kclk_sel240x.o: $(srcdir)/clk_sel240x.c
+	$(COMPILE) $(K_CFLAGS) -c $(srcdir)/clk_sel240x.c -o $@
+
+kclk_sel240x.o: $(srcdir)/clk_sel240x.c
+	$(COMPILE) $(K_CFLAGS) -c $(srcdir)/clk_sel240x.c -o $@
 
 kparse.o: $(srcdir)/parse.c
 	$(COMPILE) $(K_CFLAGS) -c $(srcdir)/parse.c -o $@
