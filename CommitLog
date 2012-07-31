@@ -1,3 +1,199 @@
+ChangeSet@1.2834, 2012-07-31 11:34:59+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P291
+  TAG: NTP_4_2_7P291
+
+  ChangeLog@1.1198 +1 -0
+    NTP_4_2_7P291
+
+  ntpd/ntpd-opts.c@1.297 +6 -6
+    NTP_4_2_7P291
+
+  ntpd/ntpd-opts.h@1.297 +3 -3
+    NTP_4_2_7P291
+
+  ntpd/ntpd-opts.texi@1.295 +2 -2
+    NTP_4_2_7P291
+
+  ntpd/ntpd.1ntpdman@1.108 +548 -8
+    NTP_4_2_7P291
+
+  ntpd/ntpd.1ntpdmdoc@1.108 +547 -8
+    NTP_4_2_7P291
+
+  ntpd/ntpd.man.in@1.108 +548 -8
+    NTP_4_2_7P291
+
+  ntpd/ntpd.mdoc.in@1.108 +547 -8
+    NTP_4_2_7P291
+
+  ntpdc/ntpdc-opts.c@1.291 +4 -4
+    NTP_4_2_7P291
+
+  ntpdc/ntpdc-opts.h@1.291 +3 -3
+    NTP_4_2_7P291
+
+  ntpdc/ntpdc-opts.texi@1.291 +2 -2
+    NTP_4_2_7P291
+
+  ntpdc/ntpdc.1ntpdcman@1.107 +2 -2
+    NTP_4_2_7P291
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.107 +2 -2
+    NTP_4_2_7P291
+
+  ntpdc/ntpdc.html@1.119 +2 -2
+    NTP_4_2_7P291
+
+  ntpdc/ntpdc.man.in@1.107 +2 -2
+    NTP_4_2_7P291
+
+  ntpdc/ntpdc.mdoc.in@1.107 +2 -2
+    NTP_4_2_7P291
+
+  ntpq/ntpq-opts.c@1.293 +4 -4
+    NTP_4_2_7P291
+
+  ntpq/ntpq-opts.h@1.293 +3 -3
+    NTP_4_2_7P291
+
+  ntpq/ntpq-opts.texi@1.293 +2 -2
+    NTP_4_2_7P291
+
+  ntpq/ntpq.1ntpqman@1.107 +2 -2
+    NTP_4_2_7P291
+
+  ntpq/ntpq.1ntpqmdoc@1.107 +2 -2
+    NTP_4_2_7P291
+
+  ntpq/ntpq.man.in@1.107 +2 -2
+    NTP_4_2_7P291
+
+  ntpq/ntpq.mdoc.in@1.107 +2 -2
+    NTP_4_2_7P291
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.293 +4 -4
+    NTP_4_2_7P291
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.293 +3 -3
+    NTP_4_2_7P291
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.293 +2 -2
+    NTP_4_2_7P291
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.107 +2 -2
+    NTP_4_2_7P291
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.107 +2 -2
+    NTP_4_2_7P291
+
+  ntpsnmpd/ntpsnmpd.man.in@1.107 +2 -2
+    NTP_4_2_7P291
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.107 +2 -2
+    NTP_4_2_7P291
+
+  packageinfo.sh@1.294 +1 -1
+    NTP_4_2_7P291
+
+  scripts/ntp-wait-opts.texi@1.111 +1 -1
+    NTP_4_2_7P291
+
+  scripts/ntp-wait.1ntp-waitman@1.107 +2 -2
+    NTP_4_2_7P291
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.107 +2 -2
+    NTP_4_2_7P291
+
+  scripts/ntp-wait.html@1.111 +1 -1
+    NTP_4_2_7P291
+
+  scripts/ntp-wait.man.in@1.107 +2 -2
+    NTP_4_2_7P291
+
+  scripts/ntp-wait.mdoc.in@1.107 +2 -2
+    NTP_4_2_7P291
+
+  sntp/sntp-opts.c@1.289 +4 -4
+    NTP_4_2_7P291
+
+  sntp/sntp-opts.h@1.289 +3 -3
+    NTP_4_2_7P291
+
+  sntp/sntp-opts.texi@1.289 +2 -2
+    NTP_4_2_7P291
+
+  sntp/sntp.1sntpman@1.109 +2 -2
+    NTP_4_2_7P291
+
+  sntp/sntp.1sntpmdoc@1.109 +2 -2
+    NTP_4_2_7P291
+
+  sntp/sntp.html@1.289 +2 -2
+    NTP_4_2_7P291
+
+  sntp/sntp.man.in@1.109 +2 -2
+    NTP_4_2_7P291
+
+  sntp/sntp.mdoc.in@1.109 +2 -2
+    NTP_4_2_7P291
+
+  util/ntp-keygen-opts.c@1.293 +4 -4
+    NTP_4_2_7P291
+
+  util/ntp-keygen-opts.h@1.293 +3 -3
+    NTP_4_2_7P291
+
+  util/ntp-keygen-opts.texi@1.294 +2 -2
+    NTP_4_2_7P291
+
+  util/ntp-keygen.1ntp-keygenman@1.107 +2 -2
+    NTP_4_2_7P291
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.107 +2 -2
+    NTP_4_2_7P291
+
+  util/ntp-keygen.man.in@1.107 +2 -2
+    NTP_4_2_7P291
+
+  util/ntp-keygen.mdoc.in@1.107 +2 -2
+    NTP_4_2_7P291
+
+ChangeSet@1.2833, 2012-07-27 15:12:58-04:00, utterback@pogo.udel.edu
+  [Bug 2241] New: MDNS registration should only happen if requested.
+
+  ChangeLog@1.1197 +1 -0
+    [Bug 2241] New: MDNS registration should only happen if requested.
+
+  html/ntpd.html@1.56 +2 -0
+    [Bug 2241] New: MDNS registration should only happen if requested.
+
+  ntpd/ntpd-opts.c@1.296 +58 -27
+    [Bug 2241] New: MDNS registration should only happen if requested.
+
+  ntpd/ntpd-opts.h@1.296 +12 -5
+    [Bug 2241] New: MDNS registration should only happen if requested.
+
+  ntpd/ntpd-opts.texi@1.294 +18 -2
+    [Bug 2241] New: MDNS registration should only happen if requested.
+
+  ntpd/ntpd.1ntpdman@1.107 +14 -548
+    [Bug 2241] New: MDNS registration should only happen if requested.
+
+  ntpd/ntpd.1ntpdmdoc@1.107 +13 -547
+    [Bug 2241] New: MDNS registration should only happen if requested.
+
+  ntpd/ntpd.c@1.132 +11 -2
+    [Bug 2241] New: MDNS registration should only happen if requested.
+
+  ntpd/ntpd.man.in@1.107 +14 -548
+    [Bug 2241] New: MDNS registration should only happen if requested.
+
+  ntpd/ntpd.mdoc.in@1.107 +13 -547
+    [Bug 2241] New: MDNS registration should only happen if requested.
+
+  ntpd/ntpdbase-opts.def@1.23 +11 -0
+    [Bug 2241] New: MDNS registration should only happen if requested.
+
 ChangeSet@1.2832, 2012-07-20 00:03:09+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P290
   TAG: NTP_4_2_7P290
