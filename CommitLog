@@ -1,3 +1,220 @@
+ChangeSet@1.2840, 2012-08-02 11:34:20+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P292
+  TAG: NTP_4_2_7P292
+
+  ChangeLog@1.1204 +1 -0
+    NTP_4_2_7P292
+
+  ntpd/ntpd-opts.c@1.298 +4 -4
+    NTP_4_2_7P292
+
+  ntpd/ntpd-opts.h@1.298 +3 -3
+    NTP_4_2_7P292
+
+  ntpd/ntpd-opts.texi@1.296 +2 -2
+    NTP_4_2_7P292
+
+  ntpd/ntpd.1ntpdman@1.109 +2 -2
+    NTP_4_2_7P292
+
+  ntpd/ntpd.1ntpdmdoc@1.109 +2 -2
+    NTP_4_2_7P292
+
+  ntpd/ntpd.man.in@1.109 +2 -2
+    NTP_4_2_7P292
+
+  ntpd/ntpd.mdoc.in@1.109 +2 -2
+    NTP_4_2_7P292
+
+  ntpdc/ntpdc-opts.c@1.292 +4 -4
+    NTP_4_2_7P292
+
+  ntpdc/ntpdc-opts.h@1.292 +3 -3
+    NTP_4_2_7P292
+
+  ntpdc/ntpdc-opts.texi@1.292 +2 -2
+    NTP_4_2_7P292
+
+  ntpdc/ntpdc.1ntpdcman@1.108 +2 -2
+    NTP_4_2_7P292
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.108 +2 -2
+    NTP_4_2_7P292
+
+  ntpdc/ntpdc.html@1.120 +2 -2
+    NTP_4_2_7P292
+
+  ntpdc/ntpdc.man.in@1.108 +2 -2
+    NTP_4_2_7P292
+
+  ntpdc/ntpdc.mdoc.in@1.108 +2 -2
+    NTP_4_2_7P292
+
+  ntpq/ntpq-opts.c@1.294 +4 -4
+    NTP_4_2_7P292
+
+  ntpq/ntpq-opts.h@1.294 +3 -3
+    NTP_4_2_7P292
+
+  ntpq/ntpq-opts.texi@1.294 +2 -2
+    NTP_4_2_7P292
+
+  ntpq/ntpq.1ntpqman@1.108 +2 -2
+    NTP_4_2_7P292
+
+  ntpq/ntpq.1ntpqmdoc@1.108 +2 -2
+    NTP_4_2_7P292
+
+  ntpq/ntpq.man.in@1.108 +2 -2
+    NTP_4_2_7P292
+
+  ntpq/ntpq.mdoc.in@1.108 +2 -2
+    NTP_4_2_7P292
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.294 +4 -4
+    NTP_4_2_7P292
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.294 +3 -3
+    NTP_4_2_7P292
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.294 +2 -2
+    NTP_4_2_7P292
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.108 +2 -2
+    NTP_4_2_7P292
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.108 +2 -2
+    NTP_4_2_7P292
+
+  ntpsnmpd/ntpsnmpd.man.in@1.108 +2 -2
+    NTP_4_2_7P292
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.108 +2 -2
+    NTP_4_2_7P292
+
+  packageinfo.sh@1.295 +1 -1
+    NTP_4_2_7P292
+
+  scripts/ntp-wait-opts.texi@1.112 +1 -1
+    NTP_4_2_7P292
+
+  scripts/ntp-wait.1ntp-waitman@1.108 +2 -2
+    NTP_4_2_7P292
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.108 +2 -2
+    NTP_4_2_7P292
+
+  scripts/ntp-wait.html@1.112 +1 -1
+    NTP_4_2_7P292
+
+  scripts/ntp-wait.man.in@1.108 +2 -2
+    NTP_4_2_7P292
+
+  scripts/ntp-wait.mdoc.in@1.108 +2 -2
+    NTP_4_2_7P292
+
+  sntp/sntp-opts.c@1.290 +4 -4
+    NTP_4_2_7P292
+
+  sntp/sntp-opts.h@1.290 +3 -3
+    NTP_4_2_7P292
+
+  sntp/sntp-opts.texi@1.290 +2 -2
+    NTP_4_2_7P292
+
+  sntp/sntp.1sntpman@1.110 +2 -2
+    NTP_4_2_7P292
+
+  sntp/sntp.1sntpmdoc@1.110 +2 -2
+    NTP_4_2_7P292
+
+  sntp/sntp.html@1.290 +2 -2
+    NTP_4_2_7P292
+
+  sntp/sntp.man.in@1.110 +2 -2
+    NTP_4_2_7P292
+
+  sntp/sntp.mdoc.in@1.110 +2 -2
+    NTP_4_2_7P292
+
+  util/ntp-keygen-opts.c@1.294 +4 -4
+    NTP_4_2_7P292
+
+  util/ntp-keygen-opts.h@1.294 +3 -3
+    NTP_4_2_7P292
+
+  util/ntp-keygen-opts.texi@1.295 +2 -2
+    NTP_4_2_7P292
+
+  util/ntp-keygen.1ntp-keygenman@1.108 +2 -2
+    NTP_4_2_7P292
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.108 +2 -2
+    NTP_4_2_7P292
+
+  util/ntp-keygen.man.in@1.108 +2 -2
+    NTP_4_2_7P292
+
+  util/ntp-keygen.mdoc.in@1.108 +2 -2
+    NTP_4_2_7P292
+
+ChangeSet@1.2839, 2012-08-02 06:48:06-04:00, stenn@deacon.udel.edu
+   [Bug 1545] Note why we are logging the Version string
+
+  ChangeLog@1.1203 +1 -0
+     [Bug 1545] Note why we are logging the Version string
+
+  ntpd/ntpd.c@1.133 +1 -1
+     [Bug 1545] Note why we are logging the Version string
+
+ChangeSet@1.2838, 2012-08-02 04:41:05-04:00, stenn@deacon.udel.edu
+  [Bug 2247] Get rid of the TRAK refclock - deprecated since 2006
+
+  BitKeeper/deleted/50/refclock_trak.c~3aed0663@1.12 +0 -0
+    Delete: ntpd/refclock_trak.c
+
+  ChangeLog@1.1202 +1 -0
+    [Bug 2247] Get rid of the TRAK refclock - deprecated since 2006
+
+  configure.ac@1.548 +0 -11
+    [Bug 2247] Get rid of the TRAK refclock - deprecated since 2006
+
+  ntpd/Makefile.am@1.116 +0 -1
+    [Bug 2247] Get rid of the TRAK refclock - deprecated since 2006
+
+ChangeSet@1.2837, 2012-08-02 04:35:10-04:00, stenn@deacon.udel.edu
+  [Bug 1872] Remove legacy ppsclock fdpps, #ifdef PPS
+
+  ChangeLog@1.1201 +1 -0
+    [Bug 1872] Remove legacy ppsclock fdpps, #ifdef PPS
+
+  ntpd/ntp_refclock.c@1.116 +1 -6
+    [Bug 1872] Remove legacy ppsclock fdpps, #ifdef PPS
+
+  ntpd/refclock_zyfer.c@1.10 +1 -18
+    [Bug 1872] Remove legacy ppsclock fdpps, #ifdef PPS
+
+ChangeSet@1.2836, 2012-08-02 02:32:58-04:00, stenn@deacon.udel.edu
+  Clean up an exit status in ntpq.c
+
+  ChangeLog@1.1200 +1 -0
+    Clean up an exit status in ntpq.c
+
+  ntpq/ntpq.c@1.148 +1 -1
+    Clean up an exit status in ntpq.c
+
+ChangeSet@1.2835, 2012-08-01 21:26:07-04:00, stenn@psp-deb1.ntp.org
+  [Bug 2075] Fix spelling of 'incompatible'
+
+  ChangeLog@1.1199 +1 -0
+    [Bug 2075] Fix spelling of 'incompatible'
+
+  include/ntp_request.h@1.47 +2 -2
+    [Bug 2075] Fix spelling of 'incompatible'
+
+  ntpdc/ntpdc.c@1.100 +1 -1
+    [Bug 2075] Fix spelling of 'incompatible'
+
 ChangeSet@1.2834, 2012-07-31 11:34:59+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P291
   TAG: NTP_4_2_7P291
