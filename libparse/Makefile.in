@@ -105,7 +105,7 @@ libparse_kernel_a_DEPENDENCIES = kparse.o kparse_conf.o \
 	kclk_computime.o kclk_dcf7000.o kclk_hopf6021.o \
 	kclk_meinberg.o kclk_rawdcf.o kclk_rcc8000.o kclk_schmid.o \
 	kclk_trimtaip.o kclk_trimtsip.o kclk_varitext.o kclk_wharton.o \
-	kclk_sel240x$u.o kbinio.o kieee754io.o kmfp_mul.o kgpstolfp.o \
+	kclk_sel240x.o kbinio.o kieee754io.o kmfp_mul.o kgpstolfp.o \
 	$(am__DEPENDENCIES_1)
 am_libparse_kernel_a_OBJECTS =
 libparse_kernel_a_OBJECTS = $(am_libparse_kernel_a_OBJECTS)
@@ -423,7 +423,7 @@ libparse_kernel_a_LIBADD = \
 	kclk_trimtsip.o		\
 	kclk_varitext.o		\
 	kclk_wharton.o		\
-	kclk_sel240x$u.o	\
+	kclk_sel240x.o		\
 	kbinio.o		\
 	kieee754io.o		\
 	kmfp_mul.o		\
@@ -810,9 +810,6 @@ kclk_varitext.o: $(srcdir)/clk_varitext.c
 
 kclk_wharton.o: $(srcdir)/clk_wharton.c
 	$(COMPILE) $(K_CFLAGS) -c $(srcdir)/clk_wharton.c -o $@
-
-kclk_sel240x.o: $(srcdir)/clk_sel240x.c
-	$(COMPILE) $(K_CFLAGS) -c $(srcdir)/clk_sel240x.c -o $@
 
 kclk_sel240x.o: $(srcdir)/clk_sel240x.c
 	$(COMPILE) $(K_CFLAGS) -c $(srcdir)/clk_sel240x.c -o $@

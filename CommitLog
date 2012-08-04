@@ -1,3 +1,208 @@
+ChangeSet@1.2844, 2012-08-04 11:34:07+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P293
+  TAG: NTP_4_2_7P293
+
+  ChangeLog@1.1208 +1 -0
+    NTP_4_2_7P293
+
+  ntpd/ntpd-opts.c@1.299 +4 -4
+    NTP_4_2_7P293
+
+  ntpd/ntpd-opts.h@1.299 +3 -3
+    NTP_4_2_7P293
+
+  ntpd/ntpd-opts.texi@1.297 +2 -2
+    NTP_4_2_7P293
+
+  ntpd/ntpd.1ntpdman@1.110 +2 -2
+    NTP_4_2_7P293
+
+  ntpd/ntpd.1ntpdmdoc@1.110 +2 -2
+    NTP_4_2_7P293
+
+  ntpd/ntpd.man.in@1.110 +2 -2
+    NTP_4_2_7P293
+
+  ntpd/ntpd.mdoc.in@1.110 +2 -2
+    NTP_4_2_7P293
+
+  ntpdc/ntpdc-opts.c@1.293 +4 -4
+    NTP_4_2_7P293
+
+  ntpdc/ntpdc-opts.h@1.293 +3 -3
+    NTP_4_2_7P293
+
+  ntpdc/ntpdc-opts.texi@1.293 +2 -2
+    NTP_4_2_7P293
+
+  ntpdc/ntpdc.1ntpdcman@1.109 +2 -2
+    NTP_4_2_7P293
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.109 +2 -2
+    NTP_4_2_7P293
+
+  ntpdc/ntpdc.html@1.121 +2 -2
+    NTP_4_2_7P293
+
+  ntpdc/ntpdc.man.in@1.109 +2 -2
+    NTP_4_2_7P293
+
+  ntpdc/ntpdc.mdoc.in@1.109 +2 -2
+    NTP_4_2_7P293
+
+  ntpq/ntpq-opts.c@1.295 +4 -4
+    NTP_4_2_7P293
+
+  ntpq/ntpq-opts.h@1.295 +3 -3
+    NTP_4_2_7P293
+
+  ntpq/ntpq-opts.texi@1.295 +2 -2
+    NTP_4_2_7P293
+
+  ntpq/ntpq.1ntpqman@1.109 +2 -2
+    NTP_4_2_7P293
+
+  ntpq/ntpq.1ntpqmdoc@1.109 +2 -2
+    NTP_4_2_7P293
+
+  ntpq/ntpq.man.in@1.109 +2 -2
+    NTP_4_2_7P293
+
+  ntpq/ntpq.mdoc.in@1.109 +2 -2
+    NTP_4_2_7P293
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.295 +4 -4
+    NTP_4_2_7P293
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.295 +3 -3
+    NTP_4_2_7P293
+
+  ntpsnmpd/ntpsnmpd-opts.texi@1.295 +2 -2
+    NTP_4_2_7P293
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.109 +2 -2
+    NTP_4_2_7P293
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.109 +2 -2
+    NTP_4_2_7P293
+
+  ntpsnmpd/ntpsnmpd.man.in@1.109 +2 -2
+    NTP_4_2_7P293
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.109 +2 -2
+    NTP_4_2_7P293
+
+  packageinfo.sh@1.296 +1 -1
+    NTP_4_2_7P293
+
+  scripts/ntp-wait-opts.texi@1.113 +1 -1
+    NTP_4_2_7P293
+
+  scripts/ntp-wait.1ntp-waitman@1.109 +2 -2
+    NTP_4_2_7P293
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.109 +2 -2
+    NTP_4_2_7P293
+
+  scripts/ntp-wait.html@1.113 +1 -1
+    NTP_4_2_7P293
+
+  scripts/ntp-wait.man.in@1.109 +2 -2
+    NTP_4_2_7P293
+
+  scripts/ntp-wait.mdoc.in@1.109 +2 -2
+    NTP_4_2_7P293
+
+  sntp/sntp-opts.c@1.291 +4 -4
+    NTP_4_2_7P293
+
+  sntp/sntp-opts.h@1.291 +3 -3
+    NTP_4_2_7P293
+
+  sntp/sntp-opts.texi@1.291 +2 -2
+    NTP_4_2_7P293
+
+  sntp/sntp.1sntpman@1.111 +2 -2
+    NTP_4_2_7P293
+
+  sntp/sntp.1sntpmdoc@1.111 +2 -2
+    NTP_4_2_7P293
+
+  sntp/sntp.html@1.291 +2 -2
+    NTP_4_2_7P293
+
+  sntp/sntp.man.in@1.111 +2 -2
+    NTP_4_2_7P293
+
+  sntp/sntp.mdoc.in@1.111 +2 -2
+    NTP_4_2_7P293
+
+  util/ntp-keygen-opts.c@1.295 +4 -4
+    NTP_4_2_7P293
+
+  util/ntp-keygen-opts.h@1.295 +3 -3
+    NTP_4_2_7P293
+
+  util/ntp-keygen-opts.texi@1.296 +2 -2
+    NTP_4_2_7P293
+
+  util/ntp-keygen.1ntp-keygenman@1.109 +2 -2
+    NTP_4_2_7P293
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.109 +2 -2
+    NTP_4_2_7P293
+
+  util/ntp-keygen.man.in@1.109 +2 -2
+    NTP_4_2_7P293
+
+  util/ntp-keygen.mdoc.in@1.109 +2 -2
+    NTP_4_2_7P293
+
+ChangeSet@1.2843, 2012-08-03 23:15:30-04:00, stenn@psp-deb1.ntp.org
+  Cleanup kclk_sel240x.o rules in libparse/Makefile.am
+
+  ChangeLog@1.1207 +1 -0
+    Cleanup kclk_sel240x.o rules in libparse/Makefile.am
+
+  libparse/Makefile.am@1.30 +1 -4
+    Cleanup kclk_sel240x.o rules in libparse/Makefile.am
+
+ChangeSet@1.2842, 2012-08-03 23:11:04-04:00, stenn@psp-deb1.ntp.org
+  Documentation cleanup from Mike T.
+
+  ChangeLog@1.1206 +1 -0
+    Documentation cleanup from Mike T.
+
+  html/authentic.html@1.10 +2 -2
+    Documentation cleanup from Mike T.
+
+  html/decode.html@1.19 +1 -1
+    Documentation cleanup from Mike T.
+
+  html/drivers/driver1.html@1.19 +1 -1
+    Documentation cleanup from Mike T.
+
+  html/miscopt.html@1.69 +2 -2
+    Documentation cleanup from Mike T.
+
+ChangeSet@1.2841, 2012-08-03 02:51:04-04:00, stenn@psp-deb1.ntp.org
+  [Bug 2247] (more) Get rid of the TRAK refclock - deprecated since 2006.
+
+  BitKeeper/deleted/55/driver2.htm~3aed0663@1.14 +0 -0
+    Delete: html/drivers/driver2.html
+
+  ChangeLog@1.1205 +1 -0
+    [Bug 2247] (more) Get rid of the TRAK refclock - deprecated since 2006.
+
+  html/refclock.html@1.36 +0 -1
+    [Bug 2247] (more) Get rid of the TRAK refclock - deprecated since 2006.
+
+  ntpd/ntp_control.c@1.182 +1 -1
+    [Bug 2247] (more) Get rid of the TRAK refclock - deprecated since 2006.
+
+  ntpd/refclock_conf.c@1.33 +0 -6
+    [Bug 2247] (more) Get rid of the TRAK refclock - deprecated since 2006.
+
 ChangeSet@1.2840, 2012-08-02 11:34:20+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P292
   TAG: NTP_4_2_7P292
