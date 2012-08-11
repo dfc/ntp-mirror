@@ -863,6 +863,9 @@
 /* Define to 1 if you have the <sysexits.h> header file. */
 #undef HAVE_SYSEXITS_H
 
+/* */
+#undef HAVE_SYSLOG_FACILITYNAMES
+
 /* Define to 1 if you have the <sys/audioio.h> header file. */
 #undef HAVE_SYS_AUDIOIO_H
 

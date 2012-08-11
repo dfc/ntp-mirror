@@ -57,6 +57,7 @@ am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/m4/ntp_crosscompile.m4 \
 	$(top_srcdir)/sntp/m4/ntp_debug.m4 \
 	$(top_srcdir)/sntp/m4/ntp_dir_sep.m4 \
+	$(top_srcdir)/sntp/m4/ntp_facilitynames.m4 \
 	$(top_srcdir)/sntp/m4/ntp_googletest.m4 \
 	$(top_srcdir)/sntp/m4/ntp_ipv6.m4 \
 	$(top_srcdir)/sntp/m4/ntp_lib_m.m4 \
