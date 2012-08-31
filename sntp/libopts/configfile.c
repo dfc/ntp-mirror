@@ -1,13 +1,13 @@
 /**
  * \file configfile.c
  *
- *  Time-stamp:      "2011-12-17 12:51:30 bkorb"
+ *  Time-stamp:      "2012-08-11 08:34:55 bkorb"
  *
  *  configuration/rc/ini file handling.
  *
  *  This file is part of AutoOpts, a companion to AutoGen.
  *  AutoOpts is free software.
- *  AutoOpts is Copyright (c) 1992-2011 by Bruce Korb - all rights reserved
+ *  AutoOpts is Copyright (c) 1992-2012 by Bruce Korb - all rights reserved
  *
  *  AutoOpts is available under any one of two licenses.  The license
  *  in use must be one of these two and the choice is under the control
@@ -52,7 +52,7 @@ static int
 parse_xml_encoding(char ** ppz);
 
 static char *
-trim_xml_text(char * pztxt, char const * pznm, tOptionLoadMode mode);
+trim_xml_text(char * intxt, char const * pznm, tOptionLoadMode mode);
 
 static void
 cook_xml_text(char * pzData);
@@ -97,7 +97,9 @@ skip_unkn(char* pzText);
  *  @code{mmap(2)} or other file system calls, or it may be:
  *  @itemize @bullet
  *  @item
- *  @code{ENOENT} - the file was empty.
+ *  @code{ENOENT} - the file was not found.
+ *  @item
+ *  @code{ENOMSG} - the file was empty.
  *  @item
  *  @code{EINVAL} - the file contents are invalid -- not properly formed.
  *  @item
@@ -200,13 +202,15 @@ optionFindValue(const tOptDesc* pOptDesc, char const* pzName,
         }
         if (pRes == NULL)
             errno = ENOENT;
-    } while (0);
+    } while (false);
 
     return pRes;
 }
 
 
 /*=export_func  optionFindNextValue
+ *
+ * FIXME: the handling of 'pzName' and 'pzVal' is just wrong.
  *
  * what:  find a hierarcicaly valued option instance
  * arg:   + const tOptDesc* + pOptDesc + an option with a nested arg type +
@@ -236,8 +240,11 @@ tOptionValue const *
 optionFindNextValue(const tOptDesc * pOptDesc, const tOptionValue * pPrevVal,
                     char const * pzName, char const * pzVal)
 {
-    int foundOldVal = 0;
+    bool old_found = false;
     tOptionValue* pRes = NULL;
+
+    (void)pzName;
+    (void)pzVal;
 
     if (  (pOptDesc == NULL)
        || (OPTST_GET_ARGTYPE(pOptDesc->fOptState) != OPARG_TYPE_HIERARCHY))  {
@@ -253,23 +260,18 @@ optionFindNextValue(const tOptDesc * pOptDesc, const tOptionValue * pPrevVal,
         int    ct   = pAL->useCt;
         void** ppOV = (void**)pAL->apzArgs;
 
-        if (ct == 0) {
-            errno = ENOENT;
-            break;
-        }
-
         while (--ct >= 0) {
             tOptionValue* pOV = *(ppOV++);
-            if (foundOldVal) {
+            if (old_found) {
                 pRes = pOV;
                 break;
             }
             if (pOV == pPrevVal)
-                foundOldVal = 1;
+                old_found = true;
         }
         if (pRes == NULL)
             errno = ENOENT;
-    } while (0);
+    } while (false);
 
     return pRes;
 }
@@ -429,7 +431,7 @@ file_preset(tOptions * opts, char const * fname, int dir)
 
     do  {
         optst.flags = st_flags;
-        while (IS_WHITESPACE_CHAR(*ftext))  ftext++;
+        ftext = SPN_WHITESPACE_CHARS(ftext);
 
         if (IS_VAR_FIRST_CHAR(*ftext)) {
             ftext = handle_cfg(opts, &optst, ftext, dir);
@@ -463,7 +465,7 @@ file_preset(tOptions * opts, char const * fname, int dir)
             break;
 
         case '#':
-            ftext = strchr(ftext + 1, '\n');
+            ftext = strchr(ftext + 1, NL);
             break;
 
         default:
@@ -501,13 +503,13 @@ static char *
 handle_cfg(tOptions * pOpts, tOptState * pOS, char * pzText, int dir)
 {
     char* pzName = pzText++;
-    char* pzEnd  = strchr(pzText, '\n');
+    char* pzEnd  = strchr(pzText, NL);
 
     if (pzEnd == NULL)
         return pzText + strlen(pzText);
 
-    while (IS_VALUE_NAME_CHAR(*pzText)) pzText++;
-    while (IS_WHITESPACE_CHAR(*pzText)) pzText++;
+    pzText = SPN_VALUE_NAME_CHARS(pzText);
+    pzText = SPN_WHITESPACE_CHARS(pzText);
     if (pzText > pzEnd) {
     name_only:
         *pzEnd++ = NUL;
@@ -521,7 +523,7 @@ handle_cfg(tOptions * pOpts, tOptState * pOS, char * pzText, int dir)
      *  is an invalid format and we give up parsing the text.
      */
     if ((*pzText == '=') || (*pzText == ':')) {
-        while (IS_WHITESPACE_CHAR(*++pzText))   ;
+        pzText = SPN_WHITESPACE_CHARS(pzText+1);
         if (pzText > pzEnd)
             goto name_only;
     } else if (! IS_WHITESPACE_CHAR(pzText[-1]))
@@ -540,16 +542,16 @@ handle_cfg(tOptions * pOpts, tOptState * pOS, char * pzText, int dir)
             switch (ch) {
             case NUL:
                 pcS = NULL;
+                /* FALLTHROUGH */
 
-            case '\n':
+            case NL:
                 *pcD = NUL;
                 pzEnd = pcS;
                 goto copy_done;
 
             case '\\':
-                if (*pcS == '\n') {
+                if (*pcS == NL)
                     ch = *(pcS++);
-                }
                 /* FALLTHROUGH */
             default:
                 *(pcD++) = ch;
@@ -628,9 +630,9 @@ handle_directive(tOptions * pOpts, char * pzText)
 static char *
 aoflags_directive(tOptions * pOpts, char * pzText)
 {
-    char * pz = pzText;
+    char * pz;
 
-    while (IS_WHITESPACE_CHAR(*++pz))  ;
+    pz = SPN_WHITESPACE_CHARS(pzText+1);
     pzText = strchr(pz, '>');
     if (pzText != NULL) {
 
@@ -663,7 +665,7 @@ program_directive(tOptions * pOpts, char * pzText)
     memcpy(ttl + sizeof(ttlfmt) - 1, zCfgProg, ttl_len - (sizeof(ttlfmt) - 1));
 
     do  {
-        while (IS_WHITESPACE_CHAR(*++pzText))  ;
+        pzText = SPN_WHITESPACE_CHARS(pzText+1);
 
         if (  (strneqvcmp(pzText, pOpts->pzProgName, (int)name_len) == 0)
            && (IS_END_XML_TOKEN_CHAR(pzText[name_len])) ) {
@@ -700,7 +702,7 @@ handle_section(tOptions * pOpts, char * pzText)
     size_t len = strlen(pOpts->pzPROGNAME);
     if (   (strncmp(pzText+1, pOpts->pzPROGNAME, len) == 0)
         && (pzText[len+1] == ']'))
-        return strchr(pzText + len + 2, '\n');
+        return strchr(pzText + len + 2, NL);
 
     if (len > 16)
         return NULL;
@@ -712,7 +714,7 @@ handle_section(tOptions * pOpts, char * pzText)
     }
 
     if (pzText != NULL)
-        pzText = strchr(pzText, '\n');
+        pzText = strchr(pzText, NL);
     return pzText;
 }
 
@@ -731,7 +733,7 @@ parse_xml_encoding(char ** ppz)
         _xmlNm_(cr,    '\r')    \
         _xmlNm_(vt,    '\v')    \
         _xmlNm_(bel,   '\a')    \
-        _xmlNm_(nl,    '\n')    \
+        _xmlNm_(nl,    NL)      \
         _xmlNm_(space, ' ')     \
         _xmlNm_(quot,  '"')     \
         _xmlNm_(apos,  '\'')
@@ -807,28 +809,35 @@ parse_xml_encoding(char ** ppz)
  * except for OPTION_LOAD_UNCOOKED.
  */
 static char *
-trim_xml_text(char * pztxt, char const * pznm, tOptionLoadMode mode)
+trim_xml_text(char * intxt, char const * pznm, tOptionLoadMode mode)
 {
     static char const fmt[] = "</%s>";
-    char   z[64], *pz = z;
     size_t len = strlen(pznm) + sizeof(fmt) - 2 /* for %s */;
+    char * etext;
 
-    if (len > sizeof(z))
-        pz = AGALOC(len, "scan name");
+    {
+        char z[64], *pz = z;
+        if (len >= sizeof(z))
+            pz = AGALOC(len, "scan name");
 
-    sprintf(pz, fmt, pznm);
-    *pztxt = ' ';
-    pztxt = strstr(pztxt, pz);
-    if (pz != z) AGFREE(pz);
+        len = sprintf(pz, fmt, pznm);
+        *intxt = ' ';
+        etext = strstr(intxt, pz);
+        if (pz != z) AGFREE(pz);
+    }
 
-    if (pztxt == NULL)
-        return pztxt;
+    if (etext == NULL)
+        return etext;
 
-    if (mode != OPTION_LOAD_UNCOOKED)
-        while (IS_WHITESPACE_CHAR(pztxt[-1]))   len++, pztxt--;
+    {
+        char * result = etext + len;
 
-    *pztxt = NUL;
-    return pztxt + len - 1 /* for NUL byte */;
+        if (mode != OPTION_LOAD_UNCOOKED)
+            etext = SPN_WHITESPACE_BACK(intxt, etext);
+
+        *etext = NUL;
+        return result;
+    }
 }
 
 /**
@@ -849,8 +858,8 @@ cook_xml_text(char * pzData)
             return;
 
         case '&':
-            *(pzd++) = \
-                ch = parse_xml_encoding(&pzs);
+            ch = parse_xml_encoding(&pzs);
+            *(pzd++) = (char)ch;
             if (ch == NUL)
                 return;
             break;
@@ -867,7 +876,7 @@ cook_xml_text(char * pzData)
             /* FALLTHROUGH */
 
         default:
-            *(pzd++) = ch;
+            *(pzd++) = (char)ch;
         }
     }
 }
@@ -887,14 +896,14 @@ handle_struct(tOptions * pOpts, tOptState * pOS, char * pzText, int dir)
     char* pzData;
     char* pcNulPoint;
 
-    while (IS_VALUE_NAME_CHAR(*pzText))  pzText++;
+    pzText = SPN_VALUE_NAME_CHARS(pzText);
     pcNulPoint = pzText;
     valu.valType = OPARG_TYPE_STRING;
 
     switch (*pzText) {
     case ' ':
     case '\t':
-        pzText = parseAttributes(pOpts, pzText, &mode, &valu);
+        pzText = parse_attrs(pOpts, pzText, &mode, &valu);
         if (*pzText == '>')
             break;
         if (*pzText != '/')
@@ -931,7 +940,7 @@ handle_struct(tOptions * pOpts, tOptState * pOS, char * pzText, int dir)
 
     /*
      *  Rejoin the name and value for parsing by "loadOptionLine()".
-     *  Erase any attributes parsed by "parseAttributes()".
+     *  Erase any attributes parsed by "parse_attrs()".
      */
     memset(pcNulPoint, ' ', pzData - pcNulPoint);
 
@@ -1120,6 +1129,9 @@ optionLoadOpt(tOptions * pOpts, tOptDesc * pOptDesc)
 {
     struct stat sb;
 
+    if (pOpts <= OPTPROC_EMIT_LIMIT)
+        return;
+
     /*
      *  IF the option is not being disabled, THEN load the file.  There must
      *  be a file.  (If it is being disabled, then the disablement processing
@@ -1157,11 +1169,8 @@ optionLoadOpt(tOptions * pOpts, tOptDesc * pOptDesc)
  *  Parse the various attributes of an XML-styled config file entry
  */
 LOCAL char*
-parseAttributes(
-    tOptions*           pOpts,
-    char*               pzText,
-    tOptionLoadMode*    pMode,
-    tOptionValue*       pType )
+parse_attrs(tOptions * pOpts, char * pzText, tOptionLoadMode * pMode,
+            tOptionValue * pType)
 {
     size_t len;
 
@@ -1169,15 +1178,15 @@ parseAttributes(
         if (! IS_WHITESPACE_CHAR(*pzText))
             switch (*pzText) {
             case '/': pType->valType = OPARG_TYPE_NONE;
+                      /* FALLTHROUGH */
             case '>': return pzText;
 
             default:
             case NUL: return NULL;
             }
 
-        while (IS_WHITESPACE_CHAR(*++pzText))     ;
-        len = 0;
-        while (IS_LOWER_CASE_CHAR(pzText[len]))   len++;
+        pzText = SPN_WHITESPACE_CHARS(pzText+1);
+        len = SPN_LOWER_CASE_CHARS(pzText) - pzText;
 
         switch (find_xat_attribute_id(pzText, len)) {
         case XAT_KWD_TYPE:
@@ -1235,6 +1244,9 @@ parseAttributes(
 static char*
 parse_keyword(tOptions * pOpts, char * pzText, tOptionValue * pType)
 {
+    (void)pOpts;
+    (void)pType;
+
     return skip_unkn(pzText);
 }
 
@@ -1247,6 +1259,9 @@ parse_keyword(tOptions * pOpts, char * pzText, tOptionValue * pType)
 static char*
 parse_set_mem(tOptions * pOpts, char * pzText, tOptionValue * pType)
 {
+    (void)pOpts;
+    (void)pType;
+
     return skip_unkn(pzText);
 }
 
@@ -1262,16 +1277,15 @@ parse_value(char * pzText, tOptionValue * pType)
     if (*(pzText++) != '=')
         goto woops;
 
-    while (IS_OPTION_NAME_CHAR(pzText[len]))  len++;
-    pzText += len;
+    len = SPN_OPTION_NAME_CHARS(pzText) - pzText;
 
-    if ((len == 0) || (! IS_END_XML_TOKEN_CHAR(*pzText))) {
+    if ((len == 0) || (! IS_END_XML_TOKEN_CHAR(pzText[len]))) {
     woops:
         pType->valType = OPARG_TYPE_NONE;
-        return skip_unkn(pzText);
+        return skip_unkn(pzText + len);
     }
 
-    switch (find_value_type_id(pzText - len, len)) {
+    switch (find_value_type_id(pzText, len)) {
     default:
     case VTP_KWD_INVALID: goto woops;
 
@@ -1302,7 +1316,7 @@ parse_value(char * pzText, tOptionValue * pType)
         pType->valType = OPARG_TYPE_HIERARCHY;
     }
 
-    return pzText;
+    return pzText + len;
 }
 
 
@@ -1367,7 +1381,7 @@ validate_struct(tOptions * pOpts, char const * pzProgram)
           || (pOpts->structVersion < OPTIONS_MINIMUM_VERSION )
        )  )  {
         static char const aover[] =
-            __STR(AO_CURRENT)":"__STR(AO_REVISION)":"__STR(AO_AGE)"\n";
+            STR(AO_CURRENT)":"STR(AO_REVISION)":"STR(AO_AGE)"\n";
 
         fprintf(stderr, zAO_Err, pzProgram, NUM_TO_VER(pOpts->structVersion));
         if (pOpts->structVersion > OPTIONS_STRUCT_VERSION )

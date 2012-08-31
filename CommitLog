@@ -1,8 +1,503 @@
-ChangeSet@1.2849, 2012-08-11 11:33:27+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2789, 2012-08-31 03:43:33+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P296
+  TAG: NTP_4_2_7P296
+
+  ChangeLog@1.1159 +1 -0
+    NTP_4_2_7P296
+
+  ntpd/invoke-ntpd.texi@1.285 +80 -5
+    NTP_4_2_7P296
+
+  ntpd/ntp.conf.5man@1.2 +10 -2865
+    NTP_4_2_7P296
+
+  ntpd/ntp.conf.5mdoc@1.2 +5 -2694
+    NTP_4_2_7P296
+
+  ntpd/ntp.conf.man.in@1.2 +10 -2865
+    NTP_4_2_7P296
+
+  ntpd/ntp.conf.mdoc.in@1.2 +5 -2694
+    NTP_4_2_7P296
+
+  ntpd/ntp.keys.5man@1.2 +9 -109
+    NTP_4_2_7P296
+
+  ntpd/ntp.keys.5mdoc@1.2 +4 -103
+    NTP_4_2_7P296
+
+  ntpd/ntp.keys.man.in@1.2 +9 -109
+    NTP_4_2_7P296
+
+  ntpd/ntp.keys.mdoc.in@1.2 +4 -103
+    NTP_4_2_7P296
+
+  ntpd/ntpd-opts.c@1.303 +4 -4
+    NTP_4_2_7P296
+
+  ntpd/ntpd-opts.h@1.303 +3 -3
+    NTP_4_2_7P296
+
+  ntpd/ntpd.1ntpdman@1.114 +29 -573
+    NTP_4_2_7P296
+
+  ntpd/ntpd.1ntpdmdoc@1.114 +5 -548
+    NTP_4_2_7P296
+
+  ntpd/ntpd.man.in@1.114 +29 -573
+    NTP_4_2_7P296
+
+  ntpd/ntpd.mdoc.in@1.114 +5 -548
+    NTP_4_2_7P296
+
+  ntpdc/invoke-ntpdc.texi@1.282 +56 -5
+    NTP_4_2_7P296
+
+  ntpdc/ntpdc-opts.c@1.297 +4 -4
+    NTP_4_2_7P296
+
+  ntpdc/ntpdc-opts.h@1.297 +3 -3
+    NTP_4_2_7P296
+
+  ntpdc/ntpdc.1ntpdcman@1.113 +22 -723
+    NTP_4_2_7P296
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.113 +4 -660
+    NTP_4_2_7P296
+
+  ntpdc/ntpdc.html@1.125 +150 -119
+    NTP_4_2_7P296
+
+  ntpdc/ntpdc.man.in@1.113 +22 -723
+    NTP_4_2_7P296
+
+  ntpdc/ntpdc.mdoc.in@1.113 +4 -660
+    NTP_4_2_7P296
+
+  ntpq/invoke-ntpq.texi@1.284 +47 -5
+    NTP_4_2_7P296
+
+  ntpq/ntpq-opts.c@1.299 +4 -4
+    NTP_4_2_7P296
+
+  ntpq/ntpq-opts.h@1.299 +3 -3
+    NTP_4_2_7P296
+
+  ntpq/ntpq.1ntpqman@1.113 +21 -279
+    NTP_4_2_7P296
+
+  ntpq/ntpq.1ntpqmdoc@1.113 +3 -246
+    NTP_4_2_7P296
+
+  ntpq/ntpq.man.in@1.113 +21 -279
+    NTP_4_2_7P296
+
+  ntpq/ntpq.mdoc.in@1.113 +3 -246
+    NTP_4_2_7P296
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.284 +31 -5
+    NTP_4_2_7P296
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.299 +4 -4
+    NTP_4_2_7P296
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.299 +3 -3
+    NTP_4_2_7P296
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.113 +21 -22
+    NTP_4_2_7P296
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.113 +3 -4
+    NTP_4_2_7P296
+
+  ntpsnmpd/ntpsnmpd.man.in@1.113 +21 -22
+    NTP_4_2_7P296
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.113 +3 -4
+    NTP_4_2_7P296
+
+  packageinfo.sh@1.299 +1 -1
+    NTP_4_2_7P296
+
+  scripts/invoke-ntp-wait.texi@1.102 +19 -5
+    NTP_4_2_7P296
+
+  scripts/ntp-wait.1ntp-waitman@1.113 +13 -29
+    NTP_4_2_7P296
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.113 +3 -19
+    NTP_4_2_7P296
+
+  scripts/ntp-wait.html@1.117 +54 -61
+    NTP_4_2_7P296
+
+  scripts/ntp-wait.man.in@1.113 +13 -29
+    NTP_4_2_7P296
+
+  scripts/ntp-wait.mdoc.in@1.113 +3 -19
+    NTP_4_2_7P296
+
+  sntp/invoke-sntp.texi@1.280 +7 -5
+    NTP_4_2_7P296
+
+  sntp/sntp-opts.c@1.295 +4 -4
+    NTP_4_2_7P296
+
+  sntp/sntp-opts.h@1.295 +3 -3
+    NTP_4_2_7P296
+
+  sntp/sntp.1sntpman@1.115 +69 -131
+    NTP_4_2_7P296
+
+  sntp/sntp.1sntpmdoc@1.115 +4 -66
+    NTP_4_2_7P296
+
+  sntp/sntp.html@1.295 +99 -123
+    NTP_4_2_7P296
+
+  sntp/sntp.man.in@1.115 +69 -131
+    NTP_4_2_7P296
+
+  sntp/sntp.mdoc.in@1.115 +4 -66
+    NTP_4_2_7P296
+
+  util/invoke-ntp-keygen.texi@1.285 +52 -5
+    NTP_4_2_7P296
+
+  util/ntp-keygen-opts.c@1.299 +4 -4
+    NTP_4_2_7P296
+
+  util/ntp-keygen-opts.h@1.299 +3 -3
+    NTP_4_2_7P296
+
+  util/ntp-keygen.1ntp-keygenman@1.113 +34 -750
+    NTP_4_2_7P296
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.113 +5 -707
+    NTP_4_2_7P296
+
+  util/ntp-keygen.man.in@1.113 +34 -750
+    NTP_4_2_7P296
+
+  util/ntp-keygen.mdoc.in@1.113 +5 -707
+    NTP_4_2_7P296
+
+ChangeSet@1.2788, 2012-08-30 22:01:12-04:00, stenn@deacon.udel.edu
+  Potential bugfix for agtexi-cmd.tpl
+
+  ChangeLog@1.1158 +1 -0
+    Potential bugfix for agtexi-cmd.tpl
+
+  sntp/ag-tpl/agtexi-cmd.tpl@1.1 +884 -0
+    BitKeeper file /deacon/backroom/ntp-dev-autogen/sntp/ag-tpl/agtexi-cmd.tpl
+
+  sntp/ag-tpl/agtexi-cmd.tpl@1.0 +0 -0
+
+ChangeSet@1.2787, 2012-08-30 21:48:02-04:00, stenn@deacon.udel.edu
+  Begin support for autogen maintaining ntp.conf and ntp.keys docs
+
+  .point-changed-filelist@1.14 +15 -7
+    Begin support for autogen maintaining ntp.conf and ntp.keys docs
+
+ChangeSet@1.2786, 2012-08-30 20:44:10-04:00, stenn@psp-deb1.ntp.org
+  Begin support for autogen maintaining ntp.conf and ntp.keys docs
+
+  ChangeLog@1.1157 +1 -0
+    Begin support for autogen maintaining ntp.conf and ntp.keys docs
+
+  ntpd/ntp.conf.5man@1.1 +2915 -0
+    BitKeeper file /home/stenn/ntp-dev-autogen/ntpd/ntp.conf.5man
+
+  ntpd/ntp.conf.5man@1.0 +0 -0
+
+  ntpd/ntp.conf.5mdoc@1.1 +2749 -0
+    BitKeeper file /home/stenn/ntp-dev-autogen/ntpd/ntp.conf.5mdoc
+
+  ntpd/ntp.conf.5mdoc@1.0 +0 -0
+
+  ntpd/ntp.conf.def@1.1 +2746 -0
+    BitKeeper file /home/stenn/ntp-dev-autogen/ntpd/ntp.conf.def
+
+  ntpd/ntp.conf.def@1.0 +0 -0
+
+  ntpd/ntp.conf.man.in@1.1 +2915 -0
+    BitKeeper file /home/stenn/ntp-dev-autogen/ntpd/ntp.conf.man.in
+
+  ntpd/ntp.conf.man.in@1.0 +0 -0
+
+  ntpd/ntp.conf.mdoc.in@1.1 +2749 -0
+    BitKeeper file /home/stenn/ntp-dev-autogen/ntpd/ntp.conf.mdoc.in
+
+  ntpd/ntp.conf.mdoc.in@1.0 +0 -0
+
+  ntpd/ntp.keys.5man@1.1 +160 -0
+    BitKeeper file /home/stenn/ntp-dev-autogen/ntpd/ntp.keys.5man
+
+  ntpd/ntp.keys.5man@1.0 +0 -0
+
+  ntpd/ntp.keys.5mdoc@1.1 +159 -0
+    BitKeeper file /home/stenn/ntp-dev-autogen/ntpd/ntp.keys.5mdoc
+
+  ntpd/ntp.keys.5mdoc@1.0 +0 -0
+
+  ntpd/ntp.keys.man.in@1.1 +160 -0
+    BitKeeper file /home/stenn/ntp-dev-autogen/ntpd/ntp.keys.man.in
+
+  ntpd/ntp.keys.man.in@1.0 +0 -0
+
+  ntpd/ntp.keys.mdoc.in@1.1 +159 -0
+    BitKeeper file /home/stenn/ntp-dev-autogen/ntpd/ntp.keys.mdoc.in
+
+  ntpd/ntp.keys.mdoc.in@1.0 +0 -0
+
+ChangeSet@1.2785, 2012-08-12 04:33:15+00:00, stenn@psp-fb1.ntp.org
+  Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  ChangeLog@1.1156 +1 -1
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  ntpd/invoke-ntpd.texi@1.284 +360 -132
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  ntpd/ntpd-opts.c@1.302 +309 -261
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  ntpd/ntpd-opts.h@1.302 +12 -5
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  ntpd/ntpd.1ntpdman@1.113 +43 -43
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  ntpd/ntpd.1ntpdmdoc@1.113 +13 -9
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  ntpd/ntpd.man.in@1.113 +43 -43
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  ntpd/ntpd.mdoc.in@1.113 +13 -9
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  ntpd/ntpdsim-opts.c@1.20 +112 -53
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  ntpd/ntpdsim-opts.h@1.20 +24 -11
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  ntpdc/invoke-ntpdc.texi@1.281 +421 -72
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  ntpdc/ntpdc-opts.c@1.296 +172 -124
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  ntpdc/ntpdc-opts.h@1.296 +13 -5
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  ntpdc/ntpdc.1ntpdcman@1.112 +28 -21
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.112 +13 -6
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  ntpdc/ntpdc.html@1.124 +1108 -189
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  ntpdc/ntpdc.man.in@1.112 +28 -21
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  ntpdc/ntpdc.mdoc.in@1.112 +13 -6
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  ntpq/invoke-ntpq.texi@1.283 +285 -237
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  ntpq/ntpq-opts.c@1.298 +165 -119
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  ntpq/ntpq-opts.h@1.298 +13 -5
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  ntpq/ntpq.1ntpqman@1.112 +22 -15
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  ntpq/ntpq.1ntpqmdoc@1.112 +15 -8
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  ntpq/ntpq.man.in@1.112 +22 -15
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  ntpq/ntpq.mdoc.in@1.112 +15 -8
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.283 +5 -29
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.298 +125 -81
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.298 +13 -5
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.112 +10 -3
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.112 +13 -6
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  ntpsnmpd/ntpsnmpd.man.in@1.112 +10 -3
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.112 +13 -6
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  scripts/invoke-ntp-wait.texi@1.101 +21 -24
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  scripts/ntp-wait.1ntp-waitman@1.112 +6 -6
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.112 +6 -6
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  scripts/ntp-wait.html@1.116 +162 -37
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  scripts/ntp-wait.man.in@1.112 +6 -6
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  scripts/ntp-wait.mdoc.in@1.112 +6 -6
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  sntp/include/autogen-version.def@1.12 +1 -1
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  sntp/invoke-sntp.texi@1.279 +67 -59
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  sntp/libopts/Makefile.am@1.15 +4 -4
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  sntp/libopts/ag-char-map.h@1.18 +322 -308
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  sntp/libopts/alias.c@1.2 +2 -2
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  sntp/libopts/ao-strs.c@1.4 +52 -52
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  sntp/libopts/ao-strs.h@1.3 +206 -207
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  sntp/libopts/autoopts/options.h@1.17 +8 -7
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  sntp/libopts/autoopts/usage-txt.h@1.17 +185 -183
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  sntp/libopts/boolean.c@1.10 +4 -1
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  sntp/libopts/compat/compat.h@1.10 +4 -2
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  sntp/libopts/compat/pathfind.c@1.8 +2 -1
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  sntp/libopts/configfile.c@1.15 +7 -3
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  sntp/libopts/enum.c@1.4 +4 -1
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  sntp/libopts/env.c@1.4 +3 -1
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  sntp/libopts/find.c@1.4 +31 -18
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  sntp/libopts/genshell.c@1.18 +3 -3
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  sntp/libopts/genshell.h@1.18 +9 -3
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  sntp/libopts/load.c@1.13 +67 -63
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  sntp/libopts/m4/libopts.m4@1.21 +19 -19
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  sntp/libopts/makeshell.c@1.12 +96 -61
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  sntp/libopts/proto.h@1.18 +6 -6
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  sntp/libopts/reset.c@1.11 +4 -1
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  sntp/libopts/stack.c@1.10 +7 -2
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  sntp/libopts/time.c@1.10 +7 -1
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  sntp/libopts/value-type.h@1.18 +1 -1
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  sntp/libopts/version.c@1.11 +54 -51
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  sntp/libopts/xat-attribute.h@1.18 +1 -1
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  sntp/sntp-opts.c@1.294 +265 -195
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  sntp/sntp-opts.h@1.294 +13 -5
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  sntp/sntp.1sntpman@1.114 +39 -32
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  sntp/sntp.1sntpmdoc@1.114 +48 -35
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  sntp/sntp.html@1.294 +402 -252
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  sntp/sntp.man.in@1.114 +39 -32
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  sntp/sntp.mdoc.in@1.114 +48 -35
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  util/invoke-ntp-keygen.texi@1.284 +784 -497
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  util/ntp-keygen-opts.c@1.298 +238 -188
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  util/ntp-keygen-opts.h@1.298 +13 -5
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  util/ntp-keygen.1ntp-keygenman@1.112 +43 -36
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.112 +27 -19
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  util/ntp-keygen.man.in@1.112 +43 -36
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+  util/ntp-keygen.mdoc.in@1.112 +27 -19
+    Upgrade to autogen-5.16.2 and libopts-36.5.11
+
+ChangeSet@1.2773.1.76, 2012-08-11 11:33:27+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P295
   TAG: NTP_4_2_7P295
 
-  ChangeLog@1.1213 +1 -0
+  ChangeLog@1.1146.1.67 +1 -0
     NTP_4_2_7P295
 
   ntpd/ntpd-opts.c@1.301 +4 -4
@@ -11,7 +506,7 @@ ChangeSet@1.2849, 2012-08-11 11:33:27+00:00, stenn@deacon.udel.edu
   ntpd/ntpd-opts.h@1.301 +3 -3
     NTP_4_2_7P295
 
-  ntpd/ntpd-opts.texi@1.299 +2 -2
+  ntpd/ntpd-opts.texi@1.275.5.6 +2 -2
     NTP_4_2_7P295
 
   ntpd/ntpd.1ntpdman@1.112 +2 -2
@@ -32,7 +527,7 @@ ChangeSet@1.2849, 2012-08-11 11:33:27+00:00, stenn@deacon.udel.edu
   ntpdc/ntpdc-opts.h@1.295 +3 -3
     NTP_4_2_7P295
 
-  ntpdc/ntpdc-opts.texi@1.295 +2 -2
+  ntpdc/ntpdc-opts.texi@1.272.5.5 +2 -2
     NTP_4_2_7P295
 
   ntpdc/ntpdc.1ntpdcman@1.111 +2 -2
@@ -56,7 +551,7 @@ ChangeSet@1.2849, 2012-08-11 11:33:27+00:00, stenn@deacon.udel.edu
   ntpq/ntpq-opts.h@1.297 +3 -3
     NTP_4_2_7P295
 
-  ntpq/ntpq-opts.texi@1.297 +2 -2
+  ntpq/ntpq-opts.texi@1.274.5.5 +2 -2
     NTP_4_2_7P295
 
   ntpq/ntpq.1ntpqman@1.111 +2 -2
@@ -77,7 +572,7 @@ ChangeSet@1.2849, 2012-08-11 11:33:27+00:00, stenn@deacon.udel.edu
   ntpsnmpd/ntpsnmpd-opts.h@1.297 +3 -3
     NTP_4_2_7P295
 
-  ntpsnmpd/ntpsnmpd-opts.texi@1.297 +2 -2
+  ntpsnmpd/ntpsnmpd-opts.texi@1.274.5.5 +2 -2
     NTP_4_2_7P295
 
   ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.111 +2 -2
@@ -95,7 +590,7 @@ ChangeSet@1.2849, 2012-08-11 11:33:27+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.298 +1 -1
     NTP_4_2_7P295
 
-  scripts/ntp-wait-opts.texi@1.115 +14 -2
+  scripts/ntp-wait-opts.texi@1.92.5.5 +14 -2
     NTP_4_2_7P295
 
   scripts/ntp-wait.1ntp-waitman@1.111 +2 -2
@@ -119,7 +614,7 @@ ChangeSet@1.2849, 2012-08-11 11:33:27+00:00, stenn@deacon.udel.edu
   sntp/sntp-opts.h@1.293 +3 -3
     NTP_4_2_7P295
 
-  sntp/sntp-opts.texi@1.293 +2 -2
+  sntp/sntp-opts.texi@1.270.5.5 +2 -2
     NTP_4_2_7P295
 
   sntp/sntp.1sntpman@1.113 +2 -2
@@ -143,7 +638,7 @@ ChangeSet@1.2849, 2012-08-11 11:33:27+00:00, stenn@deacon.udel.edu
   util/ntp-keygen-opts.h@1.297 +3 -3
     NTP_4_2_7P295
 
-  util/ntp-keygen-opts.texi@1.298 +2 -2
+  util/ntp-keygen-opts.texi@1.275.5.5 +2 -2
     NTP_4_2_7P295
 
   util/ntp-keygen.1ntp-keygenman@1.111 +2 -2
@@ -158,10 +653,10 @@ ChangeSet@1.2849, 2012-08-11 11:33:27+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.111 +2 -2
     NTP_4_2_7P295
 
-ChangeSet@1.2848, 2012-08-11 04:28:13-04:00, stenn@psp-deb1.ntp.org
+ChangeSet@1.2773.1.75, 2012-08-11 04:28:13-04:00, stenn@psp-deb1.ntp.org
   Look for syslog's facilitynames[]
 
-  ChangeLog@1.1212 +1 -0
+  ChangeLog@1.1146.1.66 +1 -0
     Look for syslog's facilitynames[]
 
   configure.ac@1.550 +2 -0
@@ -175,11 +670,11 @@ ChangeSet@1.2848, 2012-08-11 04:28:13-04:00, stenn@psp-deb1.ntp.org
 
   sntp/m4/ntp_facilitynames.m4@1.0 +0 -0
 
-ChangeSet@1.2847, 2012-08-08 11:38:03+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2773.1.74, 2012-08-08 11:38:03+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P294
   TAG: NTP_4_2_7P294
 
-  ChangeLog@1.1211 +1 -0
+  ChangeLog@1.1146.1.65 +1 -0
     NTP_4_2_7P294
 
   ntpd/ntpd-opts.c@1.300 +4 -4
@@ -188,7 +683,7 @@ ChangeSet@1.2847, 2012-08-08 11:38:03+00:00, stenn@deacon.udel.edu
   ntpd/ntpd-opts.h@1.300 +3 -3
     NTP_4_2_7P294
 
-  ntpd/ntpd-opts.texi@1.298 +2 -2
+  ntpd/ntpd-opts.texi@1.275.5.5 +2 -2
     NTP_4_2_7P294
 
   ntpd/ntpd.1ntpdman@1.111 +2 -2
@@ -209,7 +704,7 @@ ChangeSet@1.2847, 2012-08-08 11:38:03+00:00, stenn@deacon.udel.edu
   ntpdc/ntpdc-opts.h@1.294 +3 -3
     NTP_4_2_7P294
 
-  ntpdc/ntpdc-opts.texi@1.294 +2 -2
+  ntpdc/ntpdc-opts.texi@1.272.5.4 +2 -2
     NTP_4_2_7P294
 
   ntpdc/ntpdc.1ntpdcman@1.110 +2 -2
@@ -233,7 +728,7 @@ ChangeSet@1.2847, 2012-08-08 11:38:03+00:00, stenn@deacon.udel.edu
   ntpq/ntpq-opts.h@1.296 +3 -3
     NTP_4_2_7P294
 
-  ntpq/ntpq-opts.texi@1.296 +2 -2
+  ntpq/ntpq-opts.texi@1.274.5.4 +2 -2
     NTP_4_2_7P294
 
   ntpq/ntpq.1ntpqman@1.110 +2 -2
@@ -254,7 +749,7 @@ ChangeSet@1.2847, 2012-08-08 11:38:03+00:00, stenn@deacon.udel.edu
   ntpsnmpd/ntpsnmpd-opts.h@1.296 +3 -3
     NTP_4_2_7P294
 
-  ntpsnmpd/ntpsnmpd-opts.texi@1.296 +2 -2
+  ntpsnmpd/ntpsnmpd-opts.texi@1.274.5.4 +2 -2
     NTP_4_2_7P294
 
   ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.110 +2 -2
@@ -272,7 +767,7 @@ ChangeSet@1.2847, 2012-08-08 11:38:03+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.297 +1 -1
     NTP_4_2_7P294
 
-  scripts/ntp-wait-opts.texi@1.114 +1 -1
+  scripts/ntp-wait-opts.texi@1.92.5.4 +1 -1
     NTP_4_2_7P294
 
   scripts/ntp-wait.1ntp-waitman@1.110 +2 -2
@@ -296,7 +791,7 @@ ChangeSet@1.2847, 2012-08-08 11:38:03+00:00, stenn@deacon.udel.edu
   sntp/sntp-opts.h@1.292 +3 -3
     NTP_4_2_7P294
 
-  sntp/sntp-opts.texi@1.292 +2 -2
+  sntp/sntp-opts.texi@1.270.5.4 +2 -2
     NTP_4_2_7P294
 
   sntp/sntp.1sntpman@1.112 +2 -2
@@ -320,7 +815,7 @@ ChangeSet@1.2847, 2012-08-08 11:38:03+00:00, stenn@deacon.udel.edu
   util/ntp-keygen-opts.h@1.296 +3 -3
     NTP_4_2_7P294
 
-  util/ntp-keygen-opts.texi@1.297 +2 -2
+  util/ntp-keygen-opts.texi@1.275.5.4 +2 -2
     NTP_4_2_7P294
 
   util/ntp-keygen.1ntp-keygenman@1.110 +2 -2
@@ -335,12 +830,12 @@ ChangeSet@1.2847, 2012-08-08 11:38:03+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.110 +2 -2
     NTP_4_2_7P294
 
-ChangeSet@1.2844.1.5, 2012-08-06 04:22:39+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2773.4.5, 2012-08-06 04:22:39+00:00, davehart@dlh-7551.ad.hartbrothers.com
   Attempt to resolve strict-aliasing violation in refclock_tsyncpci.c.
   Force prior config.cache files to be flushed due to [Bug 2242] fix
     invalidating getifaddrs() cached result.
 
-  ChangeLog@1.1208.1.4 +1 -0
+  ChangeLog@1.1146.4.4 +1 -0
     Attempt to resolve strict-aliasing violation in refclock_tsyncpci.c.
 
   configure.ac@1.549 +1 -1
@@ -354,25 +849,25 @@ ChangeSet@1.2844.1.5, 2012-08-06 04:22:39+00:00, davehart@dlh-7551.ad.hartbrothe
     Force prior config.cache files to be flushed due to [Bug 2242] fix
       invalidating getifaddrs() cached result.
 
-ChangeSet@1.2844.1.4, 2012-08-05 21:15:00+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2773.4.4, 2012-08-05 21:15:00+00:00, davehart@dlh-7551.ad.hartbrothers.com
   [Bug 2242] configure fails to detect getifaddrs function on Solaris.
 
-  ChangeLog@1.1208.1.3 +1 -0
+  ChangeLog@1.1146.4.3 +1 -0
     [Bug 2242] configure fails to detect getifaddrs function on Solaris.
 
   sntp/m4/ntp_ipv6.m4@1.7 +7 -3
     [Bug 2242] configure fails to detect getifaddrs function on Solaris.
 
-ChangeSet@1.2844.1.3, 2012-08-05 21:04:38+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2773.4.3, 2012-08-05 21:04:38+00:00, davehart@dlh-7551.ad.hartbrothers.com
   [Bug 2252] palisade: formats nanosecs to a 6-char field.
 
-  ChangeLog@1.1208.1.2 +1 -0
+  ChangeLog@1.1146.4.2 +1 -0
     [Bug 2252] palisade: formats nanosecs to a 6-char field.
 
   ntpd/refclock_palisade.c@1.38.1.1 +5 -5
     [Bug 2252] palisade: formats nanosecs to a 6-char field.
 
-ChangeSet@1.2844.1.2, 2012-08-05 20:48:27+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2773.4.2, 2012-08-05 20:48:27+00:00, davehart@dlh-7551.ad.hartbrothers.com
   Remove unneeded \ line continuation in ntp_config.c if condition.
   Use INSIST() instead of equivalent NTP_INSIST in a few places.
 
@@ -380,29 +875,29 @@ ChangeSet@1.2844.1.2, 2012-08-05 20:48:27+00:00, davehart@dlh-7551.ad.hartbrothe
     Remove unneeded \ line continuation in ntp_config.c if condition.
     Use INSIST() instead of equivalent NTP_INSIST in a few places.
 
-ChangeSet@1.2844.1.1, 2012-08-05 19:09:38+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2773.4.1, 2012-08-05 19:09:38+00:00, davehart@dlh-7551.ad.hartbrothers.com
   [Bug 2249] Bad operator for 'test' in 'make check' of libevent.
 
-  ChangeLog@1.1208.1.1 +1 -0
+  ChangeLog@1.1146.4.1 +1 -0
     [Bug 2249] Bad operator for 'test' in 'make check' of libevent.
 
   sntp/libevent/test/test.sh@1.6 +1 -1
     [Bug 2249] Bad operator for 'test' in 'make check' of libevent.
 
-ChangeSet@1.2845, 2012-08-05 05:03:59-04:00, stenn@psp-deb1.ntp.org
+ChangeSet@1.2773.1.72, 2012-08-05 05:03:59-04:00, stenn@psp-deb1.ntp.org
   Fix && -> & typo in refclock_palisade.c debug statements
 
-  ChangeLog@1.1209 +1 -0
+  ChangeLog@1.1146.1.63 +1 -0
     Fix && -> & typo in refclock_palisade.c debug statements
 
   ntpd/refclock_palisade.c@1.39 +5 -5
     Fix && -> & typo in refclock_palisade.c debug statements
 
-ChangeSet@1.2844, 2012-08-04 11:34:07+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2773.1.71, 2012-08-04 11:34:07+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P293
   TAG: NTP_4_2_7P293
 
-  ChangeLog@1.1208 +1 -0
+  ChangeLog@1.1146.1.62 +1 -0
     NTP_4_2_7P293
 
   ntpd/ntpd-opts.c@1.299 +4 -4
@@ -411,7 +906,7 @@ ChangeSet@1.2844, 2012-08-04 11:34:07+00:00, stenn@deacon.udel.edu
   ntpd/ntpd-opts.h@1.299 +3 -3
     NTP_4_2_7P293
 
-  ntpd/ntpd-opts.texi@1.297 +2 -2
+  ntpd/ntpd-opts.texi@1.275.5.4 +2 -2
     NTP_4_2_7P293
 
   ntpd/ntpd.1ntpdman@1.110 +2 -2
@@ -432,7 +927,7 @@ ChangeSet@1.2844, 2012-08-04 11:34:07+00:00, stenn@deacon.udel.edu
   ntpdc/ntpdc-opts.h@1.293 +3 -3
     NTP_4_2_7P293
 
-  ntpdc/ntpdc-opts.texi@1.293 +2 -2
+  ntpdc/ntpdc-opts.texi@1.272.5.3 +2 -2
     NTP_4_2_7P293
 
   ntpdc/ntpdc.1ntpdcman@1.109 +2 -2
@@ -456,7 +951,7 @@ ChangeSet@1.2844, 2012-08-04 11:34:07+00:00, stenn@deacon.udel.edu
   ntpq/ntpq-opts.h@1.295 +3 -3
     NTP_4_2_7P293
 
-  ntpq/ntpq-opts.texi@1.295 +2 -2
+  ntpq/ntpq-opts.texi@1.274.5.3 +2 -2
     NTP_4_2_7P293
 
   ntpq/ntpq.1ntpqman@1.109 +2 -2
@@ -477,7 +972,7 @@ ChangeSet@1.2844, 2012-08-04 11:34:07+00:00, stenn@deacon.udel.edu
   ntpsnmpd/ntpsnmpd-opts.h@1.295 +3 -3
     NTP_4_2_7P293
 
-  ntpsnmpd/ntpsnmpd-opts.texi@1.295 +2 -2
+  ntpsnmpd/ntpsnmpd-opts.texi@1.274.5.3 +2 -2
     NTP_4_2_7P293
 
   ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.109 +2 -2
@@ -495,7 +990,7 @@ ChangeSet@1.2844, 2012-08-04 11:34:07+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.296 +1 -1
     NTP_4_2_7P293
 
-  scripts/ntp-wait-opts.texi@1.113 +1 -1
+  scripts/ntp-wait-opts.texi@1.92.5.3 +1 -1
     NTP_4_2_7P293
 
   scripts/ntp-wait.1ntp-waitman@1.109 +2 -2
@@ -519,7 +1014,7 @@ ChangeSet@1.2844, 2012-08-04 11:34:07+00:00, stenn@deacon.udel.edu
   sntp/sntp-opts.h@1.291 +3 -3
     NTP_4_2_7P293
 
-  sntp/sntp-opts.texi@1.291 +2 -2
+  sntp/sntp-opts.texi@1.270.5.3 +2 -2
     NTP_4_2_7P293
 
   sntp/sntp.1sntpman@1.111 +2 -2
@@ -543,7 +1038,7 @@ ChangeSet@1.2844, 2012-08-04 11:34:07+00:00, stenn@deacon.udel.edu
   util/ntp-keygen-opts.h@1.295 +3 -3
     NTP_4_2_7P293
 
-  util/ntp-keygen-opts.texi@1.296 +2 -2
+  util/ntp-keygen-opts.texi@1.275.5.3 +2 -2
     NTP_4_2_7P293
 
   util/ntp-keygen.1ntp-keygenman@1.109 +2 -2
@@ -558,19 +1053,19 @@ ChangeSet@1.2844, 2012-08-04 11:34:07+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.109 +2 -2
     NTP_4_2_7P293
 
-ChangeSet@1.2843, 2012-08-03 23:15:30-04:00, stenn@psp-deb1.ntp.org
+ChangeSet@1.2773.1.70, 2012-08-03 23:15:30-04:00, stenn@psp-deb1.ntp.org
   Cleanup kclk_sel240x.o rules in libparse/Makefile.am
 
-  ChangeLog@1.1207 +1 -0
+  ChangeLog@1.1146.1.61 +1 -0
     Cleanup kclk_sel240x.o rules in libparse/Makefile.am
 
   libparse/Makefile.am@1.30 +1 -4
     Cleanup kclk_sel240x.o rules in libparse/Makefile.am
 
-ChangeSet@1.2842, 2012-08-03 23:11:04-04:00, stenn@psp-deb1.ntp.org
+ChangeSet@1.2773.1.69, 2012-08-03 23:11:04-04:00, stenn@psp-deb1.ntp.org
   Documentation cleanup from Mike T.
 
-  ChangeLog@1.1206 +1 -0
+  ChangeLog@1.1146.1.60 +1 -0
     Documentation cleanup from Mike T.
 
   html/authentic.html@1.10 +2 -2
@@ -585,13 +1080,13 @@ ChangeSet@1.2842, 2012-08-03 23:11:04-04:00, stenn@psp-deb1.ntp.org
   html/miscopt.html@1.69 +2 -2
     Documentation cleanup from Mike T.
 
-ChangeSet@1.2841, 2012-08-03 02:51:04-04:00, stenn@psp-deb1.ntp.org
+ChangeSet@1.2773.1.68, 2012-08-03 02:51:04-04:00, stenn@psp-deb1.ntp.org
   [Bug 2247] (more) Get rid of the TRAK refclock - deprecated since 2006.
 
   BitKeeper/deleted/55/driver2.htm~3aed0663@1.14 +0 -0
     Delete: html/drivers/driver2.html
 
-  ChangeLog@1.1205 +1 -0
+  ChangeLog@1.1146.1.59 +1 -0
     [Bug 2247] (more) Get rid of the TRAK refclock - deprecated since 2006.
 
   html/refclock.html@1.36 +0 -1
@@ -603,11 +1098,11 @@ ChangeSet@1.2841, 2012-08-03 02:51:04-04:00, stenn@psp-deb1.ntp.org
   ntpd/refclock_conf.c@1.33 +0 -6
     [Bug 2247] (more) Get rid of the TRAK refclock - deprecated since 2006.
 
-ChangeSet@1.2840, 2012-08-02 11:34:20+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2773.1.67, 2012-08-02 11:34:20+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P292
   TAG: NTP_4_2_7P292
 
-  ChangeLog@1.1204 +1 -0
+  ChangeLog@1.1146.1.58 +1 -0
     NTP_4_2_7P292
 
   ntpd/ntpd-opts.c@1.298 +4 -4
@@ -616,7 +1111,7 @@ ChangeSet@1.2840, 2012-08-02 11:34:20+00:00, stenn@deacon.udel.edu
   ntpd/ntpd-opts.h@1.298 +3 -3
     NTP_4_2_7P292
 
-  ntpd/ntpd-opts.texi@1.296 +2 -2
+  ntpd/ntpd-opts.texi@1.275.5.3 +2 -2
     NTP_4_2_7P292
 
   ntpd/ntpd.1ntpdman@1.109 +2 -2
@@ -637,7 +1132,7 @@ ChangeSet@1.2840, 2012-08-02 11:34:20+00:00, stenn@deacon.udel.edu
   ntpdc/ntpdc-opts.h@1.292 +3 -3
     NTP_4_2_7P292
 
-  ntpdc/ntpdc-opts.texi@1.292 +2 -2
+  ntpdc/ntpdc-opts.texi@1.272.5.2 +2 -2
     NTP_4_2_7P292
 
   ntpdc/ntpdc.1ntpdcman@1.108 +2 -2
@@ -661,7 +1156,7 @@ ChangeSet@1.2840, 2012-08-02 11:34:20+00:00, stenn@deacon.udel.edu
   ntpq/ntpq-opts.h@1.294 +3 -3
     NTP_4_2_7P292
 
-  ntpq/ntpq-opts.texi@1.294 +2 -2
+  ntpq/ntpq-opts.texi@1.274.5.2 +2 -2
     NTP_4_2_7P292
 
   ntpq/ntpq.1ntpqman@1.108 +2 -2
@@ -682,7 +1177,7 @@ ChangeSet@1.2840, 2012-08-02 11:34:20+00:00, stenn@deacon.udel.edu
   ntpsnmpd/ntpsnmpd-opts.h@1.294 +3 -3
     NTP_4_2_7P292
 
-  ntpsnmpd/ntpsnmpd-opts.texi@1.294 +2 -2
+  ntpsnmpd/ntpsnmpd-opts.texi@1.274.5.2 +2 -2
     NTP_4_2_7P292
 
   ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.108 +2 -2
@@ -700,7 +1195,7 @@ ChangeSet@1.2840, 2012-08-02 11:34:20+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.295 +1 -1
     NTP_4_2_7P292
 
-  scripts/ntp-wait-opts.texi@1.112 +1 -1
+  scripts/ntp-wait-opts.texi@1.92.5.2 +1 -1
     NTP_4_2_7P292
 
   scripts/ntp-wait.1ntp-waitman@1.108 +2 -2
@@ -724,7 +1219,7 @@ ChangeSet@1.2840, 2012-08-02 11:34:20+00:00, stenn@deacon.udel.edu
   sntp/sntp-opts.h@1.290 +3 -3
     NTP_4_2_7P292
 
-  sntp/sntp-opts.texi@1.290 +2 -2
+  sntp/sntp-opts.texi@1.270.5.2 +2 -2
     NTP_4_2_7P292
 
   sntp/sntp.1sntpman@1.110 +2 -2
@@ -748,7 +1243,7 @@ ChangeSet@1.2840, 2012-08-02 11:34:20+00:00, stenn@deacon.udel.edu
   util/ntp-keygen-opts.h@1.294 +3 -3
     NTP_4_2_7P292
 
-  util/ntp-keygen-opts.texi@1.295 +2 -2
+  util/ntp-keygen-opts.texi@1.275.5.2 +2 -2
     NTP_4_2_7P292
 
   util/ntp-keygen.1ntp-keygenman@1.108 +2 -2
@@ -763,34 +1258,34 @@ ChangeSet@1.2840, 2012-08-02 11:34:20+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.108 +2 -2
     NTP_4_2_7P292
 
-ChangeSet@1.2839, 2012-08-02 06:48:06-04:00, stenn@deacon.udel.edu
+ChangeSet@1.2773.1.66, 2012-08-02 06:48:06-04:00, stenn@deacon.udel.edu
    [Bug 1545] Note why we are logging the Version string
 
-  ChangeLog@1.1203 +1 -0
+  ChangeLog@1.1146.1.57 +1 -0
      [Bug 1545] Note why we are logging the Version string
 
   ntpd/ntpd.c@1.133 +1 -1
      [Bug 1545] Note why we are logging the Version string
 
-ChangeSet@1.2838, 2012-08-02 04:41:05-04:00, stenn@deacon.udel.edu
+ChangeSet@1.2773.1.65, 2012-08-02 04:41:05-04:00, stenn@deacon.udel.edu
   [Bug 2247] Get rid of the TRAK refclock - deprecated since 2006
 
   BitKeeper/deleted/50/refclock_trak.c~3aed0663@1.12 +0 -0
     Delete: ntpd/refclock_trak.c
 
-  ChangeLog@1.1202 +1 -0
+  ChangeLog@1.1146.1.56 +1 -0
     [Bug 2247] Get rid of the TRAK refclock - deprecated since 2006
 
   configure.ac@1.548 +0 -11
     [Bug 2247] Get rid of the TRAK refclock - deprecated since 2006
 
-  ntpd/Makefile.am@1.116 +0 -1
+  ntpd/Makefile.am@1.112.1.4 +0 -1
     [Bug 2247] Get rid of the TRAK refclock - deprecated since 2006
 
-ChangeSet@1.2837, 2012-08-02 04:35:10-04:00, stenn@deacon.udel.edu
+ChangeSet@1.2773.1.64, 2012-08-02 04:35:10-04:00, stenn@deacon.udel.edu
   [Bug 1872] Remove legacy ppsclock fdpps, #ifdef PPS
 
-  ChangeLog@1.1201 +1 -0
+  ChangeLog@1.1146.1.55 +1 -0
     [Bug 1872] Remove legacy ppsclock fdpps, #ifdef PPS
 
   ntpd/ntp_refclock.c@1.116 +1 -6
@@ -799,19 +1294,19 @@ ChangeSet@1.2837, 2012-08-02 04:35:10-04:00, stenn@deacon.udel.edu
   ntpd/refclock_zyfer.c@1.10 +1 -18
     [Bug 1872] Remove legacy ppsclock fdpps, #ifdef PPS
 
-ChangeSet@1.2836, 2012-08-02 02:32:58-04:00, stenn@deacon.udel.edu
+ChangeSet@1.2773.1.63, 2012-08-02 02:32:58-04:00, stenn@deacon.udel.edu
   Clean up an exit status in ntpq.c
 
-  ChangeLog@1.1200 +1 -0
+  ChangeLog@1.1146.1.54 +1 -0
     Clean up an exit status in ntpq.c
 
   ntpq/ntpq.c@1.148 +1 -1
     Clean up an exit status in ntpq.c
 
-ChangeSet@1.2835, 2012-08-01 21:26:07-04:00, stenn@psp-deb1.ntp.org
+ChangeSet@1.2773.1.62, 2012-08-01 21:26:07-04:00, stenn@psp-deb1.ntp.org
   [Bug 2075] Fix spelling of 'incompatible'
 
-  ChangeLog@1.1199 +1 -0
+  ChangeLog@1.1146.1.53 +1 -0
     [Bug 2075] Fix spelling of 'incompatible'
 
   include/ntp_request.h@1.47 +2 -2
@@ -820,11 +1315,11 @@ ChangeSet@1.2835, 2012-08-01 21:26:07-04:00, stenn@psp-deb1.ntp.org
   ntpdc/ntpdc.c@1.100 +1 -1
     [Bug 2075] Fix spelling of 'incompatible'
 
-ChangeSet@1.2834, 2012-07-31 11:34:59+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2773.1.61, 2012-07-31 11:34:59+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P291
   TAG: NTP_4_2_7P291
 
-  ChangeLog@1.1198 +1 -0
+  ChangeLog@1.1146.1.52 +1 -0
     NTP_4_2_7P291
 
   ntpd/ntpd-opts.c@1.297 +6 -6
@@ -833,7 +1328,7 @@ ChangeSet@1.2834, 2012-07-31 11:34:59+00:00, stenn@deacon.udel.edu
   ntpd/ntpd-opts.h@1.297 +3 -3
     NTP_4_2_7P291
 
-  ntpd/ntpd-opts.texi@1.295 +2 -2
+  ntpd/ntpd-opts.texi@1.275.5.2 +2 -2
     NTP_4_2_7P291
 
   ntpd/ntpd.1ntpdman@1.108 +548 -8
@@ -854,7 +1349,7 @@ ChangeSet@1.2834, 2012-07-31 11:34:59+00:00, stenn@deacon.udel.edu
   ntpdc/ntpdc-opts.h@1.291 +3 -3
     NTP_4_2_7P291
 
-  ntpdc/ntpdc-opts.texi@1.291 +2 -2
+  ntpdc/ntpdc-opts.texi@1.272.5.1 +2 -2
     NTP_4_2_7P291
 
   ntpdc/ntpdc.1ntpdcman@1.107 +2 -2
@@ -878,7 +1373,7 @@ ChangeSet@1.2834, 2012-07-31 11:34:59+00:00, stenn@deacon.udel.edu
   ntpq/ntpq-opts.h@1.293 +3 -3
     NTP_4_2_7P291
 
-  ntpq/ntpq-opts.texi@1.293 +2 -2
+  ntpq/ntpq-opts.texi@1.274.5.1 +2 -2
     NTP_4_2_7P291
 
   ntpq/ntpq.1ntpqman@1.107 +2 -2
@@ -899,7 +1394,7 @@ ChangeSet@1.2834, 2012-07-31 11:34:59+00:00, stenn@deacon.udel.edu
   ntpsnmpd/ntpsnmpd-opts.h@1.293 +3 -3
     NTP_4_2_7P291
 
-  ntpsnmpd/ntpsnmpd-opts.texi@1.293 +2 -2
+  ntpsnmpd/ntpsnmpd-opts.texi@1.274.5.1 +2 -2
     NTP_4_2_7P291
 
   ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.107 +2 -2
@@ -917,7 +1412,7 @@ ChangeSet@1.2834, 2012-07-31 11:34:59+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.294 +1 -1
     NTP_4_2_7P291
 
-  scripts/ntp-wait-opts.texi@1.111 +1 -1
+  scripts/ntp-wait-opts.texi@1.92.5.1 +1 -1
     NTP_4_2_7P291
 
   scripts/ntp-wait.1ntp-waitman@1.107 +2 -2
@@ -941,7 +1436,7 @@ ChangeSet@1.2834, 2012-07-31 11:34:59+00:00, stenn@deacon.udel.edu
   sntp/sntp-opts.h@1.289 +3 -3
     NTP_4_2_7P291
 
-  sntp/sntp-opts.texi@1.289 +2 -2
+  sntp/sntp-opts.texi@1.270.5.1 +2 -2
     NTP_4_2_7P291
 
   sntp/sntp.1sntpman@1.109 +2 -2
@@ -965,7 +1460,7 @@ ChangeSet@1.2834, 2012-07-31 11:34:59+00:00, stenn@deacon.udel.edu
   util/ntp-keygen-opts.h@1.293 +3 -3
     NTP_4_2_7P291
 
-  util/ntp-keygen-opts.texi@1.294 +2 -2
+  util/ntp-keygen-opts.texi@1.275.5.1 +2 -2
     NTP_4_2_7P291
 
   util/ntp-keygen.1ntp-keygenman@1.107 +2 -2
@@ -980,10 +1475,10 @@ ChangeSet@1.2834, 2012-07-31 11:34:59+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.107 +2 -2
     NTP_4_2_7P291
 
-ChangeSet@1.2833, 2012-07-27 15:12:58-04:00, utterback@pogo.udel.edu
+ChangeSet@1.2773.1.60, 2012-07-27 15:12:58-04:00, utterback@pogo.udel.edu
   [Bug 2241] New: MDNS registration should only happen if requested.
 
-  ChangeLog@1.1197 +1 -0
+  ChangeLog@1.1146.1.51 +1 -0
     [Bug 2241] New: MDNS registration should only happen if requested.
 
   html/ntpd.html@1.56 +2 -0
@@ -995,7 +1490,7 @@ ChangeSet@1.2833, 2012-07-27 15:12:58-04:00, utterback@pogo.udel.edu
   ntpd/ntpd-opts.h@1.296 +12 -5
     [Bug 2241] New: MDNS registration should only happen if requested.
 
-  ntpd/ntpd-opts.texi@1.294 +18 -2
+  ntpd/ntpd-opts.texi@1.275.5.1 +18 -2
     [Bug 2241] New: MDNS registration should only happen if requested.
 
   ntpd/ntpd.1ntpdman@1.107 +14 -548
@@ -1016,11 +1511,68 @@ ChangeSet@1.2833, 2012-07-27 15:12:58-04:00, utterback@pogo.udel.edu
   ntpd/ntpdbase-opts.def@1.23 +11 -0
     [Bug 2241] New: MDNS registration should only happen if requested.
 
-ChangeSet@1.2832, 2012-07-20 00:03:09+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2782, 2012-07-20 06:02:41-04:00, stenn@psp-deb1.ntp.org
+  Upgrade to autogen-5.16.1 and libopts-36.4.11
+
+  sntp/include/autogen-version.def@1.11 +1 -1
+    Upgrade to autogen-5.16.1 and libopts-36.4.11
+
+  sntp/libopts/Makefile.am@1.14, stenn@psp-fb1.ntp.org +5 -5
+    Upgrade to autogen-5.16 and libopts-36.4.11
+
+  sntp/libopts/ag-char-map.h@1.17, stenn@psp-fb1.ntp.org +295 -197
+    Upgrade to autogen-5.16 and libopts-36.4.11
+
+  sntp/libopts/ao-strs.c@1.3, stenn@psp-fb1.ntp.org +1 -1
+    Upgrade to autogen-5.16 and libopts-36.4.11
+
+  sntp/libopts/ao-strs.h@1.2, stenn@psp-fb1.ntp.org +1 -1
+    Upgrade to autogen-5.16 and libopts-36.4.11
+
+  sntp/libopts/autoopts/options.h@1.16, stenn@psp-fb1.ntp.org +1 -1
+    Upgrade to autogen-5.16 and libopts-36.4.11
+
+  sntp/libopts/autoopts/project.h@1.3, stenn@psp-fb1.ntp.org +0 -2
+    Upgrade to autogen-5.16 and libopts-36.4.11
+
+  sntp/libopts/autoopts/usage-txt.h@1.16, stenn@psp-fb1.ntp.org +1 -1
+    Upgrade to autogen-5.16 and libopts-36.4.11
+
+  sntp/libopts/compat/windows-config.h@1.9, stenn@psp-fb1.ntp.org +25 -14
+    Upgrade to autogen-5.16 and libopts-36.4.11
+
+  sntp/libopts/genshell.c@1.17, stenn@psp-fb1.ntp.org +41 -11
+    Upgrade to autogen-5.16 and libopts-36.4.11
+
+  sntp/libopts/genshell.h@1.17, stenn@psp-fb1.ntp.org +1 -1
+    Upgrade to autogen-5.16 and libopts-36.4.11
+
+  sntp/libopts/libopts.c@1.7, stenn@psp-fb1.ntp.org +0 -1
+    Upgrade to autogen-5.16 and libopts-36.4.11
+
+  sntp/libopts/m4/libopts.m4@1.20, stenn@psp-fb1.ntp.org +7 -7
+    Upgrade to autogen-5.16 and libopts-36.4.11
+
+  sntp/libopts/parse-duration.c@1.8, stenn@psp-fb1.ntp.org +7 -7
+    Upgrade to autogen-5.16 and libopts-36.4.11
+
+  sntp/libopts/parse-duration.h@1.7, stenn@psp-fb1.ntp.org +4 -4
+    Upgrade to autogen-5.16 and libopts-36.4.11
+
+  sntp/libopts/proto.h@1.17, stenn@psp-fb1.ntp.org +1 -1
+    Upgrade to autogen-5.16 and libopts-36.4.11
+
+  sntp/libopts/value-type.h@1.17, stenn@psp-fb1.ntp.org +1 -1
+    Upgrade to autogen-5.16 and libopts-36.4.11
+
+  sntp/libopts/xat-attribute.h@1.17, stenn@psp-fb1.ntp.org +1 -1
+    Upgrade to autogen-5.16 and libopts-36.4.11
+
+ChangeSet@1.2773.1.59, 2012-07-20 00:03:09+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P290
   TAG: NTP_4_2_7P290
 
-  ChangeLog@1.1196 +1 -0
+  ChangeLog@1.1146.1.50 +1 -0
     NTP_4_2_7P290
 
   ntpd/ntpd-opts.c@1.295 +4 -4
@@ -1029,7 +1581,7 @@ ChangeSet@1.2832, 2012-07-20 00:03:09+00:00, stenn@deacon.udel.edu
   ntpd/ntpd-opts.h@1.295 +3 -3
     NTP_4_2_7P290
 
-  ntpd/ntpd-opts.texi@1.293 +2 -2
+  ntpd/ntpd-opts.texi@1.275.4.6 +2 -2
     NTP_4_2_7P290
 
   ntpd/ntpd.1ntpdman@1.106 +2 -2
@@ -1050,7 +1602,7 @@ ChangeSet@1.2832, 2012-07-20 00:03:09+00:00, stenn@deacon.udel.edu
   ntpdc/ntpdc-opts.h@1.290 +3 -3
     NTP_4_2_7P290
 
-  ntpdc/ntpdc-opts.texi@1.290 +2 -2
+  ntpdc/ntpdc-opts.texi@1.272.4.6 +2 -2
     NTP_4_2_7P290
 
   ntpdc/ntpdc.1ntpdcman@1.106 +2 -2
@@ -1074,7 +1626,7 @@ ChangeSet@1.2832, 2012-07-20 00:03:09+00:00, stenn@deacon.udel.edu
   ntpq/ntpq-opts.h@1.292 +3 -3
     NTP_4_2_7P290
 
-  ntpq/ntpq-opts.texi@1.292 +2 -2
+  ntpq/ntpq-opts.texi@1.274.4.6 +2 -2
     NTP_4_2_7P290
 
   ntpq/ntpq.1ntpqman@1.106 +2 -2
@@ -1095,7 +1647,7 @@ ChangeSet@1.2832, 2012-07-20 00:03:09+00:00, stenn@deacon.udel.edu
   ntpsnmpd/ntpsnmpd-opts.h@1.292 +3 -3
     NTP_4_2_7P290
 
-  ntpsnmpd/ntpsnmpd-opts.texi@1.292 +2 -2
+  ntpsnmpd/ntpsnmpd-opts.texi@1.274.4.6 +2 -2
     NTP_4_2_7P290
 
   ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.106 +2 -2
@@ -1113,7 +1665,7 @@ ChangeSet@1.2832, 2012-07-20 00:03:09+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.293 +1 -1
     NTP_4_2_7P290
 
-  scripts/ntp-wait-opts.texi@1.110 +1 -1
+  scripts/ntp-wait-opts.texi@1.92.4.6 +1 -1
     NTP_4_2_7P290
 
   scripts/ntp-wait.1ntp-waitman@1.106 +2 -2
@@ -1137,7 +1689,7 @@ ChangeSet@1.2832, 2012-07-20 00:03:09+00:00, stenn@deacon.udel.edu
   sntp/sntp-opts.h@1.288 +3 -3
     NTP_4_2_7P290
 
-  sntp/sntp-opts.texi@1.288 +2 -2
+  sntp/sntp-opts.texi@1.270.4.6 +2 -2
     NTP_4_2_7P290
 
   sntp/sntp.1sntpman@1.108 +2 -2
@@ -1161,7 +1713,7 @@ ChangeSet@1.2832, 2012-07-20 00:03:09+00:00, stenn@deacon.udel.edu
   util/ntp-keygen-opts.h@1.292 +3 -3
     NTP_4_2_7P290
 
-  util/ntp-keygen-opts.texi@1.293 +2 -2
+  util/ntp-keygen-opts.texi@1.275.4.6 +2 -2
     NTP_4_2_7P290
 
   util/ntp-keygen.1ntp-keygenman@1.106 +2 -2
@@ -1176,10 +1728,10 @@ ChangeSet@1.2832, 2012-07-20 00:03:09+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.106 +2 -2
     NTP_4_2_7P290
 
-ChangeSet@1.2831, 2012-07-19 19:26:56-04:00, stenn@psp-deb1.ntp.org
+ChangeSet@1.2773.1.58, 2012-07-19 19:26:56-04:00, stenn@psp-deb1.ntp.org
   [Bug 1454] Add parse clock support for the SEL-240x GPS products
 
-  ChangeLog@1.1195 +1 -0
+  ChangeLog@1.1146.1.49 +1 -0
     [Bug 1454] Add parse clock support for the SEL-240x GPS products
 
   configure.ac@1.547 +16 -0
@@ -1202,20 +1754,20 @@ ChangeSet@1.2831, 2012-07-19 19:26:56-04:00, stenn@psp-deb1.ntp.org
   ntpd/refclock_parse.c@1.67 +52 -0
     [Bug 1454] Add parse clock support for the SEL-240x GPS products
 
-ChangeSet@1.2830, 2012-07-17 01:15:11-04:00, stenn@psp-deb1.ntp.org
+ChangeSet@1.2773.1.57, 2012-07-17 01:15:11-04:00, stenn@psp-deb1.ntp.org
   CID 709185: refclock_chu.c will leak fd==0 (better fix)
 
-  ChangeLog@1.1194 +1 -0
+  ChangeLog@1.1146.1.48 +1 -0
     CID 709185: refclock_chu.c will leak fd==0 (better fix)
 
   ntpd/refclock_chu.c@1.55 +4 -13
     CID 709185: refclock_chu.c will leak fd==0 (better fix)
 
-ChangeSet@1.2829, 2012-07-16 00:21:24+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2773.1.56, 2012-07-16 00:21:24+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P289
   TAG: NTP_4_2_7P289
 
-  ChangeLog@1.1193 +1 -0
+  ChangeLog@1.1146.1.47 +1 -0
     NTP_4_2_7P289
 
   ntpd/ntpd-opts.c@1.294 +4 -4
@@ -1224,7 +1776,7 @@ ChangeSet@1.2829, 2012-07-16 00:21:24+00:00, stenn@deacon.udel.edu
   ntpd/ntpd-opts.h@1.294 +3 -3
     NTP_4_2_7P289
 
-  ntpd/ntpd-opts.texi@1.292 +2 -2
+  ntpd/ntpd-opts.texi@1.275.4.5 +2 -2
     NTP_4_2_7P289
 
   ntpd/ntpd.1ntpdman@1.105 +4 -10
@@ -1245,7 +1797,7 @@ ChangeSet@1.2829, 2012-07-16 00:21:24+00:00, stenn@deacon.udel.edu
   ntpdc/ntpdc-opts.h@1.289 +3 -3
     NTP_4_2_7P289
 
-  ntpdc/ntpdc-opts.texi@1.289 +2 -2
+  ntpdc/ntpdc-opts.texi@1.272.4.5 +2 -2
     NTP_4_2_7P289
 
   ntpdc/ntpdc.1ntpdcman@1.105 +3 -8
@@ -1269,7 +1821,7 @@ ChangeSet@1.2829, 2012-07-16 00:21:24+00:00, stenn@deacon.udel.edu
   ntpq/ntpq-opts.h@1.291 +3 -3
     NTP_4_2_7P289
 
-  ntpq/ntpq-opts.texi@1.291 +2 -2
+  ntpq/ntpq-opts.texi@1.274.4.5 +2 -2
     NTP_4_2_7P289
 
   ntpq/ntpq.1ntpqman@1.105 +2 -3
@@ -1290,7 +1842,7 @@ ChangeSet@1.2829, 2012-07-16 00:21:24+00:00, stenn@deacon.udel.edu
   ntpsnmpd/ntpsnmpd-opts.h@1.291 +3 -3
     NTP_4_2_7P289
 
-  ntpsnmpd/ntpsnmpd-opts.texi@1.291 +2 -2
+  ntpsnmpd/ntpsnmpd-opts.texi@1.274.4.5 +2 -2
     NTP_4_2_7P289
 
   ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.105 +2 -4
@@ -1308,7 +1860,7 @@ ChangeSet@1.2829, 2012-07-16 00:21:24+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.292 +1 -1
     NTP_4_2_7P289
 
-  scripts/ntp-wait-opts.texi@1.109 +2 -14
+  scripts/ntp-wait-opts.texi@1.92.4.5 +2 -14
     NTP_4_2_7P289
 
   scripts/ntp-wait.1ntp-waitman@1.105 +2 -4
@@ -1332,7 +1884,7 @@ ChangeSet@1.2829, 2012-07-16 00:21:24+00:00, stenn@deacon.udel.edu
   sntp/sntp-opts.h@1.287 +3 -3
     NTP_4_2_7P289
 
-  sntp/sntp-opts.texi@1.287 +2 -2
+  sntp/sntp-opts.texi@1.270.4.5 +2 -2
     NTP_4_2_7P289
 
   sntp/sntp.1sntpman@1.107 +3 -7
@@ -1356,7 +1908,7 @@ ChangeSet@1.2829, 2012-07-16 00:21:24+00:00, stenn@deacon.udel.edu
   util/ntp-keygen-opts.h@1.291 +3 -3
     NTP_4_2_7P289
 
-  util/ntp-keygen-opts.texi@1.292 +2 -2
+  util/ntp-keygen-opts.texi@1.275.4.5 +2 -2
     NTP_4_2_7P289
 
   util/ntp-keygen.1ntp-keygenman@1.105 +4 -8
@@ -1371,38 +1923,38 @@ ChangeSet@1.2829, 2012-07-16 00:21:24+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.105 +4 -8
     NTP_4_2_7P289
 
-ChangeSet@1.2828, 2012-07-15 02:28:03-07:00, stenn@stenn.ntp.org
+ChangeSet@1.2773.1.55, 2012-07-15 02:28:03-07:00, stenn@stenn.ntp.org
   CID 97123: Future-proof possible change to refclock_nmea.c
 
-  ChangeLog@1.1192 +1 -0
+  ChangeLog@1.1146.1.46 +1 -0
     CID 97123: Future-proof possible change to refclock_nmea.c
 
   ntpd/refclock_nmea.c@1.71 +1 -0
     CID 97123: Future-proof possible change to refclock_nmea.c
 
-ChangeSet@1.2827, 2012-07-15 01:04:03-07:00, stenn@stenn.ntp.org
+ChangeSet@1.2773.1.54, 2012-07-15 01:04:03-07:00, stenn@stenn.ntp.org
   CID 97377: ntp-keygen.c's followlink() might not NUL-terminate
 
-  ChangeLog@1.1191 +1 -0
+  ChangeLog@1.1146.1.45 +1 -0
     CID 97377: ntp-keygen.c's followlink() might not NUL-terminate
 
   util/ntp-keygen.c@1.92 +5 -1
     CID 97377: ntp-keygen.c's followlink() might not NUL-terminate
 
-ChangeSet@1.2826, 2012-07-14 23:46:24-07:00, stenn@stenn.ntp.org
+ChangeSet@1.2773.1.53, 2012-07-14 23:46:24-07:00, stenn@stenn.ntp.org
   CID 709185: refclock_chu.c will leak fd==0 (which should be impossible)
 
-  ChangeLog@1.1190 +1 -0
+  ChangeLog@1.1146.1.44 +1 -0
     CID 709185: refclock_chu.c will leak fd==0 (which should be impossible)
 
   ntpd/refclock_chu.c@1.54 +11 -0
     CID 709185: refclock_chu.c will leak fd==0 (which should be impossible)
 
-ChangeSet@1.2825, 2012-07-03 09:13:40+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2773.1.52, 2012-07-03 09:13:40+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P288
   TAG: NTP_4_2_7P288
 
-  ChangeLog@1.1189 +1 -0
+  ChangeLog@1.1146.1.43 +1 -0
     NTP_4_2_7P288
 
   ntpd/ntpd-opts.c@1.293 +4 -4
@@ -1411,7 +1963,7 @@ ChangeSet@1.2825, 2012-07-03 09:13:40+00:00, stenn@deacon.udel.edu
   ntpd/ntpd-opts.h@1.293 +3 -3
     NTP_4_2_7P288
 
-  ntpd/ntpd-opts.texi@1.291 +2 -2
+  ntpd/ntpd-opts.texi@1.275.4.4 +2 -2
     NTP_4_2_7P288
 
   ntpd/ntpd.1ntpdman@1.104 +554 -8
@@ -1432,7 +1984,7 @@ ChangeSet@1.2825, 2012-07-03 09:13:40+00:00, stenn@deacon.udel.edu
   ntpdc/ntpdc-opts.h@1.288 +3 -3
     NTP_4_2_7P288
 
-  ntpdc/ntpdc-opts.texi@1.288 +2 -2
+  ntpdc/ntpdc-opts.texi@1.272.4.4 +2 -2
     NTP_4_2_7P288
 
   ntpdc/ntpdc.1ntpdcman@1.104 +709 -7
@@ -1456,7 +2008,7 @@ ChangeSet@1.2825, 2012-07-03 09:13:40+00:00, stenn@deacon.udel.edu
   ntpq/ntpq-opts.h@1.290 +3 -3
     NTP_4_2_7P288
 
-  ntpq/ntpq-opts.texi@1.290 +2 -2
+  ntpq/ntpq-opts.texi@1.274.4.4 +2 -2
     NTP_4_2_7P288
 
   ntpq/ntpq.1ntpqman@1.104 +261 -3
@@ -1477,7 +2029,7 @@ ChangeSet@1.2825, 2012-07-03 09:13:40+00:00, stenn@deacon.udel.edu
   ntpsnmpd/ntpsnmpd-opts.h@1.290 +3 -3
     NTP_4_2_7P288
 
-  ntpsnmpd/ntpsnmpd-opts.texi@1.290 +2 -2
+  ntpsnmpd/ntpsnmpd-opts.texi@1.274.4.4 +2 -2
     NTP_4_2_7P288
 
   ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.104 +5 -4
@@ -1495,7 +2047,7 @@ ChangeSet@1.2825, 2012-07-03 09:13:40+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.291 +1 -1
     NTP_4_2_7P288
 
-  scripts/ntp-wait-opts.texi@1.108 +1 -1
+  scripts/ntp-wait-opts.texi@1.92.4.4 +1 -1
     NTP_4_2_7P288
 
   scripts/ntp-wait.1ntp-waitman@1.104 +20 -4
@@ -1519,7 +2071,7 @@ ChangeSet@1.2825, 2012-07-03 09:13:40+00:00, stenn@deacon.udel.edu
   sntp/sntp-opts.h@1.286 +3 -3
     NTP_4_2_7P288
 
-  sntp/sntp-opts.texi@1.286 +2 -2
+  sntp/sntp-opts.texi@1.270.4.4 +2 -2
     NTP_4_2_7P288
 
   sntp/sntp.1sntpman@1.106 +69 -6
@@ -1543,7 +2095,7 @@ ChangeSet@1.2825, 2012-07-03 09:13:40+00:00, stenn@deacon.udel.edu
   util/ntp-keygen-opts.h@1.290 +3 -3
     NTP_4_2_7P288
 
-  util/ntp-keygen-opts.texi@1.291 +2 -2
+  util/ntp-keygen-opts.texi@1.275.4.4 +2 -2
     NTP_4_2_7P288
 
   util/ntp-keygen.1ntp-keygenman@1.104 +724 -6
@@ -1558,20 +2110,20 @@ ChangeSet@1.2825, 2012-07-03 09:13:40+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.104 +709 -5
     NTP_4_2_7P288
 
-ChangeSet@1.2824, 2012-07-03 04:44:18-04:00, stenn@deacon.udel.edu
+ChangeSet@1.2773.1.51, 2012-07-03 04:44:18-04:00, stenn@deacon.udel.edu
   CID 709173: Make sure a libisc function we do not use is called properly
 
-  ChangeLog@1.1188 +1 -0
+  ChangeLog@1.1146.1.42 +1 -0
     CID 709173: Make sure a libisc function we do not use is called properly
 
   lib/isc/unix/file.c@1.6 +2 -0
     CID 709173: Make sure a libisc function we do not use is called properly
 
-ChangeSet@1.2823, 2012-07-03 01:29:06+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2773.1.50, 2012-07-03 01:29:06+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P287
   TAG: NTP_4_2_7P287
 
-  ChangeLog@1.1187 +1 -0
+  ChangeLog@1.1146.1.41 +1 -0
     NTP_4_2_7P287
 
   ntpd/ntpd-opts.c@1.292 +4 -4
@@ -1580,7 +2132,7 @@ ChangeSet@1.2823, 2012-07-03 01:29:06+00:00, stenn@deacon.udel.edu
   ntpd/ntpd-opts.h@1.292 +3 -3
     NTP_4_2_7P287
 
-  ntpd/ntpd-opts.texi@1.290 +2 -2
+  ntpd/ntpd-opts.texi@1.275.4.3 +2 -2
     NTP_4_2_7P287
 
   ntpd/ntpd.1ntpdman@1.103 +2 -2
@@ -1601,7 +2153,7 @@ ChangeSet@1.2823, 2012-07-03 01:29:06+00:00, stenn@deacon.udel.edu
   ntpdc/ntpdc-opts.h@1.287 +3 -3
     NTP_4_2_7P287
 
-  ntpdc/ntpdc-opts.texi@1.287 +2 -2
+  ntpdc/ntpdc-opts.texi@1.272.4.3 +2 -2
     NTP_4_2_7P287
 
   ntpdc/ntpdc.1ntpdcman@1.103 +2 -2
@@ -1625,7 +2177,7 @@ ChangeSet@1.2823, 2012-07-03 01:29:06+00:00, stenn@deacon.udel.edu
   ntpq/ntpq-opts.h@1.289 +3 -3
     NTP_4_2_7P287
 
-  ntpq/ntpq-opts.texi@1.289 +2 -2
+  ntpq/ntpq-opts.texi@1.274.4.3 +2 -2
     NTP_4_2_7P287
 
   ntpq/ntpq.1ntpqman@1.103 +2 -2
@@ -1646,7 +2198,7 @@ ChangeSet@1.2823, 2012-07-03 01:29:06+00:00, stenn@deacon.udel.edu
   ntpsnmpd/ntpsnmpd-opts.h@1.289 +3 -3
     NTP_4_2_7P287
 
-  ntpsnmpd/ntpsnmpd-opts.texi@1.289 +2 -2
+  ntpsnmpd/ntpsnmpd-opts.texi@1.274.4.3 +2 -2
     NTP_4_2_7P287
 
   ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.103 +2 -2
@@ -1664,7 +2216,7 @@ ChangeSet@1.2823, 2012-07-03 01:29:06+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.290 +1 -1
     NTP_4_2_7P287
 
-  scripts/ntp-wait-opts.texi@1.107 +14 -2
+  scripts/ntp-wait-opts.texi@1.92.4.3 +14 -2
     NTP_4_2_7P287
 
   scripts/ntp-wait.1ntp-waitman@1.103 +2 -2
@@ -1688,7 +2240,7 @@ ChangeSet@1.2823, 2012-07-03 01:29:06+00:00, stenn@deacon.udel.edu
   sntp/sntp-opts.h@1.285 +3 -3
     NTP_4_2_7P287
 
-  sntp/sntp-opts.texi@1.285 +2 -2
+  sntp/sntp-opts.texi@1.270.4.3 +2 -2
     NTP_4_2_7P287
 
   sntp/sntp.1sntpman@1.105 +2 -2
@@ -1712,7 +2264,7 @@ ChangeSet@1.2823, 2012-07-03 01:29:06+00:00, stenn@deacon.udel.edu
   util/ntp-keygen-opts.h@1.289 +3 -3
     NTP_4_2_7P287
 
-  util/ntp-keygen-opts.texi@1.290 +2 -2
+  util/ntp-keygen-opts.texi@1.275.4.3 +2 -2
     NTP_4_2_7P287
 
   util/ntp-keygen.1ntp-keygenman@1.103 +2 -2
@@ -1727,11 +2279,11 @@ ChangeSet@1.2823, 2012-07-03 01:29:06+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.103 +2 -2
     NTP_4_2_7P287
 
-ChangeSet@1.2822, 2012-07-02 02:17:35+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2773.1.49, 2012-07-02 02:17:35+00:00, davehart@dlh-7551.ad.hartbrothers.com
   Remove 1024 associations-per-server limit from ntpq.
   Remove blank line between ntpq mreadvar associations.
 
-  ChangeLog@1.1186 +2 -0
+  ChangeLog@1.1146.1.40 +2 -0
     Remove 1024 associations-per-server limit from ntpq.
     Remove blank line between ntpq mreadvar associations.
 
@@ -1745,11 +2297,11 @@ ChangeSet@1.2822, 2012-07-02 02:17:35+00:00, davehart@dlh-7551.ad.hartbrothers.c
   ntpq/ntpq.h@1.27 +3 -3
     Remove 1024 associations-per-server limit from ntpq.
 
-ChangeSet@1.2821, 2012-06-28 07:06:07+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2773.1.48, 2012-06-28 07:06:07+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P286
   TAG: NTP_4_2_7P286
 
-  ChangeLog@1.1185 +1 -0
+  ChangeLog@1.1146.1.39 +1 -0
     NTP_4_2_7P286
 
   ntpd/ntpd-opts.c@1.291 +4 -4
@@ -1758,7 +2310,7 @@ ChangeSet@1.2821, 2012-06-28 07:06:07+00:00, stenn@deacon.udel.edu
   ntpd/ntpd-opts.h@1.291 +3 -3
     NTP_4_2_7P286
 
-  ntpd/ntpd-opts.texi@1.289 +2 -2
+  ntpd/ntpd-opts.texi@1.275.4.2 +2 -2
     NTP_4_2_7P286
 
   ntpd/ntpd.1ntpdman@1.102 +2 -2
@@ -1779,7 +2331,7 @@ ChangeSet@1.2821, 2012-06-28 07:06:07+00:00, stenn@deacon.udel.edu
   ntpdc/ntpdc-opts.h@1.286 +3 -3
     NTP_4_2_7P286
 
-  ntpdc/ntpdc-opts.texi@1.286 +2 -2
+  ntpdc/ntpdc-opts.texi@1.272.4.2 +2 -2
     NTP_4_2_7P286
 
   ntpdc/ntpdc.1ntpdcman@1.102 +2 -2
@@ -1803,7 +2355,7 @@ ChangeSet@1.2821, 2012-06-28 07:06:07+00:00, stenn@deacon.udel.edu
   ntpq/ntpq-opts.h@1.288 +3 -3
     NTP_4_2_7P286
 
-  ntpq/ntpq-opts.texi@1.288 +2 -2
+  ntpq/ntpq-opts.texi@1.274.4.2 +2 -2
     NTP_4_2_7P286
 
   ntpq/ntpq.1ntpqman@1.102 +2 -2
@@ -1824,7 +2376,7 @@ ChangeSet@1.2821, 2012-06-28 07:06:07+00:00, stenn@deacon.udel.edu
   ntpsnmpd/ntpsnmpd-opts.h@1.288 +3 -3
     NTP_4_2_7P286
 
-  ntpsnmpd/ntpsnmpd-opts.texi@1.288 +2 -2
+  ntpsnmpd/ntpsnmpd-opts.texi@1.274.4.2 +2 -2
     NTP_4_2_7P286
 
   ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.102 +2 -2
@@ -1842,7 +2394,7 @@ ChangeSet@1.2821, 2012-06-28 07:06:07+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.289 +1 -1
     NTP_4_2_7P286
 
-  scripts/ntp-wait-opts.texi@1.106 +2 -14
+  scripts/ntp-wait-opts.texi@1.92.4.2 +2 -14
     NTP_4_2_7P286
 
   scripts/ntp-wait.1ntp-waitman@1.102 +2 -2
@@ -1866,7 +2418,7 @@ ChangeSet@1.2821, 2012-06-28 07:06:07+00:00, stenn@deacon.udel.edu
   sntp/sntp-opts.h@1.284 +3 -3
     NTP_4_2_7P286
 
-  sntp/sntp-opts.texi@1.284 +2 -2
+  sntp/sntp-opts.texi@1.270.4.2 +2 -2
     NTP_4_2_7P286
 
   sntp/sntp.1sntpman@1.104 +2 -2
@@ -1890,7 +2442,7 @@ ChangeSet@1.2821, 2012-06-28 07:06:07+00:00, stenn@deacon.udel.edu
   util/ntp-keygen-opts.h@1.288 +3 -3
     NTP_4_2_7P286
 
-  util/ntp-keygen-opts.texi@1.289 +2 -2
+  util/ntp-keygen-opts.texi@1.275.4.2 +2 -2
     NTP_4_2_7P286
 
   util/ntp-keygen.1ntp-keygenman@1.102 +2 -2
@@ -1905,38 +2457,38 @@ ChangeSet@1.2821, 2012-06-28 07:06:07+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.102 +2 -2
     NTP_4_2_7P286
 
-ChangeSet@1.2820, 2012-06-27 23:43:05-07:00, stenn@stenn.ntp.org
+ChangeSet@1.2773.1.47, 2012-06-27 23:43:05-07:00, stenn@stenn.ntp.org
   CID 97193: check return from sscanf() in ntp_config.c
 
-  ChangeLog@1.1184 +1 -0
+  ChangeLog@1.1146.1.38 +1 -0
     CID 97193: check return from sscanf() in ntp_config.c
 
   ntpd/ntp_config.c@1.300 +3 -3
     CID 97193: check return from sscanf() in ntp_config.c
 
-ChangeSet@1.2819, 2012-06-27 23:37:22-07:00, stenn@stenn.ntp.org
+ChangeSet@1.2773.1.46, 2012-06-27 23:37:22-07:00, stenn@stenn.ntp.org
   CID 709207: Initialize "quality" for ulink_receive
 
-  ChangeLog@1.1183 +1 -0
+  ChangeLog@1.1146.1.37 +1 -0
     CID 709207: Initialize "quality" for ulink_receive
 
   ntpd/refclock_ulink.c@1.19 +7 -7
     CID 709207: Initialize "quality" for ulink_receive
 
-ChangeSet@1.2818, 2012-06-27 23:28:32-07:00, stenn@stenn.ntp.org
+ChangeSet@1.2773.1.45, 2012-06-27 23:28:32-07:00, stenn@stenn.ntp.org
   CID 709169: check return from open("/dev/null", 0) and friends
 
-  ChangeLog@1.1182 +1 -0
+  ChangeLog@1.1146.1.36 +1 -0
     CID 709169: check return from open("/dev/null", 0) and friends
 
   ntpd/ntpd.c@1.131 +2 -3
     CID 709169: check return from open("/dev/null", 0) and friends
 
-ChangeSet@1.2817, 2012-06-18 11:33:40+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2773.1.44, 2012-06-18 11:33:40+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P285
   TAG: NTP_4_2_7P285
 
-  ChangeLog@1.1181 +1 -0
+  ChangeLog@1.1146.1.35 +1 -0
     NTP_4_2_7P285
 
   ntpd/ntpd-opts.c@1.290 +4 -4
@@ -1945,7 +2497,7 @@ ChangeSet@1.2817, 2012-06-18 11:33:40+00:00, stenn@deacon.udel.edu
   ntpd/ntpd-opts.h@1.290 +3 -3
     NTP_4_2_7P285
 
-  ntpd/ntpd-opts.texi@1.288 +2 -2
+  ntpd/ntpd-opts.texi@1.275.4.1 +2 -2
     NTP_4_2_7P285
 
   ntpd/ntpd.1ntpdman@1.101 +2 -2
@@ -1966,7 +2518,7 @@ ChangeSet@1.2817, 2012-06-18 11:33:40+00:00, stenn@deacon.udel.edu
   ntpdc/ntpdc-opts.h@1.285 +3 -3
     NTP_4_2_7P285
 
-  ntpdc/ntpdc-opts.texi@1.285 +2 -2
+  ntpdc/ntpdc-opts.texi@1.272.4.1 +2 -2
     NTP_4_2_7P285
 
   ntpdc/ntpdc.1ntpdcman@1.101 +2 -2
@@ -1990,7 +2542,7 @@ ChangeSet@1.2817, 2012-06-18 11:33:40+00:00, stenn@deacon.udel.edu
   ntpq/ntpq-opts.h@1.287 +3 -3
     NTP_4_2_7P285
 
-  ntpq/ntpq-opts.texi@1.287 +2 -2
+  ntpq/ntpq-opts.texi@1.274.4.1 +2 -2
     NTP_4_2_7P285
 
   ntpq/ntpq.1ntpqman@1.101 +2 -2
@@ -2011,7 +2563,7 @@ ChangeSet@1.2817, 2012-06-18 11:33:40+00:00, stenn@deacon.udel.edu
   ntpsnmpd/ntpsnmpd-opts.h@1.287 +3 -3
     NTP_4_2_7P285
 
-  ntpsnmpd/ntpsnmpd-opts.texi@1.287 +2 -2
+  ntpsnmpd/ntpsnmpd-opts.texi@1.274.4.1 +2 -2
     NTP_4_2_7P285
 
   ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.101 +2 -2
@@ -2029,7 +2581,7 @@ ChangeSet@1.2817, 2012-06-18 11:33:40+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.288 +1 -1
     NTP_4_2_7P285
 
-  scripts/ntp-wait-opts.texi@1.105 +1 -1
+  scripts/ntp-wait-opts.texi@1.92.4.1 +1 -1
     NTP_4_2_7P285
 
   scripts/ntp-wait.1ntp-waitman@1.101 +2 -2
@@ -2053,7 +2605,7 @@ ChangeSet@1.2817, 2012-06-18 11:33:40+00:00, stenn@deacon.udel.edu
   sntp/sntp-opts.h@1.283 +3 -3
     NTP_4_2_7P285
 
-  sntp/sntp-opts.texi@1.283 +2 -2
+  sntp/sntp-opts.texi@1.270.4.1 +2 -2
     NTP_4_2_7P285
 
   sntp/sntp.1sntpman@1.103 +2 -2
@@ -2077,7 +2629,7 @@ ChangeSet@1.2817, 2012-06-18 11:33:40+00:00, stenn@deacon.udel.edu
   util/ntp-keygen-opts.h@1.287 +3 -3
     NTP_4_2_7P285
 
-  util/ntp-keygen-opts.texi@1.288 +2 -2
+  util/ntp-keygen-opts.texi@1.275.4.1 +2 -2
     NTP_4_2_7P285
 
   util/ntp-keygen.1ntp-keygenman@1.101 +2 -2
@@ -2092,10 +2644,10 @@ ChangeSet@1.2817, 2012-06-18 11:33:40+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.101 +2 -2
     NTP_4_2_7P285
 
-ChangeSet@1.2816, 2012-06-18 07:49:19+00:00, stenn@psp-fb1.ntp.org
+ChangeSet@1.2773.1.43, 2012-06-18 07:49:19+00:00, stenn@psp-fb1.ntp.org
   Automake-1.12 wants us to use AM_PROG_AR
 
-  ChangeLog@1.1180 +1 -0
+  ChangeLog@1.1146.1.34 +1 -0
     Automake-1.12 wants us to use AM_PROG_AR
 
   configure.ac@1.546 +6 -0
@@ -2104,7 +2656,7 @@ ChangeSet@1.2816, 2012-06-18 07:49:19+00:00, stenn@psp-fb1.ntp.org
   sntp/configure.ac@1.69 +6 -0
     Automake-1.12 wants us to use AM_PROG_AR
 
-ChangeSet@1.2815, 2012-06-18 05:18:28+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2773.1.42, 2012-06-18 05:18:28+00:00, davehart@dlh-7551.ad.hartbrothers.com
   generated files from last cset's ntp_parser.y and keyword-gen.c changes.
 
   ntpd/keyword-gen-utd@1.16 +1 -1
@@ -2119,14 +2671,14 @@ ChangeSet@1.2815, 2012-06-18 05:18:28+00:00, davehart@dlh-7551.ad.hartbrothers.c
   ntpd/ntp_parser.h@1.45 +161 -159
     generated from last cset's ntp_parser.y changes.
 
-ChangeSet@1.2814, 2012-06-18 05:01:49+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2773.1.41, 2012-06-18 05:01:49+00:00, davehart@dlh-7551.ad.hartbrothers.com
   [Bug 2227] Enable mrulist access control via "restrict ... nomrulist".
   Conditionalize msyslog messages about rejected mode 6 requests due to
     nomodify and nomrulist restrictions under "logconfig +sysinfo".
   Increment sys_restricted in a few rejection paths due to nomodify
     restrictions where previosuly overlooked.
 
-  ChangeLog@1.1179 +5 -0
+  ChangeLog@1.1146.1.33 +5 -0
     [Bug 2227] Enable mrulist access control via "restrict ... nomrulist".
     Conditionalize msyslog messages about rejected mode 6 requests due to
       nomodify and nomrulist restrictions under "logconfig +sysinfo".
@@ -2164,11 +2716,11 @@ ChangeSet@1.2814, 2012-06-18 05:01:49+00:00, davehart@dlh-7551.ad.hartbrothers.c
     Use explicit MAX_INFO_ERR macro instead of implicitly assuming
       INFO_ERR_AUTH is the highest-numbered.
 
-ChangeSet@1.2813, 2012-06-16 21:36:44+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2773.1.40, 2012-06-16 21:36:44+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P284
   TAG: NTP_4_2_7P284
 
-  ChangeLog@1.1178 +1 -0
+  ChangeLog@1.1146.1.32 +1 -0
     NTP_4_2_7P284
 
   ntpd/ntpd-opts.c@1.289 +4 -4
@@ -2177,7 +2729,7 @@ ChangeSet@1.2813, 2012-06-16 21:36:44+00:00, stenn@deacon.udel.edu
   ntpd/ntpd-opts.h@1.289 +3 -3
     NTP_4_2_7P284
 
-  ntpd/ntpd-opts.texi@1.287 +2 -2
+  ntpd/ntpd-opts.texi@1.275.3.6 +2 -2
     NTP_4_2_7P284
 
   ntpd/ntpd.1ntpdman@1.100 +2 -2
@@ -2198,7 +2750,7 @@ ChangeSet@1.2813, 2012-06-16 21:36:44+00:00, stenn@deacon.udel.edu
   ntpdc/ntpdc-opts.h@1.284 +3 -3
     NTP_4_2_7P284
 
-  ntpdc/ntpdc-opts.texi@1.284 +2 -2
+  ntpdc/ntpdc-opts.texi@1.272.3.6 +2 -2
     NTP_4_2_7P284
 
   ntpdc/ntpdc.1ntpdcman@1.100 +2 -2
@@ -2222,7 +2774,7 @@ ChangeSet@1.2813, 2012-06-16 21:36:44+00:00, stenn@deacon.udel.edu
   ntpq/ntpq-opts.h@1.286 +3 -3
     NTP_4_2_7P284
 
-  ntpq/ntpq-opts.texi@1.286 +2 -2
+  ntpq/ntpq-opts.texi@1.274.3.6 +2 -2
     NTP_4_2_7P284
 
   ntpq/ntpq.1ntpqman@1.100 +2 -2
@@ -2243,7 +2795,7 @@ ChangeSet@1.2813, 2012-06-16 21:36:44+00:00, stenn@deacon.udel.edu
   ntpsnmpd/ntpsnmpd-opts.h@1.286 +3 -3
     NTP_4_2_7P284
 
-  ntpsnmpd/ntpsnmpd-opts.texi@1.286 +2 -2
+  ntpsnmpd/ntpsnmpd-opts.texi@1.274.3.6 +2 -2
     NTP_4_2_7P284
 
   ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.100 +2 -2
@@ -2261,7 +2813,7 @@ ChangeSet@1.2813, 2012-06-16 21:36:44+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.287 +1 -1
     NTP_4_2_7P284
 
-  scripts/ntp-wait-opts.texi@1.104 +1 -1
+  scripts/ntp-wait-opts.texi@1.92.3.6 +1 -1
     NTP_4_2_7P284
 
   scripts/ntp-wait.1ntp-waitman@1.100 +2 -2
@@ -2285,7 +2837,7 @@ ChangeSet@1.2813, 2012-06-16 21:36:44+00:00, stenn@deacon.udel.edu
   sntp/sntp-opts.h@1.282 +3 -3
     NTP_4_2_7P284
 
-  sntp/sntp-opts.texi@1.282 +2 -2
+  sntp/sntp-opts.texi@1.270.3.6 +2 -2
     NTP_4_2_7P284
 
   sntp/sntp.1sntpman@1.102 +2 -2
@@ -2309,7 +2861,7 @@ ChangeSet@1.2813, 2012-06-16 21:36:44+00:00, stenn@deacon.udel.edu
   util/ntp-keygen-opts.h@1.286 +3 -3
     NTP_4_2_7P284
 
-  util/ntp-keygen-opts.texi@1.287 +2 -2
+  util/ntp-keygen-opts.texi@1.275.3.6 +2 -2
     NTP_4_2_7P284
 
   util/ntp-keygen.1ntp-keygenman@1.100 +2 -2
@@ -2324,11 +2876,11 @@ ChangeSet@1.2813, 2012-06-16 21:36:44+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.100 +1 -1
     NTP_4_2_7P284
 
-ChangeSet@1.2806.1.3, 2012-06-16 11:23:18+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2773.3.3, 2012-06-16 11:23:18+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P283
   TAG: NTP_4_2_7P283
 
-  ChangeLog@1.1175.1.1 +1 -0
+  ChangeLog@1.1146.3.1 +1 -0
     NTP_4_2_7P283
 
   ntpd/ntpd-opts.c@1.288 +4 -4
@@ -2337,7 +2889,7 @@ ChangeSet@1.2806.1.3, 2012-06-16 11:23:18+00:00, stenn@deacon.udel.edu
   ntpd/ntpd-opts.h@1.288 +3 -3
     NTP_4_2_7P283
 
-  ntpd/ntpd-opts.texi@1.286 +2 -2
+  ntpd/ntpd-opts.texi@1.275.3.5 +2 -2
     NTP_4_2_7P283
 
   ntpd/ntpd.1ntpdman@1.99 +2 -2
@@ -2358,7 +2910,7 @@ ChangeSet@1.2806.1.3, 2012-06-16 11:23:18+00:00, stenn@deacon.udel.edu
   ntpdc/ntpdc-opts.h@1.283 +3 -3
     NTP_4_2_7P283
 
-  ntpdc/ntpdc-opts.texi@1.283 +2 -2
+  ntpdc/ntpdc-opts.texi@1.272.3.5 +2 -2
     NTP_4_2_7P283
 
   ntpdc/ntpdc.1ntpdcman@1.99 +2 -2
@@ -2382,7 +2934,7 @@ ChangeSet@1.2806.1.3, 2012-06-16 11:23:18+00:00, stenn@deacon.udel.edu
   ntpq/ntpq-opts.h@1.285 +3 -3
     NTP_4_2_7P283
 
-  ntpq/ntpq-opts.texi@1.285 +2 -2
+  ntpq/ntpq-opts.texi@1.274.3.5 +2 -2
     NTP_4_2_7P283
 
   ntpq/ntpq.1ntpqman@1.99 +2 -2
@@ -2403,7 +2955,7 @@ ChangeSet@1.2806.1.3, 2012-06-16 11:23:18+00:00, stenn@deacon.udel.edu
   ntpsnmpd/ntpsnmpd-opts.h@1.285 +3 -3
     NTP_4_2_7P283
 
-  ntpsnmpd/ntpsnmpd-opts.texi@1.285 +2 -2
+  ntpsnmpd/ntpsnmpd-opts.texi@1.274.3.5 +2 -2
     NTP_4_2_7P283
 
   ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.99 +2 -2
@@ -2421,7 +2973,7 @@ ChangeSet@1.2806.1.3, 2012-06-16 11:23:18+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.286 +1 -1
     NTP_4_2_7P283
 
-  scripts/ntp-wait-opts.texi@1.103 +1 -1
+  scripts/ntp-wait-opts.texi@1.92.3.5 +1 -1
     NTP_4_2_7P283
 
   scripts/ntp-wait.1ntp-waitman@1.99 +2 -2
@@ -2445,7 +2997,7 @@ ChangeSet@1.2806.1.3, 2012-06-16 11:23:18+00:00, stenn@deacon.udel.edu
   sntp/sntp-opts.h@1.281 +3 -3
     NTP_4_2_7P283
 
-  sntp/sntp-opts.texi@1.281 +2 -2
+  sntp/sntp-opts.texi@1.270.3.5 +2 -2
     NTP_4_2_7P283
 
   sntp/sntp.1sntpman@1.101 +2 -2
@@ -2469,7 +3021,7 @@ ChangeSet@1.2806.1.3, 2012-06-16 11:23:18+00:00, stenn@deacon.udel.edu
   util/ntp-keygen-opts.h@1.285 +3 -3
     NTP_4_2_7P283
 
-  util/ntp-keygen-opts.texi@1.286 +2 -2
+  util/ntp-keygen-opts.texi@1.275.3.5 +2 -2
     NTP_4_2_7P283
 
   util/ntp-keygen.1ntp-keygenman@1.99 +2 -2
@@ -2484,15 +3036,15 @@ ChangeSet@1.2806.1.3, 2012-06-16 11:23:18+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.99 +2 -2
     NTP_4_2_7P283
 
-ChangeSet@1.2811, 2012-06-16 05:58:30+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2773.1.38, 2012-06-16 05:58:30+00:00, davehart@dlh-7551.ad.hartbrothers.com
   Update ChangeLog for libevent update and [Bug 2225].
 
-  ChangeLog@1.1176 +2 -0
+  ChangeLog@1.1146.1.30 +2 -0
     [Bug 2225] libevent configure hangs.
     Update bundled libevent to git master, post libevent 2.1.1-alpha.
     
 
-ChangeSet@1.2809, 2012-06-16 04:51:53+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2773.1.36, 2012-06-16 04:51:53+00:00, davehart@dlh-7551.ad.hartbrothers.com
   Linux 2.6.26 and earlier will fail libevent's timerfd_create() call due to
     nonzero flags, yet some systems using that version have the nonworking
     flags in their header files (Debian Lenny).  Do not spew warnings in
@@ -2506,20 +3058,20 @@ ChangeSet@1.2809, 2012-06-16 04:51:53+00:00, davehart@dlh-7551.ad.hartbrothers.c
       regress output in that case, and set epollop->timerfd = -1.  Suggested
       by Nick Mathewson.
 
-ChangeSet@1.2806.1.2, 2012-06-16 03:45:09+00:00, stenn@poog.il.thewrittenword.com
+ChangeSet@1.2773.3.2, 2012-06-16 03:45:09+00:00, stenn@poog.il.thewrittenword.com
   Improvements to sntp/m4/ntp_openssl.m4
 
-  ChangeLog@1.1175 +2 -0
+  ChangeLog@1.1146.1.29 +2 -0
     Improvements to sntp/m4/ntp_openssl.m4
 
   sntp/m4/ntp_openssl.m4@1.21 +35 -16
     Improvements to sntp/m4/ntp_openssl.m4
 
-ChangeSet@1.2806.1.1, 2012-06-15 11:22:51+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2773.3.1, 2012-06-15 11:22:51+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P282
   TAG: NTP_4_2_7P282
 
-  ChangeLog@1.1174 +1 -0
+  ChangeLog@1.1146.1.28 +1 -0
     NTP_4_2_7P282
 
   ntpd/ntpd-opts.c@1.287 +4 -4
@@ -2528,7 +3080,7 @@ ChangeSet@1.2806.1.1, 2012-06-15 11:22:51+00:00, stenn@deacon.udel.edu
   ntpd/ntpd-opts.h@1.287 +3 -3
     NTP_4_2_7P282
 
-  ntpd/ntpd-opts.texi@1.285 +2 -2
+  ntpd/ntpd-opts.texi@1.275.3.4 +2 -2
     NTP_4_2_7P282
 
   ntpd/ntpd.1ntpdman@1.98 +2 -2
@@ -2549,7 +3101,7 @@ ChangeSet@1.2806.1.1, 2012-06-15 11:22:51+00:00, stenn@deacon.udel.edu
   ntpdc/ntpdc-opts.h@1.282 +3 -3
     NTP_4_2_7P282
 
-  ntpdc/ntpdc-opts.texi@1.282 +2 -2
+  ntpdc/ntpdc-opts.texi@1.272.3.4 +2 -2
     NTP_4_2_7P282
 
   ntpdc/ntpdc.1ntpdcman@1.98 +2 -2
@@ -2573,7 +3125,7 @@ ChangeSet@1.2806.1.1, 2012-06-15 11:22:51+00:00, stenn@deacon.udel.edu
   ntpq/ntpq-opts.h@1.284 +3 -3
     NTP_4_2_7P282
 
-  ntpq/ntpq-opts.texi@1.284 +2 -2
+  ntpq/ntpq-opts.texi@1.274.3.4 +2 -2
     NTP_4_2_7P282
 
   ntpq/ntpq.1ntpqman@1.98 +2 -2
@@ -2594,7 +3146,7 @@ ChangeSet@1.2806.1.1, 2012-06-15 11:22:51+00:00, stenn@deacon.udel.edu
   ntpsnmpd/ntpsnmpd-opts.h@1.284 +3 -3
     NTP_4_2_7P282
 
-  ntpsnmpd/ntpsnmpd-opts.texi@1.284 +2 -2
+  ntpsnmpd/ntpsnmpd-opts.texi@1.274.3.4 +2 -2
     NTP_4_2_7P282
 
   ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.98 +2 -2
@@ -2612,7 +3164,7 @@ ChangeSet@1.2806.1.1, 2012-06-15 11:22:51+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.285 +1 -1
     NTP_4_2_7P282
 
-  scripts/ntp-wait-opts.texi@1.102 +1 -1
+  scripts/ntp-wait-opts.texi@1.92.3.4 +1 -1
     NTP_4_2_7P282
 
   scripts/ntp-wait.1ntp-waitman@1.98 +2 -2
@@ -2636,7 +3188,7 @@ ChangeSet@1.2806.1.1, 2012-06-15 11:22:51+00:00, stenn@deacon.udel.edu
   sntp/sntp-opts.h@1.280 +3 -3
     NTP_4_2_7P282
 
-  sntp/sntp-opts.texi@1.280 +2 -2
+  sntp/sntp-opts.texi@1.270.3.4 +2 -2
     NTP_4_2_7P282
 
   sntp/sntp.1sntpman@1.100 +2 -2
@@ -2660,7 +3212,7 @@ ChangeSet@1.2806.1.1, 2012-06-15 11:22:51+00:00, stenn@deacon.udel.edu
   util/ntp-keygen-opts.h@1.284 +3 -3
     NTP_4_2_7P282
 
-  util/ntp-keygen-opts.texi@1.285 +2 -2
+  util/ntp-keygen-opts.texi@1.275.3.4 +2 -2
     NTP_4_2_7P282
 
   util/ntp-keygen.1ntp-keygenman@1.98 +2 -2
@@ -2675,7 +3227,7 @@ ChangeSet@1.2806.1.1, 2012-06-15 11:22:51+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.98 +2 -2
     NTP_4_2_7P282
 
-ChangeSet@1.2808, 2012-06-14 23:17:32+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2773.1.35, 2012-06-14 23:17:32+00:00, davehart@dlh-7551.ad.hartbrothers.com
   repair merge flub
   keep local-to-NTP patch up to date with event-config.h s/_EVENT/EVENT_/
 
@@ -3316,20 +3868,20 @@ ChangeSet@1.2461.1.10, 2012-06-14 22:20:00+00:00, davehart@dlh-7551.ad.hartbroth
     update to libevent git master, after 2.1.1-alpha, as of 14-Jun-2012 git cset
     e7bf4c84afd7961eb92a2d6583c84b56a87f2555
 
-ChangeSet@1.2806, 2012-06-14 07:53:00-04:00, stenn@deacon.udel.edu
+ChangeSet@1.2773.1.33, 2012-06-14 07:53:00-04:00, stenn@deacon.udel.edu
   tickadj may need to be linked with PTHREAD_LIBS
 
-  ChangeLog@1.1173 +1 -0
+  ChangeLog@1.1146.1.27 +1 -0
     tickadj may need to be linked with PTHREAD_LIBS
 
-  util/Makefile.am@1.73 +1 -1
+  util/Makefile.am@1.71.1.2 +1 -1
     tickadj may need to be linked with PTHREAD_LIBS
 
-ChangeSet@1.2805, 2012-06-14 11:24:21+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2773.1.32, 2012-06-14 11:24:21+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P281
   TAG: NTP_4_2_7P281
 
-  ChangeLog@1.1172 +1 -0
+  ChangeLog@1.1146.1.26 +1 -0
     NTP_4_2_7P281
 
   ntpd/ntpd-opts.c@1.286 +4 -4
@@ -3338,7 +3890,7 @@ ChangeSet@1.2805, 2012-06-14 11:24:21+00:00, stenn@deacon.udel.edu
   ntpd/ntpd-opts.h@1.286 +3 -3
     NTP_4_2_7P281
 
-  ntpd/ntpd-opts.texi@1.284 +2 -2
+  ntpd/ntpd-opts.texi@1.275.3.3 +2 -2
     NTP_4_2_7P281
 
   ntpd/ntpd.1ntpdman@1.97 +2 -2
@@ -3359,7 +3911,7 @@ ChangeSet@1.2805, 2012-06-14 11:24:21+00:00, stenn@deacon.udel.edu
   ntpdc/ntpdc-opts.h@1.281 +3 -3
     NTP_4_2_7P281
 
-  ntpdc/ntpdc-opts.texi@1.281 +2 -2
+  ntpdc/ntpdc-opts.texi@1.272.3.3 +2 -2
     NTP_4_2_7P281
 
   ntpdc/ntpdc.1ntpdcman@1.97 +2 -2
@@ -3383,7 +3935,7 @@ ChangeSet@1.2805, 2012-06-14 11:24:21+00:00, stenn@deacon.udel.edu
   ntpq/ntpq-opts.h@1.283 +3 -3
     NTP_4_2_7P281
 
-  ntpq/ntpq-opts.texi@1.283 +2 -2
+  ntpq/ntpq-opts.texi@1.274.3.3 +2 -2
     NTP_4_2_7P281
 
   ntpq/ntpq.1ntpqman@1.97 +2 -2
@@ -3404,7 +3956,7 @@ ChangeSet@1.2805, 2012-06-14 11:24:21+00:00, stenn@deacon.udel.edu
   ntpsnmpd/ntpsnmpd-opts.h@1.283 +3 -3
     NTP_4_2_7P281
 
-  ntpsnmpd/ntpsnmpd-opts.texi@1.283 +2 -2
+  ntpsnmpd/ntpsnmpd-opts.texi@1.274.3.3 +2 -2
     NTP_4_2_7P281
 
   ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.97 +2 -2
@@ -3422,7 +3974,7 @@ ChangeSet@1.2805, 2012-06-14 11:24:21+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.284 +1 -1
     NTP_4_2_7P281
 
-  scripts/ntp-wait-opts.texi@1.101 +14 -2
+  scripts/ntp-wait-opts.texi@1.92.3.3 +14 -2
     NTP_4_2_7P281
 
   scripts/ntp-wait.1ntp-waitman@1.97 +2 -2
@@ -3446,7 +3998,7 @@ ChangeSet@1.2805, 2012-06-14 11:24:21+00:00, stenn@deacon.udel.edu
   sntp/sntp-opts.h@1.279 +3 -3
     NTP_4_2_7P281
 
-  sntp/sntp-opts.texi@1.279 +2 -2
+  sntp/sntp-opts.texi@1.270.3.3 +2 -2
     NTP_4_2_7P281
 
   sntp/sntp.1sntpman@1.99 +2 -2
@@ -3470,7 +4022,7 @@ ChangeSet@1.2805, 2012-06-14 11:24:21+00:00, stenn@deacon.udel.edu
   util/ntp-keygen-opts.h@1.283 +3 -3
     NTP_4_2_7P281
 
-  util/ntp-keygen-opts.texi@1.284 +2 -2
+  util/ntp-keygen-opts.texi@1.275.3.3 +2 -2
     NTP_4_2_7P281
 
   util/ntp-keygen.1ntp-keygenman@1.97 +2 -2
@@ -3485,29 +4037,29 @@ ChangeSet@1.2805, 2012-06-14 11:24:21+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.97 +2 -2
     NTP_4_2_7P281
 
-ChangeSet@1.2804, 2012-06-14 06:38:51-04:00, stenn@deacon.udel.edu
+ChangeSet@1.2773.1.31, 2012-06-14 06:38:51-04:00, stenn@deacon.udel.edu
   U_INT32_MAX cleanup in include/ntp_types.h
 
-  ChangeLog@1.1171 +1 -0
+  ChangeLog@1.1146.1.25 +1 -0
     U_INT32_MAX cleanup in include/ntp_types.h
 
   include/ntp_types.h@1.32 +4 -4
     U_INT32_MAX cleanup in include/ntp_types.h
 
-ChangeSet@1.2803, 2012-06-14 05:41:58-04:00, stenn@deacon.udel.edu
+ChangeSet@1.2773.1.30, 2012-06-14 05:41:58-04:00, stenn@deacon.udel.edu
   When linking, ntp_keygen and tickadj need $(LIBM)
 
-  ChangeLog@1.1170 +1 -0
+  ChangeLog@1.1146.1.24 +1 -0
     When linking, ntp_keygen and tickadj need $(LIBM)
 
-  util/Makefile.am@1.72 +2 -2
+  util/Makefile.am@1.71.1.1 +2 -2
     When linking, ntp_keygen and tickadj need $(LIBM)
 
-ChangeSet@1.2802, 2012-06-13 05:35:48+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2773.1.29, 2012-06-13 05:35:48+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P280
   TAG: NTP_4_2_7P280
 
-  ChangeLog@1.1169 +1 -0
+  ChangeLog@1.1146.1.23 +1 -0
     NTP_4_2_7P280
 
   ntpd/ntpd-opts.c@1.285 +4 -4
@@ -3516,7 +4068,7 @@ ChangeSet@1.2802, 2012-06-13 05:35:48+00:00, stenn@deacon.udel.edu
   ntpd/ntpd-opts.h@1.285 +3 -3
     NTP_4_2_7P280
 
-  ntpd/ntpd-opts.texi@1.283 +2 -2
+  ntpd/ntpd-opts.texi@1.275.3.2 +2 -2
     NTP_4_2_7P280
 
   ntpd/ntpd.1ntpdman@1.96 +2 -2
@@ -3537,7 +4089,7 @@ ChangeSet@1.2802, 2012-06-13 05:35:48+00:00, stenn@deacon.udel.edu
   ntpdc/ntpdc-opts.h@1.280 +3 -3
     NTP_4_2_7P280
 
-  ntpdc/ntpdc-opts.texi@1.280 +2 -2
+  ntpdc/ntpdc-opts.texi@1.272.3.2 +2 -2
     NTP_4_2_7P280
 
   ntpdc/ntpdc.1ntpdcman@1.96 +2 -2
@@ -3561,7 +4113,7 @@ ChangeSet@1.2802, 2012-06-13 05:35:48+00:00, stenn@deacon.udel.edu
   ntpq/ntpq-opts.h@1.282 +3 -3
     NTP_4_2_7P280
 
-  ntpq/ntpq-opts.texi@1.282 +2 -2
+  ntpq/ntpq-opts.texi@1.274.3.2 +2 -2
     NTP_4_2_7P280
 
   ntpq/ntpq.1ntpqman@1.96 +2 -2
@@ -3582,7 +4134,7 @@ ChangeSet@1.2802, 2012-06-13 05:35:48+00:00, stenn@deacon.udel.edu
   ntpsnmpd/ntpsnmpd-opts.h@1.282 +3 -3
     NTP_4_2_7P280
 
-  ntpsnmpd/ntpsnmpd-opts.texi@1.282 +2 -2
+  ntpsnmpd/ntpsnmpd-opts.texi@1.274.3.2 +2 -2
     NTP_4_2_7P280
 
   ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.96 +2 -2
@@ -3600,7 +4152,7 @@ ChangeSet@1.2802, 2012-06-13 05:35:48+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.283 +1 -1
     NTP_4_2_7P280
 
-  scripts/ntp-wait-opts.texi@1.100 +2 -14
+  scripts/ntp-wait-opts.texi@1.92.3.2 +2 -14
     NTP_4_2_7P280
 
   scripts/ntp-wait.1ntp-waitman@1.96 +2 -2
@@ -3624,7 +4176,7 @@ ChangeSet@1.2802, 2012-06-13 05:35:48+00:00, stenn@deacon.udel.edu
   sntp/sntp-opts.h@1.278 +3 -3
     NTP_4_2_7P280
 
-  sntp/sntp-opts.texi@1.278 +2 -2
+  sntp/sntp-opts.texi@1.270.3.2 +2 -2
     NTP_4_2_7P280
 
   sntp/sntp.1sntpman@1.98 +2 -2
@@ -3648,7 +4200,7 @@ ChangeSet@1.2802, 2012-06-13 05:35:48+00:00, stenn@deacon.udel.edu
   util/ntp-keygen-opts.h@1.282 +3 -3
     NTP_4_2_7P280
 
-  util/ntp-keygen-opts.texi@1.283 +2 -2
+  util/ntp-keygen-opts.texi@1.275.3.2 +2 -2
     NTP_4_2_7P280
 
   util/ntp-keygen.1ntp-keygenman@1.96 +2 -2
@@ -3663,20 +4215,20 @@ ChangeSet@1.2802, 2012-06-13 05:35:48+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.96 +2 -2
     NTP_4_2_7P280
 
-ChangeSet@1.2801, 2012-06-11 17:22:29+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2773.1.28, 2012-06-11 17:22:29+00:00, davehart@dlh-7551.ad.hartbrothers.com
   [Bug 2224] Use-after-free in routing socket code after dropping root.
 
-  ChangeLog@1.1168 +2 -1
+  ChangeLog@1.1146.1.22 +2 -1
     [Bug 2224] Use-after-free in routing socket code after dropping root.
 
   ntpd/ntp_io.c@1.368 +6 -3
     [Bug 2224] Use-after-free in routing socket code after dropping root.
 
-ChangeSet@1.2800, 2012-06-10 06:52:04+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2773.1.27, 2012-06-10 06:52:04+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P279
   TAG: NTP_4_2_7P279
 
-  ChangeLog@1.1167 +1 -0
+  ChangeLog@1.1146.1.21 +1 -0
     NTP_4_2_7P279
 
   ntpd/ntpd-opts.c@1.284 +4 -4
@@ -3685,7 +4237,7 @@ ChangeSet@1.2800, 2012-06-10 06:52:04+00:00, stenn@deacon.udel.edu
   ntpd/ntpd-opts.h@1.284 +3 -3
     NTP_4_2_7P279
 
-  ntpd/ntpd-opts.texi@1.282 +2 -2
+  ntpd/ntpd-opts.texi@1.275.3.1 +2 -2
     NTP_4_2_7P279
 
   ntpd/ntpd.1ntpdman@1.95 +2 -2
@@ -3706,7 +4258,7 @@ ChangeSet@1.2800, 2012-06-10 06:52:04+00:00, stenn@deacon.udel.edu
   ntpdc/ntpdc-opts.h@1.279 +3 -3
     NTP_4_2_7P279
 
-  ntpdc/ntpdc-opts.texi@1.279 +2 -2
+  ntpdc/ntpdc-opts.texi@1.272.3.1 +2 -2
     NTP_4_2_7P279
 
   ntpdc/ntpdc.1ntpdcman@1.95 +2 -2
@@ -3730,7 +4282,7 @@ ChangeSet@1.2800, 2012-06-10 06:52:04+00:00, stenn@deacon.udel.edu
   ntpq/ntpq-opts.h@1.281 +3 -3
     NTP_4_2_7P279
 
-  ntpq/ntpq-opts.texi@1.281 +2 -2
+  ntpq/ntpq-opts.texi@1.274.3.1 +2 -2
     NTP_4_2_7P279
 
   ntpq/ntpq.1ntpqman@1.95 +2 -2
@@ -3751,7 +4303,7 @@ ChangeSet@1.2800, 2012-06-10 06:52:04+00:00, stenn@deacon.udel.edu
   ntpsnmpd/ntpsnmpd-opts.h@1.281 +3 -3
     NTP_4_2_7P279
 
-  ntpsnmpd/ntpsnmpd-opts.texi@1.281 +2 -2
+  ntpsnmpd/ntpsnmpd-opts.texi@1.274.3.1 +2 -2
     NTP_4_2_7P279
 
   ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.95 +2 -2
@@ -3769,7 +4321,7 @@ ChangeSet@1.2800, 2012-06-10 06:52:04+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.282 +1 -1
     NTP_4_2_7P279
 
-  scripts/ntp-wait-opts.texi@1.99 +1 -1
+  scripts/ntp-wait-opts.texi@1.92.3.1 +1 -1
     NTP_4_2_7P279
 
   scripts/ntp-wait.1ntp-waitman@1.95 +2 -2
@@ -3793,7 +4345,7 @@ ChangeSet@1.2800, 2012-06-10 06:52:04+00:00, stenn@deacon.udel.edu
   sntp/sntp-opts.h@1.277 +3 -3
     NTP_4_2_7P279
 
-  sntp/sntp-opts.texi@1.277 +2 -2
+  sntp/sntp-opts.texi@1.270.3.1 +2 -2
     NTP_4_2_7P279
 
   sntp/sntp.1sntpman@1.97 +2 -2
@@ -3817,7 +4369,7 @@ ChangeSet@1.2800, 2012-06-10 06:52:04+00:00, stenn@deacon.udel.edu
   util/ntp-keygen-opts.h@1.281 +3 -3
     NTP_4_2_7P279
 
-  util/ntp-keygen-opts.texi@1.282 +2 -2
+  util/ntp-keygen-opts.texi@1.275.3.1 +2 -2
     NTP_4_2_7P279
 
   util/ntp-keygen.1ntp-keygenman@1.95 +2 -2
@@ -3832,11 +4384,11 @@ ChangeSet@1.2800, 2012-06-10 06:52:04+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.95 +2 -2
     NTP_4_2_7P279
 
-ChangeSet@1.2799, 2012-06-09 14:16:49+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2773.1.26, 2012-06-09 14:16:49+00:00, davehart@dlh-7551.ad.hartbrothers.com
   [Bug 2211] findbcastinter(): possibly undefined variable iface used.
   [Bug 2220] Incorrect check for maximum association id in ntpq.
 
-  ChangeLog@1.1166 +3 -0
+  ChangeLog@1.1146.1.20 +3 -0
     [Bug 2211] findbcastinter(): possibly undefined variable iface used.
     [Bug 2220] Incorrect check for maximum association id in ntpq.
 
@@ -3846,11 +4398,11 @@ ChangeSet@1.2799, 2012-06-09 14:16:49+00:00, davehart@dlh-7551.ad.hartbrothers.c
   ntpq/ntpq.c@1.146 +9 -7
     [Bug 2220] Incorrect check for maximum association id in ntpq.
 
-ChangeSet@1.2798, 2012-06-03 08:13:26+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2773.1.25, 2012-06-03 08:13:26+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P278
   TAG: NTP_4_2_7P278
 
-  ChangeLog@1.1165 +1 -0
+  ChangeLog@1.1146.1.19 +1 -0
     NTP_4_2_7P278
 
   ntpd/ntpd-opts.c@1.283 +4 -4
@@ -3859,7 +4411,7 @@ ChangeSet@1.2798, 2012-06-03 08:13:26+00:00, stenn@deacon.udel.edu
   ntpd/ntpd-opts.h@1.283 +3 -3
     NTP_4_2_7P278
 
-  ntpd/ntpd-opts.texi@1.281 +2 -2
+  ntpd/ntpd-opts.texi@1.275.2.3 +2 -2
     NTP_4_2_7P278
 
   ntpd/ntpd.1ntpdman@1.94 +2 -2
@@ -3880,7 +4432,7 @@ ChangeSet@1.2798, 2012-06-03 08:13:26+00:00, stenn@deacon.udel.edu
   ntpdc/ntpdc-opts.h@1.278 +3 -3
     NTP_4_2_7P278
 
-  ntpdc/ntpdc-opts.texi@1.278 +2 -2
+  ntpdc/ntpdc-opts.texi@1.272.2.3 +2 -2
     NTP_4_2_7P278
 
   ntpdc/ntpdc.1ntpdcman@1.94 +2 -2
@@ -3904,7 +4456,7 @@ ChangeSet@1.2798, 2012-06-03 08:13:26+00:00, stenn@deacon.udel.edu
   ntpq/ntpq-opts.h@1.280 +3 -3
     NTP_4_2_7P278
 
-  ntpq/ntpq-opts.texi@1.280 +2 -2
+  ntpq/ntpq-opts.texi@1.274.2.3 +2 -2
     NTP_4_2_7P278
 
   ntpq/ntpq.1ntpqman@1.94 +2 -2
@@ -3925,7 +4477,7 @@ ChangeSet@1.2798, 2012-06-03 08:13:26+00:00, stenn@deacon.udel.edu
   ntpsnmpd/ntpsnmpd-opts.h@1.280 +3 -3
     NTP_4_2_7P278
 
-  ntpsnmpd/ntpsnmpd-opts.texi@1.280 +2 -2
+  ntpsnmpd/ntpsnmpd-opts.texi@1.274.2.3 +2 -2
     NTP_4_2_7P278
 
   ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.94 +2 -2
@@ -3943,7 +4495,7 @@ ChangeSet@1.2798, 2012-06-03 08:13:26+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.281 +1 -1
     NTP_4_2_7P278
 
-  scripts/ntp-wait-opts.texi@1.98 +1 -1
+  scripts/ntp-wait-opts.texi@1.92.2.3 +1 -1
     NTP_4_2_7P278
 
   scripts/ntp-wait.1ntp-waitman@1.94 +2 -2
@@ -3967,7 +4519,7 @@ ChangeSet@1.2798, 2012-06-03 08:13:26+00:00, stenn@deacon.udel.edu
   sntp/sntp-opts.h@1.276 +3 -3
     NTP_4_2_7P278
 
-  sntp/sntp-opts.texi@1.276 +2 -2
+  sntp/sntp-opts.texi@1.270.2.3 +2 -2
     NTP_4_2_7P278
 
   sntp/sntp.1sntpman@1.96 +2 -2
@@ -3991,7 +4543,7 @@ ChangeSet@1.2798, 2012-06-03 08:13:26+00:00, stenn@deacon.udel.edu
   util/ntp-keygen-opts.h@1.280 +3 -3
     NTP_4_2_7P278
 
-  util/ntp-keygen-opts.texi@1.281 +2 -2
+  util/ntp-keygen-opts.texi@1.275.2.3 +2 -2
     NTP_4_2_7P278
 
   util/ntp-keygen.1ntp-keygenman@1.94 +2 -2
@@ -4006,7 +4558,7 @@ ChangeSet@1.2798, 2012-06-03 08:13:26+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.94 +2 -2
     NTP_4_2_7P278
 
-ChangeSet@1.2797, 2012-06-03 07:18:47+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2773.1.24, 2012-06-03 07:18:47+00:00, davehart@dlh-7551.ad.hartbrothers.com
   Update --enable-getifaddrs handling in ntp_ipv6.m4 to match bind 9.9.1 for
     [Bug 2204] Build with --enable-getifaddrs=glibc fails
 
@@ -4065,26 +4617,26 @@ ChangeSet@1.2797, 2012-06-03 07:18:47+00:00, davehart@dlh-7551.ad.hartbrothers.c
   sntp/m4/ntp_libntp.m4@1.17 +10 -4
     ensure _GNU_SOURCE is defined before any system headers are included.
 
-ChangeSet@1.2795, 2012-06-02 12:51:48+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2773.1.22, 2012-06-02 12:51:48+00:00, davehart@dlh-7551.ad.hartbrothers.com
   Correct incompatible pointer type assignment warning refclock_tsyncpci.c:341
 
   ntpd/refclock_tsyncpci.c@1.6 +1 -1
     Correct incompatible pointer type assignment warning refclock_tsyncpci.c:341
 
-ChangeSet@1.2794, 2012-06-02 12:44:37+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2773.1.21, 2012-06-02 12:44:37+00:00, davehart@dlh-7551.ad.hartbrothers.com
   [Bug 2191] dcfd -Y y2kcheck on CentOS 6.2 x86_64 breaks make check.
 
-  ChangeLog@1.1164 +1 -0
+  ChangeLog@1.1146.1.18 +1 -0
     [Bug 2191] dcfd -Y y2kcheck on CentOS 6.2 x86_64 breaks make check.
 
   parseutil/dcfd.c@1.25 +0 -37
     [Bug 2191] dcfd -Y y2kcheck on CentOS 6.2 x86_64 breaks make check.
       Patch supplied by Frank Kardel.
 
-ChangeSet@1.2793, 2012-06-02 00:02:32+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2773.1.20, 2012-06-02 00:02:32+00:00, davehart@dlh-7551.ad.hartbrothers.com
   [Bug 2178] refclock_tsyncpci.c reach register fails to shift.
 
-  ChangeLog@1.1163 +1 -0
+  ChangeLog@1.1146.1.17 +1 -0
     [Bug 2178] refclock_tsyncpci.c reach register fails to shift.
 
   ntpd/ntp_io.c@1.366 +1 -1
@@ -4608,11 +5160,11 @@ ChangeSet@1.2004.2.2, 2012-06-01 18:17:30+00:00, davehart@dlh-7551.ad.hartbrothe
   lib/isc/win32/unistd.h@1.2 +9 -2
     bind-9.9.1
 
-ChangeSet@1.2792, 2012-05-25 05:07:31+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2773.1.19, 2012-05-25 05:07:31+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P277
   TAG: NTP_4_2_7P277
 
-  ChangeLog@1.1162 +1 -0
+  ChangeLog@1.1146.1.16 +1 -0
     NTP_4_2_7P277
 
   ntpd/ntpd-opts.c@1.282 +4 -4
@@ -4621,7 +5173,7 @@ ChangeSet@1.2792, 2012-05-25 05:07:31+00:00, stenn@deacon.udel.edu
   ntpd/ntpd-opts.h@1.282 +3 -3
     NTP_4_2_7P277
 
-  ntpd/ntpd-opts.texi@1.280 +2 -2
+  ntpd/ntpd-opts.texi@1.275.2.2 +2 -2
     NTP_4_2_7P277
 
   ntpd/ntpd.1ntpdman@1.93 +2 -2
@@ -4642,7 +5194,7 @@ ChangeSet@1.2792, 2012-05-25 05:07:31+00:00, stenn@deacon.udel.edu
   ntpdc/ntpdc-opts.h@1.277 +3 -3
     NTP_4_2_7P277
 
-  ntpdc/ntpdc-opts.texi@1.277 +2 -2
+  ntpdc/ntpdc-opts.texi@1.272.2.2 +2 -2
     NTP_4_2_7P277
 
   ntpdc/ntpdc.1ntpdcman@1.93 +2 -2
@@ -4666,7 +5218,7 @@ ChangeSet@1.2792, 2012-05-25 05:07:31+00:00, stenn@deacon.udel.edu
   ntpq/ntpq-opts.h@1.279 +3 -3
     NTP_4_2_7P277
 
-  ntpq/ntpq-opts.texi@1.279 +2 -2
+  ntpq/ntpq-opts.texi@1.274.2.2 +2 -2
     NTP_4_2_7P277
 
   ntpq/ntpq.1ntpqman@1.93 +2 -2
@@ -4687,7 +5239,7 @@ ChangeSet@1.2792, 2012-05-25 05:07:31+00:00, stenn@deacon.udel.edu
   ntpsnmpd/ntpsnmpd-opts.h@1.279 +3 -3
     NTP_4_2_7P277
 
-  ntpsnmpd/ntpsnmpd-opts.texi@1.279 +2 -2
+  ntpsnmpd/ntpsnmpd-opts.texi@1.274.2.2 +2 -2
     NTP_4_2_7P277
 
   ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.93 +2 -2
@@ -4705,7 +5257,7 @@ ChangeSet@1.2792, 2012-05-25 05:07:31+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.280 +1 -1
     NTP_4_2_7P277
 
-  scripts/ntp-wait-opts.texi@1.97 +1 -1
+  scripts/ntp-wait-opts.texi@1.92.2.2 +1 -1
     NTP_4_2_7P277
 
   scripts/ntp-wait.1ntp-waitman@1.93 +2 -2
@@ -4729,7 +5281,7 @@ ChangeSet@1.2792, 2012-05-25 05:07:31+00:00, stenn@deacon.udel.edu
   sntp/sntp-opts.h@1.275 +3 -3
     NTP_4_2_7P277
 
-  sntp/sntp-opts.texi@1.275 +2 -2
+  sntp/sntp-opts.texi@1.270.2.2 +2 -2
     NTP_4_2_7P277
 
   sntp/sntp.1sntpman@1.95 +2 -2
@@ -4753,7 +5305,7 @@ ChangeSet@1.2792, 2012-05-25 05:07:31+00:00, stenn@deacon.udel.edu
   util/ntp-keygen-opts.h@1.279 +3 -3
     NTP_4_2_7P277
 
-  util/ntp-keygen-opts.texi@1.280 +2 -2
+  util/ntp-keygen-opts.texi@1.275.2.2 +2 -2
     NTP_4_2_7P277
 
   util/ntp-keygen.1ntp-keygenman@1.93 +2 -2
@@ -4768,10 +5320,10 @@ ChangeSet@1.2792, 2012-05-25 05:07:31+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.93 +2 -2
     NTP_4_2_7P277
 
-ChangeSet@1.2791, 2012-05-25 00:36:37+02:00, karlsson@luft.lund.zozs.se
+ChangeSet@1.2773.1.18, 2012-05-25 00:36:37+02:00, karlsson@luft.lund.zozs.se
   [Bug 2193] Building timestruct tests with Clang 3.1 fails.
 
-  ChangeLog@1.1161 +1 -0
+  ChangeLog@1.1146.1.15 +1 -0
     [Bug 2193] Building timestruct tests with Clang 3.1 fails.
 
   tests/libntp/timestructs.cpp@1.4 +2 -2
@@ -4780,11 +5332,11 @@ ChangeSet@1.2791, 2012-05-25 00:36:37+02:00, karlsson@luft.lund.zozs.se
   tests/libntp/timestructs.h@1.4 +2 -2
     [Bug 2193] Building timestruct tests with Clang 3.1 fails.
 
-ChangeSet@1.2790, 2012-05-15 06:32:44+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2773.1.17, 2012-05-15 06:32:44+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P276
   TAG: NTP_4_2_7P276
 
-  ChangeLog@1.1160 +1 -0
+  ChangeLog@1.1146.1.14 +1 -0
     NTP_4_2_7P276
 
   ntpd/ntpd-opts.c@1.281 +4 -4
@@ -4793,7 +5345,7 @@ ChangeSet@1.2790, 2012-05-15 06:32:44+00:00, stenn@deacon.udel.edu
   ntpd/ntpd-opts.h@1.281 +3 -3
     NTP_4_2_7P276
 
-  ntpd/ntpd-opts.texi@1.279 +2 -2
+  ntpd/ntpd-opts.texi@1.275.2.1 +2 -2
     NTP_4_2_7P276
 
   ntpd/ntpd.1ntpdman@1.92 +2 -2
@@ -4814,7 +5366,7 @@ ChangeSet@1.2790, 2012-05-15 06:32:44+00:00, stenn@deacon.udel.edu
   ntpdc/ntpdc-opts.h@1.276 +3 -3
     NTP_4_2_7P276
 
-  ntpdc/ntpdc-opts.texi@1.276 +2 -2
+  ntpdc/ntpdc-opts.texi@1.272.2.1 +2 -2
     NTP_4_2_7P276
 
   ntpdc/ntpdc.1ntpdcman@1.92 +2 -2
@@ -4838,7 +5390,7 @@ ChangeSet@1.2790, 2012-05-15 06:32:44+00:00, stenn@deacon.udel.edu
   ntpq/ntpq-opts.h@1.278 +3 -3
     NTP_4_2_7P276
 
-  ntpq/ntpq-opts.texi@1.278 +2 -2
+  ntpq/ntpq-opts.texi@1.274.2.1 +2 -2
     NTP_4_2_7P276
 
   ntpq/ntpq.1ntpqman@1.92 +2 -2
@@ -4859,7 +5411,7 @@ ChangeSet@1.2790, 2012-05-15 06:32:44+00:00, stenn@deacon.udel.edu
   ntpsnmpd/ntpsnmpd-opts.h@1.278 +3 -3
     NTP_4_2_7P276
 
-  ntpsnmpd/ntpsnmpd-opts.texi@1.278 +2 -2
+  ntpsnmpd/ntpsnmpd-opts.texi@1.274.2.1 +2 -2
     NTP_4_2_7P276
 
   ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.92 +2 -2
@@ -4877,7 +5429,7 @@ ChangeSet@1.2790, 2012-05-15 06:32:44+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.279 +1 -1
     NTP_4_2_7P276
 
-  scripts/ntp-wait-opts.texi@1.96 +1 -1
+  scripts/ntp-wait-opts.texi@1.92.2.1 +1 -1
     NTP_4_2_7P276
 
   scripts/ntp-wait.1ntp-waitman@1.92 +2 -2
@@ -4901,7 +5453,7 @@ ChangeSet@1.2790, 2012-05-15 06:32:44+00:00, stenn@deacon.udel.edu
   sntp/sntp-opts.h@1.274 +3 -3
     NTP_4_2_7P276
 
-  sntp/sntp-opts.texi@1.274 +2 -2
+  sntp/sntp-opts.texi@1.270.2.1 +2 -2
     NTP_4_2_7P276
 
   sntp/sntp.1sntpman@1.94 +2 -2
@@ -4925,7 +5477,7 @@ ChangeSet@1.2790, 2012-05-15 06:32:44+00:00, stenn@deacon.udel.edu
   util/ntp-keygen-opts.h@1.278 +3 -3
     NTP_4_2_7P276
 
-  util/ntp-keygen-opts.texi@1.279 +2 -2
+  util/ntp-keygen-opts.texi@1.275.2.1 +2 -2
     NTP_4_2_7P276
 
   util/ntp-keygen.1ntp-keygenman@1.92 +2 -2
@@ -4940,23 +5492,53 @@ ChangeSet@1.2790, 2012-05-15 06:32:44+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.92 +2 -2
     NTP_4_2_7P276
 
-ChangeSet@1.2789, 2012-05-15 02:16:33-04:00, stenn@deacon.udel.edu
+ChangeSet@1.2773.1.16, 2012-05-15 02:16:33-04:00, stenn@deacon.udel.edu
   [Bug 2179] Remove sntp/header.h
 
   BitKeeper/deleted/28/header.h~bd6b45785988925a@1.8 +0 -0
     Delete: sntp/header.h
 
-  ChangeLog@1.1159 +1 -0
+  ChangeLog@1.1146.1.13 +1 -0
     [Bug 2179] Remove sntp/header.h
 
-  sntp/Makefile.am@1.72 +0 -1
+  sntp/Makefile.am@1.71.1.1 +0 -1
     [Bug 2179] Remove sntp/header.h
 
-ChangeSet@1.2788, 2012-04-28 06:38:07+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2778, 2012-05-08 05:47:09+00:00, stenn@psp-fb1.ntp.org
+  autogen upgrade
+
+  ntpd/invoke-ntpd.texi@1.278 +2 -2
+    autogen upgrade
+
+  ntpd/ntpdsim-opts.c@1.19 +643 -472
+    autogen upgrade
+
+  ntpd/ntpdsim-opts.h@1.19 +57 -31
+    autogen upgrade
+
+  ntpdc/invoke-ntpdc.texi@1.275 +2 -2
+    autogen upgrade
+
+  ntpq/invoke-ntpq.texi@1.277 +2 -2
+    autogen upgrade
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.277 +3 -25
+    autogen upgrade
+
+  scripts/invoke-ntp-wait.texi@1.95 +1 -1
+    autogen upgrade
+
+  sntp/invoke-sntp.texi@1.273 +8 -8
+    autogen upgrade
+
+  util/invoke-ntp-keygen.texi@1.278 +2 -2
+    autogen upgrade
+
+ChangeSet@1.2773.1.15, 2012-04-28 06:38:07+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P275
   TAG: NTP_4_2_7P275
 
-  ChangeLog@1.1158 +1 -0
+  ChangeLog@1.1146.1.12 +1 -0
     NTP_4_2_7P275
 
   ntpd/ntpd-opts.c@1.280 +4 -4
@@ -4965,7 +5547,7 @@ ChangeSet@1.2788, 2012-04-28 06:38:07+00:00, stenn@deacon.udel.edu
   ntpd/ntpd-opts.h@1.280 +3 -3
     NTP_4_2_7P275
 
-  ntpd/ntpd-opts.texi@1.278 +2 -2
+  ntpd/ntpd-opts.texi@1.275.1.3 +2 -2
     NTP_4_2_7P275
 
   ntpd/ntpd.1ntpdman@1.91 +2 -2
@@ -4986,7 +5568,7 @@ ChangeSet@1.2788, 2012-04-28 06:38:07+00:00, stenn@deacon.udel.edu
   ntpdc/ntpdc-opts.h@1.275 +3 -3
     NTP_4_2_7P275
 
-  ntpdc/ntpdc-opts.texi@1.275 +2 -2
+  ntpdc/ntpdc-opts.texi@1.272.1.3 +2 -2
     NTP_4_2_7P275
 
   ntpdc/ntpdc.1ntpdcman@1.91 +2 -2
@@ -5010,7 +5592,7 @@ ChangeSet@1.2788, 2012-04-28 06:38:07+00:00, stenn@deacon.udel.edu
   ntpq/ntpq-opts.h@1.277 +3 -3
     NTP_4_2_7P275
 
-  ntpq/ntpq-opts.texi@1.277 +2 -2
+  ntpq/ntpq-opts.texi@1.274.1.3 +2 -2
     NTP_4_2_7P275
 
   ntpq/ntpq.1ntpqman@1.91 +2 -2
@@ -5031,7 +5613,7 @@ ChangeSet@1.2788, 2012-04-28 06:38:07+00:00, stenn@deacon.udel.edu
   ntpsnmpd/ntpsnmpd-opts.h@1.277 +3 -3
     NTP_4_2_7P275
 
-  ntpsnmpd/ntpsnmpd-opts.texi@1.277 +2 -2
+  ntpsnmpd/ntpsnmpd-opts.texi@1.274.1.3 +2 -2
     NTP_4_2_7P275
 
   ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.91 +2 -2
@@ -5049,7 +5631,7 @@ ChangeSet@1.2788, 2012-04-28 06:38:07+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.278 +1 -1
     NTP_4_2_7P275
 
-  scripts/ntp-wait-opts.texi@1.95 +1 -1
+  scripts/ntp-wait-opts.texi@1.92.1.3 +1 -1
     NTP_4_2_7P275
 
   scripts/ntp-wait.1ntp-waitman@1.91 +2 -2
@@ -5073,7 +5655,7 @@ ChangeSet@1.2788, 2012-04-28 06:38:07+00:00, stenn@deacon.udel.edu
   sntp/sntp-opts.h@1.273 +3 -3
     NTP_4_2_7P275
 
-  sntp/sntp-opts.texi@1.273 +2 -2
+  sntp/sntp-opts.texi@1.270.1.3 +2 -2
     NTP_4_2_7P275
 
   sntp/sntp.1sntpman@1.93 +2 -2
@@ -5097,7 +5679,7 @@ ChangeSet@1.2788, 2012-04-28 06:38:07+00:00, stenn@deacon.udel.edu
   util/ntp-keygen-opts.h@1.277 +3 -3
     NTP_4_2_7P275
 
-  util/ntp-keygen-opts.texi@1.278 +2 -2
+  util/ntp-keygen-opts.texi@1.275.1.3 +2 -2
     NTP_4_2_7P275
 
   util/ntp-keygen.1ntp-keygenman@1.91 +2 -2
@@ -5112,7 +5694,7 @@ ChangeSet@1.2788, 2012-04-28 06:38:07+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.91 +2 -2
     NTP_4_2_7P275
 
-ChangeSet@1.2787, 2012-04-27 15:02:14-07:00, harlan@hms-mbp.local
+ChangeSet@1.2773.1.14, 2012-04-27 15:02:14-07:00, harlan@hms-mbp.local
   [Bug 1744] Remove obsolete ntpdate/ntptime* items
 
   BitKeeper/deleted/2e/ntptime_config.c~491a3955@1.7 +0 -0
@@ -5121,17 +5703,17 @@ ChangeSet@1.2787, 2012-04-27 15:02:14-07:00, harlan@hms-mbp.local
   BitKeeper/deleted/92/ntptimeset.c~491a3955@1.16 +0 -0
     Delete: ntpdate/ntptimeset.c
 
-  ChangeLog@1.1157 +1 -0
+  ChangeLog@1.1146.1.11 +1 -0
     [Bug 1744] Remove obsolete ntpdate/ntptime* items
 
   ntpdate/Makefile.am@1.36 +1 -3
     [Bug 1744] Remove obsolete ntpdate/ntptime* items
 
-ChangeSet@1.2786, 2012-04-25 04:41:40+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2773.1.13, 2012-04-25 04:41:40+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P274
   TAG: NTP_4_2_7P274
 
-  ChangeLog@1.1156 +1 -0
+  ChangeLog@1.1146.1.10 +1 -0
     NTP_4_2_7P274
 
   ntpd/ntpd-opts.c@1.279 +4 -4
@@ -5140,7 +5722,7 @@ ChangeSet@1.2786, 2012-04-25 04:41:40+00:00, stenn@deacon.udel.edu
   ntpd/ntpd-opts.h@1.279 +3 -3
     NTP_4_2_7P274
 
-  ntpd/ntpd-opts.texi@1.277 +2 -2
+  ntpd/ntpd-opts.texi@1.275.1.2 +2 -2
     NTP_4_2_7P274
 
   ntpd/ntpd.1ntpdman@1.90 +2 -2
@@ -5161,7 +5743,7 @@ ChangeSet@1.2786, 2012-04-25 04:41:40+00:00, stenn@deacon.udel.edu
   ntpdc/ntpdc-opts.h@1.274 +3 -3
     NTP_4_2_7P274
 
-  ntpdc/ntpdc-opts.texi@1.274 +2 -2
+  ntpdc/ntpdc-opts.texi@1.272.1.2 +2 -2
     NTP_4_2_7P274
 
   ntpdc/ntpdc.1ntpdcman@1.90 +2 -2
@@ -5185,7 +5767,7 @@ ChangeSet@1.2786, 2012-04-25 04:41:40+00:00, stenn@deacon.udel.edu
   ntpq/ntpq-opts.h@1.276 +3 -3
     NTP_4_2_7P274
 
-  ntpq/ntpq-opts.texi@1.276 +2 -2
+  ntpq/ntpq-opts.texi@1.274.1.2 +2 -2
     NTP_4_2_7P274
 
   ntpq/ntpq.1ntpqman@1.90 +2 -2
@@ -5206,7 +5788,7 @@ ChangeSet@1.2786, 2012-04-25 04:41:40+00:00, stenn@deacon.udel.edu
   ntpsnmpd/ntpsnmpd-opts.h@1.276 +3 -3
     NTP_4_2_7P274
 
-  ntpsnmpd/ntpsnmpd-opts.texi@1.276 +2 -2
+  ntpsnmpd/ntpsnmpd-opts.texi@1.274.1.2 +2 -2
     NTP_4_2_7P274
 
   ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.90 +2 -2
@@ -5224,7 +5806,7 @@ ChangeSet@1.2786, 2012-04-25 04:41:40+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.277 +1 -1
     NTP_4_2_7P274
 
-  scripts/ntp-wait-opts.texi@1.94 +1 -1
+  scripts/ntp-wait-opts.texi@1.92.1.2 +1 -1
     NTP_4_2_7P274
 
   scripts/ntp-wait.1ntp-waitman@1.90 +2 -2
@@ -5248,7 +5830,7 @@ ChangeSet@1.2786, 2012-04-25 04:41:40+00:00, stenn@deacon.udel.edu
   sntp/sntp-opts.h@1.272 +3 -3
     NTP_4_2_7P274
 
-  sntp/sntp-opts.texi@1.272 +2 -2
+  sntp/sntp-opts.texi@1.270.1.2 +2 -2
     NTP_4_2_7P274
 
   sntp/sntp.1sntpman@1.92 +2 -2
@@ -5272,7 +5854,7 @@ ChangeSet@1.2786, 2012-04-25 04:41:40+00:00, stenn@deacon.udel.edu
   util/ntp-keygen-opts.h@1.276 +3 -3
     NTP_4_2_7P274
 
-  util/ntp-keygen-opts.texi@1.277 +2 -2
+  util/ntp-keygen-opts.texi@1.275.1.2 +2 -2
     NTP_4_2_7P274
 
   util/ntp-keygen.1ntp-keygenman@1.90 +2 -2
@@ -5287,16 +5869,16 @@ ChangeSet@1.2786, 2012-04-25 04:41:40+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.90 +2 -2
     NTP_4_2_7P274
 
-ChangeSet@1.2785, 2012-04-25 03:53:28+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2773.1.12, 2012-04-25 03:53:28+00:00, davehart@dlh-7551.ad.hartbrothers.com
   [Bug 2174] ntpd rejects source UDP ports less than 123 as bogus.
 
-  ChangeLog@1.1155 +1 -0
+  ChangeLog@1.1146.1.9 +1 -0
     [Bug 2174] ntpd rejects source UDP ports less than 123 as bogus.
 
   ntpd/ntp_proto.c@1.341 +3 -6
     [Bug 2174] ntpd rejects source UDP ports less than 123 as bogus.
 
-ChangeSet@1.2784, 2012-04-25 03:18:53+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2773.1.11, 2012-04-25 03:18:53+00:00, davehart@dlh-7551.ad.hartbrothers.com
   Remove redundant manual systime_s.o: systime.c dependency from libntp's
   Makefile.am.
 
@@ -5309,11 +5891,11 @@ ChangeSet@1.2784, 2012-04-25 03:18:53+00:00, davehart@dlh-7551.ad.hartbrothers.c
     .dep/*.Po must not be removed unless *.o are removed at the same time,
     or else automatic dependencies are missing.
 
-ChangeSet@1.2783, 2012-04-19 05:43:39+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2773.1.10, 2012-04-19 05:43:39+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P273
   TAG: NTP_4_2_7P273
 
-  ChangeLog@1.1154 +1 -0
+  ChangeLog@1.1146.1.8 +1 -0
     NTP_4_2_7P273
 
   libntp/Makefile.am@1.69 +1 -1
@@ -5328,7 +5910,7 @@ ChangeSet@1.2783, 2012-04-19 05:43:39+00:00, stenn@deacon.udel.edu
   ntpd/ntpd-opts.h@1.278 +3 -3
     NTP_4_2_7P273
 
-  ntpd/ntpd-opts.texi@1.276 +2 -2
+  ntpd/ntpd-opts.texi@1.275.1.1 +2 -2
     NTP_4_2_7P273
 
   ntpd/ntpd.1ntpdman@1.89 +2 -2
@@ -5349,7 +5931,7 @@ ChangeSet@1.2783, 2012-04-19 05:43:39+00:00, stenn@deacon.udel.edu
   ntpdc/ntpdc-opts.h@1.273 +3 -3
     NTP_4_2_7P273
 
-  ntpdc/ntpdc-opts.texi@1.273 +2 -2
+  ntpdc/ntpdc-opts.texi@1.272.1.1 +2 -2
     NTP_4_2_7P273
 
   ntpdc/ntpdc.1ntpdcman@1.89 +2 -2
@@ -5373,7 +5955,7 @@ ChangeSet@1.2783, 2012-04-19 05:43:39+00:00, stenn@deacon.udel.edu
   ntpq/ntpq-opts.h@1.275 +3 -3
     NTP_4_2_7P273
 
-  ntpq/ntpq-opts.texi@1.275 +2 -2
+  ntpq/ntpq-opts.texi@1.274.1.1 +2 -2
     NTP_4_2_7P273
 
   ntpq/ntpq.1ntpqman@1.89 +2 -2
@@ -5394,7 +5976,7 @@ ChangeSet@1.2783, 2012-04-19 05:43:39+00:00, stenn@deacon.udel.edu
   ntpsnmpd/ntpsnmpd-opts.h@1.275 +3 -3
     NTP_4_2_7P273
 
-  ntpsnmpd/ntpsnmpd-opts.texi@1.275 +2 -2
+  ntpsnmpd/ntpsnmpd-opts.texi@1.274.1.1 +2 -2
     NTP_4_2_7P273
 
   ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.89 +2 -2
@@ -5412,7 +5994,7 @@ ChangeSet@1.2783, 2012-04-19 05:43:39+00:00, stenn@deacon.udel.edu
   packageinfo.sh@1.276 +1 -1
     NTP_4_2_7P273
 
-  scripts/ntp-wait-opts.texi@1.93 +1 -1
+  scripts/ntp-wait-opts.texi@1.92.1.1 +1 -1
     NTP_4_2_7P273
 
   scripts/ntp-wait.1ntp-waitman@1.89 +2 -2
@@ -5436,7 +6018,7 @@ ChangeSet@1.2783, 2012-04-19 05:43:39+00:00, stenn@deacon.udel.edu
   sntp/sntp-opts.h@1.271 +3 -3
     NTP_4_2_7P273
 
-  sntp/sntp-opts.texi@1.271 +2 -2
+  sntp/sntp-opts.texi@1.270.1.1 +2 -2
     NTP_4_2_7P273
 
   sntp/sntp.1sntpman@1.91 +2 -2
@@ -5460,7 +6042,7 @@ ChangeSet@1.2783, 2012-04-19 05:43:39+00:00, stenn@deacon.udel.edu
   util/ntp-keygen-opts.h@1.275 +3 -3
     NTP_4_2_7P273
 
-  util/ntp-keygen-opts.texi@1.276 +2 -2
+  util/ntp-keygen-opts.texi@1.275.1.1 +2 -2
     NTP_4_2_7P273
 
   util/ntp-keygen.1ntp-keygenman@1.89 +2 -2
@@ -5475,22 +6057,22 @@ ChangeSet@1.2783, 2012-04-19 05:43:39+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.89 +2 -2
     NTP_4_2_7P273
 
-ChangeSet@1.2782, 2012-04-18 19:30:28+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2773.1.9, 2012-04-18 19:30:28+00:00, davehart@dlh-7551.ad.hartbrothers.com
   Correct authnumfreekeys accounting broken in 4.2.7p262.
 
-  ChangeLog@1.1153 +1 -0
+  ChangeLog@1.1146.1.7 +1 -0
     Correct authnumfreekeys accounting broken in 4.2.7p262.
 
   libntp/authkeys.c@1.24 +2 -2
     Correct authnumfreekeys accounting broken in 4.2.7p262.
 
-ChangeSet@1.2781, 2012-04-18 11:46:26+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2773.1.8, 2012-04-18 11:46:26+00:00, davehart@dlh-7551.ad.hartbrothers.com
   [Bug 2141] handle_sigio() calls get_systime(), which must be
     reentrant when SIGIO is used.  Sanity checks relative to the prior
     get_systime() are disabled in ntpd on systems with signaled I/O, but
     active in sntp and ntpdate.
 
-  ChangeLog@1.1152 +4 -0
+  ChangeLog@1.1146.1.6 +4 -0
     [Bug 2141] handle_sigio() calls get_systime(), which must be
       reentrant when SIGIO is used.  Sanity checks relative to the prior
       get_systime() are disabled in ntpd on systems with signaled I/O, but
@@ -5506,7 +6088,7 @@ ChangeSet@1.2781, 2012-04-18 11:46:26+00:00, davehart@dlh-7551.ad.hartbrothers.c
     Disable non-reentrant checks in get_systime() when SIGIO is being used,
     as handle_sigio() calls get_systime().
 
-ChangeSet@1.2780, 2012-04-18 05:03:10+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2773.1.7, 2012-04-18 05:03:10+00:00, davehart@dlh-7551.ad.hartbrothers.com
   Remove inttoa() and uinttoa(), convert solitary use of latter
     to simpler code.
 
@@ -5540,11 +6122,223 @@ ChangeSet@1.2780, 2012-04-18 05:03:10+00:00, davehart@dlh-7551.ad.hartbrothers.c
   tests/libntp/Makefile.am@1.40 +0 -2
     Remove inttoa() and uinttoa() unit tests.
 
-ChangeSet@1.2779, 2012-04-14 04:43:39+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2776, 2012-04-17 01:54:04-07:00, stenn@stenn.ntp.org
+  Upgrade to autogen-5.16 and libopts-36.4.11
+
+  ChangeLog@1.1149 +1 -0
+    Upgrade to autogen-5.16
+
+  ntpd/Makefile.am@1.117 +7 -7
+    Upgrade to autogen-5.16
+
+  ntpd/invoke-ntpd.menu@1.7 +0 -0
+    Rename: ntpd/ntpd-opts.menu -> ntpd/invoke-ntpd.menu
+
+  ntpd/invoke-ntpd.texi@1.274.1.2 +681 -272
+    Upgrade to autogen-5.16 and libopts-36.4.11
+
+  ntpd/invoke-ntpd.texi@1.274.1.1 +0 -0
+    Rename: ntpd/ntpd-opts.texi -> ntpd/invoke-ntpd.texi
+
+  ntpdc/Makefile.am@1.72 +9 -9
+    Upgrade to autogen-5.16
+
+  ntpdc/invoke-ntpdc.menu@1.7 +0 -0
+    Rename: ntpdc/ntpdc-opts.menu -> ntpdc/invoke-ntpdc.menu
+
+  ntpdc/invoke-ntpdc.texi@1.271.1.2 +667 -84
+    Upgrade to autogen-5.16 and libopts-36.4.11
+
+  ntpdc/invoke-ntpdc.texi@1.271.1.1 +0 -0
+    Rename: ntpdc/ntpdc-opts.texi -> ntpdc/invoke-ntpdc.texi
+
+  ntpdc/ntpdc.texi@1.3 +1 -1
+    Upgrade to autogen-5.16 and libopts-36.4.11
+
+  ntpq/Makefile.am@1.68 +7 -7
+    Upgrade to autogen-5.16
+
+  ntpq/invoke-ntpq.menu@1.7 +0 -0
+    Rename: ntpq/ntpq-opts.menu -> ntpq/invoke-ntpq.menu
+
+  ntpq/invoke-ntpq.texi@1.273.1.2 +352 -83
+    Upgrade to autogen-5.16 and libopts-36.4.11
+
+  ntpq/invoke-ntpq.texi@1.273.1.1 +0 -0
+    Rename: ntpq/ntpq-opts.texi -> ntpq/invoke-ntpq.texi
+
+  ntpsnmpd/Makefile.am@1.35.1.1 +7 -7
+    Upgrade to autogen-5.16
+
+  ntpsnmpd/invoke-ntpsnmpd.menu@1.7 +0 -0
+    Rename: ntpsnmpd/ntpsnmpd-opts.menu -> ntpsnmpd/invoke-ntpsnmpd.menu
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.273.1.2 +120 -47
+    Upgrade to autogen-5.16 and libopts-36.4.11
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.273.1.1 +0 -0
+    Rename: ntpsnmpd/ntpsnmpd-opts.texi -> ntpsnmpd/invoke-ntpsnmpd.texi
+
+  scripts/Makefile.am@1.30 +8 -8
+    Upgrade to autogen-5.16
+
+  scripts/invoke-ntp-wait.menu@1.2 +0 -0
+    Rename: scripts/ntp-wait-opts.menu -> scripts/invoke-ntp-wait.menu
+
+  scripts/invoke-ntp-wait.texi@1.91.1.2 +92 -26
+    Upgrade to autogen-5.16 and libopts-36.4.11
+
+  scripts/invoke-ntp-wait.texi@1.91.1.1 +0 -0
+    Rename: scripts/ntp-wait-opts.texi -> scripts/invoke-ntp-wait.texi
+
+  scripts/ntp-wait.texi@1.2 +1 -1
+    Upgrade to autogen-5.16 and libopts-36.4.11
+
+  sntp/Makefile.am@1.72 +9 -9
+    Upgrade to autogen-5.16
+
+  sntp/invoke-sntp.menu@1.7 +0 -0
+    Rename: sntp/sntp-opts.menu -> sntp/invoke-sntp.menu
+
+  sntp/invoke-sntp.texi@1.269.1.2 +254 -133
+    Upgrade to autogen-5.16 and libopts-36.4.11
+
+  sntp/invoke-sntp.texi@1.269.1.1 +0 -0
+    Rename: sntp/sntp-opts.texi -> sntp/invoke-sntp.texi
+
+  sntp/libopts/Makefile.am@1.13 +6 -6
+    upgrade to libopts-36.4.11
+
+  sntp/libopts/ag-char-map.h@1.16 +305 -129
+    upgrade to libopts-36.4.11
+
+  sntp/libopts/ao-strs.c@1.2 +1 -1
+    upgrade to libopts-36.4.11
+
+  sntp/libopts/ao-strs.h@1.1 +251 -0
+    upgrade to libopts-36.4.11
+
+  sntp/libopts/ao-strs.h@1.0 +0 -0
+
+  sntp/libopts/autoopts.c@1.13 +14 -5
+    upgrade to libopts-36.4.11
+
+  sntp/libopts/autoopts.h@1.11 +8 -9
+    upgrade to libopts-36.4.11
+
+  sntp/libopts/autoopts/options.h@1.15 +50 -29
+    upgrade to libopts-36.4.11
+
+  sntp/libopts/autoopts/project.h@1.2 +2 -0
+    upgrade to libopts-36.4.11
+
+  sntp/libopts/autoopts/usage-txt.h@1.15 +161 -159
+    upgrade to libopts-36.4.11
+
+  sntp/libopts/boolean.c@1.9 +8 -6
+    upgrade to libopts-36.4.11
+
+  sntp/libopts/check.c@1.3 +17 -15
+    upgrade to libopts-36.4.11
+
+  sntp/libopts/compat/compat.h@1.9 +15 -4
+    upgrade to libopts-36.4.11
+
+  sntp/libopts/compat/pathfind.c@1.7 +2 -2
+    upgrade to libopts-36.4.11
+
+  sntp/libopts/configfile.c@1.14 +58 -50
+    upgrade to libopts-36.4.11
+
+  sntp/libopts/cook.c@1.10 +8 -8
+    upgrade to libopts-36.4.11
+
+  sntp/libopts/enum.c@1.3 +32 -6
+    upgrade to libopts-36.4.11
+
+  sntp/libopts/env.c@1.3 +7 -4
+    upgrade to libopts-36.4.11
+
+  sntp/libopts/find.c@1.3 +4 -4
+    upgrade to libopts-36.4.11
+
+  sntp/libopts/genshell.c@1.16 +17 -16
+    upgrade to libopts-36.4.11
+
+  sntp/libopts/genshell.h@1.16 +6 -5
+    upgrade to libopts-36.4.11
+
+  sntp/libopts/libopts.c@1.6 +1 -2
+    upgrade to libopts-36.4.11
+
+  sntp/libopts/load.c@1.12 +46 -47
+    upgrade to libopts-36.4.11
+
+  sntp/libopts/m4/libopts.m4@1.19 +3 -2
+    upgrade to libopts-36.4.11
+
+  sntp/libopts/makeshell.c@1.11 +5 -3
+    upgrade to libopts-36.4.11
+
+  sntp/libopts/nested.c@1.9 +7 -6
+    upgrade to libopts-36.4.11
+
+  sntp/libopts/parse-duration.c@1.7 +3 -3
+    upgrade to libopts-36.4.11
+
+  sntp/libopts/pgusage.c@1.10 +4 -11
+    upgrade to libopts-36.4.11
+
+  sntp/libopts/proto.h@1.16 +4 -7
+    upgrade to libopts-36.4.11
+
+  sntp/libopts/putshell.c@1.9 +6 -4
+    upgrade to libopts-36.4.11
+
+  sntp/libopts/reset.c@1.10 +4 -4
+    upgrade to libopts-36.4.11
+
+  sntp/libopts/save.c@1.11 +3 -3
+    upgrade to libopts-36.4.11
+
+  sntp/libopts/stack.c@1.9 +8 -8
+    upgrade to libopts-36.4.11
+
+  sntp/libopts/streqvcmp.c@1.9 +3 -3
+    upgrade to libopts-36.4.11
+
+  sntp/libopts/tokenize.c@1.7 +7 -9
+    upgrade to libopts-36.4.11
+
+  sntp/libopts/usage.c@1.11 +30 -32
+    upgrade to libopts-36.4.11
+
+  sntp/libopts/value-type.h@1.16 +1 -1
+    upgrade to libopts-36.4.11
+
+  sntp/libopts/xat-attribute.h@1.16 +1 -1
+    upgrade to libopts-36.4.11
+
+  sntp/sntp.texi@1.9 +1 -1
+    Upgrade to autogen-5.16 and libopts-36.4.11
+
+  util/Makefile.am@1.72 +7 -7
+    Upgrade to autogen-5.16
+
+  util/invoke-ntp-keygen.menu@1.8 +0 -0
+    Rename: util/ntp-keygen-opts.menu -> util/invoke-ntp-keygen.menu
+
+  util/invoke-ntp-keygen.texi@1.274.1.2 +761 -120
+    Upgrade to autogen-5.16 and libopts-36.4.11
+
+  util/invoke-ntp-keygen.texi@1.274.1.1 +0 -0
+    Rename: util/ntp-keygen-opts.texi -> util/invoke-ntp-keygen.texi
+
+ChangeSet@1.2773.1.6, 2012-04-14 04:43:39+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P272
   TAG: NTP_4_2_7P272
 
-  ChangeLog@1.1151 +1 -0
+  ChangeLog@1.1146.1.5 +1 -0
     NTP_4_2_7P272
 
   ntpd/ntpd-opts.c@1.277 +4 -4
@@ -5700,13 +6494,13 @@ ChangeSet@1.2779, 2012-04-14 04:43:39+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.88 +2 -2
     NTP_4_2_7P272
 
-ChangeSet@1.2776.1.1, 2012-04-13 23:49:28-04:00, stenn@deacon.udel.edu
+ChangeSet@1.2773.2.1, 2012-04-13 23:49:28-04:00, stenn@deacon.udel.edu
   Change the link order for ntpsntpd
 
-  ChangeLog@1.1148.1.2 +1 -0
+  ChangeLog@1.1146.2.2 +1 -0
     Change the link order for ntpsntpd
 
-  ChangeLog@1.1148.1.1 +1 -0
+  ChangeLog@1.1146.2.1 +1 -0
     Remove extra nlist test
 
   configure.ac@1.545 +1 -1
@@ -5715,10 +6509,10 @@ ChangeSet@1.2776.1.1, 2012-04-13 23:49:28-04:00, stenn@deacon.udel.edu
   ntpsnmpd/Makefile.am@1.36 +3 -2
     Change the link order for ntpsntpd
 
-ChangeSet@1.2777, 2012-04-13 02:02:55-07:00, harlan@hms-mbp.lan
+ChangeSet@1.2773.1.4, 2012-04-13 02:02:55-07:00, harlan@hms-mbp.lan
   LCRYPTO is gone - replace with VER_SUFFIX
 
-  ChangeLog@1.1149 +1 -0
+  ChangeLog@1.1146.1.3 +1 -0
     LCRYPTO is gone - replace with VER_SUFFIX
 
   scripts/mkver.in@1.14 +2 -4
@@ -5732,11 +6526,11 @@ ChangeSet@1.2777, 2012-04-13 02:02:55-07:00, harlan@hms-mbp.lan
 
   sntp/m4/ntp_ver_suffix.m4@1.0 +0 -0
 
-ChangeSet@1.2776, 2012-04-11 08:44:21+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2773.1.3, 2012-04-11 08:44:21+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P271
   TAG: NTP_4_2_7P271
 
-  ChangeLog@1.1148 +1 -0
+  ChangeLog@1.1146.1.2 +1 -0
     NTP_4_2_7P271
 
   ntpd/ntpd-opts.c@1.276 +4 -4
@@ -5892,7 +6686,7 @@ ChangeSet@1.2776, 2012-04-11 08:44:21+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.87 +2 -2
     NTP_4_2_7P271
 
-ChangeSet@1.2775, 2012-04-09 16:19:04+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2773.1.2, 2012-04-09 16:19:04+00:00, davehart@dlh-7551.ad.hartbrothers.com
   Put openssl -L flags from pkg-config in LDADD_NTP as comment indicates,
     rather than in LDFLAGS_NTP.
 
@@ -5900,20 +6694,20 @@ ChangeSet@1.2775, 2012-04-09 16:19:04+00:00, davehart@dlh-7551.ad.hartbrothers.c
     Put openssl -L flags from pkg-config in LDADD_NTP as comment indicates,
       rather than in LDFLAGS_NTP.
 
-ChangeSet@1.2774, 2012-04-09 05:25:13+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2773.1.1, 2012-04-09 05:25:13+00:00, davehart@dlh-7551.ad.hartbrothers.com
   [Bug 1122] openssl detection via pkg-config fails when no additional
     -Idir flags are needed.
   Avoid overwriting user variable LDFLAGS with OpenSSL flags, instead
     they are added to LDFLAGS_NTP.
 
-  ChangeLog@1.1147 +4 -0
+  ChangeLog@1.1146.1.1 +4 -0
     [Bug 1122] openssl detection via pkg-config fails when no additional
       -Idir flags are needed.
     Avoid overwriting user variable LDFLAGS with OpenSSL flags, instead
       they are added to LDFLAGS_NTP.
     
 
-  ntpd/Makefile.am@1.115 +4 -2
+  ntpd/Makefile.am@1.112.1.3 +4 -2
     Avoid overwriting user variable LDFLAGS with OpenSSL flags, instead
       they are added to LDFLAGS_NTP.
 
@@ -6827,7 +7621,7 @@ ChangeSet@1.2762.1.36, 2012-03-21 03:04:51+00:00, davehart@dlh-7551.ad.hartbroth
   ntpd/refclock_tsyncpci.c@1.2 +3 -1
     protect sys/ioctl.h include with HAVE_SYS_IOCTL_H
 
-ChangeSet@1.2762.8.1, 2012-03-20 11:25:09+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2762.10.1, 2012-03-20 11:25:09+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P265
   TAG: NTP_4_2_7P265
 
@@ -7013,7 +7807,7 @@ ChangeSet@1.2762.1.34, 2012-03-20 06:18:59+00:00, davehart@dlh-7551.ad.hartbroth
   libntp/clocktypes.c@1.20 +2 -0
     Spectracom TSYNC reference clock driver from tsync.2.5.0.tar.gz
 
-  ntpd/Makefile.am@1.114 +1 -0
+  ntpd/Makefile.am@1.112.1.2 +1 -0
     Spectracom TSYNC reference clock driver from tsync.2.5.0.tar.gz
 
   ntpd/ntp_control.c@1.180 +1 -0
@@ -7605,7 +8399,7 @@ ChangeSet@1.2762.1.23, 2012-02-28 20:27:35-05:00, stenn@deacon.udel.edu
   ntpsnmpd/Makefile.am@1.34 +1 -1
     Add missing library to ntpsnmpd build
 
-ChangeSet@1.2762.7.1, 2012-02-28 04:42:34-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2762.9.1, 2012-02-28 04:42:34-05:00, stenn@deacon.udel.edu
   Disable bkbits as a mirror for now
 
   BitKeeper/triggers/2mirrors@1.8 +3 -1
@@ -7807,7 +8601,164 @@ ChangeSet@1.2762.1.20, 2012-02-27 11:45:56+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.77 +2 -2
     NTP_4_2_7P261
 
-ChangeSet@1.2762.6.1, 2012-02-24 11:36:14+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2762.7.3, 2012-02-27 06:45:32+00:00, stenn@psp-fb1.ntp.org
+  Upgrade to autogen-5.15
+
+  ChangeLog@1.1123.1.2 +1 -0
+    Upgrade to autogen-5.15
+
+  sntp/include/autogen-version.def@1.10 +1 -1
+    Upgrade to autogen-5.15
+
+  sntp/libopts/COPYING.gplv3@1.5 +1 -1
+    Upgrade to autogen-5.15
+
+  sntp/libopts/COPYING.lgplv3@1.5 +1 -1
+    Upgrade to autogen-5.15
+
+  sntp/libopts/Makefile.am@1.12 +5 -4
+    Upgrade to autogen-5.15
+
+  sntp/libopts/README@1.7 +1 -1
+    Upgrade to autogen-5.15
+
+  sntp/libopts/ag-char-map.h@1.15 +132 -102
+    Upgrade to autogen-5.15
+
+  sntp/libopts/alias.c@1.1 +108 -0
+    BitKeeper file /a/etc/amd.stage/thump2-g3/export/ntp/home/stenn/ntp-dev-autogen/sntp/libopts/alias.c
+
+  sntp/libopts/alias.c@1.0 +0 -0
+
+  sntp/libopts/ao-strs.c@1.1 +323 -0
+    BitKeeper file /a/etc/amd.stage/thump2-g3/export/ntp/home/stenn/ntp-dev-autogen/sntp/libopts/ao-strs.c
+
+  sntp/libopts/ao-strs.c@1.0 +0 -0
+
+  sntp/libopts/autoopts.c@1.12 +14 -14
+    Upgrade to autogen-5.15
+
+  sntp/libopts/autoopts.h@1.10 +5 -3
+    Upgrade to autogen-5.15
+
+  sntp/libopts/autoopts/options.h@1.14 +31 -19
+    Upgrade to autogen-5.15
+
+  sntp/libopts/autoopts/usage-txt.h@1.14 +168 -170
+    Upgrade to autogen-5.15
+
+  sntp/libopts/boolean.c@1.8 +1 -1
+    Upgrade to autogen-5.15
+
+  sntp/libopts/check.c@1.2 +1 -1
+    Upgrade to autogen-5.15
+
+  sntp/libopts/compat/compat.h@1.8 +5 -3
+    Upgrade to autogen-5.15
+
+  sntp/libopts/compat/windows-config.h@1.8 +1 -1
+    Upgrade to autogen-5.15
+
+  sntp/libopts/configfile.c@1.13 +16 -14
+    Upgrade to autogen-5.15
+
+  sntp/libopts/cook.c@1.9 +12 -12
+    Upgrade to autogen-5.15
+
+  sntp/libopts/enum.c@1.2 +31 -36
+    Upgrade to autogen-5.15
+
+  sntp/libopts/env.c@1.2 +1 -1
+    Upgrade to autogen-5.15
+
+  sntp/libopts/file.c@1.10 +1 -1
+    Upgrade to autogen-5.15
+
+  sntp/libopts/find.c@1.2 +36 -38
+    Upgrade to autogen-5.15
+
+  sntp/libopts/genshell.c@1.15 +25 -19
+    Upgrade to autogen-5.15
+
+  sntp/libopts/genshell.h@1.15 +4 -4
+    Upgrade to autogen-5.15
+
+  sntp/libopts/libopts.c@1.5 +7 -3
+    Upgrade to autogen-5.15
+
+  sntp/libopts/load.c@1.11 +10 -11
+    Upgrade to autogen-5.15
+
+  sntp/libopts/m4/libopts.m4@1.18 +30 -30
+    Upgrade to autogen-5.15
+
+  sntp/libopts/m4/liboptschk.m4@1.9 +1 -1
+    Upgrade to autogen-5.15
+
+  sntp/libopts/makeshell.c@1.10 +124 -436
+    Upgrade to autogen-5.15
+
+  sntp/libopts/nested.c@1.8 +65 -40
+    Upgrade to autogen-5.15
+
+  sntp/libopts/numeric.c@1.9 +9 -13
+    Upgrade to autogen-5.15
+
+  sntp/libopts/parse-duration.c@1.6 +1 -1
+    Upgrade to autogen-5.15
+
+  sntp/libopts/parse-duration.h@1.6 +2 -2
+    Upgrade to autogen-5.15
+
+  sntp/libopts/pgusage.c@1.9 +8 -9
+    Upgrade to autogen-5.15
+
+  sntp/libopts/proto.h@1.15 +1 -1
+    Upgrade to autogen-5.15
+
+  sntp/libopts/putshell.c@1.8 +21 -34
+    Upgrade to autogen-5.15
+
+  sntp/libopts/reset.c@1.9 +1 -1
+    Upgrade to autogen-5.15
+
+  sntp/libopts/restore.c@1.8 +1 -1
+    Upgrade to autogen-5.15
+
+  sntp/libopts/save.c@1.10 +82 -98
+    Upgrade to autogen-5.15
+
+  sntp/libopts/sort.c@1.9 +1 -1
+    Upgrade to autogen-5.15
+
+  sntp/libopts/stack.c@1.8 +6 -6
+    Upgrade to autogen-5.15
+
+  sntp/libopts/streqvcmp.c@1.8 +6 -6
+    Upgrade to autogen-5.15
+
+  sntp/libopts/text_mmap.c@1.10 +2 -2
+    Upgrade to autogen-5.15
+
+  sntp/libopts/time.c@1.9 +3 -3
+    Upgrade to autogen-5.15
+
+  sntp/libopts/tokenize.c@1.6 +5 -5
+    Upgrade to autogen-5.15
+
+  sntp/libopts/usage.c@1.10 +9 -9
+    Upgrade to autogen-5.15
+
+  sntp/libopts/value-type.h@1.15 +1 -1
+    Upgrade to autogen-5.15
+
+  sntp/libopts/version.c@1.10 +25 -10
+    Upgrade to autogen-5.15
+
+  sntp/libopts/xat-attribute.h@1.15 +1 -1
+    Upgrade to autogen-5.15
+
+ChangeSet@1.2762.7.1, 2012-02-24 11:36:14+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P260
   TAG: NTP_4_2_7P260
 
@@ -7983,7 +8934,7 @@ ChangeSet@1.2762.1.17, 2012-02-23 18:16:42-05:00, stenn@deacon.udel.edu
   ChangeLog@1.1123 +1 -0
     Fix the check-scm-rev invocation in several Makefile.am's.
 
-  ntpd/Makefile.am@1.113 +1 -1
+  ntpd/Makefile.am@1.112.1.1 +1 -1
     Fix the check-scm-rev invocation in several Makefile.am's.
 
   ntpdate/Makefile.am@1.34 +1 -1
@@ -8373,7 +9324,7 @@ ChangeSet@1.2762.1.13, 2012-02-21 02:43:49+00:00, hart@psp-os1.ntp.org
   ntpd/refclock_nmea.c@1.69 +1 -1
     add newline to EOF
 
-ChangeSet@1.2762.5.1, 2012-02-21 01:26:03+01:00, jnperlin@hydra.localnet
+ChangeSet@1.2762.6.1, 2012-02-21 01:26:03+01:00, jnperlin@hydra.localnet
   [bug 2143] discard data if quality indication not good to avoid glitches
   add stat counters for diagnostics (mode bit enabled) to clockstats file
 
@@ -8385,7 +9336,7 @@ ChangeSet@1.2762.5.1, 2012-02-21 01:26:03+01:00, jnperlin@hydra.localnet
     [bug 2143] discard data if quality indication not good to avoid glitches
     add stat counters for diagnostics (mode bit enabled) to clockstats file
 
-ChangeSet@1.2762.3.2, 2012-02-20 22:16:37+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2762.4.2, 2012-02-20 22:16:37+00:00, davehart@dlh-7551.ad.hartbrothers.com
   [Bug 2143] NMEA 4.2.7p204 uses timecodes indicating lost reception.
   Increase detail in clockstats for NMEA driver (from Hal Murray).
 
@@ -8405,7 +9356,7 @@ ChangeSet@1.2762.1.10, 2012-02-19 16:30:28+00:00, davehart@dlh-7551.ad.hartbroth
     fix user-mode PPS end of line timestamp, and use wait I/O
       completion timestamp not read completion.
 
-ChangeSet@1.2762.4.1, 2012-02-19 16:06:38+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2762.5.1, 2012-02-19 16:06:38+00:00, davehart@dlh-7551.ad.hartbrothers.com
   Minor nonfunctional refclock_nmea.c cleanup while hunting bug.
 
   ports/winnt/ntpd/ntp_iocompletionport.c@1.62.1.1 +74 -54
@@ -8417,7 +9368,7 @@ ChangeSet@1.2762.1.8, 2012-02-19 16:10:00+01:00, jnperlin@hydra.localnet
   ports/winnt/ntpd/ntp_iocompletionport.c@1.63 +16 -6
     hack to get rid of leading CR/LF and keep timestamp for the whole buffer
 
-ChangeSet@1.2762.3.1, 2012-02-19 09:29:05+01:00, jnperlin@hydra.localnet
+ChangeSet@1.2762.4.1, 2012-02-19 09:29:05+01:00, jnperlin@hydra.localnet
   [bug 2143] do not process data if quality indication says 'not good' to avoid glitches
 
   ntpd/refclock_nmea.c@1.66 +6 -1
@@ -8850,6 +9801,18 @@ ChangeSet@1.2763, 2012-02-06 06:04:15+00:00, stenn@psp-fb1.ntp.org
     BitKeeper file /a/etc/amd.stage/thump2-g3/export/ntp/home/stenn/ntp-dev/sntp/ag-tpl/texi2txt
 
   sntp/ag-tpl/texi2txt@1.0 +0 -0
+
+ChangeSet@1.2759.1.2, 2012-01-30 05:15:20+00:00, stenn@psp-fb1.ntp.org
+  Handle .5 in the mansec substitutions
+
+  sntp/scripts/mansec2subst.sed@1.3 +2 -0
+    Handle .5 in the mansec substitutions
+
+ChangeSet@1.2759.1.1, 2012-01-30 05:14:29+00:00, stenn@psp-fb1.ntp.org
+  Rules for ntp.conf.5 and ntp.keys.5
+
+  ntpd/Makefile.am@1.113 +62 -1
+    Rules for ntp.conf.5 and ntp.keys.5
 
 ChangeSet@1.2762, 2012-01-29 22:06:30+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P255

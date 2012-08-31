@@ -327,6 +327,9 @@
 /* Define to 1 if you have the `canonicalize_file_name' function. */
 #undef HAVE_CANONICALIZE_FILE_NAME
 
+/* Define to 1 if you have the `chmod' function. */
+#undef HAVE_CHMOD
+
 /* Do we have the CIOGETEV ioctl (SunOS, Linux)? */
 #undef HAVE_CIOGETEV
 
@@ -365,6 +368,9 @@
 /* Define to 1 if you have the <errno.h> header file. */
 #undef HAVE_ERRNO_H
 
+/* Define to 1 if you have the `fchmod' function. */
+#undef HAVE_FCHMOD
+
 /* Define to 1 if you have the <fcntl.h> header file. */
 #undef HAVE_FCNTL_H
 
@@ -373,6 +379,9 @@
 
 /* Define to 1 if you have the `fork' function. */
 #undef HAVE_FORK
+
+/* Define to 1 if you have the `fstat' function. */
+#undef HAVE_FSTAT
 
 /* Define to 1 if you have the `getbootfile' function. */
 #undef HAVE_GETBOOTFILE
@@ -781,6 +790,9 @@
 
 /* Define to 1 if you have the <stdarg.h> header file. */
 #undef HAVE_STDARG_H
+
+/* Define to 1 if you have the <stdbool.h> header file. */
+#undef HAVE_STDBOOL_H
 
 /* Define to 1 if you have the <stddef.h> header file. */
 #undef HAVE_STDDEF_H

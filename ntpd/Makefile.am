@@ -80,8 +80,9 @@ BUILT_SOURCES=		\
 	$(NULL)
 
 man1_MANS=
+man5_MANS=	ntp.conf.5 ntp.keys.5
 man8_MANS=
-man_MANS=	ntpd.$(NTPD_MS)
+man_MANS=	ntpd.$(NTPD_MS) $(man5_MANS)
 
 # ntpdsim.1 is a remnant along with all the ntpdsim-opts.* files, the
 # simulator currently uses ntpd-opts.[ch].  This also means there is no
@@ -113,10 +114,18 @@ CLEANFILES =			\
 
 EXTRA_DIST =			\
 	complete.conf		\
+	invoke-ntpd.menu	\
+	invoke-ntpd.texi	\
 	keyword-gen-utd		\
+	ntp.conf.5man		\
+	ntp.conf.5mdoc		\
+	ntp.conf.man.in		\
+	ntp.conf.mdoc.in	\
+	ntp.keys.5man		\
+	ntp.keys.5mdoc		\
+	ntp.keys.man.in		\
+	ntp.keys.mdoc.in	\
 	ntpd-opts.def		\
-	ntpd-opts.menu		\
-	ntpd-opts.texi		\
 	ntpd.1ntpdman		\
 	ntpd.1ntpdmdoc		\
 	ntpd.man.in		\
@@ -130,8 +139,12 @@ EXTRA_DIST =			\
 check_PROGRAMS = @MAKE_CHECK_Y2K@
 EXTRA_PROGRAMS = check_y2k keyword-gen ntpd ntpdsim
 noinst_DATA =				\
-	$(srcdir)/ntpd-opts.menu	\
-	$(srcdir)/ntpd-opts.texi	\
+	$(srcdir)/invoke-ntpd.menu	\
+	$(srcdir)/invoke-ntpd.texi	\
+	$(srcdir)/ntp.conf.man.in	\
+	$(srcdir)/ntp.conf.mdoc.in	\
+	$(srcdir)/ntp.keys.man.in	\
+	$(srcdir)/ntp.keys.mdoc.in	\
 	$(srcdir)/ntpd.man.in		\
 	$(srcdir)/ntpd.mdoc.in		\
 	$(NULL)
@@ -284,11 +297,59 @@ ntpd.$(NTPD_MS): $(srcdir)/ntpd.$(MANTAGFMT).in $(top_builddir)/config.status
 
 ###
 
-$(srcdir)/ntpd-opts.menu: $(srcdir)/ntpd-opts.texi
+$(srcdir)/ntp.conf.5man: $(srcdir)/ntp.conf.def $(std_def_list)
+	$(run_ag) -DMAN_SECTION=5man -Tagman-cmd.tpl ntp.conf.def
+
+$(srcdir)/ntp.conf.man.in: $(srcdir)/ntp.conf.5man $(top_srcdir)/sntp/scripts/mansec2subst.sed
+	sed -f $(top_srcdir)/sntp/scripts/mansec2subst.sed $(srcdir)/ntp.conf.5man > $(srcdir)/ntp.conf.man.in+
+	mv $(srcdir)/ntp.conf.man.in+ $(srcdir)/ntp.conf.man.in
+
+###
+
+$(srcdir)/ntp.conf.5mdoc: $(srcdir)/ntp.conf.def $(std_def_list)
+	$(run_ag) -DMAN_SECTION=5mdoc -Tagmdoc-cmd.tpl ntp.conf.def
+
+$(srcdir)/ntp.conf.mdoc.in: $(srcdir)/ntp.conf.5mdoc $(top_srcdir)/sntp/scripts/mansec2subst.sed
+	sed -f $(top_srcdir)/sntp/scripts/mansec2subst.sed $(srcdir)/ntp.conf.5mdoc > $(srcdir)/ntp.conf.mdoc.in+
+	mv $(srcdir)/ntp.conf.mdoc.in+ $(srcdir)/ntp.conf.mdoc.in
+
+###
+
+ntp.conf.5: $(srcdir)/ntp.conf.$(MANTAGFMT).in $(top_builddir)/config.status
+	$(top_builddir)/config.status --file=ntp.conf.5+:$(srcdir)/ntp.conf.$(MANTAGFMT).in
+	mv ntp.conf.5+ ntp.conf.5
+
+###
+
+$(srcdir)/ntp.keys.5man: $(srcdir)/ntp.keys.def $(std_def_list)
+	$(run_ag) -DMAN_SECTION=5man -Tagman-cmd.tpl ntp.keys.def
+
+$(srcdir)/ntp.keys.man.in: $(srcdir)/ntp.keys.5man $(top_srcdir)/sntp/scripts/mansec2subst.sed
+	sed -f $(top_srcdir)/sntp/scripts/mansec2subst.sed $(srcdir)/ntp.keys.5man > $(srcdir)/ntp.keys.man.in+
+	mv $(srcdir)/ntp.keys.man.in+ $(srcdir)/ntp.keys.man.in
+
+###
+
+$(srcdir)/ntp.keys.5mdoc: $(srcdir)/ntp.keys.def $(std_def_list)
+	$(run_ag) -DMAN_SECTION=5mdoc -Tagmdoc-cmd.tpl ntp.keys.def
+
+$(srcdir)/ntp.keys.mdoc.in: $(srcdir)/ntp.keys.5mdoc $(top_srcdir)/sntp/scripts/mansec2subst.sed
+	sed -f $(top_srcdir)/sntp/scripts/mansec2subst.sed $(srcdir)/ntp.keys.5mdoc > $(srcdir)/ntp.keys.mdoc.in+
+	mv $(srcdir)/ntp.keys.mdoc.in+ $(srcdir)/ntp.keys.mdoc.in
+
+###
+
+ntp.keys.5: $(srcdir)/ntp.keys.$(MANTAGFMT).in $(top_builddir)/config.status
+	$(top_builddir)/config.status --file=ntp.keys.5+:$(srcdir)/ntp.keys.$(MANTAGFMT).in
+	mv ntp.keys.5+ ntp.keys.5
+
+###
+
+$(srcdir)/invoke-ntpd.menu: $(srcdir)/invoke-ntpd.texi
 	@: do-nothing action to avoid default SCCS get, .menu built with .texi
 	
-$(srcdir)/ntpd-opts.texi: $(srcdir)/ntpd-opts.def $(srcdir)/ntpdbase-opts.def $(std_def_list)
-	$(run_ag) -Taginfo.tpl -DLEVEL=section ntpd-opts.def
+$(srcdir)/invoke-ntpd.texi: $(srcdir)/ntpd-opts.def $(srcdir)/ntpdbase-opts.def $(std_def_list)
+	$(run_ag) -Tagtexi-cmd.tpl -DLEVEL=section ntpd-opts.def
 	$(top_srcdir)/scripts/check--help $@
 
 $(PROGRAMS): $(LDADD)

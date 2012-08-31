@@ -45,6 +45,9 @@
 /* Define to 1 if you have the `canonicalize_file_name' function. */
 #undef HAVE_CANONICALIZE_FILE_NAME
 
+/* Define to 1 if you have the `chmod' function. */
+#undef HAVE_CHMOD
+
 /* Define to 1 if you have the `clock_gettime' function. */
 #undef HAVE_CLOCK_GETTIME
 
@@ -77,11 +80,17 @@
 /* Define to 1 if you have the <errno.h> header file. */
 #undef HAVE_ERRNO_H
 
+/* Define to 1 if you have the `fchmod' function. */
+#undef HAVE_FCHMOD
+
 /* Define to 1 if you have the <fcntl.h> header file. */
 #undef HAVE_FCNTL_H
 
 /* Define to 1 if you have the `fork' function. */
 #undef HAVE_FORK
+
+/* Define to 1 if you have the `fstat' function. */
+#undef HAVE_FSTAT
 
 /* Define to 1 if you have the `getclock' function. */
 #undef HAVE_GETCLOCK

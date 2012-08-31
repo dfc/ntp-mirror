@@ -1,14 +1,14 @@
 /**
  * \file cook.c
  *
- *  Time-stamp:      "2011-03-12 15:05:26 bkorb"
+ *  Time-stamp:      "2012-02-28 19:40:47 bkorb"
  *
  *  This file contains the routines that deal with processing quoted strings
  *  into an internal format.
  *
  *  This file is part of AutoOpts, a companion to AutoGen.
  *  AutoOpts is free software.
- *  AutoOpts is Copyright (c) 1992-2011 by Bruce Korb - all rights reserved
+ *  AutoOpts is Copyright (c) 1992-2012 by Bruce Korb - all rights reserved
  *
  *  AutoOpts is available under any one of two licenses.  The license
  *  in use must be one of these two and the choice is under the control
@@ -28,7 +28,7 @@
  */
 
 /* = = = START-STATIC-FORWARD = = = */
-static ag_bool
+static bool
 contiguous_quote(char ** pps, char * pq, int * lnct_p);
 /* = = = END-STATIC-FORWARD = = = */
 
@@ -59,7 +59,7 @@ contiguous_quote(char ** pps, char * pq, int * lnct_p);
  * err:  @code{NULL} is returned if the string is mal-formed.
 =*/
 unsigned int
-ao_string_cook_escape_char( char const* pzIn, char* pRes, u_int nl )
+ao_string_cook_escape_char(char const* pzIn, char* pRes, uint_t nl)
 {
     unsigned int  res = 1;
 
@@ -67,18 +67,18 @@ ao_string_cook_escape_char( char const* pzIn, char* pRes, u_int nl )
     case NUL:         /* NUL - end of input string */
         return 0;
     case '\r':
-        if (*pzIn != '\n')
+        if (*pzIn != NL)
             return 1;
         res++;
         /* FALLTHROUGH */
-    case '\n':        /* NL  - emit newline        */
+    case NL:        /* NL  - emit newline        */
         *pRes = (char)nl;
         return res;
 
     case 'a': *pRes = '\a'; break;
     case 'b': *pRes = '\b'; break;
     case 'f': *pRes = '\f'; break;
-    case 'n': *pRes = '\n'; break;
+    case 'n': *pRes = NL;   break;
     case 'r': *pRes = '\r'; break;
     case 't': *pRes = '\t'; break;
     case 'v': *pRes = '\v'; break;
@@ -130,14 +130,14 @@ ao_string_cook_escape_char( char const* pzIn, char* pRes, u_int nl )
  *  A quoted string has been found.
  *  Find the end of it and compress any escape sequences.
  */
-static ag_bool
+static bool
 contiguous_quote(char ** pps, char * pq, int * lnct_p)
 {
     char * ps = *pps + 1;
 
     for (;;) {
         while (IS_WHITESPACE_CHAR(*ps))
-            if (*(ps++) == '\n')
+            if (*(ps++) == NL)
                 (*lnct_p)++;
 
         /*
@@ -149,7 +149,7 @@ contiguous_quote(char ** pps, char * pq, int * lnct_p)
         case '\'':
             *pq  = *(ps++);  /* assign new quote character and return */
             *pps = ps;
-            return AG_TRUE;
+            return true;
 
         case '/':
             /*
@@ -158,16 +158,16 @@ contiguous_quote(char ** pps, char * pq, int * lnct_p)
             switch (ps[1]) {
             default:
                 *pps = NULL;
-                return AG_FALSE;
+                return false;
 
             case '/':
                 /*
                  *  Skip to end of line
                  */
-                ps = strchr(ps, '\n');
+                ps = strchr(ps, NL);
                 if (ps == NULL) {
                     *pps = NULL;
-                    return AG_FALSE;
+                    return false;
                 }
                 break;
 
@@ -179,11 +179,11 @@ contiguous_quote(char ** pps, char * pq, int * lnct_p)
                  */
                 if (p == NULL) {
                     *pps = NULL;
-                    return AG_FALSE;
+                    return false;
                 }
 
                 while (ps < p) {
-                    if (*(ps++) == '\n')
+                    if (*(ps++) == NL)
                         (*lnct_p)++;
                 }
 
@@ -198,7 +198,7 @@ contiguous_quote(char ** pps, char * pq, int * lnct_p)
              *  The series of quoted strings has come to an end.
              */
             *pps = ps;
-            return AG_FALSE;
+            return false;
         }
     }
 }
@@ -261,7 +261,7 @@ ao_string_cook(char * pzScan, int * lnct_p)
         case NUL:
             return NULL;
 
-        case '\n':
+        case NL:
             (*lnct_p)++;
             break;
 
@@ -271,7 +271,7 @@ ao_string_cook(char * pzScan, int * lnct_p)
              *  THEN drop both the escape and the newline from
              *       the result string.
              */
-            if (*pzS == '\n') {
+            if (*pzS == NL) {
                 pzS++;
                 pzD--;
                 (*lnct_p)++;
@@ -282,7 +282,7 @@ ao_string_cook(char * pzScan, int * lnct_p)
              *  THEN we do the full escape character processing
              */
             else if (q != '\'') {
-                int ct = ao_string_cook_escape_char( pzS, pzD-1, (u_int)'\n' );
+                int ct = ao_string_cook_escape_char(pzS, pzD-1, (uint_t)NL);
                 if (ct == 0)
                     return NULL;
 

@@ -128,7 +128,7 @@ am_libntpd_a_OBJECTS = cmd_args.$(OBJEXT) ntp_control.$(OBJEXT) \
 libntpd_a_OBJECTS = $(am_libntpd_a_OBJECTS)
 am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(libexecdir)" \
 	"$(DESTDIR)$(sbindir)" "$(DESTDIR)$(man1dir)" \
-	"$(DESTDIR)$(man8dir)"
+	"$(DESTDIR)$(man5dir)" "$(DESTDIR)$(man8dir)"
 PROGRAMS = $(bin_PROGRAMS) $(libexec_PROGRAMS) $(sbin_PROGRAMS)
 check_y2k_SOURCES = check_y2k.c
 check_y2k_OBJECTS = check_y2k.$(OBJEXT)
@@ -219,9 +219,10 @@ am__base_list = \
   sed '$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;s/\n/ /g' | \
   sed '$$!N;$$!N;$$!N;$$!N;s/\n/ /g'
 man1dir = $(mandir)/man1
+man5dir = $(mandir)/man5
 man8dir = $(mandir)/man8
 NROFF = nroff
-MANS = $(man1_MANS) $(man8_MANS) $(man_MANS)
+MANS = $(man1_MANS) $(man5_MANS) $(man8_MANS) $(man_MANS)
 DATA = $(noinst_DATA)
 HEADERS = $(noinst_HEADERS)
 ETAGS = etags
@@ -493,8 +494,9 @@ BUILT_SOURCES = $(VPHACK) $(LIBPARSE) ntp_parser.c ntp_parser.h \
 	$(VPHACK_AFTER) $(B_S_DIST) $(NULL) check-libopts check-libntp \
 	.deps-ver
 man1_MANS = 
+man5_MANS = ntp.conf.5 ntp.keys.5
 man8_MANS = 
-man_MANS = ntpd.$(NTPD_MS)
+man_MANS = ntpd.$(NTPD_MS) $(man5_MANS)
 
 # ntpdsim.1 is a remnant along with all the ntpdsim-opts.* files, the
 # simulator currently uses ntpd-opts.[ch].  This also means there is no
@@ -518,10 +520,18 @@ CLEANFILES = check-saveconfig compsave.conf k-g-u-submake \
 	$(EXTRA_PROGRAMS) $(NULL) check-libopts check-libntp .deps-ver
 EXTRA_DIST = \
 	complete.conf		\
+	invoke-ntpd.menu	\
+	invoke-ntpd.texi	\
 	keyword-gen-utd		\
+	ntp.conf.5man		\
+	ntp.conf.5mdoc		\
+	ntp.conf.man.in		\
+	ntp.conf.mdoc.in	\
+	ntp.keys.5man		\
+	ntp.keys.5mdoc		\
+	ntp.keys.man.in		\
+	ntp.keys.mdoc.in	\
 	ntpd-opts.def		\
-	ntpd-opts.menu		\
-	ntpd-opts.texi		\
 	ntpd.1ntpdman		\
 	ntpd.1ntpdmdoc		\
 	ntpd.man.in		\
@@ -535,8 +545,12 @@ EXTRA_DIST = \
 ###							Y2Kfixes
 check_PROGRAMS = @MAKE_CHECK_Y2K@
 noinst_DATA = \
-	$(srcdir)/ntpd-opts.menu	\
-	$(srcdir)/ntpd-opts.texi	\
+	$(srcdir)/invoke-ntpd.menu	\
+	$(srcdir)/invoke-ntpd.texi	\
+	$(srcdir)/ntp.conf.man.in	\
+	$(srcdir)/ntp.conf.mdoc.in	\
+	$(srcdir)/ntp.keys.man.in	\
+	$(srcdir)/ntp.keys.mdoc.in	\
 	$(srcdir)/ntpd.man.in		\
 	$(srcdir)/ntpd.mdoc.in		\
 	$(NULL)
@@ -1110,6 +1124,44 @@ uninstall-man1:
 	test -z "$$files" || { \
 	  echo " ( cd '$(DESTDIR)$(man1dir)' && rm -f" $$files ")"; \
 	  cd "$(DESTDIR)$(man1dir)" && rm -f $$files; }
+install-man5: $(man5_MANS) $(man_MANS)
+	@$(NORMAL_INSTALL)
+	test -z "$(man5dir)" || $(MKDIR_P) "$(DESTDIR)$(man5dir)"
+	@list='$(man5_MANS)'; test -n "$(man5dir)" || exit 0; \
+	{ for i in $$list; do echo "$$i"; done; \
+	l2='$(man_MANS)'; for i in $$l2; do echo "$$i"; done | \
+	  sed -n '/\.5[a-z]*$$/p'; \
+	} | while read p; do \
+	  if test -f $$p; then d=; else d="$(srcdir)/"; fi; \
+	  echo "$$d$$p"; echo "$$p"; \
+	done | \
+	sed -e 'n;s,.*/,,;p;h;s,.*\.,,;s,^[^5][0-9a-z]*$$,5,;x' \
+	      -e 's,\.[0-9a-z]*$$,,;$(transform);G;s,\n,.,' | \
+	sed 'N;N;s,\n, ,g' | { \
+	list=; while read file base inst; do \
+	  if test "$$base" = "$$inst"; then list="$$list $$file"; else \
+	    echo " $(INSTALL_DATA) '$$file' '$(DESTDIR)$(man5dir)/$$inst'"; \
+	    $(INSTALL_DATA) "$$file" "$(DESTDIR)$(man5dir)/$$inst" || exit $$?; \
+	  fi; \
+	done; \
+	for i in $$list; do echo "$$i"; done | $(am__base_list) | \
+	while read files; do \
+	  test -z "$$files" || { \
+	    echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(man5dir)'"; \
+	    $(INSTALL_DATA) $$files "$(DESTDIR)$(man5dir)" || exit $$?; }; \
+	done; }
+
+uninstall-man5:
+	@$(NORMAL_UNINSTALL)
+	@list='$(man5_MANS)'; test -n "$(man5dir)" || exit 0; \
+	files=`{ for i in $$list; do echo "$$i"; done; \
+	l2='$(man_MANS)'; for i in $$l2; do echo "$$i"; done | \
+	  sed -n '/\.5[a-z]*$$/p'; \
+	} | sed -e 's,.*/,,;h;s,.*\.,,;s,^[^5][0-9a-z]*$$,5,;x' \
+	      -e 's,\.[0-9a-z]*$$,,;$(transform);G;s,\n,.,'`; \
+	test -z "$$files" || { \
+	  echo " ( cd '$(DESTDIR)$(man5dir)' && rm -f" $$files ")"; \
+	  cd "$(DESTDIR)$(man5dir)" && rm -f $$files; }
 install-man8: $(man8_MANS) $(man_MANS)
 	@$(NORMAL_INSTALL)
 	test -z "$(man8dir)" || $(MKDIR_P) "$(DESTDIR)$(man8dir)"
@@ -1251,7 +1303,7 @@ check: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) check-am
 all-am: Makefile $(LIBRARIES) $(PROGRAMS) $(MANS) $(DATA) $(HEADERS)
 installdirs:
-	for dir in "$(DESTDIR)$(bindir)" "$(DESTDIR)$(libexecdir)" "$(DESTDIR)$(sbindir)" "$(DESTDIR)$(man1dir)" "$(DESTDIR)$(man8dir)"; do \
+	for dir in "$(DESTDIR)$(bindir)" "$(DESTDIR)$(libexecdir)" "$(DESTDIR)$(sbindir)" "$(DESTDIR)$(man1dir)" "$(DESTDIR)$(man5dir)" "$(DESTDIR)$(man8dir)"; do \
 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
 	done
 install: $(BUILT_SOURCES)
@@ -1327,7 +1379,7 @@ install-info: install-info-am
 
 install-info-am:
 
-install-man: install-man1 install-man8
+install-man: install-man1 install-man5 install-man8
 
 install-pdf: install-pdf-am
 
@@ -1360,7 +1412,7 @@ ps-am:
 uninstall-am: uninstall-binPROGRAMS uninstall-libexecPROGRAMS \
 	uninstall-man uninstall-sbinPROGRAMS
 
-uninstall-man: uninstall-man1 uninstall-man8
+uninstall-man: uninstall-man1 uninstall-man5 uninstall-man8
 
 .MAKE: all check check-am install install-am install-exec-am \
 	install-strip
@@ -1374,15 +1426,15 @@ uninstall-man: uninstall-man1 uninstall-man8
 	install-binPROGRAMS install-data install-data-am install-dvi \
 	install-dvi-am install-exec install-exec-am install-exec-hook \
 	install-html install-html-am install-info install-info-am \
-	install-libexecPROGRAMS install-man install-man1 install-man8 \
-	install-pdf install-pdf-am install-ps install-ps-am \
-	install-sbinPROGRAMS install-strip installcheck \
+	install-libexecPROGRAMS install-man install-man1 install-man5 \
+	install-man8 install-pdf install-pdf-am install-ps \
+	install-ps-am install-sbinPROGRAMS install-strip installcheck \
 	installcheck-am installdirs maintainer-clean \
 	maintainer-clean-generic mostlyclean mostlyclean-compile \
 	mostlyclean-generic mostlyclean-libtool pdf pdf-am ps ps-am \
 	tags uninstall uninstall-am uninstall-binPROGRAMS \
 	uninstall-libexecPROGRAMS uninstall-man uninstall-man1 \
-	uninstall-man8 uninstall-sbinPROGRAMS
+	uninstall-man5 uninstall-man8 uninstall-sbinPROGRAMS
 
 
 vphack:
@@ -1458,11 +1510,59 @@ ntpd.$(NTPD_MS): $(srcdir)/ntpd.$(MANTAGFMT).in $(top_builddir)/config.status
 
 ###
 
-$(srcdir)/ntpd-opts.menu: $(srcdir)/ntpd-opts.texi
+$(srcdir)/ntp.conf.5man: $(srcdir)/ntp.conf.def $(std_def_list)
+	$(run_ag) -DMAN_SECTION=5man -Tagman-cmd.tpl ntp.conf.def
+
+$(srcdir)/ntp.conf.man.in: $(srcdir)/ntp.conf.5man $(top_srcdir)/sntp/scripts/mansec2subst.sed
+	sed -f $(top_srcdir)/sntp/scripts/mansec2subst.sed $(srcdir)/ntp.conf.5man > $(srcdir)/ntp.conf.man.in+
+	mv $(srcdir)/ntp.conf.man.in+ $(srcdir)/ntp.conf.man.in
+
+###
+
+$(srcdir)/ntp.conf.5mdoc: $(srcdir)/ntp.conf.def $(std_def_list)
+	$(run_ag) -DMAN_SECTION=5mdoc -Tagmdoc-cmd.tpl ntp.conf.def
+
+$(srcdir)/ntp.conf.mdoc.in: $(srcdir)/ntp.conf.5mdoc $(top_srcdir)/sntp/scripts/mansec2subst.sed
+	sed -f $(top_srcdir)/sntp/scripts/mansec2subst.sed $(srcdir)/ntp.conf.5mdoc > $(srcdir)/ntp.conf.mdoc.in+
+	mv $(srcdir)/ntp.conf.mdoc.in+ $(srcdir)/ntp.conf.mdoc.in
+
+###
+
+ntp.conf.5: $(srcdir)/ntp.conf.$(MANTAGFMT).in $(top_builddir)/config.status
+	$(top_builddir)/config.status --file=ntp.conf.5+:$(srcdir)/ntp.conf.$(MANTAGFMT).in
+	mv ntp.conf.5+ ntp.conf.5
+
+###
+
+$(srcdir)/ntp.keys.5man: $(srcdir)/ntp.keys.def $(std_def_list)
+	$(run_ag) -DMAN_SECTION=5man -Tagman-cmd.tpl ntp.keys.def
+
+$(srcdir)/ntp.keys.man.in: $(srcdir)/ntp.keys.5man $(top_srcdir)/sntp/scripts/mansec2subst.sed
+	sed -f $(top_srcdir)/sntp/scripts/mansec2subst.sed $(srcdir)/ntp.keys.5man > $(srcdir)/ntp.keys.man.in+
+	mv $(srcdir)/ntp.keys.man.in+ $(srcdir)/ntp.keys.man.in
+
+###
+
+$(srcdir)/ntp.keys.5mdoc: $(srcdir)/ntp.keys.def $(std_def_list)
+	$(run_ag) -DMAN_SECTION=5mdoc -Tagmdoc-cmd.tpl ntp.keys.def
+
+$(srcdir)/ntp.keys.mdoc.in: $(srcdir)/ntp.keys.5mdoc $(top_srcdir)/sntp/scripts/mansec2subst.sed
+	sed -f $(top_srcdir)/sntp/scripts/mansec2subst.sed $(srcdir)/ntp.keys.5mdoc > $(srcdir)/ntp.keys.mdoc.in+
+	mv $(srcdir)/ntp.keys.mdoc.in+ $(srcdir)/ntp.keys.mdoc.in
+
+###
+
+ntp.keys.5: $(srcdir)/ntp.keys.$(MANTAGFMT).in $(top_builddir)/config.status
+	$(top_builddir)/config.status --file=ntp.keys.5+:$(srcdir)/ntp.keys.$(MANTAGFMT).in
+	mv ntp.keys.5+ ntp.keys.5
+
+###
+
+$(srcdir)/invoke-ntpd.menu: $(srcdir)/invoke-ntpd.texi
 	@: do-nothing action to avoid default SCCS get, .menu built with .texi
 
-$(srcdir)/ntpd-opts.texi: $(srcdir)/ntpd-opts.def $(srcdir)/ntpdbase-opts.def $(std_def_list)
-	$(run_ag) -Taginfo.tpl -DLEVEL=section ntpd-opts.def
+$(srcdir)/invoke-ntpd.texi: $(srcdir)/ntpd-opts.def $(srcdir)/ntpdbase-opts.def $(std_def_list)
+	$(run_ag) -Tagtexi-cmd.tpl -DLEVEL=section ntpd-opts.def
 	$(top_srcdir)/scripts/check--help $@
 
 $(PROGRAMS): $(LDADD)

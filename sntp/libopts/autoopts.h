@@ -2,14 +2,14 @@
 /*
  *  \file autoopts.h
  *
- *  Time-stamp:      "2011-03-25 17:51:34 bkorb"
+ *  Time-stamp:      "2012-03-04 19:05:01 bkorb"
  *
  *  This file defines all the global structures and special values
  *  used in the automated option processing library.
  *
  *  This file is part of AutoOpts, a companion to AutoGen.
  *  AutoOpts is free software.
- *  AutoOpts is Copyright (c) 1992-2011 by Bruce Korb - all rights reserved
+ *  AutoOpts is Copyright (c) 1992-2012 by Bruce Korb - all rights reserved
  *
  *  AutoOpts is available under any one of two licenses.  The license
  *  in use must be one of these two and the choice is under the control
@@ -30,9 +30,6 @@
 
 #ifndef AUTOGEN_AUTOOPTS_H
 #define AUTOGEN_AUTOOPTS_H
-
-#include "compat/compat.h"
-#include "ag-char-map.h"
 
 #define AO_NAME_LIMIT           127
 #define AO_NAME_SIZE            ((size_t)(AO_NAME_LIMIT + 1))
@@ -59,15 +56,21 @@
 # define DIRCH                  '/'
 #endif
 
+#define AO_EXIT_REQ_USAGE       64
 #ifndef EX_NOINPUT
+   /**
+    *  option state was requested from a file that cannot be loaded.
+    */
 #  define EX_NOINPUT            66
 #endif
 #ifndef EX_SOFTWARE
+   /**
+    *  AutoOpts Software failure.
+    */
 #  define EX_SOFTWARE           70
 #endif
-#ifndef EX_CONFIG
-#  define EX_CONFIG             78
-#endif
+
+#define NL '\n'
 
 /*
  *  Convert the number to a list usable in a printf call
@@ -77,7 +80,7 @@
 #define NAMED_OPTS(po) \
         (((po)->fOptSet & (OPTPROC_SHORTOPT | OPTPROC_LONGOPT)) == 0)
 
-#define SKIP_OPT(p)  (((p)->fOptState & (OPTST_DOCUMENT|OPTST_OMITTED)) != 0)
+#define SKIP_OPT(p)  (((p)->fOptState & OPTST_IMMUTABLE_MASK) != 0)
 
 typedef int tDirection;
 #define DIRECTION_PRESET        -1
@@ -196,8 +199,6 @@ ao_realloc(void *p, size_t sz);
 
 static char *
 ao_strdup(char const *str);
-
-#define TAGMEM(m, t)
 
 /*
  *  DO option handling?

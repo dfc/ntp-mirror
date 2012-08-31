@@ -2,7 +2,7 @@
 /**
  * \file autoopts.c
  *
- *  Time-stamp:      "2011-08-07 14:31:49 bkorb"
+ *  Time-stamp:      "2012-03-04 19:44:56 bkorb"
  *
  *  This file contains all of the routines that must be linked into
  *  an executable to use the generated option processing.  The optional
@@ -11,7 +11,7 @@
  *
  *  This file is part of AutoOpts, a companion to AutoGen.
  *  AutoOpts is free software.
- *  AutoOpts is Copyright (c) 1992-2011 by Bruce Korb - all rights reserved
+ *  AutoOpts is Copyright (c) 1992-2012 by Bruce Korb - all rights reserved
  *
  *  AutoOpts is available under any one of two licenses.  The license
  *  in use must be one of these two and the choice is under the control
@@ -36,8 +36,8 @@
 
 static char const   zNil[] = "";
 static arg_types_t  argTypes             = { NULL };
-static char         zOptFmtLine[32]      = { NUL };
-static ag_bool      displayEnum          = AG_FALSE;
+static char         line_fmt_buf[32];
+static bool         displayEnum          = false;
 static char const   pkgdatadir_default[] = PKGDATADIR;
 static char const * program_pkgdatadir   = pkgdatadir_default;
 static tOptionLoadMode option_load_mode  = OPTION_LOAD_UNCOOKED;
@@ -50,7 +50,7 @@ static tSuccess
 next_opt_arg_must(tOptions * pOpts, tOptState* pOptState);
 
 static tSuccess
-next_opt_arg_may(tOptions * pOpts, tOptState* pOptState);
+next_opt_arg_may(tOptions * pOpts, tOptState * pOptState);
 
 static tSuccess
 next_opt_arg_none(tOptions * pOpts, tOptState* pOptState);
@@ -295,9 +295,18 @@ next_opt_arg_must(tOptions * pOpts, tOptState* pOptState)
     return SUCCESS;
 }
 
-
+/**
+ * Process an optional option argument.  For short options, it looks at the
+ * character after the option character, or it consumes the next full argument.
+ * For long options, it looks for an '=' character attachment to the long
+ * option name before deciding to take the next command line argument.
+ *
+ * @param pOpts      the option descriptor
+ * @param pOptState  a structure for managing the current processing state
+ * @returns SUCCESS or does not return
+ */
 static tSuccess
-next_opt_arg_may(tOptions * pOpts, tOptState* pOptState)
+next_opt_arg_may(tOptions * pOpts, tOptState * pOptState)
 {
     /*
      *  An option argument is optional.
@@ -452,9 +461,9 @@ immediate_opts(tOptions * pOpts)
      *  are marked for immediate processing.
      */
     for (;;) {
-        tOptState optState = OPTSTATE_INITIALIZER(PRESET);
+        tOptState opt_st = OPTSTATE_INITIALIZER(PRESET);
 
-        res = next_opt(pOpts, &optState);
+        res = next_opt(pOpts, &opt_st);
         switch (res) {
         case FAILURE: goto   failed_option;
         case PROBLEM: res = SUCCESS; goto leave;
@@ -464,10 +473,10 @@ immediate_opts(tOptions * pOpts)
         /*
          *  IF this is an immediate-attribute option, then do it.
          */
-        if (! DO_IMMEDIATELY(optState.flags))
+        if (! DO_IMMEDIATELY(opt_st.flags))
             continue;
 
-        if (! SUCCESSFUL(handle_opt(pOpts, &optState)))
+        if (! SUCCESSFUL(handle_opt(pOpts, &opt_st)))
             break;
     } failed_option:;
 
@@ -494,9 +503,9 @@ regular_opts(tOptions * pOpts)
 {
     /* assert:  pOpts->fOptSet & OPTPROC_IMMEDIATE == 0 */
     for (;;) {
-        tOptState optState = OPTSTATE_INITIALIZER(DEFINED);
+        tOptState opt_st = OPTSTATE_INITIALIZER(DEFINED);
 
-        switch (next_opt(pOpts, &optState)) {
+        switch (next_opt(pOpts, &opt_st)) {
         case FAILURE: goto   failed_option;
         case PROBLEM: return SUCCESS; /* no more args */
         case SUCCESS: break;
@@ -506,13 +515,13 @@ regular_opts(tOptions * pOpts)
          *  IF this is an immediate action option,
          *  THEN skip it (unless we are supposed to do it a second time).
          */
-        if (! DO_NORMALLY(optState.flags)) {
-            if (! DO_SECOND_TIME(optState.flags))
+        if (! DO_NORMALLY(opt_st.flags)) {
+            if (! DO_SECOND_TIME(opt_st.flags))
                 continue;
-            optState.pOD->optOccCt--; /* don't count this repetition */
+            opt_st.pOD->optOccCt--; /* don't count this repetition */
         }
 
-        if (! SUCCESSFUL(handle_opt(pOpts, &optState)))
+        if (! SUCCESSFUL(handle_opt(pOpts, &opt_st)))
             break;
     } failed_option:;
 
@@ -640,7 +649,7 @@ optionProcess(tOptions * pOpts, int argCt, char ** argVect)
      *  and do all the presetting the first time thru only.
      */
     if ((pOpts->fOptSet & OPTPROC_INITDONE) == 0) {
-        pOpts->origArgCt   = argCt;
+        pOpts->origArgCt   = (unsigned int)argCt;
         pOpts->origArgVect = argVect;
         pOpts->fOptSet    |= OPTPROC_INITDONE;
         if (HAS_pzPkgDataDir(pOpts))
