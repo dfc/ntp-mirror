@@ -119,10 +119,12 @@ EXTRA_DIST =			\
 	keyword-gen-utd		\
 	ntp.conf.5man		\
 	ntp.conf.5mdoc		\
+	ntp.conf.def		\
 	ntp.conf.man.in		\
 	ntp.conf.mdoc.in	\
 	ntp.keys.5man		\
 	ntp.keys.5mdoc		\
+	ntp.keys.def		\
 	ntp.keys.man.in		\
 	ntp.keys.mdoc.in	\
 	ntpd-opts.def		\
