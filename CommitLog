@@ -1,3 +1,205 @@
+ChangeSet@1.2804, 2012-09-03 11:47:21+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P301
+  TAG: NTP_4_2_7P301
+
+  ChangeLog@1.1174 +1 -0
+    NTP_4_2_7P301
+
+  ntpd/invoke-ntpd.texi@1.290 +2 -2
+    NTP_4_2_7P301
+
+  ntpd/ntp.conf.5man@1.7 +2 -2
+    NTP_4_2_7P301
+
+  ntpd/ntp.conf.5mdoc@1.7 +1 -1
+    NTP_4_2_7P301
+
+  ntpd/ntp.conf.man.in@1.7 +2 -2
+    NTP_4_2_7P301
+
+  ntpd/ntp.conf.mdoc.in@1.7 +1 -1
+    NTP_4_2_7P301
+
+  ntpd/ntp.keys.5man@1.7 +2 -2
+    NTP_4_2_7P301
+
+  ntpd/ntp.keys.5mdoc@1.7 +1 -1
+    NTP_4_2_7P301
+
+  ntpd/ntp.keys.man.in@1.7 +2 -2
+    NTP_4_2_7P301
+
+  ntpd/ntp.keys.mdoc.in@1.7 +1 -1
+    NTP_4_2_7P301
+
+  ntpd/ntpd-opts.c@1.308 +4 -4
+    NTP_4_2_7P301
+
+  ntpd/ntpd-opts.h@1.308 +3 -3
+    NTP_4_2_7P301
+
+  ntpd/ntpd.1ntpdman@1.119 +2 -2
+    NTP_4_2_7P301
+
+  ntpd/ntpd.1ntpdmdoc@1.119 +1 -1
+    NTP_4_2_7P301
+
+  ntpd/ntpd.man.in@1.119 +2 -2
+    NTP_4_2_7P301
+
+  ntpd/ntpd.mdoc.in@1.119 +1 -1
+    NTP_4_2_7P301
+
+  ntpdc/invoke-ntpdc.texi@1.287 +2 -2
+    NTP_4_2_7P301
+
+  ntpdc/ntpdc-opts.c@1.302 +4 -4
+    NTP_4_2_7P301
+
+  ntpdc/ntpdc-opts.h@1.302 +3 -3
+    NTP_4_2_7P301
+
+  ntpdc/ntpdc.1ntpdcman@1.118 +2 -2
+    NTP_4_2_7P301
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.118 +1 -1
+    NTP_4_2_7P301
+
+  ntpdc/ntpdc.html@1.130 +2 -2
+    NTP_4_2_7P301
+
+  ntpdc/ntpdc.man.in@1.118 +2 -2
+    NTP_4_2_7P301
+
+  ntpdc/ntpdc.mdoc.in@1.118 +1 -1
+    NTP_4_2_7P301
+
+  ntpq/invoke-ntpq.texi@1.289 +2 -2
+    NTP_4_2_7P301
+
+  ntpq/ntpq-opts.c@1.304 +4 -4
+    NTP_4_2_7P301
+
+  ntpq/ntpq-opts.h@1.304 +3 -3
+    NTP_4_2_7P301
+
+  ntpq/ntpq.1ntpqman@1.118 +2 -2
+    NTP_4_2_7P301
+
+  ntpq/ntpq.1ntpqmdoc@1.118 +1 -1
+    NTP_4_2_7P301
+
+  ntpq/ntpq.man.in@1.118 +2 -2
+    NTP_4_2_7P301
+
+  ntpq/ntpq.mdoc.in@1.118 +1 -1
+    NTP_4_2_7P301
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.289 +2 -2
+    NTP_4_2_7P301
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.304 +4 -4
+    NTP_4_2_7P301
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.304 +3 -3
+    NTP_4_2_7P301
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.118 +2 -2
+    NTP_4_2_7P301
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.118 +1 -1
+    NTP_4_2_7P301
+
+  ntpsnmpd/ntpsnmpd.man.in@1.118 +2 -2
+    NTP_4_2_7P301
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.118 +1 -1
+    NTP_4_2_7P301
+
+  packageinfo.sh@1.304 +1 -1
+    NTP_4_2_7P301
+
+  scripts/invoke-ntp-wait.texi@1.107 +1 -1
+    NTP_4_2_7P301
+
+  scripts/ntp-wait.1ntp-waitman@1.118 +2 -2
+    NTP_4_2_7P301
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.118 +1 -1
+    NTP_4_2_7P301
+
+  scripts/ntp-wait.html@1.122 +1 -1
+    NTP_4_2_7P301
+
+  scripts/ntp-wait.man.in@1.118 +2 -2
+    NTP_4_2_7P301
+
+  scripts/ntp-wait.mdoc.in@1.118 +1 -1
+    NTP_4_2_7P301
+
+  sntp/invoke-sntp.texi@1.285 +2 -2
+    NTP_4_2_7P301
+
+  sntp/sntp-opts.c@1.300 +4 -4
+    NTP_4_2_7P301
+
+  sntp/sntp-opts.h@1.300 +3 -3
+    NTP_4_2_7P301
+
+  sntp/sntp.1sntpman@1.120 +2 -2
+    NTP_4_2_7P301
+
+  sntp/sntp.1sntpmdoc@1.120 +1 -1
+    NTP_4_2_7P301
+
+  sntp/sntp.html@1.300 +2 -2
+    NTP_4_2_7P301
+
+  sntp/sntp.man.in@1.120 +2 -2
+    NTP_4_2_7P301
+
+  sntp/sntp.mdoc.in@1.120 +1 -1
+    NTP_4_2_7P301
+
+  util/invoke-ntp-keygen.texi@1.290 +2 -2
+    NTP_4_2_7P301
+
+  util/ntp-keygen-opts.c@1.304 +4 -4
+    NTP_4_2_7P301
+
+  util/ntp-keygen-opts.h@1.304 +3 -3
+    NTP_4_2_7P301
+
+  util/ntp-keygen.1ntp-keygenman@1.118 +2 -2
+    NTP_4_2_7P301
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.118 +1 -1
+    NTP_4_2_7P301
+
+  util/ntp-keygen.man.in@1.118 +2 -2
+    NTP_4_2_7P301
+
+  util/ntp-keygen.mdoc.in@1.118 +1 -1
+    NTP_4_2_7P301
+
+ChangeSet@1.2803, 2012-09-03 05:13:00-04:00, stenn@deacon.udel.edu
+  [Bug 2164] Greater precision needed for ntpq offset report
+
+  ChangeLog@1.1173 +1 -0
+    [Bug 2164] Greater precision needed for ntpq offset report
+
+  ntpd/ntp_control.c@1.183 +4 -2
+    [Bug 2164] Greater precision needed for ntpq offset report
+
+ChangeSet@1.2802, 2012-09-03 03:20:41-04:00, stenn@deacon.udel.edu
+  Clean the man5_MANS in ntpd/
+
+  ChangeLog@1.1172 +1 -0
+    Clean the man5_MANS in ntpd/
+
+  ntpd/Makefile.am@1.122 +1 -0
+    Clean the man5_MANS in ntpd/
+
 ChangeSet@1.2801, 2012-09-03 06:02:36+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P300
   TAG: NTP_4_2_7P300
