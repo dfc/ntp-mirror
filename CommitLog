@@ -1,3 +1,205 @@
+ChangeSet@1.2811, 2012-09-06 08:28:41+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P304
+  TAG: NTP_4_2_7P304
+
+  ChangeLog@1.1181 +1 -0
+    NTP_4_2_7P304
+
+  ntpd/invoke-ntpd.texi@1.293 +2 -2
+    NTP_4_2_7P304
+
+  ntpd/ntp.conf.5man@1.10 +2 -2
+    NTP_4_2_7P304
+
+  ntpd/ntp.conf.5mdoc@1.10 +2 -2
+    NTP_4_2_7P304
+
+  ntpd/ntp.conf.man.in@1.10 +2 -2
+    NTP_4_2_7P304
+
+  ntpd/ntp.conf.mdoc.in@1.10 +2 -2
+    NTP_4_2_7P304
+
+  ntpd/ntp.keys.5man@1.10 +2 -2
+    NTP_4_2_7P304
+
+  ntpd/ntp.keys.5mdoc@1.10 +2 -2
+    NTP_4_2_7P304
+
+  ntpd/ntp.keys.man.in@1.10 +2 -2
+    NTP_4_2_7P304
+
+  ntpd/ntp.keys.mdoc.in@1.10 +2 -2
+    NTP_4_2_7P304
+
+  ntpd/ntpd-opts.c@1.311 +4 -4
+    NTP_4_2_7P304
+
+  ntpd/ntpd-opts.h@1.311 +3 -3
+    NTP_4_2_7P304
+
+  ntpd/ntpd.1ntpdman@1.122 +2 -2
+    NTP_4_2_7P304
+
+  ntpd/ntpd.1ntpdmdoc@1.122 +2 -2
+    NTP_4_2_7P304
+
+  ntpd/ntpd.man.in@1.122 +2 -2
+    NTP_4_2_7P304
+
+  ntpd/ntpd.mdoc.in@1.122 +2 -2
+    NTP_4_2_7P304
+
+  ntpdc/invoke-ntpdc.texi@1.290 +2 -2
+    NTP_4_2_7P304
+
+  ntpdc/ntpdc-opts.c@1.305 +4 -4
+    NTP_4_2_7P304
+
+  ntpdc/ntpdc-opts.h@1.305 +3 -3
+    NTP_4_2_7P304
+
+  ntpdc/ntpdc.1ntpdcman@1.121 +2 -2
+    NTP_4_2_7P304
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.121 +2 -2
+    NTP_4_2_7P304
+
+  ntpdc/ntpdc.html@1.133 +2 -2
+    NTP_4_2_7P304
+
+  ntpdc/ntpdc.man.in@1.121 +2 -2
+    NTP_4_2_7P304
+
+  ntpdc/ntpdc.mdoc.in@1.121 +2 -2
+    NTP_4_2_7P304
+
+  ntpq/invoke-ntpq.texi@1.292 +2 -2
+    NTP_4_2_7P304
+
+  ntpq/ntpq-opts.c@1.307 +4 -4
+    NTP_4_2_7P304
+
+  ntpq/ntpq-opts.h@1.307 +3 -3
+    NTP_4_2_7P304
+
+  ntpq/ntpq.1ntpqman@1.121 +2 -2
+    NTP_4_2_7P304
+
+  ntpq/ntpq.1ntpqmdoc@1.121 +2 -2
+    NTP_4_2_7P304
+
+  ntpq/ntpq.man.in@1.121 +2 -2
+    NTP_4_2_7P304
+
+  ntpq/ntpq.mdoc.in@1.121 +2 -2
+    NTP_4_2_7P304
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.292 +2 -2
+    NTP_4_2_7P304
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.307 +4 -4
+    NTP_4_2_7P304
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.307 +3 -3
+    NTP_4_2_7P304
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.121 +2 -2
+    NTP_4_2_7P304
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.121 +2 -2
+    NTP_4_2_7P304
+
+  ntpsnmpd/ntpsnmpd.man.in@1.121 +2 -2
+    NTP_4_2_7P304
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.121 +2 -2
+    NTP_4_2_7P304
+
+  packageinfo.sh@1.307 +1 -1
+    NTP_4_2_7P304
+
+  scripts/invoke-ntp-wait.texi@1.110 +1 -1
+    NTP_4_2_7P304
+
+  scripts/ntp-wait.1ntp-waitman@1.121 +2 -2
+    NTP_4_2_7P304
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.121 +2 -2
+    NTP_4_2_7P304
+
+  scripts/ntp-wait.html@1.125 +1 -1
+    NTP_4_2_7P304
+
+  scripts/ntp-wait.man.in@1.121 +2 -2
+    NTP_4_2_7P304
+
+  scripts/ntp-wait.mdoc.in@1.121 +2 -2
+    NTP_4_2_7P304
+
+  sntp/invoke-sntp.texi@1.288 +2 -2
+    NTP_4_2_7P304
+
+  sntp/sntp-opts.c@1.303 +4 -4
+    NTP_4_2_7P304
+
+  sntp/sntp-opts.h@1.303 +3 -3
+    NTP_4_2_7P304
+
+  sntp/sntp.1sntpman@1.123 +2 -2
+    NTP_4_2_7P304
+
+  sntp/sntp.1sntpmdoc@1.123 +2 -2
+    NTP_4_2_7P304
+
+  sntp/sntp.html@1.303 +2 -2
+    NTP_4_2_7P304
+
+  sntp/sntp.man.in@1.123 +2 -2
+    NTP_4_2_7P304
+
+  sntp/sntp.mdoc.in@1.123 +2 -2
+    NTP_4_2_7P304
+
+  util/invoke-ntp-keygen.texi@1.293 +2 -2
+    NTP_4_2_7P304
+
+  util/ntp-keygen-opts.c@1.307 +4 -4
+    NTP_4_2_7P304
+
+  util/ntp-keygen-opts.h@1.307 +3 -3
+    NTP_4_2_7P304
+
+  util/ntp-keygen.1ntp-keygenman@1.121 +2 -2
+    NTP_4_2_7P304
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.121 +2 -2
+    NTP_4_2_7P304
+
+  util/ntp-keygen.man.in@1.121 +2 -2
+    NTP_4_2_7P304
+
+  util/ntp-keygen.mdoc.in@1.121 +2 -2
+    NTP_4_2_7P304
+
+ChangeSet@1.2810, 2012-09-06 00:56:00-04:00, stenn@deacon.udel.edu
+  In refclock_wwv.c rename SECOND to WWV_SEC and MINUTE to WWV_MIN
+
+  ChangeLog@1.1180 +1 -0
+    In refclock_wwv.c rename SECOND to WWV_SEC and MINUTE to WWV_MIN
+
+  ntpd/refclock_wwv.c@1.78 +29 -29
+    In refclock_wwv.c rename SECOND to WWV_SEC and MINUTE to WWV_MIN
+
+ChangeSet@1.2809, 2012-09-05 21:13:07-04:00, stenn@deacon.udel.edu
+  [Bug 2264] Cleanup SEL240X Refclock
+
+  ChangeLog@1.1179 +1 -0
+    [Bug 2264] Cleanup SEL240X Refclock
+
+  libparse/clk_sel240x.c@1.2 +13 -29
+    [Bug 2264] Cleanup SEL240X Refclock
+
 ChangeSet@1.2808, 2012-09-05 20:02:15+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P303
   TAG: NTP_4_2_7P303
