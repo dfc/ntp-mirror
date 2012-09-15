@@ -1,3 +1,217 @@
+ChangeSet@1.2822, 2012-09-15 11:26:22+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P306
+  TAG: NTP_4_2_7P306
+
+  ChangeLog@1.1191 +1 -0
+    NTP_4_2_7P306
+
+  ntpd/invoke-ntpd.texi@1.295 +2 -2
+    NTP_4_2_7P306
+
+  ntpd/ntp.conf.5man@1.12 +2 -2
+    NTP_4_2_7P306
+
+  ntpd/ntp.conf.5mdoc@1.12 +1 -1
+    NTP_4_2_7P306
+
+  ntpd/ntp.conf.man.in@1.12 +2 -2
+    NTP_4_2_7P306
+
+  ntpd/ntp.conf.mdoc.in@1.12 +1 -1
+    NTP_4_2_7P306
+
+  ntpd/ntp.keys.5man@1.12 +2 -2
+    NTP_4_2_7P306
+
+  ntpd/ntp.keys.5mdoc@1.12 +1 -1
+    NTP_4_2_7P306
+
+  ntpd/ntp.keys.man.in@1.12 +2 -2
+    NTP_4_2_7P306
+
+  ntpd/ntp.keys.mdoc.in@1.12 +1 -1
+    NTP_4_2_7P306
+
+  ntpd/ntpd-opts.c@1.313 +4 -4
+    NTP_4_2_7P306
+
+  ntpd/ntpd-opts.h@1.313 +3 -3
+    NTP_4_2_7P306
+
+  ntpd/ntpd.1ntpdman@1.124 +2 -2
+    NTP_4_2_7P306
+
+  ntpd/ntpd.1ntpdmdoc@1.124 +1 -1
+    NTP_4_2_7P306
+
+  ntpd/ntpd.man.in@1.124 +2 -2
+    NTP_4_2_7P306
+
+  ntpd/ntpd.mdoc.in@1.124 +1 -1
+    NTP_4_2_7P306
+
+  ntpdc/invoke-ntpdc.texi@1.292 +2 -2
+    NTP_4_2_7P306
+
+  ntpdc/ntpdc-opts.c@1.307 +4 -4
+    NTP_4_2_7P306
+
+  ntpdc/ntpdc-opts.h@1.307 +3 -3
+    NTP_4_2_7P306
+
+  ntpdc/ntpdc.1ntpdcman@1.123 +2 -2
+    NTP_4_2_7P306
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.123 +1 -1
+    NTP_4_2_7P306
+
+  ntpdc/ntpdc.html@1.135 +2 -2
+    NTP_4_2_7P306
+
+  ntpdc/ntpdc.man.in@1.123 +2 -2
+    NTP_4_2_7P306
+
+  ntpdc/ntpdc.mdoc.in@1.123 +1 -1
+    NTP_4_2_7P306
+
+  ntpq/invoke-ntpq.texi@1.294 +2 -2
+    NTP_4_2_7P306
+
+  ntpq/ntpq-opts.c@1.309 +4 -4
+    NTP_4_2_7P306
+
+  ntpq/ntpq-opts.h@1.309 +3 -3
+    NTP_4_2_7P306
+
+  ntpq/ntpq.1ntpqman@1.123 +2 -2
+    NTP_4_2_7P306
+
+  ntpq/ntpq.1ntpqmdoc@1.123 +1 -1
+    NTP_4_2_7P306
+
+  ntpq/ntpq.man.in@1.123 +2 -2
+    NTP_4_2_7P306
+
+  ntpq/ntpq.mdoc.in@1.123 +1 -1
+    NTP_4_2_7P306
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.294 +2 -2
+    NTP_4_2_7P306
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.309 +4 -4
+    NTP_4_2_7P306
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.309 +3 -3
+    NTP_4_2_7P306
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.123 +2 -2
+    NTP_4_2_7P306
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.123 +1 -1
+    NTP_4_2_7P306
+
+  ntpsnmpd/ntpsnmpd.man.in@1.123 +2 -2
+    NTP_4_2_7P306
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.123 +1 -1
+    NTP_4_2_7P306
+
+  packageinfo.sh@1.309 +1 -1
+    NTP_4_2_7P306
+
+  scripts/invoke-ntp-wait.texi@1.112 +1 -1
+    NTP_4_2_7P306
+
+  scripts/ntp-wait.1ntp-waitman@1.123 +2 -2
+    NTP_4_2_7P306
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.123 +1 -1
+    NTP_4_2_7P306
+
+  scripts/ntp-wait.html@1.127 +1 -1
+    NTP_4_2_7P306
+
+  scripts/ntp-wait.man.in@1.123 +2 -2
+    NTP_4_2_7P306
+
+  scripts/ntp-wait.mdoc.in@1.123 +1 -1
+    NTP_4_2_7P306
+
+  sntp/invoke-sntp.texi@1.290 +2 -2
+    NTP_4_2_7P306
+
+  sntp/sntp-opts.c@1.305 +4 -4
+    NTP_4_2_7P306
+
+  sntp/sntp-opts.h@1.305 +3 -3
+    NTP_4_2_7P306
+
+  sntp/sntp.1sntpman@1.125 +2 -2
+    NTP_4_2_7P306
+
+  sntp/sntp.1sntpmdoc@1.125 +1 -1
+    NTP_4_2_7P306
+
+  sntp/sntp.html@1.305 +2 -2
+    NTP_4_2_7P306
+
+  sntp/sntp.man.in@1.125 +2 -2
+    NTP_4_2_7P306
+
+  sntp/sntp.mdoc.in@1.125 +1 -1
+    NTP_4_2_7P306
+
+  util/invoke-ntp-keygen.texi@1.295 +2 -2
+    NTP_4_2_7P306
+
+  util/ntp-keygen-opts.c@1.309 +4 -4
+    NTP_4_2_7P306
+
+  util/ntp-keygen-opts.h@1.309 +3 -3
+    NTP_4_2_7P306
+
+  util/ntp-keygen.1ntp-keygenman@1.123 +2 -2
+    NTP_4_2_7P306
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.123 +1 -1
+    NTP_4_2_7P306
+
+  util/ntp-keygen.man.in@1.123 +2 -2
+    NTP_4_2_7P306
+
+  util/ntp-keygen.mdoc.in@1.123 +1 -1
+    NTP_4_2_7P306
+
+ChangeSet@1.2821, 2012-09-15 03:45:57-04:00, stenn@deacon.udel.edu
+  [Bug 752] ToS cleanup from Mike Tatarinov
+
+  ChangeLog@1.1190 +1 -0
+    [Bug 752] ToS cleanup from Mike Tatarinov
+
+  include/ntp_config.h@1.75 +0 -23
+    [Bug 752] ToS cleanup from Mike Tatarinov
+
+  libntp/socket.c@1.9 +0 -13
+    [Bug 752] ToS cleanup from Mike Tatarinov
+
+  ntpd/keyword-gen-utd@1.18 +1 -1
+    [Bug 752] ToS cleanup from Mike Tatarinov
+
+  ntpd/keyword-gen.c@1.23 +0 -1
+    [Bug 752] ToS cleanup from Mike Tatarinov
+
+  ntpd/ntp_keyword.h@1.20 +488 -492
+    [Bug 752] ToS cleanup from Mike Tatarinov
+
+  ntpd/ntp_parser.c@1.81 +713 -717
+    [Bug 752] ToS cleanup from Mike Tatarinov
+
+  ntpd/ntp_parser.h@1.47 +107 -109
+    [Bug 752] ToS cleanup from Mike Tatarinov
+
+  ntpd/ntp_parser.y@1.75 +0 -2
+    [Bug 752] ToS cleanup from Mike Tatarinov
+
 ChangeSet@1.2820, 2012-09-15 07:21:10+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P305
   TAG: NTP_4_2_7P305
