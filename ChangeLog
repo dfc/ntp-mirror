@@ -1,3 +1,12 @@
+(4.2.7p305) 2012/09/15 Released by Harlan Stenn <stenn@ntp.org>
+* [Bug 752] Use proper ToS network packet markings for IPv4 and IPv6.
+* [Bug 1232] Convert SHM refclock to use struct timespec.
+* [Bug 2258] Add syslog message about leap insertion.
+* [Bug 2263] broadcast server doesn't work for host with
+  OS_MISSES_SPECIFIC_ROUTE_UPDATES.
+* [Bug 2271] Decode refclock types when built with --disable-all-clocks.
+* [Bug 2276] clk_sel240x.c #define's _XOPEN_SOURCE, breaking QNX6.
+* Updates to driver28.html.
 (4.2.7p304) 2012/09/06 Released by Harlan Stenn <stenn@ntp.org>
 * [Bug 2264] Cleanup SEL240X Refclock.
 * In refclock_wwv.c rename SECOND to WWV_SEC and MINUTE to WWV_MIN.

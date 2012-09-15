@@ -1,3 +1,286 @@
+ChangeSet@1.2820, 2012-09-15 07:21:10+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P305
+  TAG: NTP_4_2_7P305
+
+  ChangeLog@1.1189 +1 -0
+    NTP_4_2_7P305
+
+  ntpd/invoke-ntpd.texi@1.294 +2 -2
+    NTP_4_2_7P305
+
+  ntpd/ntp.conf.5man@1.11 +2 -2
+    NTP_4_2_7P305
+
+  ntpd/ntp.conf.5mdoc@1.11 +2 -2
+    NTP_4_2_7P305
+
+  ntpd/ntp.conf.man.in@1.11 +2 -2
+    NTP_4_2_7P305
+
+  ntpd/ntp.conf.mdoc.in@1.11 +2 -2
+    NTP_4_2_7P305
+
+  ntpd/ntp.keys.5man@1.11 +2 -2
+    NTP_4_2_7P305
+
+  ntpd/ntp.keys.5mdoc@1.11 +2 -2
+    NTP_4_2_7P305
+
+  ntpd/ntp.keys.man.in@1.11 +2 -2
+    NTP_4_2_7P305
+
+  ntpd/ntp.keys.mdoc.in@1.11 +2 -2
+    NTP_4_2_7P305
+
+  ntpd/ntpd-opts.c@1.312 +4 -4
+    NTP_4_2_7P305
+
+  ntpd/ntpd-opts.h@1.312 +3 -3
+    NTP_4_2_7P305
+
+  ntpd/ntpd.1ntpdman@1.123 +2 -2
+    NTP_4_2_7P305
+
+  ntpd/ntpd.1ntpdmdoc@1.123 +2 -2
+    NTP_4_2_7P305
+
+  ntpd/ntpd.man.in@1.123 +2 -2
+    NTP_4_2_7P305
+
+  ntpd/ntpd.mdoc.in@1.123 +2 -2
+    NTP_4_2_7P305
+
+  ntpdc/invoke-ntpdc.texi@1.291 +2 -2
+    NTP_4_2_7P305
+
+  ntpdc/ntpdc-opts.c@1.306 +4 -4
+    NTP_4_2_7P305
+
+  ntpdc/ntpdc-opts.h@1.306 +3 -3
+    NTP_4_2_7P305
+
+  ntpdc/ntpdc.1ntpdcman@1.122 +2 -2
+    NTP_4_2_7P305
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.122 +2 -2
+    NTP_4_2_7P305
+
+  ntpdc/ntpdc.html@1.134 +2 -2
+    NTP_4_2_7P305
+
+  ntpdc/ntpdc.man.in@1.122 +2 -2
+    NTP_4_2_7P305
+
+  ntpdc/ntpdc.mdoc.in@1.122 +2 -2
+    NTP_4_2_7P305
+
+  ntpq/invoke-ntpq.texi@1.293 +2 -2
+    NTP_4_2_7P305
+
+  ntpq/ntpq-opts.c@1.308 +4 -4
+    NTP_4_2_7P305
+
+  ntpq/ntpq-opts.h@1.308 +3 -3
+    NTP_4_2_7P305
+
+  ntpq/ntpq.1ntpqman@1.122 +2 -2
+    NTP_4_2_7P305
+
+  ntpq/ntpq.1ntpqmdoc@1.122 +2 -2
+    NTP_4_2_7P305
+
+  ntpq/ntpq.man.in@1.122 +2 -2
+    NTP_4_2_7P305
+
+  ntpq/ntpq.mdoc.in@1.122 +2 -2
+    NTP_4_2_7P305
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.293 +2 -2
+    NTP_4_2_7P305
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.308 +4 -4
+    NTP_4_2_7P305
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.308 +3 -3
+    NTP_4_2_7P305
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.122 +2 -2
+    NTP_4_2_7P305
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.122 +2 -2
+    NTP_4_2_7P305
+
+  ntpsnmpd/ntpsnmpd.man.in@1.122 +2 -2
+    NTP_4_2_7P305
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.122 +2 -2
+    NTP_4_2_7P305
+
+  packageinfo.sh@1.308 +1 -1
+    NTP_4_2_7P305
+
+  scripts/invoke-ntp-wait.texi@1.111 +1 -1
+    NTP_4_2_7P305
+
+  scripts/ntp-wait.1ntp-waitman@1.122 +2 -2
+    NTP_4_2_7P305
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.122 +2 -2
+    NTP_4_2_7P305
+
+  scripts/ntp-wait.html@1.126 +1 -1
+    NTP_4_2_7P305
+
+  scripts/ntp-wait.man.in@1.122 +2 -2
+    NTP_4_2_7P305
+
+  scripts/ntp-wait.mdoc.in@1.122 +2 -2
+    NTP_4_2_7P305
+
+  sntp/invoke-sntp.texi@1.289 +2 -2
+    NTP_4_2_7P305
+
+  sntp/sntp-opts.c@1.304 +4 -4
+    NTP_4_2_7P305
+
+  sntp/sntp-opts.h@1.304 +3 -3
+    NTP_4_2_7P305
+
+  sntp/sntp.1sntpman@1.124 +2 -2
+    NTP_4_2_7P305
+
+  sntp/sntp.1sntpmdoc@1.124 +2 -2
+    NTP_4_2_7P305
+
+  sntp/sntp.html@1.304 +2 -2
+    NTP_4_2_7P305
+
+  sntp/sntp.man.in@1.124 +2 -2
+    NTP_4_2_7P305
+
+  sntp/sntp.mdoc.in@1.124 +2 -2
+    NTP_4_2_7P305
+
+  util/invoke-ntp-keygen.texi@1.294 +2 -2
+    NTP_4_2_7P305
+
+  util/ntp-keygen-opts.c@1.308 +4 -4
+    NTP_4_2_7P305
+
+  util/ntp-keygen-opts.h@1.308 +3 -3
+    NTP_4_2_7P305
+
+  util/ntp-keygen.1ntp-keygenman@1.122 +2 -2
+    NTP_4_2_7P305
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.122 +2 -2
+    NTP_4_2_7P305
+
+  util/ntp-keygen.man.in@1.122 +2 -2
+    NTP_4_2_7P305
+
+  util/ntp-keygen.mdoc.in@1.122 +2 -2
+    NTP_4_2_7P305
+
+ChangeSet@1.2819, 2012-09-15 02:20:37-04:00, stenn@deacon.udel.edu
+  [Bug 2276] clk_sel240x.c #define's _XOPEN_SOURCE, breaking QNX6
+
+  ChangeLog@1.1188 +1 -0
+    [Bug 2276] clk_sel240x.c #define's _XOPEN_SOURCE, breaking QNX6
+
+  libparse/clk_sel240x.c@1.3 +3 -3
+    [Bug 2276] clk_sel240x.c #define's _XOPEN_SOURCE, breaking QNX6
+
+ChangeSet@1.2818, 2012-09-15 00:38:40-04:00, stenn@deacon.udel.edu
+  generated parser file cleanup
+
+  ntpd/keyword-gen-utd@1.17 +1 -1
+    generated parser file cleanup
+
+  ntpd/ntp_keyword.h@1.19 +995 -989
+    generated parser file cleanup
+
+  ntpd/ntp_parser.c@1.80 +1015 -1002
+    generated parser file cleanup
+
+  ntpd/ntp_parser.h@1.46 +367 -365
+    generated parser file cleanup
+
+ChangeSet@1.2817, 2012-09-15 00:35:46-04:00, stenn@deacon.udel.edu
+  [Bug 2258] Add syslog message about leap insertion
+
+  ChangeLog@1.1187 +1 -0
+    [Bug 2258] Add syslog message about leap insertion
+
+  ntpd/ntp_timer.c@1.70 +6 -5
+    [Bug 2258] Add syslog message about leap insertion
+
+ChangeSet@1.2816, 2012-09-14 23:42:10-04:00, stenn@deacon.udel.edu
+  [Bug 1232] Convert SHM refclock to use struct timespec
+
+  ChangeLog@1.1186 +1 -0
+    [Bug 1232] Convert SHM refclock to use struct timespec
+
+  ntpd/refclock_shm.c@1.26 +25 -33
+    [Bug 1232] Convert SHM refclock to use struct timespec
+
+ChangeSet@1.2815, 2012-09-14 18:45:55-04:00, stenn@psp-deb1.ntp.org
+  Updates to driver28.html
+
+  ChangeLog@1.1185 +1 -0
+    Updates to driver28.html
+
+  html/drivers/driver28.html@1.14 +26 -25
+    Updates to driver28.html
+
+ChangeSet@1.2814, 2012-09-14 18:44:39-04:00, stenn@psp-deb1.ntp.org
+  [Bug 2263] broadcast server doesn't work for host with OS_MISSES_SPECIFIC_ROUTE_UPDATES
+
+  ChangeLog@1.1184 +2 -0
+    [Bug 2263] broadcast server doesn't work for host with OS_MISSES_SPECIFIC_ROUTE_UPDATES
+
+  include/ntp.h@1.206 +2 -1
+    [Bug 2263] broadcast server doesn't work for host with OS_MISSES_SPECIFIC_ROUTE_UPDATES
+
+  ntpd/keyword-gen.c@1.22 +1 -0
+    [Bug 2263] broadcast server doesn't work for host with OS_MISSES_SPECIFIC_ROUTE_UPDATES
+
+  ntpd/ntp_io.c@1.370 +49 -35
+    [Bug 2263] broadcast server doesn't work for host with OS_MISSES_SPECIFIC_ROUTE_UPDATES
+
+  ntpd/ntp_parser.y@1.74 +3 -0
+    [Bug 2263] broadcast server doesn't work for host with OS_MISSES_SPECIFIC_ROUTE_UPDATES
+
+ChangeSet@1.2813, 2012-09-14 18:33:31-04:00, stenn@psp-deb1.ntp.org
+  [Bug 752] Use proper ToS network packet markings for IPv4 and IPv6
+
+  ChangeLog@1.1183 +1 -0
+    [Bug 752] Use proper ToS network packet markings for IPv4 and IPv6
+
+  configure.ac@1.551 +0 -27
+    [Bug 752] Use proper ToS network packet markings for IPv4 and IPv6
+
+  include/libntp.h@1.3 +0 -2
+    [Bug 752] Use proper ToS network packet markings for IPv4 and IPv6
+
+  ntpd/ntp_config.c@1.303 +0 -84
+    [Bug 752] Use proper ToS network packet markings for IPv4 and IPv6
+
+  ntpd/ntp_io.c@1.369 +15 -3
+    [Bug 752] Use proper ToS network packet markings for IPv4 and IPv6
+
+ChangeSet@1.2812, 2012-09-09 19:05:06-04:00, stenn@deacon.udel.edu
+  [Bug 2271] Decode refclock types when built with --disable-all-clocks.
+
+  ChangeLog@1.1182 +1 -0
+    [Bug 2271] Decode refclock types when built with --disable-all-clocks.
+
+  include/ntp_net.h@1.12 +0 -4
+    [Bug 2271] Decode refclock types when built with --disable-all-clocks.
+
+  ntpd/ntp_peer.c@1.153 +8 -3
+    [Bug 2271] Decode refclock types when built with --disable-all-clocks.
+
 ChangeSet@1.2811, 2012-09-06 08:28:41+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P304
   TAG: NTP_4_2_7P304

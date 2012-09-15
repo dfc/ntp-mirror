@@ -452,9 +452,6 @@
 /* Define to 1 if you have the <inttypes.h> header file. */
 #undef HAVE_INTTYPES_H
 
-/* Do we have IPTOS support? */
-#undef HAVE_IPTOS_SUPPORT
-
 /* Define to 1 if you have the `isfinite' function. */
 #undef HAVE_ISFINITE
 

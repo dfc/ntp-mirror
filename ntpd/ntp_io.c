@@ -1022,14 +1022,16 @@ remove_interface(
 			ep->notsent,
 			current_time - ep->starttime);
 		close_and_delete_fd_from_list(ep->fd);
+		ep->fd = INVALID_SOCKET;
 	}
 
 	if (ep->bfd != INVALID_SOCKET) {
 		msyslog(LOG_INFO,
-			"Deleting broadcast address %s#%d from interface #%d %s",
-			stoa(&ep->bcast), SRCPORT(&ep->bcast),
-			ep->ifnum, ep->name);
+			"stop listening for broadcasts to %s on interface #%d %s",
+			stoa(&ep->bcast), ep->ifnum, ep->name);
 		close_and_delete_fd_from_list(ep->bfd);
+		ep->bfd = INVALID_SOCKET;
+		ep->flags &= ~INT_BCASTOPEN;
 	}
 
 	ninterfaces--;
@@ -1475,9 +1477,18 @@ refresh_interface(
 {
 #ifdef  OS_MISSES_SPECIFIC_ROUTE_UPDATES
 	if (interface->fd != INVALID_SOCKET) {
+		int bcast = (interface->flags & INT_BCASTXMIT) != 0;
+		/* as we forcibly close() the socket remove the
+		   broadcast permission indication */
+		if (bcast)
+			socket_broadcast_disable(interface, &interface->sin);
+		
 		close_and_delete_fd_from_list(interface->fd);
+
+		/* create new socket picking up a new first hop binding
+		   at connect() time */
 		interface->fd = open_socket(&interface->sin,
-					    0, 0, interface);
+					    bcast, 0, interface);
 		 /*
 		  * reset TTL indication so TTL is is set again 
 		  * next time around
@@ -1918,6 +1929,10 @@ update_interfaces(
 	/*
 	 * phase 3 - re-configure as the world has changed if necessary
 	 */
+
+	if (broadcast_client_enabled)
+		io_setbclient();
+	
 	if (refresh_peers) {
 		refresh_all_peerinterfaces();
 		msyslog(LOG_INFO, "peers refreshed");
@@ -2180,8 +2195,7 @@ socket_broadcast_enable(
 			DPRINTF(2, ("Broadcast enabled on socket %d for address %s\n",
 				    fd, stoa(baddr)));
 	}
-	iface->flags |= INT_BCASTOPEN;
-	broadcast_client_enabled = ISC_TRUE;
+	iface->flags |= INT_BCASTXMIT;
 	return ISC_TRUE;
 #else
 	return ISC_FALSE;
@@ -2208,8 +2222,7 @@ socket_broadcast_disable(
 			"setsockopt(SO_BROADCAST) disable failure on address %s: %m",
 			stoa(baddr));
 
-	iface->flags &= ~INT_BCASTOPEN;
-	broadcast_client_enabled = ISC_FALSE;
+	iface->flags &= ~INT_BCASTXMIT;
 	return ISC_TRUE;
 #else
 	return ISC_FALSE;
@@ -2484,9 +2497,6 @@ io_setbclient(void)
 #ifdef OPEN_BCAST_SOCKET 
 	struct interface *	interf;
 	int			nif;
-	isc_boolean_t		jstatus; 
-	SOCKET			fd;
-	u_int32			prev_refid;
 
 	nif = 0;
 	set_reuseaddr(1);
@@ -2530,36 +2540,30 @@ io_setbclient(void)
 		 * broadcast on the interface address
 		 */
 		if (interf->bfd != INVALID_SOCKET) {
-			fd = interf->bfd;
-			jstatus = ISC_TRUE;
-		} else {
-			fd = interf->fd;
-			jstatus = socket_broadcast_enable(interf, fd,
-					&interf->sin);
-		}
-
-		/* Enable Broadcast on socket */
-		if (jstatus) {
 			nif++;
+			interf->flags |= INT_BCASTOPEN;
 			msyslog(LOG_INFO,
-				"io_setbclient: Opened broadcast client on interface #%d %s",
-				interf->ifnum, interf->name);
-			/* hart suspects this is unneeded, verify */
-			prev_refid = interf->addr_refid;
-			interf->addr_refid = addr2refid(&interf->sin);
-			if (prev_refid != interf->addr_refid)
-				msyslog(LOG_NOTICE,
-					"io_setbclient: code is not dead, addr_refid for %s updated %8.8x -> %8.8x, please email hart@ntp.org to remove this message",
-					stoa(&interf->sin), prev_refid,
-					interf->addr_refid);
+				"Listen for broadcasts to %s on interface #%d %s",
+				stoa(&interf->bcast), interf->ifnum, interf->name);
+		} else {
+			/* silently ignore EADDRINUSE as we probably opened
+			   the socket already for an address in the same network */
+			if (errno != EADDRINUSE)
+				msyslog(LOG_INFO,
+					"failed to listen for broadcasts to %s on interface #%d %s",
+					stoa(&interf->bcast), interf->ifnum, interf->name);
 		}
 	}
 	set_reuseaddr(0);
-	if (nif > 0)
-		DPRINTF(1, ("io_setbclient: Opened broadcast clients\n"));
-	else if (!nif)
+	if (nif > 0) {
+		broadcast_client_enabled = ISC_TRUE;
+		DPRINTF(1, ("io_setbclient: listening to %d broadcast addresses\n", nif));
+	}
+	else if (!nif) {
+		broadcast_client_enabled = ISC_FALSE;
 		msyslog(LOG_ERR,
 			"Unable to listen for broadcasts, no broadcast interfaces available");
+	}
 #else
 	msyslog(LOG_ERR,
 		"io_setbclient: Broadcast Client disabled by build");
@@ -2579,8 +2583,18 @@ io_unsetbclient(void)
 			continue;
 		if (!(INT_BCASTOPEN & ep->flags))
 			continue;
-		socket_broadcast_disable(ep, &ep->sin);
+
+		if (ep->bfd != INVALID_SOCKET) {
+			/* destroy broadcast listening socket */
+			msyslog(LOG_INFO,
+				"stop listening for broadcasts to %s on interface #%d %s",
+				stoa(&ep->bcast), ep->ifnum, ep->name);
+			close_and_delete_fd_from_list(ep->bfd);
+			ep->bfd = INVALID_SOCKET;
+			ep->flags &= ~INT_BCASTOPEN;
+		}
 	}
+	broadcast_client_enabled = ISC_FALSE;
 }
 
 /*
@@ -2756,6 +2770,11 @@ open_socket(
 	int	on = 1;
 	int	off = 0;
 
+#ifndef IPTOS_DSCP_EF
+#define IPTOS_DSCP_EF 0xb8
+#endif
+	int	qos = IPTOS_DSCP_EF;	/* QoS RFC3246 */
+
 	if (IS_IPV6(addr) && !ipv6_works)
 		return INVALID_SOCKET;
 
@@ -2825,13 +2844,13 @@ open_socket(
 	 * IPv4 specific options go here
 	 */
 	if (IS_IPV4(addr)) {
-#if defined(HAVE_IPTOS_SUPPORT)
-		if (setsockopt(fd, IPPROTO_IP, IP_TOS, (char *)&qos,
+#if defined(IPPROTO_IP) && defined(IP_TOS)
+		if (setsockopt(fd, IPPROTO_IP, IP_TOS, (char*)&qos,
 			       sizeof(qos)))
 			msyslog(LOG_ERR,
 				"setsockopt IP_TOS (%02x) fails on address %s: %m",
 				qos, stoa(addr));
-#endif /* HAVE_IPTOS_SUPPORT */
+#endif /* IPPROTO_IP && IP_TOS */
 		if (bcast)
 			socket_broadcast_enable(interf, fd, addr);
 	}
@@ -2840,6 +2859,13 @@ open_socket(
 	 * IPv6 specific options go here
 	 */
 	if (IS_IPV6(addr)) {
+#if defined(IPPROTO_IPV6) && defined(IPV6_TCLASS)
+		if (setsockopt(fd, IPPROTO_IPV6, IPV6_TCLASS, (char*)&qos,
+			       sizeof(qos)))
+			msyslog(LOG_ERR,
+				"setsockopt IPV6_TCLASS (%02x) fails on address %s: %m",
+				qos, stoa(addr));
+#endif /* IPPROTO_IPV6 && IPV6_TCLASS */
 #ifdef IPV6_V6ONLY
 		if (isc_net_probe_ipv6only() == ISC_R_SUCCESS
 		    && setsockopt(fd, IPPROTO_IPV6, IPV6_V6ONLY,
