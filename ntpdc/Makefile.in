@@ -87,7 +87,7 @@ CONFIG_CLEAN_FILES = nl.pl
 CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(libexecdir)" \
 	"$(DESTDIR)$(sbindir)" "$(DESTDIR)$(man1dir)" \
-	"$(DESTDIR)$(man8dir)"
+	"$(DESTDIR)$(man8dir)" "$(DESTDIR)$(htmldir)"
 PROGRAMS = $(bin_PROGRAMS) $(libexec_PROGRAMS) $(sbin_PROGRAMS)
 am_ntpdc_OBJECTS = ntpdc.$(OBJEXT) ntpdc_ops.$(OBJEXT) \
 	ntpdc-opts.$(OBJEXT)
@@ -156,7 +156,7 @@ man1dir = $(mandir)/man1
 man8dir = $(mandir)/man8
 NROFF = nroff
 MANS = $(man1_MANS) $(man8_MANS) $(man_MANS)
-DATA = $(noinst_DATA)
+DATA = $(html_DATA) $(noinst_DATA)
 HEADERS = $(noinst_HEADERS)
 ETAGS = etags
 CTAGS = ctags
@@ -426,10 +426,13 @@ EXTRA_DIST = \
 man1_MANS = 
 man8_MANS = 
 man_MANS = ntpdc.$(NTPDC_MS)
+html_DATA = \
+	$(srcdir)/ntpdc.html		\
+	$(NULL)
+
 noinst_DATA = \
 	$(srcdir)/invoke-ntpdc.menu	\
 	$(srcdir)/invoke-ntpdc.texi	\
-	$(srcdir)/ntpdc.html		\
 	$(srcdir)/ntpdc.man.in		\
 	$(srcdir)/ntpdc.mdoc.in		\
 	$(NULL)
@@ -739,6 +742,26 @@ uninstall-man8:
 	test -z "$$files" || { \
 	  echo " ( cd '$(DESTDIR)$(man8dir)' && rm -f" $$files ")"; \
 	  cd "$(DESTDIR)$(man8dir)" && rm -f $$files; }
+install-htmlDATA: $(html_DATA)
+	@$(NORMAL_INSTALL)
+	test -z "$(htmldir)" || $(MKDIR_P) "$(DESTDIR)$(htmldir)"
+	@list='$(html_DATA)'; test -n "$(htmldir)" || list=; \
+	for p in $$list; do \
+	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+	  echo "$$d$$p"; \
+	done | $(am__base_list) | \
+	while read files; do \
+	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(htmldir)'"; \
+	  $(INSTALL_DATA) $$files "$(DESTDIR)$(htmldir)" || exit $$?; \
+	done
+
+uninstall-htmlDATA:
+	@$(NORMAL_UNINSTALL)
+	@list='$(html_DATA)'; test -n "$(htmldir)" || list=; \
+	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
+	test -n "$$files" || exit 0; \
+	echo " ( cd '$(DESTDIR)$(htmldir)' && rm -f" $$files ")"; \
+	cd "$(DESTDIR)$(htmldir)" && rm -f $$files
 
 ID: $(HEADERS) $(SOURCES) $(LISP) $(TAGS_FILES)
 	list='$(SOURCES) $(HEADERS) $(LISP) $(TAGS_FILES)'; \
@@ -840,7 +863,7 @@ check: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) check-am
 all-am: Makefile $(PROGRAMS) $(MANS) $(DATA) $(HEADERS)
 installdirs:
-	for dir in "$(DESTDIR)$(bindir)" "$(DESTDIR)$(libexecdir)" "$(DESTDIR)$(sbindir)" "$(DESTDIR)$(man1dir)" "$(DESTDIR)$(man8dir)"; do \
+	for dir in "$(DESTDIR)$(bindir)" "$(DESTDIR)$(libexecdir)" "$(DESTDIR)$(sbindir)" "$(DESTDIR)$(man1dir)" "$(DESTDIR)$(man8dir)" "$(DESTDIR)$(htmldir)"; do \
 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
 	done
 install: $(BUILT_SOURCES)
@@ -895,7 +918,7 @@ info: info-am
 
 info-am:
 
-install-data-am: install-man
+install-data-am: install-data-local install-htmlDATA install-man
 
 install-dvi: install-dvi-am
 
@@ -943,8 +966,8 @@ ps: ps-am
 
 ps-am:
 
-uninstall-am: uninstall-binPROGRAMS uninstall-libexecPROGRAMS \
-	uninstall-man uninstall-sbinPROGRAMS
+uninstall-am: uninstall-binPROGRAMS uninstall-htmlDATA \
+	uninstall-libexecPROGRAMS uninstall-man uninstall-sbinPROGRAMS
 
 uninstall-man: uninstall-man1 uninstall-man8
 
@@ -955,9 +978,10 @@ uninstall-man: uninstall-man1 uninstall-man8
 	clean-sbinPROGRAMS ctags distclean distclean-compile \
 	distclean-generic distclean-libtool distclean-tags distdir dvi \
 	dvi-am html html-am info info-am install install-am \
-	install-binPROGRAMS install-data install-data-am install-dvi \
-	install-dvi-am install-exec install-exec-am install-exec-hook \
-	install-html install-html-am install-info install-info-am \
+	install-binPROGRAMS install-data install-data-am \
+	install-data-local install-dvi install-dvi-am install-exec \
+	install-exec-am install-exec-hook install-html install-html-am \
+	install-htmlDATA install-info install-info-am \
 	install-libexecPROGRAMS install-man install-man1 install-man8 \
 	install-pdf install-pdf-am install-ps install-ps-am \
 	install-sbinPROGRAMS install-strip installcheck \
@@ -965,9 +989,11 @@ uninstall-man: uninstall-man1 uninstall-man8
 	maintainer-clean-generic mostlyclean mostlyclean-compile \
 	mostlyclean-generic mostlyclean-libtool pdf pdf-am ps ps-am \
 	tags uninstall uninstall-am uninstall-binPROGRAMS \
-	uninstall-libexecPROGRAMS uninstall-man uninstall-man1 \
-	uninstall-man8 uninstall-sbinPROGRAMS
+	uninstall-htmlDATA uninstall-libexecPROGRAMS uninstall-man \
+	uninstall-man1 uninstall-man8 uninstall-sbinPROGRAMS
 
+
+install-data-local: install-html
 
 $(srcdir)/ntpdc-opts.h: $(srcdir)/ntpdc-opts.c
 	@: do-nothing action to avoid default SCCS get, .h built with .c
