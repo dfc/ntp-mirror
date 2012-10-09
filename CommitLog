@@ -1,3 +1,226 @@
+ChangeSet@1.2836, 2012-10-09 11:41:30+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P310
+  TAG: NTP_4_2_7P310
+
+  ChangeLog@1.1205 +1 -0
+    NTP_4_2_7P310
+
+  ntpd/invoke-ntpd.texi@1.299 +2 -2
+    NTP_4_2_7P310
+
+  ntpd/ntp.conf.5man@1.16 +2 -2
+    NTP_4_2_7P310
+
+  ntpd/ntp.conf.5mdoc@1.16 +2 -2
+    NTP_4_2_7P310
+
+  ntpd/ntp.conf.man.in@1.16 +2 -2
+    NTP_4_2_7P310
+
+  ntpd/ntp.conf.mdoc.in@1.16 +2 -2
+    NTP_4_2_7P310
+
+  ntpd/ntp.keys.5man@1.16 +2 -2
+    NTP_4_2_7P310
+
+  ntpd/ntp.keys.5mdoc@1.16 +2 -2
+    NTP_4_2_7P310
+
+  ntpd/ntp.keys.man.in@1.16 +2 -2
+    NTP_4_2_7P310
+
+  ntpd/ntp.keys.mdoc.in@1.16 +2 -2
+    NTP_4_2_7P310
+
+  ntpd/ntpd-opts.c@1.317 +4 -4
+    NTP_4_2_7P310
+
+  ntpd/ntpd-opts.h@1.317 +3 -3
+    NTP_4_2_7P310
+
+  ntpd/ntpd.1ntpdman@1.128 +2 -2
+    NTP_4_2_7P310
+
+  ntpd/ntpd.1ntpdmdoc@1.128 +2 -2
+    NTP_4_2_7P310
+
+  ntpd/ntpd.man.in@1.128 +2 -2
+    NTP_4_2_7P310
+
+  ntpd/ntpd.mdoc.in@1.128 +2 -2
+    NTP_4_2_7P310
+
+  ntpdc/invoke-ntpdc.texi@1.296 +2 -2
+    NTP_4_2_7P310
+
+  ntpdc/ntpdc-opts.c@1.311 +4 -4
+    NTP_4_2_7P310
+
+  ntpdc/ntpdc-opts.h@1.311 +3 -3
+    NTP_4_2_7P310
+
+  ntpdc/ntpdc.1ntpdcman@1.127 +2 -2
+    NTP_4_2_7P310
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.127 +2 -2
+    NTP_4_2_7P310
+
+  ntpdc/ntpdc.html@1.139 +2 -2
+    NTP_4_2_7P310
+
+  ntpdc/ntpdc.man.in@1.127 +2 -2
+    NTP_4_2_7P310
+
+  ntpdc/ntpdc.mdoc.in@1.127 +2 -2
+    NTP_4_2_7P310
+
+  ntpq/invoke-ntpq.texi@1.298 +2 -2
+    NTP_4_2_7P310
+
+  ntpq/ntpq-opts.c@1.313 +4 -4
+    NTP_4_2_7P310
+
+  ntpq/ntpq-opts.h@1.313 +3 -3
+    NTP_4_2_7P310
+
+  ntpq/ntpq.1ntpqman@1.127 +2 -2
+    NTP_4_2_7P310
+
+  ntpq/ntpq.1ntpqmdoc@1.127 +2 -2
+    NTP_4_2_7P310
+
+  ntpq/ntpq.man.in@1.127 +2 -2
+    NTP_4_2_7P310
+
+  ntpq/ntpq.mdoc.in@1.127 +2 -2
+    NTP_4_2_7P310
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.298 +2 -2
+    NTP_4_2_7P310
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.313 +4 -4
+    NTP_4_2_7P310
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.313 +3 -3
+    NTP_4_2_7P310
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.127 +2 -2
+    NTP_4_2_7P310
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.127 +2 -2
+    NTP_4_2_7P310
+
+  ntpsnmpd/ntpsnmpd.man.in@1.127 +2 -2
+    NTP_4_2_7P310
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.127 +2 -2
+    NTP_4_2_7P310
+
+  packageinfo.sh@1.313 +1 -1
+    NTP_4_2_7P310
+
+  scripts/invoke-ntp-wait.texi@1.116 +1 -1
+    NTP_4_2_7P310
+
+  scripts/ntp-wait.1ntp-waitman@1.127 +2 -2
+    NTP_4_2_7P310
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.127 +2 -2
+    NTP_4_2_7P310
+
+  scripts/ntp-wait.html@1.131 +1 -1
+    NTP_4_2_7P310
+
+  scripts/ntp-wait.man.in@1.127 +2 -2
+    NTP_4_2_7P310
+
+  scripts/ntp-wait.mdoc.in@1.127 +2 -2
+    NTP_4_2_7P310
+
+  sntp/invoke-sntp.texi@1.295 +2 -2
+    NTP_4_2_7P310
+
+  sntp/sntp-opts.c@1.310 +4 -4
+    NTP_4_2_7P310
+
+  sntp/sntp-opts.h@1.310 +3 -3
+    NTP_4_2_7P310
+
+  sntp/sntp.1sntpman@1.130 +2 -2
+    NTP_4_2_7P310
+
+  sntp/sntp.1sntpmdoc@1.130 +2 -2
+    NTP_4_2_7P310
+
+  sntp/sntp.html@1.310 +2 -2
+    NTP_4_2_7P310
+
+  sntp/sntp.man.in@1.130 +2 -2
+    NTP_4_2_7P310
+
+  sntp/sntp.mdoc.in@1.130 +2 -2
+    NTP_4_2_7P310
+
+  util/invoke-ntp-keygen.texi@1.299 +2 -2
+    NTP_4_2_7P310
+
+  util/ntp-keygen-opts.c@1.313 +4 -4
+    NTP_4_2_7P310
+
+  util/ntp-keygen-opts.h@1.313 +3 -3
+    NTP_4_2_7P310
+
+  util/ntp-keygen.1ntp-keygenman@1.127 +2 -2
+    NTP_4_2_7P310
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.127 +2 -2
+    NTP_4_2_7P310
+
+  util/ntp-keygen.man.in@1.127 +2 -2
+    NTP_4_2_7P310
+
+  util/ntp-keygen.mdoc.in@1.127 +2 -2
+    NTP_4_2_7P310
+
+ChangeSet@1.2835, 2012-10-08 23:50:56-04:00, stenn@deacon.udel.edu
+  [Bug 1374] Support SO_TIMESTAMPNS
+
+  ChangeLog@1.1204 +1 -0
+    [Bug 1374] Support SO_TIMESTAMPNS
+
+  ntpd/ntp_io.c@1.371 +68 -16
+    [Bug 1374] Support SO_TIMESTAMPNS
+
+ChangeSet@1.2834, 2012-10-08 22:50:36-04:00, stenn@deacon.udel.edu
+  [Bug 2274] Bring libopts/enum.c back to (old) ANSI C compliance
+
+  ChangeLog@1.1203 +1 -1
+    [Bug 2274] Bring libopts/enum.c back to (old) ANSI C compliance
+
+ChangeSet@1.2833, 2012-10-08 20:17:15-04:00, stenn@deacon.udel.edu
+  [Bug 2266] Remove deprecated refclock_trak.c from Windows Makefile equivalents
+
+  ChangeLog@1.1202 +2 -1
+    [Bug 2266] Remove deprecated refclock_trak.c from Windows Makefile equivalents
+
+ChangeSet@1.2829.1.1, 2012-10-05 01:53:46+00:00, davehart@dlh-7551.ad.hartbrothers.com
+  Bring libopts/enum.c back to ANSI C compliance.
+  Reflect removal of refclock_trak.c in Windows Makefile equivalents.
+
+  ChangeLog@1.1198.1.1 +2 -0
+    Bring libopts/enum.c back to ANSI C compliance.
+    Reflect removal of refclock_trak.c in Windows Makefile equivalents.
+
+  ports/winnt/vs2005/ntpd.vcproj@1.18 +0 -24
+    Reflect removal of refclock_trak.c in Windows Makefile equivalents.
+
+  ports/winnt/vs2008/ntpd/ntpd.vcproj@1.44 +0 -4
+    Reflect removal of refclock_trak.c in Windows Makefile equivalents.
+
+  sntp/libopts/enum.c@1.5 +3 -3
+    Bring libopts/enum.c back to ANSI C compliance.
+    
+
 ChangeSet@1.2831, 2012-10-04 11:41:02+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P309
   TAG: NTP_4_2_7P309
