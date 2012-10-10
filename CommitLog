@@ -1,8 +1,234 @@
-ChangeSet@1.2836, 2012-10-09 11:41:30+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2841, 2012-10-10 06:30:54+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P311
+  TAG: NTP_4_2_7P311
+
+  ChangeLog@1.1209 +1 -0
+    NTP_4_2_7P311
+
+  ntpd/invoke-ntpd.texi@1.300 +4 -40
+    NTP_4_2_7P311
+
+  ntpd/ntp.conf.5man@1.17 +2 -2
+    NTP_4_2_7P311
+
+  ntpd/ntp.conf.5mdoc@1.17 +2 -2
+    NTP_4_2_7P311
+
+  ntpd/ntp.conf.man.in@1.17 +2 -2
+    NTP_4_2_7P311
+
+  ntpd/ntp.conf.mdoc.in@1.17 +2 -2
+    NTP_4_2_7P311
+
+  ntpd/ntp.keys.5man@1.17 +2 -2
+    NTP_4_2_7P311
+
+  ntpd/ntp.keys.5mdoc@1.17 +2 -2
+    NTP_4_2_7P311
+
+  ntpd/ntp.keys.man.in@1.17 +2 -2
+    NTP_4_2_7P311
+
+  ntpd/ntp.keys.mdoc.in@1.17 +2 -2
+    NTP_4_2_7P311
+
+  ntpd/ntpd-opts.c@1.318 +214 -231
+    NTP_4_2_7P311
+
+  ntpd/ntpd-opts.h@1.318 +5 -3
+    NTP_4_2_7P311
+
+  ntpd/ntpd.1ntpdman@1.129 +6 -8
+    NTP_4_2_7P311
+
+  ntpd/ntpd.1ntpdmdoc@1.129 +8 -8
+    NTP_4_2_7P311
+
+  ntpd/ntpd.man.in@1.129 +6 -8
+    NTP_4_2_7P311
+
+  ntpd/ntpd.mdoc.in@1.129 +8 -8
+    NTP_4_2_7P311
+
+  ntpdc/invoke-ntpdc.texi@1.297 +3 -3
+    NTP_4_2_7P311
+
+  ntpdc/ntpdc-opts.c@1.312 +15 -14
+    NTP_4_2_7P311
+
+  ntpdc/ntpdc-opts.h@1.312 +5 -3
+    NTP_4_2_7P311
+
+  ntpdc/ntpdc.1ntpdcman@1.128 +4 -3
+    NTP_4_2_7P311
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.128 +4 -3
+    NTP_4_2_7P311
+
+  ntpdc/ntpdc.html@1.140 +3 -3
+    NTP_4_2_7P311
+
+  ntpdc/ntpdc.man.in@1.128 +4 -3
+    NTP_4_2_7P311
+
+  ntpdc/ntpdc.mdoc.in@1.128 +4 -3
+    NTP_4_2_7P311
+
+  ntpq/invoke-ntpq.texi@1.299 +3 -3
+    NTP_4_2_7P311
+
+  ntpq/ntpq-opts.c@1.314 +15 -14
+    NTP_4_2_7P311
+
+  ntpq/ntpq-opts.h@1.314 +5 -3
+    NTP_4_2_7P311
+
+  ntpq/ntpq.1ntpqman@1.128 +4 -3
+    NTP_4_2_7P311
+
+  ntpq/ntpq.1ntpqmdoc@1.128 +4 -3
+    NTP_4_2_7P311
+
+  ntpq/ntpq.man.in@1.128 +4 -3
+    NTP_4_2_7P311
+
+  ntpq/ntpq.mdoc.in@1.128 +4 -3
+    NTP_4_2_7P311
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.299 +2 -2
+    NTP_4_2_7P311
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.314 +4 -4
+    NTP_4_2_7P311
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.314 +3 -3
+    NTP_4_2_7P311
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.128 +2 -2
+    NTP_4_2_7P311
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.128 +2 -2
+    NTP_4_2_7P311
+
+  ntpsnmpd/ntpsnmpd.man.in@1.128 +2 -2
+    NTP_4_2_7P311
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.128 +2 -2
+    NTP_4_2_7P311
+
+  packageinfo.sh@1.314 +1 -1
+    NTP_4_2_7P311
+
+  scripts/invoke-ntp-wait.texi@1.117 +1 -1
+    NTP_4_2_7P311
+
+  scripts/ntp-wait.1ntp-waitman@1.128 +2 -2
+    NTP_4_2_7P311
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.128 +2 -2
+    NTP_4_2_7P311
+
+  scripts/ntp-wait.html@1.132 +1 -1
+    NTP_4_2_7P311
+
+  scripts/ntp-wait.man.in@1.128 +2 -2
+    NTP_4_2_7P311
+
+  scripts/ntp-wait.mdoc.in@1.128 +2 -2
+    NTP_4_2_7P311
+
+  sntp/invoke-sntp.texi@1.296 +3 -3
+    NTP_4_2_7P311
+
+  sntp/sntp-opts.c@1.311 +16 -16
+    NTP_4_2_7P311
+
+  sntp/sntp-opts.h@1.311 +5 -3
+    NTP_4_2_7P311
+
+  sntp/sntp.1sntpman@1.131 +4 -3
+    NTP_4_2_7P311
+
+  sntp/sntp.1sntpmdoc@1.131 +4 -3
+    NTP_4_2_7P311
+
+  sntp/sntp.html@1.311 +3 -3
+    NTP_4_2_7P311
+
+  sntp/sntp.man.in@1.131 +4 -3
+    NTP_4_2_7P311
+
+  sntp/sntp.mdoc.in@1.131 +4 -3
+    NTP_4_2_7P311
+
+  util/invoke-ntp-keygen.texi@1.300 +3 -3
+    NTP_4_2_7P311
+
+  util/ntp-keygen-opts.c@1.314 +15 -14
+    NTP_4_2_7P311
+
+  util/ntp-keygen-opts.h@1.314 +5 -3
+    NTP_4_2_7P311
+
+  util/ntp-keygen.1ntp-keygenman@1.128 +4 -3
+    NTP_4_2_7P311
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.128 +4 -3
+    NTP_4_2_7P311
+
+  util/ntp-keygen.man.in@1.128 +4 -3
+    NTP_4_2_7P311
+
+  util/ntp-keygen.mdoc.in@1.128 +4 -3
+    NTP_4_2_7P311
+
+ChangeSet@1.2839, 2012-10-10 01:49:46-04:00, stenn@psp-deb1.ntp.org
+  [Bug 938] The argument to the -D flag takes a number, not a string
+
+  ChangeLog@1.1207 +1 -0
+    [Bug 938] The argument to the -D flag takes a number, not a string
+
+ChangeSet@1.2838, 2012-10-09 23:19:59-04:00, stenn@psp-deb1.ntp.org
+  [Bug 1374] Support SO_TIMESTAMPNS
+
+  ChangeLog@1.1206 +1 -0
+    [Bug 1374] Support SO_TIMESTAMPNS
+
+  ntpd/ntpd.c@1.134 +2 -2
+    [Bug 1374] Support SO_TIMESTAMPNS
+
+  ntpd/ntpdbase-opts.def@1.24 +1 -27
+    [Bug 1374] Support SO_TIMESTAMPNS
+
+  ntpdc/ntpdc.c@1.101 +1 -1
+    [Bug 1374] Support SO_TIMESTAMPNS
+
+  ntpq/ntpq.c@1.149 +1 -1
+    [Bug 1374] Support SO_TIMESTAMPNS
+
+  ports/winnt/ntpd/ntservice.c@1.29 +1 -1
+    [Bug 1374] Support SO_TIMESTAMPNS
+
+  sntp/include/debug-opt.def@1.8 +2 -2
+    [Bug 1374] Support SO_TIMESTAMPNS
+
+  sntp/main.c@1.84 +6 -1
+    [Bug 1374] Support SO_TIMESTAMPNS
+
+  util/ntp-keygen.c@1.93 +1 -1
+    [Bug 1374] Support SO_TIMESTAMPNS
+
+ChangeSet@1.2837, 2012-10-09 22:55:48-04:00, stenn@psp-deb1.ntp.org
+  [Bug 1374] Support SO_TIMESTAMPNS
+
+  ntpd/ntp_io.c@1.372 +9 -8
+    [Bug 1374] Support SO_TIMESTAMPNS
+
+ChangeSet@1.2835.1.1, 2012-10-09 11:41:30+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P310
   TAG: NTP_4_2_7P310
 
-  ChangeLog@1.1205 +1 -0
+  ChangeLog@1.1204.1.1 +1 -0
     NTP_4_2_7P310
 
   ntpd/invoke-ntpd.texi@1.299 +2 -2
@@ -181,6 +407,15 @@ ChangeSet@1.2836, 2012-10-09 11:41:30+00:00, stenn@deacon.udel.edu
 
   util/ntp-keygen.mdoc.in@1.127 +2 -2
     NTP_4_2_7P310
+
+ChangeSet@1.2836, 2012-10-09 02:15:38-04:00, stenn@psp-deb1.ntp.org
+  [Bug 1013] ntpdate's HTML page claims wrong default version.
+
+  ChangeLog@1.1205 +1 -0
+    [Bug 1013] ntpdate's HTML page claims wrong default version.
+
+  html/ntpdate.html@1.21 +2 -1
+    [Bug 1013] ntpdate's HTML page claims wrong default version.
 
 ChangeSet@1.2835, 2012-10-08 23:50:56-04:00, stenn@deacon.udel.edu
   [Bug 1374] Support SO_TIMESTAMPNS
