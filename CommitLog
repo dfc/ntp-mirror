@@ -1,3 +1,202 @@
+ChangeSet@1.2864, 2012-11-13 11:33:20+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P321
+  TAG: NTP_4_2_7P321
+
+  ChangeLog@1.1232 +1 -0
+    NTP_4_2_7P321
+
+  ntpd/invoke-ntpd.texi@1.310 +2 -2
+    NTP_4_2_7P321
+
+  ntpd/ntp.conf.5man@1.27 +2 -2
+    NTP_4_2_7P321
+
+  ntpd/ntp.conf.5mdoc@1.27 +2 -2
+    NTP_4_2_7P321
+
+  ntpd/ntp.conf.man.in@1.27 +2 -2
+    NTP_4_2_7P321
+
+  ntpd/ntp.conf.mdoc.in@1.27 +2 -2
+    NTP_4_2_7P321
+
+  ntpd/ntp.keys.5man@1.27 +2 -2
+    NTP_4_2_7P321
+
+  ntpd/ntp.keys.5mdoc@1.27 +2 -2
+    NTP_4_2_7P321
+
+  ntpd/ntp.keys.man.in@1.27 +2 -2
+    NTP_4_2_7P321
+
+  ntpd/ntp.keys.mdoc.in@1.27 +2 -2
+    NTP_4_2_7P321
+
+  ntpd/ntpd-opts.c@1.328 +4 -4
+    NTP_4_2_7P321
+
+  ntpd/ntpd-opts.h@1.328 +3 -3
+    NTP_4_2_7P321
+
+  ntpd/ntpd.1ntpdman@1.139 +2 -2
+    NTP_4_2_7P321
+
+  ntpd/ntpd.1ntpdmdoc@1.139 +2 -2
+    NTP_4_2_7P321
+
+  ntpd/ntpd.man.in@1.139 +2 -2
+    NTP_4_2_7P321
+
+  ntpd/ntpd.mdoc.in@1.139 +2 -2
+    NTP_4_2_7P321
+
+  ntpdc/invoke-ntpdc.texi@1.307 +2 -2
+    NTP_4_2_7P321
+
+  ntpdc/ntpdc-opts.c@1.322 +4 -4
+    NTP_4_2_7P321
+
+  ntpdc/ntpdc-opts.h@1.322 +3 -3
+    NTP_4_2_7P321
+
+  ntpdc/ntpdc.1ntpdcman@1.138 +2 -2
+    NTP_4_2_7P321
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.138 +2 -2
+    NTP_4_2_7P321
+
+  ntpdc/ntpdc.html@1.150 +2 -2
+    NTP_4_2_7P321
+
+  ntpdc/ntpdc.man.in@1.138 +2 -2
+    NTP_4_2_7P321
+
+  ntpdc/ntpdc.mdoc.in@1.138 +2 -2
+    NTP_4_2_7P321
+
+  ntpq/invoke-ntpq.texi@1.309 +2 -2
+    NTP_4_2_7P321
+
+  ntpq/ntpq-opts.c@1.324 +4 -4
+    NTP_4_2_7P321
+
+  ntpq/ntpq-opts.h@1.324 +3 -3
+    NTP_4_2_7P321
+
+  ntpq/ntpq.1ntpqman@1.138 +2 -2
+    NTP_4_2_7P321
+
+  ntpq/ntpq.1ntpqmdoc@1.138 +2 -2
+    NTP_4_2_7P321
+
+  ntpq/ntpq.man.in@1.138 +2 -2
+    NTP_4_2_7P321
+
+  ntpq/ntpq.mdoc.in@1.138 +2 -2
+    NTP_4_2_7P321
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.309 +2 -2
+    NTP_4_2_7P321
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.324 +4 -4
+    NTP_4_2_7P321
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.324 +3 -3
+    NTP_4_2_7P321
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.138 +2 -2
+    NTP_4_2_7P321
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.138 +2 -2
+    NTP_4_2_7P321
+
+  ntpsnmpd/ntpsnmpd.man.in@1.138 +2 -2
+    NTP_4_2_7P321
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.138 +2 -2
+    NTP_4_2_7P321
+
+  packageinfo.sh@1.324 +1 -1
+    NTP_4_2_7P321
+
+  scripts/invoke-ntp-wait.texi@1.127 +1 -1
+    NTP_4_2_7P321
+
+  scripts/ntp-wait.1ntp-waitman@1.138 +2 -2
+    NTP_4_2_7P321
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.138 +2 -2
+    NTP_4_2_7P321
+
+  scripts/ntp-wait.html@1.142 +1 -1
+    NTP_4_2_7P321
+
+  scripts/ntp-wait.man.in@1.138 +2 -2
+    NTP_4_2_7P321
+
+  scripts/ntp-wait.mdoc.in@1.138 +2 -2
+    NTP_4_2_7P321
+
+  sntp/invoke-sntp.texi@1.306 +2 -2
+    NTP_4_2_7P321
+
+  sntp/sntp-opts.c@1.321 +4 -4
+    NTP_4_2_7P321
+
+  sntp/sntp-opts.h@1.321 +3 -3
+    NTP_4_2_7P321
+
+  sntp/sntp.1sntpman@1.141 +2 -2
+    NTP_4_2_7P321
+
+  sntp/sntp.1sntpmdoc@1.141 +2 -2
+    NTP_4_2_7P321
+
+  sntp/sntp.html@1.321 +2 -2
+    NTP_4_2_7P321
+
+  sntp/sntp.man.in@1.141 +2 -2
+    NTP_4_2_7P321
+
+  sntp/sntp.mdoc.in@1.141 +2 -2
+    NTP_4_2_7P321
+
+  util/invoke-ntp-keygen.texi@1.310 +2 -2
+    NTP_4_2_7P321
+
+  util/ntp-keygen-opts.c@1.324 +4 -4
+    NTP_4_2_7P321
+
+  util/ntp-keygen-opts.h@1.324 +3 -3
+    NTP_4_2_7P321
+
+  util/ntp-keygen.1ntp-keygenman@1.138 +2 -2
+    NTP_4_2_7P321
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.138 +2 -2
+    NTP_4_2_7P321
+
+  util/ntp-keygen.man.in@1.138 +2 -2
+    NTP_4_2_7P321
+
+  util/ntp-keygen.mdoc.in@1.138 +2 -2
+    NTP_4_2_7P321
+
+ChangeSet@1.2863, 2012-11-13 03:59:29-05:00, stenn@psp-deb1.ntp.org
+  Fix typo: [Bug 1320] Log ntpd's initial command-line parameters
+
+  ChangeLog@1.1231 +1 -1
+    Fix typo: [Bug 1320] Log ntpd's initial command-line parameters
+
+ChangeSet@1.2862, 2012-11-13 03:57:34-05:00, stenn@psp-deb1.ntp.org
+  [Bug 1320] Log ntpd's initial command-line paprameters
+
+  ChangeLog@1.1230 +1 -0
+    [Bug 1320] Log ntpd's initial command-line paprameters
+
+  ntpd/ntpd.c@1.135 +18 -0
+    [Bug 1320] Log ntpd's initial command-line paprameters
+
 ChangeSet@1.2861, 2012-11-12 11:34:28+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P320
   TAG: NTP_4_2_7P320
