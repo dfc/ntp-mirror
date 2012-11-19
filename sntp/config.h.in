@@ -23,6 +23,12 @@
 /* number of args to el_init() */
 #undef EL_INIT_ARGS
 
+/* successful termination */
+#undef EX_OK
+
+/* internal software error */
+#undef EX_SOFTWARE
+
 /* fopen(3) accepts a 'b' in the mode flag */
 #undef FOPEN_BINARY_FLAG
 

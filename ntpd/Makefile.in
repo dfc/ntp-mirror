@@ -44,10 +44,10 @@ host_triplet = @host@
 EXTRA_PROGRAMS = check_y2k$(EXEEXT) keyword-gen$(EXEEXT) ntpd$(EXEEXT) \
 	ntpdsim$(EXEEXT)
 DIST_COMMON = $(noinst_HEADERS) $(srcdir)/Makefile.am \
-	$(srcdir)/Makefile.in $(top_srcdir)/bincheck.mf \
-	$(top_srcdir)/check-libopts.mf $(top_srcdir)/depsver.mf \
-	$(top_srcdir)/includes.mf $(top_srcdir)/sntp/check-libntp.mf \
-	ntp_parser.c ntp_parser.h
+	$(srcdir)/Makefile.in $(srcdir)/complete.conf.in \
+	$(top_srcdir)/bincheck.mf $(top_srcdir)/check-libopts.mf \
+	$(top_srcdir)/depsver.mf $(top_srcdir)/includes.mf \
+	$(top_srcdir)/sntp/check-libntp.mf ntp_parser.c ntp_parser.h
 subdir = ntpd
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
@@ -75,6 +75,7 @@ am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/m4/ntp_openssl.m4 \
 	$(top_srcdir)/sntp/m4/ntp_pkg_config.m4 \
 	$(top_srcdir)/sntp/m4/ntp_prog_cc.m4 \
+	$(top_srcdir)/sntp/m4/ntp_rlimit.m4 \
 	$(top_srcdir)/sntp/m4/ntp_sntp.m4 \
 	$(top_srcdir)/sntp/m4/ntp_ver_suffix.m4 \
 	$(top_srcdir)/sntp/m4/ntp_vpathhack.m4 \
@@ -85,7 +86,7 @@ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 mkinstalldirs = $(install_sh) -d
 CONFIG_HEADER = $(top_builddir)/config.h
-CONFIG_CLEAN_FILES =
+CONFIG_CLEAN_FILES = complete.conf
 CONFIG_CLEAN_VPATH_FILES =
 LIBRARIES = $(noinst_LIBRARIES)
 ARFLAGS = cru
@@ -271,6 +272,8 @@ GTEST_CXXFLAGS = @GTEST_CXXFLAGS@
 GTEST_LDFLAGS = @GTEST_LDFLAGS@
 GTEST_LIBS = @GTEST_LIBS@
 HAVE_INLINE = @HAVE_INLINE@
+HAVE_RLIMIT_MEMLOCK = @HAVE_RLIMIT_MEMLOCK@
+HAVE_RLIMIT_STACK = @HAVE_RLIMIT_STACK@
 INSTALL = @INSTALL@
 INSTALL_DATA = @INSTALL_DATA@
 INSTALL_PROGRAM = @INSTALL_PROGRAM@
@@ -520,7 +523,7 @@ DISTCLEANFILES = \
 CLEANFILES = check-saveconfig compsave.conf k-g-u-submake \
 	$(EXTRA_PROGRAMS) $(NULL) check-libopts check-libntp .deps-ver
 EXTRA_DIST = \
-	complete.conf		\
+	complete.conf.in	\
 	invoke-ntpd.menu	\
 	invoke-ntpd.texi	\
 	keyword-gen-utd		\
@@ -689,6 +692,8 @@ $(top_srcdir)/configure:  $(am__configure_deps)
 $(ACLOCAL_M4):  $(am__aclocal_m4_deps)
 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
 $(am__aclocal_m4_deps):
+complete.conf: $(top_builddir)/config.status $(srcdir)/complete.conf.in
+	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@
 
 clean-noinstLIBRARIES:
 	-test -z "$(noinst_LIBRARIES)" || rm -f $(noinst_LIBRARIES)
@@ -1570,12 +1575,12 @@ $(srcdir)/invoke-ntpd.texi: $(srcdir)/ntpd-opts.def $(srcdir)/ntpdbase-opts.def 
 
 $(PROGRAMS): $(LDADD)
 
-compsave.conf: ntpd $(srcdir)/complete.conf
-	./ntpd --configfile $(srcdir)/complete.conf --saveconfigquit $@
+compsave.conf: ntpd complete.conf
+	./ntpd --configfile complete.conf --saveconfigquit $@
 
-check-saveconfig: $(srcdir)/complete.conf compsave.conf
-	-diff $(srcdir)/complete.conf compsave.conf
-	cmp $(srcdir)/complete.conf compsave.conf && echo stamp > $@
+check-saveconfig: complete.conf compsave.conf
+	-diff -u complete.conf compsave.conf
+	cmp complete.conf compsave.conf && echo stamp > $@
 
 ../libntp/libntpsim.a:
 	cd ../libntp && $(MAKE) $(AM_MAKEFLAGS) libntpsim.a

@@ -70,6 +70,7 @@ am__aclocal_m4_deps = $(top_srcdir)/sntp/libopts/m4/libopts.m4 \
 	$(top_srcdir)/sntp/m4/ntp_openssl.m4 \
 	$(top_srcdir)/sntp/m4/ntp_pkg_config.m4 \
 	$(top_srcdir)/sntp/m4/ntp_prog_cc.m4 \
+	$(top_srcdir)/sntp/m4/ntp_rlimit.m4 \
 	$(top_srcdir)/sntp/m4/ntp_sntp.m4 \
 	$(top_srcdir)/sntp/m4/ntp_ver_suffix.m4 \
 	$(top_srcdir)/sntp/m4/ntp_vpathhack.m4 \
@@ -186,6 +187,8 @@ GTEST_CXXFLAGS = @GTEST_CXXFLAGS@
 GTEST_LDFLAGS = @GTEST_LDFLAGS@
 GTEST_LIBS = @GTEST_LIBS@
 HAVE_INLINE = @HAVE_INLINE@
+HAVE_RLIMIT_MEMLOCK = @HAVE_RLIMIT_MEMLOCK@
+HAVE_RLIMIT_STACK = @HAVE_RLIMIT_STACK@
 INSTALL = @INSTALL@
 INSTALL_DATA = @INSTALL_DATA@
 INSTALL_PROGRAM = @INSTALL_PROGRAM@
@@ -873,7 +876,7 @@ info: info-recursive
 
 info-am:
 
-install-data-am:
+install-data-am: install-data-local
 
 install-dvi: install-dvi-recursive
 
@@ -919,7 +922,7 @@ ps: ps-recursive
 
 ps-am:
 
-uninstall-am:
+uninstall-am: uninstall-local
 
 .MAKE: $(RECURSIVE_CLEAN_TARGETS) $(RECURSIVE_TARGETS) all check \
 	ctags-recursive install install-am install-strip \
@@ -932,14 +935,15 @@ uninstall-am:
 	dist-zip distcheck distclean distclean-generic distclean-hdr \
 	distclean-libtool distclean-tags distcleancheck distdir \
 	distuninstallcheck dvi dvi-am html html-am info info-am \
-	install install-am install-data install-data-am install-dvi \
-	install-dvi-am install-exec install-exec-am install-html \
-	install-html-am install-info install-info-am install-man \
-	install-pdf install-pdf-am install-ps install-ps-am \
-	install-strip installcheck installcheck-am installdirs \
-	installdirs-am maintainer-clean maintainer-clean-generic \
-	mostlyclean mostlyclean-generic mostlyclean-libtool pdf pdf-am \
-	ps ps-am tags tags-recursive uninstall uninstall-am
+	install install-am install-data install-data-am \
+	install-data-local install-dvi install-dvi-am install-exec \
+	install-exec-am install-html install-html-am install-info \
+	install-info-am install-man install-pdf install-pdf-am \
+	install-ps install-ps-am install-strip installcheck \
+	installcheck-am installdirs installdirs-am maintainer-clean \
+	maintainer-clean-generic mostlyclean mostlyclean-generic \
+	mostlyclean-libtool pdf pdf-am ps ps-am tags tags-recursive \
+	uninstall uninstall-am uninstall-local
 
 
 $(srcdir)/COPYRIGHT: $(srcdir)/html/copyright.html
@@ -964,6 +968,13 @@ sntp/built-sources-only: FRC.sntp
 
 dist-hook:
 	@find $(distdir) -type d -name SCCS -print | xargs rm -rf
+
+install-data-local:
+	( cd $(srcdir) && tar cf - `find html -type f | grep -v SCCS`) \
+		| ( cd $(DESTDIR)$(htmldir) && tar xvf - )
+
+uninstall-local:
+		rm -rf $(DESTDIR)$(htmldir)/html
 
 .gcc-warning:
 	@echo "Compiling with GCC now generates lots of new warnings."

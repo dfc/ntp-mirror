@@ -281,6 +281,12 @@
 /* What is the fallback value for HZ? */
 #undef DEFAULT_HZ
 
+/* Default number of megabytes for RLIMIT_MEMLOCK */
+#undef DFLT_RLIMIT_MEMLOCK
+
+/* Default number of 4k pages for RLIMIT_STACK */
+#undef DFLT_RLIMIT_STACK
+
 /* Directory separator character, usually / or \\ */
 #undef DIR_SEP
 

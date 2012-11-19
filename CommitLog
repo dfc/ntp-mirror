@@ -1,8 +1,873 @@
-ChangeSet@1.2864, 2012-11-13 11:33:20+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2882, 2012-11-19 12:05:20+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P324
+  TAG: NTP_4_2_7P324
+
+  ChangeLog@1.1242 +1 -0
+    NTP_4_2_7P324
+
+  ntpd/invoke-ntpd.texi@1.313 +2 -2
+    NTP_4_2_7P324
+
+  ntpd/ntp.conf.5man@1.30 +2 -2
+    NTP_4_2_7P324
+
+  ntpd/ntp.conf.5mdoc@1.30 +2 -2
+    NTP_4_2_7P324
+
+  ntpd/ntp.conf.man.in@1.30 +2 -2
+    NTP_4_2_7P324
+
+  ntpd/ntp.conf.mdoc.in@1.30 +2 -2
+    NTP_4_2_7P324
+
+  ntpd/ntp.keys.5man@1.30 +2 -2
+    NTP_4_2_7P324
+
+  ntpd/ntp.keys.5mdoc@1.30 +2 -2
+    NTP_4_2_7P324
+
+  ntpd/ntp.keys.man.in@1.30 +2 -2
+    NTP_4_2_7P324
+
+  ntpd/ntp.keys.mdoc.in@1.30 +2 -2
+    NTP_4_2_7P324
+
+  ntpd/ntpd-opts.c@1.331 +4 -4
+    NTP_4_2_7P324
+
+  ntpd/ntpd-opts.h@1.331 +3 -3
+    NTP_4_2_7P324
+
+  ntpd/ntpd.1ntpdman@1.142 +2 -2
+    NTP_4_2_7P324
+
+  ntpd/ntpd.1ntpdmdoc@1.142 +2 -2
+    NTP_4_2_7P324
+
+  ntpd/ntpd.man.in@1.142 +2 -2
+    NTP_4_2_7P324
+
+  ntpd/ntpd.mdoc.in@1.142 +2 -2
+    NTP_4_2_7P324
+
+  ntpdc/invoke-ntpdc.texi@1.310 +2 -2
+    NTP_4_2_7P324
+
+  ntpdc/ntpdc-opts.c@1.325 +4 -4
+    NTP_4_2_7P324
+
+  ntpdc/ntpdc-opts.h@1.325 +3 -3
+    NTP_4_2_7P324
+
+  ntpdc/ntpdc.1ntpdcman@1.141 +2 -2
+    NTP_4_2_7P324
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.141 +2 -2
+    NTP_4_2_7P324
+
+  ntpdc/ntpdc.html@1.153 +2 -2
+    NTP_4_2_7P324
+
+  ntpdc/ntpdc.man.in@1.141 +2 -2
+    NTP_4_2_7P324
+
+  ntpdc/ntpdc.mdoc.in@1.141 +2 -2
+    NTP_4_2_7P324
+
+  ntpq/invoke-ntpq.texi@1.312 +2 -2
+    NTP_4_2_7P324
+
+  ntpq/ntpq-opts.c@1.327 +4 -4
+    NTP_4_2_7P324
+
+  ntpq/ntpq-opts.h@1.327 +3 -3
+    NTP_4_2_7P324
+
+  ntpq/ntpq.1ntpqman@1.141 +2 -2
+    NTP_4_2_7P324
+
+  ntpq/ntpq.1ntpqmdoc@1.141 +2 -2
+    NTP_4_2_7P324
+
+  ntpq/ntpq.man.in@1.141 +2 -2
+    NTP_4_2_7P324
+
+  ntpq/ntpq.mdoc.in@1.141 +2 -2
+    NTP_4_2_7P324
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.312 +2 -2
+    NTP_4_2_7P324
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.327 +4 -4
+    NTP_4_2_7P324
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.327 +3 -3
+    NTP_4_2_7P324
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.141 +2 -2
+    NTP_4_2_7P324
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.141 +2 -2
+    NTP_4_2_7P324
+
+  ntpsnmpd/ntpsnmpd.man.in@1.141 +2 -2
+    NTP_4_2_7P324
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.141 +2 -2
+    NTP_4_2_7P324
+
+  packageinfo.sh@1.327 +1 -1
+    NTP_4_2_7P324
+
+  scripts/invoke-ntp-wait.texi@1.130 +1 -1
+    NTP_4_2_7P324
+
+  scripts/ntp-wait.1ntp-waitman@1.141 +2 -2
+    NTP_4_2_7P324
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.141 +2 -2
+    NTP_4_2_7P324
+
+  scripts/ntp-wait.html@1.145 +1 -1
+    NTP_4_2_7P324
+
+  scripts/ntp-wait.man.in@1.141 +2 -2
+    NTP_4_2_7P324
+
+  scripts/ntp-wait.mdoc.in@1.141 +2 -2
+    NTP_4_2_7P324
+
+  sntp/invoke-sntp.texi@1.309 +2 -2
+    NTP_4_2_7P324
+
+  sntp/sntp-opts.c@1.324 +4 -4
+    NTP_4_2_7P324
+
+  sntp/sntp-opts.h@1.324 +3 -3
+    NTP_4_2_7P324
+
+  sntp/sntp.1sntpman@1.144 +2 -2
+    NTP_4_2_7P324
+
+  sntp/sntp.1sntpmdoc@1.144 +2 -2
+    NTP_4_2_7P324
+
+  sntp/sntp.html@1.324 +2 -2
+    NTP_4_2_7P324
+
+  sntp/sntp.man.in@1.144 +2 -2
+    NTP_4_2_7P324
+
+  sntp/sntp.mdoc.in@1.144 +2 -2
+    NTP_4_2_7P324
+
+  util/invoke-ntp-keygen.texi@1.313 +2 -2
+    NTP_4_2_7P324
+
+  util/ntp-keygen-opts.c@1.327 +4 -4
+    NTP_4_2_7P324
+
+  util/ntp-keygen-opts.h@1.327 +3 -3
+    NTP_4_2_7P324
+
+  util/ntp-keygen.1ntp-keygenman@1.141 +2 -2
+    NTP_4_2_7P324
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.141 +2 -2
+    NTP_4_2_7P324
+
+  util/ntp-keygen.man.in@1.141 +2 -2
+    NTP_4_2_7P324
+
+  util/ntp-keygen.mdoc.in@1.141 +2 -2
+    NTP_4_2_7P324
+
+ChangeSet@1.2881, 2012-11-19 02:49:32-08:00, harlan@hms-mbp11.local
+  [Bug 2098] Install DLM's HTML documentation
+
+  ChangeLog@1.1241 +1 -0
+    [Bug 2098] Install DLM's HTML documentation
+
+  Makefile.am@1.116 +7 -0
+    [Bug 2098] Install DLM's HTML documentation
+
+  configure.ac@1.554 +1 -1
+    [Bug 2098] Install DLM's HTML documentation
+
+ChangeSet@1.2880, 2012-11-19 02:32:45-05:00, stenn@deacon.udel.edu
+  Use "diff -u" when comparing complete.conf
+
+  ntpd/Makefile.am@1.124 +1 -1
+    Use "diff -u" when comparing complete.conf
+
+ChangeSet@1.2878, 2012-11-19 02:01:25-05:00, stenn@deacon.udel.edu
+  Reinstate change from Mike T. to authentic.html
+
+  ChangeLog@1.1239 +1 -0
+    Reinstate change from Mike T. to authentic.html
+
+  html/authentic.html@1.12 +2 -2
+    Reinstate change from Mike T. to authentic.html
+
+ChangeSet@1.2877, 2012-11-19 01:50:59-05:00, stenn@deacon.udel.edu
+  [Bug 1223] cleanup for rlimit changes
+
+  ChangeLog@1.1238 +1 -0
+    [Bug 1223] cleanup for rlimit changes
+
+ChangeSet@1.2873.1.1, 2012-11-18 12:58:00+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P323
+  TAG: NTP_4_2_7P323
+
+  ChangeLog@1.1237 +1 -0
+    NTP_4_2_7P323
+
+  ntpd/invoke-ntpd.texi@1.312 +2 -2
+    NTP_4_2_7P323
+
+  ntpd/ntp.conf.5man@1.29 +2 -2
+    NTP_4_2_7P323
+
+  ntpd/ntp.conf.5mdoc@1.29 +2 -2
+    NTP_4_2_7P323
+
+  ntpd/ntp.conf.man.in@1.29 +2 -2
+    NTP_4_2_7P323
+
+  ntpd/ntp.conf.mdoc.in@1.29 +2 -2
+    NTP_4_2_7P323
+
+  ntpd/ntp.keys.5man@1.29 +2 -2
+    NTP_4_2_7P323
+
+  ntpd/ntp.keys.5mdoc@1.29 +2 -2
+    NTP_4_2_7P323
+
+  ntpd/ntp.keys.man.in@1.29 +2 -2
+    NTP_4_2_7P323
+
+  ntpd/ntp.keys.mdoc.in@1.29 +2 -2
+    NTP_4_2_7P323
+
+  ntpd/ntpd-opts.c@1.330 +4 -4
+    NTP_4_2_7P323
+
+  ntpd/ntpd-opts.h@1.330 +3 -3
+    NTP_4_2_7P323
+
+  ntpd/ntpd.1ntpdman@1.141 +2 -2
+    NTP_4_2_7P323
+
+  ntpd/ntpd.1ntpdmdoc@1.141 +2 -2
+    NTP_4_2_7P323
+
+  ntpd/ntpd.man.in@1.141 +2 -2
+    NTP_4_2_7P323
+
+  ntpd/ntpd.mdoc.in@1.141 +2 -2
+    NTP_4_2_7P323
+
+  ntpdc/invoke-ntpdc.texi@1.309 +2 -2
+    NTP_4_2_7P323
+
+  ntpdc/ntpdc-opts.c@1.324 +4 -4
+    NTP_4_2_7P323
+
+  ntpdc/ntpdc-opts.h@1.324 +3 -3
+    NTP_4_2_7P323
+
+  ntpdc/ntpdc.1ntpdcman@1.140 +2 -2
+    NTP_4_2_7P323
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.140 +2 -2
+    NTP_4_2_7P323
+
+  ntpdc/ntpdc.html@1.152 +2 -2
+    NTP_4_2_7P323
+
+  ntpdc/ntpdc.man.in@1.140 +2 -2
+    NTP_4_2_7P323
+
+  ntpdc/ntpdc.mdoc.in@1.140 +2 -2
+    NTP_4_2_7P323
+
+  ntpq/invoke-ntpq.texi@1.311 +2 -2
+    NTP_4_2_7P323
+
+  ntpq/ntpq-opts.c@1.326 +4 -4
+    NTP_4_2_7P323
+
+  ntpq/ntpq-opts.h@1.326 +3 -3
+    NTP_4_2_7P323
+
+  ntpq/ntpq.1ntpqman@1.140 +2 -2
+    NTP_4_2_7P323
+
+  ntpq/ntpq.1ntpqmdoc@1.140 +2 -2
+    NTP_4_2_7P323
+
+  ntpq/ntpq.man.in@1.140 +2 -2
+    NTP_4_2_7P323
+
+  ntpq/ntpq.mdoc.in@1.140 +2 -2
+    NTP_4_2_7P323
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.311 +2 -2
+    NTP_4_2_7P323
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.326 +4 -4
+    NTP_4_2_7P323
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.326 +3 -3
+    NTP_4_2_7P323
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.140 +2 -2
+    NTP_4_2_7P323
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.140 +2 -2
+    NTP_4_2_7P323
+
+  ntpsnmpd/ntpsnmpd.man.in@1.140 +2 -2
+    NTP_4_2_7P323
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.140 +2 -2
+    NTP_4_2_7P323
+
+  packageinfo.sh@1.326 +1 -1
+    NTP_4_2_7P323
+
+  scripts/invoke-ntp-wait.texi@1.129 +111 -1
+    NTP_4_2_7P323
+
+  scripts/ntp-wait.1ntp-waitman@1.140 +2 -2
+    NTP_4_2_7P323
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.140 +2 -2
+    NTP_4_2_7P323
+
+  scripts/ntp-wait.html@1.144 +152 -4
+    NTP_4_2_7P323
+
+  scripts/ntp-wait.man.in@1.140 +2 -2
+    NTP_4_2_7P323
+
+  scripts/ntp-wait.mdoc.in@1.140 +2 -2
+    NTP_4_2_7P323
+
+  sntp/invoke-sntp.texi@1.308 +2 -2
+    NTP_4_2_7P323
+
+  sntp/sntp-opts.c@1.323 +4 -4
+    NTP_4_2_7P323
+
+  sntp/sntp-opts.h@1.323 +3 -3
+    NTP_4_2_7P323
+
+  sntp/sntp.1sntpman@1.143 +2 -2
+    NTP_4_2_7P323
+
+  sntp/sntp.1sntpmdoc@1.143 +2 -2
+    NTP_4_2_7P323
+
+  sntp/sntp.html@1.323 +2 -2
+    NTP_4_2_7P323
+
+  sntp/sntp.man.in@1.143 +2 -2
+    NTP_4_2_7P323
+
+  sntp/sntp.mdoc.in@1.143 +2 -2
+    NTP_4_2_7P323
+
+  util/invoke-ntp-keygen.texi@1.312 +2 -2
+    NTP_4_2_7P323
+
+  util/ntp-keygen-opts.c@1.326 +4 -4
+    NTP_4_2_7P323
+
+  util/ntp-keygen-opts.h@1.326 +3 -3
+    NTP_4_2_7P323
+
+  util/ntp-keygen.1ntp-keygenman@1.140 +2 -2
+    NTP_4_2_7P323
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.140 +2 -2
+    NTP_4_2_7P323
+
+  util/ntp-keygen.man.in@1.140 +2 -2
+    NTP_4_2_7P323
+
+  util/ntp-keygen.mdoc.in@1.140 +2 -2
+    NTP_4_2_7P323
+
+ChangeSet@1.2872.2.2, 2012-11-18 07:31:57-05:00, stenn@psp-deb1.ntp.org
+  added ntp_rlimit.m4
+
+  sntp/m4/ntp_rlimit.m4@1.1 +66 -0
+    BitKeeper file /home/stenn/ntp-dev/sntp/m4/ntp_rlimit.m4
+
+  sntp/m4/ntp_rlimit.m4@1.0 +0 -0
+
+ChangeSet@1.2872.2.1, 2012-11-18 12:15:14+00:00, stenn@psp-fb1.ntp.org
+  rlimit cleanup
+
+  configure.ac@1.553 +57 -54
+    rlimit cleanup
+
+  ntpd/Makefile.am@1.123 +6 -6
+    rlimit cleanup
+
+  ntpd/complete.conf.in@1.25 +1 -1
+    rlimit cleanup
+
+  ntpd/complete.conf.in@1.24, stenn@psp-deb1.ntp.org +0 -0
+    Rename: ntpd/complete.conf -> ntpd/complete.conf.in
+
+  ntpd/ntp_parser.c@1.83 +422 -418
+    rlimit cleanup
+
+  ntpd/ntp_parser.h@1.49 +6 -7
+    rlimit cleanup
+
+  ntpd/ntp_parser.y@1.77 +1 -1
+    rlimit cleanup
+
+ChangeSet@1.2872.1.1, 2012-11-18 12:15:34+01:00, jnperlin@armageddon.
+  [Bug 2306] Added user-mode/loop-back PPS API provider for Win32
+
+  ChangeLog@1.1235.1.1 +1 -0
+    [Bug 2306] Added user-mode/loop-back PPS API provider for Win32
+
+  include/ntp_refclock.h@1.36 +4 -0
+    [Bug 2306](user-mode PPS API) add device context handle for Win32
+
+  ports/winnt/include/ntp_iocompletionport.h@1.20 +1 -0
+    [Bug 2306](user-mode PPS API) support clean removal of clocks
+
+  ports/winnt/include/termios.h@1.16 +1 -0
+    [Bug 2306](user-mode PPS API) check for DUPs of serial line device handles
+
+  ports/winnt/libntp/termios.c@1.28 +18 -0
+    [Bug 2306](user-mode PPS API) check for DUPs of serial line device handles
+
+  ports/winnt/ntpd/ntp_iocompletionport.c@1.67 +383 -64
+    [Bug 2306](user-mode PPS API) provide wiring and lock-free buffers for data exchange with loop-back PPS API
+
+  ports/winnt/ppsapi/loopback/monolithic-serialpps-timepps.h@1.1 +714 -0
+    [Bug 2306](user-mode PPS API) PPS-API implementation
+
+  ports/winnt/ppsapi/loopback/monolithic-serialpps-timepps.h@1.0 +0 -0
+
+  ports/winnt/ppsapi/loopback/monolithic-serialpps-timepps.txt@1.1 +52 -0
+    [Bug 2306](user-mode PPS API) PPS-API implementation
+
+  ports/winnt/ppsapi/loopback/monolithic-serialpps-timepps.txt@1.0 +0 -0
+
+  ports/winnt/ppsapi/loopback/src/loopback-ppsapi.c@1.1 +465 -0
+    [Bug 2306](user-mode PPS API) PPS-API implementation
+
+  ports/winnt/ppsapi/loopback/src/loopback-ppsapi.c@1.0 +0 -0
+
+  ports/winnt/ppsapi/loopback/src/loopback-ppsapi.def@1.1 +9 -0
+    [Bug 2306](user-mode PPS API) PPS-API implementation
+
+  ports/winnt/ppsapi/loopback/src/loopback-ppsapi.def@1.0 +0 -0
+
+  ports/winnt/ppsapi/loopback/src/loopback-ppsapi.h@1.1 +49 -0
+    [Bug 2306](user-mode PPS API) PPS-API implementation
+
+  ports/winnt/ppsapi/loopback/src/loopback-ppsapi.h@1.0 +0 -0
+
+  ports/winnt/ppsapi/loopback/src/sys/time.h@1.1 +18 -0
+    [Bug 2306](user-mode PPS API) PPS-API implementation
+
+  ports/winnt/ppsapi/loopback/src/sys/time.h@1.0 +0 -0
+
+  ports/winnt/ppsapi/loopback/src/timepps.h@1.1 +805 -0
+    [Bug 2306](user-mode PPS API) PPS-API implementation
+
+  ports/winnt/ppsapi/loopback/src/timepps.h@1.0 +0 -0
+
+  ports/winnt/vs2008/instsrv/instsrv.vcproj@1.6 +25 -20
+    [Bug 2306](user-mode PPS API) cleanup of build process
+
+  ports/winnt/vs2008/libntp/libntp.vcproj@1.47 +18 -17
+    [Bug 2306](user-mode PPS API) cleanup of build process
+
+  ports/winnt/vs2008/loopback-pps/loopback-ppsapi-provider.vcproj@1.1 +256 -0
+    [Bug 2306](user-mode PPS API) PPS-API implementation
+
+  ports/winnt/vs2008/loopback-pps/loopback-ppsapi-provider.vcproj@1.0 +0 -0
+
+  ports/winnt/vs2008/ntp-keygen/ntp-keygen.vcproj@1.14 +25 -21
+    [Bug 2306](user-mode PPS API) cleanup of build process
+
+  ports/winnt/vs2008/ntp.sln@1.10 +9 -0
+    [Bug 2306](user-mode PPS API) add DLL project
+
+  ports/winnt/vs2008/ntpd-keyword-gen/ntpd-keyword-gen.vcproj@1.2 +19 -9
+    [Bug 2306](user-mode PPS API) cleanup of build process
+
+  ports/winnt/vs2008/ntpd/ntpd.vcproj@1.45 +25 -24
+    [Bug 2306](user-mode PPS API) cleanup of build process
+
+  ports/winnt/vs2008/ntpdate/ntpdate.vcproj@1.14 +26 -21
+    [Bug 2306](user-mode PPS API) cleanup of build process
+
+  ports/winnt/vs2008/ntpdc/ntpdc.vcproj@1.16 +26 -21
+    [Bug 2306](user-mode PPS API) cleanup of build process
+
+  ports/winnt/vs2008/ntpq/ntpq.vcproj@1.15 +26 -21
+    [Bug 2306](user-mode PPS API) cleanup of build process
+
+ChangeSet@1.2872, 2012-11-18 03:37:42-05:00, stenn@psp-deb1.ntp.org
+  RLIMIT header cleanup
+
+  ntpd/ntp_config.c@1.308 +3 -0
+    RLIMIT header cleanup
+
+  ntpd/ntpd.c@1.139 +0 -3
+    RLIMIT header cleanup
+
+ChangeSet@1.2868.2.1, 2012-11-15 11:21:37+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P322
+  TAG: NTP_4_2_7P322
+
+  ChangeLog@1.1233.1.1 +1 -0
+    NTP_4_2_7P322
+
+  ntpd/invoke-ntpd.texi@1.311 +2 -2
+    NTP_4_2_7P322
+
+  ntpd/ntp.conf.5man@1.28 +2 -2
+    NTP_4_2_7P322
+
+  ntpd/ntp.conf.5mdoc@1.28 +2 -2
+    NTP_4_2_7P322
+
+  ntpd/ntp.conf.man.in@1.28 +2 -2
+    NTP_4_2_7P322
+
+  ntpd/ntp.conf.mdoc.in@1.28 +2 -2
+    NTP_4_2_7P322
+
+  ntpd/ntp.keys.5man@1.28 +2 -2
+    NTP_4_2_7P322
+
+  ntpd/ntp.keys.5mdoc@1.28 +2 -2
+    NTP_4_2_7P322
+
+  ntpd/ntp.keys.man.in@1.28 +2 -2
+    NTP_4_2_7P322
+
+  ntpd/ntp.keys.mdoc.in@1.28 +2 -2
+    NTP_4_2_7P322
+
+  ntpd/ntpd-opts.c@1.329 +4 -4
+    NTP_4_2_7P322
+
+  ntpd/ntpd-opts.h@1.329 +3 -3
+    NTP_4_2_7P322
+
+  ntpd/ntpd.1ntpdman@1.140 +2 -2
+    NTP_4_2_7P322
+
+  ntpd/ntpd.1ntpdmdoc@1.140 +2 -2
+    NTP_4_2_7P322
+
+  ntpd/ntpd.man.in@1.140 +2 -2
+    NTP_4_2_7P322
+
+  ntpd/ntpd.mdoc.in@1.140 +2 -2
+    NTP_4_2_7P322
+
+  ntpdc/invoke-ntpdc.texi@1.308 +2 -2
+    NTP_4_2_7P322
+
+  ntpdc/ntpdc-opts.c@1.323 +4 -4
+    NTP_4_2_7P322
+
+  ntpdc/ntpdc-opts.h@1.323 +3 -3
+    NTP_4_2_7P322
+
+  ntpdc/ntpdc.1ntpdcman@1.139 +2 -2
+    NTP_4_2_7P322
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.139 +2 -2
+    NTP_4_2_7P322
+
+  ntpdc/ntpdc.html@1.151 +2 -2
+    NTP_4_2_7P322
+
+  ntpdc/ntpdc.man.in@1.139 +2 -2
+    NTP_4_2_7P322
+
+  ntpdc/ntpdc.mdoc.in@1.139 +2 -2
+    NTP_4_2_7P322
+
+  ntpq/invoke-ntpq.texi@1.310 +2 -2
+    NTP_4_2_7P322
+
+  ntpq/ntpq-opts.c@1.325 +4 -4
+    NTP_4_2_7P322
+
+  ntpq/ntpq-opts.h@1.325 +3 -3
+    NTP_4_2_7P322
+
+  ntpq/ntpq.1ntpqman@1.139 +2 -2
+    NTP_4_2_7P322
+
+  ntpq/ntpq.1ntpqmdoc@1.139 +2 -2
+    NTP_4_2_7P322
+
+  ntpq/ntpq.man.in@1.139 +2 -2
+    NTP_4_2_7P322
+
+  ntpq/ntpq.mdoc.in@1.139 +2 -2
+    NTP_4_2_7P322
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.310 +2 -2
+    NTP_4_2_7P322
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.325 +4 -4
+    NTP_4_2_7P322
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.325 +3 -3
+    NTP_4_2_7P322
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.139 +2 -2
+    NTP_4_2_7P322
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.139 +2 -2
+    NTP_4_2_7P322
+
+  ntpsnmpd/ntpsnmpd.man.in@1.139 +2 -2
+    NTP_4_2_7P322
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.139 +2 -2
+    NTP_4_2_7P322
+
+  packageinfo.sh@1.325 +1 -1
+    NTP_4_2_7P322
+
+  scripts/invoke-ntp-wait.texi@1.128 +1 -111
+    NTP_4_2_7P322
+
+  scripts/ntp-wait.1ntp-waitman@1.139 +2 -2
+    NTP_4_2_7P322
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.139 +2 -2
+    NTP_4_2_7P322
+
+  scripts/ntp-wait.html@1.143 +4 -152
+    NTP_4_2_7P322
+
+  scripts/ntp-wait.man.in@1.139 +2 -2
+    NTP_4_2_7P322
+
+  scripts/ntp-wait.mdoc.in@1.139 +2 -2
+    NTP_4_2_7P322
+
+  sntp/invoke-sntp.texi@1.307 +2 -2
+    NTP_4_2_7P322
+
+  sntp/sntp-opts.c@1.322 +4 -4
+    NTP_4_2_7P322
+
+  sntp/sntp-opts.h@1.322 +3 -3
+    NTP_4_2_7P322
+
+  sntp/sntp.1sntpman@1.142 +2 -2
+    NTP_4_2_7P322
+
+  sntp/sntp.1sntpmdoc@1.142 +2 -2
+    NTP_4_2_7P322
+
+  sntp/sntp.html@1.322 +2 -2
+    NTP_4_2_7P322
+
+  sntp/sntp.man.in@1.142 +2 -2
+    NTP_4_2_7P322
+
+  sntp/sntp.mdoc.in@1.142 +2 -2
+    NTP_4_2_7P322
+
+  util/invoke-ntp-keygen.texi@1.311 +2 -2
+    NTP_4_2_7P322
+
+  util/ntp-keygen-opts.c@1.325 +4 -4
+    NTP_4_2_7P322
+
+  util/ntp-keygen-opts.h@1.325 +3 -3
+    NTP_4_2_7P322
+
+  util/ntp-keygen.1ntp-keygenman@1.139 +2 -2
+    NTP_4_2_7P322
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.139 +2 -2
+    NTP_4_2_7P322
+
+  util/ntp-keygen.man.in@1.139 +2 -2
+    NTP_4_2_7P322
+
+  util/ntp-keygen.mdoc.in@1.139 +2 -2
+    NTP_4_2_7P322
+
+ChangeSet@1.2871, 2012-11-15 04:10:48-05:00, stenn@deacon.udel.edu
+  html/ updates from Dave Mills
+
+  ChangeLog@1.1235 +1 -0
+    html/ updates from Dave Mills
+
+  html/stats.html@1.1 +70 -0
+    BitKeeper file /deacon/backroom/ntp-dev/html/stats.html
+
+  html/stats.html@1.0 +0 -0
+
+ChangeSet@1.2868.1.1, 2012-11-14 22:58:44-08:00, harlan@hms-mbp11.local
+  Documentation updates from Dave Mills.
+
+  html/authentic.html@1.11 +2 -2
+    Updates from Dave Mills
+
+  html/cluster.html@1.8 +7 -7
+    Updates from Dave Mills
+
+  html/discipline.html@1.8 +14 -6
+    Updates from Dave Mills
+
+  html/drivers/driver18.html@1.18 +3 -3
+    Updates from Dave Mills
+
+  html/drivers/driver20.html@1.26 +1 -1
+    Updates from Dave Mills
+
+  html/drivers/driver36.html@1.34 +6 -6
+    Updates from Dave Mills
+
+  html/drivers/driver6.html@1.28 +3 -3
+    Updates from Dave Mills
+
+  html/drivers/driver7.html@1.29 +2 -2
+    Updates from Dave Mills
+
+  html/filter.html@1.6 +7 -5
+    Updates from Dave Mills
+
+  html/huffpuff.html@1.4 +3 -3
+    Updates from Dave Mills
+
+  html/kern.html@1.20 +1 -1
+    Updates from Dave Mills
+
+  html/leap.html@1.1.1.1 +2 -2
+    Updates from Dave Mills
+
+  html/poll.html@1.3 +10 -8
+    Updates from Dave Mills
+
+  html/pps.html@1.24 +1 -1
+    Updates from Dave Mills
+
+  html/prefer.html@1.31 +30 -29
+    Updates from Dave Mills
+
+  html/quick.html@1.23 +3 -3
+    Updates from Dave Mills
+
+  html/rate.html@1.11 +8 -8
+    Updates from Dave Mills
+
+  html/refclock.html@1.37 +1 -0
+    Updates from Dave Mills
+
+  html/scripts/external.txt@1.6 +1 -0
+    Updates from Dave Mills
+
+  html/scripts/special.txt@1.7 +1 -1
+    Updates from Dave Mills
+
+  html/select.html@1.8 +8 -8
+    Updates from Dave Mills
+
+  html/warp.html@1.22 +27 -39
+    Updates from Dave Mills
+
+  html/xleave.html@1.8 +3 -4
+    Updates from Dave Mills
+
+ChangeSet@1.2869, 2012-11-14 05:53:00-05:00, stenn@psp-deb1.ntp.org
+  [Bug 2123] cleanup to html/leap.html
+
+  ChangeLog@1.1234 +1 -0
+    [Bug 2123] cleanup to html/leap.html
+
+  html/leap.html@1.2 +5 -5
+    [Bug 2123] cleanup to html/leap.html
+
+ChangeSet@1.2868, 2012-11-14 05:07:30-05:00, stenn@deacon.udel.edu
+  for the setrlimit() stuff, use INSIST(), not ASSERT()
+
+  ntpd/ntp_config.c@1.307 +1 -1
+    for the setrlimit() stuff, use INSIST(), not ASSERT()
+
+ChangeSet@1.2867, 2012-11-14 01:35:24-08:00, harlan@hms-mbp11.local
+  [Bug 2120] no sysexits.h under QNX
+
+  ChangeLog@1.1233 +1 -0
+    [Bug 2120] no sysexits.h under QNX
+
+  sntp/configure.ac@1.72 +1 -0
+    [Bug 2120] no sysexits.h under QNX
+
+  sntp/m4/ntp_sysexits.m4@1.1 +11 -0
+    BitKeeper file /Users/harlan/src/ntp-dev/sntp/m4/ntp_sysexits.m4
+
+  sntp/m4/ntp_sysexits.m4@1.0 +0 -0
+
+ChangeSet@1.2866, 2012-11-14 02:38:45-05:00, stenn@psp-deb1.ntp.org
+  Cleanup for bug 1223 - rlimit() updates
+
+  include/ntp_config.h@1.78 +1 -1
+    Cleanup for bug 1223 - rlimit() updates
+
+  ntpd/ntp_config.c@1.306 +38 -18
+    Cleanup for bug 1223 - rlimit() updates
+
+ChangeSet@1.2865, 2012-11-13 19:27:23-05:00, stenn@psp-deb1.ntp.org
+  Bug 1223 cleanup
+
+  include/ntp_config.h@1.77 +1 -3
+    Bug 1223 cleanup
+
+  ntpd/complete.conf@1.23 +1 -0
+    Bug 1223 cleanup
+
+  ntpd/ntp_config.c@1.305 +68 -66
+    Bug 1223 cleanup
+
+  ntpd/ntpd.c@1.138 +3 -3
+    Bug 1223 cleanup
+
+ChangeSet@1.2861.1.5, 2012-11-13 18:50:25-05:00, stenn@deacon.udel.edu
+  More cleanup of fix for Bug 1320
+
+  ntpd/ntpd.c@1.134.1.3 +8 -4
+    More cleanup of fix for Bug 1320
+
+ChangeSet@1.2861.1.4, 2012-11-13 17:49:10-05:00, stenn@deacon.udel.edu
+  [Bug 1320] Log ntpd's initial command-line parameters - updated fix
+
+  ChangeLog@1.1229.1.4 +1 -0
+    [Bug 1320] Log ntpd's initial command-line parameters - updated fix
+
+  ntpd/ntpd.c@1.134.1.2 +1 -1
+    [Bug 1320] Log ntpd's initial command-line parameters - updated fix
+
+ChangeSet@1.2861.1.3, 2012-11-13 11:33:20+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P321
   TAG: NTP_4_2_7P321
 
-  ChangeLog@1.1232 +1 -0
+  ChangeLog@1.1229.1.3 +1 -0
     NTP_4_2_7P321
 
   ntpd/invoke-ntpd.texi@1.310 +2 -2
@@ -182,20 +1047,59 @@ ChangeSet@1.2864, 2012-11-13 11:33:20+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.138 +2 -2
     NTP_4_2_7P321
 
-ChangeSet@1.2863, 2012-11-13 03:59:29-05:00, stenn@psp-deb1.ntp.org
+ChangeSet@1.2861.1.2, 2012-11-13 03:59:29-05:00, stenn@psp-deb1.ntp.org
   Fix typo: [Bug 1320] Log ntpd's initial command-line parameters
 
-  ChangeLog@1.1231 +1 -1
+  ChangeLog@1.1229.1.2 +1 -1
     Fix typo: [Bug 1320] Log ntpd's initial command-line parameters
 
-ChangeSet@1.2862, 2012-11-13 03:57:34-05:00, stenn@psp-deb1.ntp.org
+ChangeSet@1.2861.1.1, 2012-11-13 03:57:34-05:00, stenn@psp-deb1.ntp.org
   [Bug 1320] Log ntpd's initial command-line paprameters
 
-  ChangeLog@1.1230 +1 -0
+  ChangeLog@1.1229.1.1 +1 -0
     [Bug 1320] Log ntpd's initial command-line paprameters
 
-  ntpd/ntpd.c@1.135 +18 -0
+  ntpd/ntpd.c@1.134.1.1 +18 -0
     [Bug 1320] Log ntpd's initial command-line paprameters
+
+ChangeSet@1.2862, 2012-11-12 22:56:50-05:00, stenn@psp-deb1.ntp.org
+  [Bug 1223] Allow configurable values for RLIMIT_STACK and RLIMIT_MEMLOCK
+
+  ChangeLog@1.1230 +2 -0
+    [Bug 1223] Allow configurable values for RLIMIT_STACK and RLIMIT_MEMLOCK
+
+  configure.ac@1.552 +54 -0
+    [Bug 1223] Allow configurable values for RLIMIT_STACK and RLIMIT_MEMLOCK
+
+  html/miscopt.html@1.70 +10 -0
+    [Bug 1223] Allow configurable values for RLIMIT_STACK and RLIMIT_MEMLOCK
+
+  include/ntp_config.h@1.76 +6 -0
+    [Bug 1223] Allow configurable values for RLIMIT_STACK and RLIMIT_MEMLOCK
+
+  ntpd/keyword-gen-utd@1.19 +1 -1
+    [Bug 1223] Allow configurable values for RLIMIT_STACK and RLIMIT_MEMLOCK
+
+  ntpd/keyword-gen.c@1.24 +4 -0
+    [Bug 1223] Allow configurable values for RLIMIT_STACK and RLIMIT_MEMLOCK
+
+  ntpd/ntp_config.c@1.304 +124 -15
+    [Bug 1223] Allow configurable values for RLIMIT_STACK and RLIMIT_MEMLOCK
+
+  ntpd/ntp_keyword.h@1.21 +584 -566
+    [Bug 1223] Allow configurable values for RLIMIT_STACK and RLIMIT_MEMLOCK
+
+  ntpd/ntp_parser.c@1.82 +1181 -1138
+    [Bug 1223] Allow configurable values for RLIMIT_STACK and RLIMIT_MEMLOCK
+
+  ntpd/ntp_parser.h@1.48 +201 -194
+    [Bug 1223] Allow configurable values for RLIMIT_STACK and RLIMIT_MEMLOCK
+
+  ntpd/ntp_parser.y@1.76 +48 -1
+    [Bug 1223] Allow configurable values for RLIMIT_STACK and RLIMIT_MEMLOCK
+
+  ntpd/ntpd.c@1.135 +2 -18
+    [Bug 1223] Allow configurable values for RLIMIT_STACK and RLIMIT_MEMLOCK
 
 ChangeSet@1.2861, 2012-11-12 11:34:28+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P320
