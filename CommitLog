@@ -1,8 +1,192 @@
-ChangeSet@1.2886, 2012-11-20 11:35:10+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2887, 2012-11-21 11:33:36+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P326
+  TAG: NTP_4_2_7P326
+
+  ChangeLog@1.1247 +1 -0
+    NTP_4_2_7P326
+
+  ntpd/invoke-ntpd.texi@1.315 +2 -2
+    NTP_4_2_7P326
+
+  ntpd/ntp.conf.5man@1.32 +2 -2
+    NTP_4_2_7P326
+
+  ntpd/ntp.conf.5mdoc@1.32 +2 -2
+    NTP_4_2_7P326
+
+  ntpd/ntp.conf.man.in@1.32 +2 -2
+    NTP_4_2_7P326
+
+  ntpd/ntp.conf.mdoc.in@1.32 +2 -2
+    NTP_4_2_7P326
+
+  ntpd/ntp.keys.5man@1.32 +2 -2
+    NTP_4_2_7P326
+
+  ntpd/ntp.keys.5mdoc@1.32 +2 -2
+    NTP_4_2_7P326
+
+  ntpd/ntp.keys.man.in@1.32 +2 -2
+    NTP_4_2_7P326
+
+  ntpd/ntp.keys.mdoc.in@1.32 +2 -2
+    NTP_4_2_7P326
+
+  ntpd/ntpd-opts.c@1.333 +4 -4
+    NTP_4_2_7P326
+
+  ntpd/ntpd-opts.h@1.333 +3 -3
+    NTP_4_2_7P326
+
+  ntpd/ntpd.1ntpdman@1.144 +2 -2
+    NTP_4_2_7P326
+
+  ntpd/ntpd.1ntpdmdoc@1.144 +2 -2
+    NTP_4_2_7P326
+
+  ntpd/ntpd.man.in@1.144 +2 -2
+    NTP_4_2_7P326
+
+  ntpd/ntpd.mdoc.in@1.144 +2 -2
+    NTP_4_2_7P326
+
+  ntpdc/invoke-ntpdc.texi@1.312 +2 -2
+    NTP_4_2_7P326
+
+  ntpdc/ntpdc-opts.c@1.327 +4 -4
+    NTP_4_2_7P326
+
+  ntpdc/ntpdc-opts.h@1.327 +3 -3
+    NTP_4_2_7P326
+
+  ntpdc/ntpdc.1ntpdcman@1.143 +2 -2
+    NTP_4_2_7P326
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.143 +2 -2
+    NTP_4_2_7P326
+
+  ntpdc/ntpdc.html@1.155 +2 -2
+    NTP_4_2_7P326
+
+  ntpdc/ntpdc.man.in@1.143 +2 -2
+    NTP_4_2_7P326
+
+  ntpdc/ntpdc.mdoc.in@1.143 +2 -2
+    NTP_4_2_7P326
+
+  ntpq/invoke-ntpq.texi@1.314 +2 -2
+    NTP_4_2_7P326
+
+  ntpq/ntpq-opts.c@1.329 +4 -4
+    NTP_4_2_7P326
+
+  ntpq/ntpq-opts.h@1.329 +3 -3
+    NTP_4_2_7P326
+
+  ntpq/ntpq.1ntpqman@1.143 +2 -2
+    NTP_4_2_7P326
+
+  ntpq/ntpq.1ntpqmdoc@1.143 +2 -2
+    NTP_4_2_7P326
+
+  ntpq/ntpq.man.in@1.143 +2 -2
+    NTP_4_2_7P326
+
+  ntpq/ntpq.mdoc.in@1.143 +2 -2
+    NTP_4_2_7P326
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.314 +2 -2
+    NTP_4_2_7P326
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.329 +4 -4
+    NTP_4_2_7P326
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.329 +3 -3
+    NTP_4_2_7P326
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.143 +2 -2
+    NTP_4_2_7P326
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.143 +2 -2
+    NTP_4_2_7P326
+
+  ntpsnmpd/ntpsnmpd.man.in@1.143 +2 -2
+    NTP_4_2_7P326
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.143 +2 -2
+    NTP_4_2_7P326
+
+  packageinfo.sh@1.329 +1 -1
+    NTP_4_2_7P326
+
+  scripts/invoke-ntp-wait.texi@1.132 +1 -1
+    NTP_4_2_7P326
+
+  scripts/ntp-wait.1ntp-waitman@1.143 +2 -2
+    NTP_4_2_7P326
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.143 +2 -2
+    NTP_4_2_7P326
+
+  scripts/ntp-wait.html@1.147 +1 -1
+    NTP_4_2_7P326
+
+  scripts/ntp-wait.man.in@1.143 +2 -2
+    NTP_4_2_7P326
+
+  scripts/ntp-wait.mdoc.in@1.143 +2 -2
+    NTP_4_2_7P326
+
+  sntp/invoke-sntp.texi@1.311 +2 -2
+    NTP_4_2_7P326
+
+  sntp/sntp-opts.c@1.326 +4 -4
+    NTP_4_2_7P326
+
+  sntp/sntp-opts.h@1.326 +3 -3
+    NTP_4_2_7P326
+
+  sntp/sntp.1sntpman@1.146 +2 -2
+    NTP_4_2_7P326
+
+  sntp/sntp.1sntpmdoc@1.146 +2 -2
+    NTP_4_2_7P326
+
+  sntp/sntp.html@1.326 +2 -2
+    NTP_4_2_7P326
+
+  sntp/sntp.man.in@1.146 +2 -2
+    NTP_4_2_7P326
+
+  sntp/sntp.mdoc.in@1.146 +2 -2
+    NTP_4_2_7P326
+
+  util/invoke-ntp-keygen.texi@1.315 +2 -2
+    NTP_4_2_7P326
+
+  util/ntp-keygen-opts.c@1.329 +4 -4
+    NTP_4_2_7P326
+
+  util/ntp-keygen-opts.h@1.329 +3 -3
+    NTP_4_2_7P326
+
+  util/ntp-keygen.1ntp-keygenman@1.143 +2 -2
+    NTP_4_2_7P326
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.143 +2 -2
+    NTP_4_2_7P326
+
+  util/ntp-keygen.man.in@1.143 +2 -2
+    NTP_4_2_7P326
+
+  util/ntp-keygen.mdoc.in@1.143 +2 -2
+    NTP_4_2_7P326
+
+ChangeSet@1.2884.1.2, 2012-11-20 11:35:10+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P325
   TAG: NTP_4_2_7P325
 
-  ChangeLog@1.1245 +1 -0
+  ChangeLog@1.1244.1.1 +1 -0
     NTP_4_2_7P325
 
   ntpd/invoke-ntpd.texi@1.314 +2 -2
@@ -182,7 +366,7 @@ ChangeSet@1.2886, 2012-11-20 11:35:10+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.142 +2 -2
     NTP_4_2_7P325
 
-ChangeSet@1.2885, 2012-11-20 03:45:54-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2884.1.1, 2012-11-20 03:45:54-05:00, stenn@deacon.udel.edu
   typo fix
 
   html/leap.html@1.4 +1 -1
@@ -196,6 +380,24 @@ ChangeSet@1.2884, 2012-11-19 23:37:09-05:00, stenn@deacon.udel.edu
 
   html/ntpq.html@1.46 +1 -1
     [Bug 2202] ntpq.html: there is no "acv" billboard
+
+ChangeSet@1.2882.1.2, 2012-11-19 20:17:35-08:00, harlan@hms-mbp11.local
+  [Bug 2246] Clear sys_leap when voting says to disarm the leap
+
+  ChangeLog@1.1242.1.2 +1 -0
+    [Bug 2246] Clear sys_leap when voting says to disarm the leap
+
+  ntpd/ntp_proto.c@1.343 +1 -0
+    [Bug 2246] Clear sys_leap when voting says to disarm the leap
+
+ChangeSet@1.2882.1.1, 2012-11-19 18:44:38-08:00, harlan@hms-mbp11.local
+  [Bug 1214] 'proto: precision = ...' should be at INFO, not NOTICE
+
+  ChangeLog@1.1242.1.1 +1 -0
+    [Bug 1214] 'proto: precision = ...' should be at INFO, not NOTICE
+
+  ntpd/ntp_proto.c@1.342 +1 -1
+    [Bug 1214] 'proto: precision = ...' should be at INFO, not NOTICE
 
 ChangeSet@1.2883, 2012-11-19 19:38:43+01:00, jnperlin@armageddon.
   [Bug 2306] Keep pps hack for Win32 even if user-mode/loopback PPS API is activated on a serial line.
