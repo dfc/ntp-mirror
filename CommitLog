@@ -1,3 +1,225 @@
+ChangeSet@1.2892, 2012-11-29 11:36:57+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P327
+  TAG: NTP_4_2_7P327
+
+  ChangeLog@1.1251 +1 -0
+    NTP_4_2_7P327
+
+  ntpd/invoke-ntpd.texi@1.316 +2 -2
+    NTP_4_2_7P327
+
+  ntpd/ntp.conf.5man@1.33 +2 -2
+    NTP_4_2_7P327
+
+  ntpd/ntp.conf.5mdoc@1.33 +2 -2
+    NTP_4_2_7P327
+
+  ntpd/ntp.conf.man.in@1.33 +2 -2
+    NTP_4_2_7P327
+
+  ntpd/ntp.conf.mdoc.in@1.33 +2 -2
+    NTP_4_2_7P327
+
+  ntpd/ntp.keys.5man@1.33 +2 -2
+    NTP_4_2_7P327
+
+  ntpd/ntp.keys.5mdoc@1.33 +2 -2
+    NTP_4_2_7P327
+
+  ntpd/ntp.keys.man.in@1.33 +2 -2
+    NTP_4_2_7P327
+
+  ntpd/ntp.keys.mdoc.in@1.33 +2 -2
+    NTP_4_2_7P327
+
+  ntpd/ntpd-opts.c@1.334 +4 -4
+    NTP_4_2_7P327
+
+  ntpd/ntpd-opts.h@1.334 +3 -3
+    NTP_4_2_7P327
+
+  ntpd/ntpd.1ntpdman@1.145 +2 -2
+    NTP_4_2_7P327
+
+  ntpd/ntpd.1ntpdmdoc@1.145 +2 -2
+    NTP_4_2_7P327
+
+  ntpd/ntpd.man.in@1.145 +2 -2
+    NTP_4_2_7P327
+
+  ntpd/ntpd.mdoc.in@1.145 +2 -2
+    NTP_4_2_7P327
+
+  ntpdc/invoke-ntpdc.texi@1.313 +2 -2
+    NTP_4_2_7P327
+
+  ntpdc/ntpdc-opts.c@1.328 +4 -4
+    NTP_4_2_7P327
+
+  ntpdc/ntpdc-opts.h@1.328 +3 -3
+    NTP_4_2_7P327
+
+  ntpdc/ntpdc.1ntpdcman@1.144 +2 -2
+    NTP_4_2_7P327
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.144 +2 -2
+    NTP_4_2_7P327
+
+  ntpdc/ntpdc.html@1.156 +2 -2
+    NTP_4_2_7P327
+
+  ntpdc/ntpdc.man.in@1.144 +2 -2
+    NTP_4_2_7P327
+
+  ntpdc/ntpdc.mdoc.in@1.144 +2 -2
+    NTP_4_2_7P327
+
+  ntpq/invoke-ntpq.texi@1.315 +2 -2
+    NTP_4_2_7P327
+
+  ntpq/ntpq-opts.c@1.330 +4 -4
+    NTP_4_2_7P327
+
+  ntpq/ntpq-opts.h@1.330 +3 -3
+    NTP_4_2_7P327
+
+  ntpq/ntpq.1ntpqman@1.144 +2 -2
+    NTP_4_2_7P327
+
+  ntpq/ntpq.1ntpqmdoc@1.144 +2 -2
+    NTP_4_2_7P327
+
+  ntpq/ntpq.man.in@1.144 +2 -2
+    NTP_4_2_7P327
+
+  ntpq/ntpq.mdoc.in@1.144 +2 -2
+    NTP_4_2_7P327
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.315 +2 -2
+    NTP_4_2_7P327
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.330 +4 -4
+    NTP_4_2_7P327
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.330 +3 -3
+    NTP_4_2_7P327
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.144 +2 -2
+    NTP_4_2_7P327
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.144 +2 -2
+    NTP_4_2_7P327
+
+  ntpsnmpd/ntpsnmpd.man.in@1.144 +2 -2
+    NTP_4_2_7P327
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.144 +2 -2
+    NTP_4_2_7P327
+
+  packageinfo.sh@1.330 +1 -1
+    NTP_4_2_7P327
+
+  scripts/invoke-ntp-wait.texi@1.133 +1 -1
+    NTP_4_2_7P327
+
+  scripts/ntp-wait.1ntp-waitman@1.144 +2 -2
+    NTP_4_2_7P327
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.144 +2 -2
+    NTP_4_2_7P327
+
+  scripts/ntp-wait.html@1.148 +1 -1
+    NTP_4_2_7P327
+
+  scripts/ntp-wait.man.in@1.144 +2 -2
+    NTP_4_2_7P327
+
+  scripts/ntp-wait.mdoc.in@1.144 +2 -2
+    NTP_4_2_7P327
+
+  sntp/invoke-sntp.texi@1.312 +2 -2
+    NTP_4_2_7P327
+
+  sntp/sntp-opts.c@1.327 +4 -4
+    NTP_4_2_7P327
+
+  sntp/sntp-opts.h@1.327 +3 -3
+    NTP_4_2_7P327
+
+  sntp/sntp.1sntpman@1.147 +2 -2
+    NTP_4_2_7P327
+
+  sntp/sntp.1sntpmdoc@1.147 +2 -2
+    NTP_4_2_7P327
+
+  sntp/sntp.html@1.327 +2 -2
+    NTP_4_2_7P327
+
+  sntp/sntp.man.in@1.147 +2 -2
+    NTP_4_2_7P327
+
+  sntp/sntp.mdoc.in@1.147 +2 -2
+    NTP_4_2_7P327
+
+  util/invoke-ntp-keygen.texi@1.316 +21 -2
+    NTP_4_2_7P327
+
+  util/ntp-keygen-opts.c@1.330 +277 -203
+    NTP_4_2_7P327
+
+  util/ntp-keygen-opts.h@1.330 +40 -30
+    NTP_4_2_7P327
+
+  util/ntp-keygen.1ntp-keygenman@1.144 +15 -2
+    NTP_4_2_7P327
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.144 +14 -2
+    NTP_4_2_7P327
+
+  util/ntp-keygen.man.in@1.144 +15 -2
+    NTP_4_2_7P327
+
+  util/ntp-keygen.mdoc.in@1.144 +14 -2
+    NTP_4_2_7P327
+
+ChangeSet@1.2891, 2012-11-29 03:55:28-05:00, stenn@deacon.udel.edu
+  [Bug 2024] Identify Events in the system status word in decode.html
+
+  ChangeLog@1.1250 +1 -0
+    [Bug 2024] Identify Events in the system status word in decode.html
+
+  html/decode.html@1.20 +3 -3
+    [Bug 2024] Identify Events in the system status word in decode.html
+
+ChangeSet@1.2890, 2012-11-29 03:48:03-05:00, stenn@deacon.udel.edu
+  [Bug 2040] Provide a command-line option for the identity key bits
+
+  util/ntp-keygen.c@1.94 +4 -0
+    [Bug 2040] Provide a command-line option for the identity key bits
+
+ChangeSet@1.2889, 2012-11-29 03:45:42-05:00, stenn@deacon.udel.edu
+  [Bug 2040] Provide a command-line option for the identity key bits
+
+  ChangeLog@1.1249 +1 -0
+    [Bug 2040] Provide a command-line option for the identity key bits
+
+  html/keygen.html@1.32 +4 -2
+    [Bug 2040] Provide a command-line option for the identity key bits
+
+  util/ntp-keygen-opts.def@1.20 +13 -0
+    [Bug 2040] Provide a command-line option for the identity key bits
+
+ChangeSet@1.2888, 2012-11-29 08:21:55+00:00, stenn@psp-fb1.ntp.org
+  Create loc/darwin for Mac OSX
+
+  ChangeLog@1.1248 +1 -0
+    Create loc/darwin for Mac OSX
+
+  sntp/loc/darwin@1.1 +13 -0
+    BitKeeper file /a/etc/amd.stage/thump2-g3/export/ntp/home/stenn/ntp-dev/sntp/loc/darwin
+
+  sntp/loc/darwin@1.0 +0 -0
+
 ChangeSet@1.2887, 2012-11-21 11:33:36+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P326
   TAG: NTP_4_2_7P326
