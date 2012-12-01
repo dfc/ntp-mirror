@@ -1,8 +1,240 @@
-ChangeSet@1.2894, 2012-11-30 11:34:56+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2826, 2012-12-01 11:33:49+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P329
+  TAG: NTP_4_2_7P329
+
+  ChangeLog@1.1195 +1 -0
+    NTP_4_2_7P329
+
+  ntpd/invoke-ntpd.texi@1.318 +2 -2
+    NTP_4_2_7P329
+
+  ntpd/ntp.conf.5man@1.35 +2 -2
+    NTP_4_2_7P329
+
+  ntpd/ntp.conf.5mdoc@1.35 +2 -2
+    NTP_4_2_7P329
+
+  ntpd/ntp.conf.man.in@1.35 +2 -2
+    NTP_4_2_7P329
+
+  ntpd/ntp.conf.mdoc.in@1.35 +2 -2
+    NTP_4_2_7P329
+
+  ntpd/ntp.keys.5man@1.35 +2 -2
+    NTP_4_2_7P329
+
+  ntpd/ntp.keys.5mdoc@1.35 +2 -2
+    NTP_4_2_7P329
+
+  ntpd/ntp.keys.man.in@1.35 +2 -2
+    NTP_4_2_7P329
+
+  ntpd/ntp.keys.mdoc.in@1.35 +2 -2
+    NTP_4_2_7P329
+
+  ntpd/ntpd-opts.c@1.336 +4 -4
+    NTP_4_2_7P329
+
+  ntpd/ntpd-opts.h@1.336 +3 -3
+    NTP_4_2_7P329
+
+  ntpd/ntpd.1ntpdman@1.147 +2 -2
+    NTP_4_2_7P329
+
+  ntpd/ntpd.1ntpdmdoc@1.147 +2 -2
+    NTP_4_2_7P329
+
+  ntpd/ntpd.man.in@1.147 +2 -2
+    NTP_4_2_7P329
+
+  ntpd/ntpd.mdoc.in@1.147 +2 -2
+    NTP_4_2_7P329
+
+  ntpdc/invoke-ntpdc.texi@1.315 +2 -2
+    NTP_4_2_7P329
+
+  ntpdc/ntpdc-opts.c@1.330 +4 -4
+    NTP_4_2_7P329
+
+  ntpdc/ntpdc-opts.h@1.330 +3 -3
+    NTP_4_2_7P329
+
+  ntpdc/ntpdc.1ntpdcman@1.146 +2 -2
+    NTP_4_2_7P329
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.146 +2 -2
+    NTP_4_2_7P329
+
+  ntpdc/ntpdc.html@1.158 +2 -2
+    NTP_4_2_7P329
+
+  ntpdc/ntpdc.man.in@1.146 +2 -2
+    NTP_4_2_7P329
+
+  ntpdc/ntpdc.mdoc.in@1.146 +2 -2
+    NTP_4_2_7P329
+
+  ntpq/invoke-ntpq.texi@1.317 +2 -2
+    NTP_4_2_7P329
+
+  ntpq/ntpq-opts.c@1.332 +4 -4
+    NTP_4_2_7P329
+
+  ntpq/ntpq-opts.h@1.332 +3 -3
+    NTP_4_2_7P329
+
+  ntpq/ntpq.1ntpqman@1.146 +2 -2
+    NTP_4_2_7P329
+
+  ntpq/ntpq.1ntpqmdoc@1.146 +2 -2
+    NTP_4_2_7P329
+
+  ntpq/ntpq.man.in@1.146 +2 -2
+    NTP_4_2_7P329
+
+  ntpq/ntpq.mdoc.in@1.146 +2 -2
+    NTP_4_2_7P329
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.317 +2 -2
+    NTP_4_2_7P329
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.332 +4 -4
+    NTP_4_2_7P329
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.332 +3 -3
+    NTP_4_2_7P329
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.146 +2 -2
+    NTP_4_2_7P329
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.146 +2 -2
+    NTP_4_2_7P329
+
+  ntpsnmpd/ntpsnmpd.man.in@1.146 +2 -2
+    NTP_4_2_7P329
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.146 +2 -2
+    NTP_4_2_7P329
+
+  packageinfo.sh@1.332 +1 -1
+    NTP_4_2_7P329
+
+  scripts/invoke-ntp-wait.texi@1.135 +1 -1
+    NTP_4_2_7P329
+
+  scripts/ntp-wait.1ntp-waitman@1.146 +2 -2
+    NTP_4_2_7P329
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.146 +2 -2
+    NTP_4_2_7P329
+
+  scripts/ntp-wait.html@1.150 +1 -1
+    NTP_4_2_7P329
+
+  scripts/ntp-wait.man.in@1.146 +2 -2
+    NTP_4_2_7P329
+
+  scripts/ntp-wait.mdoc.in@1.146 +2 -2
+    NTP_4_2_7P329
+
+  sntp/invoke-sntp.texi@1.314 +2 -2
+    NTP_4_2_7P329
+
+  sntp/sntp-opts.c@1.329 +4 -4
+    NTP_4_2_7P329
+
+  sntp/sntp-opts.h@1.329 +3 -3
+    NTP_4_2_7P329
+
+  sntp/sntp.1sntpman@1.149 +2 -2
+    NTP_4_2_7P329
+
+  sntp/sntp.1sntpmdoc@1.149 +2 -2
+    NTP_4_2_7P329
+
+  sntp/sntp.html@1.329 +2 -2
+    NTP_4_2_7P329
+
+  sntp/sntp.man.in@1.149 +2 -2
+    NTP_4_2_7P329
+
+  sntp/sntp.mdoc.in@1.149 +2 -2
+    NTP_4_2_7P329
+
+  util/invoke-ntp-keygen.texi@1.318 +2 -2
+    NTP_4_2_7P329
+
+  util/ntp-keygen-opts.c@1.332 +4 -4
+    NTP_4_2_7P329
+
+  util/ntp-keygen-opts.h@1.332 +3 -3
+    NTP_4_2_7P329
+
+  util/ntp-keygen.1ntp-keygenman@1.146 +2 -2
+    NTP_4_2_7P329
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.146 +2 -2
+    NTP_4_2_7P329
+
+  util/ntp-keygen.man.in@1.146 +2 -2
+    NTP_4_2_7P329
+
+  util/ntp-keygen.mdoc.in@1.146 +2 -2
+    NTP_4_2_7P329
+
+ChangeSet@1.2824, 2012-12-01 10:43:56+00:00, stenn@psp-fb1.ntp.org
+  Use an enum for the ACTS state table
+
+  ChangeLog@1.1193 +1 -0
+    Use an enum for the ACTS state table
+
+  ntpd/refclock_acts.c@1.51.1.1 +8 -6
+    Use an enum for the ACTS state table
+
+ChangeSet@1.2822.1.73, 2012-11-30 23:45:57-05:00, stenn@deacon.udel.edu
+  html doc reconciliation with DLM's copy
+
+  ChangeLog@1.1191.1.63 +1 -0
+    html doc reconciliation with DLM's copy
+
+  html/authentic.html@1.13 +1 -1
+    html doc reconciliation with DLM's copy
+
+  html/copyright.html@1.60 +1 -1
+    html doc reconciliation with DLM's copy
+
+  html/decode.html@1.21 +1 -1
+    html doc reconciliation with DLM's copy
+
+  html/drivers/driver1.html@1.20 +1 -1
+    html doc reconciliation with DLM's copy
+
+  html/leap.html@1.5 +1 -1
+    html doc reconciliation with DLM's copy
+
+  html/miscopt.html@1.71 +1 -1
+    html doc reconciliation with DLM's copy
+
+  html/ntpd.html@1.57 +1 -1
+    html doc reconciliation with DLM's copy
+
+  html/ntpdate.html@1.23 +1 -1
+    html doc reconciliation with DLM's copy
+
+  html/ntpq.html@1.47 +1 -1
+    html doc reconciliation with DLM's copy
+
+  html/ntptrace.html@1.18 +1 -1
+    html doc reconciliation with DLM's copy
+
+  html/quick.html@1.24 +2 -2
+    html doc reconciliation with DLM's copy
+
+ChangeSet@1.2822.1.72, 2012-11-30 11:34:56+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P328
   TAG: NTP_4_2_7P328
 
-  ChangeLog@1.1253 +1 -0
+  ChangeLog@1.1191.1.62 +1 -0
     NTP_4_2_7P328
 
   ntpd/invoke-ntpd.texi@1.317 +2 -2
@@ -182,20 +414,20 @@ ChangeSet@1.2894, 2012-11-30 11:34:56+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.145 +2 -2
     NTP_4_2_7P328
 
-ChangeSet@1.2893, 2012-11-30 06:00:13-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.1.71, 2012-11-30 06:00:13-05:00, stenn@deacon.udel.edu
   html doc reconciliation with DLM's copy
 
-  ChangeLog@1.1252 +1 -0
+  ChangeLog@1.1191.1.61 +1 -0
     html doc reconciliation with DLM's copy
 
   html/refclock.html@1.38 +1 -0
     html doc reconciliation with DLM's copy
 
-ChangeSet@1.2892, 2012-11-29 11:36:57+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.1.70, 2012-11-29 11:36:57+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P327
   TAG: NTP_4_2_7P327
 
-  ChangeLog@1.1251 +1 -0
+  ChangeLog@1.1191.1.60 +1 -0
     NTP_4_2_7P327
 
   ntpd/invoke-ntpd.texi@1.316 +2 -2
@@ -375,25 +607,25 @@ ChangeSet@1.2892, 2012-11-29 11:36:57+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.144 +14 -2
     NTP_4_2_7P327
 
-ChangeSet@1.2891, 2012-11-29 03:55:28-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.1.69, 2012-11-29 03:55:28-05:00, stenn@deacon.udel.edu
   [Bug 2024] Identify Events in the system status word in decode.html
 
-  ChangeLog@1.1250 +1 -0
+  ChangeLog@1.1191.1.59 +1 -0
     [Bug 2024] Identify Events in the system status word in decode.html
 
   html/decode.html@1.20 +3 -3
     [Bug 2024] Identify Events in the system status word in decode.html
 
-ChangeSet@1.2890, 2012-11-29 03:48:03-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.1.68, 2012-11-29 03:48:03-05:00, stenn@deacon.udel.edu
   [Bug 2040] Provide a command-line option for the identity key bits
 
   util/ntp-keygen.c@1.94 +4 -0
     [Bug 2040] Provide a command-line option for the identity key bits
 
-ChangeSet@1.2889, 2012-11-29 03:45:42-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.1.67, 2012-11-29 03:45:42-05:00, stenn@deacon.udel.edu
   [Bug 2040] Provide a command-line option for the identity key bits
 
-  ChangeLog@1.1249 +1 -0
+  ChangeLog@1.1191.1.58 +1 -0
     [Bug 2040] Provide a command-line option for the identity key bits
 
   html/keygen.html@1.32 +4 -2
@@ -402,10 +634,10 @@ ChangeSet@1.2889, 2012-11-29 03:45:42-05:00, stenn@deacon.udel.edu
   util/ntp-keygen-opts.def@1.20 +13 -0
     [Bug 2040] Provide a command-line option for the identity key bits
 
-ChangeSet@1.2888, 2012-11-29 08:21:55+00:00, stenn@psp-fb1.ntp.org
+ChangeSet@1.2822.1.66, 2012-11-29 08:21:55+00:00, stenn@psp-fb1.ntp.org
   Create loc/darwin for Mac OSX
 
-  ChangeLog@1.1248 +1 -0
+  ChangeLog@1.1191.1.57 +1 -0
     Create loc/darwin for Mac OSX
 
   sntp/loc/darwin@1.1 +13 -0
@@ -413,11 +645,11 @@ ChangeSet@1.2888, 2012-11-29 08:21:55+00:00, stenn@psp-fb1.ntp.org
 
   sntp/loc/darwin@1.0 +0 -0
 
-ChangeSet@1.2887, 2012-11-21 11:33:36+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.1.65, 2012-11-21 11:33:36+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P326
   TAG: NTP_4_2_7P326
 
-  ChangeLog@1.1247 +1 -0
+  ChangeLog@1.1191.1.56 +1 -0
     NTP_4_2_7P326
 
   ntpd/invoke-ntpd.texi@1.315 +2 -2
@@ -597,11 +829,11 @@ ChangeSet@1.2887, 2012-11-21 11:33:36+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.143 +2 -2
     NTP_4_2_7P326
 
-ChangeSet@1.2884.1.2, 2012-11-20 11:35:10+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.11.2, 2012-11-20 11:35:10+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P325
   TAG: NTP_4_2_7P325
 
-  ChangeLog@1.1244.1.1 +1 -0
+  ChangeLog@1.1191.8.1 +1 -0
     NTP_4_2_7P325
 
   ntpd/invoke-ntpd.texi@1.314 +2 -2
@@ -781,53 +1013,53 @@ ChangeSet@1.2884.1.2, 2012-11-20 11:35:10+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.142 +2 -2
     NTP_4_2_7P325
 
-ChangeSet@1.2884.1.1, 2012-11-20 03:45:54-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.11.1, 2012-11-20 03:45:54-05:00, stenn@deacon.udel.edu
   typo fix
 
   html/leap.html@1.4 +1 -1
     typo fix
 
-ChangeSet@1.2884, 2012-11-19 23:37:09-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.1.62, 2012-11-19 23:37:09-05:00, stenn@deacon.udel.edu
   [Bug 2202] ntpq.html: there is no "acv" billboard
 
-  ChangeLog@1.1244 +1 -0
+  ChangeLog@1.1191.1.53 +1 -0
     [Bug 2202] ntpq.html: there is no "acv" billboard
 
   html/ntpq.html@1.46 +1 -1
     [Bug 2202] ntpq.html: there is no "acv" billboard
 
-ChangeSet@1.2882.1.2, 2012-11-19 20:17:35-08:00, harlan@hms-mbp11.local
+ChangeSet@1.2822.10.2, 2012-11-19 20:17:35-08:00, harlan@hms-mbp11.local
   [Bug 2246] Clear sys_leap when voting says to disarm the leap
 
-  ChangeLog@1.1242.1.2 +1 -0
+  ChangeLog@1.1191.7.2 +1 -0
     [Bug 2246] Clear sys_leap when voting says to disarm the leap
 
   ntpd/ntp_proto.c@1.343 +1 -0
     [Bug 2246] Clear sys_leap when voting says to disarm the leap
 
-ChangeSet@1.2882.1.1, 2012-11-19 18:44:38-08:00, harlan@hms-mbp11.local
+ChangeSet@1.2822.10.1, 2012-11-19 18:44:38-08:00, harlan@hms-mbp11.local
   [Bug 1214] 'proto: precision = ...' should be at INFO, not NOTICE
 
-  ChangeLog@1.1242.1.1 +1 -0
+  ChangeLog@1.1191.7.1 +1 -0
     [Bug 1214] 'proto: precision = ...' should be at INFO, not NOTICE
 
   ntpd/ntp_proto.c@1.342 +1 -1
     [Bug 1214] 'proto: precision = ...' should be at INFO, not NOTICE
 
-ChangeSet@1.2883, 2012-11-19 19:38:43+01:00, jnperlin@armageddon.
+ChangeSet@1.2822.1.61, 2012-11-19 19:38:43+01:00, jnperlin@armageddon.
   [Bug 2306] Keep pps hack for Win32 even if user-mode/loopback PPS API is activated on a serial line.
 
-  ChangeLog@1.1243 +2 -0
+  ChangeLog@1.1191.1.52 +2 -0
     [Bug 2306] Keep pps hack for Win32 even if user-mode/loopback PPS API is activated on a serial line.
 
   ports/winnt/ntpd/ntp_iocompletionport.c@1.68 +10 -1
     [Bug 2306] Keep pps hack for Win32 even if user-mode/loopback PPS API is activated on a serial line.
 
-ChangeSet@1.2882, 2012-11-19 12:05:20+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.1.60, 2012-11-19 12:05:20+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P324
   TAG: NTP_4_2_7P324
 
-  ChangeLog@1.1242 +1 -0
+  ChangeLog@1.1191.1.51 +1 -0
     NTP_4_2_7P324
 
   ntpd/invoke-ntpd.texi@1.313 +2 -2
@@ -1007,10 +1239,10 @@ ChangeSet@1.2882, 2012-11-19 12:05:20+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.141 +2 -2
     NTP_4_2_7P324
 
-ChangeSet@1.2881, 2012-11-19 02:49:32-08:00, harlan@hms-mbp11.local
+ChangeSet@1.2822.1.59, 2012-11-19 02:49:32-08:00, harlan@hms-mbp11.local
   [Bug 2098] Install DLM's HTML documentation
 
-  ChangeLog@1.1241 +1 -0
+  ChangeLog@1.1191.1.50 +1 -0
     [Bug 2098] Install DLM's HTML documentation
 
   Makefile.am@1.116 +7 -0
@@ -1019,32 +1251,32 @@ ChangeSet@1.2881, 2012-11-19 02:49:32-08:00, harlan@hms-mbp11.local
   configure.ac@1.554 +1 -1
     [Bug 2098] Install DLM's HTML documentation
 
-ChangeSet@1.2880, 2012-11-19 02:32:45-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.1.58, 2012-11-19 02:32:45-05:00, stenn@deacon.udel.edu
   Use "diff -u" when comparing complete.conf
 
   ntpd/Makefile.am@1.124 +1 -1
     Use "diff -u" when comparing complete.conf
 
-ChangeSet@1.2878, 2012-11-19 02:01:25-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.1.56, 2012-11-19 02:01:25-05:00, stenn@deacon.udel.edu
   Reinstate change from Mike T. to authentic.html
 
-  ChangeLog@1.1239 +1 -0
+  ChangeLog@1.1191.1.48 +1 -0
     Reinstate change from Mike T. to authentic.html
 
   html/authentic.html@1.12 +2 -2
     Reinstate change from Mike T. to authentic.html
 
-ChangeSet@1.2877, 2012-11-19 01:50:59-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.1.55, 2012-11-19 01:50:59-05:00, stenn@deacon.udel.edu
   [Bug 1223] cleanup for rlimit changes
 
-  ChangeLog@1.1238 +1 -0
+  ChangeLog@1.1191.1.47 +1 -0
     [Bug 1223] cleanup for rlimit changes
 
-ChangeSet@1.2873.1.1, 2012-11-18 12:58:00+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.9.1, 2012-11-18 12:58:00+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P323
   TAG: NTP_4_2_7P323
 
-  ChangeLog@1.1237 +1 -0
+  ChangeLog@1.1191.1.46 +1 -0
     NTP_4_2_7P323
 
   ntpd/invoke-ntpd.texi@1.312 +2 -2
@@ -1224,7 +1456,7 @@ ChangeSet@1.2873.1.1, 2012-11-18 12:58:00+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.140 +2 -2
     NTP_4_2_7P323
 
-ChangeSet@1.2872.2.2, 2012-11-18 07:31:57-05:00, stenn@psp-deb1.ntp.org
+ChangeSet@1.2822.8.2, 2012-11-18 07:31:57-05:00, stenn@psp-deb1.ntp.org
   added ntp_rlimit.m4
 
   sntp/m4/ntp_rlimit.m4@1.1 +66 -0
@@ -1232,7 +1464,7 @@ ChangeSet@1.2872.2.2, 2012-11-18 07:31:57-05:00, stenn@psp-deb1.ntp.org
 
   sntp/m4/ntp_rlimit.m4@1.0 +0 -0
 
-ChangeSet@1.2872.2.1, 2012-11-18 12:15:14+00:00, stenn@psp-fb1.ntp.org
+ChangeSet@1.2822.8.1, 2012-11-18 12:15:14+00:00, stenn@psp-fb1.ntp.org
   rlimit cleanup
 
   configure.ac@1.553 +57 -54
@@ -1256,10 +1488,10 @@ ChangeSet@1.2872.2.1, 2012-11-18 12:15:14+00:00, stenn@psp-fb1.ntp.org
   ntpd/ntp_parser.y@1.77 +1 -1
     rlimit cleanup
 
-ChangeSet@1.2872.1.1, 2012-11-18 12:15:34+01:00, jnperlin@armageddon.
+ChangeSet@1.2822.7.1, 2012-11-18 12:15:34+01:00, jnperlin@armageddon.
   [Bug 2306] Added user-mode/loop-back PPS API provider for Win32
 
-  ChangeLog@1.1235.1.1 +1 -0
+  ChangeLog@1.1191.6.1 +1 -0
     [Bug 2306] Added user-mode/loop-back PPS API provider for Win32
 
   include/ntp_refclock.h@1.36 +4 -0
@@ -1344,7 +1576,7 @@ ChangeSet@1.2872.1.1, 2012-11-18 12:15:34+01:00, jnperlin@armageddon.
   ports/winnt/vs2008/ntpq/ntpq.vcproj@1.15 +26 -21
     [Bug 2306](user-mode PPS API) cleanup of build process
 
-ChangeSet@1.2872, 2012-11-18 03:37:42-05:00, stenn@psp-deb1.ntp.org
+ChangeSet@1.2822.1.50, 2012-11-18 03:37:42-05:00, stenn@psp-deb1.ntp.org
   RLIMIT header cleanup
 
   ntpd/ntp_config.c@1.308 +3 -0
@@ -1353,11 +1585,11 @@ ChangeSet@1.2872, 2012-11-18 03:37:42-05:00, stenn@psp-deb1.ntp.org
   ntpd/ntpd.c@1.139 +0 -3
     RLIMIT header cleanup
 
-ChangeSet@1.2868.2.1, 2012-11-15 11:21:37+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.6.1, 2012-11-15 11:21:37+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P322
   TAG: NTP_4_2_7P322
 
-  ChangeLog@1.1233.1.1 +1 -0
+  ChangeLog@1.1191.5.1 +1 -0
     NTP_4_2_7P322
 
   ntpd/invoke-ntpd.texi@1.311 +2 -2
@@ -1537,10 +1769,10 @@ ChangeSet@1.2868.2.1, 2012-11-15 11:21:37+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.139 +2 -2
     NTP_4_2_7P322
 
-ChangeSet@1.2871, 2012-11-15 04:10:48-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.1.49, 2012-11-15 04:10:48-05:00, stenn@deacon.udel.edu
   html/ updates from Dave Mills
 
-  ChangeLog@1.1235 +1 -0
+  ChangeLog@1.1191.1.44 +1 -0
     html/ updates from Dave Mills
 
   html/stats.html@1.1 +70 -0
@@ -1548,7 +1780,7 @@ ChangeSet@1.2871, 2012-11-15 04:10:48-05:00, stenn@deacon.udel.edu
 
   html/stats.html@1.0 +0 -0
 
-ChangeSet@1.2868.1.1, 2012-11-14 22:58:44-08:00, harlan@hms-mbp11.local
+ChangeSet@1.2822.5.1, 2012-11-14 22:58:44-08:00, harlan@hms-mbp11.local
   Documentation updates from Dave Mills.
 
   html/authentic.html@1.11 +2 -2
@@ -1560,7 +1792,7 @@ ChangeSet@1.2868.1.1, 2012-11-14 22:58:44-08:00, harlan@hms-mbp11.local
   html/discipline.html@1.8 +14 -6
     Updates from Dave Mills
 
-  html/drivers/driver18.html@1.18 +3 -3
+  html/drivers/driver18.html@1.17.1.1 +3 -3
     Updates from Dave Mills
 
   html/drivers/driver20.html@1.26 +1 -1
@@ -1620,25 +1852,25 @@ ChangeSet@1.2868.1.1, 2012-11-14 22:58:44-08:00, harlan@hms-mbp11.local
   html/xleave.html@1.8 +3 -4
     Updates from Dave Mills
 
-ChangeSet@1.2869, 2012-11-14 05:53:00-05:00, stenn@psp-deb1.ntp.org
+ChangeSet@1.2822.1.47, 2012-11-14 05:53:00-05:00, stenn@psp-deb1.ntp.org
   [Bug 2123] cleanup to html/leap.html
 
-  ChangeLog@1.1234 +1 -0
+  ChangeLog@1.1191.1.43 +1 -0
     [Bug 2123] cleanup to html/leap.html
 
   html/leap.html@1.2 +5 -5
     [Bug 2123] cleanup to html/leap.html
 
-ChangeSet@1.2868, 2012-11-14 05:07:30-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.1.46, 2012-11-14 05:07:30-05:00, stenn@deacon.udel.edu
   for the setrlimit() stuff, use INSIST(), not ASSERT()
 
   ntpd/ntp_config.c@1.307 +1 -1
     for the setrlimit() stuff, use INSIST(), not ASSERT()
 
-ChangeSet@1.2867, 2012-11-14 01:35:24-08:00, harlan@hms-mbp11.local
+ChangeSet@1.2822.1.45, 2012-11-14 01:35:24-08:00, harlan@hms-mbp11.local
   [Bug 2120] no sysexits.h under QNX
 
-  ChangeLog@1.1233 +1 -0
+  ChangeLog@1.1191.1.42 +1 -0
     [Bug 2120] no sysexits.h under QNX
 
   sntp/configure.ac@1.72 +1 -0
@@ -1649,7 +1881,7 @@ ChangeSet@1.2867, 2012-11-14 01:35:24-08:00, harlan@hms-mbp11.local
 
   sntp/m4/ntp_sysexits.m4@1.0 +0 -0
 
-ChangeSet@1.2866, 2012-11-14 02:38:45-05:00, stenn@psp-deb1.ntp.org
+ChangeSet@1.2822.1.44, 2012-11-14 02:38:45-05:00, stenn@psp-deb1.ntp.org
   Cleanup for bug 1223 - rlimit() updates
 
   include/ntp_config.h@1.78 +1 -1
@@ -1658,7 +1890,7 @@ ChangeSet@1.2866, 2012-11-14 02:38:45-05:00, stenn@psp-deb1.ntp.org
   ntpd/ntp_config.c@1.306 +38 -18
     Cleanup for bug 1223 - rlimit() updates
 
-ChangeSet@1.2865, 2012-11-13 19:27:23-05:00, stenn@psp-deb1.ntp.org
+ChangeSet@1.2822.1.43, 2012-11-13 19:27:23-05:00, stenn@psp-deb1.ntp.org
   Bug 1223 cleanup
 
   include/ntp_config.h@1.77 +1 -3
@@ -1673,26 +1905,26 @@ ChangeSet@1.2865, 2012-11-13 19:27:23-05:00, stenn@psp-deb1.ntp.org
   ntpd/ntpd.c@1.138 +3 -3
     Bug 1223 cleanup
 
-ChangeSet@1.2861.1.5, 2012-11-13 18:50:25-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.4.5, 2012-11-13 18:50:25-05:00, stenn@deacon.udel.edu
   More cleanup of fix for Bug 1320
 
   ntpd/ntpd.c@1.134.1.3 +8 -4
     More cleanup of fix for Bug 1320
 
-ChangeSet@1.2861.1.4, 2012-11-13 17:49:10-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.4.4, 2012-11-13 17:49:10-05:00, stenn@deacon.udel.edu
   [Bug 1320] Log ntpd's initial command-line parameters - updated fix
 
-  ChangeLog@1.1229.1.4 +1 -0
+  ChangeLog@1.1191.4.4 +1 -0
     [Bug 1320] Log ntpd's initial command-line parameters - updated fix
 
   ntpd/ntpd.c@1.134.1.2 +1 -1
     [Bug 1320] Log ntpd's initial command-line parameters - updated fix
 
-ChangeSet@1.2861.1.3, 2012-11-13 11:33:20+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.4.3, 2012-11-13 11:33:20+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P321
   TAG: NTP_4_2_7P321
 
-  ChangeLog@1.1229.1.3 +1 -0
+  ChangeLog@1.1191.4.3 +1 -0
     NTP_4_2_7P321
 
   ntpd/invoke-ntpd.texi@1.310 +2 -2
@@ -1872,25 +2104,25 @@ ChangeSet@1.2861.1.3, 2012-11-13 11:33:20+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.138 +2 -2
     NTP_4_2_7P321
 
-ChangeSet@1.2861.1.2, 2012-11-13 03:59:29-05:00, stenn@psp-deb1.ntp.org
+ChangeSet@1.2822.4.2, 2012-11-13 03:59:29-05:00, stenn@psp-deb1.ntp.org
   Fix typo: [Bug 1320] Log ntpd's initial command-line parameters
 
-  ChangeLog@1.1229.1.2 +1 -1
+  ChangeLog@1.1191.4.2 +1 -1
     Fix typo: [Bug 1320] Log ntpd's initial command-line parameters
 
-ChangeSet@1.2861.1.1, 2012-11-13 03:57:34-05:00, stenn@psp-deb1.ntp.org
+ChangeSet@1.2822.4.1, 2012-11-13 03:57:34-05:00, stenn@psp-deb1.ntp.org
   [Bug 1320] Log ntpd's initial command-line paprameters
 
-  ChangeLog@1.1229.1.1 +1 -0
+  ChangeLog@1.1191.4.1 +1 -0
     [Bug 1320] Log ntpd's initial command-line paprameters
 
   ntpd/ntpd.c@1.134.1.1 +18 -0
     [Bug 1320] Log ntpd's initial command-line paprameters
 
-ChangeSet@1.2862, 2012-11-12 22:56:50-05:00, stenn@psp-deb1.ntp.org
+ChangeSet@1.2822.1.40, 2012-11-12 22:56:50-05:00, stenn@psp-deb1.ntp.org
   [Bug 1223] Allow configurable values for RLIMIT_STACK and RLIMIT_MEMLOCK
 
-  ChangeLog@1.1230 +2 -0
+  ChangeLog@1.1191.1.39 +2 -0
     [Bug 1223] Allow configurable values for RLIMIT_STACK and RLIMIT_MEMLOCK
 
   configure.ac@1.552 +54 -0
@@ -1926,11 +2158,11 @@ ChangeSet@1.2862, 2012-11-12 22:56:50-05:00, stenn@psp-deb1.ntp.org
   ntpd/ntpd.c@1.135 +2 -18
     [Bug 1223] Allow configurable values for RLIMIT_STACK and RLIMIT_MEMLOCK
 
-ChangeSet@1.2861, 2012-11-12 11:34:28+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.1.39, 2012-11-12 11:34:28+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P320
   TAG: NTP_4_2_7P320
 
-  ChangeLog@1.1229 +1 -0
+  ChangeLog@1.1191.1.38 +1 -0
     NTP_4_2_7P320
 
   ntpd/invoke-ntpd.texi@1.309 +2 -2
@@ -2110,29 +2342,29 @@ ChangeSet@1.2861, 2012-11-12 11:34:28+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.137 +2 -2
     NTP_4_2_7P320
 
-ChangeSet@1.2860, 2012-11-12 00:58:20-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.1.38, 2012-11-12 00:58:20-05:00, stenn@deacon.udel.edu
   [Bug 1217] libisc/ifiter_sysctl.c:internal_current(): Ignore RTM messages with wrong version
 
-  ChangeLog@1.1228 +2 -0
+  ChangeLog@1.1191.1.37 +2 -0
     [Bug 1217] libisc/ifiter_sysctl.c:internal_current(): Ignore RTM messages with wrong version
 
   lib/isc/unix/ifiter_sysctl.c@1.18 +4 -0
     [Bug 1217] libisc/ifiter_sysctl.c:internal_current(): Ignore RTM messages with wrong version
 
-ChangeSet@1.2859, 2012-11-11 20:09:21-05:00, stenn@psp-deb1.ntp.org
+ChangeSet@1.2822.1.37, 2012-11-11 20:09:21-05:00, stenn@psp-deb1.ntp.org
   [Bug 969] Clarify ntpdate.html documentation about -u and ntpd
 
-  ChangeLog@1.1227 +1 -0
+  ChangeLog@1.1191.1.36 +1 -0
     [Bug 969] Clarify ntpdate.html documentation about -u and ntpd
 
   html/ntpdate.html@1.22 +1 -1
     [Bug 969] Clarify ntpdate.html documentation about -u and ntpd
 
-ChangeSet@1.2858, 2012-11-11 11:38:09+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.1.36, 2012-11-11 11:38:09+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P319
   TAG: NTP_4_2_7P319
 
-  ChangeLog@1.1226 +1 -0
+  ChangeLog@1.1191.1.35 +1 -0
     NTP_4_2_7P319
 
   ntpd/invoke-ntpd.texi@1.308 +2 -2
@@ -2312,20 +2544,20 @@ ChangeSet@1.2858, 2012-11-11 11:38:09+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.136 +2 -2
     NTP_4_2_7P319
 
-ChangeSet@1.2857, 2012-11-11 03:49:15-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.1.35, 2012-11-11 03:49:15-05:00, stenn@deacon.udel.edu
   [Bug 2296] Fix compile problem with building with old OpenSSL
 
-  ChangeLog@1.1225 +1 -0
+  ChangeLog@1.1191.1.34 +1 -0
     [Bug 2296] Fix compile problem with building with old OpenSSL
 
   libntp/a_md5encrypt.c@1.34 +14 -0
     [Bug 2296] Fix compile problem with building with old OpenSSL
 
-ChangeSet@1.2856, 2012-11-05 11:28:16+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.1.34, 2012-11-05 11:28:16+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P318
   TAG: NTP_4_2_7P318
 
-  ChangeLog@1.1224 +1 -0
+  ChangeLog@1.1191.1.33 +1 -0
     NTP_4_2_7P318
 
   ntpd/invoke-ntpd.texi@1.307 +2 -2
@@ -2505,20 +2737,20 @@ ChangeSet@1.2856, 2012-11-05 11:28:16+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.135 +1 -1
     NTP_4_2_7P318
 
-ChangeSet@1.2855, 2012-11-05 02:09:35-05:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.1.33, 2012-11-05 02:09:35-05:00, stenn@deacon.udel.edu
   [Bug 2301] Remove spurious debug output from ntpq
 
-  ChangeLog@1.1223 +1 -0
+  ChangeLog@1.1191.1.32 +1 -0
     [Bug 2301] Remove spurious debug output from ntpq
 
   ntpq/ntpq.c@1.151 +0 -1
     [Bug 2301] Remove spurious debug output from ntpq
 
-ChangeSet@1.2854, 2012-11-05 06:02:04+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.1.32, 2012-11-05 06:02:04+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P317
   TAG: NTP_4_2_7P317
 
-  ChangeLog@1.1222 +1 -0
+  ChangeLog@1.1191.1.31 +1 -0
     NTP_4_2_7P317
 
   ntpd/invoke-ntpd.texi@1.306 +2 -2
@@ -2698,10 +2930,10 @@ ChangeSet@1.2854, 2012-11-05 06:02:04+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.134 +2 -2
     NTP_4_2_7P317
 
-ChangeSet@1.2853, 2012-11-05 02:34:01+00:00, stenn@psp-fb1.ntp.org
+ChangeSet@1.2822.1.31, 2012-11-05 02:34:01+00:00, stenn@psp-fb1.ntp.org
   [Bug 922] Allow interspersed -4 and -6 flags on the ntpq command line
 
-  ChangeLog@1.1221 +1 -0
+  ChangeLog@1.1191.1.30 +1 -0
     [Bug 922] Allow interspersed -4 and -6 flags on the ntpq command line
 
   ntpq/libntpq.c@1.12 +7 -2
@@ -2722,11 +2954,11 @@ ChangeSet@1.2853, 2012-11-05 02:34:01+00:00, stenn@psp-fb1.ntp.org
   ntpsnmpd/ntpsnmpd.c@1.8 +1 -1
     [Bug 922] Allow interspersed -4 and -6 flags on the ntpq command line
 
-ChangeSet@1.2852, 2012-10-27 11:26:16+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.1.30, 2012-10-27 11:26:16+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P316
   TAG: NTP_4_2_7P316
 
-  ChangeLog@1.1220 +1 -0
+  ChangeLog@1.1191.1.29 +1 -0
     NTP_4_2_7P316
 
   ntpd/invoke-ntpd.texi@1.305 +2 -2
@@ -2906,20 +3138,20 @@ ChangeSet@1.2852, 2012-10-27 11:26:16+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.133 +2 -2
     NTP_4_2_7P316
 
-ChangeSet@1.2851, 2012-10-26 13:37:56-04:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.1.29, 2012-10-26 13:37:56-04:00, stenn@deacon.udel.edu
   [Bug 2296] Update fix for Bug 2294 to handle --without-crypto
 
-  ChangeLog@1.1219 +1 -0
+  ChangeLog@1.1191.1.28 +1 -0
     [Bug 2296] Update fix for Bug 2294 to handle --without-crypto
 
   include/ntp_md5.h@1.9 +5 -1
     [Bug 2296] Update fix for Bug 2294 to handle --without-crypto
 
-ChangeSet@1.2850, 2012-10-26 07:13:26+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.1.28, 2012-10-26 07:13:26+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P315
   TAG: NTP_4_2_7P315
 
-  ChangeLog@1.1218 +1 -0
+  ChangeLog@1.1191.1.27 +1 -0
     NTP_4_2_7P315
 
   ntpd/invoke-ntpd.texi@1.304 +2 -2
@@ -3099,20 +3331,20 @@ ChangeSet@1.2850, 2012-10-26 07:13:26+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.132 +2 -2
     NTP_4_2_7P315
 
-ChangeSet@1.2849, 2012-10-26 02:23:16-04:00, stenn@psp-deb1.ntp.org
+ChangeSet@1.2822.1.27, 2012-10-26 02:23:16-04:00, stenn@psp-deb1.ntp.org
   [Bug 2294] ntpd crashes in FIPS mode
 
-  ChangeLog@1.1217 +1 -0
+  ChangeLog@1.1191.1.26 +1 -0
     [Bug 2294] ntpd crashes in FIPS mode
 
   libntp/a_md5encrypt.c@1.33 +20 -3
     [Bug 2294] ntpd crashes in FIPS mode
 
-ChangeSet@1.2848, 2012-10-23 11:32:56+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.1.26, 2012-10-23 11:32:56+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P314
   TAG: NTP_4_2_7P314
 
-  ChangeLog@1.1216 +1 -0
+  ChangeLog@1.1191.1.25 +1 -0
     NTP_4_2_7P314
 
   ntpd/invoke-ntpd.texi@1.303 +2 -2
@@ -3292,20 +3524,20 @@ ChangeSet@1.2848, 2012-10-23 11:32:56+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.131 +1 -1
     NTP_4_2_7P314
 
-ChangeSet@1.2847, 2012-10-23 08:43:55+00:00, stenn@psp-fb1.ntp.org
+ChangeSet@1.2822.1.25, 2012-10-23 08:43:55+00:00, stenn@psp-fb1.ntp.org
   Document a tricky malloc() of dns_ctx in sntp
 
-  ChangeLog@1.1215 +1 -0
+  ChangeLog@1.1191.1.24 +1 -0
     Document a tricky malloc() of dns_ctx in sntp
 
   sntp/main.c@1.86 +5 -5
     Document a tricky malloc() of dns_ctx in sntp
 
-ChangeSet@1.2846, 2012-10-23 06:09:15+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.1.24, 2012-10-23 06:09:15+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P313
   TAG: NTP_4_2_7P313
 
-  ChangeLog@1.1214 +1 -0
+  ChangeLog@1.1191.1.23 +1 -0
     NTP_4_2_7P313
 
   ntpd/invoke-ntpd.texi@1.302 +2 -2
@@ -3485,29 +3717,29 @@ ChangeSet@1.2846, 2012-10-23 06:09:15+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.130 +2 -2
     NTP_4_2_7P313
 
-ChangeSet@1.2845, 2012-10-23 02:16:06+00:00, stenn@psp-fb1.ntp.org
+ChangeSet@1.2822.1.23, 2012-10-23 02:16:06+00:00, stenn@psp-fb1.ntp.org
   [Bug 2293] add support for SO_BINTIME, refine support for SO_TIMESTAMPNS (bug 1374)
 
-  ChangeLog@1.1213 +2 -0
+  ChangeLog@1.1191.1.22 +2 -0
     [Bug 2293] add support for SO_BINTIME, refine support for SO_TIMESTAMPNS (bug 1374)
 
   ntpd/ntp_io.c@1.373 +89 -45
     [Bug 2293] add support for SO_BINTIME, refine support for SO_TIMESTAMPNS (bug 1374)
 
-ChangeSet@1.2844, 2012-10-18 16:31:00-04:00, stenn@psp-deb1.ntp.org
+ChangeSet@1.2822.1.22, 2012-10-18 16:31:00-04:00, stenn@psp-deb1.ntp.org
   [Bug 2291] sntp should report why it cannot open file.kod
 
-  ChangeLog@1.1212 +1 -0
+  ChangeLog@1.1191.1.21 +1 -0
     [Bug 2291] sntp should report why it cannot open file.kod
 
   sntp/kod_management.c@1.29 +1 -1
     [Bug 2291] sntp should report why it cannot open file.kod
 
-ChangeSet@1.2843, 2012-10-11 07:12:51+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.1.21, 2012-10-11 07:12:51+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P312
   TAG: NTP_4_2_7P312
 
-  ChangeLog@1.1211 +1 -0
+  ChangeLog@1.1191.1.20 +1 -0
     NTP_4_2_7P312
 
   ntpd/invoke-ntpd.texi@1.301 +2 -2
@@ -3687,20 +3919,20 @@ ChangeSet@1.2843, 2012-10-11 07:12:51+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.129 +2 -2
     NTP_4_2_7P312
 
-ChangeSet@1.2842, 2012-10-11 01:30:28-04:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.1.20, 2012-10-11 01:30:28-04:00, stenn@deacon.udel.edu
   Remove debugging from testing the fix for [Bug 938]
 
-  ChangeLog@1.1210 +1 -0
+  ChangeLog@1.1191.1.19 +1 -0
     Remove debugging from testing the fix for [Bug 938]
 
   sntp/main.c@1.85 +0 -5
     Remove debugging from testing the fix for [Bug 938]
 
-ChangeSet@1.2841, 2012-10-10 06:30:54+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.1.19, 2012-10-10 06:30:54+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P311
   TAG: NTP_4_2_7P311
 
-  ChangeLog@1.1209 +1 -0
+  ChangeLog@1.1191.1.18 +1 -0
     NTP_4_2_7P311
 
   ntpd/invoke-ntpd.texi@1.300 +4 -40
@@ -3880,16 +4112,16 @@ ChangeSet@1.2841, 2012-10-10 06:30:54+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.128 +4 -3
     NTP_4_2_7P311
 
-ChangeSet@1.2839, 2012-10-10 01:49:46-04:00, stenn@psp-deb1.ntp.org
+ChangeSet@1.2822.1.17, 2012-10-10 01:49:46-04:00, stenn@psp-deb1.ntp.org
   [Bug 938] The argument to the -D flag takes a number, not a string
 
-  ChangeLog@1.1207 +1 -0
+  ChangeLog@1.1191.1.16 +1 -0
     [Bug 938] The argument to the -D flag takes a number, not a string
 
-ChangeSet@1.2838, 2012-10-09 23:19:59-04:00, stenn@psp-deb1.ntp.org
+ChangeSet@1.2822.1.16, 2012-10-09 23:19:59-04:00, stenn@psp-deb1.ntp.org
   [Bug 1374] Support SO_TIMESTAMPNS
 
-  ChangeLog@1.1206 +1 -0
+  ChangeLog@1.1191.1.15 +1 -0
     [Bug 1374] Support SO_TIMESTAMPNS
 
   ntpd/ntpd.c@1.134 +2 -2
@@ -3916,17 +4148,17 @@ ChangeSet@1.2838, 2012-10-09 23:19:59-04:00, stenn@psp-deb1.ntp.org
   util/ntp-keygen.c@1.93 +1 -1
     [Bug 1374] Support SO_TIMESTAMPNS
 
-ChangeSet@1.2837, 2012-10-09 22:55:48-04:00, stenn@psp-deb1.ntp.org
+ChangeSet@1.2822.1.15, 2012-10-09 22:55:48-04:00, stenn@psp-deb1.ntp.org
   [Bug 1374] Support SO_TIMESTAMPNS
 
   ntpd/ntp_io.c@1.372 +9 -8
     [Bug 1374] Support SO_TIMESTAMPNS
 
-ChangeSet@1.2835.1.1, 2012-10-09 11:41:30+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.3.1, 2012-10-09 11:41:30+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P310
   TAG: NTP_4_2_7P310
 
-  ChangeLog@1.1204.1.1 +1 -0
+  ChangeLog@1.1191.3.1 +1 -0
     NTP_4_2_7P310
 
   ntpd/invoke-ntpd.texi@1.299 +2 -2
@@ -4106,41 +4338,41 @@ ChangeSet@1.2835.1.1, 2012-10-09 11:41:30+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.127 +2 -2
     NTP_4_2_7P310
 
-ChangeSet@1.2836, 2012-10-09 02:15:38-04:00, stenn@psp-deb1.ntp.org
+ChangeSet@1.2822.1.14, 2012-10-09 02:15:38-04:00, stenn@psp-deb1.ntp.org
   [Bug 1013] ntpdate's HTML page claims wrong default version.
 
-  ChangeLog@1.1205 +1 -0
+  ChangeLog@1.1191.1.14 +1 -0
     [Bug 1013] ntpdate's HTML page claims wrong default version.
 
   html/ntpdate.html@1.21 +2 -1
     [Bug 1013] ntpdate's HTML page claims wrong default version.
 
-ChangeSet@1.2835, 2012-10-08 23:50:56-04:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.1.13, 2012-10-08 23:50:56-04:00, stenn@deacon.udel.edu
   [Bug 1374] Support SO_TIMESTAMPNS
 
-  ChangeLog@1.1204 +1 -0
+  ChangeLog@1.1191.1.13 +1 -0
     [Bug 1374] Support SO_TIMESTAMPNS
 
   ntpd/ntp_io.c@1.371 +68 -16
     [Bug 1374] Support SO_TIMESTAMPNS
 
-ChangeSet@1.2834, 2012-10-08 22:50:36-04:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.1.12, 2012-10-08 22:50:36-04:00, stenn@deacon.udel.edu
   [Bug 2274] Bring libopts/enum.c back to (old) ANSI C compliance
 
-  ChangeLog@1.1203 +1 -1
+  ChangeLog@1.1191.1.12 +1 -1
     [Bug 2274] Bring libopts/enum.c back to (old) ANSI C compliance
 
-ChangeSet@1.2833, 2012-10-08 20:17:15-04:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.1.11, 2012-10-08 20:17:15-04:00, stenn@deacon.udel.edu
   [Bug 2266] Remove deprecated refclock_trak.c from Windows Makefile equivalents
 
-  ChangeLog@1.1202 +2 -1
+  ChangeLog@1.1191.1.11 +2 -1
     [Bug 2266] Remove deprecated refclock_trak.c from Windows Makefile equivalents
 
-ChangeSet@1.2829.1.1, 2012-10-05 01:53:46+00:00, davehart@dlh-7551.ad.hartbrothers.com
+ChangeSet@1.2822.2.1, 2012-10-05 01:53:46+00:00, davehart@dlh-7551.ad.hartbrothers.com
   Bring libopts/enum.c back to ANSI C compliance.
   Reflect removal of refclock_trak.c in Windows Makefile equivalents.
 
-  ChangeLog@1.1198.1.1 +2 -0
+  ChangeLog@1.1191.2.1 +2 -0
     Bring libopts/enum.c back to ANSI C compliance.
     Reflect removal of refclock_trak.c in Windows Makefile equivalents.
 
@@ -4154,11 +4386,11 @@ ChangeSet@1.2829.1.1, 2012-10-05 01:53:46+00:00, davehart@dlh-7551.ad.hartbrothe
     Bring libopts/enum.c back to ANSI C compliance.
     
 
-ChangeSet@1.2831, 2012-10-04 11:41:02+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.1.9, 2012-10-04 11:41:02+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P309
   TAG: NTP_4_2_7P309
 
-  ChangeLog@1.1200 +1 -0
+  ChangeLog@1.1191.1.9 +1 -0
     NTP_4_2_7P309
 
   ntpd/invoke-ntpd.texi@1.298 +2 -2
@@ -4338,20 +4570,20 @@ ChangeSet@1.2831, 2012-10-04 11:41:02+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.126 +2 -2
     NTP_4_2_7P309
 
-ChangeSet@1.2830, 2012-10-04 03:37:21-04:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.1.8, 2012-10-04 03:37:21-04:00, stenn@deacon.udel.edu
   [Bug 2287] ntpdate returns 0 even if adjtime() call fails
 
-  ChangeLog@1.1199 +1 -0
+  ChangeLog@1.1191.1.8 +1 -0
     [Bug 2287] ntpdate returns 0 even if adjtime() call fails
 
   ntpdate/ntpdate.c@1.91 +1 -1
     [Bug 2287] ntpdate returns 0 even if adjtime() call fails
 
-ChangeSet@1.2829, 2012-09-29 10:48:26+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.1.7, 2012-09-29 10:48:26+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P308
   TAG: NTP_4_2_7P308
 
-  ChangeLog@1.1198 +1 -0
+  ChangeLog@1.1191.1.7 +1 -0
     NTP_4_2_7P308
 
   ntpd/invoke-ntpd.texi@1.297 +2 -2
@@ -4531,20 +4763,20 @@ ChangeSet@1.2829, 2012-09-29 10:48:26+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.125 +1 -1
     NTP_4_2_7P308
 
-ChangeSet@1.2828, 2012-09-29 02:03:52-04:00, stenn@psp-deb1.ntp.org
+ChangeSet@1.2822.1.6, 2012-09-29 02:03:52-04:00, stenn@psp-deb1.ntp.org
   CID 97198: Check return from ioctl() calls in refclock_acts.c
 
-  ChangeLog@1.1197 +1 -0
+  ChangeLog@1.1191.1.6 +1 -0
     CID 97198: Check return from ioctl() calls in refclock_acts.c
 
   ntpd/refclock_acts.c@1.52 +4 -2
     CID 97198: Check return from ioctl() calls in refclock_acts.c
 
-ChangeSet@1.2827, 2012-09-29 00:52:07+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2822.1.5, 2012-09-29 00:52:07+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P307
   TAG: NTP_4_2_7P307
 
-  ChangeLog@1.1196 +1 -0
+  ChangeLog@1.1191.1.5 +1 -0
     NTP_4_2_7P307
 
   ntpd/invoke-ntpd.texi@1.296 +2 -2
@@ -4724,10 +4956,10 @@ ChangeSet@1.2827, 2012-09-29 00:52:07+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.mdoc.in@1.124 +2 -2
     NTP_4_2_7P307
 
-ChangeSet@1.2826, 2012-09-28 20:12:45-04:00, stenn@psp-deb1.ntp.org
+ChangeSet@1.2822.1.4, 2012-09-28 20:12:45-04:00, stenn@psp-deb1.ntp.org
   [Bug 1997] Fix sntp broadcast timeouts
 
-  ChangeLog@1.1195 +1 -0
+  ChangeLog@1.1191.1.4 +1 -0
     [Bug 1997] Fix sntp broadcast timeouts
 
   sntp/invoke-sntp.texi@1.291 +13 -20
@@ -4760,28 +4992,28 @@ ChangeSet@1.2826, 2012-09-28 20:12:45-04:00, stenn@psp-deb1.ntp.org
   sntp/sntp.mdoc.in@1.126 +74 -18
     [Bug 1997] Fix sntp broadcast timeouts
 
-ChangeSet@1.2825, 2012-09-23 01:03:01-04:00, stenn@psp-deb1.ntp.org
+ChangeSet@1.2822.1.3, 2012-09-23 01:03:01-04:00, stenn@psp-deb1.ntp.org
    Fix typo in html/select.html
 
-  ChangeLog@1.1194 +1 -0
+  ChangeLog@1.1191.1.3 +1 -0
      Fix typo in html/select.html
 
   html/select.html@1.7 +1 -1
      Fix typo in html/select.html
 
-ChangeSet@1.2824, 2012-09-22 21:07:43-04:00, stenn@psp-deb1.ntp.org
+ChangeSet@1.2822.1.2, 2012-09-22 21:07:43-04:00, stenn@psp-deb1.ntp.org
   [Bug 2234] Fix incorrect ntptrace html documentation.
 
-  ChangeLog@1.1193 +1 -0
+  ChangeLog@1.1191.1.2 +1 -0
     [Bug 2234] Fix incorrect ntptrace html documentation.
 
   html/ntptrace.html@1.17 +3 -9
     [Bug 2234] Fix incorrect ntptrace html documentation.
 
-ChangeSet@1.2823, 2012-09-17 06:11:50-04:00, stenn@psp-deb1.ntp.org
+ChangeSet@1.2822.1.1, 2012-09-17 06:11:50-04:00, stenn@psp-deb1.ntp.org
   [Bug 2262] Install html docs in $htmldir
 
-  ChangeLog@1.1192 +1 -0
+  ChangeLog@1.1191.1.1 +1 -0
     [Bug 2262] Install html docs in $htmldir
 
   ntpdc/Makefile.am@1.73 +6 -1
@@ -4789,6 +5021,15 @@ ChangeSet@1.2823, 2012-09-17 06:11:50-04:00, stenn@psp-deb1.ntp.org
 
   scripts/Makefile.am@1.31 +6 -1
     [Bug 2262] Install html docs in $htmldir
+
+ChangeSet@1.2823, 2012-09-17 02:46:11-04:00, stenn@psp-deb1.ntp.org
+  [Bug 2278] ACTS flag3 mismatch between code and driver18.html.
+
+  ChangeLog@1.1192 +1 -0
+    [Bug 2278] ACTS flag3 mismatch between code and driver18.html.
+
+  html/drivers/driver18.html@1.18 +4 -4
+    [Bug 2278] ACTS flag3 mismatch between code and driver18.html.
 
 ChangeSet@1.2822, 2012-09-15 11:26:22+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P306
