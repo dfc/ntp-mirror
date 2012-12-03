@@ -2,12 +2,13 @@
 @c %**start of header
 @setfilename ntp.conf.info
 @settitle NTP Configuration File User's Manual
-@include sntp/include/version.texi
+@include ../sntp/include/version.texi
 @paragraphindent 2
 @c %**end of header
 
 @ifinfo
-This file documents the use of the NTP Project's NTP configuration file.
+This file documents the use of the NTP Project's NTP configuration file,
+version @value{VERSION}, @value{UPDATED}.
 @end ifinfo
 
 @direntry
