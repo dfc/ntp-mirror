@@ -36,7 +36,7 @@ display the time offset of the system clock relative to the server
 clock.  Run as root, it can correct the system clock to this offset as
 well.  It can be run as an interactive command or from a cron job.
 
-  <p>This document applies to version 4.2.7p331 of <code>sntp</code>.
+  <p>This document applies to version 4.2.7p332 of <code>sntp</code>.
 
   <p>The program implements the SNTP protocol as defined by RFC 5905, the NTPv4
 IETF specification.
@@ -96,8 +96,7 @@ job.
   <p>NTP (the Network Time Protocol) and SNTP (the Simple Network Time Protocol)
 are defined and described by RFC 5905.
 
-  <p>.PP
-The default is to write the estimated correct local date and time (i.e. not
+  <p>The default is to write the estimated correct local date and time (i.e. not
 UTC) to the standard output in a format like:
 
   <p>.Ic
@@ -178,7 +177,7 @@ This software is released under the NTP license, &lt;http://ntp.org/license&gt;.
 <li><a href="#sntp-exit-status">sntp exit status</a>:             exit status
 <li><a href="#sntp-Usage">sntp Usage</a>:                   Usage
 <li><a href="#sntp-Authors">sntp Authors</a>:                 Authors
-<li><a href="#sntp-Bugs">sntp Bugs</a>:                    Bugs
+<li><a href="#sntp-Notes">sntp Notes</a>:                   Notes
 </ul>
 
 <div class="node">
@@ -201,7 +200,7 @@ the usage text by passing it through a pager program.
 used to select the program, defaulting to <span class="file">more</span>.  Both will exit
 with a status code of 0.
 
-<pre class="example">sntp - standard Simple Network Time Protocol client program - Ver. 4.2.7p331
+<pre class="example">sntp - standard Simple Network Time Protocol client program - Ver. 4.2.7p332
 USAGE:  sntp [ -&lt;flag&gt; [&lt;val&gt;] | --&lt;name&gt;[{=| }&lt;val&gt;] ]... \
                 [ hostname-or-IP ...]
   Flg Arg Option-Name    Description
@@ -227,7 +226,7 @@ USAGE:  sntp [ -&lt;flag&gt; [&lt;val&gt;] | --&lt;name&gt;[{=| }&lt;val&gt;] ].
    -M Num steplimit      Adjustments less than steplimit msec will be slewed
                                 - It must be in the range:
                                   greater than or equal to 0
-   -o Num ntpversion     Send int as our NTP version
+   -o Num ntpversion     Send int as our NTP protocol version
                                 - It must be in the range:
                                   0 to 7
    -r no  usereservedport Use the NTP Reserved Port (port 123)
@@ -312,10 +311,10 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#sntp-Invocation">sntp Invocation</a>
 <p><a name="index-sntp_002dauthentication-6"></a>
 This is the &ldquo;enable authentication with the key <var>auth-keynumber</var>&rdquo; option. 
 This option takes an argument number <span class="file">auth-keynumber</span>. 
-This option enables authentication using the key specified in this
-option's argument.  The argument of this option is the keyid, a
-number specified in the keyfile as this key's identifier. See the
-keyfile option (<span class="option">-k</span>) for more details. 
+Enable authentication using the key specified in this option's
+argument.  The argument of this option is the <span class="option">keyid</span>, a
+number specified in the <span class="option">keyfile</span> as this key's identifier. 
+See the <span class="option">keyfile</span> option (<span class="option">-k</span>) for more details. 
 <div class="node">
 <p><hr>
 <a name="sntp-broadcast"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#sntp-concurrent">sntp concurrent</a>,
@@ -360,8 +359,8 @@ This option takes an argument string <span class="file">host-name</span>.
   <p>Requests from an NTP "client" to a "server" should never be sent
 more rapidly than one every 2 seconds.  By default, any IPs returned
 as part of a DNS lookup are assumed to be for a single instance of
-ntpd, and therefore <code>sntp</code> will send queries to these IPs one
-after another, with a 2-second gap in between each query.
+<code>ntpd</code>, and therefore <code>sntp</code> will send queries to these IPs
+one after another, with a 2-second gap in between each query.
 
   <p>The <span class="option">-c</span> or <span class="option">--concurrent</span> flag says that any IPs
 returned for the DNS lookup of the supplied host-name are on
@@ -413,18 +412,8 @@ This is the &ldquo;look in this file for the key specified with <span class="opt
 This option takes an argument file <span class="file">file-name</span>. 
 This option specifies the keyfile. 
 <code>sntp</code> will search for the key specified with <span class="option">-a</span>
-<span class="file">keyno</span> in this file.  Key files follow the following format:
-
-  <p><span class="file">keyid keytype key</span>
-
-  <p>Where	<span class="file">keyid</span> is a number identifying this key
-<span class="file">keytype</span> is one of the following:
-<code>S</code>  Key is a 64 Bit hexadecimal number as specified in in the DES specification. 
-<code>N</code>  Key is a 64 Bit hexadecimal number as specified in the NTP standard. 
-<code>A</code>  Key is a 1-to-8 character ASCII string. 
-<code>M</code>  Key is a 1-to-8 character ASCII string using the MD5 authentication scheme.
-
-  <p>For more information see <span class="command">ntp.keys(5)</span>. 
+<span class="file">keyno</span> in this file.  See <span class="command">ntp.keys(5)</span> for more
+information. 
 <div class="node">
 <p><hr>
 <a name="sntp-logfile"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#sntp-steplimit">sntp steplimit</a>,
@@ -467,7 +456,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#sntp-Invocation">sntp Invocation</a>
 <h4 class="subsection">ntpversion option (-o)</h4>
 
 <p><a name="index-sntp_002dntpversion-14"></a>
-This is the &ldquo;send <var>int</var> as our ntp version&rdquo; option. 
+This is the &ldquo;send <var>int</var> as our ntp protocol version&rdquo; option. 
 This option takes an argument number. 
 When sending requests to a remote server, tell them we are running
 NTP protocol version <span class="file">ntpversion</span> . 
@@ -644,7 +633,7 @@ commands.
 
 <div class="node">
 <p><hr>
-<a name="sntp-Authors"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#sntp-Bugs">sntp Bugs</a>,
+<a name="sntp-Authors"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#sntp-Notes">sntp Notes</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#sntp-Usage">sntp Usage</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#sntp-Invocation">sntp Invocation</a>
 <br>
@@ -664,14 +653,15 @@ Stenn"
 Hart"
 <div class="node">
 <p><hr>
-<a name="sntp-Bugs"></a>Previous:&nbsp;<a rel="previous" accesskey="p" href="#sntp-Authors">sntp Authors</a>,
+<a name="sntp-Notes"></a>Previous:&nbsp;<a rel="previous" accesskey="p" href="#sntp-Authors">sntp Authors</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#sntp-Invocation">sntp Invocation</a>
 <br>
 </div>
 
-<h4 class="subsection">sntp Bugs</h4>
+<h4 class="subsection">sntp Notes</h4>
 
-     <p>Please report bugs to http://bugs.ntp.org .
+     <p>This document corresponds to version  of
+<code>sntp</code>.
 
 <div class="node">
 <p><hr>
