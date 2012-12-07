@@ -1,3 +1,409 @@
+ChangeSet@1.2841, 2012-12-07 11:33:34+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P333
+  TAG: NTP_4_2_7P333
+
+  ChangeLog@1.1203 +1 -0
+    NTP_4_2_7P333
+
+  ntpd/invoke-ntp.conf.texi@1.7 +1 -1
+    NTP_4_2_7P333
+
+  ntpd/invoke-ntp.keys.texi@1.7 +1 -1
+    NTP_4_2_7P333
+
+  ntpd/invoke-ntpd.texi@1.323 +2 -2
+    NTP_4_2_7P333
+
+  ntpd/ntp.conf.5man@1.41 +3 -2877
+    NTP_4_2_7P333
+
+  ntpd/ntp.conf.5mdoc@1.41 +3 -2709
+    NTP_4_2_7P333
+
+  ntpd/ntp.conf.html@1.6 +168 -187
+    NTP_4_2_7P333
+
+  ntpd/ntp.conf.man.in@1.41 +3 -2877
+    NTP_4_2_7P333
+
+  ntpd/ntp.conf.mdoc.in@1.41 +3 -2709
+    NTP_4_2_7P333
+
+  ntpd/ntp.keys.5man@1.41 +2 -95
+    NTP_4_2_7P333
+
+  ntpd/ntp.keys.5mdoc@1.41 +2 -94
+    NTP_4_2_7P333
+
+  ntpd/ntp.keys.html@1.7 +36 -53
+    NTP_4_2_7P333
+
+  ntpd/ntp.keys.man.in@1.41 +2 -95
+    NTP_4_2_7P333
+
+  ntpd/ntp.keys.mdoc.in@1.41 +2 -94
+    NTP_4_2_7P333
+
+  ntpd/ntpd-opts.c@1.341 +4 -4
+    NTP_4_2_7P333
+
+  ntpd/ntpd-opts.h@1.341 +3 -3
+    NTP_4_2_7P333
+
+  ntpd/ntpd.1ntpdman@1.152 +3 -549
+    NTP_4_2_7P333
+
+  ntpd/ntpd.1ntpdmdoc@1.152 +3 -548
+    NTP_4_2_7P333
+
+  ntpd/ntpd.man.in@1.152 +3 -549
+    NTP_4_2_7P333
+
+  ntpd/ntpd.mdoc.in@1.152 +3 -548
+    NTP_4_2_7P333
+
+  ntpdc/invoke-ntpdc.texi@1.320 +2 -2
+    NTP_4_2_7P333
+
+  ntpdc/ntpdc-opts.c@1.335 +4 -4
+    NTP_4_2_7P333
+
+  ntpdc/ntpdc-opts.h@1.335 +3 -3
+    NTP_4_2_7P333
+
+  ntpdc/ntpdc.1ntpdcman@1.151 +3 -704
+    NTP_4_2_7P333
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.151 +3 -659
+    NTP_4_2_7P333
+
+  ntpdc/ntpdc.html@1.163 +98 -118
+    NTP_4_2_7P333
+
+  ntpdc/ntpdc.man.in@1.151 +3 -704
+    NTP_4_2_7P333
+
+  ntpdc/ntpdc.mdoc.in@1.151 +3 -659
+    NTP_4_2_7P333
+
+  ntpq/invoke-ntpq.texi@1.322 +2 -2
+    NTP_4_2_7P333
+
+  ntpq/ntpq-opts.c@1.337 +4 -4
+    NTP_4_2_7P333
+
+  ntpq/ntpq-opts.h@1.337 +3 -3
+    NTP_4_2_7P333
+
+  ntpq/ntpq.1ntpqman@1.151 +2 -260
+    NTP_4_2_7P333
+
+  ntpq/ntpq.1ntpqmdoc@1.151 +2 -245
+    NTP_4_2_7P333
+
+  ntpq/ntpq.man.in@1.151 +2 -260
+    NTP_4_2_7P333
+
+  ntpq/ntpq.mdoc.in@1.151 +2 -245
+    NTP_4_2_7P333
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.322 +2 -2
+    NTP_4_2_7P333
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.337 +4 -4
+    NTP_4_2_7P333
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.337 +3 -3
+    NTP_4_2_7P333
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.151 +2 -4
+    NTP_4_2_7P333
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.151 +2 -4
+    NTP_4_2_7P333
+
+  ntpsnmpd/ntpsnmpd.man.in@1.151 +2 -4
+    NTP_4_2_7P333
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.151 +2 -4
+    NTP_4_2_7P333
+
+  packageinfo.sh@1.336 +1 -1
+    NTP_4_2_7P333
+
+  scripts/invoke-ntp-wait.texi@1.140 +3 -3
+    NTP_4_2_7P333
+
+  scripts/ntp-wait.1ntp-waitman@1.151 +2 -19
+    NTP_4_2_7P333
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.151 +2 -19
+    NTP_4_2_7P333
+
+  scripts/ntp-wait.html@1.155 +42 -65
+    NTP_4_2_7P333
+
+  scripts/ntp-wait.man.in@1.151 +2 -19
+    NTP_4_2_7P333
+
+  scripts/ntp-wait.mdoc.in@1.151 +2 -19
+    NTP_4_2_7P333
+
+  sntp/invoke-sntp.texi@1.320 +2 -2
+    NTP_4_2_7P333
+
+  sntp/sntp-opts.c@1.335 +4 -4
+    NTP_4_2_7P333
+
+  sntp/sntp-opts.h@1.335 +3 -3
+    NTP_4_2_7P333
+
+  sntp/sntp.1sntpman@1.155 +2 -66
+    NTP_4_2_7P333
+
+  sntp/sntp.1sntpmdoc@1.155 +2 -66
+    NTP_4_2_7P333
+
+  sntp/sntp.html@1.335 +91 -116
+    NTP_4_2_7P333
+
+  sntp/sntp.man.in@1.155 +2 -66
+    NTP_4_2_7P333
+
+  sntp/sntp.mdoc.in@1.155 +2 -66
+    NTP_4_2_7P333
+
+  util/invoke-ntp-keygen.texi@1.323 +2 -2
+    NTP_4_2_7P333
+
+  util/ntp-keygen-opts.c@1.337 +4 -4
+    NTP_4_2_7P333
+
+  util/ntp-keygen-opts.h@1.337 +3 -3
+    NTP_4_2_7P333
+
+  util/ntp-keygen.1ntp-keygenman@1.151 +3 -721
+    NTP_4_2_7P333
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.151 +3 -707
+    NTP_4_2_7P333
+
+  util/ntp-keygen.man.in@1.151 +3 -721
+    NTP_4_2_7P333
+
+  util/ntp-keygen.mdoc.in@1.151 +3 -707
+    NTP_4_2_7P333
+
+ChangeSet@1.2840, 2012-12-07 09:56:25+00:00, stenn@psp-fb1.ntp.org
+  Autogen documentation cleanup
+
+  ChangeLog@1.1202 +1 -0
+    Autogen documentation cleanup
+
+  ntpd/invoke-ntp.conf.texi@1.6 +3 -2
+    Autogen documentation cleanup
+
+  ntpd/invoke-ntp.keys.texi@1.6 +3 -2
+    Autogen documentation cleanup
+
+  ntpd/invoke-ntpd.texi@1.322 +2 -1
+    Autogen documentation cleanup
+
+  ntpd/ntp.conf.5man@1.40 +2877 -3
+    Autogen documentation cleanup
+
+  ntpd/ntp.conf.5mdoc@1.40 +2710 -4
+    Autogen documentation cleanup
+
+  ntpd/ntp.conf.def@1.4 +2 -1
+    Autogen documentation cleanup
+
+  ntpd/ntp.conf.html@1.5 +185 -165
+    Autogen documentation cleanup
+
+  ntpd/ntp.conf.man.in@1.40 +2877 -3
+    Autogen documentation cleanup
+
+  ntpd/ntp.conf.mdoc.in@1.40 +2710 -4
+    Autogen documentation cleanup
+
+  ntpd/ntp.keys.5man@1.40 +95 -2
+    Autogen documentation cleanup
+
+  ntpd/ntp.keys.5mdoc@1.40 +95 -3
+    Autogen documentation cleanup
+
+  ntpd/ntp.keys.def@1.8 +2 -1
+    Autogen documentation cleanup
+
+  ntpd/ntp.keys.html@1.6 +51 -33
+    Autogen documentation cleanup
+
+  ntpd/ntp.keys.man.in@1.40 +95 -2
+    Autogen documentation cleanup
+
+  ntpd/ntp.keys.mdoc.in@1.40 +95 -3
+    Autogen documentation cleanup
+
+  ntpd/ntpd-opts.c@1.340 +1 -1
+    Autogen documentation cleanup
+
+  ntpd/ntpd-opts.def@1.8 +1 -0
+    Autogen documentation cleanup
+
+  ntpd/ntpd-opts.h@1.340 +1 -1
+    Autogen documentation cleanup
+
+  ntpd/ntpd.1ntpdman@1.151 +549 -3
+    Autogen documentation cleanup
+
+  ntpd/ntpd.1ntpdmdoc@1.151 +549 -4
+    Autogen documentation cleanup
+
+  ntpd/ntpd.man.in@1.151 +549 -3
+    Autogen documentation cleanup
+
+  ntpd/ntpd.mdoc.in@1.151 +549 -4
+    Autogen documentation cleanup
+
+  ntpdc/invoke-ntpdc.texi@1.319 +1 -1
+    Autogen documentation cleanup
+
+  ntpdc/ntpdc-opts.c@1.334 +1 -1
+    Autogen documentation cleanup
+
+  ntpdc/ntpdc-opts.h@1.334 +1 -1
+    Autogen documentation cleanup
+
+  ntpdc/ntpdc.1ntpdcman@1.150 +704 -3
+    Autogen documentation cleanup
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.150 +660 -4
+    Autogen documentation cleanup
+
+  ntpdc/ntpdc.html@1.162 +116 -96
+    Autogen documentation cleanup
+
+  ntpdc/ntpdc.man.in@1.150 +704 -3
+    Autogen documentation cleanup
+
+  ntpdc/ntpdc.mdoc.in@1.150 +660 -4
+    Autogen documentation cleanup
+
+  ntpq/invoke-ntpq.texi@1.321 +1 -1
+    Autogen documentation cleanup
+
+  ntpq/ntpq-opts.c@1.336 +1 -1
+    Autogen documentation cleanup
+
+  ntpq/ntpq-opts.h@1.336 +1 -1
+    Autogen documentation cleanup
+
+  ntpq/ntpq.1ntpqman@1.150 +260 -2
+    Autogen documentation cleanup
+
+  ntpq/ntpq.1ntpqmdoc@1.150 +246 -3
+    Autogen documentation cleanup
+
+  ntpq/ntpq.man.in@1.150 +260 -2
+    Autogen documentation cleanup
+
+  ntpq/ntpq.mdoc.in@1.150 +246 -3
+    Autogen documentation cleanup
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.321 +5 -1
+    Autogen documentation cleanup
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.336 +1 -1
+    Autogen documentation cleanup
+
+  ntpsnmpd/ntpsnmpd-opts.def@1.4 +1 -2
+    Autogen documentation cleanup
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.336 +1 -1
+    Autogen documentation cleanup
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.150 +6 -3
+    Autogen documentation cleanup
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.150 +7 -4
+    Autogen documentation cleanup
+
+  ntpsnmpd/ntpsnmpd.man.in@1.150 +6 -3
+    Autogen documentation cleanup
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.150 +7 -4
+    Autogen documentation cleanup
+
+  scripts/invoke-ntp-wait.texi@1.139 +7 -3
+    Autogen documentation cleanup
+
+  scripts/ntp-wait-opts.def@1.5 +9 -1
+    Autogen documentation cleanup
+
+  scripts/ntp-wait.1ntp-waitman@1.150 +21 -3
+    Autogen documentation cleanup
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.150 +22 -4
+    Autogen documentation cleanup
+
+  scripts/ntp-wait.html@1.154 +74 -39
+    Autogen documentation cleanup
+
+  scripts/ntp-wait.man.in@1.150 +21 -3
+    Autogen documentation cleanup
+
+  scripts/ntp-wait.mdoc.in@1.150 +22 -4
+    Autogen documentation cleanup
+
+  sntp/invoke-sntp.texi@1.319 +1 -1
+    Autogen documentation cleanup
+
+  sntp/sntp-opts.c@1.334 +1 -1
+    Autogen documentation cleanup
+
+  sntp/sntp-opts.h@1.334 +1 -1
+    Autogen documentation cleanup
+
+  sntp/sntp.1sntpman@1.154 +66 -2
+    Autogen documentation cleanup
+
+  sntp/sntp.1sntpmdoc@1.154 +67 -3
+    Autogen documentation cleanup
+
+  sntp/sntp.html@1.334 +114 -89
+    Autogen documentation cleanup
+
+  sntp/sntp.man.in@1.154 +66 -2
+    Autogen documentation cleanup
+
+  sntp/sntp.mdoc.in@1.154 +67 -3
+    Autogen documentation cleanup
+
+  util/invoke-ntp-keygen.texi@1.322 +2 -1
+    Autogen documentation cleanup
+
+  util/ntp-keygen-opts.c@1.336 +1 -1
+    Autogen documentation cleanup
+
+  util/ntp-keygen-opts.def@1.21 +1 -0
+    Autogen documentation cleanup
+
+  util/ntp-keygen-opts.h@1.336 +1 -1
+    Autogen documentation cleanup
+
+  util/ntp-keygen.1ntp-keygenman@1.150 +721 -3
+    Autogen documentation cleanup
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.150 +708 -4
+    Autogen documentation cleanup
+
+  util/ntp-keygen.man.in@1.150 +721 -3
+    Autogen documentation cleanup
+
+  util/ntp-keygen.mdoc.in@1.150 +708 -4
+    Autogen documentation cleanup
+
 ChangeSet@1.2839, 2012-12-06 07:46:22+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P332
   TAG: NTP_4_2_7P332
