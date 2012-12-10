@@ -1,3 +1,236 @@
+ChangeSet@1.2844, 2012-12-10 11:42:46+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P334
+  TAG: NTP_4_2_7P334
+
+  ChangeLog@1.1206 +1 -0
+    NTP_4_2_7P334
+
+  ntpd/invoke-ntp.conf.texi@1.8 +1 -1
+    NTP_4_2_7P334
+
+  ntpd/invoke-ntp.keys.texi@1.8 +1 -1
+    NTP_4_2_7P334
+
+  ntpd/invoke-ntpd.texi@1.324 +2 -2
+    NTP_4_2_7P334
+
+  ntpd/ntp.conf.5man@1.42 +2 -2
+    NTP_4_2_7P334
+
+  ntpd/ntp.conf.5mdoc@1.42 +2 -2
+    NTP_4_2_7P334
+
+  ntpd/ntp.conf.html@1.7 +1 -1
+    NTP_4_2_7P334
+
+  ntpd/ntp.conf.man.in@1.42 +2 -2
+    NTP_4_2_7P334
+
+  ntpd/ntp.conf.mdoc.in@1.42 +2 -2
+    NTP_4_2_7P334
+
+  ntpd/ntp.keys.5man@1.42 +2 -2
+    NTP_4_2_7P334
+
+  ntpd/ntp.keys.5mdoc@1.42 +2 -2
+    NTP_4_2_7P334
+
+  ntpd/ntp.keys.html@1.8 +1 -1
+    NTP_4_2_7P334
+
+  ntpd/ntp.keys.man.in@1.42 +2 -2
+    NTP_4_2_7P334
+
+  ntpd/ntp.keys.mdoc.in@1.42 +2 -2
+    NTP_4_2_7P334
+
+  ntpd/ntpd-opts.c@1.342 +4 -4
+    NTP_4_2_7P334
+
+  ntpd/ntpd-opts.h@1.342 +3 -3
+    NTP_4_2_7P334
+
+  ntpd/ntpd.1ntpdman@1.153 +2 -2
+    NTP_4_2_7P334
+
+  ntpd/ntpd.1ntpdmdoc@1.153 +2 -2
+    NTP_4_2_7P334
+
+  ntpd/ntpd.man.in@1.153 +2 -2
+    NTP_4_2_7P334
+
+  ntpd/ntpd.mdoc.in@1.153 +2 -2
+    NTP_4_2_7P334
+
+  ntpdc/invoke-ntpdc.texi@1.321 +2 -2
+    NTP_4_2_7P334
+
+  ntpdc/ntpdc-opts.c@1.336 +4 -4
+    NTP_4_2_7P334
+
+  ntpdc/ntpdc-opts.h@1.336 +3 -3
+    NTP_4_2_7P334
+
+  ntpdc/ntpdc.1ntpdcman@1.152 +2 -2
+    NTP_4_2_7P334
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.152 +2 -2
+    NTP_4_2_7P334
+
+  ntpdc/ntpdc.html@1.164 +2 -2
+    NTP_4_2_7P334
+
+  ntpdc/ntpdc.man.in@1.152 +2 -2
+    NTP_4_2_7P334
+
+  ntpdc/ntpdc.mdoc.in@1.152 +2 -2
+    NTP_4_2_7P334
+
+  ntpq/invoke-ntpq.texi@1.323 +2 -2
+    NTP_4_2_7P334
+
+  ntpq/ntpq-opts.c@1.338 +4 -4
+    NTP_4_2_7P334
+
+  ntpq/ntpq-opts.h@1.338 +3 -3
+    NTP_4_2_7P334
+
+  ntpq/ntpq.1ntpqman@1.152 +2 -2
+    NTP_4_2_7P334
+
+  ntpq/ntpq.1ntpqmdoc@1.152 +2 -2
+    NTP_4_2_7P334
+
+  ntpq/ntpq.man.in@1.152 +2 -2
+    NTP_4_2_7P334
+
+  ntpq/ntpq.mdoc.in@1.152 +2 -2
+    NTP_4_2_7P334
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.323 +2 -2
+    NTP_4_2_7P334
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.338 +4 -4
+    NTP_4_2_7P334
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.338 +3 -3
+    NTP_4_2_7P334
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.152 +2 -2
+    NTP_4_2_7P334
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.152 +2 -2
+    NTP_4_2_7P334
+
+  ntpsnmpd/ntpsnmpd.man.in@1.152 +2 -2
+    NTP_4_2_7P334
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.152 +2 -2
+    NTP_4_2_7P334
+
+  packageinfo.sh@1.337 +1 -1
+    NTP_4_2_7P334
+
+  scripts/invoke-ntp-wait.texi@1.141 +1 -1
+    NTP_4_2_7P334
+
+  scripts/ntp-wait.1ntp-waitman@1.152 +2 -2
+    NTP_4_2_7P334
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.152 +2 -2
+    NTP_4_2_7P334
+
+  scripts/ntp-wait.html@1.156 +1 -1
+    NTP_4_2_7P334
+
+  scripts/ntp-wait.man.in@1.152 +2 -2
+    NTP_4_2_7P334
+
+  scripts/ntp-wait.mdoc.in@1.152 +2 -2
+    NTP_4_2_7P334
+
+  sntp/invoke-sntp.texi@1.321 +2 -2
+    NTP_4_2_7P334
+
+  sntp/sntp-opts.c@1.336 +4 -4
+    NTP_4_2_7P334
+
+  sntp/sntp-opts.h@1.336 +3 -3
+    NTP_4_2_7P334
+
+  sntp/sntp.1sntpman@1.156 +2 -2
+    NTP_4_2_7P334
+
+  sntp/sntp.1sntpmdoc@1.156 +2 -2
+    NTP_4_2_7P334
+
+  sntp/sntp.html@1.336 +2 -2
+    NTP_4_2_7P334
+
+  sntp/sntp.man.in@1.156 +2 -2
+    NTP_4_2_7P334
+
+  sntp/sntp.mdoc.in@1.156 +2 -2
+    NTP_4_2_7P334
+
+  util/invoke-ntp-keygen.texi@1.324 +154 -2
+    NTP_4_2_7P334
+
+  util/ntp-keygen-opts.c@1.338 +4 -4
+    NTP_4_2_7P334
+
+  util/ntp-keygen-opts.h@1.338 +3 -3
+    NTP_4_2_7P334
+
+  util/ntp-keygen.1ntp-keygenman@1.152 +2 -2
+    NTP_4_2_7P334
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.152 +2 -2
+    NTP_4_2_7P334
+
+  util/ntp-keygen.html@1.2 +115 -174
+    NTP_4_2_7P334
+
+  util/ntp-keygen.man.in@1.152 +2 -2
+    NTP_4_2_7P334
+
+  util/ntp-keygen.mdoc.in@1.152 +2 -2
+    NTP_4_2_7P334
+
+ChangeSet@1.2843, 2012-12-10 04:25:24-05:00, stenn@psp-deb1.ntp.org
+  [Bug 2114] Update tests for sntp's synch distance
+
+  ChangeLog@1.1205 +1 -0
+    [Bug 2114] Update tests for sntp's synch distance
+
+  sntp/tests/packetHandling.cpp@1.10 +3 -2
+    [Bug 2114] Update tests for sntp's synch distance
+
+ChangeSet@1.2842, 2012-12-10 04:23:36-05:00, stenn@psp-deb1.ntp.org
+  Create ntp-keygen.{html,texi}
+
+  .point-changed-filelist@1.17 +1 -0
+    Create ntp-keygen.{html,texi}
+
+  ChangeLog@1.1204 +1 -0
+    Create ntp-keygen.{html,texi}
+
+  util/Makefile.am@1.74 +11 -0
+    Create ntp-keygen.{html,texi}
+
+  util/ntp-keygen-opts.def@1.22 +130 -0
+    Create ntp-keygen.{html,texi}
+
+  util/ntp-keygen.html@1.1 +1874 -0
+    BitKeeper file /home/stenn/ntp-dev-autogen/util/ntp-keygen.html
+
+  util/ntp-keygen.html@1.0 +0 -0
+
+  util/ntp-keygen.texi@1.1 +274 -0
+    BitKeeper file /home/stenn/ntp-dev-autogen/util/ntp-keygen.texi
+
+  util/ntp-keygen.texi@1.0 +0 -0
+
 ChangeSet@1.2841, 2012-12-07 11:33:34+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P333
   TAG: NTP_4_2_7P333
