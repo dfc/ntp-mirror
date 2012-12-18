@@ -1,3 +1,297 @@
+ChangeSet@1.2853, 2012-12-18 09:00:04+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P335
+  TAG: NTP_4_2_7P335
+
+  ChangeLog@1.1210 +1 -0
+    NTP_4_2_7P335
+
+  ntpd/invoke-ntp.conf.texi@1.9 +410 -1484
+    NTP_4_2_7P335
+
+  ntpd/invoke-ntp.keys.texi@1.9 +13 -118
+    NTP_4_2_7P335
+
+  ntpd/invoke-ntpd.texi@1.325 +87 -127
+    NTP_4_2_7P335
+
+  ntpd/ntp.conf.5man@1.43 +2 -2
+    NTP_4_2_7P335
+
+  ntpd/ntp.conf.5mdoc@1.43 +2 -2
+    NTP_4_2_7P335
+
+  ntpd/ntp.conf.html@1.8 +5 -4
+    NTP_4_2_7P335
+
+  ntpd/ntp.conf.man.in@1.43 +2 -2
+    NTP_4_2_7P335
+
+  ntpd/ntp.conf.mdoc.in@1.43 +2 -2
+    NTP_4_2_7P335
+
+  ntpd/ntp.keys.5man@1.43 +2 -2
+    NTP_4_2_7P335
+
+  ntpd/ntp.keys.5mdoc@1.43 +2 -2
+    NTP_4_2_7P335
+
+  ntpd/ntp.keys.html@1.9 +5 -4
+    NTP_4_2_7P335
+
+  ntpd/ntp.keys.man.in@1.43 +2 -2
+    NTP_4_2_7P335
+
+  ntpd/ntp.keys.mdoc.in@1.43 +2 -2
+    NTP_4_2_7P335
+
+  ntpd/ntpd-opts.c@1.343 +4 -4
+    NTP_4_2_7P335
+
+  ntpd/ntpd-opts.h@1.343 +3 -3
+    NTP_4_2_7P335
+
+  ntpd/ntpd.1ntpdman@1.154 +43 -47
+    NTP_4_2_7P335
+
+  ntpd/ntpd.1ntpdmdoc@1.154 +43 -47
+    NTP_4_2_7P335
+
+  ntpd/ntpd.html@1.2 +97 -139
+    NTP_4_2_7P335
+
+  ntpd/ntpd.man.in@1.154 +43 -47
+    NTP_4_2_7P335
+
+  ntpd/ntpd.mdoc.in@1.154 +43 -47
+    NTP_4_2_7P335
+
+  ntpdc/invoke-ntpdc.texi@1.322 +89 -299
+    NTP_4_2_7P335
+
+  ntpdc/ntpdc-opts.c@1.337 +4 -4
+    NTP_4_2_7P335
+
+  ntpdc/ntpdc-opts.h@1.337 +3 -3
+    NTP_4_2_7P335
+
+  ntpdc/ntpdc.1ntpdcman@1.153 +2 -2
+    NTP_4_2_7P335
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.153 +2 -2
+    NTP_4_2_7P335
+
+  ntpdc/ntpdc.html@1.165 +26 -725
+    NTP_4_2_7P335
+
+  ntpdc/ntpdc.man.in@1.153 +2 -2
+    NTP_4_2_7P335
+
+  ntpdc/ntpdc.mdoc.in@1.153 +2 -2
+    NTP_4_2_7P335
+
+  ntpq/invoke-ntpq.texi@1.324 +27 -83
+    NTP_4_2_7P335
+
+  ntpq/ntpq-opts.c@1.339 +4 -4
+    NTP_4_2_7P335
+
+  ntpq/ntpq-opts.h@1.339 +3 -3
+    NTP_4_2_7P335
+
+  ntpq/ntpq.1ntpqman@1.153 +2 -2
+    NTP_4_2_7P335
+
+  ntpq/ntpq.1ntpqmdoc@1.153 +2 -2
+    NTP_4_2_7P335
+
+  ntpq/ntpq.man.in@1.153 +2 -2
+    NTP_4_2_7P335
+
+  ntpq/ntpq.mdoc.in@1.153 +2 -2
+    NTP_4_2_7P335
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.324 +2 -5
+    NTP_4_2_7P335
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.339 +4 -4
+    NTP_4_2_7P335
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.339 +3 -3
+    NTP_4_2_7P335
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.153 +2 -2
+    NTP_4_2_7P335
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.153 +2 -2
+    NTP_4_2_7P335
+
+  ntpsnmpd/ntpsnmpd.man.in@1.153 +2 -2
+    NTP_4_2_7P335
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.153 +2 -2
+    NTP_4_2_7P335
+
+  packageinfo.sh@1.338 +1 -1
+    NTP_4_2_7P335
+
+  scripts/invoke-ntp-wait.texi@1.142 +3 -10
+    NTP_4_2_7P335
+
+  scripts/ntp-wait.1ntp-waitman@1.153 +2 -2
+    NTP_4_2_7P335
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.153 +2 -2
+    NTP_4_2_7P335
+
+  scripts/ntp-wait.html@1.157 +16 -52
+    NTP_4_2_7P335
+
+  scripts/ntp-wait.man.in@1.153 +2 -2
+    NTP_4_2_7P335
+
+  scripts/ntp-wait.mdoc.in@1.153 +2 -2
+    NTP_4_2_7P335
+
+  sntp/invoke-sntp.texi@1.322 +14 -57
+    NTP_4_2_7P335
+
+  sntp/sntp-opts.c@1.337 +4 -4
+    NTP_4_2_7P335
+
+  sntp/sntp-opts.h@1.337 +3 -3
+    NTP_4_2_7P335
+
+  sntp/sntp.1sntpman@1.157 +2 -2
+    NTP_4_2_7P335
+
+  sntp/sntp.1sntpmdoc@1.157 +2 -2
+    NTP_4_2_7P335
+
+  sntp/sntp.html@1.337 +15 -58
+    NTP_4_2_7P335
+
+  sntp/sntp.man.in@1.157 +2 -2
+    NTP_4_2_7P335
+
+  sntp/sntp.mdoc.in@1.157 +2 -2
+    NTP_4_2_7P335
+
+  util/invoke-ntp-keygen.texi@1.325 +107 -254
+    NTP_4_2_7P335
+
+  util/ntp-keygen-opts.c@1.339 +4 -4
+    NTP_4_2_7P335
+
+  util/ntp-keygen-opts.h@1.339 +3 -3
+    NTP_4_2_7P335
+
+  util/ntp-keygen.1ntp-keygenman@1.153 +2 -2
+    NTP_4_2_7P335
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.153 +2 -2
+    NTP_4_2_7P335
+
+  util/ntp-keygen.html@1.3 +152 -2
+    NTP_4_2_7P335
+
+  util/ntp-keygen.man.in@1.153 +2 -2
+    NTP_4_2_7P335
+
+  util/ntp-keygen.mdoc.in@1.153 +2 -2
+    NTP_4_2_7P335
+
+ChangeSet@1.2852, 2012-12-17 05:34:02-05:00, stenn@deacon.udel.edu
+  nothing
+
+  ChangeLog@1.1209 +0 -0
+    nothing
+
+ChangeSet@1.2851, 2012-12-17 09:43:26+00:00, stenn@psp-fb1.ntp.org
+  Update documentation templates and definitions
+
+  sntp/ag-tpl/agtexi-file.tpl@1.3 +5 -2
+    Update documentation templates and definitions
+
+ChangeSet@1.2850, 2012-12-16 10:32:46+00:00, stenn@psp-fb1.ntp.org
+  Update documentation templates and definitions
+
+  sntp/ag-tpl/mdoc2texi@1.3 +22 -5
+    Update documentation templates and definitions
+
+ChangeSet@1.2849, 2012-12-16 09:50:14+00:00, stenn@psp-fb1.ntp.org
+  Update documentation templates and definitions
+
+  sntp/ag-tpl/mdoc2texi@1.2 +121 -10
+    Update documentation templates and definitions
+
+ChangeSet@1.2848, 2012-12-16 05:08:04+00:00, stenn@psp-fb1.ntp.org
+  Update documentation templates and definitions
+
+  ntpd/ntpd.html@1.1 +1655 -0
+    BitKeeper file /a/etc/amd.stage/thump2-g3/export/ntp/home/stenn/ntp-dev-autogen/ntpd/ntpd.html
+
+  ntpd/ntpd.html@1.0 +0 -0
+
+  ntpd/ntpdbase-opts.def@1.25 +45 -45
+    Update documentation templates and definitions
+
+  sntp/ag-tpl/mdoc2texi@1.1 +529 -0
+    BitKeeper file /a/etc/amd.stage/thump2-g3/export/ntp/home/stenn/ntp-dev-autogen/sntp/ag-tpl/mdoc2texi
+
+  sntp/ag-tpl/mdoc2texi@1.0 +0 -0
+
+ChangeSet@1.2847, 2012-12-12 09:52:10+00:00, stenn@psp-fb1.ntp.org
+  Update documentation templates and definitions
+
+  .point-changed-filelist@1.18 +1 -0
+    Update documentation templates and definitions
+
+  ntpd/Makefile.am@1.127 +6 -0
+    Update documentation templates and definitions
+
+  ntpd/ntpd.texi@1.1 +113 -0
+    BitKeeper file /a/etc/amd.stage/thump2-g3/export/ntp/home/stenn/ntp-dev-autogen/ntpd/ntpd.texi
+
+  ntpd/ntpd.texi@1.0 +0 -0
+
+ChangeSet@1.2846, 2012-12-12 08:13:15+00:00, stenn@psp-fb1.ntp.org
+  Update documentation templates and definitions
+
+  ChangeLog@1.1208 +1 -0
+    Update documentation templates and definitions
+
+  ntpd/invoke-ntp.conf.menu@1.2 +1 -1
+    Update documentation templates and definitions
+
+  ntpd/invoke-ntp.keys.menu@1.2 +1 -1
+    Update documentation templates and definitions
+
+  ntpd/ntp.conf.texi@1.4 +3 -3
+    Update documentation templates and definitions
+
+  ntpd/ntp.keys.texi@1.4 +3 -3
+    Update documentation templates and definitions
+
+  scripts/ntp-wait.texi@1.3 +15 -45
+    Update documentation templates and definitions
+
+  sntp/ag-tpl/agtexi-file.tpl@1.2 +0 -559
+    Update documentation templates and definitions
+
+ChangeSet@1.2845, 2012-12-11 05:37:07-05:00, stenn@psp-deb1.ntp.org
+  Create agtexi-file.tpl
+
+  ChangeLog@1.1207 +1 -0
+    Create agtexi-file.tpl
+
+  ntpd/Makefile.am@1.126 +2 -2
+    Create agtexi-file.tpl
+
+  sntp/ag-tpl/agtexi-file.tpl@1.1 +884 -0
+    BitKeeper file /home/stenn/ntp-dev-autogen/sntp/ag-tpl/agtexi-file.tpl
+
+  sntp/ag-tpl/agtexi-file.tpl@1.0 +0 -0
+
 ChangeSet@1.2844, 2012-12-10 11:42:46+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P334
   TAG: NTP_4_2_7P334

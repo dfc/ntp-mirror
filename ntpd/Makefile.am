@@ -141,6 +141,8 @@ EXTRA_DIST =			\
 	ntpd.1ntpdmdoc		\
 	ntpd.man.in		\
 	ntpd.mdoc.in		\
+	ntpd.html		\
+	ntpd.texi		\
 	ntpdbase-opts.def	\
 	refclock_msfees.c	\
 	$(B_S_DIST)		\
@@ -153,6 +155,7 @@ EXTRA_PROGRAMS = check_y2k keyword-gen ntpd ntpdsim
 html_DATA=				\
 	$(srcdir)/ntp.conf.html		\
 	$(srcdir)/ntp.keys.html		\
+	$(srcdir)/ntpd.html		\
 	$(NULL)
 
 noinst_DATA =				\
@@ -325,19 +328,22 @@ $(srcdir)/invoke-ntp.conf.menu: $(srcdir)/invoke-ntp.conf.texi
 	@: do-nothing action to avoid default SCCS get, .menu built with .texi
 
 $(srcdir)/invoke-ntp.conf.texi: $(srcdir)/ntp.conf.def $(std_def_list)
-	$(run_ag) -Tagtexi-cmd.tpl -DLEVEL=section ntp.conf.def
+	$(run_ag) -Tagtexi-file.tpl -DLEVEL=section ntp.conf.def
 
 $(srcdir)/invoke-ntp.keys.menu: $(srcdir)/invoke-ntp.keys.texi
 	@: do-nothing action to avoid default SCCS get, .menu built with .texi
 
 $(srcdir)/invoke-ntp.keys.texi: $(srcdir)/ntp.keys.def $(std_def_list)
-	$(run_ag) -Tagtexi-cmd.tpl -DLEVEL=section ntp.keys.def
+	$(run_ag) -Tagtexi-file.tpl -DLEVEL=section ntp.keys.def
 
 $(srcdir)/ntp.conf.html: $(srcdir)/ntp.conf.texi $(top_srcdir)/sntp/include/version.texi
 	cd $(srcdir) && ( makeinfo --force --html --no-split -o ntp.conf.html ntp.conf.texi || true )
 
 $(srcdir)/ntp.keys.html: $(srcdir)/ntp.keys.texi $(top_srcdir)/sntp/include/version.texi
 	cd $(srcdir) && ( makeinfo --force --html --no-split -o ntp.keys.html ntp.keys.texi || true )
+
+$(srcdir)/ntpd.html: $(srcdir)/ntpd.texi $(top_srcdir)/sntp/include/version.texi
+	cd $(srcdir) && ( makeinfo --force --html --no-split -o ntpd.html ntpd.texi || true )
 
 ###
 
