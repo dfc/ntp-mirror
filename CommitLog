@@ -1,3 +1,214 @@
+ChangeSet@1.2857, 2012-12-22 11:54:46+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P337
+  TAG: NTP_4_2_7P337
+
+  ChangeLog@1.1214 +1 -0
+    NTP_4_2_7P337
+
+  ntpd/invoke-ntp.conf.texi@1.11 +1 -1
+    NTP_4_2_7P337
+
+  ntpd/invoke-ntp.keys.texi@1.11 +1 -1
+    NTP_4_2_7P337
+
+  ntpd/invoke-ntpd.texi@1.327 +2 -2
+    NTP_4_2_7P337
+
+  ntpd/ntp.conf.5man@1.45 +2 -2
+    NTP_4_2_7P337
+
+  ntpd/ntp.conf.5mdoc@1.45 +2 -2
+    NTP_4_2_7P337
+
+  ntpd/ntp.conf.html@1.10 +1 -1
+    NTP_4_2_7P337
+
+  ntpd/ntp.conf.man.in@1.45 +2 -2
+    NTP_4_2_7P337
+
+  ntpd/ntp.conf.mdoc.in@1.45 +2 -2
+    NTP_4_2_7P337
+
+  ntpd/ntp.keys.5man@1.45 +2 -2
+    NTP_4_2_7P337
+
+  ntpd/ntp.keys.5mdoc@1.45 +2 -2
+    NTP_4_2_7P337
+
+  ntpd/ntp.keys.html@1.11 +1 -1
+    NTP_4_2_7P337
+
+  ntpd/ntp.keys.man.in@1.45 +2 -2
+    NTP_4_2_7P337
+
+  ntpd/ntp.keys.mdoc.in@1.45 +2 -2
+    NTP_4_2_7P337
+
+  ntpd/ntpd-opts.c@1.345 +4 -4
+    NTP_4_2_7P337
+
+  ntpd/ntpd-opts.h@1.345 +3 -3
+    NTP_4_2_7P337
+
+  ntpd/ntpd.1ntpdman@1.156 +2 -2
+    NTP_4_2_7P337
+
+  ntpd/ntpd.1ntpdmdoc@1.156 +2 -2
+    NTP_4_2_7P337
+
+  ntpd/ntpd.html@1.4 +1 -1
+    NTP_4_2_7P337
+
+  ntpd/ntpd.man.in@1.156 +2 -2
+    NTP_4_2_7P337
+
+  ntpd/ntpd.mdoc.in@1.156 +2 -2
+    NTP_4_2_7P337
+
+  ntpdc/invoke-ntpdc.texi@1.324 +2 -2
+    NTP_4_2_7P337
+
+  ntpdc/ntpdc-opts.c@1.339 +4 -4
+    NTP_4_2_7P337
+
+  ntpdc/ntpdc-opts.h@1.339 +3 -3
+    NTP_4_2_7P337
+
+  ntpdc/ntpdc.1ntpdcman@1.155 +2 -2
+    NTP_4_2_7P337
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.155 +2 -2
+    NTP_4_2_7P337
+
+  ntpdc/ntpdc.html@1.167 +2 -2
+    NTP_4_2_7P337
+
+  ntpdc/ntpdc.man.in@1.155 +2 -2
+    NTP_4_2_7P337
+
+  ntpdc/ntpdc.mdoc.in@1.155 +2 -2
+    NTP_4_2_7P337
+
+  ntpq/invoke-ntpq.texi@1.326 +2 -2
+    NTP_4_2_7P337
+
+  ntpq/ntpq-opts.c@1.341 +4 -4
+    NTP_4_2_7P337
+
+  ntpq/ntpq-opts.h@1.341 +3 -3
+    NTP_4_2_7P337
+
+  ntpq/ntpq.1ntpqman@1.155 +2 -2
+    NTP_4_2_7P337
+
+  ntpq/ntpq.1ntpqmdoc@1.155 +2 -2
+    NTP_4_2_7P337
+
+  ntpq/ntpq.man.in@1.155 +2 -2
+    NTP_4_2_7P337
+
+  ntpq/ntpq.mdoc.in@1.155 +2 -2
+    NTP_4_2_7P337
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.326 +2 -2
+    NTP_4_2_7P337
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.341 +4 -4
+    NTP_4_2_7P337
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.341 +3 -3
+    NTP_4_2_7P337
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.155 +2 -2
+    NTP_4_2_7P337
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.155 +2 -2
+    NTP_4_2_7P337
+
+  ntpsnmpd/ntpsnmpd.man.in@1.155 +2 -2
+    NTP_4_2_7P337
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.155 +2 -2
+    NTP_4_2_7P337
+
+  packageinfo.sh@1.340 +1 -1
+    NTP_4_2_7P337
+
+  scripts/invoke-ntp-wait.texi@1.144 +1 -1
+    NTP_4_2_7P337
+
+  scripts/ntp-wait.1ntp-waitman@1.155 +2 -2
+    NTP_4_2_7P337
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.155 +2 -2
+    NTP_4_2_7P337
+
+  scripts/ntp-wait.html@1.159 +1 -1
+    NTP_4_2_7P337
+
+  scripts/ntp-wait.man.in@1.155 +2 -2
+    NTP_4_2_7P337
+
+  scripts/ntp-wait.mdoc.in@1.155 +2 -2
+    NTP_4_2_7P337
+
+  sntp/invoke-sntp.texi@1.324 +2 -2
+    NTP_4_2_7P337
+
+  sntp/sntp-opts.c@1.339 +4 -4
+    NTP_4_2_7P337
+
+  sntp/sntp-opts.h@1.339 +3 -3
+    NTP_4_2_7P337
+
+  sntp/sntp.1sntpman@1.159 +2 -2
+    NTP_4_2_7P337
+
+  sntp/sntp.1sntpmdoc@1.159 +2 -2
+    NTP_4_2_7P337
+
+  sntp/sntp.html@1.339 +2 -2
+    NTP_4_2_7P337
+
+  sntp/sntp.man.in@1.159 +2 -2
+    NTP_4_2_7P337
+
+  sntp/sntp.mdoc.in@1.159 +2 -2
+    NTP_4_2_7P337
+
+  util/invoke-ntp-keygen.texi@1.327 +2 -2
+    NTP_4_2_7P337
+
+  util/ntp-keygen-opts.c@1.341 +4 -4
+    NTP_4_2_7P337
+
+  util/ntp-keygen-opts.h@1.341 +3 -3
+    NTP_4_2_7P337
+
+  util/ntp-keygen.1ntp-keygenman@1.155 +2 -2
+    NTP_4_2_7P337
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.155 +2 -2
+    NTP_4_2_7P337
+
+  util/ntp-keygen.html@1.5 +2 -2
+    NTP_4_2_7P337
+
+  util/ntp-keygen.man.in@1.155 +2 -2
+    NTP_4_2_7P337
+
+  util/ntp-keygen.mdoc.in@1.155 +2 -2
+    NTP_4_2_7P337
+
+ChangeSet@1.2856, 2012-12-22 06:35:37-05:00, stenn@deacon.udel.edu
+  [Bug 1223] More final cleanup for rlimit changes
+
+  ChangeLog@1.1213 +1 -0
+    [Bug 1223] More final cleanup for rlimit changes
+
+  ntpd/ntp_config.c@1.309 +2 -2
+    [Bug 1223] More final cleanup for rlimit changes
+
 ChangeSet@1.2855, 2012-12-21 23:25:01+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P336
   TAG: NTP_4_2_7P336
