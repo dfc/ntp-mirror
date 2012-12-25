@@ -1,8 +1,8 @@
-.TH ntp-keygen @NTP_KEYGEN_MS@ "22 Dec 2012" "ntp (4.2.7p337)" "User Commands"
+.TH ntp-keygen @NTP_KEYGEN_MS@ "25 Dec 2012" "ntp (4.2.7p338)" "User Commands"
 .\"
 .\"  EDIT THIS FILE WITH CAUTION  (ntp-keygen-opts.man)
 .\"  
-.\"  It has been AutoGen-ed  December 22, 2012 at 11:54:01 AM by AutoGen 5.16.2
+.\"  It has been AutoGen-ed  December 25, 2012 at 11:35:40 AM by AutoGen 5.16.2
 .\"  From the definitions    ntp-keygen-opts.def
 .\"  and the template file   agman-cmd.tpl
 .\"
@@ -47,8 +47,8 @@ privatekey cipher.
 .sp
 Select the cipher which is used to encrypt the files containing
 private keys.  The default is three-key triple DES in CBC mode,
-equivalent to "-C des-ede3-cbc".  The openssl tool lists ciphers
-available in "openssl \-h" output.
+equivalent to "@code{-C des-ede3-cbc".  The openssl tool lists ciphers
+available in "\fBopenssl \-h\fP" output.
 .TP
 .BR \-d ", " -\-debug\-level
 Increase debug verbosity level.
@@ -90,11 +90,12 @@ set Autokey group name.
 Set the optional Autokey group name to name.  This is used in
 the file name of IFF, GQ, and MV client parameters files.  In
 that role, the default is the host name if this option is not
-provided.  The group name, if specified using \-i/--ident or
-using \-s/--subject-name following an '@' character, is also a
-part of the self-signed host certificate's subject and issuer
-names in the form host@group and should match the 'crypto ident'
-or 'server ident' configuration in ntpd's configuration file.
+provided.  The group name, if specified using \fB-i/--ident\fP or
+using \fB-s/--subject-name\fP following an '\fB@\fP' character,
+is also a part of the self-signed host certificate's subject and
+issuer names in the form \fBhost@group\fP and should match the
+'\fBcrypto ident\fP' or '\fBserver ident\fP' configuration in
+\fBntpd\fP's configuration file.
 .TP
 .BR \-l " \fIlifetime\fP, " \-\-lifetime "=" \fIlifetime\fP
 set certificate lifetime.
@@ -130,7 +131,7 @@ public certificates.
 output private password.
 .sp
 Encrypt generated files containing private data with the specified
-password and the cipher selected with \-C/--cipher.
+password and the cipher selected with \fB-C/--cipher\fP.
 .TP
 .BR \-q " \fIpasswd\fP, " \-\-get\-pvt\-passwd "=" \fIpasswd\fP
 input private password.
@@ -148,13 +149,13 @@ sign key.
 set host and optionally group name.
 .sp
 Set the Autokey host name, and optionally, group name specified
-following an '@' character.  The host name is used in the file
+following an '\fB@\fP' character.  The host name is used in the file
 name of generated host and signing certificates, without the
 group name.  The host name, and if provided, group name are used
-in host@group form for the host certificate's subject and issuer
-fields.  Specifying '-s @group' is allowed, and results in
-leaving the host name unchanged while appending @group to the
-subject and issuer fields, as with \-i group.  The group name, or
+in \fBhost@group\fP form for the host certificate's subject and issuer
+fields.  Specifying '\fB-s @group\fP' is allowed, and results in
+leaving the host name unchanged while appending \fB@group\fP to the
+subject and issuer fields, as with \fB-i group\fP.  The group name, or
 if not provided, the host name are also used in the file names
 of IFF, GQ, and MV client parameter files.
 .TP
