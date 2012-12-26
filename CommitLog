@@ -1,8 +1,216 @@
-ChangeSet@1.2861, 2012-12-25 11:36:27+00:00, stenn@deacon.udel.edu
+ChangeSet@1.2864, 2012-12-26 04:12:37+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P339
+  TAG: NTP_4_2_7P339
+
+  ChangeLog@1.1221 +1 -0
+    NTP_4_2_7P339
+
+  ntpd/invoke-ntp.conf.texi@1.13 +36 -39
+    NTP_4_2_7P339
+
+  ntpd/invoke-ntp.keys.texi@1.13 +2 -3
+    NTP_4_2_7P339
+
+  ntpd/invoke-ntpd.texi@1.329 +3 -4
+    NTP_4_2_7P339
+
+  ntpd/ntp.conf.5man@1.47 +2 -2
+    NTP_4_2_7P339
+
+  ntpd/ntp.conf.5mdoc@1.47 +2 -2
+    NTP_4_2_7P339
+
+  ntpd/ntp.conf.html@1.12 +114 -155
+    NTP_4_2_7P339
+
+  ntpd/ntp.conf.man.in@1.47 +2 -2
+    NTP_4_2_7P339
+
+  ntpd/ntp.conf.mdoc.in@1.47 +2 -2
+    NTP_4_2_7P339
+
+  ntpd/ntp.keys.5man@1.47 +2 -2
+    NTP_4_2_7P339
+
+  ntpd/ntp.keys.5mdoc@1.47 +2 -2
+    NTP_4_2_7P339
+
+  ntpd/ntp.keys.html@1.13 +9 -9
+    NTP_4_2_7P339
+
+  ntpd/ntp.keys.man.in@1.47 +2 -2
+    NTP_4_2_7P339
+
+  ntpd/ntp.keys.mdoc.in@1.47 +2 -2
+    NTP_4_2_7P339
+
+  ntpd/ntpd-opts.c@1.347 +4 -4
+    NTP_4_2_7P339
+
+  ntpd/ntpd-opts.h@1.347 +3 -3
+    NTP_4_2_7P339
+
+  ntpd/ntpd.1ntpdman@1.158 +2 -2
+    NTP_4_2_7P339
+
+  ntpd/ntpd.1ntpdmdoc@1.158 +2 -2
+    NTP_4_2_7P339
+
+  ntpd/ntpd.html@1.7 +123 -177
+    NTP_4_2_7P339
+
+  ntpd/ntpd.man.in@1.158 +2 -2
+    NTP_4_2_7P339
+
+  ntpd/ntpd.mdoc.in@1.158 +2 -2
+    NTP_4_2_7P339
+
+  ntpdc/invoke-ntpdc.texi@1.326 +7 -9
+    NTP_4_2_7P339
+
+  ntpdc/ntpdc-opts.c@1.341 +4 -4
+    NTP_4_2_7P339
+
+  ntpdc/ntpdc-opts.h@1.341 +3 -3
+    NTP_4_2_7P339
+
+  ntpdc/ntpdc.1ntpdcman@1.157 +2 -2
+    NTP_4_2_7P339
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.157 +2 -2
+    NTP_4_2_7P339
+
+  ntpdc/ntpdc.html@1.170 +77 -603
+    NTP_4_2_7P339
+
+  ntpdc/ntpdc.man.in@1.157 +2 -2
+    NTP_4_2_7P339
+
+  ntpdc/ntpdc.mdoc.in@1.157 +2 -2
+    NTP_4_2_7P339
+
+  ntpq/invoke-ntpq.texi@1.330 +6 -4
+    NTP_4_2_7P339
+
+  ntpq/ntpq-opts.c@1.344 +4 -4
+    NTP_4_2_7P339
+
+  ntpq/ntpq-opts.h@1.344 +3 -3
+    NTP_4_2_7P339
+
+  ntpq/ntpq.1ntpqman@1.158 +2 -260
+    NTP_4_2_7P339
+
+  ntpq/ntpq.1ntpqmdoc@1.158 +3 -246
+    NTP_4_2_7P339
+
+  ntpq/ntpq.html@1.4 +281 -304
+    NTP_4_2_7P339
+
+  ntpq/ntpq.man.in@1.158 +2 -260
+    NTP_4_2_7P339
+
+  ntpq/ntpq.mdoc.in@1.158 +3 -246
+    NTP_4_2_7P339
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.329 +3 -4
+    NTP_4_2_7P339
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.344 +4 -4
+    NTP_4_2_7P339
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.344 +3 -3
+    NTP_4_2_7P339
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.158 +2 -56
+    NTP_4_2_7P339
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.158 +3 -49
+    NTP_4_2_7P339
+
+  ntpsnmpd/ntpsnmpd.html@1.2 +10 -15
+    NTP_4_2_7P339
+
+  ntpsnmpd/ntpsnmpd.man.in@1.158 +2 -56
+    NTP_4_2_7P339
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.158 +3 -49
+    NTP_4_2_7P339
+
+  packageinfo.sh@1.342 +1 -1
+    NTP_4_2_7P339
+
+  scripts/invoke-ntp-wait.texi@1.146 +2 -1
+    NTP_4_2_7P339
+
+  scripts/ntp-wait.1ntp-waitman@1.157 +2 -2
+    NTP_4_2_7P339
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.157 +1 -1
+    NTP_4_2_7P339
+
+  scripts/ntp-wait.html@1.162 +39 -60
+    NTP_4_2_7P339
+
+  scripts/ntp-wait.man.in@1.157 +2 -2
+    NTP_4_2_7P339
+
+  scripts/ntp-wait.mdoc.in@1.157 +1 -1
+    NTP_4_2_7P339
+
+  sntp/invoke-sntp.texi@1.326 +4 -4
+    NTP_4_2_7P339
+
+  sntp/sntp-opts.c@1.341 +4 -4
+    NTP_4_2_7P339
+
+  sntp/sntp-opts.h@1.341 +3 -3
+    NTP_4_2_7P339
+
+  sntp/sntp.1sntpman@1.161 +2 -2
+    NTP_4_2_7P339
+
+  sntp/sntp.1sntpmdoc@1.161 +2 -2
+    NTP_4_2_7P339
+
+  sntp/sntp.html@1.341 +15 -14
+    NTP_4_2_7P339
+
+  sntp/sntp.man.in@1.161 +2 -2
+    NTP_4_2_7P339
+
+  sntp/sntp.mdoc.in@1.161 +2 -2
+    NTP_4_2_7P339
+
+  util/invoke-ntp-keygen.texi@1.330 +5 -5
+    NTP_4_2_7P339
+
+  util/ntp-keygen-opts.c@1.344 +4 -4
+    NTP_4_2_7P339
+
+  util/ntp-keygen-opts.h@1.344 +3 -3
+    NTP_4_2_7P339
+
+  util/ntp-keygen.1ntp-keygenman@1.158 +2 -2
+    NTP_4_2_7P339
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.158 +2 -2
+    NTP_4_2_7P339
+
+  util/ntp-keygen.html@1.8 +121 -181
+    NTP_4_2_7P339
+
+  util/ntp-keygen.man.in@1.158 +2 -2
+    NTP_4_2_7P339
+
+  util/ntp-keygen.mdoc.in@1.158 +2 -2
+    NTP_4_2_7P339
+
+ChangeSet@1.2860.1.1, 2012-12-25 11:36:27+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P338
   TAG: NTP_4_2_7P338
 
-  ChangeLog@1.1218 +1 -0
+  ChangeLog@1.1217.1.1 +1 -0
     NTP_4_2_7P338
 
   ntpd/invoke-ntp.conf.texi@1.12 +118 -160
@@ -56,7 +264,7 @@ ChangeSet@1.2861, 2012-12-25 11:36:27+00:00, stenn@deacon.udel.edu
   ntpd/ntpd.1ntpdmdoc@1.157 +2 -2
     NTP_4_2_7P338
 
-  ntpd/ntpd.html@1.5 +1 -1
+  ntpd/ntpd.html@1.4.1.1 +1 -1
     NTP_4_2_7P338
 
   ntpd/ntpd.man.in@1.157 +2 -2
@@ -80,7 +288,7 @@ ChangeSet@1.2861, 2012-12-25 11:36:27+00:00, stenn@deacon.udel.edu
   ntpdc/ntpdc.1ntpdcmdoc@1.156 +2 -2
     NTP_4_2_7P338
 
-  ntpdc/ntpdc.html@1.168 +5 -5
+  ntpdc/ntpdc.html@1.167.1.1 +5 -5
     NTP_4_2_7P338
 
   ntpdc/ntpdc.man.in@1.156 +2 -2
@@ -89,49 +297,49 @@ ChangeSet@1.2861, 2012-12-25 11:36:27+00:00, stenn@deacon.udel.edu
   ntpdc/ntpdc.mdoc.in@1.156 +2 -2
     NTP_4_2_7P338
 
-  ntpq/invoke-ntpq.texi@1.328 +7 -7
+  ntpq/invoke-ntpq.texi@1.327.1.1 +7 -7
     NTP_4_2_7P338
 
-  ntpq/ntpq-opts.c@1.342 +4 -4
+  ntpq/ntpq-opts.c@1.341.1.1 +4 -4
     NTP_4_2_7P338
 
-  ntpq/ntpq-opts.h@1.342 +3 -3
+  ntpq/ntpq-opts.h@1.341.1.1 +3 -3
     NTP_4_2_7P338
 
-  ntpq/ntpq.1ntpqman@1.156 +2 -2
+  ntpq/ntpq.1ntpqman@1.155.1.1 +2 -2
     NTP_4_2_7P338
 
-  ntpq/ntpq.1ntpqmdoc@1.156 +2 -2
+  ntpq/ntpq.1ntpqmdoc@1.155.1.1 +2 -2
     NTP_4_2_7P338
 
-  ntpq/ntpq.html@1.2 +717 -195
+  ntpq/ntpq.html@1.1.1.1 +717 -195
     NTP_4_2_7P338
 
-  ntpq/ntpq.man.in@1.156 +2 -2
+  ntpq/ntpq.man.in@1.155.1.1 +2 -2
     NTP_4_2_7P338
 
-  ntpq/ntpq.mdoc.in@1.156 +2 -2
+  ntpq/ntpq.mdoc.in@1.155.1.1 +2 -2
     NTP_4_2_7P338
 
-  ntpsnmpd/invoke-ntpsnmpd.texi@1.327 +2 -2
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.326.1.1 +2 -2
     NTP_4_2_7P338
 
-  ntpsnmpd/ntpsnmpd-opts.c@1.342 +4 -4
+  ntpsnmpd/ntpsnmpd-opts.c@1.341.1.1 +4 -4
     NTP_4_2_7P338
 
-  ntpsnmpd/ntpsnmpd-opts.h@1.342 +3 -3
+  ntpsnmpd/ntpsnmpd-opts.h@1.341.1.1 +3 -3
     NTP_4_2_7P338
 
-  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.156 +2 -2
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.155.1.1 +2 -2
     NTP_4_2_7P338
 
-  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.156 +2 -2
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.155.1.1 +2 -2
     NTP_4_2_7P338
 
-  ntpsnmpd/ntpsnmpd.man.in@1.156 +2 -2
+  ntpsnmpd/ntpsnmpd.man.in@1.155.1.1 +2 -2
     NTP_4_2_7P338
 
-  ntpsnmpd/ntpsnmpd.mdoc.in@1.156 +2 -2
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.155.1.1 +2 -2
     NTP_4_2_7P338
 
   packageinfo.sh@1.341 +1 -1
@@ -146,7 +354,7 @@ ChangeSet@1.2861, 2012-12-25 11:36:27+00:00, stenn@deacon.udel.edu
   scripts/ntp-wait.1ntp-waitmdoc@1.156 +2 -2
     NTP_4_2_7P338
 
-  scripts/ntp-wait.html@1.160 +3 -3
+  scripts/ntp-wait.html@1.159.1.1 +3 -3
     NTP_4_2_7P338
 
   scripts/ntp-wait.man.in@1.156 +2 -2
@@ -194,7 +402,7 @@ ChangeSet@1.2861, 2012-12-25 11:36:27+00:00, stenn@deacon.udel.edu
   util/ntp-keygen.1ntp-keygenmdoc@1.157 +4 -840
     NTP_4_2_7P338
 
-  util/ntp-keygen.html@1.6 +210 -230
+  util/ntp-keygen.html@1.5.1.1 +210 -230
     NTP_4_2_7P338
 
   util/ntp-keygen.man.in@1.157 +3 -853
@@ -202,6 +410,109 @@ ChangeSet@1.2861, 2012-12-25 11:36:27+00:00, stenn@deacon.udel.edu
 
   util/ntp-keygen.mdoc.in@1.157 +4 -840
     NTP_4_2_7P338
+
+ChangeSet@1.2862, 2012-12-25 11:21:04+00:00, stenn@psp-fb1.ntp.org
+  mdoc2texi fixes: parseQuote, closing of list item tables
+
+  ChangeLog@1.1219 +1 -0
+    mdoc2texi fixes: parseQuote, closing of list item tables
+
+  sntp/ag-tpl/mdoc2texi@1.5 +17 -7
+    mdoc2texi fixes: parseQuote, closing of list item tables
+
+ChangeSet@1.2861, 2012-12-25 11:20:12+00:00, stenn@psp-fb1.ntp.org
+  ntp-wait, ntpd, ntpdc, ntpq, ntpsnmpd autogen documentation updates
+
+  .point-changed-filelist@1.20 +1 -0
+    ntp-wait, ntpd, ntpdc, ntpq, ntpsnmpd autogen documentation updates
+
+  ChangeLog@1.1218 +1 -0
+    ntp-wait, ntpd, ntpdc, ntpq, ntpsnmpd autogen documentation updates
+
+  ntpd/ntpd.html@1.5 +171 -121
+    ntp-wait, ntpd, ntpdc, ntpq, ntpsnmpd autogen documentation updates
+
+  ntpd/ntpd.texi@1.2 +1 -1
+    ntp-wait, ntpd, ntpdc, ntpq, ntpsnmpd autogen documentation updates
+
+  ntpdc/ntpdc.html@1.168 +598 -71
+    ntp-wait, ntpd, ntpdc, ntpq, ntpsnmpd autogen documentation updates
+
+  ntpdc/ntpdc.texi@1.4 +1 -1
+    ntp-wait, ntpd, ntpdc, ntpq, ntpsnmpd autogen documentation updates
+
+  ntpq/invoke-ntpq.texi@1.328 +9 -8
+    ntp-wait, ntpd, ntpdc, ntpq, ntpsnmpd autogen documentation updates
+
+  ntpq/ntpq-opts.c@1.342 +1 -1
+    ntp-wait, ntpd, ntpdc, ntpq, ntpsnmpd autogen documentation updates
+
+  ntpq/ntpq-opts.h@1.342 +1 -1
+    ntp-wait, ntpd, ntpdc, ntpq, ntpsnmpd autogen documentation updates
+
+  ntpq/ntpq.1ntpqman@1.156 +260 -2
+    ntp-wait, ntpd, ntpdc, ntpq, ntpsnmpd autogen documentation updates
+
+  ntpq/ntpq.1ntpqmdoc@1.156 +246 -3
+    ntp-wait, ntpd, ntpdc, ntpq, ntpsnmpd autogen documentation updates
+
+  ntpq/ntpq.html@1.2 +662 -131
+    ntp-wait, ntpd, ntpdc, ntpq, ntpsnmpd autogen documentation updates
+
+  ntpq/ntpq.man.in@1.156 +260 -2
+    ntp-wait, ntpd, ntpdc, ntpq, ntpsnmpd autogen documentation updates
+
+  ntpq/ntpq.mdoc.in@1.156 +246 -3
+    ntp-wait, ntpd, ntpdc, ntpq, ntpsnmpd autogen documentation updates
+
+  ntpq/ntpq.texi@1.3 +16 -21
+    ntp-wait, ntpd, ntpdc, ntpq, ntpsnmpd autogen documentation updates
+
+  ntpsnmpd/Makefile.am@1.38 +12 -0
+    ntp-wait, ntpd, ntpdc, ntpq, ntpsnmpd autogen documentation updates
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.327 +61 -2
+    ntp-wait, ntpd, ntpdc, ntpq, ntpsnmpd autogen documentation updates
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.342 +1 -1
+    ntp-wait, ntpd, ntpdc, ntpq, ntpsnmpd autogen documentation updates
+
+  ntpsnmpd/ntpsnmpd-opts.def@1.5 +47 -3
+    ntp-wait, ntpd, ntpdc, ntpq, ntpsnmpd autogen documentation updates
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.342 +1 -1
+    ntp-wait, ntpd, ntpdc, ntpq, ntpsnmpd autogen documentation updates
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.156 +60 -3
+    ntp-wait, ntpd, ntpdc, ntpq, ntpsnmpd autogen documentation updates
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.156 +53 -4
+    ntp-wait, ntpd, ntpdc, ntpq, ntpsnmpd autogen documentation updates
+
+  ntpsnmpd/ntpsnmpd.html@1.1 +84 -0
+    BitKeeper file /a/etc/amd.stage/thump2-g3/export/ntp/home/stenn/ntp-dev-autogen/ntpsnmpd/ntpsnmpd.html
+
+  ntpsnmpd/ntpsnmpd.html@1.0 +0 -0
+
+  ntpsnmpd/ntpsnmpd.man.in@1.156 +60 -3
+    ntp-wait, ntpd, ntpdc, ntpq, ntpsnmpd autogen documentation updates
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.156 +53 -4
+    ntp-wait, ntpd, ntpdc, ntpq, ntpsnmpd autogen documentation updates
+
+  ntpsnmpd/ntpsnmpd.texi@1.1 +53 -0
+    BitKeeper file /a/etc/amd.stage/thump2-g3/export/ntp/home/stenn/ntp-dev-autogen/ntpsnmpd/ntpsnmpd.texi
+
+  ntpsnmpd/ntpsnmpd.texi@1.0 +0 -0
+
+  scripts/ntp-wait.html@1.160 +59 -37
+    ntp-wait, ntpd, ntpdc, ntpq, ntpsnmpd autogen documentation updates
+
+  scripts/ntp-wait.texi@1.4 +1 -1
+    ntp-wait, ntpd, ntpdc, ntpq, ntpsnmpd autogen documentation updates
+
+  util/ntp-keygen.html@1.6 +429 -383
+    ntp-wait, ntpd, ntpdc, ntpq, ntpsnmpd autogen documentation updates
 
 ChangeSet@1.2860, 2012-12-25 05:14:20+00:00, stenn@psp-fb1.ntp.org
   mdoc2texi fixes: Handle_ArCmFlIc, Handle_Fn, HandleQ

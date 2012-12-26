@@ -1,9 +1,9 @@
-.Dd December 25 2012
+.Dd December 26 2012
 .Dt NTPSNMPD @NTPSNMPD_MS@ User Commands
 .Os SunOS 5.10
 .\"  EDIT THIS FILE WITH CAUTION  (ntpsnmpd-opts.mdoc)
 .\"  
-.\"  It has been AutoGen-ed  December 25, 2012 at 11:35:28 AM by AutoGen 5.16.2
+.\"  It has been AutoGen-ed  December 26, 2012 at 04:11:37 AM by AutoGen 5.16.2
 .\"  From the definitions    ntpsnmpd-opts.def
 .\"  and the template file   agmdoc-cmd.tpl
 .Sh NAME
@@ -36,7 +36,9 @@ The default \fIstring\fP for this option is:
  unix:/var/agentx/master
 .sp
 [<transport\-specifier>:]<transport\-address>
-The default is the Unix Domain socket "unix:/var/agentx/master". Another common alternative is tcp:localhost:705.
+The default "agent X socket" is the Unix Domain socket
+\fIunix:/var/agentx/master\fP.
+Another common alternative is \fItcp:localhost:705\fP.
 .It \-? , " \-\-help"
 Display usage information and exit.
 .It \-! , " \-\-more-help"
@@ -67,6 +69,7 @@ the configuration files.
 The \fIhomerc\fP files are "\fI$HOME\fP", and "\fI.\fP".
 If any of these are directories, then the file \fI.ntprc\fP
 is searched for within those directories.
+.Sh USAGE
 .Sh "ENVIRONMENT"
 See \fBOPTION PRESETS\fP for configuration environment variables.
 .Sh "FILES"
