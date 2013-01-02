@@ -1,3 +1,223 @@
+ChangeSet@1.2872, 2013-01-02 02:21:56+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P343
+  TAG: NTP_4_2_7P343
+
+  ChangeLog@1.1228 +1 -0
+    NTP_4_2_7P343
+
+  ntpd/invoke-ntp.conf.texi@1.17 +1 -1
+    NTP_4_2_7P343
+
+  ntpd/invoke-ntp.keys.texi@1.17 +1 -1
+    NTP_4_2_7P343
+
+  ntpd/invoke-ntpd.texi@1.333 +2 -2
+    NTP_4_2_7P343
+
+  ntpd/ntp.conf.5man@1.51 +3 -3
+    NTP_4_2_7P343
+
+  ntpd/ntp.conf.5mdoc@1.51 +3 -3
+    NTP_4_2_7P343
+
+  ntpd/ntp.conf.html@1.16 +1 -1
+    NTP_4_2_7P343
+
+  ntpd/ntp.conf.man.in@1.51 +3 -3
+    NTP_4_2_7P343
+
+  ntpd/ntp.conf.mdoc.in@1.51 +3 -3
+    NTP_4_2_7P343
+
+  ntpd/ntp.keys.5man@1.51 +3 -3
+    NTP_4_2_7P343
+
+  ntpd/ntp.keys.5mdoc@1.51 +3 -3
+    NTP_4_2_7P343
+
+  ntpd/ntp.keys.html@1.17 +1 -1
+    NTP_4_2_7P343
+
+  ntpd/ntp.keys.man.in@1.51 +3 -3
+    NTP_4_2_7P343
+
+  ntpd/ntp.keys.mdoc.in@1.51 +3 -3
+    NTP_4_2_7P343
+
+  ntpd/ntpd-opts.c@1.351 +6 -6
+    NTP_4_2_7P343
+
+  ntpd/ntpd-opts.h@1.351 +4 -4
+    NTP_4_2_7P343
+
+  ntpd/ntpd.1ntpdman@1.162 +3 -3
+    NTP_4_2_7P343
+
+  ntpd/ntpd.1ntpdmdoc@1.162 +3 -3
+    NTP_4_2_7P343
+
+  ntpd/ntpd.html@1.11 +2 -2
+    NTP_4_2_7P343
+
+  ntpd/ntpd.man.in@1.162 +3 -3
+    NTP_4_2_7P343
+
+  ntpd/ntpd.mdoc.in@1.162 +3 -3
+    NTP_4_2_7P343
+
+  ntpdc/invoke-ntpdc.texi@1.330 +2 -2
+    NTP_4_2_7P343
+
+  ntpdc/ntpdc-opts.c@1.345 +6 -6
+    NTP_4_2_7P343
+
+  ntpdc/ntpdc-opts.h@1.345 +4 -4
+    NTP_4_2_7P343
+
+  ntpdc/ntpdc.1ntpdcman@1.161 +3 -3
+    NTP_4_2_7P343
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.161 +3 -3
+    NTP_4_2_7P343
+
+  ntpdc/ntpdc.html@1.174 +2 -2
+    NTP_4_2_7P343
+
+  ntpdc/ntpdc.man.in@1.161 +3 -3
+    NTP_4_2_7P343
+
+  ntpdc/ntpdc.mdoc.in@1.161 +3 -3
+    NTP_4_2_7P343
+
+  ntpq/invoke-ntpq.texi@1.334 +2 -2
+    NTP_4_2_7P343
+
+  ntpq/ntpq-opts.c@1.348 +6 -6
+    NTP_4_2_7P343
+
+  ntpq/ntpq-opts.h@1.348 +4 -4
+    NTP_4_2_7P343
+
+  ntpq/ntpq.1ntpqman@1.162 +3 -3
+    NTP_4_2_7P343
+
+  ntpq/ntpq.1ntpqmdoc@1.162 +3 -3
+    NTP_4_2_7P343
+
+  ntpq/ntpq.html@1.8 +2 -2
+    NTP_4_2_7P343
+
+  ntpq/ntpq.man.in@1.162 +3 -3
+    NTP_4_2_7P343
+
+  ntpq/ntpq.mdoc.in@1.162 +3 -3
+    NTP_4_2_7P343
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.333 +2 -2
+    NTP_4_2_7P343
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.348 +6 -6
+    NTP_4_2_7P343
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.348 +4 -4
+    NTP_4_2_7P343
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.162 +3 -3
+    NTP_4_2_7P343
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.162 +3 -3
+    NTP_4_2_7P343
+
+  ntpsnmpd/ntpsnmpd.html@1.6 +1 -1
+    NTP_4_2_7P343
+
+  ntpsnmpd/ntpsnmpd.man.in@1.162 +3 -3
+    NTP_4_2_7P343
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.162 +3 -3
+    NTP_4_2_7P343
+
+  packageinfo.sh@1.346 +1 -1
+    NTP_4_2_7P343
+
+  scripts/invoke-ntp-wait.texi@1.150 +1 -1
+    NTP_4_2_7P343
+
+  scripts/ntp-wait.1ntp-waitman@1.161 +3 -3
+    NTP_4_2_7P343
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.161 +3 -3
+    NTP_4_2_7P343
+
+  scripts/ntp-wait.html@1.166 +1 -1
+    NTP_4_2_7P343
+
+  scripts/ntp-wait.man.in@1.161 +3 -3
+    NTP_4_2_7P343
+
+  scripts/ntp-wait.mdoc.in@1.161 +3 -3
+    NTP_4_2_7P343
+
+  sntp/invoke-sntp.texi@1.330 +2 -2
+    NTP_4_2_7P343
+
+  sntp/sntp-opts.c@1.345 +6 -6
+    NTP_4_2_7P343
+
+  sntp/sntp-opts.h@1.345 +4 -4
+    NTP_4_2_7P343
+
+  sntp/sntp.1sntpman@1.165 +3 -3
+    NTP_4_2_7P343
+
+  sntp/sntp.1sntpmdoc@1.165 +3 -3
+    NTP_4_2_7P343
+
+  sntp/sntp.html@1.345 +2 -2
+    NTP_4_2_7P343
+
+  sntp/sntp.man.in@1.165 +3 -3
+    NTP_4_2_7P343
+
+  sntp/sntp.mdoc.in@1.165 +3 -3
+    NTP_4_2_7P343
+
+  util/invoke-ntp-keygen.texi@1.334 +2 -2
+    NTP_4_2_7P343
+
+  util/ntp-keygen-opts.c@1.348 +6 -6
+    NTP_4_2_7P343
+
+  util/ntp-keygen-opts.h@1.348 +4 -4
+    NTP_4_2_7P343
+
+  util/ntp-keygen.1ntp-keygenman@1.162 +3 -3
+    NTP_4_2_7P343
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.162 +3 -3
+    NTP_4_2_7P343
+
+  util/ntp-keygen.html@1.12 +2 -2
+    NTP_4_2_7P343
+
+  util/ntp-keygen.man.in@1.162 +3 -3
+    NTP_4_2_7P343
+
+  util/ntp-keygen.mdoc.in@1.162 +3 -3
+    NTP_4_2_7P343
+
+ChangeSet@1.2871, 2012-12-31 20:47:19-05:00, stenn@deacon.udel.edu
+  Update the copyright year
+
+  ChangeLog@1.1227 +1 -0
+    Update the copyright year
+
+  html/copyright.html@1.61 +1 -1
+    Update the copyright year
+
+  sntp/include/copyright.def@1.21 +1 -1
+    Update the copyright year
+
 ChangeSet@1.2870, 2012-12-31 09:25:54+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P342
   TAG: NTP_4_2_7P342
