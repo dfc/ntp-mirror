@@ -1,3 +1,220 @@
+ChangeSet@1.2881, 2013-01-07 11:42:38+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P347
+  TAG: NTP_4_2_7P347
+
+  ChangeLog@1.1235 +1 -0
+    NTP_4_2_7P347
+
+  ntpd/invoke-ntp.conf.texi@1.21 +1 -1
+    NTP_4_2_7P347
+
+  ntpd/invoke-ntp.keys.texi@1.21 +1 -1
+    NTP_4_2_7P347
+
+  ntpd/invoke-ntpd.texi@1.337 +2 -2
+    NTP_4_2_7P347
+
+  ntpd/ntp.conf.5man@1.55 +3 -3
+    NTP_4_2_7P347
+
+  ntpd/ntp.conf.5mdoc@1.55 +3 -3
+    NTP_4_2_7P347
+
+  ntpd/ntp.conf.html@1.20 +1 -1
+    NTP_4_2_7P347
+
+  ntpd/ntp.conf.man.in@1.55 +3 -3
+    NTP_4_2_7P347
+
+  ntpd/ntp.conf.mdoc.in@1.55 +3 -3
+    NTP_4_2_7P347
+
+  ntpd/ntp.keys.5man@1.55 +3 -3
+    NTP_4_2_7P347
+
+  ntpd/ntp.keys.5mdoc@1.55 +3 -3
+    NTP_4_2_7P347
+
+  ntpd/ntp.keys.html@1.21 +1 -1
+    NTP_4_2_7P347
+
+  ntpd/ntp.keys.man.in@1.55 +3 -3
+    NTP_4_2_7P347
+
+  ntpd/ntp.keys.mdoc.in@1.55 +3 -3
+    NTP_4_2_7P347
+
+  ntpd/ntpd-opts.c@1.355 +4 -4
+    NTP_4_2_7P347
+
+  ntpd/ntpd-opts.h@1.355 +3 -3
+    NTP_4_2_7P347
+
+  ntpd/ntpd.1ntpdman@1.166 +3 -3
+    NTP_4_2_7P347
+
+  ntpd/ntpd.1ntpdmdoc@1.166 +3 -3
+    NTP_4_2_7P347
+
+  ntpd/ntpd.html@1.15 +2 -492
+    NTP_4_2_7P347
+
+  ntpd/ntpd.man.in@1.166 +3 -3
+    NTP_4_2_7P347
+
+  ntpd/ntpd.mdoc.in@1.166 +3 -3
+    NTP_4_2_7P347
+
+  ntpdc/invoke-ntpdc.texi@1.334 +2 -2
+    NTP_4_2_7P347
+
+  ntpdc/ntpdc-opts.c@1.349 +4 -4
+    NTP_4_2_7P347
+
+  ntpdc/ntpdc-opts.h@1.349 +3 -3
+    NTP_4_2_7P347
+
+  ntpdc/ntpdc.1ntpdcman@1.165 +2 -2
+    NTP_4_2_7P347
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.165 +2 -2
+    NTP_4_2_7P347
+
+  ntpdc/ntpdc.html@1.178 +2 -2
+    NTP_4_2_7P347
+
+  ntpdc/ntpdc.man.in@1.165 +2 -2
+    NTP_4_2_7P347
+
+  ntpdc/ntpdc.mdoc.in@1.165 +2 -2
+    NTP_4_2_7P347
+
+  ntpq/invoke-ntpq.texi@1.338 +2 -2
+    NTP_4_2_7P347
+
+  ntpq/ntpq-opts.c@1.352 +4 -4
+    NTP_4_2_7P347
+
+  ntpq/ntpq-opts.h@1.352 +3 -3
+    NTP_4_2_7P347
+
+  ntpq/ntpq.1ntpqman@1.166 +2 -2
+    NTP_4_2_7P347
+
+  ntpq/ntpq.1ntpqmdoc@1.166 +2 -2
+    NTP_4_2_7P347
+
+  ntpq/ntpq.html@1.12 +2 -2
+    NTP_4_2_7P347
+
+  ntpq/ntpq.man.in@1.166 +2 -2
+    NTP_4_2_7P347
+
+  ntpq/ntpq.mdoc.in@1.166 +2 -2
+    NTP_4_2_7P347
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.337 +2 -2
+    NTP_4_2_7P347
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.352 +4 -4
+    NTP_4_2_7P347
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.352 +3 -3
+    NTP_4_2_7P347
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.166 +3 -3
+    NTP_4_2_7P347
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.166 +3 -3
+    NTP_4_2_7P347
+
+  ntpsnmpd/ntpsnmpd.html@1.10 +1 -1
+    NTP_4_2_7P347
+
+  ntpsnmpd/ntpsnmpd.man.in@1.166 +3 -3
+    NTP_4_2_7P347
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.166 +3 -3
+    NTP_4_2_7P347
+
+  packageinfo.sh@1.350 +1 -1
+    NTP_4_2_7P347
+
+  scripts/invoke-ntp-wait.texi@1.154 +1 -1
+    NTP_4_2_7P347
+
+  scripts/ntp-wait.1ntp-waitman@1.165 +3 -3
+    NTP_4_2_7P347
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.165 +3 -3
+    NTP_4_2_7P347
+
+  scripts/ntp-wait.html@1.170 +1 -1
+    NTP_4_2_7P347
+
+  scripts/ntp-wait.man.in@1.165 +3 -3
+    NTP_4_2_7P347
+
+  scripts/ntp-wait.mdoc.in@1.165 +3 -3
+    NTP_4_2_7P347
+
+  sntp/invoke-sntp.texi@1.334 +2 -2
+    NTP_4_2_7P347
+
+  sntp/sntp-opts.c@1.349 +4 -4
+    NTP_4_2_7P347
+
+  sntp/sntp-opts.h@1.349 +3 -3
+    NTP_4_2_7P347
+
+  sntp/sntp.1sntpman@1.169 +3 -3
+    NTP_4_2_7P347
+
+  sntp/sntp.1sntpmdoc@1.169 +3 -3
+    NTP_4_2_7P347
+
+  sntp/sntp.html@1.349 +2 -2
+    NTP_4_2_7P347
+
+  sntp/sntp.man.in@1.169 +3 -3
+    NTP_4_2_7P347
+
+  sntp/sntp.mdoc.in@1.169 +3 -3
+    NTP_4_2_7P347
+
+  util/invoke-ntp-keygen.texi@1.338 +2 -2
+    NTP_4_2_7P347
+
+  util/ntp-keygen-opts.c@1.352 +4 -4
+    NTP_4_2_7P347
+
+  util/ntp-keygen-opts.h@1.352 +3 -3
+    NTP_4_2_7P347
+
+  util/ntp-keygen.1ntp-keygenman@1.166 +3 -3
+    NTP_4_2_7P347
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.166 +3 -3
+    NTP_4_2_7P347
+
+  util/ntp-keygen.html@1.16 +2 -23
+    NTP_4_2_7P347
+
+  util/ntp-keygen.man.in@1.166 +3 -3
+    NTP_4_2_7P347
+
+  util/ntp-keygen.mdoc.in@1.166 +3 -3
+    NTP_4_2_7P347
+
+ChangeSet@1.2880, 2013-01-07 04:15:55-05:00, stenn@deacon.udel.edu
+  [Bug 2325] Re-enable mlockall() check under Linux post-1223 fix
+
+  ChangeLog@1.1234 +1 -0
+    [Bug 2325] Re-enable mlockall() check under Linux post-1223 fix
+
+  configure.ac@1.556 +4 -3
+    [Bug 2325] Re-enable mlockall() check under Linux post-1223 fix
+
 ChangeSet@1.2879, 2013-01-06 11:47:57+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P346
   TAG: NTP_4_2_7P346
