@@ -1,3 +1,222 @@
+ChangeSet@1.2894, 2013-01-21 11:44:44+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P350
+  TAG: NTP_4_2_7P350
+
+  ChangeLog@1.1246 +1 -0
+    NTP_4_2_7P350
+
+  ntpd/invoke-ntp.conf.texi@1.24 +1 -1
+    NTP_4_2_7P350
+
+  ntpd/invoke-ntp.keys.texi@1.24 +1 -1
+    NTP_4_2_7P350
+
+  ntpd/invoke-ntpd.texi@1.340 +2 -2
+    NTP_4_2_7P350
+
+  ntpd/ntp.conf.5man@1.58 +3 -3
+    NTP_4_2_7P350
+
+  ntpd/ntp.conf.5mdoc@1.58 +3 -3
+    NTP_4_2_7P350
+
+  ntpd/ntp.conf.html@1.23 +1 -1
+    NTP_4_2_7P350
+
+  ntpd/ntp.conf.man.in@1.58 +3 -3
+    NTP_4_2_7P350
+
+  ntpd/ntp.conf.mdoc.in@1.58 +3 -3
+    NTP_4_2_7P350
+
+  ntpd/ntp.keys.5man@1.58 +3 -3
+    NTP_4_2_7P350
+
+  ntpd/ntp.keys.5mdoc@1.58 +3 -3
+    NTP_4_2_7P350
+
+  ntpd/ntp.keys.html@1.24 +1 -1
+    NTP_4_2_7P350
+
+  ntpd/ntp.keys.man.in@1.58 +3 -3
+    NTP_4_2_7P350
+
+  ntpd/ntp.keys.mdoc.in@1.58 +3 -3
+    NTP_4_2_7P350
+
+  ntpd/ntpd-opts.c@1.358 +4 -4
+    NTP_4_2_7P350
+
+  ntpd/ntpd-opts.h@1.358 +3 -3
+    NTP_4_2_7P350
+
+  ntpd/ntpd.1ntpdman@1.169 +3 -3
+    NTP_4_2_7P350
+
+  ntpd/ntpd.1ntpdmdoc@1.169 +3 -3
+    NTP_4_2_7P350
+
+  ntpd/ntpd.html@1.18 +2 -2
+    NTP_4_2_7P350
+
+  ntpd/ntpd.man.in@1.169 +3 -3
+    NTP_4_2_7P350
+
+  ntpd/ntpd.mdoc.in@1.169 +3 -3
+    NTP_4_2_7P350
+
+  ntpdc/invoke-ntpdc.texi@1.337 +2 -2
+    NTP_4_2_7P350
+
+  ntpdc/ntpdc-opts.c@1.352 +4 -4
+    NTP_4_2_7P350
+
+  ntpdc/ntpdc-opts.h@1.352 +3 -3
+    NTP_4_2_7P350
+
+  ntpdc/ntpdc.1ntpdcman@1.168 +2 -2
+    NTP_4_2_7P350
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.168 +2 -2
+    NTP_4_2_7P350
+
+  ntpdc/ntpdc.html@1.181 +2 -2
+    NTP_4_2_7P350
+
+  ntpdc/ntpdc.man.in@1.168 +2 -2
+    NTP_4_2_7P350
+
+  ntpdc/ntpdc.mdoc.in@1.168 +2 -2
+    NTP_4_2_7P350
+
+  ntpq/invoke-ntpq.texi@1.341 +2 -2
+    NTP_4_2_7P350
+
+  ntpq/ntpq-opts.c@1.355 +4 -4
+    NTP_4_2_7P350
+
+  ntpq/ntpq-opts.h@1.355 +3 -3
+    NTP_4_2_7P350
+
+  ntpq/ntpq.1ntpqman@1.169 +2 -2
+    NTP_4_2_7P350
+
+  ntpq/ntpq.1ntpqmdoc@1.169 +2 -2
+    NTP_4_2_7P350
+
+  ntpq/ntpq.html@1.15 +2 -2
+    NTP_4_2_7P350
+
+  ntpq/ntpq.man.in@1.169 +2 -2
+    NTP_4_2_7P350
+
+  ntpq/ntpq.mdoc.in@1.169 +2 -2
+    NTP_4_2_7P350
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.340 +2 -2
+    NTP_4_2_7P350
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.355 +4 -4
+    NTP_4_2_7P350
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.355 +3 -3
+    NTP_4_2_7P350
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.169 +3 -3
+    NTP_4_2_7P350
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.169 +3 -3
+    NTP_4_2_7P350
+
+  ntpsnmpd/ntpsnmpd.html@1.13 +1 -1
+    NTP_4_2_7P350
+
+  ntpsnmpd/ntpsnmpd.man.in@1.169 +3 -3
+    NTP_4_2_7P350
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.169 +3 -3
+    NTP_4_2_7P350
+
+  packageinfo.sh@1.353 +1 -1
+    NTP_4_2_7P350
+
+  scripts/invoke-ntp-wait.texi@1.157 +1 -1
+    NTP_4_2_7P350
+
+  scripts/ntp-wait.1ntp-waitman@1.168 +3 -3
+    NTP_4_2_7P350
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.168 +3 -3
+    NTP_4_2_7P350
+
+  scripts/ntp-wait.html@1.173 +1 -1
+    NTP_4_2_7P350
+
+  scripts/ntp-wait.man.in@1.168 +3 -3
+    NTP_4_2_7P350
+
+  scripts/ntp-wait.mdoc.in@1.168 +3 -3
+    NTP_4_2_7P350
+
+  sntp/invoke-sntp.texi@1.337 +2 -2
+    NTP_4_2_7P350
+
+  sntp/sntp-opts.c@1.352 +4 -4
+    NTP_4_2_7P350
+
+  sntp/sntp-opts.h@1.352 +3 -3
+    NTP_4_2_7P350
+
+  sntp/sntp.1sntpman@1.172 +3 -3
+    NTP_4_2_7P350
+
+  sntp/sntp.1sntpmdoc@1.172 +3 -3
+    NTP_4_2_7P350
+
+  sntp/sntp.html@1.352 +2 -2
+    NTP_4_2_7P350
+
+  sntp/sntp.man.in@1.172 +3 -3
+    NTP_4_2_7P350
+
+  sntp/sntp.mdoc.in@1.172 +3 -3
+    NTP_4_2_7P350
+
+  util/invoke-ntp-keygen.texi@1.341 +2 -2
+    NTP_4_2_7P350
+
+  util/ntp-keygen-opts.c@1.355 +4 -4
+    NTP_4_2_7P350
+
+  util/ntp-keygen-opts.h@1.355 +3 -3
+    NTP_4_2_7P350
+
+  util/ntp-keygen.1ntp-keygenman@1.169 +3 -3
+    NTP_4_2_7P350
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.169 +3 -3
+    NTP_4_2_7P350
+
+  util/ntp-keygen.html@1.19 +2 -2
+    NTP_4_2_7P350
+
+  util/ntp-keygen.man.in@1.169 +3 -3
+    NTP_4_2_7P350
+
+  util/ntp-keygen.mdoc.in@1.169 +3 -3
+    NTP_4_2_7P350
+
+ChangeSet@1.2893, 2013-01-20 20:58:35-05:00, stenn@deacon.udel.edu
+  Added sntp/loc/netbsd based on info from Christos Zoulas
+
+  ChangeLog@1.1245 +1 -0
+    Added sntp/loc/netbsd based on info from Christos Zoulas
+
+  sntp/loc/netbsd@1.1 +13 -0
+    BitKeeper file /deacon/backroom/ntp-dev/sntp/loc/netbsd
+
+  sntp/loc/netbsd@1.0 +0 -0
+
 ChangeSet@1.2892, 2013-01-20 11:44:38+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P349
   TAG: NTP_4_2_7P349
