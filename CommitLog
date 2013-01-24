@@ -1,3 +1,220 @@
+ChangeSet@1.2896, 2013-01-24 11:39:40+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P351
+  TAG: NTP_4_2_7P351
+
+  ChangeLog@1.1248 +1 -0
+    NTP_4_2_7P351
+
+  ntpd/invoke-ntp.conf.texi@1.25 +1 -1
+    NTP_4_2_7P351
+
+  ntpd/invoke-ntp.keys.texi@1.25 +1 -1
+    NTP_4_2_7P351
+
+  ntpd/invoke-ntpd.texi@1.341 +2 -2
+    NTP_4_2_7P351
+
+  ntpd/ntp.conf.5man@1.59 +3 -3
+    NTP_4_2_7P351
+
+  ntpd/ntp.conf.5mdoc@1.59 +3 -3
+    NTP_4_2_7P351
+
+  ntpd/ntp.conf.html@1.24 +1 -1
+    NTP_4_2_7P351
+
+  ntpd/ntp.conf.man.in@1.59 +3 -3
+    NTP_4_2_7P351
+
+  ntpd/ntp.conf.mdoc.in@1.59 +3 -3
+    NTP_4_2_7P351
+
+  ntpd/ntp.keys.5man@1.59 +3 -3
+    NTP_4_2_7P351
+
+  ntpd/ntp.keys.5mdoc@1.59 +3 -3
+    NTP_4_2_7P351
+
+  ntpd/ntp.keys.html@1.25 +1 -1
+    NTP_4_2_7P351
+
+  ntpd/ntp.keys.man.in@1.59 +3 -3
+    NTP_4_2_7P351
+
+  ntpd/ntp.keys.mdoc.in@1.59 +3 -3
+    NTP_4_2_7P351
+
+  ntpd/ntpd-opts.c@1.359 +4 -4
+    NTP_4_2_7P351
+
+  ntpd/ntpd-opts.h@1.359 +3 -3
+    NTP_4_2_7P351
+
+  ntpd/ntpd.1ntpdman@1.170 +3 -3
+    NTP_4_2_7P351
+
+  ntpd/ntpd.1ntpdmdoc@1.170 +3 -3
+    NTP_4_2_7P351
+
+  ntpd/ntpd.html@1.19 +2 -2
+    NTP_4_2_7P351
+
+  ntpd/ntpd.man.in@1.170 +3 -3
+    NTP_4_2_7P351
+
+  ntpd/ntpd.mdoc.in@1.170 +3 -3
+    NTP_4_2_7P351
+
+  ntpdc/invoke-ntpdc.texi@1.338 +2 -2
+    NTP_4_2_7P351
+
+  ntpdc/ntpdc-opts.c@1.353 +4 -4
+    NTP_4_2_7P351
+
+  ntpdc/ntpdc-opts.h@1.353 +3 -3
+    NTP_4_2_7P351
+
+  ntpdc/ntpdc.1ntpdcman@1.169 +2 -2
+    NTP_4_2_7P351
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.169 +2 -2
+    NTP_4_2_7P351
+
+  ntpdc/ntpdc.html@1.182 +2 -2
+    NTP_4_2_7P351
+
+  ntpdc/ntpdc.man.in@1.169 +2 -2
+    NTP_4_2_7P351
+
+  ntpdc/ntpdc.mdoc.in@1.169 +2 -2
+    NTP_4_2_7P351
+
+  ntpq/invoke-ntpq.texi@1.342 +2 -2
+    NTP_4_2_7P351
+
+  ntpq/ntpq-opts.c@1.356 +4 -4
+    NTP_4_2_7P351
+
+  ntpq/ntpq-opts.h@1.356 +3 -3
+    NTP_4_2_7P351
+
+  ntpq/ntpq.1ntpqman@1.170 +2 -2
+    NTP_4_2_7P351
+
+  ntpq/ntpq.1ntpqmdoc@1.170 +2 -2
+    NTP_4_2_7P351
+
+  ntpq/ntpq.html@1.16 +2 -2
+    NTP_4_2_7P351
+
+  ntpq/ntpq.man.in@1.170 +2 -2
+    NTP_4_2_7P351
+
+  ntpq/ntpq.mdoc.in@1.170 +2 -2
+    NTP_4_2_7P351
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.341 +2 -2
+    NTP_4_2_7P351
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.356 +4 -4
+    NTP_4_2_7P351
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.356 +3 -3
+    NTP_4_2_7P351
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.170 +3 -3
+    NTP_4_2_7P351
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.170 +3 -3
+    NTP_4_2_7P351
+
+  ntpsnmpd/ntpsnmpd.html@1.14 +1 -1
+    NTP_4_2_7P351
+
+  ntpsnmpd/ntpsnmpd.man.in@1.170 +3 -3
+    NTP_4_2_7P351
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.170 +3 -3
+    NTP_4_2_7P351
+
+  packageinfo.sh@1.354 +1 -1
+    NTP_4_2_7P351
+
+  scripts/invoke-ntp-wait.texi@1.158 +1 -1
+    NTP_4_2_7P351
+
+  scripts/ntp-wait.1ntp-waitman@1.169 +3 -3
+    NTP_4_2_7P351
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.169 +3 -3
+    NTP_4_2_7P351
+
+  scripts/ntp-wait.html@1.174 +1 -1
+    NTP_4_2_7P351
+
+  scripts/ntp-wait.man.in@1.169 +3 -3
+    NTP_4_2_7P351
+
+  scripts/ntp-wait.mdoc.in@1.169 +3 -3
+    NTP_4_2_7P351
+
+  sntp/invoke-sntp.texi@1.338 +2 -2
+    NTP_4_2_7P351
+
+  sntp/sntp-opts.c@1.353 +4 -4
+    NTP_4_2_7P351
+
+  sntp/sntp-opts.h@1.353 +3 -3
+    NTP_4_2_7P351
+
+  sntp/sntp.1sntpman@1.173 +3 -3
+    NTP_4_2_7P351
+
+  sntp/sntp.1sntpmdoc@1.173 +3 -3
+    NTP_4_2_7P351
+
+  sntp/sntp.html@1.353 +2 -2
+    NTP_4_2_7P351
+
+  sntp/sntp.man.in@1.173 +3 -3
+    NTP_4_2_7P351
+
+  sntp/sntp.mdoc.in@1.173 +3 -3
+    NTP_4_2_7P351
+
+  util/invoke-ntp-keygen.texi@1.342 +2 -2
+    NTP_4_2_7P351
+
+  util/ntp-keygen-opts.c@1.356 +4 -4
+    NTP_4_2_7P351
+
+  util/ntp-keygen-opts.h@1.356 +3 -3
+    NTP_4_2_7P351
+
+  util/ntp-keygen.1ntp-keygenman@1.170 +3 -3
+    NTP_4_2_7P351
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.170 +3 -3
+    NTP_4_2_7P351
+
+  util/ntp-keygen.html@1.20 +2 -2
+    NTP_4_2_7P351
+
+  util/ntp-keygen.man.in@1.170 +3 -3
+    NTP_4_2_7P351
+
+  util/ntp-keygen.mdoc.in@1.170 +3 -3
+    NTP_4_2_7P351
+
+ChangeSet@1.2895, 2013-01-23 17:50:49+01:00, burnicki@pc-martin4.
+  [Bug 2328] Don't apply small time adjustments on Windows versions which don't support this.
+
+  ChangeLog@1.1247 +2 -0
+    [Bug 2328] Don't apply small time adjustments on Windows versions which don't support this.
+
+  ports/winnt/ntpd/nt_clockstuff.c@1.59 +58 -0
+    [bug 2328] Don't apply small time adjustments on Windows versions which don't support this.
+
 ChangeSet@1.2894, 2013-01-21 11:44:44+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P350
   TAG: NTP_4_2_7P350
