@@ -1,3 +1,235 @@
+ChangeSet@1.2899, 2013-01-28 02:57:54+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P352
+  TAG: NTP_4_2_7P352
+
+  ChangeLog@1.1250 +1 -0
+    NTP_4_2_7P352
+
+  ntpd/invoke-ntp.conf.texi@1.26 +1 -1
+    NTP_4_2_7P352
+
+  ntpd/invoke-ntp.keys.texi@1.26 +1 -1
+    NTP_4_2_7P352
+
+  ntpd/invoke-ntpd.texi@1.342 +2 -2
+    NTP_4_2_7P352
+
+  ntpd/ntp.conf.5man@1.60 +3 -3
+    NTP_4_2_7P352
+
+  ntpd/ntp.conf.5mdoc@1.60 +3 -3
+    NTP_4_2_7P352
+
+  ntpd/ntp.conf.html@1.25 +1 -1
+    NTP_4_2_7P352
+
+  ntpd/ntp.conf.man.in@1.60 +3 -3
+    NTP_4_2_7P352
+
+  ntpd/ntp.conf.mdoc.in@1.60 +3 -3
+    NTP_4_2_7P352
+
+  ntpd/ntp.keys.5man@1.60 +3 -3
+    NTP_4_2_7P352
+
+  ntpd/ntp.keys.5mdoc@1.60 +3 -3
+    NTP_4_2_7P352
+
+  ntpd/ntp.keys.html@1.26 +1 -1
+    NTP_4_2_7P352
+
+  ntpd/ntp.keys.man.in@1.60 +3 -3
+    NTP_4_2_7P352
+
+  ntpd/ntp.keys.mdoc.in@1.60 +3 -3
+    NTP_4_2_7P352
+
+  ntpd/ntpd-opts.c@1.360 +4 -4
+    NTP_4_2_7P352
+
+  ntpd/ntpd-opts.h@1.360 +3 -3
+    NTP_4_2_7P352
+
+  ntpd/ntpd.1ntpdman@1.171 +3 -3
+    NTP_4_2_7P352
+
+  ntpd/ntpd.1ntpdmdoc@1.171 +3 -3
+    NTP_4_2_7P352
+
+  ntpd/ntpd.html@1.20 +2 -2
+    NTP_4_2_7P352
+
+  ntpd/ntpd.man.in@1.171 +3 -3
+    NTP_4_2_7P352
+
+  ntpd/ntpd.mdoc.in@1.171 +3 -3
+    NTP_4_2_7P352
+
+  ntpdc/invoke-ntpdc.texi@1.339 +2 -2
+    NTP_4_2_7P352
+
+  ntpdc/ntpdc-opts.c@1.354 +4 -4
+    NTP_4_2_7P352
+
+  ntpdc/ntpdc-opts.h@1.354 +3 -3
+    NTP_4_2_7P352
+
+  ntpdc/ntpdc.1ntpdcman@1.170 +2 -2
+    NTP_4_2_7P352
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.170 +2 -2
+    NTP_4_2_7P352
+
+  ntpdc/ntpdc.html@1.183 +2 -2
+    NTP_4_2_7P352
+
+  ntpdc/ntpdc.man.in@1.170 +2 -2
+    NTP_4_2_7P352
+
+  ntpdc/ntpdc.mdoc.in@1.170 +2 -2
+    NTP_4_2_7P352
+
+  ntpq/invoke-ntpq.texi@1.343 +2 -2
+    NTP_4_2_7P352
+
+  ntpq/ntpq-opts.c@1.357 +4 -4
+    NTP_4_2_7P352
+
+  ntpq/ntpq-opts.h@1.357 +3 -3
+    NTP_4_2_7P352
+
+  ntpq/ntpq.1ntpqman@1.171 +2 -2
+    NTP_4_2_7P352
+
+  ntpq/ntpq.1ntpqmdoc@1.171 +2 -2
+    NTP_4_2_7P352
+
+  ntpq/ntpq.html@1.17 +2 -2
+    NTP_4_2_7P352
+
+  ntpq/ntpq.man.in@1.171 +2 -2
+    NTP_4_2_7P352
+
+  ntpq/ntpq.mdoc.in@1.171 +2 -2
+    NTP_4_2_7P352
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.342 +2 -2
+    NTP_4_2_7P352
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.357 +4 -4
+    NTP_4_2_7P352
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.357 +3 -3
+    NTP_4_2_7P352
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.171 +3 -3
+    NTP_4_2_7P352
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.171 +3 -3
+    NTP_4_2_7P352
+
+  ntpsnmpd/ntpsnmpd.html@1.15 +1 -1
+    NTP_4_2_7P352
+
+  ntpsnmpd/ntpsnmpd.man.in@1.171 +3 -3
+    NTP_4_2_7P352
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.171 +3 -3
+    NTP_4_2_7P352
+
+  packageinfo.sh@1.355 +1 -1
+    NTP_4_2_7P352
+
+  scripts/invoke-ntp-wait.texi@1.159 +1 -1
+    NTP_4_2_7P352
+
+  scripts/ntp-wait.1ntp-waitman@1.170 +3 -3
+    NTP_4_2_7P352
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.170 +3 -3
+    NTP_4_2_7P352
+
+  scripts/ntp-wait.html@1.175 +1 -1
+    NTP_4_2_7P352
+
+  scripts/ntp-wait.man.in@1.170 +3 -3
+    NTP_4_2_7P352
+
+  scripts/ntp-wait.mdoc.in@1.170 +3 -3
+    NTP_4_2_7P352
+
+  sntp/invoke-sntp.texi@1.339 +2 -2
+    NTP_4_2_7P352
+
+  sntp/sntp-opts.c@1.354 +4 -4
+    NTP_4_2_7P352
+
+  sntp/sntp-opts.h@1.354 +3 -3
+    NTP_4_2_7P352
+
+  sntp/sntp.1sntpman@1.174 +3 -3
+    NTP_4_2_7P352
+
+  sntp/sntp.1sntpmdoc@1.174 +3 -3
+    NTP_4_2_7P352
+
+  sntp/sntp.html@1.354 +2 -2
+    NTP_4_2_7P352
+
+  sntp/sntp.man.in@1.174 +3 -3
+    NTP_4_2_7P352
+
+  sntp/sntp.mdoc.in@1.174 +3 -3
+    NTP_4_2_7P352
+
+  util/invoke-ntp-keygen.texi@1.343 +2 -2
+    NTP_4_2_7P352
+
+  util/ntp-keygen-opts.c@1.357 +4 -4
+    NTP_4_2_7P352
+
+  util/ntp-keygen-opts.h@1.357 +3 -3
+    NTP_4_2_7P352
+
+  util/ntp-keygen.1ntp-keygenman@1.171 +3 -3
+    NTP_4_2_7P352
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.171 +3 -3
+    NTP_4_2_7P352
+
+  util/ntp-keygen.html@1.21 +2 -2
+    NTP_4_2_7P352
+
+  util/ntp-keygen.man.in@1.171 +3 -3
+    NTP_4_2_7P352
+
+  util/ntp-keygen.mdoc.in@1.171 +3 -3
+    NTP_4_2_7P352
+
+ChangeSet@1.2898, 2013-01-28 00:44:57+00:00, stenn@psp-fb1.ntp.org
+  [Bug 2326] Notice when a new leapfile has been installed
+
+  html/miscopt.html@1.72 +1 -0
+    [Bug 2326] Notice when a new leapfile has been installed
+
+ChangeSet@1.2897, 2013-01-28 00:20:35+00:00, stenn@psp-fb1.ntp.org
+  [Bug 2326] Notice when a new leapfile has been installed
+
+  ChangeLog@1.1249 +1 -0
+    [Bug 2326] Notice when a new leapfile has been installed
+
+  include/ntpd.h@1.173 +1 -0
+    [Bug 2326] Notice when a new leapfile has been installed
+
+  ntpd/ntp_config.c@1.311 +1 -1
+    [Bug 2326] Notice when a new leapfile has been installed
+
+  ntpd/ntp_io.c@1.374 +15 -5
+    [Bug 2326] Notice when a new leapfile has been installed
+
+  ntpd/ntp_util.c@1.100 +60 -5
+    [Bug 2326] Notice when a new leapfile has been installed
+
 ChangeSet@1.2896, 2013-01-24 11:39:40+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P351
   TAG: NTP_4_2_7P351
