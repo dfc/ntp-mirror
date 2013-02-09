@@ -1,3 +1,223 @@
+ChangeSet@1.2901, 2013-02-09 11:31:13+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P353
+  TAG: NTP_4_2_7P353
+
+  ChangeLog@1.1252 +1 -0
+    NTP_4_2_7P353
+
+  ntpd/invoke-ntp.conf.texi@1.27 +1 -1
+    NTP_4_2_7P353
+
+  ntpd/invoke-ntp.keys.texi@1.27 +1 -1
+    NTP_4_2_7P353
+
+  ntpd/invoke-ntpd.texi@1.343 +2 -2
+    NTP_4_2_7P353
+
+  ntpd/ntp.conf.5man@1.61 +3 -3
+    NTP_4_2_7P353
+
+  ntpd/ntp.conf.5mdoc@1.61 +3 -3
+    NTP_4_2_7P353
+
+  ntpd/ntp.conf.html@1.26 +1 -1
+    NTP_4_2_7P353
+
+  ntpd/ntp.conf.man.in@1.61 +3 -3
+    NTP_4_2_7P353
+
+  ntpd/ntp.conf.mdoc.in@1.61 +3 -3
+    NTP_4_2_7P353
+
+  ntpd/ntp.keys.5man@1.61 +3 -3
+    NTP_4_2_7P353
+
+  ntpd/ntp.keys.5mdoc@1.61 +3 -3
+    NTP_4_2_7P353
+
+  ntpd/ntp.keys.html@1.27 +1 -1
+    NTP_4_2_7P353
+
+  ntpd/ntp.keys.man.in@1.61 +3 -3
+    NTP_4_2_7P353
+
+  ntpd/ntp.keys.mdoc.in@1.61 +3 -3
+    NTP_4_2_7P353
+
+  ntpd/ntpd-opts.c@1.361 +4 -4
+    NTP_4_2_7P353
+
+  ntpd/ntpd-opts.h@1.361 +3 -3
+    NTP_4_2_7P353
+
+  ntpd/ntpd.1ntpdman@1.172 +3 -3
+    NTP_4_2_7P353
+
+  ntpd/ntpd.1ntpdmdoc@1.172 +3 -3
+    NTP_4_2_7P353
+
+  ntpd/ntpd.html@1.21 +2 -2
+    NTP_4_2_7P353
+
+  ntpd/ntpd.man.in@1.172 +3 -3
+    NTP_4_2_7P353
+
+  ntpd/ntpd.mdoc.in@1.172 +3 -3
+    NTP_4_2_7P353
+
+  ntpdc/invoke-ntpdc.texi@1.340 +2 -2
+    NTP_4_2_7P353
+
+  ntpdc/ntpdc-opts.c@1.355 +4 -4
+    NTP_4_2_7P353
+
+  ntpdc/ntpdc-opts.h@1.355 +3 -3
+    NTP_4_2_7P353
+
+  ntpdc/ntpdc.1ntpdcman@1.171 +2 -2
+    NTP_4_2_7P353
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.171 +2 -2
+    NTP_4_2_7P353
+
+  ntpdc/ntpdc.html@1.184 +2 -2
+    NTP_4_2_7P353
+
+  ntpdc/ntpdc.man.in@1.171 +2 -2
+    NTP_4_2_7P353
+
+  ntpdc/ntpdc.mdoc.in@1.171 +2 -2
+    NTP_4_2_7P353
+
+  ntpq/invoke-ntpq.texi@1.344 +2 -2
+    NTP_4_2_7P353
+
+  ntpq/ntpq-opts.c@1.358 +4 -4
+    NTP_4_2_7P353
+
+  ntpq/ntpq-opts.h@1.358 +3 -3
+    NTP_4_2_7P353
+
+  ntpq/ntpq.1ntpqman@1.172 +2 -2
+    NTP_4_2_7P353
+
+  ntpq/ntpq.1ntpqmdoc@1.172 +2 -2
+    NTP_4_2_7P353
+
+  ntpq/ntpq.html@1.18 +2 -2
+    NTP_4_2_7P353
+
+  ntpq/ntpq.man.in@1.172 +2 -2
+    NTP_4_2_7P353
+
+  ntpq/ntpq.mdoc.in@1.172 +2 -2
+    NTP_4_2_7P353
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.343 +2 -2
+    NTP_4_2_7P353
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.358 +4 -4
+    NTP_4_2_7P353
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.358 +3 -3
+    NTP_4_2_7P353
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.172 +3 -3
+    NTP_4_2_7P353
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.172 +3 -3
+    NTP_4_2_7P353
+
+  ntpsnmpd/ntpsnmpd.html@1.16 +1 -1
+    NTP_4_2_7P353
+
+  ntpsnmpd/ntpsnmpd.man.in@1.172 +3 -3
+    NTP_4_2_7P353
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.172 +3 -3
+    NTP_4_2_7P353
+
+  packageinfo.sh@1.356 +1 -1
+    NTP_4_2_7P353
+
+  scripts/invoke-ntp-wait.texi@1.160 +1 -1
+    NTP_4_2_7P353
+
+  scripts/ntp-wait.1ntp-waitman@1.171 +3 -3
+    NTP_4_2_7P353
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.171 +3 -3
+    NTP_4_2_7P353
+
+  scripts/ntp-wait.html@1.176 +1 -1
+    NTP_4_2_7P353
+
+  scripts/ntp-wait.man.in@1.171 +3 -3
+    NTP_4_2_7P353
+
+  scripts/ntp-wait.mdoc.in@1.171 +3 -3
+    NTP_4_2_7P353
+
+  sntp/invoke-sntp.texi@1.340 +2 -2
+    NTP_4_2_7P353
+
+  sntp/sntp-opts.c@1.355 +4 -4
+    NTP_4_2_7P353
+
+  sntp/sntp-opts.h@1.355 +3 -3
+    NTP_4_2_7P353
+
+  sntp/sntp.1sntpman@1.175 +3 -3
+    NTP_4_2_7P353
+
+  sntp/sntp.1sntpmdoc@1.175 +3 -3
+    NTP_4_2_7P353
+
+  sntp/sntp.html@1.355 +2 -2
+    NTP_4_2_7P353
+
+  sntp/sntp.man.in@1.175 +3 -3
+    NTP_4_2_7P353
+
+  sntp/sntp.mdoc.in@1.175 +3 -3
+    NTP_4_2_7P353
+
+  util/invoke-ntp-keygen.texi@1.344 +2 -2
+    NTP_4_2_7P353
+
+  util/ntp-keygen-opts.c@1.358 +4 -4
+    NTP_4_2_7P353
+
+  util/ntp-keygen-opts.h@1.358 +3 -3
+    NTP_4_2_7P353
+
+  util/ntp-keygen.1ntp-keygenman@1.172 +3 -3
+    NTP_4_2_7P353
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.172 +3 -3
+    NTP_4_2_7P353
+
+  util/ntp-keygen.html@1.22 +2 -2
+    NTP_4_2_7P353
+
+  util/ntp-keygen.man.in@1.172 +3 -3
+    NTP_4_2_7P353
+
+  util/ntp-keygen.mdoc.in@1.172 +3 -3
+    NTP_4_2_7P353
+
+ChangeSet@1.2900, 2013-02-08 23:15:13-08:00, harlan@hms-mbp11.lan
+  [Bug 2326] Check hourly for a new leapfile if the old one expired
+
+  ChangeLog@1.1251 +1 -0
+    [Bug 2326] Check hourly for a new leapfile if the old one expired
+
+  ntpd/ntp_timer.c@1.71 +7 -0
+    [Bug 2326] Check hourly for a new leapfile if the old one expired
+
+  ntpd/ntp_util.c@1.101 +1 -1
+    [Bug 2326] Check hourly for a new leapfile if the old one expired
+
 ChangeSet@1.2899, 2013-01-28 02:57:54+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P352
   TAG: NTP_4_2_7P352
