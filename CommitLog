@@ -1,3 +1,274 @@
+ChangeSet@1.2909, 2013-02-10 11:50:16+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P354
+  TAG: NTP_4_2_7P354
+
+  ChangeLog@1.1260 +1 -0
+    NTP_4_2_7P354
+
+  ntpd/invoke-ntp.conf.texi@1.28 +1 -1
+    NTP_4_2_7P354
+
+  ntpd/invoke-ntp.keys.texi@1.28 +1 -1
+    NTP_4_2_7P354
+
+  ntpd/invoke-ntpd.texi@1.344 +2 -2
+    NTP_4_2_7P354
+
+  ntpd/ntp.conf.5man@1.62 +3 -3
+    NTP_4_2_7P354
+
+  ntpd/ntp.conf.5mdoc@1.62 +3 -3
+    NTP_4_2_7P354
+
+  ntpd/ntp.conf.html@1.27 +1 -1
+    NTP_4_2_7P354
+
+  ntpd/ntp.conf.man.in@1.62 +3 -3
+    NTP_4_2_7P354
+
+  ntpd/ntp.conf.mdoc.in@1.62 +3 -3
+    NTP_4_2_7P354
+
+  ntpd/ntp.keys.5man@1.62 +3 -3
+    NTP_4_2_7P354
+
+  ntpd/ntp.keys.5mdoc@1.62 +3 -3
+    NTP_4_2_7P354
+
+  ntpd/ntp.keys.html@1.28 +1 -1
+    NTP_4_2_7P354
+
+  ntpd/ntp.keys.man.in@1.62 +3 -3
+    NTP_4_2_7P354
+
+  ntpd/ntp.keys.mdoc.in@1.62 +3 -3
+    NTP_4_2_7P354
+
+  ntpd/ntpd-opts.c@1.362 +4 -4
+    NTP_4_2_7P354
+
+  ntpd/ntpd-opts.h@1.362 +3 -3
+    NTP_4_2_7P354
+
+  ntpd/ntpd.1ntpdman@1.173 +3 -3
+    NTP_4_2_7P354
+
+  ntpd/ntpd.1ntpdmdoc@1.173 +3 -3
+    NTP_4_2_7P354
+
+  ntpd/ntpd.html@1.22 +2 -2
+    NTP_4_2_7P354
+
+  ntpd/ntpd.man.in@1.173 +3 -3
+    NTP_4_2_7P354
+
+  ntpd/ntpd.mdoc.in@1.173 +3 -3
+    NTP_4_2_7P354
+
+  ntpdc/invoke-ntpdc.texi@1.341 +2 -2
+    NTP_4_2_7P354
+
+  ntpdc/ntpdc-opts.c@1.356 +4 -4
+    NTP_4_2_7P354
+
+  ntpdc/ntpdc-opts.h@1.356 +3 -3
+    NTP_4_2_7P354
+
+  ntpdc/ntpdc.1ntpdcman@1.172 +2 -2
+    NTP_4_2_7P354
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.172 +2 -2
+    NTP_4_2_7P354
+
+  ntpdc/ntpdc.html@1.185 +2 -2
+    NTP_4_2_7P354
+
+  ntpdc/ntpdc.man.in@1.172 +2 -2
+    NTP_4_2_7P354
+
+  ntpdc/ntpdc.mdoc.in@1.172 +2 -2
+    NTP_4_2_7P354
+
+  ntpq/invoke-ntpq.texi@1.345 +2 -2
+    NTP_4_2_7P354
+
+  ntpq/ntpq-opts.c@1.359 +4 -4
+    NTP_4_2_7P354
+
+  ntpq/ntpq-opts.h@1.359 +3 -3
+    NTP_4_2_7P354
+
+  ntpq/ntpq.1ntpqman@1.173 +2 -2
+    NTP_4_2_7P354
+
+  ntpq/ntpq.1ntpqmdoc@1.173 +2 -2
+    NTP_4_2_7P354
+
+  ntpq/ntpq.html@1.19 +2 -2
+    NTP_4_2_7P354
+
+  ntpq/ntpq.man.in@1.173 +2 -2
+    NTP_4_2_7P354
+
+  ntpq/ntpq.mdoc.in@1.173 +2 -2
+    NTP_4_2_7P354
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.344 +2 -2
+    NTP_4_2_7P354
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.359 +4 -4
+    NTP_4_2_7P354
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.359 +3 -3
+    NTP_4_2_7P354
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.173 +3 -3
+    NTP_4_2_7P354
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.173 +3 -3
+    NTP_4_2_7P354
+
+  ntpsnmpd/ntpsnmpd.html@1.17 +1 -1
+    NTP_4_2_7P354
+
+  ntpsnmpd/ntpsnmpd.man.in@1.173 +3 -3
+    NTP_4_2_7P354
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.173 +3 -3
+    NTP_4_2_7P354
+
+  packageinfo.sh@1.357 +1 -1
+    NTP_4_2_7P354
+
+  scripts/invoke-ntp-wait.texi@1.161 +1 -1
+    NTP_4_2_7P354
+
+  scripts/ntp-wait.1ntp-waitman@1.172 +3 -3
+    NTP_4_2_7P354
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.172 +3 -3
+    NTP_4_2_7P354
+
+  scripts/ntp-wait.html@1.177 +1 -1
+    NTP_4_2_7P354
+
+  scripts/ntp-wait.man.in@1.172 +3 -3
+    NTP_4_2_7P354
+
+  scripts/ntp-wait.mdoc.in@1.172 +3 -3
+    NTP_4_2_7P354
+
+  sntp/invoke-sntp.texi@1.341 +2 -2
+    NTP_4_2_7P354
+
+  sntp/sntp-opts.c@1.356 +4 -4
+    NTP_4_2_7P354
+
+  sntp/sntp-opts.h@1.356 +3 -3
+    NTP_4_2_7P354
+
+  sntp/sntp.1sntpman@1.176 +3 -3
+    NTP_4_2_7P354
+
+  sntp/sntp.1sntpmdoc@1.176 +3 -3
+    NTP_4_2_7P354
+
+  sntp/sntp.html@1.356 +2 -2
+    NTP_4_2_7P354
+
+  sntp/sntp.man.in@1.176 +3 -3
+    NTP_4_2_7P354
+
+  sntp/sntp.mdoc.in@1.176 +3 -3
+    NTP_4_2_7P354
+
+  util/invoke-ntp-keygen.texi@1.345 +2 -2
+    NTP_4_2_7P354
+
+  util/ntp-keygen-opts.c@1.359 +4 -4
+    NTP_4_2_7P354
+
+  util/ntp-keygen-opts.h@1.359 +3 -3
+    NTP_4_2_7P354
+
+  util/ntp-keygen.1ntp-keygenman@1.173 +3 -3
+    NTP_4_2_7P354
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.173 +3 -3
+    NTP_4_2_7P354
+
+  util/ntp-keygen.html@1.23 +2 -2
+    NTP_4_2_7P354
+
+  util/ntp-keygen.man.in@1.173 +3 -3
+    NTP_4_2_7P354
+
+  util/ntp-keygen.mdoc.in@1.173 +3 -3
+    NTP_4_2_7P354
+
+ChangeSet@1.2908, 2013-02-09 20:25:46-05:00, stenn@deacon.udel.edu
+  CID 739714: Fix code indentation level
+
+  ChangeLog@1.1259 +1 -0
+    CID 739714: Fix code indentation level
+
+  ntpd/refclock_irig.c@1.36 +2 -2
+    CID 739714: Fix code indentation level
+
+ChangeSet@1.2907, 2013-02-09 19:55:02-05:00, stenn@deacon.udel.edu
+  CID 739715: Clean up sockaddr_dump()
+
+  ChangeLog@1.1258 +1 -0
+    CID 739715: Clean up sockaddr_dump()
+
+  ntpd/ntp_io.c@1.376 +2 -1
+    CID 739715: Clean up sockaddr_dump()
+
+ChangeSet@1.2906, 2013-02-09 19:05:32-05:00, stenn@deacon.udel.edu
+  CID 97194: Check return from setsockopt()
+
+  ChangeLog@1.1257 +1 -0
+    CID 97194: Check return from setsockopt()
+
+  ntpd/ntp_io.c@1.375 +7 -2
+    CID 97194: Check return from setsockopt()
+
+ChangeSet@1.2905, 2013-02-09 18:28:45-05:00, stenn@deacon.udel.edu
+  CID 739713: devmask/recmask copy/paste error
+
+  ChangeLog@1.1256 +1 -0
+    CID 739713: devmask/recmask copy/paste error
+
+  libntp/audio.c@1.33 +2 -1
+    CID 739713: devmask/recmask copy/paste error
+
+ChangeSet@1.2904, 2013-02-09 18:17:48-05:00, stenn@deacon.udel.edu
+  CID 739559: Double close
+
+  ChangeLog@1.1255 +2 -1
+    CID 739559: Double close
+
+  lib/isc/unix/net.c@1.18 +0 -1
+    CID 739559: Double close
+
+ChangeSet@1.2903, 2013-02-09 18:14:26-05:00, stenn@deacon.udel.edu
+  CID 739558: Double close
+
+  ChangeLog@1.1254 +1 -0
+    CID 739558: Double close
+
+  lib/isc/unix/net.c@1.17 +0 -2
+    CID 739558: Double close
+
+ChangeSet@1.2902, 2013-02-09 18:05:03-05:00, stenn@deacon.udel.edu
+  CID 739473,739532: Out-of-bounds access/illegal address computation
+
+  ChangeLog@1.1253 +1 -0
+    CID 739473,739532: Out-of-bounds access/illegal address computation
+
+  lib/isc/sockaddr.c@1.11 +1 -1
+    CID 739473,739532: Out-of-bounds access/illegal address computation
+
 ChangeSet@1.2901, 2013-02-09 11:31:13+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P353
   TAG: NTP_4_2_7P353

@@ -526,7 +526,8 @@ sockaddr_dump(const sockaddr_u *psau)
 	const u_char *	cp;
 	int		i;
 
-	cp = (const void *)&psau->sa;
+	/* XXX: Should we limit maxsize based on psau->saX.sin_family? */
+	cp = (const void *)&psau->sa6;
 
 	for(i = 0; i < maxsize; i++) {
 		printf("%02x", *cp++);
@@ -3807,8 +3808,13 @@ findlocalinterface(
 	 */
 	if (bcast) {
 		on = 1;
-		setsockopt(s, SOL_SOCKET, SO_BROADCAST,
-			   (char *)&on, sizeof(on));
+		if (SOCKET_ERROR == setsockopt(s, SOL_SOCKET,
+						SO_BROADCAST,
+						(char *)&on,
+						sizeof(on))) {
+			closesocket(s);
+			return NULL;
+		}
 	}
 
 	rtn = connect(s, &addr->sa, SOCKLEN(addr));
