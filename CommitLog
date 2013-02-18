@@ -1,3 +1,265 @@
+ChangeSet@1.2916, 2013-02-18 09:26:46+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P355
+  TAG: NTP_4_2_7P355
+
+  ChangeLog@1.1267 +1 -0
+    NTP_4_2_7P355
+
+  ntpd/invoke-ntp.conf.texi@1.29 +1 -1
+    NTP_4_2_7P355
+
+  ntpd/invoke-ntp.keys.texi@1.29 +1 -1
+    NTP_4_2_7P355
+
+  ntpd/invoke-ntpd.texi@1.345 +2 -2
+    NTP_4_2_7P355
+
+  ntpd/ntp.conf.5man@1.63 +3 -3
+    NTP_4_2_7P355
+
+  ntpd/ntp.conf.5mdoc@1.63 +3 -3
+    NTP_4_2_7P355
+
+  ntpd/ntp.conf.html@1.28 +1 -1
+    NTP_4_2_7P355
+
+  ntpd/ntp.conf.man.in@1.63 +3 -3
+    NTP_4_2_7P355
+
+  ntpd/ntp.conf.mdoc.in@1.63 +3 -3
+    NTP_4_2_7P355
+
+  ntpd/ntp.keys.5man@1.63 +3 -3
+    NTP_4_2_7P355
+
+  ntpd/ntp.keys.5mdoc@1.63 +3 -3
+    NTP_4_2_7P355
+
+  ntpd/ntp.keys.html@1.29 +1 -1
+    NTP_4_2_7P355
+
+  ntpd/ntp.keys.man.in@1.63 +3 -3
+    NTP_4_2_7P355
+
+  ntpd/ntp.keys.mdoc.in@1.63 +3 -3
+    NTP_4_2_7P355
+
+  ntpd/ntpd-opts.c@1.363 +4 -4
+    NTP_4_2_7P355
+
+  ntpd/ntpd-opts.h@1.363 +3 -3
+    NTP_4_2_7P355
+
+  ntpd/ntpd.1ntpdman@1.174 +3 -3
+    NTP_4_2_7P355
+
+  ntpd/ntpd.1ntpdmdoc@1.174 +3 -3
+    NTP_4_2_7P355
+
+  ntpd/ntpd.html@1.23 +2 -2
+    NTP_4_2_7P355
+
+  ntpd/ntpd.man.in@1.174 +3 -3
+    NTP_4_2_7P355
+
+  ntpd/ntpd.mdoc.in@1.174 +3 -3
+    NTP_4_2_7P355
+
+  ntpdc/invoke-ntpdc.texi@1.342 +2 -2
+    NTP_4_2_7P355
+
+  ntpdc/ntpdc-opts.c@1.357 +4 -4
+    NTP_4_2_7P355
+
+  ntpdc/ntpdc-opts.h@1.357 +3 -3
+    NTP_4_2_7P355
+
+  ntpdc/ntpdc.1ntpdcman@1.173 +2 -2
+    NTP_4_2_7P355
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.173 +2 -2
+    NTP_4_2_7P355
+
+  ntpdc/ntpdc.html@1.186 +2 -2
+    NTP_4_2_7P355
+
+  ntpdc/ntpdc.man.in@1.173 +2 -2
+    NTP_4_2_7P355
+
+  ntpdc/ntpdc.mdoc.in@1.173 +2 -2
+    NTP_4_2_7P355
+
+  ntpq/invoke-ntpq.texi@1.346 +2 -2
+    NTP_4_2_7P355
+
+  ntpq/ntpq-opts.c@1.360 +4 -4
+    NTP_4_2_7P355
+
+  ntpq/ntpq-opts.h@1.360 +3 -3
+    NTP_4_2_7P355
+
+  ntpq/ntpq.1ntpqman@1.174 +2 -2
+    NTP_4_2_7P355
+
+  ntpq/ntpq.1ntpqmdoc@1.174 +2 -2
+    NTP_4_2_7P355
+
+  ntpq/ntpq.html@1.20 +2 -2
+    NTP_4_2_7P355
+
+  ntpq/ntpq.man.in@1.174 +2 -2
+    NTP_4_2_7P355
+
+  ntpq/ntpq.mdoc.in@1.174 +2 -2
+    NTP_4_2_7P355
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.345 +2 -2
+    NTP_4_2_7P355
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.360 +4 -4
+    NTP_4_2_7P355
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.360 +3 -3
+    NTP_4_2_7P355
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.174 +3 -3
+    NTP_4_2_7P355
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.174 +3 -3
+    NTP_4_2_7P355
+
+  ntpsnmpd/ntpsnmpd.html@1.18 +1 -1
+    NTP_4_2_7P355
+
+  ntpsnmpd/ntpsnmpd.man.in@1.174 +3 -3
+    NTP_4_2_7P355
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.174 +3 -3
+    NTP_4_2_7P355
+
+  packageinfo.sh@1.358 +1 -1
+    NTP_4_2_7P355
+
+  scripts/invoke-ntp-wait.texi@1.162 +1 -1
+    NTP_4_2_7P355
+
+  scripts/ntp-wait.1ntp-waitman@1.173 +3 -3
+    NTP_4_2_7P355
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.173 +3 -3
+    NTP_4_2_7P355
+
+  scripts/ntp-wait.html@1.178 +1 -1
+    NTP_4_2_7P355
+
+  scripts/ntp-wait.man.in@1.173 +3 -3
+    NTP_4_2_7P355
+
+  scripts/ntp-wait.mdoc.in@1.173 +3 -3
+    NTP_4_2_7P355
+
+  sntp/invoke-sntp.texi@1.342 +2 -2
+    NTP_4_2_7P355
+
+  sntp/sntp-opts.c@1.357 +4 -4
+    NTP_4_2_7P355
+
+  sntp/sntp-opts.h@1.357 +3 -3
+    NTP_4_2_7P355
+
+  sntp/sntp.1sntpman@1.177 +3 -3
+    NTP_4_2_7P355
+
+  sntp/sntp.1sntpmdoc@1.177 +3 -3
+    NTP_4_2_7P355
+
+  sntp/sntp.html@1.357 +2 -2
+    NTP_4_2_7P355
+
+  sntp/sntp.man.in@1.177 +3 -3
+    NTP_4_2_7P355
+
+  sntp/sntp.mdoc.in@1.177 +3 -3
+    NTP_4_2_7P355
+
+  util/invoke-ntp-keygen.texi@1.346 +2 -2
+    NTP_4_2_7P355
+
+  util/ntp-keygen-opts.c@1.360 +4 -4
+    NTP_4_2_7P355
+
+  util/ntp-keygen-opts.h@1.360 +3 -3
+    NTP_4_2_7P355
+
+  util/ntp-keygen.1ntp-keygenman@1.174 +3 -3
+    NTP_4_2_7P355
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.174 +3 -3
+    NTP_4_2_7P355
+
+  util/ntp-keygen.html@1.24 +2 -2
+    NTP_4_2_7P355
+
+  util/ntp-keygen.man.in@1.174 +3 -3
+    NTP_4_2_7P355
+
+  util/ntp-keygen.mdoc.in@1.174 +3 -3
+    NTP_4_2_7P355
+
+ChangeSet@1.2915, 2013-02-18 04:01:05-05:00, stenn@deacon.udel.edu
+  CID 739711: Ignore return status of remove() in ntp-keygen.c
+
+  ChangeLog@1.1266 +1 -0
+    CID 739711: Ignore return status of remove() in ntp-keygen.c
+
+  util/ntp-keygen.c@1.95 +1 -1
+    CID 739711: Ignore return status of remove() in ntp-keygen.c
+
+ChangeSet@1.2914, 2013-02-18 03:28:57-05:00, stenn@deacon.udel.edu
+  CID 739710: Check return status of mkdir() in sntp/kod_management.c
+
+  ChangeLog@1.1265 +1 -0
+    CID 739710: Check return status of mkdir() in sntp/kod_management.c
+
+  sntp/kod_management.c@1.30 +5 -1
+    CID 739710: Check return status of mkdir() in sntp/kod_management.c
+
+ChangeSet@1.2913, 2013-02-18 03:18:18-05:00, stenn@deacon.udel.edu
+  CID 739709: Check return status of fcntl() in refclock_datum.c
+
+  ChangeLog@1.1264 +1 -0
+    CID 739709: Check return status of fcntl() in refclock_datum.c
+
+  ntpd/refclock_datum.c@1.21 +3 -1
+    CID 739709: Check return status of fcntl() in refclock_datum.c
+
+ChangeSet@1.2912, 2013-02-18 03:10:44-05:00, stenn@deacon.udel.edu
+  CID 739708: Check return status of fcntl() in refclock_arc.c
+
+  ChangeLog@1.1263 +1 -0
+    CID 739708: Check return status of fcntl() in refclock_arc.c
+
+  ntpd/refclock_arc.c@1.30 +4 -1
+    CID 739708: Check return status of fcntl() in refclock_arc.c
+
+ChangeSet@1.2911, 2013-02-18 03:05:01-05:00, stenn@deacon.udel.edu
+  CID 739723: Print sizeof as unsigned
+
+  ChangeLog@1.1262 +1 -0
+    CID 739723: Print sizeof as unsigned
+
+  sntp/main.c@1.88 +1 -1
+    CID 739723: Print sizeof as unsigned
+
+ChangeSet@1.2910, 2013-02-18 01:09:24-05:00, stenn@deacon.udel.edu
+  CID 971094: Clean up time of check/time of use in check_leap_file()
+
+  ChangeLog@1.1261 +1 -0
+    CID 971094: Clean up time of check/time of use in check_leap_file()
+
+  ntpd/ntp_util.c@1.102 +13 -13
+    CID 971094: Clean up time of check/time of use in check_leap_file()
+
 ChangeSet@1.2909, 2013-02-10 11:50:16+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P354
   TAG: NTP_4_2_7P354
