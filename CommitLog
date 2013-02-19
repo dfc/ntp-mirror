@@ -1,3 +1,222 @@
+ChangeSet@1.2918, 2013-02-19 11:40:59+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P356
+  TAG: NTP_4_2_7P356
+
+  ChangeLog@1.1269 +1 -0
+    NTP_4_2_7P356
+
+  ntpd/invoke-ntp.conf.texi@1.30 +1 -1
+    NTP_4_2_7P356
+
+  ntpd/invoke-ntp.keys.texi@1.30 +1 -1
+    NTP_4_2_7P356
+
+  ntpd/invoke-ntpd.texi@1.346 +2 -2
+    NTP_4_2_7P356
+
+  ntpd/ntp.conf.5man@1.64 +3 -3
+    NTP_4_2_7P356
+
+  ntpd/ntp.conf.5mdoc@1.64 +3 -3
+    NTP_4_2_7P356
+
+  ntpd/ntp.conf.html@1.29 +1 -1
+    NTP_4_2_7P356
+
+  ntpd/ntp.conf.man.in@1.64 +3 -3
+    NTP_4_2_7P356
+
+  ntpd/ntp.conf.mdoc.in@1.64 +3 -3
+    NTP_4_2_7P356
+
+  ntpd/ntp.keys.5man@1.64 +3 -3
+    NTP_4_2_7P356
+
+  ntpd/ntp.keys.5mdoc@1.64 +3 -3
+    NTP_4_2_7P356
+
+  ntpd/ntp.keys.html@1.30 +1 -1
+    NTP_4_2_7P356
+
+  ntpd/ntp.keys.man.in@1.64 +3 -3
+    NTP_4_2_7P356
+
+  ntpd/ntp.keys.mdoc.in@1.64 +3 -3
+    NTP_4_2_7P356
+
+  ntpd/ntpd-opts.c@1.364 +4 -4
+    NTP_4_2_7P356
+
+  ntpd/ntpd-opts.h@1.364 +3 -3
+    NTP_4_2_7P356
+
+  ntpd/ntpd.1ntpdman@1.175 +3 -3
+    NTP_4_2_7P356
+
+  ntpd/ntpd.1ntpdmdoc@1.175 +3 -3
+    NTP_4_2_7P356
+
+  ntpd/ntpd.html@1.24 +2 -2
+    NTP_4_2_7P356
+
+  ntpd/ntpd.man.in@1.175 +3 -3
+    NTP_4_2_7P356
+
+  ntpd/ntpd.mdoc.in@1.175 +3 -3
+    NTP_4_2_7P356
+
+  ntpdc/invoke-ntpdc.texi@1.343 +2 -2
+    NTP_4_2_7P356
+
+  ntpdc/ntpdc-opts.c@1.358 +4 -4
+    NTP_4_2_7P356
+
+  ntpdc/ntpdc-opts.h@1.358 +3 -3
+    NTP_4_2_7P356
+
+  ntpdc/ntpdc.1ntpdcman@1.174 +2 -2
+    NTP_4_2_7P356
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.174 +2 -2
+    NTP_4_2_7P356
+
+  ntpdc/ntpdc.html@1.187 +2 -2
+    NTP_4_2_7P356
+
+  ntpdc/ntpdc.man.in@1.174 +2 -2
+    NTP_4_2_7P356
+
+  ntpdc/ntpdc.mdoc.in@1.174 +2 -2
+    NTP_4_2_7P356
+
+  ntpq/invoke-ntpq.texi@1.347 +2 -2
+    NTP_4_2_7P356
+
+  ntpq/ntpq-opts.c@1.361 +4 -4
+    NTP_4_2_7P356
+
+  ntpq/ntpq-opts.h@1.361 +3 -3
+    NTP_4_2_7P356
+
+  ntpq/ntpq.1ntpqman@1.175 +2 -2
+    NTP_4_2_7P356
+
+  ntpq/ntpq.1ntpqmdoc@1.175 +2 -2
+    NTP_4_2_7P356
+
+  ntpq/ntpq.html@1.21 +2 -2
+    NTP_4_2_7P356
+
+  ntpq/ntpq.man.in@1.175 +2 -2
+    NTP_4_2_7P356
+
+  ntpq/ntpq.mdoc.in@1.175 +2 -2
+    NTP_4_2_7P356
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.346 +2 -2
+    NTP_4_2_7P356
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.361 +4 -4
+    NTP_4_2_7P356
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.361 +3 -3
+    NTP_4_2_7P356
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.175 +3 -3
+    NTP_4_2_7P356
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.175 +3 -3
+    NTP_4_2_7P356
+
+  ntpsnmpd/ntpsnmpd.html@1.19 +1 -1
+    NTP_4_2_7P356
+
+  ntpsnmpd/ntpsnmpd.man.in@1.175 +3 -3
+    NTP_4_2_7P356
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.175 +3 -3
+    NTP_4_2_7P356
+
+  packageinfo.sh@1.359 +1 -1
+    NTP_4_2_7P356
+
+  scripts/invoke-ntp-wait.texi@1.163 +1 -1
+    NTP_4_2_7P356
+
+  scripts/ntp-wait.1ntp-waitman@1.174 +3 -3
+    NTP_4_2_7P356
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.174 +3 -3
+    NTP_4_2_7P356
+
+  scripts/ntp-wait.html@1.179 +1 -1
+    NTP_4_2_7P356
+
+  scripts/ntp-wait.man.in@1.174 +3 -3
+    NTP_4_2_7P356
+
+  scripts/ntp-wait.mdoc.in@1.174 +3 -3
+    NTP_4_2_7P356
+
+  sntp/invoke-sntp.texi@1.343 +2 -2
+    NTP_4_2_7P356
+
+  sntp/sntp-opts.c@1.358 +4 -4
+    NTP_4_2_7P356
+
+  sntp/sntp-opts.h@1.358 +3 -3
+    NTP_4_2_7P356
+
+  sntp/sntp.1sntpman@1.178 +3 -3
+    NTP_4_2_7P356
+
+  sntp/sntp.1sntpmdoc@1.178 +3 -3
+    NTP_4_2_7P356
+
+  sntp/sntp.html@1.358 +2 -2
+    NTP_4_2_7P356
+
+  sntp/sntp.man.in@1.178 +3 -3
+    NTP_4_2_7P356
+
+  sntp/sntp.mdoc.in@1.178 +3 -3
+    NTP_4_2_7P356
+
+  util/invoke-ntp-keygen.texi@1.347 +2 -2
+    NTP_4_2_7P356
+
+  util/ntp-keygen-opts.c@1.361 +4 -4
+    NTP_4_2_7P356
+
+  util/ntp-keygen-opts.h@1.361 +3 -3
+    NTP_4_2_7P356
+
+  util/ntp-keygen.1ntp-keygenman@1.175 +3 -3
+    NTP_4_2_7P356
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.175 +3 -3
+    NTP_4_2_7P356
+
+  util/ntp-keygen.html@1.25 +2 -2
+    NTP_4_2_7P356
+
+  util/ntp-keygen.man.in@1.175 +3 -3
+    NTP_4_2_7P356
+
+  util/ntp-keygen.mdoc.in@1.175 +3 -3
+    NTP_4_2_7P356
+
+ChangeSet@1.2917, 2013-02-18 22:58:22-08:00, harlan@hms-mbp11.local
+  Added loc/debian
+
+  ChangeLog@1.1268 +1 -0
+    Added loc/debian
+
+  sntp/loc/debian@1.1 +15 -0
+    BitKeeper file /Users/harlan/src/ntp-dev/sntp/loc/debian
+
+  sntp/loc/debian@1.0 +0 -0
+
 ChangeSet@1.2916, 2013-02-18 09:26:46+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P355
   TAG: NTP_4_2_7P355
