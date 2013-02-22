@@ -1,3 +1,547 @@
+ChangeSet@1.2921, 2013-02-22 03:49:29+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P357
+  TAG: NTP_4_2_7P357
+
+  ChangeLog@1.1271 +1 -0
+    NTP_4_2_7P357
+
+  ntpd/invoke-ntp.conf.texi@1.32 +1 -1
+    NTP_4_2_7P357
+
+  ntpd/invoke-ntp.keys.texi@1.32 +1 -1
+    NTP_4_2_7P357
+
+  ntpd/invoke-ntpd.texi@1.348 +2 -2
+    NTP_4_2_7P357
+
+  ntpd/ntp.conf.5man@1.66 +3 -3
+    NTP_4_2_7P357
+
+  ntpd/ntp.conf.5mdoc@1.66 +2 -2
+    NTP_4_2_7P357
+
+  ntpd/ntp.conf.html@1.30 +1 -1
+    NTP_4_2_7P357
+
+  ntpd/ntp.conf.man.in@1.66 +3 -3
+    NTP_4_2_7P357
+
+  ntpd/ntp.conf.mdoc.in@1.66 +2 -2
+    NTP_4_2_7P357
+
+  ntpd/ntp.keys.5man@1.66 +3 -3
+    NTP_4_2_7P357
+
+  ntpd/ntp.keys.5mdoc@1.66 +2 -2
+    NTP_4_2_7P357
+
+  ntpd/ntp.keys.html@1.31 +1 -1
+    NTP_4_2_7P357
+
+  ntpd/ntp.keys.man.in@1.66 +3 -3
+    NTP_4_2_7P357
+
+  ntpd/ntp.keys.mdoc.in@1.66 +2 -2
+    NTP_4_2_7P357
+
+  ntpd/ntpd-opts.c@1.366 +7 -7
+    NTP_4_2_7P357
+
+  ntpd/ntpd-opts.h@1.366 +3 -3
+    NTP_4_2_7P357
+
+  ntpd/ntpd.1ntpdman@1.177 +3 -3
+    NTP_4_2_7P357
+
+  ntpd/ntpd.1ntpdmdoc@1.177 +2 -2
+    NTP_4_2_7P357
+
+  ntpd/ntpd.html@1.25 +12 -18
+    NTP_4_2_7P357
+
+  ntpd/ntpd.man.in@1.177 +3 -3
+    NTP_4_2_7P357
+
+  ntpd/ntpd.mdoc.in@1.177 +2 -2
+    NTP_4_2_7P357
+
+  ntpdc/invoke-ntpdc.texi@1.345 +2 -2
+    NTP_4_2_7P357
+
+  ntpdc/ntpdc-opts.c@1.360 +7 -7
+    NTP_4_2_7P357
+
+  ntpdc/ntpdc-opts.h@1.360 +3 -3
+    NTP_4_2_7P357
+
+  ntpdc/ntpdc.1ntpdcman@1.176 +2 -2
+    NTP_4_2_7P357
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.176 +1 -1
+    NTP_4_2_7P357
+
+  ntpdc/ntpdc.html@1.189 +2 -2
+    NTP_4_2_7P357
+
+  ntpdc/ntpdc.man.in@1.176 +2 -2
+    NTP_4_2_7P357
+
+  ntpdc/ntpdc.mdoc.in@1.176 +1 -1
+    NTP_4_2_7P357
+
+  ntpq/invoke-ntpq.texi@1.349 +2 -2
+    NTP_4_2_7P357
+
+  ntpq/ntpq-opts.c@1.363 +7 -7
+    NTP_4_2_7P357
+
+  ntpq/ntpq-opts.h@1.363 +3 -3
+    NTP_4_2_7P357
+
+  ntpq/ntpq.1ntpqman@1.177 +2 -2
+    NTP_4_2_7P357
+
+  ntpq/ntpq.1ntpqmdoc@1.177 +1 -1
+    NTP_4_2_7P357
+
+  ntpq/ntpq.html@1.22 +13 -16
+    NTP_4_2_7P357
+
+  ntpq/ntpq.man.in@1.177 +2 -2
+    NTP_4_2_7P357
+
+  ntpq/ntpq.mdoc.in@1.177 +1 -1
+    NTP_4_2_7P357
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.348 +2 -2
+    NTP_4_2_7P357
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.363 +7 -7
+    NTP_4_2_7P357
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.363 +3 -3
+    NTP_4_2_7P357
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.177 +3 -3
+    NTP_4_2_7P357
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.177 +2 -2
+    NTP_4_2_7P357
+
+  ntpsnmpd/ntpsnmpd.html@1.20 +1 -1
+    NTP_4_2_7P357
+
+  ntpsnmpd/ntpsnmpd.man.in@1.177 +3 -3
+    NTP_4_2_7P357
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.177 +2 -2
+    NTP_4_2_7P357
+
+  packageinfo.sh@1.360 +1 -1
+    NTP_4_2_7P357
+
+  scripts/invoke-ntp-wait.texi@1.165 +2 -2
+    NTP_4_2_7P357
+
+  scripts/ntp-wait.1ntp-waitman@1.176 +3 -3
+    NTP_4_2_7P357
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.176 +3 -3
+    NTP_4_2_7P357
+
+  scripts/ntp-wait.html@1.181 +2 -2
+    NTP_4_2_7P357
+
+  scripts/ntp-wait.man.in@1.176 +3 -3
+    NTP_4_2_7P357
+
+  scripts/ntp-wait.mdoc.in@1.176 +3 -3
+    NTP_4_2_7P357
+
+  sntp/invoke-sntp.texi@1.345 +2 -2
+    NTP_4_2_7P357
+
+  sntp/sntp-opts.c@1.360 +7 -7
+    NTP_4_2_7P357
+
+  sntp/sntp-opts.h@1.360 +3 -3
+    NTP_4_2_7P357
+
+  sntp/sntp.1sntpman@1.180 +3 -3
+    NTP_4_2_7P357
+
+  sntp/sntp.1sntpmdoc@1.180 +2 -2
+    NTP_4_2_7P357
+
+  sntp/sntp.html@1.360 +2 -2
+    NTP_4_2_7P357
+
+  sntp/sntp.man.in@1.180 +3 -3
+    NTP_4_2_7P357
+
+  sntp/sntp.mdoc.in@1.180 +2 -2
+    NTP_4_2_7P357
+
+  util/invoke-ntp-keygen.texi@1.349 +2 -2
+    NTP_4_2_7P357
+
+  util/ntp-keygen-opts.c@1.363 +7 -7
+    NTP_4_2_7P357
+
+  util/ntp-keygen-opts.h@1.363 +3 -3
+    NTP_4_2_7P357
+
+  util/ntp-keygen.1ntp-keygenman@1.177 +3 -3
+    NTP_4_2_7P357
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.177 +2 -2
+    NTP_4_2_7P357
+
+  util/ntp-keygen.html@1.26 +12 -13
+    NTP_4_2_7P357
+
+  util/ntp-keygen.man.in@1.177 +3 -3
+    NTP_4_2_7P357
+
+  util/ntp-keygen.mdoc.in@1.177 +2 -2
+    NTP_4_2_7P357
+
+ChangeSet@1.2920, 2013-02-21 21:29:59-05:00, stenn@deacon.udel.edu
+  Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpd/invoke-ntp.conf.texi@1.31 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpd/invoke-ntp.keys.texi@1.31 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpd/invoke-ntpd.texi@1.347 +13 -19
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpd/ntp.conf.5man@1.65 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpd/ntp.conf.5mdoc@1.65 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpd/ntp.conf.man.in@1.65 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpd/ntp.conf.mdoc.in@1.65 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpd/ntp.keys.5man@1.65 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpd/ntp.keys.5mdoc@1.65 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpd/ntp.keys.man.in@1.65 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpd/ntp.keys.mdoc.in@1.65 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpd/ntpd-opts.c@1.365 +493 -41
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpd/ntpd-opts.h@1.365 +6 -6
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpd/ntpd.1ntpdman@1.176 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpd/ntpd.1ntpdmdoc@1.176 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpd/ntpd.man.in@1.176 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpd/ntpd.mdoc.in@1.176 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpd/ntpdsim-opts.c@1.21 +780 -312
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpd/ntpdsim-opts.h@1.21 +17 -14
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpdc/invoke-ntpdc.texi@1.344 +16 -22
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpdc/ntpdc-opts.c@1.359 +424 -45
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpdc/ntpdc-opts.h@1.359 +6 -6
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpdc/ntpdc.1ntpdcman@1.175 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.175 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpdc/ntpdc.html@1.188 +13 -19
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpdc/ntpdc.man.in@1.175 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpdc/ntpdc.mdoc.in@1.175 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpq/invoke-ntpq.texi@1.348 +14 -17
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpq/ntpq-opts.c@1.362 +414 -41
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpq/ntpq-opts.h@1.362 +6 -6
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpq/ntpq.1ntpqman@1.176 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpq/ntpq.1ntpqmdoc@1.176 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpq/ntpq.man.in@1.176 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpq/ntpq.mdoc.in@1.176 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.347 +11 -12
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.362 +403 -45
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.362 +6 -6
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.176 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.176 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpsnmpd/ntpsnmpd.man.in@1.176 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.176 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  scripts/invoke-ntp-wait.texi@1.164 +4 -4
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  scripts/ntp-wait.1ntp-waitman@1.175 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.175 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  scripts/ntp-wait.html@1.180 +1 -1
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  scripts/ntp-wait.man.in@1.175 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  scripts/ntp-wait.mdoc.in@1.175 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/include/autogen-version.def@1.15 +1 -1
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/invoke-sntp.texi@1.344 +16 -19
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/sntp-opts.c@1.359 +449 -45
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/sntp-opts.h@1.359 +6 -6
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/sntp.1sntpman@1.179 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/sntp.1sntpmdoc@1.179 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/sntp.html@1.359 +13 -16
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/sntp.man.in@1.179 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/sntp.mdoc.in@1.179 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  util/invoke-ntp-keygen.texi@1.348 +13 -14
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  util/ntp-keygen-opts.c@1.362 +457 -45
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  util/ntp-keygen-opts.h@1.362 +6 -6
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  util/ntp-keygen.1ntp-keygenman@1.176 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.176 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  util/ntp-keygen.man.in@1.176 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  util/ntp-keygen.mdoc.in@1.176 +3 -3
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+ChangeSet@1.2919, 2013-02-22 01:52:51+00:00, stenn@psp-fb1.ntp.org
+  Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  ChangeLog@1.1270 +1 -0
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/Makefile.am@1.18 +4 -4
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/ag-char-map.h@1.21 +5 -5
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/alias.c@1.5 +49 -39
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/ao-strs.c@1.7 +146 -107
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/ao-strs.h@1.6 +188 -114
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/autoopts.c@1.16 +51 -56
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/autoopts.h@1.14 +69 -32
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/autoopts/options.h@1.20 +507 -335
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/autoopts/project.h@1.5 +4 -4
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/autoopts/usage-txt.h@1.20 +541 -580
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/boolean.c@1.13 +11 -6
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/check.c@1.6 +37 -24
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/compat/compat.h@1.13 +22 -40
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/compat/windows-config.h@1.12 +40 -50
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/configfile.c@1.18 +13 -11
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/cook.c@1.13 +11 -5
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/enum.c@1.8 +26 -35
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/env.c@1.7 +10 -5
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/file.c@1.13 +27 -32
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/find.c@1.7 +27 -38
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/genshell.c@1.21 +450 -99
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/genshell.h@1.21 +15 -16
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/init.c@1.3 +19 -14
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/load.c@1.16 +11 -5
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/m4/libopts.m4@1.24 +9 -19
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/makeshell.c@1.15 +131 -104
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/nested.c@1.12 +13 -6
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/numeric.c@1.12 +34 -25
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/option-value-type.c@1.8 +5 -5
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/option-value-type.h@1.22 +8 -6
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/option-xat-attribute.c@1.8 +5 -5
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/option-xat-attribute.h@1.22 +8 -6
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/pgusage.c@1.13 +10 -5
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/proto.h@1.21 +20 -2
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/putshell.c@1.12 +212 -55
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/reset.c@1.14 +16 -11
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/restore.c@1.11 +12 -16
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/save.c@1.14 +133 -88
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/sort.c@1.12 +10 -5
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/stack.c@1.13 +12 -7
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/streqvcmp.c@1.12 +21 -16
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/text_mmap.c@1.13 +11 -7
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/time.c@1.13 +10 -5
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/tokenize.c@1.10 +13 -5
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/usage.c@1.14 +496 -204
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
+  sntp/libopts/version.c@1.14 +78 -69
+    Upgrade to autogen-5.17.2pre and libopts-38.0.13
+
 ChangeSet@1.2918, 2013-02-19 11:40:59+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P356
   TAG: NTP_4_2_7P356
