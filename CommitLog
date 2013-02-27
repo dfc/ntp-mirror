@@ -1,3 +1,268 @@
+ChangeSet@1.2923, 2013-02-27 11:39:54+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P358
+  TAG: NTP_4_2_7P358
+
+  ChangeLog@1.1273 +1 -0
+    NTP_4_2_7P358
+
+  ntpd/invoke-ntp.conf.texi@1.33 +1 -1
+    NTP_4_2_7P358
+
+  ntpd/invoke-ntp.keys.texi@1.33 +1 -1
+    NTP_4_2_7P358
+
+  ntpd/invoke-ntpd.texi@1.349 +2 -2
+    NTP_4_2_7P358
+
+  ntpd/ntp.conf.5man@1.67 +3 -3
+    NTP_4_2_7P358
+
+  ntpd/ntp.conf.5mdoc@1.67 +3 -3
+    NTP_4_2_7P358
+
+  ntpd/ntp.conf.html@1.31 +1 -1
+    NTP_4_2_7P358
+
+  ntpd/ntp.conf.man.in@1.67 +3 -3
+    NTP_4_2_7P358
+
+  ntpd/ntp.conf.mdoc.in@1.67 +3 -3
+    NTP_4_2_7P358
+
+  ntpd/ntp.keys.5man@1.67 +3 -3
+    NTP_4_2_7P358
+
+  ntpd/ntp.keys.5mdoc@1.67 +3 -3
+    NTP_4_2_7P358
+
+  ntpd/ntp.keys.html@1.32 +1 -1
+    NTP_4_2_7P358
+
+  ntpd/ntp.keys.man.in@1.67 +3 -3
+    NTP_4_2_7P358
+
+  ntpd/ntp.keys.mdoc.in@1.67 +3 -3
+    NTP_4_2_7P358
+
+  ntpd/ntpd-opts.c@1.367 +248 -95
+    NTP_4_2_7P358
+
+  ntpd/ntpd-opts.h@1.367 +37 -15
+    NTP_4_2_7P358
+
+  ntpd/ntpd.1ntpdman@1.178 +3 -3
+    NTP_4_2_7P358
+
+  ntpd/ntpd.1ntpdmdoc@1.178 +3 -3
+    NTP_4_2_7P358
+
+  ntpd/ntpd.html@1.26 +2 -2
+    NTP_4_2_7P358
+
+  ntpd/ntpd.man.in@1.178 +3 -3
+    NTP_4_2_7P358
+
+  ntpd/ntpd.mdoc.in@1.178 +3 -3
+    NTP_4_2_7P358
+
+  ntpdc/invoke-ntpdc.texi@1.346 +2 -2
+    NTP_4_2_7P358
+
+  ntpdc/ntpdc-opts.c@1.361 +124 -71
+    NTP_4_2_7P358
+
+  ntpdc/ntpdc-opts.h@1.361 +39 -15
+    NTP_4_2_7P358
+
+  ntpdc/ntpdc.1ntpdcman@1.177 +2 -2
+    NTP_4_2_7P358
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.177 +2 -2
+    NTP_4_2_7P358
+
+  ntpdc/ntpdc.html@1.190 +2 -2
+    NTP_4_2_7P358
+
+  ntpdc/ntpdc.man.in@1.177 +2 -2
+    NTP_4_2_7P358
+
+  ntpdc/ntpdc.mdoc.in@1.177 +2 -2
+    NTP_4_2_7P358
+
+  ntpq/invoke-ntpq.texi@1.350 +2 -2
+    NTP_4_2_7P358
+
+  ntpq/ntpq-opts.c@1.364 +117 -70
+    NTP_4_2_7P358
+
+  ntpq/ntpq-opts.h@1.364 +39 -15
+    NTP_4_2_7P358
+
+  ntpq/ntpq.1ntpqman@1.178 +2 -2
+    NTP_4_2_7P358
+
+  ntpq/ntpq.1ntpqmdoc@1.178 +2 -2
+    NTP_4_2_7P358
+
+  ntpq/ntpq.html@1.23 +2 -2
+    NTP_4_2_7P358
+
+  ntpq/ntpq.man.in@1.178 +2 -2
+    NTP_4_2_7P358
+
+  ntpq/ntpq.mdoc.in@1.178 +2 -2
+    NTP_4_2_7P358
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.349 +2 -2
+    NTP_4_2_7P358
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.364 +81 -61
+    NTP_4_2_7P358
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.364 +39 -15
+    NTP_4_2_7P358
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.178 +3 -3
+    NTP_4_2_7P358
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.178 +3 -3
+    NTP_4_2_7P358
+
+  ntpsnmpd/ntpsnmpd.html@1.21 +1 -1
+    NTP_4_2_7P358
+
+  ntpsnmpd/ntpsnmpd.man.in@1.178 +3 -3
+    NTP_4_2_7P358
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.178 +3 -3
+    NTP_4_2_7P358
+
+  packageinfo.sh@1.361 +1 -1
+    NTP_4_2_7P358
+
+  scripts/invoke-ntp-wait.texi@1.166 +1 -1
+    NTP_4_2_7P358
+
+  scripts/ntp-wait.1ntp-waitman@1.177 +3 -3
+    NTP_4_2_7P358
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.177 +3 -3
+    NTP_4_2_7P358
+
+  scripts/ntp-wait.html@1.182 +1 -1
+    NTP_4_2_7P358
+
+  scripts/ntp-wait.man.in@1.177 +3 -3
+    NTP_4_2_7P358
+
+  scripts/ntp-wait.mdoc.in@1.177 +3 -3
+    NTP_4_2_7P358
+
+  sntp/invoke-sntp.texi@1.346 +3 -3
+    NTP_4_2_7P358
+
+  sntp/sntp-opts.c@1.361 +189 -94
+    NTP_4_2_7P358
+
+  sntp/sntp-opts.h@1.361 +39 -15
+    NTP_4_2_7P358
+
+  sntp/sntp.1sntpman@1.181 +3 -3
+    NTP_4_2_7P358
+
+  sntp/sntp.1sntpmdoc@1.181 +3 -3
+    NTP_4_2_7P358
+
+  sntp/sntp.html@1.361 +3 -3
+    NTP_4_2_7P358
+
+  sntp/sntp.man.in@1.181 +3 -3
+    NTP_4_2_7P358
+
+  sntp/sntp.mdoc.in@1.181 +3 -3
+    NTP_4_2_7P358
+
+  util/invoke-ntp-keygen.texi@1.350 +2 -2
+    NTP_4_2_7P358
+
+  util/ntp-keygen-opts.c@1.364 +179 -88
+    NTP_4_2_7P358
+
+  util/ntp-keygen-opts.h@1.364 +39 -15
+    NTP_4_2_7P358
+
+  util/ntp-keygen.1ntp-keygenman@1.178 +3 -3
+    NTP_4_2_7P358
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.178 +3 -3
+    NTP_4_2_7P358
+
+  util/ntp-keygen.html@1.27 +2 -2
+    NTP_4_2_7P358
+
+  util/ntp-keygen.man.in@1.178 +3 -3
+    NTP_4_2_7P358
+
+  util/ntp-keygen.mdoc.in@1.178 +3 -3
+    NTP_4_2_7P358
+
+ChangeSet@1.2919.1.1, 2013-02-27 10:18:58+00:00, stenn@psp-fb1.ntp.org
+  Upgrade to autogen-5.17.3pre4 and libopts-38.0.13
+
+  ChangeLog@1.1270.1.1 +1 -0
+    Upgrade to autogen-5.17.3pre4 and libopts-38.0.13
+
+  sntp/libopts/Makefile.am@1.19 +3 -3
+    Upgrade to autogen-5.17.3pre4 and libopts-38.0.13
+
+  sntp/libopts/ag-char-map.h@1.22 +1 -1
+    Upgrade to autogen-5.17.3pre4 and libopts-38.0.13
+
+  sntp/libopts/ao-strs.c@1.8 +1 -1
+    Upgrade to autogen-5.17.3pre4 and libopts-38.0.13
+
+  sntp/libopts/ao-strs.h@1.7 +1 -1
+    Upgrade to autogen-5.17.3pre4 and libopts-38.0.13
+
+  sntp/libopts/autoopts/options.h@1.21 +2 -1
+    Upgrade to autogen-5.17.3pre4 and libopts-38.0.13
+
+  sntp/libopts/autoopts/usage-txt.h@1.21 +141 -141
+    Upgrade to autogen-5.17.3pre4 and libopts-38.0.13
+
+  sntp/libopts/configfile.c@1.19 +31 -18
+    Upgrade to autogen-5.17.3pre4 and libopts-38.0.13
+
+  sntp/libopts/genshell.c@1.22 +31 -14
+    Upgrade to autogen-5.17.3pre4 and libopts-38.0.13
+
+  sntp/libopts/genshell.h@1.22 +33 -12
+    Upgrade to autogen-5.17.3pre4 and libopts-38.0.13
+
+  sntp/libopts/m4/libopts.m4@1.25 +40 -21
+    Upgrade to autogen-5.17.3pre4 and libopts-38.0.13
+
+  sntp/libopts/nested.c@1.13 +2 -10
+    Upgrade to autogen-5.17.3pre4 and libopts-38.0.13
+
+  sntp/libopts/option-value-type.c@1.9 +3 -3
+    Upgrade to autogen-5.17.3pre4 and libopts-38.0.13
+
+  sntp/libopts/option-value-type.h@1.23 +3 -3
+    Upgrade to autogen-5.17.3pre4 and libopts-38.0.13
+
+  sntp/libopts/option-xat-attribute.c@1.9 +3 -3
+    Upgrade to autogen-5.17.3pre4 and libopts-38.0.13
+
+  sntp/libopts/option-xat-attribute.h@1.23 +1 -1
+    Upgrade to autogen-5.17.3pre4 and libopts-38.0.13
+
+  sntp/libopts/proto.h@1.22 +3 -3
+    Upgrade to autogen-5.17.3pre4 and libopts-38.0.13
+
+  sntp/libopts/usage.c@1.15 +18 -5
+    Upgrade to autogen-5.17.3pre4 and libopts-38.0.13
+
 ChangeSet@1.2921, 2013-02-22 03:49:29+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P357
   TAG: NTP_4_2_7P357

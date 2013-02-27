@@ -302,6 +302,9 @@
 /* number of args to el_init() */
 #undef EL_INIT_ARGS
 
+/* nls support in libopts */
+#undef ENABLE_NLS
+
 /* force ntpdate to step the clock if !defined(STEP_SLEW) ? */
 #undef FORCE_NTPDATE_STEP
 

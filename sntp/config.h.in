@@ -23,6 +23,9 @@
 /* number of args to el_init() */
 #undef EL_INIT_ARGS
 
+/* nls support in libopts */
+#undef ENABLE_NLS
+
 /* successful termination */
 #undef EX_OK
 
