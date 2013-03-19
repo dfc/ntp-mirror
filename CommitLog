@@ -1,3 +1,220 @@
+ChangeSet@1.2932, 2013-03-19 11:40:10+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P362
+  TAG: NTP_4_2_7P362
+
+  ChangeLog@1.1283 +1 -0
+    NTP_4_2_7P362
+
+  ntpd/invoke-ntp.conf.texi@1.37 +1 -1
+    NTP_4_2_7P362
+
+  ntpd/invoke-ntp.keys.texi@1.37 +1 -1
+    NTP_4_2_7P362
+
+  ntpd/invoke-ntpd.texi@1.353 +2 -2
+    NTP_4_2_7P362
+
+  ntpd/ntp.conf.5man@1.71 +3 -3
+    NTP_4_2_7P362
+
+  ntpd/ntp.conf.5mdoc@1.71 +3 -3
+    NTP_4_2_7P362
+
+  ntpd/ntp.conf.html@1.35 +1 -1
+    NTP_4_2_7P362
+
+  ntpd/ntp.conf.man.in@1.71 +3 -3
+    NTP_4_2_7P362
+
+  ntpd/ntp.conf.mdoc.in@1.71 +3 -3
+    NTP_4_2_7P362
+
+  ntpd/ntp.keys.5man@1.71 +3 -3
+    NTP_4_2_7P362
+
+  ntpd/ntp.keys.5mdoc@1.71 +3 -3
+    NTP_4_2_7P362
+
+  ntpd/ntp.keys.html@1.36 +1 -1
+    NTP_4_2_7P362
+
+  ntpd/ntp.keys.man.in@1.71 +3 -3
+    NTP_4_2_7P362
+
+  ntpd/ntp.keys.mdoc.in@1.71 +3 -3
+    NTP_4_2_7P362
+
+  ntpd/ntpd-opts.c@1.371 +7 -7
+    NTP_4_2_7P362
+
+  ntpd/ntpd-opts.h@1.371 +3 -3
+    NTP_4_2_7P362
+
+  ntpd/ntpd.1ntpdman@1.182 +3 -3
+    NTP_4_2_7P362
+
+  ntpd/ntpd.1ntpdmdoc@1.182 +3 -3
+    NTP_4_2_7P362
+
+  ntpd/ntpd.html@1.30 +2 -2
+    NTP_4_2_7P362
+
+  ntpd/ntpd.man.in@1.182 +3 -3
+    NTP_4_2_7P362
+
+  ntpd/ntpd.mdoc.in@1.182 +3 -3
+    NTP_4_2_7P362
+
+  ntpdc/invoke-ntpdc.texi@1.350 +2 -2
+    NTP_4_2_7P362
+
+  ntpdc/ntpdc-opts.c@1.365 +7 -7
+    NTP_4_2_7P362
+
+  ntpdc/ntpdc-opts.h@1.365 +3 -3
+    NTP_4_2_7P362
+
+  ntpdc/ntpdc.1ntpdcman@1.181 +2 -2
+    NTP_4_2_7P362
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.181 +2 -2
+    NTP_4_2_7P362
+
+  ntpdc/ntpdc.html@1.194 +2 -2
+    NTP_4_2_7P362
+
+  ntpdc/ntpdc.man.in@1.181 +2 -2
+    NTP_4_2_7P362
+
+  ntpdc/ntpdc.mdoc.in@1.181 +2 -2
+    NTP_4_2_7P362
+
+  ntpq/invoke-ntpq.texi@1.354 +2 -2
+    NTP_4_2_7P362
+
+  ntpq/ntpq-opts.c@1.368 +7 -7
+    NTP_4_2_7P362
+
+  ntpq/ntpq-opts.h@1.368 +3 -3
+    NTP_4_2_7P362
+
+  ntpq/ntpq.1ntpqman@1.182 +2 -2
+    NTP_4_2_7P362
+
+  ntpq/ntpq.1ntpqmdoc@1.182 +2 -2
+    NTP_4_2_7P362
+
+  ntpq/ntpq.html@1.27 +2 -2
+    NTP_4_2_7P362
+
+  ntpq/ntpq.man.in@1.182 +2 -2
+    NTP_4_2_7P362
+
+  ntpq/ntpq.mdoc.in@1.182 +2 -2
+    NTP_4_2_7P362
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.353 +2 -2
+    NTP_4_2_7P362
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.368 +7 -7
+    NTP_4_2_7P362
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.368 +3 -3
+    NTP_4_2_7P362
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.182 +3 -3
+    NTP_4_2_7P362
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.182 +3 -3
+    NTP_4_2_7P362
+
+  ntpsnmpd/ntpsnmpd.html@1.25 +1 -1
+    NTP_4_2_7P362
+
+  ntpsnmpd/ntpsnmpd.man.in@1.182 +3 -3
+    NTP_4_2_7P362
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.182 +3 -3
+    NTP_4_2_7P362
+
+  packageinfo.sh@1.365 +1 -1
+    NTP_4_2_7P362
+
+  scripts/invoke-ntp-wait.texi@1.170 +1 -1
+    NTP_4_2_7P362
+
+  scripts/ntp-wait.1ntp-waitman@1.181 +3 -3
+    NTP_4_2_7P362
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.181 +3 -3
+    NTP_4_2_7P362
+
+  scripts/ntp-wait.html@1.186 +1 -1
+    NTP_4_2_7P362
+
+  scripts/ntp-wait.man.in@1.181 +3 -3
+    NTP_4_2_7P362
+
+  scripts/ntp-wait.mdoc.in@1.181 +3 -3
+    NTP_4_2_7P362
+
+  sntp/invoke-sntp.texi@1.350 +2 -2
+    NTP_4_2_7P362
+
+  sntp/sntp-opts.c@1.365 +7 -7
+    NTP_4_2_7P362
+
+  sntp/sntp-opts.h@1.365 +3 -3
+    NTP_4_2_7P362
+
+  sntp/sntp.1sntpman@1.185 +3 -3
+    NTP_4_2_7P362
+
+  sntp/sntp.1sntpmdoc@1.185 +3 -3
+    NTP_4_2_7P362
+
+  sntp/sntp.html@1.365 +2 -2
+    NTP_4_2_7P362
+
+  sntp/sntp.man.in@1.185 +3 -3
+    NTP_4_2_7P362
+
+  sntp/sntp.mdoc.in@1.185 +3 -3
+    NTP_4_2_7P362
+
+  util/invoke-ntp-keygen.texi@1.354 +2 -2
+    NTP_4_2_7P362
+
+  util/ntp-keygen-opts.c@1.368 +7 -7
+    NTP_4_2_7P362
+
+  util/ntp-keygen-opts.h@1.368 +3 -3
+    NTP_4_2_7P362
+
+  util/ntp-keygen.1ntp-keygenman@1.182 +3 -3
+    NTP_4_2_7P362
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.182 +3 -3
+    NTP_4_2_7P362
+
+  util/ntp-keygen.html@1.31 +2 -2
+    NTP_4_2_7P362
+
+  util/ntp-keygen.man.in@1.182 +3 -3
+    NTP_4_2_7P362
+
+  util/ntp-keygen.mdoc.in@1.182 +3 -3
+    NTP_4_2_7P362
+
+ChangeSet@1.2931, 2013-03-19 06:26:04-04:00, stenn@deacon.udel.edu
+  [Bug 2364] "sed -i" is not portable
+
+  ChangeLog@1.1282 +1 -0
+    [Bug 2364] "sed -i" is not portable
+
+  configure.ac@1.558 +1 -1
+    [Bug 2364] "sed -i" is not portable
+
 ChangeSet@1.2930, 2013-03-17 05:08:00+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P361
   TAG: NTP_4_2_7P361
