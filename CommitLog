@@ -1,3 +1,220 @@
+ChangeSet@1.2936, 2013-03-26 11:35:06+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P364
+  TAG: NTP_4_2_7P364
+
+  ChangeLog@1.1287 +1 -0
+    NTP_4_2_7P364
+
+  ntpd/invoke-ntp.conf.texi@1.39 +1 -1
+    NTP_4_2_7P364
+
+  ntpd/invoke-ntp.keys.texi@1.39 +1 -1
+    NTP_4_2_7P364
+
+  ntpd/invoke-ntpd.texi@1.355 +2 -2
+    NTP_4_2_7P364
+
+  ntpd/ntp.conf.5man@1.73 +3 -3
+    NTP_4_2_7P364
+
+  ntpd/ntp.conf.5mdoc@1.73 +2 -2
+    NTP_4_2_7P364
+
+  ntpd/ntp.conf.html@1.37 +1 -1
+    NTP_4_2_7P364
+
+  ntpd/ntp.conf.man.in@1.73 +3 -3
+    NTP_4_2_7P364
+
+  ntpd/ntp.conf.mdoc.in@1.73 +2 -2
+    NTP_4_2_7P364
+
+  ntpd/ntp.keys.5man@1.73 +3 -3
+    NTP_4_2_7P364
+
+  ntpd/ntp.keys.5mdoc@1.73 +2 -2
+    NTP_4_2_7P364
+
+  ntpd/ntp.keys.html@1.38 +1 -1
+    NTP_4_2_7P364
+
+  ntpd/ntp.keys.man.in@1.73 +3 -3
+    NTP_4_2_7P364
+
+  ntpd/ntp.keys.mdoc.in@1.73 +2 -2
+    NTP_4_2_7P364
+
+  ntpd/ntpd-opts.c@1.373 +7 -7
+    NTP_4_2_7P364
+
+  ntpd/ntpd-opts.h@1.373 +3 -3
+    NTP_4_2_7P364
+
+  ntpd/ntpd.1ntpdman@1.184 +3 -3
+    NTP_4_2_7P364
+
+  ntpd/ntpd.1ntpdmdoc@1.184 +2 -2
+    NTP_4_2_7P364
+
+  ntpd/ntpd.html@1.32 +2 -2
+    NTP_4_2_7P364
+
+  ntpd/ntpd.man.in@1.184 +3 -3
+    NTP_4_2_7P364
+
+  ntpd/ntpd.mdoc.in@1.184 +2 -2
+    NTP_4_2_7P364
+
+  ntpdc/invoke-ntpdc.texi@1.352 +2 -2
+    NTP_4_2_7P364
+
+  ntpdc/ntpdc-opts.c@1.367 +7 -7
+    NTP_4_2_7P364
+
+  ntpdc/ntpdc-opts.h@1.367 +3 -3
+    NTP_4_2_7P364
+
+  ntpdc/ntpdc.1ntpdcman@1.183 +2 -2
+    NTP_4_2_7P364
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.183 +1 -1
+    NTP_4_2_7P364
+
+  ntpdc/ntpdc.html@1.196 +2 -2
+    NTP_4_2_7P364
+
+  ntpdc/ntpdc.man.in@1.183 +2 -2
+    NTP_4_2_7P364
+
+  ntpdc/ntpdc.mdoc.in@1.183 +1 -1
+    NTP_4_2_7P364
+
+  ntpq/invoke-ntpq.texi@1.356 +2 -2
+    NTP_4_2_7P364
+
+  ntpq/ntpq-opts.c@1.370 +7 -7
+    NTP_4_2_7P364
+
+  ntpq/ntpq-opts.h@1.370 +3 -3
+    NTP_4_2_7P364
+
+  ntpq/ntpq.1ntpqman@1.184 +2 -2
+    NTP_4_2_7P364
+
+  ntpq/ntpq.1ntpqmdoc@1.184 +1 -1
+    NTP_4_2_7P364
+
+  ntpq/ntpq.html@1.29 +2 -2
+    NTP_4_2_7P364
+
+  ntpq/ntpq.man.in@1.184 +2 -2
+    NTP_4_2_7P364
+
+  ntpq/ntpq.mdoc.in@1.184 +1 -1
+    NTP_4_2_7P364
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.355 +2 -2
+    NTP_4_2_7P364
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.370 +7 -7
+    NTP_4_2_7P364
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.370 +3 -3
+    NTP_4_2_7P364
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.184 +3 -3
+    NTP_4_2_7P364
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.184 +2 -2
+    NTP_4_2_7P364
+
+  ntpsnmpd/ntpsnmpd.html@1.27 +1 -1
+    NTP_4_2_7P364
+
+  ntpsnmpd/ntpsnmpd.man.in@1.184 +3 -3
+    NTP_4_2_7P364
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.184 +2 -2
+    NTP_4_2_7P364
+
+  packageinfo.sh@1.367 +1 -1
+    NTP_4_2_7P364
+
+  scripts/invoke-ntp-wait.texi@1.172 +1 -1
+    NTP_4_2_7P364
+
+  scripts/ntp-wait.1ntp-waitman@1.183 +3 -3
+    NTP_4_2_7P364
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.183 +2 -2
+    NTP_4_2_7P364
+
+  scripts/ntp-wait.html@1.188 +1 -1
+    NTP_4_2_7P364
+
+  scripts/ntp-wait.man.in@1.183 +3 -3
+    NTP_4_2_7P364
+
+  scripts/ntp-wait.mdoc.in@1.183 +2 -2
+    NTP_4_2_7P364
+
+  sntp/invoke-sntp.texi@1.352 +2 -2
+    NTP_4_2_7P364
+
+  sntp/sntp-opts.c@1.367 +7 -7
+    NTP_4_2_7P364
+
+  sntp/sntp-opts.h@1.367 +3 -3
+    NTP_4_2_7P364
+
+  sntp/sntp.1sntpman@1.187 +3 -3
+    NTP_4_2_7P364
+
+  sntp/sntp.1sntpmdoc@1.187 +2 -2
+    NTP_4_2_7P364
+
+  sntp/sntp.html@1.367 +2 -2
+    NTP_4_2_7P364
+
+  sntp/sntp.man.in@1.187 +3 -3
+    NTP_4_2_7P364
+
+  sntp/sntp.mdoc.in@1.187 +2 -2
+    NTP_4_2_7P364
+
+  util/invoke-ntp-keygen.texi@1.356 +2 -2
+    NTP_4_2_7P364
+
+  util/ntp-keygen-opts.c@1.370 +7 -7
+    NTP_4_2_7P364
+
+  util/ntp-keygen-opts.h@1.370 +3 -3
+    NTP_4_2_7P364
+
+  util/ntp-keygen.1ntp-keygenman@1.184 +3 -3
+    NTP_4_2_7P364
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.184 +2 -2
+    NTP_4_2_7P364
+
+  util/ntp-keygen.html@1.33 +2 -2
+    NTP_4_2_7P364
+
+  util/ntp-keygen.man.in@1.184 +3 -3
+    NTP_4_2_7P364
+
+  util/ntp-keygen.mdoc.in@1.184 +2 -2
+    NTP_4_2_7P364
+
+ChangeSet@1.2935, 2013-03-26 06:25:16-04:00, stenn@deacon.udel.edu
+  sntp/include/autogen-version.def
+
+  ChangeLog@1.1286 +1 -0
+    sntp/include/autogen-version.def
+
+  sntp/include/autogen-version.def@1.16 +2 -1
+    sntp/include/autogen-version.def
+
 ChangeSet@1.2934, 2013-03-26 09:16:08+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P363
   TAG: NTP_4_2_7P363
