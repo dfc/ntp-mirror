@@ -1,3 +1,220 @@
+ChangeSet@1.2946, 2013-05-01 11:35:20+00:00, stenn@deacon.udel.edu
+  NTP_4_2_7P368
+  TAG: NTP_4_2_7P368
+
+  ChangeLog@1.1296 +1 -0
+    NTP_4_2_7P368
+
+  ntpd/invoke-ntp.conf.texi@1.43 +1 -1
+    NTP_4_2_7P368
+
+  ntpd/invoke-ntp.keys.texi@1.43 +1 -1
+    NTP_4_2_7P368
+
+  ntpd/invoke-ntpd.texi@1.359 +2 -2
+    NTP_4_2_7P368
+
+  ntpd/ntp.conf.5man@1.77 +3 -3
+    NTP_4_2_7P368
+
+  ntpd/ntp.conf.5mdoc@1.77 +3 -3
+    NTP_4_2_7P368
+
+  ntpd/ntp.conf.html@1.41 +1 -1
+    NTP_4_2_7P368
+
+  ntpd/ntp.conf.man.in@1.77 +3 -3
+    NTP_4_2_7P368
+
+  ntpd/ntp.conf.mdoc.in@1.77 +3 -3
+    NTP_4_2_7P368
+
+  ntpd/ntp.keys.5man@1.77 +3 -3
+    NTP_4_2_7P368
+
+  ntpd/ntp.keys.5mdoc@1.77 +3 -3
+    NTP_4_2_7P368
+
+  ntpd/ntp.keys.html@1.42 +1 -1
+    NTP_4_2_7P368
+
+  ntpd/ntp.keys.man.in@1.77 +3 -3
+    NTP_4_2_7P368
+
+  ntpd/ntp.keys.mdoc.in@1.77 +3 -3
+    NTP_4_2_7P368
+
+  ntpd/ntpd-opts.c@1.377 +7 -7
+    NTP_4_2_7P368
+
+  ntpd/ntpd-opts.h@1.377 +3 -3
+    NTP_4_2_7P368
+
+  ntpd/ntpd.1ntpdman@1.188 +3 -3
+    NTP_4_2_7P368
+
+  ntpd/ntpd.1ntpdmdoc@1.188 +3 -3
+    NTP_4_2_7P368
+
+  ntpd/ntpd.html@1.36 +2 -2
+    NTP_4_2_7P368
+
+  ntpd/ntpd.man.in@1.188 +3 -3
+    NTP_4_2_7P368
+
+  ntpd/ntpd.mdoc.in@1.188 +3 -3
+    NTP_4_2_7P368
+
+  ntpdc/invoke-ntpdc.texi@1.356 +2 -2
+    NTP_4_2_7P368
+
+  ntpdc/ntpdc-opts.c@1.371 +7 -7
+    NTP_4_2_7P368
+
+  ntpdc/ntpdc-opts.h@1.371 +3 -3
+    NTP_4_2_7P368
+
+  ntpdc/ntpdc.1ntpdcman@1.187 +2 -2
+    NTP_4_2_7P368
+
+  ntpdc/ntpdc.1ntpdcmdoc@1.187 +2 -2
+    NTP_4_2_7P368
+
+  ntpdc/ntpdc.html@1.200 +2 -2
+    NTP_4_2_7P368
+
+  ntpdc/ntpdc.man.in@1.187 +2 -2
+    NTP_4_2_7P368
+
+  ntpdc/ntpdc.mdoc.in@1.187 +2 -2
+    NTP_4_2_7P368
+
+  ntpq/invoke-ntpq.texi@1.360 +2 -2
+    NTP_4_2_7P368
+
+  ntpq/ntpq-opts.c@1.374 +7 -7
+    NTP_4_2_7P368
+
+  ntpq/ntpq-opts.h@1.374 +3 -3
+    NTP_4_2_7P368
+
+  ntpq/ntpq.1ntpqman@1.188 +2 -2
+    NTP_4_2_7P368
+
+  ntpq/ntpq.1ntpqmdoc@1.188 +2 -2
+    NTP_4_2_7P368
+
+  ntpq/ntpq.html@1.33 +2 -2
+    NTP_4_2_7P368
+
+  ntpq/ntpq.man.in@1.188 +2 -2
+    NTP_4_2_7P368
+
+  ntpq/ntpq.mdoc.in@1.188 +2 -2
+    NTP_4_2_7P368
+
+  ntpsnmpd/invoke-ntpsnmpd.texi@1.359 +2 -2
+    NTP_4_2_7P368
+
+  ntpsnmpd/ntpsnmpd-opts.c@1.374 +7 -7
+    NTP_4_2_7P368
+
+  ntpsnmpd/ntpsnmpd-opts.h@1.374 +3 -3
+    NTP_4_2_7P368
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdman@1.188 +3 -3
+    NTP_4_2_7P368
+
+  ntpsnmpd/ntpsnmpd.1ntpsnmpdmdoc@1.188 +3 -3
+    NTP_4_2_7P368
+
+  ntpsnmpd/ntpsnmpd.html@1.31 +1 -1
+    NTP_4_2_7P368
+
+  ntpsnmpd/ntpsnmpd.man.in@1.188 +3 -3
+    NTP_4_2_7P368
+
+  ntpsnmpd/ntpsnmpd.mdoc.in@1.188 +3 -3
+    NTP_4_2_7P368
+
+  packageinfo.sh@1.371 +1 -1
+    NTP_4_2_7P368
+
+  scripts/invoke-ntp-wait.texi@1.176 +1 -1
+    NTP_4_2_7P368
+
+  scripts/ntp-wait.1ntp-waitman@1.187 +3 -3
+    NTP_4_2_7P368
+
+  scripts/ntp-wait.1ntp-waitmdoc@1.187 +3 -3
+    NTP_4_2_7P368
+
+  scripts/ntp-wait.html@1.192 +1 -1
+    NTP_4_2_7P368
+
+  scripts/ntp-wait.man.in@1.187 +3 -3
+    NTP_4_2_7P368
+
+  scripts/ntp-wait.mdoc.in@1.187 +3 -3
+    NTP_4_2_7P368
+
+  sntp/invoke-sntp.texi@1.356 +2 -2
+    NTP_4_2_7P368
+
+  sntp/sntp-opts.c@1.371 +7 -7
+    NTP_4_2_7P368
+
+  sntp/sntp-opts.h@1.371 +3 -3
+    NTP_4_2_7P368
+
+  sntp/sntp.1sntpman@1.191 +3 -3
+    NTP_4_2_7P368
+
+  sntp/sntp.1sntpmdoc@1.191 +3 -3
+    NTP_4_2_7P368
+
+  sntp/sntp.html@1.371 +2 -2
+    NTP_4_2_7P368
+
+  sntp/sntp.man.in@1.191 +3 -3
+    NTP_4_2_7P368
+
+  sntp/sntp.mdoc.in@1.191 +3 -3
+    NTP_4_2_7P368
+
+  util/invoke-ntp-keygen.texi@1.360 +2 -2
+    NTP_4_2_7P368
+
+  util/ntp-keygen-opts.c@1.374 +7 -7
+    NTP_4_2_7P368
+
+  util/ntp-keygen-opts.h@1.374 +3 -3
+    NTP_4_2_7P368
+
+  util/ntp-keygen.1ntp-keygenman@1.188 +3 -3
+    NTP_4_2_7P368
+
+  util/ntp-keygen.1ntp-keygenmdoc@1.188 +3 -3
+    NTP_4_2_7P368
+
+  util/ntp-keygen.html@1.37 +2 -2
+    NTP_4_2_7P368
+
+  util/ntp-keygen.man.in@1.188 +3 -3
+    NTP_4_2_7P368
+
+  util/ntp-keygen.mdoc.in@1.188 +3 -3
+    NTP_4_2_7P368
+
+ChangeSet@1.2945, 2013-04-30 22:36:28-04:00, stenn@pogo.udel.edu
+  [Bug 2145] ntpq dumps core when displaying sys_var_list and more
+
+  ChangeLog@1.1295 +1 -0
+    [Bug 2145] ntpq dumps core when displaying sys_var_list and more
+
+  ntpd/ntp_control.c@1.184 +43 -18
+    [Bug 2145] ntpq dumps core when displaying sys_var_list and more
+
 ChangeSet@1.2944, 2013-04-25 11:43:09+00:00, stenn@deacon.udel.edu
   NTP_4_2_7P367
   TAG: NTP_4_2_7P367
